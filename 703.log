@@ -1,0 +1,131 @@
+ ==============================================================================================================
+AKBASCORE TEST703 — QWEN2.5-72B / NF4 / INCREMENTAL CARTRIDGE CAPACITY
+==============================================================================================================
+PASS CUDA_AVAILABLE 
+PASS SINGLE_GPU 
+PASS A100_80GB_CLASS 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 84.5kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 936kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 66.7MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 72.0MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 133MB/s]LOADING_MODEL_NF4_GPU_ONLY
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.86MB/s]Download complete:   125GB,  616MB/s  Reconstruction complete: 100%  145GB /  145GB,  654MB/s  Fetching 37 files: 100% 37/37 [06:49<00:00, 10.34s/it]Loading weights: 100% 963/963 [06:34<00:00,  3.25it/s]generation_config.json: 100% 242/242 [00:00<00:00, 32.6kB/s]PASS ARCH_72B [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4_PRESENT 
+PASS GPU_ONLY_PARAMETERS {'cuda:0': 37599879168}
+PASS GPU_ONLY_BUFFERS {'cuda:0': 128}
+PASS PREFIX_0 
+PASS PREFIX_1 
+PANEL_SHA256 1c056e5ac1acc3583597c7fe8e6d19e588c678e96e194a4b377da009ec32913b
+--------------------------------------------------------------------------------------------------------------
+CUT 1 START
+CUT 1 N 2 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 1 N 2 Q 1 RAW 'The current capital of Kelvan is City0001R.' UNAMBIGUOUS True
+CUT 1 OMISSION_CONTROL 'The information provided does not mention Kelvan or its capital. Therefore, based on the available memory,' FULL 'The current capital of Kelvan is City0001R.'
+STAGE 2 CUT 1 PASS_PHYSICAL TOKENS 54 UNAMBIGUOUS 2 / 2
+CUT 1 N 8 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 1 N 8 Q 2 RAW 'The current capital of Tarvan is City0002R.' UNAMBIGUOUS True
+CUT 1 N 8 Q 4 RAW 'The current capital of Ravvan is City0004R.' UNAMBIGUOUS True
+CUT 1 N 8 Q 5 RAW 'The current capital of Nemvan is City0005R.' UNAMBIGUOUS True
+CUT 1 N 8 Q 6 RAW 'The current capital of Darvan is City0006R.' UNAMBIGUOUS True
+CUT 1 N 8 Q 7 RAW 'The current capital of Fervan is City0007R.' UNAMBIGUOUS True
+STAGE 8 CUT 1 PASS_PHYSICAL TOKENS 139 UNAMBIGUOUS 6 / 6
+CUT 1 APPENDED 16 / 32
+CUT 1 APPENDED 32 / 32
+CUT 1 N 32 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 1 N 32 Q 2 RAW 'The current capital of Tarvan is City0002R.' UNAMBIGUOUS True
+CUT 1 N 32 Q 9 RAW 'The current capital of Torvan is City0009R.' UNAMBIGUOUS True
+CUT 1 N 32 Q 11 RAW 'The current capital of Mirvan is City0011R.' UNAMBIGUOUS True
+CUT 1 N 32 Q 16 RAW 'The current capital of Zorvek is City0016R.' UNAMBIGUOUS True
+CUT 1 N 32 Q 31 RAW 'The current capital of Dervek is City0031R.' UNAMBIGUOUS True
+STAGE 32 CUT 1 PASS_PHYSICAL TOKENS 493 UNAMBIGUOUS 6 / 6
+CUT 1 APPENDED 48 / 128
+CUT 1 APPENDED 64 / 128
+CUT 1 APPENDED 80 / 128
+CUT 1 APPENDED 96 / 128
+CUT 1 APPENDED 112 / 128
+CUT 1 APPENDED 128 / 128
+CUT 1 N 128 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 1 N 128 Q 64 RAW 'The current capital of Zorvik is City0064R.' UNAMBIGUOUS True
+CUT 1 N 128 Q 97 RAW 'The current capital of Kelsen is City0097R.' UNAMBIGUOUS True
+CUT 1 N 128 Q 105 RAW 'The current capital of Torsen is City0105R.' UNAMBIGUOUS True
+CUT 1 N 128 Q 108 RAW 'The current capital of Varsen is City0108R.' UNAMBIGUOUS True
+CUT 1 N 128 Q 127 RAW 'The current capital of Deron is City0127R.' UNAMBIGUOUS True
+STAGE 128 CUT 1 PASS_PHYSICAL TOKENS 1860 UNAMBIGUOUS 6 / 6
+--------------------------------------------------------------------------------------------------------------
+CUT 3 START
+CUT 3 N 2 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 3 N 2 Q 1 RAW 'The current capital of Kelvan is City0001R.' UNAMBIGUOUS True
+CUT 3 OMISSION_CONTROL 'The information provided does not mention Kelvan or its capital. Therefore, based on the available memory,' FULL 'The current capital of Kelvan is City0001R.'
+STAGE 2 CUT 3 PASS_PHYSICAL TOKENS 54 UNAMBIGUOUS 2 / 2
+CUT 3 N 8 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 3 N 8 Q 2 RAW 'The current capital of Tarvan is City0002R.' UNAMBIGUOUS True
+CUT 3 N 8 Q 4 RAW 'The current capital of Ravvan is City0004R.' UNAMBIGUOUS True
+CUT 3 N 8 Q 5 RAW 'The current capital of Nemvan is City0005R.' UNAMBIGUOUS True
+CUT 3 N 8 Q 6 RAW 'The current capital of Darvan is City0006R.' UNAMBIGUOUS True
+CUT 3 N 8 Q 7 RAW 'The current capital of Fervan is City0007R.' UNAMBIGUOUS True
+STAGE 8 CUT 3 PASS_PHYSICAL TOKENS 139 UNAMBIGUOUS 6 / 6
+CUT 3 APPENDED 16 / 32
+CUT 3 APPENDED 32 / 32
+CUT 3 N 32 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 3 N 32 Q 2 RAW 'The current capital of Tarvan is City0002R.' UNAMBIGUOUS True
+CUT 3 N 32 Q 9 RAW 'The current capital of Torvan is City0009R.' UNAMBIGUOUS True
+CUT 3 N 32 Q 11 RAW 'The current capital of Mirvan is City0011R.' UNAMBIGUOUS True
+CUT 3 N 32 Q 16 RAW 'The current capital of Zorvek is City0016R.' UNAMBIGUOUS True
+CUT 3 N 32 Q 31 RAW 'The current capital of Dervek is City0031R.' UNAMBIGUOUS True
+STAGE 32 CUT 3 PASS_PHYSICAL TOKENS 493 UNAMBIGUOUS 6 / 6
+CUT 3 APPENDED 48 / 128
+CUT 3 APPENDED 64 / 128
+CUT 3 APPENDED 80 / 128
+CUT 3 APPENDED 96 / 128
+CUT 3 APPENDED 112 / 128
+CUT 3 APPENDED 128 / 128
+CUT 3 N 128 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 3 N 128 Q 64 RAW 'The current capital of Zorvik is City0064R.' UNAMBIGUOUS True
+CUT 3 N 128 Q 97 RAW 'The current capital of Kelsen is City0097R.' UNAMBIGUOUS True
+CUT 3 N 128 Q 105 RAW 'The current capital of Torsen is City0105R.' UNAMBIGUOUS True
+CUT 3 N 128 Q 108 RAW 'The current capital of Varsen is City0108R.' UNAMBIGUOUS True
+CUT 3 N 128 Q 127 RAW 'The current capital of Deron is City0127R.' UNAMBIGUOUS True
+STAGE 128 CUT 3 PASS_PHYSICAL TOKENS 1860 UNAMBIGUOUS 6 / 6
+--------------------------------------------------------------------------------------------------------------
+CUT 6 START
+CUT 6 N 2 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 6 N 2 Q 1 RAW 'The current capital of Kelvan is City0001R.' UNAMBIGUOUS True
+CUT 6 OMISSION_CONTROL 'The information provided does not mention Kelvan or its capital. Therefore, based on the available memory,' FULL 'The current capital of Kelvan is City0001R.'
+STAGE 2 CUT 6 PASS_PHYSICAL TOKENS 54 UNAMBIGUOUS 2 / 2
+CUT 6 N 8 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 6 N 8 Q 2 RAW 'The current capital of Tarvan is City0002R.' UNAMBIGUOUS True
+CUT 6 N 8 Q 4 RAW 'The current capital of Ravvan is City0004R.' UNAMBIGUOUS True
+CUT 6 N 8 Q 5 RAW 'The current capital of Nemvan is City0005R.' UNAMBIGUOUS True
+CUT 6 N 8 Q 6 RAW 'The current capital of Darvan is City0006R.' UNAMBIGUOUS True
+CUT 6 N 8 Q 7 RAW 'The current capital of Fervan is City0007R.' UNAMBIGUOUS True
+STAGE 8 CUT 6 PASS_PHYSICAL TOKENS 139 UNAMBIGUOUS 6 / 6
+CUT 6 APPENDED 16 / 32
+CUT 6 APPENDED 32 / 32
+CUT 6 N 32 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 6 N 32 Q 2 RAW 'The current capital of Tarvan is City0002R.' UNAMBIGUOUS True
+CUT 6 N 32 Q 9 RAW 'The current capital of Torvan is City0009R.' UNAMBIGUOUS True
+CUT 6 N 32 Q 11 RAW 'The current capital of Mirvan is City0011R.' UNAMBIGUOUS True
+CUT 6 N 32 Q 16 RAW 'The current capital of Zorvek is City0016R.' UNAMBIGUOUS True
+CUT 6 N 32 Q 31 RAW 'The current capital of Dervek is City0031R.' UNAMBIGUOUS True
+STAGE 32 CUT 6 PASS_PHYSICAL TOKENS 493 UNAMBIGUOUS 6 / 6
+CUT 6 APPENDED 48 / 128
+CUT 6 APPENDED 64 / 128
+CUT 6 APPENDED 80 / 128
+CUT 6 APPENDED 96 / 128
+CUT 6 APPENDED 112 / 128
+CUT 6 APPENDED 128 / 128
+CUT 6 N 128 Q 0 RAW 'The current capital of Zorvan is City0000R.' UNAMBIGUOUS True
+CUT 6 N 128 Q 64 RAW 'The current capital of Zorvik is City0064R.' UNAMBIGUOUS True
+CUT 6 N 128 Q 97 RAW 'The current capital of Kelsen is City0097R.' UNAMBIGUOUS True
+CUT 6 N 128 Q 105 RAW 'The current capital of Torsen is City0105R.' UNAMBIGUOUS True
+CUT 6 N 128 Q 108 RAW 'The current capital of Varsen is City0108R.' UNAMBIGUOUS True
+CUT 6 N 128 Q 127 RAW 'The current capital of Deron is City0127R.' UNAMBIGUOUS True
+STAGE 128 CUT 6 PASS_PHYSICAL TOKENS 1860 UNAMBIGUOUS 6 / 6
+PASS WEIGHT_SENTINEL_UNCHANGED 
+==============================================================================================================
+TEST703_STATUS PASS_PHYSICAL
+CUT 1 STATUS PASS_PHYSICAL STAGES [(2, 'PASS_PHYSICAL', {'tested': 2, 'exact': 0, 'target_present': 2, 'unambiguous': 2}), (8, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6}), (32, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6}), (128, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6})]
+CUT 3 STATUS PASS_PHYSICAL STAGES [(2, 'PASS_PHYSICAL', {'tested': 2, 'exact': 0, 'target_present': 2, 'unambiguous': 2}), (8, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6}), (32, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6}), (128, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6})]
+CUT 6 STATUS PASS_PHYSICAL STAGES [(2, 'PASS_PHYSICAL', {'tested': 2, 'exact': 0, 'target_present': 2, 'unambiguous': 2}), (8, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6}), (32, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6}), (128, 'PASS_PHYSICAL', {'tested': 6, 'exact': 0, 'target_present': 6, 'unambiguous': 6})]
+RESULT_JSON /content/AKBASCORE_TEST703/TEST703_results.json
+RESULT_LOG /content/AKBASCORE_TEST703/TEST703.log
+==============================================================================================================
