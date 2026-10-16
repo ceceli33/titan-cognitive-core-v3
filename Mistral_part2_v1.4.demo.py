@@ -161,6 +161,90 @@ def score_run(scn,cond,res,scored):
         staged=dict(staged,trace=hops,chain_status=(staged["status"] if scored else "UNSCORED"),chain_expected=(staged.get("expected") if scored else None))
     return rows,staged
 
+# ---------------------------------------------------------------------------------------------------------------------
+# SECONDARY CONTENT AUDIT (this demonstration's own rule set — not a TEST684 and not a TEST686 result).
+# Reads the raw answer only after generation and after the strict TEST686 status was fixed; it never changes either.
+# One rule set for every scored question, hop and chain of both scenarios and both representations.
+# ---------------------------------------------------------------------------------------------------------------------
+CONTENT_AUDIT_VERSION="v1.4-M content audit 1"
+CONTENT_AUDIT_NOTE=("Secondary content audit of this demonstration (rule-based, automatic). It is NOT the TEST686 result and NOT the TEST684 audit. "
+                    "'expected answer at head' does not prove that the whole answer is semantically correct.")
+_HEDGE=re.compile(r"\b(?:unknown|undetermined|assum\w*|if|maybe|possibly|perhaps|probably|might|could|or|not explicitly|not specified|does not specify|unclear)\b")
+def _norm_words(x):return " ".join(re.sub(r"[^0-9a-z]+"," ",unicodedata.normalize("NFKC",str(x)).casefold()).split())
+def _forms(gold):return sorted({_norm_words(f) for f in [gold]+list(E["ALIASES686"].get(gold,[])) if _norm_words(f)},key=len,reverse=True)
+def content_audit(raw,expected,spec,cond,limit,strict_status):
+    lim="NOT VERIFIED" if limit is None else ("YES" if limit else "NO")
+    base=dict(version=CONTENT_AUDIT_VERSION,note=CONTENT_AUDIT_NOTE,expected_answer=expected,generation_limit_reached=lim)
+    if strict_status=="UNSCORED" or expected in (None,"UNSCORED"):
+        return dict(base,applicable=False,reason="unscored answer (free-text synthesis, custom question or edited cartridge)")
+    if expected=="UNKNOWN":
+        return dict(base,applicable=False,reason="a required cartridge is absent: no expected content exists; the strict rule judges the abstention")
+    t=_norm_words(raw);forms=_forms(expected);pad=f" {t} "
+    hit=next((f for f in forms if f" {f} " in pad),None);head=next((f for f in forms if t==f or t.startswith(f+" ")),None)
+    present=hit is not None;at_head=head is not None;extra=present and t not in forms
+    unk_head=bool(E["UNKNOWN_HEAD"].match(E["clean680"](raw)))
+    rival=None
+    if spec and spec.get("cf_gold"):
+        alt=spec["gold"] if expected==spec.get("cf_gold") else spec["cf_gold"]
+        rival=alt if any(f" {f} " in pad for f in _forms(alt)) else None
+    rest=(t[len(head):] if at_head else t.replace(hit,"",1) if present else t).strip()
+    neg=E["NEGATION"].search(E["head680"](raw)[len(head):] if at_head else E["head680"](raw)) if present else None
+    hedge=_HEDGE.search(rest) if present else None
+    if unk_head:sem,why="NOT ASSESSED","the answer begins with UNKNOWN (abstention)"
+    elif not present:sem,why=("CONTRADICTED","the expected answer is not in the output; the output states something else") if t else ("NOT ASSESSED","empty output")
+    elif rival:sem,why="CONTRADICTED",f"the competing answer '{rival}' also appears"
+    elif neg:sem,why="CONTRADICTED",f"negation '{neg.group(0)}' in the answer clause"
+    elif hedge:sem,why="AMBIGUOUS","hedge or alternative after the answer: '"+" ".join(rest[hedge.start():].split()[:3])+"'"
+    elif not at_head:sem,why="AMBIGUOUS","the expected answer appears, but not at the head"
+    elif extra and limit:sem,why="AMBIGUOUS","the answer was cut by the 16-token limit after the expected answer; the continuation was never generated, so it cannot be assessed"
+    else:sem,why="SUPPORTED","expected answer at the head; no negation, hedge or competing answer detected (rule-based)"
+    if strict_status=="CORRECT_KNOWN":interp="Expected answer produced; the strict exact-match criterion is satisfied."
+    elif at_head:interp="Expected answer appears, but the strict exact-match criterion is not satisfied."+(" Output stopped at the 16-token limit." if limit else "")
+    elif present:interp="Expected answer appears inside the output, not at the head; strict criterion not satisfied."
+    elif unk_head:interp="The model abstained although the required cartridges were present."
+    else:interp="The expected answer is not in the output."
+    return dict(base,applicable=True,expected_answer_present=present,expected_answer_at_head=at_head,extra_text_after_answer=bool(extra),
+                matched_form=head or hit,text_after_answer=rest[:200] if present else None,semantic_assessment=sem,semantic_reason=why,interpretation=interp)
+def yn(x):return "—" if x is None else ("YES" if x else "NO")
+def audit_line(ca):
+    if not ca or not ca.get("applicable"):return None
+    return (f"present {yn(ca['expected_answer_present'])} · at head {yn(ca['expected_answer_at_head'])} · extra text {yn(ca['extra_text_after_answer'])} · "
+            f"16-token limit {ca['generation_limit_reached']} · semantic {ca['semantic_assessment']}")
+def apply_content_audit(scn,cond,rows,staged):
+    sc=E["SCORING686"][scn]
+    for r in rows:
+        spec=sc["questions"].get(r["question_id"]) if r["question_id"]!="CUSTOM" else None
+        r["content_audit"]=content_audit(r["answer"],r.get("expected"),spec,cond,r.get("limit_reached"),r.get("status"))
+    if staged:
+        for i,t in enumerate(staged["trace"]):
+            t["content_audit"]=content_audit(t["answer"],t.get("expected"),sc["hops"][i] if i<len(sc["hops"]) else None,cond,t.get("limit_reached"),t.get("status"))
+        last=staged["trace"][-1] if staged["trace"] else {}
+        staged["content_audit"]=content_audit(staged["answer"],staged.get("chain_expected"),sc["chain"],cond,last.get("limit_reached") if staged.get("completed") else None,staged.get("chain_status"))
+def strict_reason(status,audit,limit):
+    """plain-language reason for a strict status, derived only from the recorded status, the TEST684 audit and the token count"""
+    if status=="WRONG_KNOWN" and str(audit).startswith("CORRECT"):
+        return "expected answer at the head, extra words follow → strict exact match fails"+(" (16-token cap reached)" if limit else "")
+    if status=="WRONG_KNOWN":return "different answer"
+    if status=="UNSUPPORTED" and str(audit).startswith("ABSTAIN"):return "UNKNOWN with explanation → strict rule: unsupported"
+    if status=="UNSUPPORTED":return "answered although a required cartridge is absent"
+    if status=="MISSED_KNOWN":return "answer available but UNKNOWN"
+    return None
+def parity_686(scn,cond,rep,rows,staged,comparable):
+    """row-by-row comparison with the sealed TEST686 log (same engine, same questions, same 16-token bound). Comparison only."""
+    for r in rows:
+        r["strict_reason"]=strict_reason(r.get("status"),r.get("descriptive_audit"),r.get("limit_reached"))
+        ref=TEST686_ROWS.get((scn,cond,rep,r["question_id"])) if comparable else None
+        r["test686_answer"]=ref["answer"] if ref else None;r["test686_status"]=ref["status"] if ref else None
+        r["same_as_test686"]=(ref["answer"]==r["answer"] and ref["status"]==r["status"]) if ref else None
+    if staged:
+        ref=TEST686_CHAINS.get((scn,cond,rep)) if comparable else None
+        staged["test686_answer"]=ref["answer"] if ref else None;staged["test686_status"]=ref["status"] if ref else None
+        staged["same_as_test686"]=(ref["answer"]==staged["answer"] and ref["status"]==staged.get("chain_status")) if ref else None
+        for t in staged["trace"]:t["strict_reason"]=strict_reason(t.get("status"),t.get("descriptive_audit"),t.get("limit_reached"))
+def parity_summary(P):
+    q=[x["same_as_test686"] for r in P["controls"] for x in r["responses"] if x.get("same_as_test686") is not None]
+    c=[r["staged"]["same_as_test686"] for r in P["controls"] if r.get("staged") and r["staged"].get("same_as_test686") is not None]
+    return dict(rows_compared=len(q),rows_identical=sum(q),chains_compared=len(c),chains_identical=sum(c),log_rows=len(TEST686_ROWS),log_chains=len(TEST686_CHAINS))
 def recorded_run(scn,cond,rep,question=None,include_staged=True):
     """mistral_run_demo() (TEST686 procedure), observed by the recording pre-hook."""
     with ENGINE_LOCK:
@@ -178,12 +262,17 @@ def recorded_run(scn,cond,rep,question=None,include_staged=True):
             gen=sum(1 for f in fw[a+1:b] if f["kind"]=="ids" and f["n"]==1 and f["has_past"])
             qids=fw[a]["ids"] or []
             it["query_tokens"]=fw[a]["n"];it["generated_tokens"]=gen;it["limit_reached"]=gen>=MAXN
+            gids=[int(f["ids"][0]) for f in fw[a+1:b] if f["kind"]=="ids" and f["n"]==1 and f["has_past"] and f.get("ids")]
+            it["generated_token_ids"]=gids;it["last_token_pieces"]=[E["tok"].decode([t_]) for t_ in gids[-4:]]
+            it["end_reason"]=f"{MAXN}-token limit (TEST560 MAX_NEW)" if gen>=MAXN else "end-of-sequence token"
             it["query_ids_equal_template"]=qids==E["tok"](E["query_suffix"](it["question"]),add_special_tokens=False).input_ids
             it["cartridge_sequence_in_query"]=any(contains_seq(qids,E["CAR"][ci]["body"]) for ci in keys)
         else:
-            it["query_tokens"]=None;it["generated_tokens"]=None;it["limit_reached"]=None;it["query_ids_equal_template"]=None;it["cartridge_sequence_in_query"]=None
+            it["query_tokens"]=None;it["generated_tokens"]=None;it["limit_reached"]=None;it["end_reason"]=None;it["query_ids_equal_template"]=None;it["cartridge_sequence_in_query"]=None
     scored=not scenario_edited(scn)
     rows,staged=score_run(scn,cond,res,scored)
+    parity_686(scn,cond,rep,rows,staged,scored and question is None)
+    apply_content_audit(scn,cond,rows,staged)
     return dict(scenario=scn,condition=cond,representation=rep,custom_question=question,keys=[int(k) for k in keys],memory_rows=T,
                 cartridge_texts=res.get("cartridge_texts"),responses=rows,staged=staged,run_sha256=res.get("run_sha256"),engine_json=res.get("saved_to"),
                 engine_elapsed_seconds=res.get("elapsed_seconds"),wall_seconds=wall,build_forwards=build,forward_segmentation_ok=seg_ok,
@@ -269,6 +358,9 @@ def full_run(ctl,emit):
         for i,(s,c,r) in enumerate(todo,1):
             P["controls"].append(recorded_run(s,c,r,include_staged=True))
             if i%3==0 or i==len(todo):emit(7,STAGE_TITLES[6],f"controls {i}/{len(todo)} · last: {s} {c} {r}",i==len(todo))
+        P["verify"]["test686_parity"]=parity_summary(P);pp=P["verify"]["test686_parity"]
+        P["verify"]["content_audit"]={rp:content_audit_summary(P,rp) for rp in REPRESENTATIONS};P["verify"]["content_audit_note"]=CONTENT_AUDIT_NOTE
+        emit(7,STAGE_TITLES[6],f"controls {len(todo)}/{len(todo)} · identical to the sealed TEST686 log (raw answer + strict status): questions {pp['rows_identical']}/{pp['rows_compared']} · chains {pp['chains_identical']}/{pp['chains_compared']}")
         stage=8
         P["verify"]["sentinel_after"]=E["sentinel"]();P["verify"]["guard_after"]=param_guard(E["model"]);P["verify"]["frozen_after"]=frozen_state()
         P["verify"]["guard_unchanged"]=P["verify"]["guard_after"]==P["verify"]["guard_before"]==STARTUP.get("guard_start")
@@ -292,21 +384,46 @@ def full_run(ctl,emit):
         except Exception:pass
         raise StageError(stage,ex)
 
+ANSWERS_SCHEMA=dict(
+    raw_answer="unedited decoded output of the frozen model (never shortened in this file)",
+    strict_test686="PRIMARY result: status and expected answer from grade686/staged686, executed verbatim from the blob-verified 686.py; never changed",
+    test686_parity="comparison of raw_answer + strict status with the sealed, SHA-256-verified 686.log (same engine, questions, 16-token bound)",
+    test684_descriptive_audit="secondary: TEST684 audit680, executed verbatim from the blob-verified 684.py",
+    content_audit="secondary: this demonstration's own rule-based content audit ("+CONTENT_AUDIT_VERSION+"); NOT a TEST684 or TEST686 result; 'at head' is not proof of semantic correctness",
+    generation="recorded by the read-only pre-hook: generated token count, token ids, end reason (end-of-sequence or the TEST560 16-token limit)")
+def _gen(q):return dict(new_tokens=q.get("generated_tokens"),limit_reached=q.get("limit_reached"),end_reason=q.get("end_reason"),
+                        token_ids=q.get("generated_token_ids"),last_token_pieces=q.get("last_token_pieces"))
+def _row(r,kind,id_,q,raw,status,expected,audit684,ca,par_ans,par_same):
+    return dict(scenario=r["scenario"],condition=r["condition"],representation=r["representation"],kind=kind,id=id_,question=q,raw_answer=raw,
+                strict_test686=dict(status=status,expected=expected),test686_parity=dict(identical=par_same,test686_raw_answer=par_ans),
+                test684_descriptive_audit=audit684,content_audit=ca,engine_run_sha256=r["run_sha256"])
 def answers_table(P):
     rows=[]
     for r in P["controls"]+([P["custom"]] if P["custom"] else []):
         for q in r["responses"]:
-            rows.append(dict(scenario=r["scenario"],condition=r["condition"],representation=r["representation"],kind="question",id=q["question_id"],question=q["question"],
-                             raw_answer=q["answer"],status=q["status"],descriptive_audit=q.get("descriptive_audit"),expected=q.get("expected"),generated_tokens=q.get("generated_tokens"),limit_reached=q.get("limit_reached"),
-                             seconds=q.get("elapsed_seconds"),engine_run_sha256=r["run_sha256"]))
+            rows.append(dict(_row(r,"question",q["question_id"],q["question"],q["answer"],q["status"],q.get("expected"),q.get("descriptive_audit"),q.get("content_audit"),
+                                  q.get("test686_answer"),q.get("same_as_test686")),generation=_gen(q),seconds=q.get("elapsed_seconds")))
         if r["staged"]:
             for t in r["staged"]["trace"]:
-                rows.append(dict(scenario=r["scenario"],condition=r["condition"],representation=r["representation"],kind="staged_hop",id=f"HOP{t['hop']}",question=t["question"],
-                                 raw_answer=t["answer"],status=t["status"],descriptive_audit=t.get("descriptive_audit"),expected=t.get("expected"),generated_tokens=t.get("generated_tokens"),limit_reached=t.get("limit_reached"),
-                                 seconds=t.get("elapsed_seconds"),engine_run_sha256=r["run_sha256"]))
-            rows.append(dict(scenario=r["scenario"],condition=r["condition"],representation=r["representation"],kind="staged_result",id="CHAIN",question="(three-step chain)",
-                             raw_answer=r["staged"]["answer"],status=r["staged"]["chain_status"],expected=r["staged"].get("chain_expected"),engine_run_sha256=r["run_sha256"]))
-    return rows
+                rows.append(dict(_row(r,"staged_hop",f"HOP{t['hop']}",t["question"],t["answer"],t["status"],t.get("expected"),t.get("descriptive_audit"),t.get("content_audit"),
+                                      None,None),generation=_gen(t),seconds=t.get("elapsed_seconds")))
+            s_=r["staged"]
+            rows.append(_row(r,"staged_result","CHAIN","(three-step chain)",s_["answer"],s_["chain_status"],s_.get("chain_expected"),None,s_.get("content_audit"),
+                             s_.get("test686_answer"),s_.get("same_as_test686")))
+    return dict(schema=ANSWERS_SCHEMA,rows=rows)
+
+def content_audit_summary(P,rep=None):
+    """counts of the secondary content audit, grouped by the (unchanged) strict status"""
+    out={}
+    for r in P["controls"]:
+        if rep and r["representation"]!=rep:continue
+        items=list(r["responses"])+([r["staged"]] if r.get("staged") else [])
+        for q in items:
+            ca=q.get("content_audit") or {};st_=q.get("status") or q.get("chain_status")
+            if not ca.get("applicable"):continue
+            d=out.setdefault(st_,Counter());d["n"]+=1;d["at_head"]+=int(ca["expected_answer_at_head"]);d["present"]+=int(ca["expected_answer_present"])
+            d["sem_"+ca["semantic_assessment"]]+=1
+    return {k:dict(v) for k,v in out.items()}
 
 def status_counts(P,rep):
     out={}
@@ -326,7 +443,10 @@ def summary_text(P):
         "locked sources: "+" · ".join(f"{k} blob {v.get('git_blob')} sha256 {v.get('sha256')}" for k,v in (st.get('sources') or {}).items()),
         f"architecture {st.get('arch')} · CUT{st.get('cut')} · prefix {st.get('prefix_tokens')} tokens · max new tokens {st.get('max_new')}",
         f"full-weight SHA-256 {st.get('full_weight_sha256')} (recorded at start-up; no published Mistral reference exists)",
-        f"sentinel unchanged: {P['verify'].get('sentinel_unchanged')} · all-parameter guard unchanged: {P['verify'].get('guard_unchanged')} · all runs frozen: {P['verify'].get('all_runs_frozen')}",S]
+        f"sentinel unchanged: {P['verify'].get('sentinel_unchanged')} · all-parameter guard unchanged: {P['verify'].get('guard_unchanged')} · all runs frozen: {P['verify'].get('all_runs_frozen')}",
+        "result fields: STRICT TEST686 (primary, grade686/staged686 verbatim) · TEST684 descriptive audit (secondary, verbatim) · content audit "+CONTENT_AUDIT_VERSION+" (secondary, this demo, rule-based; not proof of semantic correctness)",
+        "content audit by strict status (DC_CUT6_NATIVE): "+json.dumps(content_audit_summary(P,"DC_CUT6_NATIVE"),ensure_ascii=False),
+        "parity with the sealed TEST686 log (same engine, questions and 16-token bound; raw answer and strict status): "+(lambda pp:f"questions {pp.get('rows_identical')}/{pp.get('rows_compared')} identical · chains {pp.get('chains_identical')}/{pp.get('chains_compared')} identical")(P['verify'].get('test686_parity') or {}),S]
     for scn,b in P["builds"].items():
         L.append(f"[{scn}] measured DC_CUT6_NATIVE build (ABC): {b['memory']['T']} rows · {b['memory']['bytes']} bytes · memory SHA-256 {b['memory']['sha256']} · engine path identical {b['engine_path_identical']} · = TEST560 reference path {b['reference_path_identical']}")
         for c_,s_ in zip(b["cartridges"],b["steps"]):
@@ -337,13 +457,18 @@ def summary_text(P):
     for r in P["controls"]:
         L.append(f"[{r['scenario']} · {r['condition']} · {r['representation']}] engine run SHA-256 {r['run_sha256']} · scored {r['scored']}")
         for q in r["responses"]:
-            L.append(f"   {q['question_id']:<11} {q['status']:<19} raw={q['answer']!r}"+(" [16-token limit reached]" if q.get("limit_reached") else "")+f" · descriptive {q.get('descriptive_audit')}")
+            L.append(f"   {q['question_id']:<11} {q['status']:<19} raw={q['answer']!r}"+(" [16-token limit reached]" if q.get("limit_reached") else "")+f" · descriptive {q.get('descriptive_audit')}"
+                     +({True:" · = TEST686",False:f" · ≠ TEST686 ({q.get('test686_status')} {q.get('test686_answer')!r})"}.get(q.get("same_as_test686"),""))+(f" · ended: {q['end_reason']}" if q.get("end_reason") else ""))
+            if audit_line(q.get("content_audit")):L.append(f"               content audit (secondary): {audit_line(q['content_audit'])} — {q['content_audit']['interpretation']}")
         if r["staged"]:
-            L.append("   STAGED      "+" → ".join(repr(t["answer"]) for t in r["staged"]["trace"])+f" · chain {r['staged']['chain_status']}")
+            L.append("   STAGED      "+" → ".join(repr(t["answer"]) for t in r["staged"]["trace"])+f" · chain {r['staged']['chain_status']}"+{True:" · = TEST686",False:" · ≠ TEST686"}.get(r["staged"].get("same_as_test686"),""))
+            for t in r["staged"]["trace"]:
+                L.append(f"     HOP {t['hop']} {t['status']:<19} raw={t['answer']!r}"+(f" · ended: {t['end_reason']}" if t.get("end_reason") else "")+(f" · content audit: {audit_line(t.get('content_audit'))}" if audit_line(t.get("content_audit")) else ""))
     if P["custom"]:
         c=P["custom"];L+=[S,f"custom question ({c['scenario']} {c['condition']} {c['representation']}, unscored): {c['custom_question']!r} → {c['responses'][0]['answer']!r}"]
     L+=[S,"Scope: fictional scenarios · predefined external three-step question sequence (not autonomous planning) · 16-token generation limit ·",
-        "expected answers are audit metadata used only after generation · hashes show file identity, not correctness · TEST686 values are a sealed earlier record; Qwen v1.4 values are a different model.",S]
+        "expected answers are audit metadata used only after generation · hashes show file identity, not correctness · TEST686 values are a sealed earlier record; Qwen v1.4 values are a different model.",
+        "Observation (not a verified cause): Mistral sometimes continues generating explanatory text after producing the expected answer, unlike the shorter responses observed in the corresponding Qwen demonstration.",S]
     return "\n".join(L)
 
 def package(P,run_dir,figs):
