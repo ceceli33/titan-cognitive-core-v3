@@ -1,0 +1,18 @@
+========================================================================
+AKBASCORE TEST700 — QWEN2.5-72B HARDWARE CALIBRATION
+========================================================================
+GPU: NVIDIA A100-SXM4-80GB
+GPU_VRAM_GiB: 79.251
+RAM_TOTAL_GiB: 167.052
+RAM_AVAILABLE_GiB: 164.352
+DISK_FREE_GiB: 193.32
+TORCH: 2.11.0+cu130
+CUDA: 13.0
+PYTHON: 3.13.15
+------------------------------------------------------------------------
+MODEL_RAW_4BIT_GiB: 33.854
+KV_BF16_BYTES_PER_TOKEN: 327680
+KV_BF16_MiB_PER_1024_TOKENS: 320.0
+NOTE: Model memory excludes quantization metadata and runtime overhead.
+NOTE: KV capacity is theoretical, not a validated cartridge limit.
+========================================================================
