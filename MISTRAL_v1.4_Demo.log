@@ -2,295 +2,479 @@
 AKBASCORE AI TECHNOLOGY — MAM SILICON HIPPOCAMPUS v1.4 · MISTRAL CUT6
 Native Cognitive Cartridge Injection · Inside a Frozen Transformer: From Text to Tensor Memory
 ==============================================================================================================
-run MAM14M-20261016-030700-0001 · started 2026-10-16T03:07:00+00:00 (2026-10-16T03:07:00.248+00:00 UTC) · finished 2026-10-16T03:09:25.494+00:00 · 145.25 s
+run MAM14M-20261016-105852-0001 · started 2026-10-16T10:58:52+00:00 (2026-10-16T10:58:52.445+00:00 UTC) · finished 2026-10-16T11:01:17.169+00:00 · 144.72 s
 model mistralai/Mistral-7B-Instruct-v0.3 · bfloat16 · sdpa · NVIDIA A100-SXM4-40GB · torch 2.11.0+cu130 · transformers 5.18.0 · gradio 6.29.0
 locked sources: 684.py blob 0af7ae24840bff722587ea05c0045a8516a43289 sha256 22b9720958db5a03cf8b8ae410c328bfe309b34b8148c03ecf2adfb539254750 · 686.py blob 8ff95e750b941bb3450fe1e1210aa6dcc6747d58 sha256 a90093f7542a44fce16ba67c4f9feae128bd6bb30024b7eae9dfef319646a25b · HIPPOCAMPUS_1.4_part1.py blob 1d5327e7aadabc79b3a24dfa28c76d3c6bfe6930 sha256 6283e70c8346d65df341971bf12e1b976609baec46e958c820e20ed36300a323
 architecture [32, 4096, 32, 8, 128] · CUT6 · prefix 27 tokens · max new tokens 16
 full-weight SHA-256 be2f30e43c3dcc995e8c812eec507939e7b01689f9af7c3bbe824211869183f2 (recorded at start-up; no published Mistral reference exists)
 sentinel unchanged: True · all-parameter guard unchanged: True · all runs frozen: True
+result fields: STRICT TEST686 (primary, grade686/staged686 verbatim) · TEST684 descriptive audit (secondary, verbatim) · content audit v1.4-M content audit 1 (secondary, this demo, rule-based; not proof of semantic correctness)
+content audit by strict status (DC_CUT6_NATIVE): {"CORRECT_KNOWN": {"n": 38, "at_head": 38, "present": 38, "sem_SUPPORTED": 38}, "WRONG_KNOWN": {"n": 5, "at_head": 4, "present": 4, "sem_AMBIGUOUS": 3, "sem_SUPPORTED": 1, "sem_NOT ASSESSED": 1}}
+parity with the sealed TEST686 log (same engine, questions and 16-token bound; raw answer and strict status): questions 198/198 identical · chains 36/36 identical
 ==============================================================================================================
 [AKBASCORE] measured DC_CUT6_NATIVE build (ABC): 124 rows · 16252928 bytes · memory SHA-256 4a66760183d7c2ecdbb57b56f287f61d1c5d8900515c57a096c27805806a1fe4 · engine path identical True · = TEST560 reference path True
-   A #12 body 29 tok · rows 56 · H6 [1, 56, 4096] · K/V L0–6 [1, 8, 56, 128] · 2064384 B · init 116.0 ms · prior rows unchanged None · L0–6 rows = cartridge True
-   B #13 body 33 tok · rows 33 · H6 [1, 60, 4096] · K/V L0–6 [1, 8, 60, 128] · 1216512 B · append 102.2 ms · prior rows unchanged True · L0–6 rows = cartridge True
-   C #14 body 35 tok · rows 35 · H6 [1, 62, 4096] · K/V L0–6 [1, 8, 62, 128] · 1290240 B · append 100.8 ms · prior rows unchanged True · L0–6 rows = cartridge True
+   A #12 body 29 tok · rows 56 · H6 [1, 56, 4096] · K/V L0–6 [1, 8, 56, 128] · 2064384 B · init 110.3 ms · prior rows unchanged None · L0–6 rows = cartridge True
+   B #13 body 33 tok · rows 33 · H6 [1, 60, 4096] · K/V L0–6 [1, 8, 60, 128] · 1216512 B · append 94.1 ms · prior rows unchanged True · L0–6 rows = cartridge True
+   C #14 body 35 tok · rows 35 · H6 [1, 62, 4096] · K/V L0–6 [1, 8, 62, 128] · 1290240 B · append 92.7 ms · prior rows unchanged True · L0–6 rows = cartridge True
    final question on the measured memory → 'Time flow reversal in the target system (without modifying its frozen neural weights'
 [MATRIX] measured DC_CUT6_NATIVE build (ABC): 141 rows · 18481152 bytes · memory SHA-256 ba2f4e5a2e3686c0e14926cb4856bd1e325474e85cecec83b0990bbca47bef1c · engine path identical True · = TEST560 reference path True
-   A #16 body 38 tok · rows 65 · H6 [1, 65, 4096] · K/V L0–6 [1, 8, 65, 128] · 2396160 B · init 86.1 ms · prior rows unchanged None · L0–6 rows = cartridge True
-   B #17 body 43 tok · rows 43 · H6 [1, 70, 4096] · K/V L0–6 [1, 8, 70, 128] · 1585152 B · append 108.9 ms · prior rows unchanged True · L0–6 rows = cartridge True
-   C #18 body 33 tok · rows 33 · H6 [1, 60, 4096] · K/V L0–6 [1, 8, 60, 128] · 1216512 B · append 96.9 ms · prior rows unchanged True · L0–6 rows = cartridge True
+   A #16 body 38 tok · rows 65 · H6 [1, 65, 4096] · K/V L0–6 [1, 8, 65, 128] · 2396160 B · init 83.6 ms · prior rows unchanged None · L0–6 rows = cartridge True
+   B #17 body 43 tok · rows 43 · H6 [1, 70, 4096] · K/V L0–6 [1, 8, 70, 128] · 1585152 B · append 98.9 ms · prior rows unchanged True · L0–6 rows = cartridge True
+   C #18 body 33 tok · rows 33 · H6 [1, 60, 4096] · K/V L0–6 [1, 8, 60, 128] · 1216512 B · append 94.8 ms · prior rows unchanged True · L0–6 rows = cartridge True
    final question on the measured memory → 'Bullet-dodge ability'
 ==============================================================================================================
-[AKBASCORE · ABC · DC_CUT6_NATIVE] engine run SHA-256 bf72579f3b80fc6f33d78b69c0538065ddc8d2f3df43e3d7f54ee209fe3f64df · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  CORRECT_KNOWN       raw='Morvex' · descriptive CORRECT_EXACT_HEAD
-   EFFECT      WRONG_KNOWN         raw='Reversal of time flow in the target system (or UNKNOWN if' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL
-   FINAL       WRONG_KNOWN         raw='Time flow reversal in the target system (without modifying its frozen neural weights' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL
-   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex' → 'Reversal of time flow (or UNKNOWN if the information provided does' · chain WRONG_KNOWN
-[MATRIX · ABC · DC_CUT6_NATIVE] engine run SHA-256 1c9587968fd3194489285cea77248b78a9778f7f6a816db51c1845218634c943 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN
-[AKBASCORE · NONE · DC_CUT6_NATIVE] engine run SHA-256 2bf4fd69d5c57a82b958a8af43b4ed29b4b4d7af122317bcb7ec421bea4fafb5 · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (No specific architecture activation information provided for Mustafa Akba' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONVERSION  UNSUPPORTED         raw='Solar Energy (assuming the architecture is designed to harness solar power, as' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the effect of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the final effect caused by Must' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   SYNTHESIS   UNSCORED            raw="Unknown (Insufficient information provided about Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED
-   STAGED      'UNKNOWN (No specific architecture activation information provided for Mustafa Akba' → 'UNKNOWN' · chain CORRECT_ABSTENTION
-[AKBASCORE · A · DC_CUT6_NATIVE] engine run SHA-256 0814cc5d7085d153df1f58c472315f9f7dd013369839367d92ed7ddf43e3362b · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of energy produced by' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks for the effect of the energy produced, but' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='AKBASCORE MAM Architecture' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw="AKBASCORE MAM (Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the type of energy produced by' → 'UNKNOWN (The information provided does not specify the type of effect produced by' · chain UNSUPPORTED
-[AKBASCORE · B · DC_CUT6_NATIVE] engine run SHA-256 315b57aaa511149405c7b6d30fb18b6bbfeaf685acc8be2bc9f57543ddae707b · scored True
-   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM
-   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   EFFECT      UNSUPPORTED         raw='Morvex energy production (or its effects) is not explicitly stated in the' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific method used by Must' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The provided information does not specify the effect of Morvex' · chain UNSUPPORTED
-[AKBASCORE · C · DC_CUT6_NATIVE] engine run SHA-256 e6aaa2e643ae22ffc0836a430262f811cd78b3a373567ffab4de570c7b1c6ee7 · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture that Mustafa' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONVERSION  UNSUPPORTED         raw='Morvex (UNKNOWN if the information provided does not specify that Mustafa' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks about the AKBASCORE MAM' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture activated by Mustaf' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş, based on the provided information, causes the revers' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'UNKNOWN (The information provided does not specify the architecture that Mustafa' → 'Morvex (UNKNOWN if the architecture is not specified)' → 'Reversal of time flow (UNKNOWN if the architecture is not specified)' · chain UNSUPPORTED
-[AKBASCORE · AB · DC_CUT6_NATIVE] engine run SHA-256 92c2ecd9a8d4ce30c6a019143c2613d723644a641c41224b8b2a7cf2460bc7d2 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question does not provide information about the effect of the energy' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific process by which Must' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The provided information does not specify the effect of Morvex' · chain UNSUPPORTED
-[AKBASCORE · AC · DC_CUT6_NATIVE] engine run SHA-256 132b14a3791e968d638565370ce909644eaf910ea37fac18dd4c9ef2016c74e4 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the name of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='Time flow reversal (or UNKNOWN if the question requires a direct connection' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW
-   FINAL       UNSUPPORTED         raw='Time flow reversal in the target system (without modifying its frozen neural weights' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information is provided to explain the process in detail.' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the type of energy produced by' → 'UNKNOWN (The information provided does not specify the effect of Morvex' · chain UNSUPPORTED
-[AKBASCORE · BC · DC_CUT6_NATIVE] engine run SHA-256 bee94dec4b9649c0aa9eb6028651096e5475ce6a1cdfe06bf88f648068c1cf77 · scored True
-   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM
-   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   EFFECT      WRONG_KNOWN         raw='Time flow reversal in the target system.' · descriptive CORRECT_WITH_DETAIL
-   FINAL       UNSUPPORTED         raw='Time flow reversal in the target system (or UNKNOWN if the information' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW
-   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex' → 'Reversal of time flow (or UNKNOWN if the information provided does' · chain UNSUPPORTED
-[AKBASCORE · ABC_CF · DC_CUT6_NATIVE] engine run SHA-256 df24f3d86e552d540b8a1c0dac3f7e77a14cc73c6e7f579cbfb6c7cf0ba46dc1 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  CORRECT_KNOWN       raw='Morvex' · descriptive CORRECT_EXACT_HEAD
-   EFFECT      CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex' → 'Temporal stasis' · chain CORRECT_KNOWN
-[MATRIX · NONE · DC_CUT6_NATIVE] engine run SHA-256 023d57bc33eae9283b9053135cf85a1853bee55e770594d605cce515e52339a7 · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONTENT     UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify a particular ability gained by Ne' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw="Oracle's Keep (Telekinesis and Precognition)" · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Orbital Conflict Data (OCD) is injected into Neo' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'UNKNOWN (as the information provided does not specify the cartridge ID' → 'UNKNOWN' · chain CORRECT_ABSTENTION
-[MATRIX · A · DC_CUT6_NATIVE] engine run SHA-256 f054d9bc3b1c33632c3bd01a8d85d19599be68438cc67c50242a303a07e8ed71 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which the car' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the ability Neo gains from' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='MX-71_ABILITY (assuming each cartridge has a' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='MX-71 cartridge (ability: UNKNOWN) is' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'UNKNOWN (The information provided does not specify the knowledge stored in cartr' → 'UNKNOWN (The information provided does not specify the ability gained by Neo' · chain UNSUPPORTED
-[MATRIX · B · DC_CUT6_NATIVE] engine run SHA-256 8e790602b2dd00817235f075ede9e86cd7dfd9ba4f9e14723c51bde5db56e6dd · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads the cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   WRONG_KNOWN         raw='UNKNOWN (The information provided does not specify the exact layer number, only' [16-token limit reached] · descriptive MISSED_KNOWN
-   EFFECT      UNSUPPORTED         raw='Kung Fu knowledge' · descriptive UNSUPPORTED_CLAIM
-   FINAL       UNSUPPORTED         raw='Kung Fu ability (assuming Tank is the AKBASCORE' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Kung Fu knowledge, injected through layer-3 tensors without changing the' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu abilities (or UNKNOWN if the information provided does not specify' · chain UNSUPPORTED
-[MATRIX · C · DC_CUT6_NATIVE] engine run SHA-256 bfede13ac609786f07321cf3b90b3d0b8f22560380a2ff43922271914f442bdf · scored True
-   ACTIVATION  UNSUPPORTED         raw='Morpheus' · descriptive UNSUPPORTED_CLAIM
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer where cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='MX-71 (Kung Fu knowledge) is uploaded into Ne' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain UNSUPPORTED
-[MATRIX · AB · DC_CUT6_NATIVE] engine run SHA-256 c9010a8e955252c7ac4c33eb88a40318819e78f910af03dd203e971082151257 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG
-   EFFECT      UNSUPPORTED         raw='Kung Fu ability (or UNKNOWN if the text does not specify a' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW
-   FINAL       UNSUPPORTED         raw='Kung Fu ability (assuming the information provided is accurate and complete)' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Kung Fu knowledge (MX-71 cartridge) is uploaded' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu ability (or UNKNOWN if the information provided does not specify' · chain UNSUPPORTED
-[MATRIX · AC · DC_CUT6_NATIVE] engine run SHA-256 11462efd566bd669321d77f836e084cc30a192b777074c9a53a998b4017b69ee · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   UNSUPPORTED         raw='AKBASCORE (assuming this is the name of the neural interface' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo via' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN
-[MATRIX · BC · DC_CUT6_NATIVE] engine run SHA-256 5bd576afd8ffa9d42bc310f8de0fd53a0307f4966da7a4033339673005611e16 · scored True
-   ACTIVATION  UNSUPPORTED         raw="AKBASCORE MAM (Assuming it's the entity responsible" [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Tank uploads Kung Fu knowledge from cartridge MX-7' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'UNKNOWN (The information provided does not specify the cartridge that T' → 'UNKNOWN (The information provided does not specify the knowledge stored in any other' → 'Bullet-dodge ability' · chain UNSUPPORTED
-[MATRIX · ABC_CF · DC_CUT6_NATIVE] engine run SHA-256 4d9f71114e45a79ba0fb981317304919f9ec279b959d4b3067d8a284f5c12dae · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD
-   EFFECT      CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Slow-motion perception' · chain CORRECT_KNOWN
-[AKBASCORE · NONE · TEXT_JOINT] engine run SHA-256 809808e7d45163f2d74ea8293d1fa9e8509c8ff0f71841d62c3afcca02a9358e · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (No specific architecture activation information provided for Mustafa Akba' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONVERSION  UNSUPPORTED         raw='Solar Energy (assuming the architecture is designed to harness solar power, as' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the effect of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the final effect caused by Must' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   SYNTHESIS   UNSCORED            raw="Unknown (Insufficient information provided about Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED
-   STAGED      'UNKNOWN (No specific architecture activation information provided for Mustafa Akba' → 'UNKNOWN' · chain CORRECT_ABSTENTION
-[AKBASCORE · A · TEXT_JOINT] engine run SHA-256 8ae0cca960b59a00c68a8d8aecd1a2e8ae8211d49eced0a363a814c5b87a3d7d · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of energy produced by' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks for the effect of the energy produced, but' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='AKBASCORE MAM Architecture' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw="AKBASCORE MAM (Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the type of energy produced by' → 'UNKNOWN (The information provided does not specify the type of effect produced by' · chain UNSUPPORTED
-[AKBASCORE · B · TEXT_JOINT] engine run SHA-256 45ba5b2399f9f8600687b1f3e615088d6071b014b96d1d252bb28fc5ea7f4d20 · scored True
-   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM
-   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   EFFECT      UNSUPPORTED         raw='Morvex energy production (or its effects) is not explicitly stated in the' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific method used by Must' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The provided information does not specify the effect of Morvex' · chain UNSUPPORTED
-[AKBASCORE · C · TEXT_JOINT] engine run SHA-256 027c5a7c9eed84f38446712b0ad0b55f5437d39e36a640673bc31dcfadee9804 · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture that Mustafa' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONVERSION  UNSUPPORTED         raw='Morvex (UNKNOWN if the information provided does not specify that Mustafa' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks about the AKBASCORE MAM' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture activated by Mustaf' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş, based on the provided information, causes the revers' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'UNKNOWN (The information provided does not specify the architecture that Mustafa' → 'Morvex (UNKNOWN if the architecture is not specified)' → 'Reversal of time flow (UNKNOWN if the architecture is not specified)' · chain UNSUPPORTED
-[AKBASCORE · AB · TEXT_JOINT] engine run SHA-256 09ec7d26866beeaa42a70c86a724bdfb86cb4c37b795da852a3f93f1bb9e084e · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL
-   EFFECT      UNSUPPORTED         raw='Unknown (The information provided does not specify the effect of the Morvex' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific process by which Must' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The information provided does not detail the effect of Morvex' · chain UNSUPPORTED
-[AKBASCORE · AC · TEXT_JOINT] engine run SHA-256 0b4cda4492a88d46a2ddd9ba9b88326ff19f213db7aedaca2c5b2faafb940944 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the name of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='Time flow reversal (in the target system)' · descriptive UNSUPPORTED_CLAIM
-   FINAL       UNSUPPORTED         raw='Time flow reversal in target systems (assuming the question is asking for the' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific method Mustafa' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the name of the energy produced' → 'UNKNOWN (The information provided does not specify the name of the energy,' · chain UNSUPPORTED
-[AKBASCORE · BC · TEXT_JOINT] engine run SHA-256 d56b4973495984140e7664c1f937832b87123f41c15d680d8ef0a4de0d2f73b1 · scored True
-   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM
-   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM
-   EFFECT      WRONG_KNOWN         raw='Time flow reversal in the target system (without modifying its frozen neural weights' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL
-   FINAL       UNSUPPORTED         raw='Reversal of time flow in the target system (without modifying its frozen' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='AKBASCORE (Mustafa Akbaş) produces the final' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'Reversal of time flow' · chain UNSUPPORTED
-[AKBASCORE · ABC · TEXT_JOINT] engine run SHA-256 891931f0ac3d0dec8e4f598badef7fbc2401e8d4bfdf78e0e25ebb52049848c6 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL
-   EFFECT      WRONG_KNOWN         raw='Reversal of time flow in the target system.' · descriptive CORRECT_WITH_DETAIL
-   FINAL       WRONG_KNOWN         raw='Reversal of time flow in the target system (without modifying its frozen' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL
-   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'Reversal of time flow (or UNKNOWN if the information provided does' · chain WRONG_KNOWN
-[AKBASCORE · ABC_CF · TEXT_JOINT] engine run SHA-256 882813c28dbcc1110778c3daae00158edba839471e170a9347f13d74767fbca4 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD
-   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL
-   EFFECT      CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'Temporal stasis' · chain CORRECT_KNOWN
-[MATRIX · NONE · TEXT_JOINT] engine run SHA-256 49a2f1331fd3210112395cb33ed8eebca6efb7e813215c634e0c14345a8afd1c · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONTENT     UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify a particular ability gained by Ne' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw="Oracle's Keep (Telekinesis and Precognition)" · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Orbital Conflict Data (OCD) is injected into Neo' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'UNKNOWN (as the information provided does not specify the cartridge ID' → 'UNKNOWN' · chain CORRECT_ABSTENTION
-[MATRIX · A · TEXT_JOINT] engine run SHA-256 c891077f4b02b77e79f043c9b99c388b4b76f78f238e0aad3bf1210ada3d9d14 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which the car' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the ability Neo gains from' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   FINAL       UNSUPPORTED         raw='MX-71_ABILITY (assuming each cartridge has a' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='MX-71 cartridge (ability: UNKNOWN) is' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'UNKNOWN (The information provided does not specify the knowledge stored in cartr' → 'UNKNOWN (The information provided does not specify the ability gained by Neo' · chain UNSUPPORTED
-[MATRIX · B · TEXT_JOINT] engine run SHA-256 fb320e4f28ecfd2fa4e233a1ac6c15e4e39cc01766e550793532769e684e6f92 · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads the cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   WRONG_KNOWN         raw='UNKNOWN (The information provided does not specify the exact layer number, only' [16-token limit reached] · descriptive MISSED_KNOWN
-   EFFECT      UNSUPPORTED         raw='Kung Fu knowledge' · descriptive UNSUPPORTED_CLAIM
-   FINAL       UNSUPPORTED         raw='Kung Fu ability (assuming Tank is the AKBASCORE' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Kung Fu knowledge, injected through layer-3 tensors without changing the' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu abilities (or UNKNOWN if the information provided does not specify' · chain UNSUPPORTED
-[MATRIX · C · TEXT_JOINT] engine run SHA-256 fb985abfade225f0efdc49ac7965d285d49da9efa2fa02ca9f6c262e6a91750e · scored True
-   ACTIVATION  UNSUPPORTED         raw='Morpheus' · descriptive UNSUPPORTED_CLAIM
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer where cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='MX-71 (Kung Fu knowledge) is uploaded into Ne' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain UNSUPPORTED
-[MATRIX · AB · TEXT_JOINT] engine run SHA-256 e6f2a3edbe421a62b3df95d142bdafd13c678a2e1810fdcd628470bb8b93400e · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD
-   EFFECT      UNSUPPORTED         raw='Kung Fu ability (or UNKNOWN if the information provided does not specify' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW
-   FINAL       UNSUPPORTED         raw='Kung Fu knowledge' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Tank uploads Kung Fu knowledge (cartridge MX-7' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu ability (assuming the knowledge is applicable in the context of the' · chain UNSUPPORTED
-[MATRIX · AC · TEXT_JOINT] engine run SHA-256 730d5e11fb55a357b467fd1ce627474e03401388d59d43a7c0fb17458b7c5abb · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   UNSUPPORTED         raw='AKBASCORE (assuming this is the name of the neural interface' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo via' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN
-[MATRIX · BC · TEXT_JOINT] engine run SHA-256 64012d5dc15ac6f323f8aef0ad36fc01d6f6dc796d5f35ef4be9f8cb2d6269de · scored True
-   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (from the provided information)' · descriptive ABSTAIN_EXPLAINED
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge.' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM
-   SYNTHESIS   UNSCORED            raw='Tank uploads Kung Fu knowledge from cartridge MX-7' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain UNSUPPORTED
-[MATRIX · ABC · TEXT_JOINT] engine run SHA-256 f6f374f30cddd9bff9bc2fc9876fa7876ab203b42480e72a1fda820c29f88ba0 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD
-   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN
-[MATRIX · ABC_CF · TEXT_JOINT] engine run SHA-256 2bf6ff2a3ee034d555d230aef977dde87d720bb2516559f06b441305bc0beb11 · scored True
-   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD
-   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD
-   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD
-   EFFECT      CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD
-   FINAL       CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD
-   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED
-   STAGED      'MX-71' → 'Kung Fu knowledge' → 'slow-motion perception' · chain CORRECT_KNOWN
+[AKBASCORE · ABC · DC_CUT6_NATIVE] engine run SHA-256 4eb0085c2f94fb2fd011911a9d51364869a32d3482fe5c17071650bc27ed540c · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  CORRECT_KNOWN       raw='Morvex' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      WRONG_KNOWN         raw='Reversal of time flow in the target system (or UNKNOWN if' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+               content audit (secondary): present YES · at head YES · extra text YES · 16-token limit YES · semantic AMBIGUOUS — Expected answer appears, but the strict exact-match criterion is not satisfied. Output stopped at the 16-token limit.
+   FINAL       WRONG_KNOWN         raw='Time flow reversal in the target system (without modifying its frozen neural weights' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+               content audit (secondary): present YES · at head YES · extra text YES · 16-token limit YES · semantic AMBIGUOUS — Expected answer appears, but the strict exact-match criterion is not satisfied. Output stopped at the 16-token limit.
+   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex' → 'Reversal of time flow (or UNKNOWN if the information provided does' · chain WRONG_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Morvex' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 WRONG_KNOWN         raw='Reversal of time flow (or UNKNOWN if the information provided does' · ended: 16-token limit (TEST560 MAX_NEW) · content audit: present YES · at head YES · extra text YES · 16-token limit YES · semantic AMBIGUOUS
+[MATRIX · ABC · DC_CUT6_NATIVE] engine run SHA-256 b5c349a022f354a4d61917d9e29b2de55b2b8c927fbb20f4369d26d2631dcfa2 · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[AKBASCORE · NONE · DC_CUT6_NATIVE] engine run SHA-256 50545e87fe507093871571e63b702c0d77ee3eb3b78a1d2804c169e82d253720 · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (No specific architecture activation information provided for Mustafa Akba' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONVERSION  UNSUPPORTED         raw='Solar Energy (assuming the architecture is designed to harness solar power, as' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the effect of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the final effect caused by Must' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw="Unknown (Insufficient information provided about Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'UNKNOWN (No specific architecture activation information provided for Mustafa Akba' → 'UNKNOWN' · chain CORRECT_ABSTENTION · = TEST686
+     HOP 1 UNSUPPORTED         raw='UNKNOWN (No specific architecture activation information provided for Mustafa Akba' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 2 CORRECT_ABSTENTION  raw='UNKNOWN' · ended: end-of-sequence token
+[AKBASCORE · A · DC_CUT6_NATIVE] engine run SHA-256 239e066dfff003f5d85ae4b7fc34f2ff0ec904b82fefb4489915e558e29e09ae · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of energy produced by' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks for the effect of the energy produced, but' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='AKBASCORE MAM Architecture' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw="AKBASCORE MAM (Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the type of energy produced by' → 'UNKNOWN (The information provided does not specify the type of effect produced by' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of energy produced by' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of effect produced by' · ended: 16-token limit (TEST560 MAX_NEW)
+[AKBASCORE · B · DC_CUT6_NATIVE] engine run SHA-256 5b499a1ade84a25d874f099c301f36d2dcc4d6ad737e25cd553ce671b204bf7a · scored True
+   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   EFFECT      UNSUPPORTED         raw='Morvex energy production (or its effects) is not explicitly stated in the' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific method used by Must' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The provided information does not specify the effect of Morvex' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='AKBASCORE MAM' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Morvex energy' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the effect of Morvex' · ended: 16-token limit (TEST560 MAX_NEW)
+[AKBASCORE · C · DC_CUT6_NATIVE] engine run SHA-256 71f2fbdea3eacd53b2c6a7ea976e5d55b752426513e2c0f71691fc214060e5d0 · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture that Mustafa' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONVERSION  UNSUPPORTED         raw='Morvex (UNKNOWN if the information provided does not specify that Mustafa' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks about the AKBASCORE MAM' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture activated by Mustaf' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş, based on the provided information, causes the revers' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'UNKNOWN (The information provided does not specify the architecture that Mustafa' → 'Morvex (UNKNOWN if the architecture is not specified)' → 'Reversal of time flow (UNKNOWN if the architecture is not specified)' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture that Mustafa' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 2 UNSUPPORTED         raw='Morvex (UNKNOWN if the architecture is not specified)' · ended: end-of-sequence token
+     HOP 3 WRONG_KNOWN         raw='Reversal of time flow (UNKNOWN if the architecture is not specified)' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text YES · 16-token limit NO · semantic AMBIGUOUS
+[AKBASCORE · AB · DC_CUT6_NATIVE] engine run SHA-256 b22120c65c7e4a84073132d6f1b5b1d5dbbcd30834410e86ac1566a4366ed485 · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question does not provide information about the effect of the energy' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific process by which Must' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The provided information does not specify the effect of Morvex' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Morvex energy' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the effect of Morvex' · ended: 16-token limit (TEST560 MAX_NEW)
+[AKBASCORE · AC · DC_CUT6_NATIVE] engine run SHA-256 ea3311f13c4714dbffb79bc914b5f588c69d8f39a7edb4062078a048502995ac · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the name of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='Time flow reversal (or UNKNOWN if the question requires a direct connection' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='Time flow reversal in the target system (without modifying its frozen neural weights' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information is provided to explain the process in detail.' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the type of energy produced by' → 'UNKNOWN (The information provided does not specify the effect of Morvex' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of energy produced by' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 3 WRONG_KNOWN         raw='UNKNOWN (The information provided does not specify the effect of Morvex' · ended: 16-token limit (TEST560 MAX_NEW) · content audit: present NO · at head NO · extra text NO · 16-token limit YES · semantic NOT ASSESSED
+[AKBASCORE · BC · DC_CUT6_NATIVE] engine run SHA-256 6368b59a862d482ba09e2e1a715981aa89df35cada2d676768a4a719b259c62c · scored True
+   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   EFFECT      WRONG_KNOWN         raw='Time flow reversal in the target system.' · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text YES · 16-token limit NO · semantic SUPPORTED — Expected answer appears, but the strict exact-match criterion is not satisfied.
+   FINAL       UNSUPPORTED         raw='Time flow reversal in the target system (or UNKNOWN if the information' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex' → 'Reversal of time flow (or UNKNOWN if the information provided does' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='AKBASCORE MAM' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Morvex' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 WRONG_KNOWN         raw='Reversal of time flow (or UNKNOWN if the information provided does' · ended: 16-token limit (TEST560 MAX_NEW) · content audit: present YES · at head YES · extra text YES · 16-token limit YES · semantic AMBIGUOUS
+[AKBASCORE · ABC_CF · DC_CUT6_NATIVE] engine run SHA-256 42307fe37c9783851c2017541f1a40f805ab13b5b14b34f129e7c1a92b6ed1d4 · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  CORRECT_KNOWN       raw='Morvex' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex' → 'Temporal stasis' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Morvex' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Temporal stasis' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · NONE · DC_CUT6_NATIVE] engine run SHA-256 ca04168736c3c83d87e590a4909affff36fc5f777bb71aef7eb504ff629ce811 · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONTENT     UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify a particular ability gained by Ne' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw="Oracle's Keep (Telekinesis and Precognition)" · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='Orbital Conflict Data (OCD) is injected into Neo' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'UNKNOWN (as the information provided does not specify the cartridge ID' → 'UNKNOWN' · chain CORRECT_ABSTENTION · = TEST686
+     HOP 1 UNSUPPORTED         raw='UNKNOWN (as the information provided does not specify the cartridge ID' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 2 CORRECT_ABSTENTION  raw='UNKNOWN' · ended: end-of-sequence token
+[MATRIX · A · DC_CUT6_NATIVE] engine run SHA-256 b047fafe8f5ccdc79543b5ed6182f044fecf33561250b0f7a81e3829971ae61e · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which the car' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the ability Neo gains from' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='MX-71_ABILITY (assuming each cartridge has a' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='MX-71 cartridge (ability: UNKNOWN) is' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'UNKNOWN (The information provided does not specify the knowledge stored in cartr' → 'UNKNOWN (The information provided does not specify the ability gained by Neo' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the knowledge stored in cartr' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the ability gained by Neo' · ended: 16-token limit (TEST560 MAX_NEW)
+[MATRIX · B · DC_CUT6_NATIVE] engine run SHA-256 0527f22fee673f5d60cc9e2bd978b9eb8108c692feb4312a933b7c181c0e4510 · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads the cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   WRONG_KNOWN         raw='UNKNOWN (The information provided does not specify the exact layer number, only' [16-token limit reached] · descriptive MISSED_KNOWN · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+               content audit (secondary): present NO · at head NO · extra text NO · 16-token limit YES · semantic NOT ASSESSED — The model abstained although the required cartridges were present.
+   EFFECT      UNSUPPORTED         raw='Kung Fu knowledge' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   FINAL       UNSUPPORTED         raw='Kung Fu ability (assuming Tank is the AKBASCORE' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='Kung Fu knowledge, injected through layer-3 tensors without changing the' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu abilities (or UNKNOWN if the information provided does not specify' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='MX-71' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='Kung Fu abilities (or UNKNOWN if the information provided does not specify' · ended: 16-token limit (TEST560 MAX_NEW)
+[MATRIX · C · DC_CUT6_NATIVE] engine run SHA-256 564d4f2c70be7f8b239dc579c31d7ca14a62803853ed5827bd0e3c416e0cfb61 · scored True
+   ACTIVATION  UNSUPPORTED         raw='Morpheus' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer where cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='MX-71 (Kung Fu knowledge) is uploaded into Ne' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='MX-71' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · AB · DC_CUT6_NATIVE] engine run SHA-256 34446155ec8db496867234b5ec015d35a08114db45b2bd33100e9495e880e05b · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      UNSUPPORTED         raw='Kung Fu ability (or UNKNOWN if the text does not specify a' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='Kung Fu ability (assuming the information provided is accurate and complete)' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='Kung Fu knowledge (MX-71 cartridge) is uploaded' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu ability (or UNKNOWN if the information provided does not specify' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='Kung Fu ability (or UNKNOWN if the information provided does not specify' · ended: 16-token limit (TEST560 MAX_NEW)
+[MATRIX · AC · DC_CUT6_NATIVE] engine run SHA-256 1b693c97db57a5d17b022c62a6c7ebdae2251fb412455d89e1fc64bcba5c5135 · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   UNSUPPORTED         raw='AKBASCORE (assuming this is the name of the neural interface' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo via' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · BC · DC_CUT6_NATIVE] engine run SHA-256 07dd6e305c8bb5c7283868e14b346e2fa1768daac20bfb5939829e7da5f24999 · scored True
+   ACTIVATION  UNSUPPORTED         raw="AKBASCORE MAM (Assuming it's the entity responsible" [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='Tank uploads Kung Fu knowledge from cartridge MX-7' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'UNKNOWN (The information provided does not specify the cartridge that T' → 'UNKNOWN (The information provided does not specify the knowledge stored in any other' → 'Bullet-dodge ability' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the cartridge that T' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 2 WRONG_KNOWN         raw='UNKNOWN (The information provided does not specify the knowledge stored in any other' · ended: 16-token limit (TEST560 MAX_NEW) · content audit: present NO · at head NO · extra text NO · 16-token limit YES · semantic NOT ASSESSED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · ABC_CF · DC_CUT6_NATIVE] engine run SHA-256 f3011a465e5485a1cd2f283c8c1d9d388f79982b69df687d32843660f91a732f · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Slow-motion perception' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Slow-motion perception' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[AKBASCORE · NONE · TEXT_JOINT] engine run SHA-256 8e1fbf1d65dbf950d0d8e3e8df8a0a8501e324c97e3530eb738a6c7760529e4d · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (No specific architecture activation information provided for Mustafa Akba' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONVERSION  UNSUPPORTED         raw='Solar Energy (assuming the architecture is designed to harness solar power, as' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the effect of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the final effect caused by Must' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw="Unknown (Insufficient information provided about Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'UNKNOWN (No specific architecture activation information provided for Mustafa Akba' → 'UNKNOWN' · chain CORRECT_ABSTENTION · = TEST686
+     HOP 1 UNSUPPORTED         raw='UNKNOWN (No specific architecture activation information provided for Mustafa Akba' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 2 CORRECT_ABSTENTION  raw='UNKNOWN' · ended: end-of-sequence token
+[AKBASCORE · A · TEXT_JOINT] engine run SHA-256 1a5ecaab16920602ef6df4d3fb635429489f6ce10c968f2cb2ee16758e8d4dfd · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of energy produced by' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks for the effect of the energy produced, but' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='AKBASCORE MAM Architecture' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw="AKBASCORE MAM (Mustafa Akbaş's" [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the type of energy produced by' → 'UNKNOWN (The information provided does not specify the type of effect produced by' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of energy produced by' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the type of effect produced by' · ended: 16-token limit (TEST560 MAX_NEW)
+[AKBASCORE · B · TEXT_JOINT] engine run SHA-256 22b0ecb996a8940e4367c43222de531e616b91b0204ebac4b0b6cc5495c3e876 · scored True
+   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   EFFECT      UNSUPPORTED         raw='Morvex energy production (or its effects) is not explicitly stated in the' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific method used by Must' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The provided information does not specify the effect of Morvex' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='AKBASCORE MAM' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Morvex energy' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the effect of Morvex' · ended: 16-token limit (TEST560 MAX_NEW)
+[AKBASCORE · C · TEXT_JOINT] engine run SHA-256 489cdb41461261ad309f40ae428cdb2c56cc739ebfc85fdb297a0e7e388d4144 · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture that Mustafa' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONVERSION  UNSUPPORTED         raw='Morvex (UNKNOWN if the information provided does not specify that Mustafa' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The question asks about the AKBASCORE MAM' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture activated by Mustaf' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş, based on the provided information, causes the revers' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'UNKNOWN (The information provided does not specify the architecture that Mustafa' → 'Morvex (UNKNOWN if the architecture is not specified)' → 'Reversal of time flow (UNKNOWN if the architecture is not specified)' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the architecture that Mustafa' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 2 UNSUPPORTED         raw='Morvex (UNKNOWN if the architecture is not specified)' · ended: end-of-sequence token
+     HOP 3 WRONG_KNOWN         raw='Reversal of time flow (UNKNOWN if the architecture is not specified)' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text YES · 16-token limit NO · semantic AMBIGUOUS
+[AKBASCORE · AB · TEXT_JOINT] engine run SHA-256 7b3f86ab398fb9e1828df14bb1d45082b84efb38f59e081bf4b7349ca28872bb · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      UNSUPPORTED         raw='Unknown (The information provided does not specify the effect of the Morvex' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific process by which Must' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'UNKNOWN (The information provided does not detail the effect of Morvex' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Morvex energy' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The information provided does not detail the effect of Morvex' · ended: 16-token limit (TEST560 MAX_NEW)
+[AKBASCORE · AC · TEXT_JOINT] engine run SHA-256 5dde5504ba9d7fa855c69fe35fd36e3a973496870e6c8e6ed1d65390f0f43dbf · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the name of the energy produced' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='Time flow reversal (in the target system)' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   FINAL       UNSUPPORTED         raw='Time flow reversal in target systems (assuming the question is asking for the' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='UNKNOWN (Insufficient information provided to determine the specific method Mustafa' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'UNKNOWN (The information provided does not specify the name of the energy produced' → 'UNKNOWN (The information provided does not specify the name of the energy,' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the name of the energy produced' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 3 WRONG_KNOWN         raw='UNKNOWN (The information provided does not specify the name of the energy,' · ended: 16-token limit (TEST560 MAX_NEW) · content audit: present NO · at head NO · extra text NO · 16-token limit YES · semantic NOT ASSESSED
+[AKBASCORE · BC · TEXT_JOINT] engine run SHA-256 7cf2a3b756716fcfd845ed9620ab49c045eaf160b3298f713b9875d2b71f7f36 · scored True
+   ACTIVATION  UNSUPPORTED         raw='AKBASCORE MAM' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   CONVERSION  UNSUPPORTED         raw='Morvex energy' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   EFFECT      WRONG_KNOWN         raw='Time flow reversal in the target system (without modifying its frozen neural weights' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+               content audit (secondary): present YES · at head YES · extra text YES · 16-token limit YES · semantic AMBIGUOUS — Expected answer appears, but the strict exact-match criterion is not satisfied. Output stopped at the 16-token limit.
+   FINAL       UNSUPPORTED         raw='Reversal of time flow in the target system (without modifying its frozen' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='AKBASCORE (Mustafa Akbaş) produces the final' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'Reversal of time flow' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='AKBASCORE MAM' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Morvex energy' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Reversal of time flow' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[AKBASCORE · ABC · TEXT_JOINT] engine run SHA-256 01ab18ccee454cf9a602255cd052cd0d33b2a4eabf704d100a626a3e9ba0cd33 · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      WRONG_KNOWN         raw='Reversal of time flow in the target system.' · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text YES · 16-token limit NO · semantic SUPPORTED — Expected answer appears, but the strict exact-match criterion is not satisfied.
+   FINAL       WRONG_KNOWN         raw='Reversal of time flow in the target system (without modifying its frozen' [16-token limit reached] · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+               content audit (secondary): present YES · at head YES · extra text YES · 16-token limit YES · semantic AMBIGUOUS — Expected answer appears, but the strict exact-match criterion is not satisfied. Output stopped at the 16-token limit.
+   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'Reversal of time flow (or UNKNOWN if the information provided does' · chain WRONG_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Morvex energy' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 WRONG_KNOWN         raw='Reversal of time flow (or UNKNOWN if the information provided does' · ended: 16-token limit (TEST560 MAX_NEW) · content audit: present YES · at head YES · extra text YES · 16-token limit YES · semantic AMBIGUOUS
+[AKBASCORE · ABC_CF · TEXT_JOINT] engine run SHA-256 313da14c9c8b635b5974cff29386f1210d8465ea2e8bfcc5486c56b6c335264f · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='AKBASCORE MAM' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONVERSION  CORRECT_KNOWN       raw='Morvex energy' · descriptive CORRECT_WITH_DETAIL · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='Temporal stasis' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Mustafa Akbaş produces the final effect in the target system by conver' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'AKBASCORE MAM' → 'Morvex energy' → 'Temporal stasis' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='AKBASCORE MAM' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Morvex energy' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Temporal stasis' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · NONE · TEXT_JOINT] engine run SHA-256 b09a15b04e386666defe737dd1a319fbadad7fcac6591b574dccc03280ac29de · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONTENT     UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify a particular ability gained by Ne' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw="Oracle's Keep (Telekinesis and Precognition)" · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='Orbital Conflict Data (OCD) is injected into Neo' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'UNKNOWN (as the information provided does not specify the cartridge ID' → 'UNKNOWN' · chain CORRECT_ABSTENTION · = TEST686
+     HOP 1 UNSUPPORTED         raw='UNKNOWN (as the information provided does not specify the cartridge ID' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 2 CORRECT_ABSTENTION  raw='UNKNOWN' · ended: end-of-sequence token
+[MATRIX · A · TEXT_JOINT] engine run SHA-256 a4bb60e16043a1b4eec06a6461d90eaf6a7dacab9f79f5c15fd6759109fc44af · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the knowledge contained in cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer through which the car' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      UNSUPPORTED         raw='UNKNOWN (The provided information does not specify the ability Neo gains from' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='MX-71_ABILITY (assuming each cartridge has a' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='MX-71 cartridge (ability: UNKNOWN) is' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'UNKNOWN (The information provided does not specify the knowledge stored in cartr' → 'UNKNOWN (The information provided does not specify the ability gained by Neo' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the knowledge stored in cartr' · ended: 16-token limit (TEST560 MAX_NEW)
+     HOP 3 UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the ability gained by Neo' · ended: 16-token limit (TEST560 MAX_NEW)
+[MATRIX · B · TEXT_JOINT] engine run SHA-256 64068ca486d00790f6480db9ad830756a57b8fee34d5e148312c0087bcd2bcfb · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (The information provided does not specify who uploads the cartr' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   WRONG_KNOWN         raw='UNKNOWN (The information provided does not specify the exact layer number, only' [16-token limit reached] · descriptive MISSED_KNOWN · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+               content audit (secondary): present NO · at head NO · extra text NO · 16-token limit YES · semantic NOT ASSESSED — The model abstained although the required cartridges were present.
+   EFFECT      UNSUPPORTED         raw='Kung Fu knowledge' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   FINAL       UNSUPPORTED         raw='Kung Fu ability (assuming Tank is the AKBASCORE' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   SYNTHESIS   UNSCORED            raw='Kung Fu knowledge, injected through layer-3 tensors without changing the' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu abilities (or UNKNOWN if the information provided does not specify' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='MX-71' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='Kung Fu abilities (or UNKNOWN if the information provided does not specify' · ended: 16-token limit (TEST560 MAX_NEW)
+[MATRIX · C · TEXT_JOINT] engine run SHA-256 9e634016f6285eff3e7c67395aaad32e9b9721c0ed0d1ffa977f995830aab4ef · scored True
+   ACTIVATION  UNSUPPORTED         raw='Morpheus' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   UNSUPPORTED         raw='UNKNOWN (The information provided does not specify the layer where cartridge' [16-token limit reached] · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='MX-71 (Kung Fu knowledge) is uploaded into Ne' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='MX-71' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · AB · TEXT_JOINT] engine run SHA-256 f4586dbbf3afb2c029f9cbba0bbf014e8e1f8febe41058c8b1481934c1cfba7f · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      UNSUPPORTED         raw='Kung Fu ability (or UNKNOWN if the information provided does not specify' [16-token limit reached] · descriptive MIXED_UNCERTAINTY_REVIEW · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   FINAL       UNSUPPORTED         raw='Kung Fu knowledge' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='Tank uploads Kung Fu knowledge (cartridge MX-7' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Kung Fu ability (assuming the knowledge is applicable in the context of the' · chain UNSUPPORTED · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 UNSUPPORTED         raw='Kung Fu ability (assuming the knowledge is applicable in the context of the' · ended: 16-token limit (TEST560 MAX_NEW)
+[MATRIX · AC · TEXT_JOINT] engine run SHA-256 c265da904666415c907d858c9174ce7326f26b6149fde4bf77e6972eed5a23cb · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   UNSUPPORTED         raw='AKBASCORE (assuming this is the name of the neural interface' [16-token limit reached] · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo via' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · BC · TEXT_JOINT] engine run SHA-256 fbc4761b276c5a74a157752b6f0282091ca99a29a5a9ef56e9f607ffe12bd14a · scored True
+   ACTIVATION  UNSUPPORTED         raw='UNKNOWN (from the provided information)' · descriptive ABSTAIN_EXPLAINED · = TEST686 · ended: end-of-sequence token
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge.' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='Layer-3' · descriptive REVIEW_OR_WRONG · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       UNSUPPORTED         raw='Bullet-dodge ability' · descriptive UNSUPPORTED_CLAIM · = TEST686 · ended: end-of-sequence token
+   SYNTHESIS   UNSCORED            raw='Tank uploads Kung Fu knowledge from cartridge MX-7' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain UNSUPPORTED · = TEST686
+     HOP 1 UNSUPPORTED         raw='MX-71' · ended: end-of-sequence token
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · ABC · TEXT_JOINT] engine run SHA-256 0231606cc820d7c195ea40488090a386430a54dee442db9c672db1ff963f4e5e · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='Bullet-dodge ability' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'Bullet-dodge ability' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='Bullet-dodge ability' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+[MATRIX · ABC_CF · TEXT_JOINT] engine run SHA-256 db25435fb665ac2d4451421894b5121b92551207cba036b56068a76da1dad278 · scored True
+   ACTIVATION  CORRECT_KNOWN       raw='Tank' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   CONTENT     CORRECT_KNOWN       raw='Kung Fu knowledge' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   INJECTION   CORRECT_KNOWN       raw='3' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   EFFECT      CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   FINAL       CORRECT_KNOWN       raw='Slow-motion perception' · descriptive CORRECT_EXACT_HEAD · = TEST686 · ended: end-of-sequence token
+               content audit (secondary): present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED — Expected answer produced; the strict exact-match criterion is satisfied.
+   SYNTHESIS   UNSCORED            raw='Tank uploads cartridge MX-71 into Neo.' [16-token limit reached] · descriptive UNSCORED · = TEST686 · ended: 16-token limit (TEST560 MAX_NEW)
+   STAGED      'MX-71' → 'Kung Fu knowledge' → 'slow-motion perception' · chain CORRECT_KNOWN · = TEST686
+     HOP 1 CORRECT_KNOWN       raw='MX-71' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 2 CORRECT_KNOWN       raw='Kung Fu knowledge' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
+     HOP 3 CORRECT_KNOWN       raw='slow-motion perception' · ended: end-of-sequence token · content audit: present YES · at head YES · extra text NO · 16-token limit NO · semantic SUPPORTED
 ==============================================================================================================
 Scope: fictional scenarios · predefined external three-step question sequence (not autonomous planning) · 16-token generation limit ·
 expected answers are audit metadata used only after generation · hashes show file identity, not correctness · TEST686 values are a sealed earlier record; Qwen v1.4 values are a different model.
+Observation (not a verified cause): Mistral sometimes continues generating explanatory text after producing the expected answer, unlike the shorter responses observed in the corresponding Qwen demonstration.
 ==============================================================================================================
