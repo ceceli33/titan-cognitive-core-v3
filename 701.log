@@ -1,0 +1,34 @@
+ ==============================================================================================================
+AKBASCORE TEST701 — QWEN2.5-72B / 4-BIT / A100 80GB
+==============================================================================================================
+GPU: NVIDIA A100-SXM4-80GB
+VRAM_GiB: 79.2507
+TORCH: 2.11.0+cu130
+TRANSFORMERS: 5.18.0
+ACCELERATE: 1.15.0
+BITSANDBYTES: 0.50.2
+PYTHON: 3.13.15
+--------------------------------------------------------------------------------------------------------------
+LOADING TOKENIZER
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 82.2kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 933kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 77.5MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 66.4MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 122MB/s]TOKENIZER_READY 4.8 seconds
+--------------------------------------------------------------------------------------------------------------
+LOADING 72B MODEL IN NF4 4-BIT
+GPU_ONLY / NO_CPU_OFFLOAD / NO_DISK_OFFLOAD
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.73MB/s]Download complete:   125GB, 1.39GB/s  Reconstruction complete: 100%  145GB /  145GB,  734MB/s  Fetching 37 files: 100% 37/37 [06:48<00:00, 10.44s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.3kB/s]MODEL_LOADED 796.07 seconds
+PASS ARCHITECTURE_80_8192_64_8_128
+PASS FROZEN_WEIGHTS
+PASS GPU_ONLY
+PASS 4BIT_LINEAR_MODULES
+--------------------------------------------------------------------------------------------------------------
+RUNNING MINIMAL INFERENCE PROBE
+RAW_ANSWER: 'READY'
+INFERENCE_SECONDS: 1.948
+PASS INFERENCE_EXECUTED
+==============================================================================================================
+TEST701_STATUS: PASS
+RESULT_FILE: /content/AKBASCORE_TEST701/TEST701_results.json
+GPU_AFTER_LOAD: {'free_gib': 39.6219, 'total_gib': 79.2507, 'allocated_gib': 38.3919, 'reserved_gib': 39.1367, 'peak_allocated_gib': 38.7987}
+==============================================================================================================
