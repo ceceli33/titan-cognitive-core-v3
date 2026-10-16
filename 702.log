@@ -1,0 +1,72 @@
+ ==============================================================================================================
+AKBASCORE TEST702-R2 — 72B NF4 / CUT CALIBRATION
+==============================================================================================================
+PASS CUDA_AVAILABLE 
+PASS SINGLE_GPU 
+PASS A100_80GB_CLASS 
+LOADING_TOKENIZER
+config.json: 100% 663/663 [00:00<00:00, 76.9kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 927kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 66.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 69.5MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 129MB/s]LOADING_MODEL_NF4_GPU_ONLY
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.07MB/s]Download complete:   125GB,  465MB/s  Reconstruction complete: 100%  145GB /  145GB,  644MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00, 10.35s/it]Loading weights: 100% 963/963 [06:39<00:00,  3.18it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.7kB/s]PASS ARCH_72B [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4_PRESENT 
+PASS GPU_ONLY_PARAMETERS {'cuda:0': 37599879168}
+PASS GPU_ONLY_BUFFERS {'cuda:0': 128}
+PASS CANONICAL_PREFIX_0 
+PASS CANONICAL_PREFIX_1 
+PANEL_SHA256 e5012c898155996eef7983828ef3c255aa162e87f39f818a8c666cf1df0e40ba
+--------------------------------------------------------------------------------------------------------------
+CUT 1 START
+PASS CUT1 FORGE_LAYER_COUNT 
+PASS CUT1 FORGE_BF16 
+PASS CUT1 FORGE_H_SHAPE 
+PASS CUT1 INIT_LENGTH 
+PASS CUT1 INIT_LOWER_EXACT 
+CUT 1 UPPER_REFERENCE_EQUAL 78 / 78
+PASS CUT1 APPEND_LENGTH 
+PASS CUT1 APPEND_LAYER_COUNT 
+PASS CUT1 APPEND_PRIOR_BITWISE 
+PASS CUT1 APPEND_LOWER_REPHASE_EXACT 
+CUT 1 RAW_CAPITAL 'The current capital of Zorvan is Melket.'
+CUT 1 RAW_LARGEST_CITY 'The largest city of Zorvan is Dravel.'
+CUT 1 ANSWER_EXACT False False
+--------------------------------------------------------------------------------------------------------------
+CUT 3 START
+PASS CUT3 FORGE_LAYER_COUNT 
+PASS CUT3 FORGE_BF16 
+PASS CUT3 FORGE_H_SHAPE 
+PASS CUT3 INIT_LENGTH 
+PASS CUT3 INIT_LOWER_EXACT 
+CUT 3 UPPER_REFERENCE_EQUAL 76 / 76
+PASS CUT3 APPEND_LENGTH 
+PASS CUT3 APPEND_LAYER_COUNT 
+PASS CUT3 APPEND_PRIOR_BITWISE 
+PASS CUT3 APPEND_LOWER_REPHASE_EXACT 
+CUT 3 RAW_CAPITAL 'The current capital of Zorvan is Melket.'
+CUT 3 RAW_LARGEST_CITY 'The largest city of Zorvan is Dravel.'
+CUT 3 ANSWER_EXACT False False
+--------------------------------------------------------------------------------------------------------------
+CUT 6 START
+PASS CUT6 FORGE_LAYER_COUNT 
+PASS CUT6 FORGE_BF16 
+PASS CUT6 FORGE_H_SHAPE 
+PASS CUT6 INIT_LENGTH 
+PASS CUT6 INIT_LOWER_EXACT 
+CUT 6 UPPER_REFERENCE_EQUAL 73 / 73
+PASS CUT6 APPEND_LENGTH 
+PASS CUT6 APPEND_LAYER_COUNT 
+PASS CUT6 APPEND_PRIOR_BITWISE 
+PASS CUT6 APPEND_LOWER_REPHASE_EXACT 
+CUT 6 RAW_CAPITAL 'The current capital of Zorvan is Melket.'
+CUT 6 RAW_LARGEST_CITY 'The largest city of Zorvan is Dravel.'
+CUT 6 ANSWER_EXACT False False
+PASS WEIGHT_SENTINEL_UNCHANGED 
+==============================================================================================================
+TEST702_STATUS PASS
+CUT 1 STATUS PASS CAPITAL 'The current capital of Zorvan is Melket.' CITY 'The largest city of Zorvan is Dravel.'
+CUT 3 STATUS PASS CAPITAL 'The current capital of Zorvan is Melket.' CITY 'The largest city of Zorvan is Dravel.'
+CUT 6 STATUS PASS CAPITAL 'The current capital of Zorvan is Melket.' CITY 'The largest city of Zorvan is Dravel.'
+RESULT_JSON /content/AKBASCORE_TEST702/TEST702_results.json
+RESULT_LOG /content/AKBASCORE_TEST702/TEST702.log
+==============================================================================================================
