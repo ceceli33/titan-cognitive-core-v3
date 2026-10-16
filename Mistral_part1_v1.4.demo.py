@@ -223,6 +223,7 @@ SOURCES={}
 FULL_WEIGHT_AT_START=os.environ.get("AKB14M_FULL_WEIGHT_SHA","1")!="0"
 ENGINE_LOCK=threading.RLock()
 TEXT_IDS={}
+TEST686_ROWS={};TEST686_CHAINS={}   # sealed TEST686 raw answers, parsed from the SHA-256-verified 686.log (comparison only)
 
 def git_blob(b):return hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
 def gate(name,ok):
@@ -373,7 +374,13 @@ def verify_686_log():
     try:
         raw=fetch_source("686.log");txt=raw.decode("utf-8","replace")
         ok=SOURCES["686.log"]["sha256"]==LOCKS["test686_log_sha256"] and "TEST686 EXPERIMENT_COMPLETE" in txt
-        return dict(checked=True,sha256=SOURCES["686.log"]["sha256"],matches=ok)
+        if ok:
+            for line in txt.splitlines():
+                m=re.match(r"ANSWER (\S+) (\S+) (\S+) (\S+) (\S+) (.*)$",line)
+                if m:TEST686_ROWS[m.group(1,2,3,4)]=dict(status=m.group(5),answer=ast.literal_eval(m.group(6)));continue
+                m=re.match(r"STAGED (\S+) (\S+) (\S+) (\S+) (.*)$",line)
+                if m:TEST686_CHAINS[m.group(1,2,3)]=dict(status=m.group(4),answer=ast.literal_eval(m.group(5)))
+        return dict(checked=True,sha256=SOURCES["686.log"]["sha256"],matches=ok,rows=len(TEST686_ROWS),chains=len(TEST686_CHAINS))
     except Exception as ex:
         return dict(checked=False,error=f"{type(ex).__name__}: {ex}",matches=None)
 
