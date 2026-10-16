@@ -1,0 +1,54 @@
+ ==============================================================================================================
+AKBASCORE TEST704 — THREE INTERNET BOOKS / DISK CARTRIDGES / HOT SWAP
+==============================================================================================================
+PASS CUDA 
+PASS SINGLE_GPU 
+PASS A100_80GB_CLASS 
+PASS BOOK_COUNT 
+PASS TOKEN_LIMIT 1024
+DOWNLOADING A https://www.gutenberg.org/ebooks/1342.txt.utf-8
+SOURCE A BYTES 772386 SHA256 3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75 CHARS 747904
+DOWNLOADING B https://www.gutenberg.org/ebooks/84.txt.utf-8
+SOURCE B BYTES 448885 SHA256 7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3 CHARS 438770
+DOWNLOADING C https://www.gutenberg.org/ebooks/1661.txt.utf-8
+SOURCE C BYTES 607606 SHA256 922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0 CHARS 581568
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 87.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 936kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 79.9MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.8MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 122MB/s]LOADING_MODEL_NF4_GPU_ONLY
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.08MB/s]Download complete:   125GB,  519MB/s  Reconstruction complete: 100%  145GB /  145GB,  569MB/s  Fetching 37 files: 100% 37/37 [06:44<00:00, 10.57s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.24it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.3kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS GPU_ONLY ['cuda:0']
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (175851 > 131072). Running this sequence through the model will result in indexing errors
+FORGING A BODY_TOKENS 1024 FULL_SOURCE_TOKENS 175851
+PASS CARTRIDGE_ONLY_LOWER_A 
+SAVED_CARTRIDGE A BYTES 34606063 SHA256 4daa0d97c1fbd175b62e94bf5e75870e8db7a0af33fa78270a2b4e0579010e8f
+FORGING B BODY_TOKENS 1024 FULL_SOURCE_TOKENS 102206
+PASS CARTRIDGE_ONLY_LOWER_B 
+SAVED_CARTRIDGE B BYTES 34606063 SHA256 05bc0435ebf8b33f14f78d1691b3aff172cf02f3c369de5ecf5d0963dc7323a9
+FORGING C BODY_TOKENS 1024 FULL_SOURCE_TOKENS 141670
+PASS CARTRIDGE_ONLY_LOWER_C 
+SAVED_CARTRIDGE C BYTES 34606063 SHA256 38945a40b88ce7a5b593e94bf74fcd23eb2ccf43f8530cc73a6bb9fdc78ce996
+PASS SOURCE_FILES_REMOVED 
+SOURCE_TEXT_REMOVED; STARTING SAME-MODEL HOT-SWAP TRIALS
+QA NO_CARTRIDGE 'What does the loaded document excerpt say about its opening scene?' -> 'To accurately answer your question, I would need to know the specific document or text you are referring to. Could you please provide the document or a relevant excerpt from it? This will allow me to give'
+QA A_ONLY 'Which characters are introduced in the available Pride and Prejudice excerpt?' -> 'UNKNOWN\n\nThe provided excerpt from "Pride and Prejudice" does not introduce any specific characters. It includes the title page, publication information, and a preface by George Saintsbury that'
+QA A_ONLY 'What event is described in the available document excerpt?' -> 'The available document excerpt does not describe a specific event. It is the preface to the Project Gutenberg eBook of "Pride and Prejudice" by Jane Austen, written by George Saintsb'
+QA A_ONLY 'According to the available document, what is the opening scene of Frankenstein?' -> 'UNKNOWN. The provided document is about the eBook of "Pride and Prejudice" by Jane Austen, and does not contain any information about the opening scene of "Frankenstein."'
+QA B_ONLY 'Which characters are introduced in the available Frankenstein excerpt?' -> 'In the provided excerpt from "Frankenstein; or, the Modern Prometheus," the characters introduced are:\n\n- The narrator (the letter writer), who is not named in this excerpt but is later revealed to'
+QA B_ONLY 'What event is described in the available document excerpt?' -> 'The document excerpt describes the opening of a letter written by the narrator to his sister, Mrs. Saville. The narrator is informing his sister that he has arrived in St. Petersburg and is about to'
+QA B_ONLY 'According to the available document, what is the opening scene of Pride and Prejudice?' -> 'UNKNOWN. The provided document is about the eBook of "Frankenstein; or, the Modern Prometheus" by Mary Wollstonecraft Shelley, and does not contain any information about the opening scene of "'
+QA A_PLUS_B 'Compare the opening situations in the available Pride and Prejudice and Frankenstein excerpts. Cite details from each excerpt.' -> 'In the opening of "Pride and Prejudice," the text begins with a preface written by George Saintsbury, which discusses the nature of loving books and the varying opinions on Jane Aust'
+QA A_PLUS_B 'Which excerpt discusses a family gathering, and which discusses scientific discovery? Answer only if supported by the available excerpts.' -> 'The provided excerpts do not contain a clear description of a family gathering. The first excerpt is a preface to Jane Austen\'s "Pride and Prejudice," discussing the author\'s works and'
+QA B_PLUS_A 'Compare the opening situations in the available Pride and Prejudice and Frankenstein excerpts. Cite details from each excerpt.' -> 'The opening situations in the excerpts from "Pride and Prejudice" and "Frankenstein" present very different settings and tones, reflecting the distinct themes and styles of the two novels.\n\nIn "'
+QA C_ONLY 'Which characters are introduced in the available Sherlock Holmes excerpt?' -> 'In the provided excerpt from "A Scandal in Bohemia," the characters introduced are:\n\n- Sherlock Holmes: Described as a brilliant but emotionally detached detective with a keen mind for observation and reasoning.'
+QA C_ONLY 'What event is described in the available document excerpt?' -> "The excerpt describes the narrator's (Dr. Watson's) reflection on his relationship with Sherlock Holmes and the events that have led to their reduced contact. Specifically, it mentions the narrator's marriage and his"
+QA C_ONLY 'According to the available document, what is the opening scene of Frankenstein?' -> 'UNKNOWN. The provided document is about "The Adventures of Sherlock Holmes" and does not contain any information about the opening scene of "Frankenstein."'
+QA A_RESTORED 'Which characters are introduced in the available Pride and Prejudice excerpt?' -> 'UNKNOWN\n\nThe provided excerpt from "Pride and Prejudice" does not introduce any specific characters. It includes the title page, publication information, and a preface by George Saintsbury that'
+QA A_RESTORED 'What event is described in the available document excerpt?' -> 'The available document excerpt does not describe a specific event. It is the preface to the Project Gutenberg eBook of "Pride and Prejudice" by Jane Austen, written by George Saintsb'
+PASS WEIGHT_SENTINEL_UNCHANGED 
+==============================================================================================================
+TEST704_STATUS PASS_MECHANICS_UNSCORED_SEMANTICS
+RESULT_JSON /content/AKBASCORE_TEST704/TEST704_results.json
+RESULT_LOG /content/AKBASCORE_TEST704/TEST704.log
+==============================================================================================================
