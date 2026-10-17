@@ -1,0 +1,346 @@
+2026-10-17T08:35:24.648+00:00 SESSION_START      AKBASCORE Silicon Hippocampus · Qwen2.5-72B CUT3 {"session": "Q72S-20261017-083524", "version_note": "candidate v1.5 — not a published or validated release", "session_dir": "/content/AKBASCORE_Q72_DEMO/sessions/Q72S-20261017-083524"}
+
+################################################################################################################
+AKBASCORE AI TECHNOLOGY — SILICON HIPPOCAMPUS · Qwen2.5-72B / CUT3 SCALING STUDY
+candidate v1.5 — not a published or validated release · session Q72S-20261017-083524 · records in /content/AKBASCORE_Q72_DEMO/sessions/Q72S-20261017-083524
+Automatic initialization: every step below is executed for real in this runtime; nothing is precomputed.
+################################################################################################################
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[1/10] Verified sources (engine lock, licence, historical logs)
+      started 2026-10-17T08:35:24+00:00 · 0.0 min since start · 
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T08:35:24.678+00:00 STEP_START         SOURCES {"title": "Verified sources (engine lock, licence, historical logs)"}
+2026-10-17T08:35:24.962+00:00 ENGINE_SOURCE      709.py verified and split {"blob": "6c9f8cbb1eeed848d45133d73f0d7676b68e9125", "sha256": "68516eb151589800d2fd16bd2d37f8081315420caea9071659e340c62d819589", "index": {"module_nodes": 54, "try_statements": 65, "model_from": 14, "forge_from": 44, "trials_from": 48, "closing_from": 59}, "trials": ["NO_CARTRIDGE", "A_ONLY", "B_ONLY", "C_ONLY", "A_PLUS_B", "B_PLUS_A", "A_PLUS_C", "B_PLUS_C", "A_PLUS_B_PLUS_C", "C_PLUS_B_PLUS_A", "A_RESTORED"]}
+2026-10-17T08:35:25.694+00:00 HISTORICAL_LOADED  published 709.log verified (reference only, not this session) {"status": "PASS_PHYSICAL_UNSCORED_SEMANTICS", "chronology": [["TEST706", "ERROR"], ["TEST707", "ERROR"], ["TEST708", "ERROR"], ["TEST708-R2 (709.py)", "PASS_PHYSICAL_UNSCORED_SEMANTICS"]]}
+──── ✔ SOURCES finished in 0.0 min (1.2 s) · 
+2026-10-17T08:35:25.869+00:00 STEP_DONE          SOURCES {"seconds": 1.19, "result": {"sources": {"709.py": "6c9f8cbb1eeed848d45133d73f0d7676b68e9125", "709.log": "0916dfdb496bfe8becea48528b719d0de2241869", "706.log": "d49cca5eae92c8b87601bc1f53655fc759282c80", "707.log": "9917e5ea5d47dfccc27c239f0bf8e3c944ad183b", "708.log": "c55e52a68e4794e4ef4ee0c755b9578927528de3", "LICENSE": "9aad4724d1072f9e56486650a9527380c867a53b"}, "historical_status": "PASS_PHYSICAL_UNSCORED_SEMANTICS"}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[2/10] System preflight: GPU, RAM, disk, model cache
+      started 2026-10-17T08:35:25+00:00 · 0.0 min since start · 
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T08:35:25.871+00:00 STEP_START         PREFLIGHT {"title": "System preflight: GPU, RAM, disk, model cache"}
+  GPU         NVIDIA A100-SXM4-80GB · total 79.25 GiB · free 78.83 GiB · count 1
+  nvidia-smi  NVIDIA A100-SXM4-80GB, 81920 MiB, 428 MiB, 580.82.07
+  RAM         163.9 / 167.1 GiB available
+  disk        193.3 GiB free for the model cache · 193.3 GiB free for the demonstration
+  model       NOT CACHED — full download: 0/37 weight shards in /root/.cache/huggingface/hub · 135.4 GiB still to download
+──── ✔ PREFLIGHT finished in 0.1 min (5.6 s) · 
+2026-10-17T08:35:31.485+00:00 STEP_DONE          PREFLIGHT {"seconds": 5.61, "result": {"python": "3.13.15", "platform": "Linux-6.6.122+-x86_64-with-glibc2.39", "torch": "2.11.0+cu130", "cuda": true, "gpu_count": 1, "gpu": "NVIDIA A100-SXM4-80GB", "gpu_total_gib": 79.25, "gpu_free_gib": 78.83, "ram_total_gib": 167.1, "ram_available_gib": 163.9, "nvidia_smi": "NVIDIA A100-SXM4-80GB, 81920 MiB, 428 MiB, 580.82.07", "model_cache": {"model_id": "Qwen/Qwen2.5-72B-Instruct", "cache_dir": "/root/.cache/huggingface/hub", "shards": 37, "cached_shards": 0, "total_bytes": 145412519312, "missing_bytes": 1
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[3/10] Frozen Qwen2.5-72B-Instruct NF4 — TEST709 environment + model stage
+      started 2026-10-17T08:35:31+00:00 · 0.1 min since start · 
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T08:35:31.487+00:00 STEP_START         MODEL {"title": "Frozen Qwen2.5-72B-Instruct NF4 — TEST709 environment + model stage"}
+  model cache: NOT CACHED — full download: 0/37 weight shards in /root/.cache/huggingface/hub · 135.4 GiB still to download 
+  The progress bars below are the real Hugging Face download / checkpoint-loading bars.
+2026-10-17T08:35:50.848+00:00 ENGINE_DEFINED     709.py module part executed {"model": "Qwen/Qwen2.5-72B-Instruct", "cut": 3, "tokens_per_book": 10000, "chunk": 256, "reserve_gib": 9.0, "max_new": 48, "engine_root": "/content/AKBASCORE_TEST708", "engine_log": "/content/AKBASCORE_TEST708/TEST708.log"}
+2026-10-17T08:35:50.850+00:00 ENGINE_STAGE_START environment + frozen model (709.py statements 0–43) {"stage": "env_model", "gpu": "GPU free 78.83 GiB · allocated 0.00 GiB · peak 0.00 GiB"}
+=========================================================================================================
+AKBASCORE TEST708-R2 — THREE BOOKS / 3 x 10000 TOKEN PHYSICAL CUT3 / TIMED HOT SWAP
+=========================================================================================================
+PASS CUDA 
+PASS SINGLE_GPU 
+PASS A100_80GB 
+PASS CONFIG 
+SOURCE A BYTES 772386 SHA256 3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75
+SOURCE B BYTES 448885 SHA256 7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3
+SOURCE C BYTES 607606 SHA256 922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0
+config.json: 100% 663/663 [00:00<00:00, 83.1kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 865kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 64.9MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 67.3MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 121MB/s]PASS THREE_BOOKS_HAVE_REQUIRED_TOKENS {'A': 177456, 'B': 102484, 'C': 143432}
+LOADING_72B_NF4_GPU_ONLY
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.21MB/s]Download complete:   125GB,  965MB/s  Reconstruction complete: 100%  145GB /  145GB,  571MB/s  Fetching 37 files: 100% 37/37 [06:47<00:00, 10.29s/it]Loading weights: 100% 963/963 [06:39<00:00,  3.04it/s]generation_config.json: 100% 242/242 [00:00<00:00, 28.2kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS GPU_ONLY 
+CAPACITY_BUDGET {'tokens_per_book': 10000, 'total_body_tokens': 30000, 'max_live_cache_tokens_estimate': 100341, 'full_kv_bytes_per_token': 327680, 'reserve_gib': 9.0, 'model_gpu': {'free_gib': 39.622, 'allocated_gib': 38.392, 'peak_gib': 38.799, 'total_gib': 79.251}}
+PASS KV_ONLY_ESTIMATE_FITS {'tokens_per_book': 10000, 'total_body_tokens': 30000, 'max_live_cache_tokens_estimate': 100341, 'full_kv_bytes_per_token': 327680, 'reserve_gib': 9.0, 'model_gpu': {'free_gib': 39.622, 'allocated_gib': 38.392, 'peak_gib': 38.799, 'total_gib': 79.251}}
+2026-10-17T08:49:32.025+00:00 ENGINE_STAGE_DONE  environment + frozen model (709.py statements 0–43) {"stage": "env_model", "seconds": 821.17, "gpu": "GPU free 39.62 GiB · allocated 38.39 GiB · peak 38.80 GiB", "engine_log": ["SOURCE B BYTES 448885 SHA256 7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3", "SOURCE C BYTES 607606 SHA256 922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0", "PASS THREE_BOOKS_HAVE_REQUIRED_TOKENS {'A': 177456, 'B': 102484, 'C': 143432}", "LOADING_72B_NF4_GPU_ONLY", "PASS ARCH [80, 8192, 64, 8, 128]", "PASS FROZEN ", "PASS NF4 ", "PASS 
+──── ✔ MODEL finished in 14.0 min (840.5 s) · GPU free 39.62 GiB · allocated 38.39 GiB · peak 38.80 GiB
+2026-10-17T08:49:32.028+00:00 STEP_DONE          MODEL {"seconds": 840.54, "result": {"model_load_s": 813.25, "arch": [80, 8192, 64, 8, 128], "prefix_tokens": 31, "budget": {"tokens_per_book": 10000, "total_body_tokens": 30000, "max_live_cache_tokens_estimate": 100341, "full_kv_bytes_per_token": 327680, "reserve_gib": 9.0, "model_gpu": {"free_gib": 39.622, "allocated_gib": 38.392, "peak_gib": 38.799, "total_gib": 79.251}}, "model_revision": null, "env": {"gpu": "NVIDIA A100-SXM4-80GB", "torch": "2.11.0+cu130", "transformers": "5.18.0", "bitsandbytes": "0.50.2", "python": "3.13.15", "chunk_toke
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[4/10] Forge and save cartridges A, B, C — TEST709 forge stage
+      started 2026-10-17T08:49:32+00:00 · 14.1 min since start · GPU free 39.62 GiB · allocated 38.39 GiB · peak 38.80 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T08:49:32.030+00:00 STEP_START         FORGE {"title": "Forge and save cartridges A, B, C — TEST709 forge stage"}
+2026-10-17T08:49:32.031+00:00 ENGINE_STAGE_START forge and save cartridges (709.py statements 44–47) {"stage": "forge", "gpu": "GPU free 39.62 GiB · allocated 38.39 GiB · peak 38.80 GiB"}
+FORGING A TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS A 256 / 10031 GPU {'free_gib': 39.073, 'allocated_gib': 38.479, 'peak_gib': 39.002, 'total_gib': 79.251}
+FORGE_PROGRESS A 8192 / 10031 GPU {'free_gib': 36.401, 'allocated_gib': 40.901, 'peak_gib': 41.427, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_A 
+SAVED A FILE_BYTES 328698863 SHA256 06aa5afe9746f3de2ec0a9284d8b72c9b68bb109ff6d1206639a5793abd363f6
+FORGING B TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS B 256 / 10031 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 41.976, 'total_gib': 79.251}
+FORGE_PROGRESS B 8192 / 10031 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 41.976, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_B 
+SAVED B FILE_BYTES 328698863 SHA256 36e69d92a293b03219ec03fc9d3a180c33d55dc47506bae4689f837f7068675b
+FORGING C TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS C 256 / 10031 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 41.976, 'total_gib': 79.251}
+FORGE_PROGRESS C 8192 / 10031 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 41.976, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_C 
+SAVED C FILE_BYTES 328698863 SHA256 c4d0fcf1719fb49725862bfccbfe406bd18269882cf92cf03f8108e40b20cf43
+PASS SOURCE_FILES_REMOVED 
+2026-10-17T08:50:32.959+00:00 ENGINE_STAGE_DONE  forge and save cartridges (709.py statements 44–47) {"stage": "forge", "seconds": 60.93, "gpu": "GPU free 40.05 GiB · allocated 38.40 GiB · peak 41.98 GiB", "engine_log": ["FORGE_PROGRESS B 256 / 10031 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 41.976, 'total_gib': 79.251}", "FORGE_PROGRESS B 8192 / 10031 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 41.976, 'total_gib': 79.251}", "PASS CARTRIDGE_LOWER_ONLY_B ", "SAVED B FILE_BYTES 328698863 SHA256 36e69d92a293b03219ec03fc9d3a180c33d55dc47506bae4689f837f7068675b
+──── ✔ FORGE finished in 1.0 min (60.9 s) · GPU free 40.05 GiB · allocated 38.40 GiB · peak 41.98 GiB
+2026-10-17T08:50:32.961+00:00 STEP_DONE          FORGE {"seconds": 60.93, "result": [{"id": "A", "title": "Pride and Prejudice", "source_sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75", "total_source_tokens": 177456, "requested_tokens": 10000, "forge_seconds": 19.04, "cartridge_file_bytes": 328698863, "cartridge_sha256": "06aa5afe9746f3de2ec0a9284d8b72c9b68bb109ff6d1206639a5793abd363f6", "tensor_bytes": 328695808}, {"id": "B", "title": "Frankenstein", "source_sha256": "7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3", "total_source_tokens": 102484, 
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[5/10] Live TEST709 protocol — eleven scripted trials
+      started 2026-10-17T08:50:32+00:00 · 15.1 min since start · GPU free 40.05 GiB · allocated 38.40 GiB · peak 41.98 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T08:50:32.964+00:00 STEP_START         PROTOCOL {"title": "Live TEST709 protocol — eleven scripted trials"}
+2026-10-17T08:50:32.965+00:00 ENGINE_STAGE_START scripted TEST709 protocol (709.py statements 48–58) {"stage": "trials", "gpu": "GPU free 40.05 GiB · allocated 38.40 GiB · peak 41.98 GiB"}
+QA NO_CARTRIDGE 'What document is currently loaded? Answer UNKNOWN if no document is available.' -> 'UNKNOWN\n\nSince there is no document provided or referenced in your message, the answer is UNKNOWN. If you have a specific document you would like to discuss or reference, please provide it, and I will be happy to help you with your questions'
+HOT_SWAP_TIMING A_ONLY A {'ssd_load_ms': 1287.654, 'h2d_ms': 85.133, 'rebuild_ms': 17682.375, 'end_to_end_ms': 19055.162, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 44.73, 'total_gib': 79.251}}
+QA A_ONLY 'Who is Elizabeth Bennet?' -> "Elizabeth Bennet is the protagonist of Jane Austen's novel *Pride and Prejudice*. She is one of five sisters in the Bennet family and is known for her wit, intelligence, and lively disposition. Elizabeth is described as"
+QA A_ONLY 'What is the relationship between Elizabeth Bennet and Jane Bennet?' -> 'Elizabeth Bennet and Jane Bennet are sisters.'
+HOT_SWAP_TIMING B_ONLY B {'ssd_load_ms': 1277.004, 'h2d_ms': 91.243, 'rebuild_ms': 17670.951, 'end_to_end_ms': 19039.198, 'book': 'B', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 44.946, 'total_gib': 79.251}}
+QA B_ONLY 'Who is Robert Walton?' -> 'Robert Walton is the captain of a ship bound on an expedition to the North Pole. He is an ambitious and determined explorer who has prepared himself for the challenges of his journey through previous experiences, such as accompanying whale-fishers on expeditions'
+QA B_ONLY 'What expedition is Robert Walton undertaking?' -> "Robert Walton is undertaking an expedition to the North Pole. He aims to discover a passage near the pole to countries that are currently difficult to reach, and to explore the region's potential wonders and phenomena."
+HOT_SWAP_TIMING C_ONLY C {'ssd_load_ms': 1288.955, 'h2d_ms': 94.695, 'rebuild_ms': 17609.496, 'end_to_end_ms': 18993.146, 'book': 'C', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 44.946, 'total_gib': 79.251}}
+QA C_ONLY 'Who is Dr. Watson?' -> 'Dr. Watson is a character in "The Adventures of Sherlock Holmes" by Arthur Conan Doyle. He is a physician and a friend and colleague of Sherlock Holmes, often assisting Holmes in his investigations and chronicling the cases they solve together. Watson'
+QA C_ONLY 'What is the name of the detective associated with Dr. Watson?' -> 'The name of the detective associated with Dr. Watson is Sherlock Holmes.'
+HOT_SWAP_TIMING A_PLUS_B A {'ssd_load_ms': 1273.917, 'h2d_ms': 89.608, 'rebuild_ms': 17621.304, 'end_to_end_ms': 18984.829, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 44.946, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 44.946, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 44.946, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 36.382, 'allocated_gib': 41.987, 'peak_gib': 44.946, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 32.329, 'allocated_gib': 42.003, 'peak_gib': 44.946, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 31.878, 'allocated_gib': 42.55, 'peak_gib': 44.946, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 44.946, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 44.946, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 45.018, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 45.623, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 10031, 'new_tokens': 20031}
+HOT_SWAP_TIMING A_PLUS_B B {'ssd_load_ms': 1260.097, 'h2d_ms': 88.026, 'rebuild_ms': 46489.581, 'end_to_end_ms': 47837.704, 'book': 'B', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.514, 'peak_gib': 45.623, 'total_gib': 79.251}}
+QA A_PLUS_B 'Identify one person from Pride and Prejudice and one person from Frankenstein.' -> 'From *Pride and Prejudice*, one person is **Elizabeth Bennet**. From *Frankenstein*, one person is **Victor Frankenstein**.'
+HOT_SWAP_TIMING B_PLUS_A B {'ssd_load_ms': 1257.67, 'h2d_ms': 91.382, 'rebuild_ms': 17573.671, 'end_to_end_ms': 18922.723, 'book': 'B', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 36.382, 'allocated_gib': 41.987, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 32.329, 'allocated_gib': 42.003, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 31.878, 'allocated_gib': 42.55, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 51.358, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 10031, 'new_tokens': 20031}
+HOT_SWAP_TIMING B_PLUS_A A {'ssd_load_ms': 1276.303, 'h2d_ms': 90.594, 'rebuild_ms': 46301.633, 'end_to_end_ms': 47668.53, 'book': 'A', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.514, 'peak_gib': 51.358, 'total_gib': 79.251}}
+QA B_PLUS_A 'Name the narrator of the opening letters in Frankenstein and a Bennet sister from Pride and Prejudice.' -> 'The narrator of the opening letters in Frankenstein is Robert Walton. A Bennet sister from Pride and Prejudice is Elizabeth Bennet.'
+HOT_SWAP_TIMING A_PLUS_C A {'ssd_load_ms': 1257.772, 'h2d_ms': 91.81, 'rebuild_ms': 17567.64, 'end_to_end_ms': 18917.222, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 36.382, 'allocated_gib': 41.987, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 32.329, 'allocated_gib': 42.003, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 31.878, 'allocated_gib': 42.55, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 51.358, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 10031, 'new_tokens': 20031}
+HOT_SWAP_TIMING A_PLUS_C C {'ssd_load_ms': 1256.737, 'h2d_ms': 86.037, 'rebuild_ms': 46553.171, 'end_to_end_ms': 47895.945, 'book': 'C', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.514, 'peak_gib': 51.358, 'total_gib': 79.251}}
+QA A_PLUS_C 'Name a Bennet sister and the detective in the other document.' -> 'A Bennet sister is Elizabeth Bennet, and the detective in the other document is Sherlock Holmes.'
+HOT_SWAP_TIMING B_PLUS_C B {'ssd_load_ms': 1259.05, 'h2d_ms': 93.991, 'rebuild_ms': 17558.85, 'end_to_end_ms': 18911.891, 'book': 'B', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 36.382, 'allocated_gib': 41.987, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 32.329, 'allocated_gib': 42.003, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 31.878, 'allocated_gib': 42.55, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 51.358, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 10031, 'new_tokens': 20031}
+HOT_SWAP_TIMING B_PLUS_C C {'ssd_load_ms': 1254.941, 'h2d_ms': 86.25, 'rebuild_ms': 46539.184, 'end_to_end_ms': 47880.375, 'book': 'C', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.514, 'peak_gib': 51.358, 'total_gib': 79.251}}
+QA B_PLUS_C 'Name the Arctic explorer from Frankenstein and the detective from the other document.' -> 'The Arctic explorer from Frankenstein is Robert Walton, and the detective from the other document is Sherlock Holmes.'
+HOT_SWAP_TIMING A_PLUS_B_PLUS_C A {'ssd_load_ms': 1272.534, 'h2d_ms': 100.279, 'rebuild_ms': 17580.942, 'end_to_end_ms': 18953.755, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 36.382, 'allocated_gib': 41.987, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 32.329, 'allocated_gib': 42.003, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 31.878, 'allocated_gib': 42.55, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 51.358, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 10031, 'new_tokens': 20031}
+HOT_SWAP_TIMING A_PLUS_B_PLUS_C B {'ssd_load_ms': 1255.884, 'h2d_ms': 86.269, 'rebuild_ms': 46503.718, 'end_to_end_ms': 47845.871, 'book': 'B', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.514, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 20031, 'new_tokens': 10000, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.82, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.82, 'peak_gib': 51.358, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 29.593, 'allocated_gib': 45.24, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 29.139, 'allocated_gib': 45.253, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 24.341, 'allocated_gib': 45.751, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 21.497, 'allocated_gib': 46.376, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 18.403, 'allocated_gib': 47.001, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 15.059, 'allocated_gib': 47.626, 'peak_gib': 51.358, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 11.011, 'allocated_gib': 48.178, 'peak_gib': 51.358, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 20031, 'new_tokens': 30031}
+HOT_SWAP_TIMING A_PLUS_B_PLUS_C C {'ssd_load_ms': 1258.057, 'h2d_ms': 87.545, 'rebuild_ms': 74019.571, 'end_to_end_ms': 75365.173, 'book': 'C', 'cache_tokens': 30031, 'gpu': {'free_gib': 28.524, 'allocated_gib': 47.566, 'peak_gib': 51.358, 'total_gib': 79.251}}
+QA A_PLUS_B_PLUS_C 'Identify Elizabeth Bennet, Robert Walton and Sherlock Holmes and associate each with its own document.' -> '- **Elizabeth Bennet** is associated with the document **"Pride and Prejudice" by Jane Austen**. She is one of the main characters, known for her wit, intelligence, and strong personality.\n- **Robert'
+HOT_SWAP_TIMING C_PLUS_B_PLUS_A C {'ssd_load_ms': 1260.401, 'h2d_ms': 93.162, 'rebuild_ms': 17554.178, 'end_to_end_ms': 18907.741, 'book': 'C', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 36.382, 'allocated_gib': 41.987, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 32.329, 'allocated_gib': 42.003, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 31.878, 'allocated_gib': 42.55, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 57.664, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 10031, 'new_tokens': 20031}
+HOT_SWAP_TIMING C_PLUS_B_PLUS_A B {'ssd_load_ms': 1274.059, 'h2d_ms': 88.47, 'rebuild_ms': 46246.498, 'end_to_end_ms': 47609.027, 'book': 'B', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.514, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 20031, 'new_tokens': 10000, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.82, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.82, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 29.593, 'allocated_gib': 45.24, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 29.139, 'allocated_gib': 45.253, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 24.341, 'allocated_gib': 45.751, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 21.497, 'allocated_gib': 46.376, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 18.403, 'allocated_gib': 47.001, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 15.059, 'allocated_gib': 47.626, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 11.011, 'allocated_gib': 48.178, 'peak_gib': 57.664, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 20031, 'new_tokens': 30031}
+HOT_SWAP_TIMING C_PLUS_B_PLUS_A A {'ssd_load_ms': 1262.725, 'h2d_ms': 87.21, 'rebuild_ms': 74236.531, 'end_to_end_ms': 75586.466, 'book': 'A', 'cache_tokens': 30031, 'gpu': {'free_gib': 28.524, 'allocated_gib': 47.566, 'peak_gib': 57.664, 'total_gib': 79.251}}
+QA C_PLUS_B_PLUS_A 'Name a character from each of the three different documents and say which document contains each.' -> '1. **Sherlock Holmes** - *The Adventures of Sherlock Holmes* by Arthur Conan Doyle\n2. **Victor Frankenstein** - *Frankenstein; or, the modern prometheus* by Mary Wollstonecraft Shelley'
+HOT_SWAP_TIMING A_RESTORED A {'ssd_load_ms': 1258.033, 'h2d_ms': 93.766, 'rebuild_ms': 17518.992, 'end_to_end_ms': 18870.791, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.515, 'peak_gib': 57.664, 'total_gib': 79.251}}
+QA A_RESTORED 'Who is Elizabeth Bennet?' -> "Elizabeth Bennet is the protagonist of Jane Austen's novel *Pride and Prejudice*. She is one of five sisters in the Bennet family and is known for her wit, intelligence, and lively disposition. Elizabeth is described as"
+2026-10-17T09:02:19.077+00:00 ENGINE_STAGE_DONE  scripted TEST709 protocol (709.py statements 48–58) {"stage": "trials", "seconds": 706.11, "gpu": "GPU free 40.05 GiB · allocated 38.40 GiB · peak 57.66 GiB", "engine_log": ["APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 24.341, 'allocated_gib': 45.751, 'peak_gib': 57.664, 'total_gib': 79.251}", "APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 21.497, 'allocated_gib': 46.376, 'peak_gib': 57.664, 'total_gib': 79.251}", "APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 18.403, 'allocated_gib': 47.001, 'peak_gib': 57.664, 'total_gib': 79.251}", "APPEND_
+──── ✔ PROTOCOL finished in 11.8 min (706.1 s) · GPU free 40.05 GiB · allocated 38.40 GiB · peak 57.66 GiB
+2026-10-17T09:02:19.079+00:00 STEP_DONE          PROTOCOL {"seconds": 706.11, "result": [{"label": "NO_CARTRIDGE", "cache_tokens": 0, "seconds": 6.886}, {"label": "A_ONLY", "cache_tokens": 10031, "seconds": 27.571}, {"label": "B_ONLY", "cache_tokens": 10031, "seconds": 31.654}, {"label": "C_ONLY", "cache_tokens": 10031, "seconds": 28.056}, {"label": "A_PLUS_B", "cache_tokens": 20031, "seconds": 71.828}, {"label": "B_PLUS_A", "cache_tokens": 20031, "seconds": 70.991}, {"label": "A_PLUS_C", "cache_tokens": 20031, "seconds": 70.005}, {"label": "B_PLUS_C", "cache_tokens": 20031, "seconds": 70.136}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[6/10] TEST709 closing checks and live engine status
+      started 2026-10-17T09:02:19+00:00 · 26.9 min since start · GPU free 40.05 GiB · allocated 38.40 GiB · peak 57.66 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T09:02:19.081+00:00 STEP_START         CLOSING {"title": "TEST709 closing checks and live engine status"}
+2026-10-17T09:02:19.083+00:00 ENGINE_STAGE_START TEST709 closing checks (709.py statements 59–64) {"stage": "closing", "gpu": "GPU free 40.05 GiB · allocated 38.40 GiB · peak 57.66 GiB"}
+PASS THREE_CARTRIDGES_ON_DISK 
+PASS THREE_WAY_RECONSTRUCTION 
+PASS WEIGHT_SENTINEL_UNCHANGED 
+2026-10-17T09:02:19.095+00:00 ENGINE_STAGE_DONE  TEST709 closing checks (709.py statements 59–64) {"stage": "closing", "seconds": 0.01, "gpu": "GPU free 40.05 GiB · allocated 38.40 GiB · peak 57.66 GiB", "engine_log": ["PASS THREE_CARTRIDGES_ON_DISK ", "PASS THREE_WAY_RECONSTRUCTION ", "PASS WEIGHT_SENTINEL_UNCHANGED "]}
+=========================================================================================================
+TEST708_STATUS PASS_PHYSICAL_UNSCORED_SEMANTICS
+RESULT_JSON /content/AKBASCORE_TEST708/TEST708_results.json
+RESULT_LOG /content/AKBASCORE_TEST708/TEST708.log
+=========================================================================================================
+──── ✔ CLOSING finished in 0.0 min (0.0 s) · GPU free 40.05 GiB · allocated 38.40 GiB · peak 57.66 GiB
+2026-10-17T09:02:19.102+00:00 STEP_DONE          CLOSING {"seconds": 0.02, "result": {"status": "PASS_PHYSICAL_UNSCORED_SEMANTICS", "elapsed_s": 1588.25, "checks": 17, "failed": []}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[7/10] No-memory controls for every protocol question
+      started 2026-10-17T09:02:19+00:00 · 26.9 min since start · GPU free 40.05 GiB · allocated 38.40 GiB · peak 57.66 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T09:02:19.103+00:00 STEP_START         CONTROLS {"title": "No-memory controls for every protocol question"}
+2026-10-17T09:02:26.280+00:00 QA_CONTROL         NO MEMORY {"question": "What document is currently loaded? Answer UNKNOWN if no document is available.", "raw": "UNKNOWN\n\nSince there is no document provided or referenced in your message, the answer is UNKNOWN. If you have a specific document you would like to discuss or reference, please provide it, and I will be happy to help you with your questions", "seconds": 6.79, "origin": "initialization control"}
+  control 1/13 · 6.8 s · 'What document is currently loaded? Answer UNKNOWN if no document is av' → 'UNKNOWN\n\nSince there is no document provided or referenced in your message, the answer is '
+2026-10-17T09:02:33.014+00:00 QA_CONTROL         NO MEMORY {"question": "Who is Elizabeth Bennet?", "raw": "Elizabeth Bennet is a fictional character and the protagonist of Jane Austen's novel \"Pride and Prejudice.\" She is the second of five daughters in the Bennet family, and her character is known for her wit, intelligence,", "seconds": 6.731, "origin": "initialization control"}
+  control 2/13 · 6.7 s · 'Who is Elizabeth Bennet?' → 'Elizabeth Bennet is a fictional character and the protagonist of Jane Austen\'s novel "Prid'
+2026-10-17T09:02:39.825+00:00 QA_CONTROL         NO MEMORY {"question": "What is the relationship between Elizabeth Bennet and Jane Bennet?", "raw": "Elizabeth Bennet and Jane Bennet are sisters. They are the two eldest daughters of Mr. and Mrs. Bennet in Jane Austen's novel \"Pride and Prejudice.\" Elizabeth is known for her wit and intelligence, while", "seconds": 6.808, "origin": "initialization control"}
+  control 3/13 · 6.8 s · 'What is the relationship between Elizabeth Bennet and Jane Bennet?' → 'Elizabeth Bennet and Jane Bennet are sisters. They are the two eldest daughters of Mr. and'
+2026-10-17T09:02:46.586+00:00 QA_CONTROL         NO MEMORY {"question": "Who is Robert Walton?", "raw": "Robert Walton is a fictional character from Mary Shelley's novel \"Frankenstein; or, The Modern Prometheus\" (1818). He is an Arctic explorer and the primary recipient of the letters that frame the novel's narrative. Here are", "seconds": 6.758, "origin": "initialization control"}
+  control 4/13 · 6.8 s · 'Who is Robert Walton?' → 'Robert Walton is a fictional character from Mary Shelley\'s novel "Frankenstein; or, The Mo'
+2026-10-17T09:02:53.363+00:00 QA_CONTROL         NO MEMORY {"question": "What expedition is Robert Walton undertaking?", "raw": "Robert Walton is undertaking an expedition to the North Pole. In Mary Shelley's novel \"Frankenstein,\" Walton is an explorer who writes letters to his sister, Margaret Walton Saville, describing his journey and the challenges he faces. During his expedition", "seconds": 6.773, "origin": "initialization control"}
+  control 5/13 · 6.8 s · 'What expedition is Robert Walton undertaking?' → 'Robert Walton is undertaking an expedition to the North Pole. In Mary Shelley\'s novel "Fra'
+2026-10-17T09:03:00.134+00:00 QA_CONTROL         NO MEMORY {"question": "Who is Dr. Watson?", "raw": "Dr. John H. Watson is a fictional character in the Sherlock Holmes stories by Sir Arthur Conan Doyle. He is typically portrayed as Holmes' friend, assistant, and chronicler. Watson is a former British Army surgeon who meets Holmes and becomes", "seconds": 6.768, "origin": "initialization control"}
+  control 6/13 · 6.8 s · 'Who is Dr. Watson?' → 'Dr. John H. Watson is a fictional character in the Sherlock Holmes stories by Sir Arthur C'
+2026-10-17T09:03:06.849+00:00 QA_CONTROL         NO MEMORY {"question": "What is the name of the detective associated with Dr. Watson?", "raw": "The detective associated with Dr. Watson is Sherlock Holmes. Created by Sir Arthur Conan Doyle, Sherlock Holmes is a fictional detective known for his keen observational skills, logical reasoning, and the ability to solve complex cases. Dr. John H. Watson", "seconds": 6.712, "origin": "initialization control"}
+  control 7/13 · 6.7 s · 'What is the name of the detective associated with Dr. Watson?' → 'The detective associated with Dr. Watson is Sherlock Holmes. Created by Sir Arthur Conan D'
+2026-10-17T09:03:13.581+00:00 QA_CONTROL         NO MEMORY {"question": "Identify one person from Pride and Prejudice and one person from Frankenstein.", "raw": "Certainly! Here are one character from each of the two novels:\n\nFrom *Pride and Prejudice* by Jane Austen:\n- **Elizabeth Bennet**: The protagonist of the novel, Elizabeth is the second of five sisters in the", "seconds": 6.729, "origin": "initialization control"}
+  control 8/13 · 6.7 s · 'Identify one person from Pride and Prejudice and one person from Frank' → 'Certainly! Here are one character from each of the two novels:\n\nFrom *Pride and Prejudice*'
+2026-10-17T09:03:17.716+00:00 QA_CONTROL         NO MEMORY {"question": "Name the narrator of the opening letters in Frankenstein and a Bennet sister from Pride and Prejudice.", "raw": "The narrator of the opening letters in Frankenstein is Robert Walton, and a Bennet sister from Pride and Prejudice is Elizabeth Bennet.", "seconds": 4.133, "origin": "initialization control"}
+  control 9/13 · 4.1 s · 'Name the narrator of the opening letters in Frankenstein and a Bennet ' → 'The narrator of the opening letters in Frankenstein is Robert Walton, and a Bennet sister '
+2026-10-17T09:03:24.490+00:00 QA_CONTROL         NO MEMORY {"question": "Name a Bennet sister and the detective in the other document.", "raw": "To answer your question, I need to make some assumptions since you mentioned \"the other document\" without specifying what it is. I'll assume you're referring to a well-known literary work for the Bennet sister and a popular detective character for", "seconds": 6.771, "origin": "initialization control"}
+  control 10/13 · 6.8 s · 'Name a Bennet sister and the detective in the other document.' → 'To answer your question, I need to make some assumptions since you mentioned "the other do'
+2026-10-17T09:03:31.172+00:00 QA_CONTROL         NO MEMORY {"question": "Name the Arctic explorer from Frankenstein and the detective from the other document.", "raw": "The Arctic explorer from \"Frankenstein\" is Captain Robert Walton, and the detective from the other document, assuming it refers to a well-known detective in literature, is likely Sherlock Holmes. However, if you are referring to a specific document other", "seconds": 6.678, "origin": "initialization control"}
+  control 11/13 · 6.7 s · 'Name the Arctic explorer from Frankenstein and the detective from the ' → 'The Arctic explorer from "Frankenstein" is Captain Robert Walton, and the detective from t'
+2026-10-17T09:03:37.819+00:00 QA_CONTROL         NO MEMORY {"question": "Identify Elizabeth Bennet, Robert Walton and Sherlock Holmes and associate each with its own document.", "raw": "Certainly! Here is the identification and association of each character with their respective documents:\n\n1. **Elizabeth Bennet** - This character is from Jane Austen's novel **\"Pride and Prejudice\"**. Elizabeth Bennet is", "seconds": 6.644, "origin": "initialization control"}
+  control 12/13 · 6.6 s · 'Identify Elizabeth Bennet, Robert Walton and Sherlock Holmes and assoc' → 'Certainly! Here is the identification and association of each character with their respect'
+2026-10-17T09:03:44.541+00:00 QA_CONTROL         NO MEMORY {"question": "Name a character from each of the three different documents and say which document contains each.", "raw": "Certainly! To provide a clear and accurate answer, I'll need to assume some well-known documents or literary works, as the question doesn't specify which documents you're referring to. Here are three different documents and a character from each:\n\n1", "seconds": 6.72, "origin": "initialization control"}
+  control 13/13 · 6.7 s · 'Name a character from each of the three different documents and say wh' → "Certainly! To provide a clear and accurate answer, I'll need to assume some well-known doc"
+──── ✔ CONTROLS finished in 1.4 min (85.4 s) · GPU free 39.44 GiB · allocated 38.40 GiB · peak 57.66 GiB
+2026-10-17T09:03:44.544+00:00 STEP_DONE          CONTROLS {"seconds": 85.44, "result": {"questions": 13}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[8/10] Ready memory A+B+C on the GPU
+      started 2026-10-17T09:03:44+00:00 · 28.3 min since start · GPU free 39.44 GiB · allocated 38.40 GiB · peak 57.66 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T09:03:44.546+00:00 STEP_START         READY_MEMORY {"title": "Ready memory A+B+C on the GPU"}
+2026-10-17T09:03:44.925+00:00 BUILD_START        READY_A_PLUS_B_PLUS_C {"order": ["A", "B", "C"], "gpu": {"free_gib": 40.055, "allocated_gib": 38.401, "peak_gib": 57.664, "total_gib": 79.251}}
+2026-10-17T09:04:03.852+00:00 HOT_SWAP_TIMING    READY_A_PLUS_B_PLUS_C A {"ssd_load_ms": 1266.416, "h2d_ms": 89.501, "rebuild_ms": 17552.832, "end_to_end_ms": 18908.749, "book": "A", "cache_tokens": 10031, "gpu": {"free_gib": 36.536, "allocated_gib": 41.515, "peak_gib": 57.664, "total_gib": 79.251}, "operation": "initialize", "label": "READY_A_PLUS_B_PLUS_C", "utc": "2026-10-17T09:04:03.852+00:00", "prior_kv_sha256_pass_line": null}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 36.536, 'allocated_gib': 41.822, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 36.382, 'allocated_gib': 41.987, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 32.329, 'allocated_gib': 42.003, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 31.878, 'allocated_gib': 42.55, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 57.664, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 10031, 'new_tokens': 20031}
+2026-10-17T09:04:51.830+00:00 HOT_SWAP_TIMING    READY_A_PLUS_B_PLUS_C B {"ssd_load_ms": 1257.883, "h2d_ms": 85.793, "rebuild_ms": 46616.676, "end_to_end_ms": 47960.352, "book": "B", "cache_tokens": 20031, "gpu": {"free_gib": 32.009, "allocated_gib": 44.514, "peak_gib": 57.664, "total_gib": 79.251}, "operation": "append", "label": "READY_A_PLUS_B_PLUS_C", "utc": "2026-10-17T09:04:51.829+00:00", "prior_kv_sha256_pass_line": true}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 20031, 'new_tokens': 10000, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.82, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 32.009, 'allocated_gib': 44.82, 'peak_gib': 57.664, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 29.593, 'allocated_gib': 45.24, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 256 / 10000 GPU {'free_gib': 29.139, 'allocated_gib': 45.253, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 2048 / 10000 GPU {'free_gib': 24.341, 'allocated_gib': 45.751, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 21.497, 'allocated_gib': 46.376, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 18.403, 'allocated_gib': 47.001, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 15.059, 'allocated_gib': 47.626, 'peak_gib': 57.664, 'total_gib': 79.251}
+APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 11.011, 'allocated_gib': 48.178, 'peak_gib': 57.664, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 20031, 'new_tokens': 30031}
+2026-10-17T09:06:07.310+00:00 HOT_SWAP_TIMING    READY_A_PLUS_B_PLUS_C C {"ssd_load_ms": 1260.146, "h2d_ms": 86.705, "rebuild_ms": 74115.001, "end_to_end_ms": 75461.852, "book": "C", "cache_tokens": 30031, "gpu": {"free_gib": 28.524, "allocated_gib": 47.566, "peak_gib": 57.664, "total_gib": 79.251}, "operation": "append", "label": "READY_A_PLUS_B_PLUS_C", "utc": "2026-10-17T09:06:07.309+00:00", "prior_kv_sha256_pass_line": true}
+2026-10-17T09:06:07.311+00:00 BUILD_DONE         READY_A_PLUS_B_PLUS_C {"order": ["A", "B", "C"], "cache_tokens": 30031, "engine_log": ["APPEND_PROGRESS 4096 / 10000 GPU {'free_gib': 30.759, 'allocated_gib': 43.174, 'peak_gib': 57.664, 'total_gib': 79.251}", "APPEND_PROGRESS 6144 / 10000 GPU {'free_gib': 30.29, 'allocated_gib': 43.799, 'peak_gib': 57.664, 'total_gib': 79.251}", "APPEND_PROGRESS 8192 / 10000 GPU {'free_gib': 28.165, 'allocated_gib': 44.424, 'peak_gib': 57.664, 'total_gib': 79.251}", "APPEND_PROGRESS 10000 / 10000 GPU {'free_gib': 27.007, 'allocated_gib': 44.976, 'peak_gib': 57.
+──── ✔ READY_MEMORY finished in 2.4 min (142.8 s) · GPU free 28.52 GiB · allocated 47.57 GiB · peak 57.66 GiB
+2026-10-17T09:06:07.313+00:00 STEP_DONE          READY_MEMORY {"seconds": 142.76, "result": {"order": ["A", "B", "C"], "rows": 30031, "stages": [{"book": "A", "end_to_end_s": 18.91, "sha256_line": null}, {"book": "B", "end_to_end_s": 47.96, "sha256_line": true}, {"book": "C", "end_to_end_s": 75.46, "sha256_line": true}]}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[9/10] Live verification: disk SHA-256, weight sentinel, K/V X-ray
+      started 2026-10-17T09:06:07+00:00 · 30.7 min since start · GPU free 28.52 GiB · allocated 47.57 GiB · peak 57.66 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T09:06:07.315+00:00 STEP_START         VERIFY {"title": "Live verification: disk SHA-256, weight sentinel, K/V X-ray"}
+2026-10-17T09:06:10.189+00:00 DISK_CHECK         PASS {"utc": "2026-10-17T09:06:10.189+00:00", "files": [{"book": "A", "file": "/content/AKBASCORE_TEST708/cartridges/A.pt", "bytes": 328698863, "sha256": "06aa5afe9746f3de2ec0a9284d8b72c9b68bb109ff6d1206639a5793abd363f6", "engine_record_sha256": "06aa5afe9746f3de2ec0a9284d8b72c9b68bb109ff6d1206639a5793abd363f6", "equals_engine_record": true}, {"book": "B", "file": "/content/AKBASCORE_TEST708/cartridges/B.pt", "bytes": 328698863, "sha256": "36e69d92a293b03219ec03fc9d3a180c33d55dc47506bae4689f837f7068675b", "engine_record_sha256": "36e69d92a293b03
+2026-10-17T09:06:10.196+00:00 WEIGHT_CHECK       PASS {"utc": "2026-10-17T09:06:10.196+00:00", "passed": true, "before": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "after": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "seconds": 0.01}
+2026-10-17T09:06:10.462+00:00 XRAY_MEASURED      A+B+C {"tokens": 30031, "bins": 118, "finite": true, "seconds": 0.24}
+2026-10-17T09:06:10.463+00:00 VERIFICATION       READY {"passed": 11, "total": 11, "failed": []}
+  PASS  ENGINE_STATUS_LIVE                           PASS_PHYSICAL_UNSCORED_SEMANTICS
+  PASS  ALL_ENGINE_CHECKS_PASSED                     17/17 passed
+  PASS  REQUIRED_ENGINE_CHECKS_PRESENT               17 present
+  PASS  SCRIPTED_TRIALS_COMPLETE                     11/11 trials
+  PASS  PROTOCOL_APPENDS_EXACT_SHA256                8/8 appends, all 80 layers
+  PASS  CARTRIDGE_FILES_SHA256_ON_DISK               {"A": true, "B": true, "C": true}
+  PASS  READY_MEMORY_A_PLUS_B_PLUS_C                 {"order": ["A", "B", "C"], "rows": 30031, "protocol_rows": 30031, "append_sha256_lines":…
+  PASS  WEIGHT_SENTINEL_UNCHANGED_AFTER_ALL_STEPS    8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41
+  PASS  GPU_SAFETY_RESERVE_NOT_REDUCED               9.0 GiB
+  PASS  XRAY_FROM_LIVE_KV                            80 layers × 30031 rows
+  PASS  NO_MEMORY_CONTROLS_COMPLETE                  13/13
+──── ✔ VERIFY finished in 0.1 min (3.1 s) · GPU free 28.52 GiB · allocated 47.57 GiB · peak 57.66 GiB
+2026-10-17T09:06:10.472+00:00 STEP_DONE          VERIFY {"seconds": 3.15, "result": {"passed": 11, "total": 11}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[10/10] Six research figures and downloadable research artifacts
+      started 2026-10-17T09:06:10+00:00 · 30.8 min since start · GPU free 28.52 GiB · allocated 47.57 GiB · peak 57.66 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-17T09:06:10.474+00:00 STEP_START         FIGURES {"title": "Six research figures and downloadable research artifacts"}
+  figure 1/6 · 3999×2250 JPEG · 1.3 MB · 1.8 s · FIGURE_01_PHYSICAL_MEMORY_INJECTION_PROTOCOL.jpg
+  figure 2/6 · 3999×2250 JPEG · 1.4 MB · 1.1 s · FIGURE_02_ARCHITECTURE_SSD_GPU.jpg
+  figure 3/6 · 3999×2250 JPEG · 1.0 MB · 1.6 s · FIGURE_03_CONSOLIDATION_PERFORMANCE.jpg
+  figure 4/6 · 3999×2250 JPEG · 2.3 MB · 1.6 s · FIGURE_04_INTERNAL_MEMORY_XRAY.jpg
+  figure 5/6 · 3999×2250 JPEG · 1.7 MB · 1.7 s · FIGURE_05_THREE_BOOKS_QA.jpg
+  figure 6/6 · 3999×2250 JPEG · 1.6 MB · 1.3 s · FIGURE_06_INTEGRITY_VERIFICATION_RECORD.jpg
+2026-10-17T09:06:19.695+00:00 FIGURES            6 rendered {"not_generated": {}}
+2026-10-17T09:06:20.358+00:00 PACKAGE            Q72S-20261017-083524_AKBASCORE_Q72_ALL_RESEARCH_ARTIFACTS.zip {"files": 38, "bytes": 12162668}
+──── ✔ FIGURES finished in 0.2 min (9.9 s) · GPU free 28.52 GiB · allocated 47.57 GiB · peak 57.66 GiB
+2026-10-17T09:06:20.360+00:00 STEP_DONE          FIGURES {"seconds": 9.88, "result": {"figures": ["FIGURE_01_PHYSICAL_MEMORY_INJECTION_PROTOCOL.jpg", "FIGURE_02_ARCHITECTURE_SSD_GPU.jpg", "FIGURE_03_CONSOLIDATION_PERFORMANCE.jpg", "FIGURE_04_INTERNAL_MEMORY_XRAY.jpg", "FIGURE_05_THREE_BOOKS_QA.jpg", "FIGURE_06_INTEGRITY_VERIFICATION_RECORD.jpg"], "zip": "Q72S-20261017-083524_AKBASCORE_Q72_ALL_RESEARCH_ARTIFACTS.zip"}}
+2026-10-17T09:06:21.022+00:00 PACKAGE            Q72S-20261017-083524_AKBASCORE_Q72_ALL_RESEARCH_ARTIFACTS.zip {"files": 38, "bytes": 12163475}
+
+################################################################################################################
+READY — all 10 steps passed in 30.9 min · live verification 11/11 · memory A+B+C (30,031 rows)
+################################################################################################################
+2026-10-17T09:06:21.024+00:00 READY              initialization complete {"seconds": 1855.7}
+2026-10-17T09:06:21.631+00:00 LAUNCH             public share link — open the printed gradio.live address (also works on a phone)
+Colab notebook detected. To show errors in colab notebook, set debug=True in launch()
+* Running on public URL: https://9f8232f43a94f18c5a.gradio.live
+
+This share link is temporary and will last for up to 1 week (best effort). For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
