@@ -1,0 +1,75 @@
+ =========================================================================================================
+AKBASCORE TEST708 — THREE BOOKS / 3 x 10000 TOKEN PHYSICAL CUT3 / TIMED HOT SWAP
+=========================================================================================================
+PASS CUDA 
+PASS SINGLE_GPU 
+PASS A100_80GB 
+PASS CONFIG 
+SOURCE A BYTES 772386 SHA256 3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75
+SOURCE B BYTES 448885 SHA256 7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3
+SOURCE C BYTES 607606 SHA256 922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0
+config.json: 100% 663/663 [00:00<00:00, 82.5kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 926kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 65.9MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.8MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 131MB/s]PASS THREE_BOOKS_HAVE_REQUIRED_TOKENS {'A': 177456, 'B': 102484, 'C': 143432}
+LOADING_72B_NF4_GPU_ONLY
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.09MB/s]Download complete:   125GB,  204MB/s  Reconstruction complete: 100%  145GB /  145GB,  570MB/s  Fetching 37 files: 100% 37/37 [06:46<00:00,  8.87s/it]Loading weights: 100% 963/963 [06:39<00:00,  3.03it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.8kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS GPU_ONLY 
+CAPACITY_BUDGET {'tokens_per_book': 10000, 'total_body_tokens': 30000, 'max_live_cache_tokens_estimate': 100341, 'full_kv_bytes_per_token': 327680, 'reserve_gib': 9.0, 'model_gpu': {'free_gib': 39.622, 'allocated_gib': 38.392, 'peak_gib': 38.799, 'total_gib': 79.251}}
+PASS KV_ONLY_ESTIMATE_FITS {'tokens_per_book': 10000, 'total_body_tokens': 30000, 'max_live_cache_tokens_estimate': 100341, 'full_kv_bytes_per_token': 327680, 'reserve_gib': 9.0, 'model_gpu': {'free_gib': 39.622, 'allocated_gib': 38.392, 'peak_gib': 38.799, 'total_gib': 79.251}}
+FORGING A TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS A 256 / 10031 GPU {'free_gib': 39.073, 'allocated_gib': 38.479, 'peak_gib': 39.002, 'total_gib': 79.251}
+FORGE_PROGRESS A 8192 / 10031 GPU {'free_gib': 36.839, 'allocated_gib': 40.902, 'peak_gib': 41.428, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_A 
+SAVED A FILE_BYTES 328698863 SHA256 06aa5afe9746f3de2ec0a9284d8b72c9b68bb109ff6d1206639a5793abd363f6
+FORGING B TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS B 256 / 10031 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 41.976, 'total_gib': 79.251}
+FORGE_PROGRESS B 8192 / 10031 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 41.976, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_B 
+SAVED B FILE_BYTES 328698863 SHA256 36e69d92a293b03219ec03fc9d3a180c33d55dc47506bae4689f837f7068675b
+FORGING C TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS C 256 / 10031 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 41.977, 'total_gib': 79.251}
+FORGE_PROGRESS C 8192 / 10031 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 41.977, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_C 
+SAVED C FILE_BYTES 328698863 SHA256 c4d0fcf1719fb49725862bfccbfe406bd18269882cf92cf03f8108e40b20cf43
+PASS SOURCE_FILES_REMOVED 
+QA NO_CARTRIDGE 'What document is currently loaded? Answer UNKNOWN if no document is available.' -> 'UNKNOWN\n\nSince there is no document provided or referenced in your message, the answer is UNKNOWN. If you have a specific document you would like to discuss or reference, please provide it, and I will be happy to help you with your questions'
+HOT_SWAP_TIMING A_ONLY A {'ssd_load_ms': 1278.965, 'h2d_ms': 82.296, 'rebuild_ms': 17682.604, 'end_to_end_ms': 19043.865, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.73, 'total_gib': 79.251}}
+QA A_ONLY 'Who is Elizabeth Bennet?' -> "Elizabeth Bennet is the protagonist of Jane Austen's novel *Pride and Prejudice*. She is one of five sisters in the Bennet family and is known for her wit, intelligence, and lively disposition. Elizabeth is described as"
+QA A_ONLY 'What is the relationship between Elizabeth Bennet and Jane Bennet?' -> 'Elizabeth Bennet and Jane Bennet are sisters.'
+HOT_SWAP_TIMING B_ONLY B {'ssd_load_ms': 1259.737, 'h2d_ms': 87.414, 'rebuild_ms': 17697.049, 'end_to_end_ms': 19044.2, 'book': 'B', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.938, 'total_gib': 79.251}}
+QA B_ONLY 'Who is Robert Walton?' -> 'Robert Walton is the captain of a ship bound on an expedition to the North Pole. He is an ambitious and determined explorer who has prepared himself for the challenges of his journey through previous experiences, such as accompanying whale-fishers on expeditions'
+QA B_ONLY 'What expedition is Robert Walton undertaking?' -> "Robert Walton is undertaking an expedition to the North Pole. He aims to discover a passage near the pole to countries that are currently difficult to reach, and to explore the region's potential wonders and phenomena."
+HOT_SWAP_TIMING C_ONLY C {'ssd_load_ms': 1262.189, 'h2d_ms': 86.452, 'rebuild_ms': 17692.347, 'end_to_end_ms': 19040.988, 'book': 'C', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.938, 'total_gib': 79.251}}
+QA C_ONLY 'Who is Dr. Watson?' -> 'Dr. Watson is a character in "The Adventures of Sherlock Holmes" by Arthur Conan Doyle. He is a physician and a friend and colleague of Sherlock Holmes, often assisting Holmes in his investigations and chronicling the cases they solve together. Watson'
+QA C_ONLY 'What is the name of the detective associated with Dr. Watson?' -> 'The name of the detective associated with Dr. Watson is Sherlock Holmes.'
+HOT_SWAP_TIMING A_PLUS_B A {'ssd_load_ms': 1248.768, 'h2d_ms': 85.175, 'rebuild_ms': 17688.752, 'end_to_end_ms': 19022.695, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.938, 'total_gib': 79.251}}
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 10031, 'new_tokens': 10000, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.822, 'peak_gib': 44.938, 'total_gib': 79.251}}
+ERROR TypeError Got unsupported ScalarType BFloat16
+Traceback (most recent call last):
+  File "/tmp/ipykernel_6022/470001670.py", line 285, in <cell line: 0>
+    trial('A_PLUS_B',['A','B'],['Identify one person from Pride and Prejudice and one person from Frankenstein.'])
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_6022/470001670.py", line 222, in trial
+    new=list(initialize(cp)) if memory is None else append(memory,cp)
+                                                    ~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/tmp/ipykernel_6022/470001670.py", line 164, in append
+    seals=full_kv_seal(memory)
+  File "/tmp/ipykernel_6022/470001670.py", line 153, in full_kv_seal
+    return tuple((kv_digest(k),kv_digest(v)) for k,v in kvs)
+  File "/tmp/ipykernel_6022/470001670.py", line 153, in <genexpr>
+    return tuple((kv_digest(k),kv_digest(v)) for k,v in kvs)
+                  ~~~~~~~~~^^^
+  File "/tmp/ipykernel_6022/470001670.py", line 149, in kv_digest
+    for st in range(0,v.numel(),block):h.update(v[st:st+block].cpu().numpy().tobytes())
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: Got unsupported ScalarType BFloat16
+
+=========================================================================================================
+TEST708_STATUS ERROR
+RESULT_JSON /content/AKBASCORE_TEST708/TEST708_results.json
+RESULT_LOG /content/AKBASCORE_TEST708/TEST708.log
+=========================================================================================================
