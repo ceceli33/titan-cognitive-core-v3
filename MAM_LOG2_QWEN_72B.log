@@ -1,0 +1,114 @@
+AKBASCORE AI TECHNOLOGY — SILICON HIPPOCAMPUS · Qwen2.5-72B / CUT3 SCALING STUDY
+candidate v1.5 — not a published or validated release
+session Q72S-20261017-083524 · started 2026-10-17T08:35:24+00:00 · written 2026-10-17T09:06:57+00:00
+
+ENGINE  709.py git blob 6c9f8cbb1eeed848d45133d73f0d7676b68e9125 (self-label TEST708-R2), executed unchanged
+MODEL   Qwen/Qwen2.5-72B-Instruct · NF4 4-bit, BF16 compute, frozen · revision None · load 813.25 s
+GPU     NVIDIA A100-SXM4-80GB · torch 2.11.0+cu130 · transformers 5.18.0 · bitsandbytes 0.50.2
+SETUP   10000 tokens per book · chunk 256 · GPU reserve 9.0 GiB · max new tokens 48
+
+INITIALIZATION (this session)
+  ✓ SOURCES             1.2 s  Verified sources (engine lock, licence, historical logs)
+  ✓ PREFLIGHT           5.6 s  System preflight: GPU, RAM, disk, model cache
+  ✓ MODEL             840.5 s  Frozen Qwen2.5-72B-Instruct NF4 — TEST709 environment + model stage
+  ✓ FORGE              60.9 s  Forge and save cartridges A, B, C — TEST709 forge stage
+  ✓ PROTOCOL          706.1 s  Live TEST709 protocol — eleven scripted trials
+  ✓ CLOSING             0.0 s  TEST709 closing checks and live engine status
+  ✓ CONTROLS           85.4 s  No-memory controls for every protocol question
+  ✓ READY_MEMORY      142.8 s  Ready memory A+B+C on the GPU
+  ✓ VERIFY              3.1 s  Live verification: disk SHA-256, weight sentinel, K/V X-ray
+  ✓ FIGURES             9.9 s  Six research figures and downloadable research artifacts
+
+LIVE ENGINE STATUS  PASS_PHYSICAL_UNSCORED_SEMANTICS  · engine checks passed 17/17
+
+CARTRIDGES (forged and saved in this session)
+  A Pride and Prejudice · 10000 tokens · file 328698863 B · SHA-256 06aa5afe9746f3de2ec0a9284d8b72c9b68bb109ff6d1206639a5793abd363f6
+  B Frankenstein · 10000 tokens · file 328698863 B · SHA-256 36e69d92a293b03219ec03fc9d3a180c33d55dc47506bae4689f837f7068675b
+  C The Adventures of Sherlock Holmes · 10000 tokens · file 328698863 B · SHA-256 c4d0fcf1719fb49725862bfccbfe406bd18269882cf92cf03f8108e40b20cf43
+
+LIVE TEST709 PROTOCOL (raw answers, semantics UNSCORED)
+  NO_CARTRIDGE       rows      0 · 
+      Q What document is currently loaded? Answer UNKNOWN if no document is available.
+      memory  → UNKNOWN
+
+Since there is no document provided or referenced in your message, the answer is UNKNOWN. If you have a specific document you would like to discuss or reference, please provide it, and I will be happy to help you with your questions
+      control → UNKNOWN
+
+Since there is no document provided or referenced in your message, the answer is UNKNOWN. If you have a specific document you would like to discuss or reference, please provide it, and I will be happy to help you with your questions
+  A_ONLY             rows  10031 · A rebuild 17.7 s
+      Q Who is Elizabeth Bennet?
+      memory  → Elizabeth Bennet is the protagonist of Jane Austen's novel *Pride and Prejudice*. She is one of five sisters in the Bennet family and is known for her wit, intelligence, and lively disposition. Elizabeth is described as
+      control → Elizabeth Bennet is a fictional character and the protagonist of Jane Austen's novel "Pride and Prejudice." She is the second of five daughters in the Bennet family, and her character is known for her wit, intelligence,
+      Q What is the relationship between Elizabeth Bennet and Jane Bennet?
+      memory  → Elizabeth Bennet and Jane Bennet are sisters.
+      control → Elizabeth Bennet and Jane Bennet are sisters. They are the two eldest daughters of Mr. and Mrs. Bennet in Jane Austen's novel "Pride and Prejudice." Elizabeth is known for her wit and intelligence, while
+  B_ONLY             rows  10031 · B rebuild 17.7 s
+      Q Who is Robert Walton?
+      memory  → Robert Walton is the captain of a ship bound on an expedition to the North Pole. He is an ambitious and determined explorer who has prepared himself for the challenges of his journey through previous experiences, such as accompanying whale-fishers on expeditions
+      control → Robert Walton is a fictional character from Mary Shelley's novel "Frankenstein; or, The Modern Prometheus" (1818). He is an Arctic explorer and the primary recipient of the letters that frame the novel's narrative. Here are
+      Q What expedition is Robert Walton undertaking?
+      memory  → Robert Walton is undertaking an expedition to the North Pole. He aims to discover a passage near the pole to countries that are currently difficult to reach, and to explore the region's potential wonders and phenomena.
+      control → Robert Walton is undertaking an expedition to the North Pole. In Mary Shelley's novel "Frankenstein," Walton is an explorer who writes letters to his sister, Margaret Walton Saville, describing his journey and the challenges he faces. During his expedition
+  C_ONLY             rows  10031 · C rebuild 17.6 s
+      Q Who is Dr. Watson?
+      memory  → Dr. Watson is a character in "The Adventures of Sherlock Holmes" by Arthur Conan Doyle. He is a physician and a friend and colleague of Sherlock Holmes, often assisting Holmes in his investigations and chronicling the cases they solve together. Watson
+      control → Dr. John H. Watson is a fictional character in the Sherlock Holmes stories by Sir Arthur Conan Doyle. He is typically portrayed as Holmes' friend, assistant, and chronicler. Watson is a former British Army surgeon who meets Holmes and becomes
+      Q What is the name of the detective associated with Dr. Watson?
+      memory  → The name of the detective associated with Dr. Watson is Sherlock Holmes.
+      control → The detective associated with Dr. Watson is Sherlock Holmes. Created by Sir Arthur Conan Doyle, Sherlock Holmes is a fictional detective known for his keen observational skills, logical reasoning, and the ability to solve complex cases. Dr. John H. Watson
+  A_PLUS_B           rows  20031 · A rebuild 17.6 s · B rebuild 46.5 s
+      Q Identify one person from Pride and Prejudice and one person from Frankenstein.
+      memory  → From *Pride and Prejudice*, one person is **Elizabeth Bennet**. From *Frankenstein*, one person is **Victor Frankenstein**.
+      control → Certainly! Here are one character from each of the two novels:
+
+From *Pride and Prejudice* by Jane Austen:
+- **Elizabeth Bennet**: The protagonist of the novel, Elizabeth is the second of five sisters in the
+  B_PLUS_A           rows  20031 · B rebuild 17.6 s · A rebuild 46.3 s
+      Q Name the narrator of the opening letters in Frankenstein and a Bennet sister from Pride and Prejudice.
+      memory  → The narrator of the opening letters in Frankenstein is Robert Walton. A Bennet sister from Pride and Prejudice is Elizabeth Bennet.
+      control → The narrator of the opening letters in Frankenstein is Robert Walton, and a Bennet sister from Pride and Prejudice is Elizabeth Bennet.
+  A_PLUS_C           rows  20031 · A rebuild 17.6 s · C rebuild 46.6 s
+      Q Name a Bennet sister and the detective in the other document.
+      memory  → A Bennet sister is Elizabeth Bennet, and the detective in the other document is Sherlock Holmes.
+      control → To answer your question, I need to make some assumptions since you mentioned "the other document" without specifying what it is. I'll assume you're referring to a well-known literary work for the Bennet sister and a popular detective character for
+  B_PLUS_C           rows  20031 · B rebuild 17.6 s · C rebuild 46.5 s
+      Q Name the Arctic explorer from Frankenstein and the detective from the other document.
+      memory  → The Arctic explorer from Frankenstein is Robert Walton, and the detective from the other document is Sherlock Holmes.
+      control → The Arctic explorer from "Frankenstein" is Captain Robert Walton, and the detective from the other document, assuming it refers to a well-known detective in literature, is likely Sherlock Holmes. However, if you are referring to a specific document other
+  A_PLUS_B_PLUS_C    rows  30031 · A rebuild 17.6 s · B rebuild 46.5 s · C rebuild 74.0 s
+      Q Identify Elizabeth Bennet, Robert Walton and Sherlock Holmes and associate each with its own document.
+      memory  → - **Elizabeth Bennet** is associated with the document **"Pride and Prejudice" by Jane Austen**. She is one of the main characters, known for her wit, intelligence, and strong personality.
+- **Robert
+      control → Certainly! Here is the identification and association of each character with their respective documents:
+
+1. **Elizabeth Bennet** - This character is from Jane Austen's novel **"Pride and Prejudice"**. Elizabeth Bennet is
+  C_PLUS_B_PLUS_A    rows  30031 · C rebuild 17.6 s · B rebuild 46.2 s · A rebuild 74.2 s
+      Q Name a character from each of the three different documents and say which document contains each.
+      memory  → 1. **Sherlock Holmes** - *The Adventures of Sherlock Holmes* by Arthur Conan Doyle
+2. **Victor Frankenstein** - *Frankenstein; or, the modern prometheus* by Mary Wollstonecraft Shelley
+      control → Certainly! To provide a clear and accurate answer, I'll need to assume some well-known documents or literary works, as the question doesn't specify which documents you're referring to. Here are three different documents and a character from each:
+
+1
+  A_RESTORED         rows  10031 · A rebuild 17.5 s
+      Q Who is Elizabeth Bennet?
+      memory  → Elizabeth Bennet is the protagonist of Jane Austen's novel *Pride and Prejudice*. She is one of five sisters in the Bennet family and is known for her wit, intelligence, and lively disposition. Elizabeth is described as
+      control → Elizabeth Bennet is a fictional character and the protagonist of Jane Austen's novel "Pride and Prejudice." She is the second of five daughters in the Bennet family, and her character is known for her wit, intelligence,
+
+LIVE VERIFICATION  11/11 passed · READY True
+  PASS  ENGINE_STATUS_LIVE  PASS_PHYSICAL_UNSCORED_SEMANTICS
+  PASS  ALL_ENGINE_CHECKS_PASSED  17/17 passed
+  PASS  REQUIRED_ENGINE_CHECKS_PRESENT  17 present
+  PASS  SCRIPTED_TRIALS_COMPLETE  11/11 trials
+  PASS  PROTOCOL_APPENDS_EXACT_SHA256  8/8 appends, all 80 layers
+  PASS  CARTRIDGE_FILES_SHA256_ON_DISK  {"A": true, "B": true, "C": true}
+  PASS  READY_MEMORY_A_PLUS_B_PLUS_C  {"order": ["A", "B", "C"], "rows": 30031, "protocol_rows": 30031, "append_sha256_lines": [true, true]}
+  PASS  WEIGHT_SENTINEL_UNCHANGED_AFTER_ALL_STEPS  8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41
+  PASS  GPU_SAFETY_RESERVE_NOT_REDUCED  9.0 GiB
+  PASS  XRAY_FROM_LIVE_KV  80 layers × 30031 rows
+  PASS  NO_MEMORY_CONTROLS_COMPLETE  13/13
+
+HISTORICAL REFERENCE — published 709.log of an EARLIER run (not this session, not used for READY)
+  published status PASS_PHYSICAL_UNSCORED_SEMANTICS · cartridge SHA-256 identical {'A': True, 'B': True, 'C': True} · trial answers identical 11/11
+
+SCOPE  Physical reconstruction and integrity are measured live; answer semantics are not scored; the books are public-domain classics (pretraining knowledge possible).
+Mustafa Akbaş · AkbasCore AI Teknoloji · AKBASCORE RESEARCH SOFTWARE LICENSE · Copyright © 2026 Mustafa Akbaş
