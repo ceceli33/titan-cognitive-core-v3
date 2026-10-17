@@ -1,0 +1,83 @@
+ =========================================================================================================
+AKBASCORE TEST707 — THREE BOOKS / 3 x 10000 TOKEN PHYSICAL CUT3 / TIMED HOT SWAP
+=========================================================================================================
+PASS CUDA 
+PASS SINGLE_GPU 
+PASS A100_80GB 
+PASS CONFIG 
+SOURCE A BYTES 772386 SHA256 3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75
+SOURCE B BYTES 448885 SHA256 7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3
+SOURCE C BYTES 607606 SHA256 922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0
+config.json: 100% 663/663 [00:00<00:00, 80.8kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 927kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 80.5MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 72.6MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 133MB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+PASS THREE_BOOKS_HAVE_REQUIRED_TOKENS {'A': 177456, 'B': 102484, 'C': 143432}
+LOADING_72B_NF4_GPU_ONLY
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.10MB/s]Download complete:   125GB,  390MB/s  Reconstruction complete: 100%  145GB /  145GB,  656MB/s  Fetching 37 files: 100% 37/37 [06:49<00:00, 10.37s/it]Loading weights: 100% 963/963 [06:21<00:00,  3.24it/s]generation_config.json: 100% 242/242 [00:00<00:00, 29.3kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS GPU_ONLY 
+CAPACITY_BUDGET {'tokens_per_book': 10000, 'total_body_tokens': 30000, 'max_live_cache_tokens_estimate': 100341, 'full_kv_bytes_per_token': 327680, 'reserve_gib': 9.0, 'model_gpu': {'free_gib': 39.622, 'allocated_gib': 38.392, 'peak_gib': 38.799, 'total_gib': 79.251}}
+PASS ESTIMATED_TRIPLE_CACHE_FITS {'tokens_per_book': 10000, 'total_body_tokens': 30000, 'max_live_cache_tokens_estimate': 100341, 'full_kv_bytes_per_token': 327680, 'reserve_gib': 9.0, 'model_gpu': {'free_gib': 39.622, 'allocated_gib': 38.392, 'peak_gib': 38.799, 'total_gib': 79.251}}
+FORGING A TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS A 256 / 10031 GPU {'free_gib': 39.073, 'allocated_gib': 38.479, 'peak_gib': 39.002, 'total_gib': 79.251}
+FORGE_PROGRESS A 8192 / 10031 GPU {'free_gib': 36.821, 'allocated_gib': 40.902, 'peak_gib': 41.428, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_A 
+SAVED A FILE_BYTES 328698863 SHA256 06aa5afe9746f3de2ec0a9284d8b72c9b68bb109ff6d1206639a5793abd363f6
+FORGING B TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS B 256 / 10031 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 41.978, 'total_gib': 79.251}
+FORGE_PROGRESS B 8192 / 10031 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 41.978, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_B 
+SAVED B FILE_BYTES 328698863 SHA256 36e69d92a293b03219ec03fc9d3a180c33d55dc47506bae4689f837f7068675b
+FORGING C TOKENS 10000 PAGE_EQUIVALENTS 40.0
+FORGE_PROGRESS C 256 / 10031 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 41.978, 'total_gib': 79.251}
+FORGE_PROGRESS C 8192 / 10031 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 41.978, 'total_gib': 79.251}
+PASS CARTRIDGE_LOWER_ONLY_C 
+SAVED C FILE_BYTES 328698863 SHA256 c4d0fcf1719fb49725862bfccbfe406bd18269882cf92cf03f8108e40b20cf43
+PASS SOURCE_FILES_REMOVED 
+QA NO_CARTRIDGE 'What document is currently loaded? Answer UNKNOWN if no document is available.' -> 'UNKNOWN\n\nSince there is no document provided or referenced in your message, the answer is UNKNOWN. If you have a specific document you would like to discuss or reference, please provide it, and I will be happy to help you with your questions'
+HOT_SWAP_TIMING A_ONLY A {'ssd_load_ms': 1287.081, 'h2d_ms': 83.298, 'rebuild_ms': 17633.592, 'end_to_end_ms': 19003.971, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.73, 'total_gib': 79.251}}
+QA A_ONLY 'Who is Elizabeth Bennet?' -> "Elizabeth Bennet is the protagonist of Jane Austen's novel *Pride and Prejudice*. She is one of five sisters in the Bennet family and is known for her wit, intelligence, and lively disposition. Elizabeth is described as"
+QA A_ONLY 'What is the relationship between Elizabeth Bennet and Jane Bennet?' -> 'Elizabeth Bennet and Jane Bennet are sisters.'
+HOT_SWAP_TIMING B_ONLY B {'ssd_load_ms': 1288.195, 'h2d_ms': 90.495, 'rebuild_ms': 17613.547, 'end_to_end_ms': 18992.237, 'book': 'B', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.939, 'total_gib': 79.251}}
+QA B_ONLY 'Who is Robert Walton?' -> 'Robert Walton is the captain of a ship bound on an expedition to the North Pole. He is an ambitious and determined explorer who has prepared himself for the challenges of his journey through previous experiences, such as accompanying whale-fishers on expeditions'
+QA B_ONLY 'What expedition is Robert Walton undertaking?' -> "Robert Walton is undertaking an expedition to the North Pole. He aims to discover a passage near the pole to countries that are currently difficult to reach, and to explore the region's potential wonders and phenomena."
+HOT_SWAP_TIMING C_ONLY C {'ssd_load_ms': 1287.226, 'h2d_ms': 90.902, 'rebuild_ms': 17605.376, 'end_to_end_ms': 18983.504, 'book': 'C', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.939, 'total_gib': 79.251}}
+QA C_ONLY 'Who is Dr. Watson?' -> 'Dr. Watson is a character in "The Adventures of Sherlock Holmes" by Arthur Conan Doyle. He is a physician and a friend and colleague of Sherlock Holmes, often assisting Holmes in his investigations and chronicling the cases they solve together. Watson'
+QA C_ONLY 'What is the name of the detective associated with Dr. Watson?' -> 'The name of the detective associated with Dr. Watson is Sherlock Holmes.'
+HOT_SWAP_TIMING A_PLUS_B A {'ssd_load_ms': 1278.026, 'h2d_ms': 91.005, 'rebuild_ms': 17622.978, 'end_to_end_ms': 18992.009, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 44.939, 'total_gib': 79.251}}
+HOT_SWAP_TIMING A_PLUS_B B {'ssd_load_ms': 1273.091, 'h2d_ms': 87.466, 'rebuild_ms': 25067.603, 'end_to_end_ms': 26428.16, 'book': 'B', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.313, 'allocated_gib': 44.514, 'peak_gib': 48.581, 'total_gib': 79.251}}
+QA A_PLUS_B 'Identify one person from Pride and Prejudice and one person from Frankenstein.' -> 'From *Pride and Prejudice*, one person is **Elizabeth Bennet**. From *Frankenstein*, one person is **Victor Frankenstein**.'
+HOT_SWAP_TIMING B_PLUS_A B {'ssd_load_ms': 1271.931, 'h2d_ms': 92.152, 'rebuild_ms': 17631.125, 'end_to_end_ms': 18995.208, 'book': 'B', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 51.363, 'total_gib': 79.251}}
+HOT_SWAP_TIMING B_PLUS_A A {'ssd_load_ms': 1280.395, 'h2d_ms': 87.911, 'rebuild_ms': 25063.567, 'end_to_end_ms': 26431.873, 'book': 'A', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.313, 'allocated_gib': 44.514, 'peak_gib': 51.363, 'total_gib': 79.251}}
+QA B_PLUS_A 'Name the narrator of the opening letters in Frankenstein and a Bennet sister from Pride and Prejudice.' -> 'The narrator of the opening letters in Frankenstein is Robert Walton. A Bennet sister from Pride and Prejudice is Elizabeth Bennet.'
+HOT_SWAP_TIMING A_PLUS_C A {'ssd_load_ms': 1276.905, 'h2d_ms': 92.405, 'rebuild_ms': 17639.453, 'end_to_end_ms': 19008.763, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 51.363, 'total_gib': 79.251}}
+HOT_SWAP_TIMING A_PLUS_C C {'ssd_load_ms': 1273.753, 'h2d_ms': 87.108, 'rebuild_ms': 25083.914, 'end_to_end_ms': 26444.775, 'book': 'C', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.313, 'allocated_gib': 44.514, 'peak_gib': 51.363, 'total_gib': 79.251}}
+QA A_PLUS_C 'Name a Bennet sister and the detective in the other document.' -> 'A Bennet sister is Elizabeth Bennet, and the detective in the other document is Sherlock Holmes.'
+HOT_SWAP_TIMING B_PLUS_C B {'ssd_load_ms': 1274.128, 'h2d_ms': 92.044, 'rebuild_ms': 17627.207, 'end_to_end_ms': 18993.379, 'book': 'B', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 51.363, 'total_gib': 79.251}}
+HOT_SWAP_TIMING B_PLUS_C C {'ssd_load_ms': 1271.806, 'h2d_ms': 87.183, 'rebuild_ms': 25085.976, 'end_to_end_ms': 26444.965, 'book': 'C', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.313, 'allocated_gib': 44.514, 'peak_gib': 51.363, 'total_gib': 79.251}}
+QA B_PLUS_C 'Name the Arctic explorer from Frankenstein and the detective from the other document.' -> 'The Arctic explorer from Frankenstein is Robert Walton, and the detective from the other document is Sherlock Holmes.'
+HOT_SWAP_TIMING A_PLUS_B_PLUS_C A {'ssd_load_ms': 1283.667, 'h2d_ms': 97.39, 'rebuild_ms': 17646.184, 'end_to_end_ms': 19027.241, 'book': 'A', 'cache_tokens': 10031, 'gpu': {'free_gib': 36.085, 'allocated_gib': 41.515, 'peak_gib': 51.363, 'total_gib': 79.251}}
+HOT_SWAP_TIMING A_PLUS_B_PLUS_C B {'ssd_load_ms': 1275.14, 'h2d_ms': 87.915, 'rebuild_ms': 25059.119, 'end_to_end_ms': 26422.174, 'book': 'B', 'cache_tokens': 20031, 'gpu': {'free_gib': 32.313, 'allocated_gib': 44.514, 'peak_gib': 51.363, 'total_gib': 79.251}}
+ERROR RuntimeError GPU_SAFETY_STOP free=8.81GiB need=9.23GiB
+Traceback (most recent call last):
+  File "/tmp/ipykernel_1014/3445889351.py", line 267, in <cell line: 0>
+    trial('A_PLUS_B_PLUS_C',['A','B','C'],['Identify Elizabeth Bennet, Robert Walton and Sherlock Holmes and associate each with its own document.'])
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_1014/3445889351.py", line 200, in trial
+    new=initialize(cp) if memory is None else append(memory,cp)
+                                              ~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/tmp/ipykernel_1014/3445889351.py", line 156, in append
+    m=min(CHUNK,q-st);ensure_room(m+512);offset[0]=st
+                      ~~~~~~~~~~~^^^^^^^
+  File "/tmp/ipykernel_1014/3445889351.py", line 81, in ensure_room
+    if f<need:raise RuntimeError(f'GPU_SAFETY_STOP free={f/2**30:.2f}GiB need={need/2**30:.2f}GiB')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: GPU_SAFETY_STOP free=8.81GiB need=9.23GiB
+
+=========================================================================================================
+TEST707_STATUS ERROR
+RESULT_JSON /content/AKBASCORE_TEST707/TEST707_results.json
+RESULT_LOG /content/AKBASCORE_TEST707/TEST707.log
+=========================================================================================================
