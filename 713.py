@@ -1,0 +1,183 @@
+# TEST713 — Position-localized recall / existing physical CUT3 Siemens cartridges.
+# Runs in ONE Colab A100-80GB cell. Frozen TEST709 engine; no modifications to its CUT3 mathematics.
+# Routing in this experiment is a declared page-number oracle, NOT a learned FRAM/FAISS router.
+# The original 709 engine is fetched and SHA-pinned, never guessed or text-anchor-spliced.
+import ast,hashlib,urllib.request,sys,subprocess,importlib.util,json,time,traceback,gc,re
+from pathlib import Path
+if importlib.util.find_spec('pymupdf') is None:subprocess.check_call([sys.executable,'-m','pip','install','-q','pymupdf'])
+import pymupdf
+BASE_URL='https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/709.py'
+BASE_BLOB_SHA='6c9f8cbb1eeed848d45133d73f0d7676b68e9125' # Git blob SHA; verify via git blob calculation
+PDF_URL='https://cache.industry.siemens.com/dl/files/087/109994087/att_1338962/v1/ONE_universal_op_man_0725_en-US.pdf'
+PDF_SHA='88c0f8293ce3302135042baf35d704303fb3b5a24915e28b8ca16f3192a7cc1d'
+ROOT713=Path('/content/AKBASCORE_TEST713');ROOT713.mkdir(parents=True,exist_ok=True)
+MANIFEST=ROOT713/'manifest.json';RESULT=ROOT713/'TEST713_results.json';LOG713=ROOT713/'TEST713.log';LOG713.write_text('')
+S={'test':'713','status':'STARTED','engine':'709.py','routing':'PAGE_ORACLE_DIRECT_SOURCE_VS_SHORT_CUT3_VS_LONG_CUT3','questions':[],'cartridges':[],'checks':[],'diagnostic_limits':['Direct source condition contains text and is not a memory-only test','Short and long CUT3 have different surrounding contexts','Five headings are not a representative semantic benchmark','Exact heading may not be first substantive heading on PDF page']}
+def emit(*a):
+ s=' '.join(map(str,a));print(s,flush=True)
+ with LOG713.open('a') as f:f.write(s+'\n')
+def persist():RESULT.write_text(json.dumps(S,ensure_ascii=False,indent=2,default=str))
+def check(name,condition,details=None):
+ S['checks'].append({'name':name,'pass':bool(condition),'details':details});emit('PASS' if condition else 'FAIL',name,details or '');persist()
+ if not condition:raise RuntimeError('CHECK_FAILED_'+name)
+def get(url,limit):
+ req=urllib.request.Request(url,headers={'User-Agent':'AKBASCORE-TEST713-research'})
+ with urllib.request.urlopen(req,timeout=180) as f:
+  b=f.read(limit+1)
+ if len(b)>limit:raise RuntimeError('DOWNLOAD_SIZE_LIMIT')
+ return b
+try:
+ emit('TEST713 SIEMENS / FROZEN 709 ENGINE / SOURCE / SHORT-CUT3 / LONG-CUT3 CAUSAL DIAGNOSTIC')
+ source=get(BASE_URL,256*1024)
+ blob=hashlib.sha1(b'blob '+str(len(source)).encode()+b'\0'+source).hexdigest()
+ check('ENGINE_709_BLOB_LOCK',blob==BASE_BLOB_SHA,{'actual':blob,'expected':BASE_BLOB_SHA})
+ # Identify the original experiment driver structurally via AST; keep all definitions above it unchanged.
+ parsed=ast.parse(source.decode('utf-8-sig'));drivers=[n for n in parsed.body if isinstance(n,ast.Try) and any(isinstance(x,ast.Expr) and isinstance(x.value,ast.Call) and isinstance(x.value.func,ast.Name) and x.value.func.id=='log' for x in n.body[:4])]
+ check('ENGINE_DRIVER_AST_UNIQUE',len(drivers)==1,{'found':len(drivers)})
+ driver=drivers[0];engine='\n'.join(source.decode('utf-8-sig').splitlines()[:driver.lineno-1])+'\n'
+ # The upstream functions and imports execute exactly as in 709, but its book-demo driver does not.
+ exec(compile(engine,'709_ENGINE_UNCHANGED','exec'),globals())
+ # Replace ONLY experiment paths/metadata, not CUT3 operations.
+ TEST='713';REV='713-POSITION-DIAGNOSTIC';ROOT=ROOT713;RAW=ROOT/'sources';CART=ROOT/'cartridges';RAW.mkdir(exist_ok=True);CART.mkdir(exist_ok=True)
+ OUT=RESULT;LOG=LOG713;R=S;R.update({'model':MODEL_ID,'cut':CUT,'limits':['Routing uses known PDF page number; it is an oracle, not learned semantic addressing.','Only five page-heading facts are scored; not full-document comprehension.','All 486 pages are included, but no claim of lossless semantic recall.','NF4 weights are frozen; original 709 CUT3 mechanics are unchanged.']})
+ check('CUDA',torch.cuda.is_available());check('SINGLE_GPU',torch.cuda.device_count()==1);check('A100_80GB',torch.cuda.get_device_properties(0).total_memory>=70*2**30)
+ pdf=get(PDF_URL,24*1024*1024);actual=hashlib.sha256(pdf).hexdigest();check('PDF_SHA256_LOCK',actual==PDF_SHA,{'sha256':actual,'bytes':len(pdf)})
+ doc=pymupdf.open(stream=pdf,filetype='pdf');check('PDF_486_PAGES',len(doc)==486)
+ pages=[]
+ for i in range(len(doc)):
+  content=doc[i].get_text(sort=True)
+  check_text=content.strip()
+  if not check_text:emit('WARNING EMPTY_PDF_PAGE',i+1)
+  pages.append(f'\n[SIEMENS ORIGINAL PDF PAGE {i+1}]\n'+content+'\n[/SIEMENS ORIGINAL PDF PAGE {i+1}]\n')
+ check('ALL_PAGES_EXTRACTED',len(pages)==486)
+ questions=[(49,'Fundamentals'),(147,'Machining the workpiece'),(243,'Creating a G code program'),(341,'Managing programs'),(437,'Editing the PLC user program')]
+ for page,gold in questions:
+  check('GOLD_VISIBLE_PAGE_'+str(page),gold.casefold() in pages[page-1].casefold(),{'page':page,'gold':gold})
+  S['questions'].append({'pdf_page':page,'gold':gold,'question':f'What is the first substantive section heading printed on PDF page {page} of the Siemens SINUMERIK ONE Universal Operating Manual? Answer with the exact heading only. If uncertain, say UNKNOWN.'})
+ persist()
+ tok=AutoTokenizer.from_pretrained(MODEL_ID,trust_remote_code=False)
+ token_pages=[tok(x,add_special_tokens=False).input_ids for x in pages]
+ total=sum(map(len,token_pages));emit('PDF_EXTRACTED_TOKENS',total)
+ # A conservative 18k tokens per cartridge; preserves whole PDF pages; no page omission.
+ # Uses smaller than 30k because 709 long-context forging has not been proven at 30k.
+ LIMIT=int(os.getenv('AKBASCORE_713_CART_TOKENS','18000'))
+ check('CHUNK_LIMIT',1024<=LIMIT<=24000)
+ chunks=[];current=[];ids=[];start=1
+ for i,pids in enumerate(token_pages,1):
+  check('PAGE_WITHIN_CARTRIDGE_'+str(i),len(pids)<=LIMIT,{'tokens':len(pids)}) if len(pids)>LIMIT else None
+  if current and len(ids)+len(pids)>LIMIT:
+   chunks.append({'first_page':start,'last_page':i-1,'ids':ids});current=[];ids=[];start=i
+  current.append(i);ids.extend(pids)
+ if current:chunks.append({'first_page':start,'last_page':486,'ids':ids})
+ check('NO_TOKEN_LOSS',sum(len(x['ids']) for x in chunks)==total)
+ check('ALL_PAGE_RANGES',[(c['first_page'],c['last_page']) for c in chunks][0][0]==1 and chunks[-1]['last_page']==486 and all(a['last_page']+1==b['first_page'] for a,b in zip(chunks,chunks[1:])))
+ for i,c in enumerate(chunks,1):
+  c['id']=f'C{i:02d}';S['cartridges'].append({'id':c['id'],'pages':[c['first_page'],c['last_page']],'body_tokens':len(c['ids'])})
+ emit('CARTRIDGE_PLAN',[(x['id'],x['first_page'],x['last_page'],len(x['ids'])) for x in chunks]);persist()
+ quant=BitsAndBytesConfig(load_in_4bit=True,bnb_4bit_quant_type='nf4',bnb_4bit_compute_dtype=DTYPE,bnb_4bit_use_double_quant=True)
+ model=AutoModelForCausalLM.from_pretrained(MODEL_ID,quantization_config=quant,dtype=DTYPE,device_map={'':0},low_cpu_mem_usage=True,trust_remote_code=False,attn_implementation='sdpa').eval()
+ for p in model.parameters():p.requires_grad_(False)
+ cfg=model.config;NL=len(model.model.layers);H=int(cfg.hidden_size);QH=int(cfg.num_attention_heads);KVH=int(cfg.num_key_value_heads);HD=int(getattr(cfg,'head_dim',None) or H//QH)
+ check('ARCH',(NL,H,QH,KVH,HD)==EXPECTED,[NL,H,QH,KVH,HD]);check('FROZEN',all(not p.requires_grad for p in model.parameters()))
+ check('NF4',any(isinstance(m,bitsandbytes.nn.Linear4bit) for m in model.modules()))
+ check('GPU_ONLY',({str(p.device) for p in model.parameters()}|{str(x.device) for x in model.buffers()})=={'cuda:0'})
+ before=sentinel();S['weight_sentinel_before']=before
+ PREFIX='<|im_start|>system\nUse only the available document memory for document-specific questions. If the evidence is missing, say UNKNOWN.\n<|im_end|>\n<|im_start|>user\nINFORMATION:\n'
+ PIDS=tok(PREFIX,add_special_tokens=False).input_ids;P=len(PIDS)
+ # Position and physical capacity checks before the expensive forging.
+ check('POSITION_LIMIT',max(len(c['ids']) for c in chunks)+P+MAX_NEW+512<=cfg.max_position_embeddings)
+ for c in chunks:
+  free,_=torch.cuda.mem_get_info();need=(len(c['ids'])+P+1024)*NL*KVH*HD*4+GPU_RESERVE_GIB*2**30
+  check('ESTIMATED_GPU_ROOM_'+c['id'],free>=need,{'free_gib':round(free/2**30,2),'need_gib':round(need/2**30,2)})
+ # Control before burning. Source is not in model context.
+ for q in S['questions']:
+  q['baseline_raw']=answer(None,q['question']);emit('BASELINE',q['pdf_page'],repr(q['baseline_raw']));persist()
+ # Physical long CUT3: reuse sealed TEST711 or TEST712; forge only the five required cartridges otherwise.
+ prior=None;prior_root=None
+ for candidate in [Path('/content/AKBASCORE_TEST711'),Path('/content/AKBASCORE_TEST712')]:
+  pr=candidate/('TEST711_results.json' if candidate.name.endswith('711') else 'TEST712_results.json')
+  if not pr.is_file():continue
+  try:
+   obj=json.loads(pr.read_text());records=obj.get('cartridges',[])
+   valid=(len(records)==len(chunks) and all(records[i].get('id')==c['id'] and records[i].get('pages')==[c['first_page'],c['last_page']] and records[i].get('body_tokens')==len(c['ids']) for i,c in enumerate(chunks)))
+   if valid:prior=obj;prior_root=candidate;break
+  except Exception:pass
+ required={next(c['id'] for c in chunks if c['first_page']<=q['pdf_page']<=c['last_page']) for q in S['questions']}
+ for i,c in enumerate(chunks):
+  bid=c['id'];b=S['cartridges'][i]
+  if bid not in required:continue
+  if prior is not None:
+   old=prior['cartridges'][i];oldpath=prior_root/'cartridges'/(bid+'.pt')
+   if oldpath.is_file() and old.get('cartridge_sha256'):
+    h=hashlib.sha256()
+    with oldpath.open('rb') as f:
+     for buf in iter(lambda:f.read(8*1024*1024),b''):h.update(buf)
+    check('REUSE_SHA_'+bid,h.hexdigest()==old['cartridge_sha256'])
+    b['cartridge_sha256']=old['cartridge_sha256'];b['file_bytes']=oldpath.stat().st_size;b['file_path']=str(oldpath)
+    emit('REUSE_VERIFIED_LONG',bid,str(oldpath));persist();continue
+  emit('FORGE_LONG',bid,c['first_page'],c['last_page'],len(c['ids']))
+  cp,seconds=forge_stream(c['ids'],bid);p=CART/(bid+'.pt');torch.save(cp,p)
+  b['cartridge_sha256']=sha(p.read_bytes());b['file_bytes']=p.stat().st_size;b['forge_seconds']=seconds;b['file_path']=str(p)
+  check('LONG_LOWER_ONLY_'+bid,len(cp['lower'])==CUT+1 and 'upper' not in cp)
+  del cp;free_gpu();persist()
+ # Keep the 709 cart_load() unchanged; set CART to each sealed cartridge's parent at mount time.
+ # The 709 cart_load() expects metadata in R['books']; reference existing manifest, no engine changes.
+ R['books']=[{'id':b['id'],'cartridge_sha256':b['cartridge_sha256']} for b in S['cartridges'] if b.get('cartridge_sha256')]
+ # Three conditions: literal page source, page-only physical CUT3, long physical CUT3.
+ # Gold labels never enter questions or source-specific prompts. Page-only source is intentionally visible in direct control.
+ SHORT=CART/'short_pages';SHORT.mkdir(parents=True,exist_ok=True)
+ def mount(path,bid):
+  global CART
+  CART=path.parent
+  cp,times=cart_load(bid);m=list(initialize(cp));del cp;free_gpu()
+  return m,times
+ for q in S['questions']:
+  page=q['pdf_page'];gold=q['gold'];c=next(c for c in chunks if c['first_page']<=page<=c['last_page']);bid=c['id']
+  q['oracle_cartridge']=bid;q['conditions']={};page_text=pages[page-1]
+  # Sanity check: independent of model output, expose heading location and the first 800 chars for later auditing.
+  at=page_text.casefold().find(gold.casefold());q['gold_char_offset']=at
+  q['source_excerpt_near_gold']=page_text[max(0,at-140):at+len(gold)+180] if at>=0 else None
+  check('GOLD_IN_EXTRACTED_PAGE_'+str(page),at>=0)
+  # Direct-source control: same original question, with the page text explicitly in the question.
+  direct='The following is the literal extracted text of PDF page '+str(page)+'.\n<BEGIN_PDF_PAGE>\n'+page_text+'\n<END_PDF_PAGE>\n\n'+q['question']
+  t0=time.perf_counter();raw=answer(None,direct)
+  q['conditions']['DIRECT_SOURCE']={'raw':raw,'exact':raw.strip().casefold()==gold.casefold(),'seconds':round(time.perf_counter()-t0,3)}
+  emit('QA_DIRECT_SOURCE',page,repr(raw),'EXACT',q['conditions']['DIRECT_SOURCE']['exact']);persist()
+  # A fresh physical CUT3 cartridge containing only this page, with exactly the same 709 forge/rebuild engine.
+  sid=f'P{page:03d}';ids=token_pages[page-1];short_path=SHORT/(sid+'.pt')
+  if not short_path.exists():
+   emit('FORGE_SHORT',sid,'TOKENS',len(ids));cp,seconds=forge_stream(ids,sid)
+   torch.save(cp,short_path);del cp;free_gpu()
+  digest=sha(short_path.read_bytes());R['books'].append({'id':sid,'cartridge_sha256':digest})
+  memory,times=mount(short_path,sid);t0=time.perf_counter();raw=answer(memory,q['question'])
+  q['conditions']['SHORT_CUT3']={'raw':raw,'exact':raw.strip().casefold()==gold.casefold(),'seconds':round(time.perf_counter()-t0,3),'mount':times,'sha256':digest,'tokens':len(ids)}
+  emit('QA_SHORT_CUT3',page,repr(raw),'EXACT',q['conditions']['SHORT_CUT3']['exact']);del memory;free_gpu();persist()
+  # Long 18k-token physical cartridge, no added page text or position hints.
+  long_record=next(x for x in S['cartridges'] if x['id']==bid);long_path=Path(long_record['file_path'])
+  memory,times=mount(long_path,bid);t0=time.perf_counter();raw=answer(memory,q['question'])
+  q['conditions']['LONG_CUT3']={'raw':raw,'exact':raw.strip().casefold()==gold.casefold(),'seconds':round(time.perf_counter()-t0,3),'mount':times,'sha256':long_record['cartridge_sha256'],'tokens':len(c['ids'])}
+  emit('QA_LONG_CUT3',page,bid,repr(raw),'EXACT',q['conditions']['LONG_CUT3']['exact']);del memory;free_gpu();persist()
+  # Negative control: neighboring cartridge that excludes the requested PDF page.
+  wrong=chunks[(chunks.index(c)+1)%len(chunks)]['id'];wr=next(x for x in S['cartridges'] if x['id']==wrong)
+  if 'file_path' not in wr and prior is not None:
+   wi=next(i for i,x in enumerate(chunks) if x['id']==wrong);old=prior['cartridges'][wi];op=prior_root/'cartridges'/(wrong+'.pt')
+   if op.is_file() and old.get('cartridge_sha256'):
+    h=hashlib.sha256()
+    with op.open('rb') as f:
+     for buf in iter(lambda:f.read(8*1024*1024),b''):h.update(buf)
+    check('REUSE_WRONG_SHA_'+wrong,h.hexdigest()==old['cartridge_sha256']);wr['cartridge_sha256']=old['cartridge_sha256'];wr['file_path']=str(op)
+  if 'file_path' not in wr:
+   emit('FORGE_WRONG',wrong);cp,seconds=forge_stream(next(x for x in chunks if x['id']==wrong)['ids'],wrong)
+   wp=ROOT/'cartridges'/(wrong+'.pt');torch.save(cp,wp);wr['cartridge_sha256']=sha(wp.read_bytes());wr['file_path']=str(wp);del cp;free_gpu()
+  
+  if not any(x['id']==wrong for x in R['books']):R['books'].append({'id':wrong,'cartridge_sha256':wr['cartridge_sha256']})
+  memory,times=mount(Path(wr['file_path']),wrong);raw=answer(memory,q['question'])
+  q['conditions']['WRONG_CUT3']={'raw':raw,'wrong_cartridge':wrong,'mount':times}
+  emit('QA_WRONG_CUT3',page,wrong,repr(raw));del memory;free_gpu();persist()
+ check('WEIGHT_SENTINEL_UNCHANGED',sentinel()==before)
+ S['score_by_condition']={name:sum(q['conditions'][name]['exact'] for q in S['questions']) for name in ('DIRECT_SOURCE','SHORT_CUT3','LONG_CUT3')}
+ S['status']='COMPLETE_SOURCE_SHORT_LONG_DIAGNOSTIC';emit('TEST713_STATUS',S['status'],'SCORES',S['score_by_condition'],'TOTAL_PAGES',len(pages),'TOTAL_TOKENS',total,'CARTS',len(chunks))
+except Exception as e:
+ S['status']='ERROR';S['error']=repr(e);S['traceback']=traceback.format_exc()[-15000:];emit('TEST713_ERROR',repr(e));emit(S['traceback'])
+finally:
+ persist();emit('RESULTS',RESULT);emit('LOG',LOG713)
