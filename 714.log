@@ -1,0 +1,57 @@
+ warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+PASS 709_GIT_BLOB_LOCK
+PASS PDF_SHA256_LOCK
+PASS PDF_486_PAGES
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 83.1kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 429kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 86.9MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.5MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 126MB/s]TOKEN_COUNTS [17279, 16873, 17062, 17154, 16888, 16725, 17074, 17040, 17002, 11474]
+PASS ALL_PAGES_COVERED
+PASS CUDA_A100_80GB
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.17MB/s]Download complete:   125GB,  338MB/s  Reconstruction complete: 100%  145GB /  145GB,  607MB/s  Fetching 37 files: 100% 37/37 [06:48<00:00, 10.35s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.29it/s]generation_config.json: 100% 242/242 [00:00<00:00, 29.7kB/s]PASS MODEL_ARCH
+PASS FROZEN
+FORGE C01 TOKENS 17279
+FORGE_PROGRESS C01 256 / 17310 GPU {'free_gib': 39.073, 'allocated_gib': 38.479, 'peak_gib': 39.002, 'total_gib': 79.251}
+FORGE_PROGRESS C01 8192 / 17310 GPU {'free_gib': 36.839, 'allocated_gib': 40.902, 'peak_gib': 41.428, 'total_gib': 79.251}
+FORGE_PROGRESS C01 16384 / 17310 GPU {'free_gib': 30.432, 'allocated_gib': 43.401, 'peak_gib': 43.933, 'total_gib': 79.251}
+FORGE C02 TOKENS 16873
+FORGE_PROGRESS C02 256 / 16904 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C02 8192 / 16904 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C02 16384 / 16904 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C03 TOKENS 17062
+FORGE_PROGRESS C03 256 / 17093 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C03 8192 / 17093 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C03 16384 / 17093 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C04 TOKENS 17154
+FORGE_PROGRESS C04 256 / 17185 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C04 8192 / 17185 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C04 16384 / 17185 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C05 TOKENS 16888
+FORGE_PROGRESS C05 256 / 16919 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C05 8192 / 16919 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C05 16384 / 16919 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C06 TOKENS 16725
+FORGE_PROGRESS C06 256 / 16756 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C06 8192 / 16756 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C06 16384 / 16756 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C07 TOKENS 17074
+FORGE_PROGRESS C07 256 / 17105 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C07 8192 / 17105 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C07 16384 / 17105 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C08 TOKENS 17040
+FORGE_PROGRESS C08 256 / 17071 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C08 8192 / 17071 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C08 16384 / 17071 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C09 TOKENS 17002
+FORGE_PROGRESS C09 256 / 17033 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C09 8192 / 17033 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C09 16384 / 17033 GPU {'free_gib': 30.229, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C10 TOKENS 11474
+FORGE_PROGRESS C10 256 / 11505 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C10 8192 / 11505 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+ROUTE {"case": 0, "question": "What does the manual say about the fundamentals of operation?", "gold_cartridge": "C02", "selected": "C04", "top5": ["C04", "C09", "C07", "C10", "C06"], "hit1": false, "hit5": false, "scores": [0.571744, 0.604243, 0.601518, 0.621926, 0.600882, 0.605955, 0.60796, 0.587185, 0.612997, 0.607492]}
+ROUTE {"case": 1, "question": "How do I machine a workpiece?", "gold_cartridge": "C03", "selected": "C06", "top5": ["C06", "C03", "C05", "C04", "C01"], "hit1": false, "hit5": true, "scores": [0.59925, 0.58829, 0.60332, 0.601196, 0.603199, 0.605301, 0.58944, 0.584278, 0.582682, 0.586561]}
+ROUTE {"case": 2, "question": "How do I create a G code program?", "gold_cartridge": "C05", "selected": "C05", "top5": ["C05", "C10", "C04", "C02", "C07"], "hit1": true, "hit5": true, "scores": [0.605127, 0.613295, 0.596428, 0.61861, 0.624849, 0.578507, 0.606673, 0.594586, 0.585296, 0.62421]}
+ROUTE {"case": 3, "question": "How do I manage programs?", "gold_cartridge": "C07", "selected": "C01", "top5": ["C01", "C05", "C07", "C10", "C08"], "hit1": false, "hit5": true, "scores": [0.59655, 0.568429, 0.586896, 0.587778, 0.593907, 0.570969, 0.592373, 0.590111, 0.582238, 0.590395]}
+ROUTE {"case": 4, "question": "How can I edit the PLC user program?", "gold_cartridge": "C09", "selected": "C09", "top5": ["C09", "C10", "C04", "C08", "C07"], "hit1": true, "hit5": true, "scores": [0.583792, 0.595313, 0.598775, 0.637895, 0.587067, 0.593337, 0.599576, 0.602461, 0.645766, 0.639181]}
+PASS WEIGHTS_UNCHANGED
+TEST714_RESULT COMPLETE_ROUTING_ONLY R1 0.4 R5 0.8
