@@ -1,0 +1,124 @@
+ TEST712 SIEMENS / FROZEN 709 ENGINE / WITHIN-CARTRIDGE POSITION CUE DIAGNOSTIC
+PASS ENGINE_709_BLOB_LOCK {'actual': '6c9f8cbb1eeed848d45133d73f0d7676b68e9125', 'expected': '6c9f8cbb1eeed848d45133d73f0d7676b68e9125'}
+PASS ENGINE_DRIVER_AST_UNIQUE {'found': 1}
+PASS CUDA 
+PASS SINGLE_GPU 
+PASS A100_80GB 
+PASS PDF_SHA256_LOCK {'sha256': '88c0f8293ce3302135042baf35d704303fb3b5a24915e28b8ca16f3192a7cc1d', 'bytes': 8696401}
+PASS PDF_486_PAGES 
+PASS ALL_PAGES_EXTRACTED 
+PASS GOLD_VISIBLE_PAGE_49 {'page': 49, 'gold': 'Fundamentals'}
+PASS GOLD_VISIBLE_PAGE_147 {'page': 147, 'gold': 'Machining the workpiece'}
+PASS GOLD_VISIBLE_PAGE_243 {'page': 243, 'gold': 'Creating a G code program'}
+PASS GOLD_VISIBLE_PAGE_341 {'page': 341, 'gold': 'Managing programs'}
+PASS GOLD_VISIBLE_PAGE_437 {'page': 437, 'gold': 'Editing the PLC user program'}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 78.8kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 865kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 80.3MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.2MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 129MB/s]PDF_EXTRACTED_TOKENS 172833
+PASS CHUNK_LIMIT 
+PASS NO_TOKEN_LOSS 
+PASS ALL_PAGE_RANGES 
+CARTRIDGE_PLAN [('C01', 1, 40, 17959), ('C02', 41, 96, 17825), ('C03', 97, 149, 17963), ('C04', 150, 197, 17970), ('C05', 198, 255, 17874), ('C06', 256, 311, 17677), ('C07', 312, 362, 17941), ('C08', 363, 415, 17941), ('C09', 416, 461, 17784), ('C10', 462, 486, 11899)]
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.33MB/s]Download complete:   125GB,  386MB/s  Reconstruction complete: 100%  145GB /  145GB,  496MB/s  Fetching 37 files: 100% 37/37 [06:46<00:00,  9.62s/it]Loading weights: 100% 963/963 [06:28<00:00,  3.22it/s]generation_config.json: 100% 242/242 [00:00<00:00, 29.7kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS GPU_ONLY 
+PASS POSITION_LIMIT 
+PASS ESTIMATED_GPU_ROOM_C01 {'free_gib': 39.62, 'need_gib': 14.8}
+PASS ESTIMATED_GPU_ROOM_C02 {'free_gib': 39.62, 'need_gib': 14.76}
+PASS ESTIMATED_GPU_ROOM_C03 {'free_gib': 39.62, 'need_gib': 14.8}
+PASS ESTIMATED_GPU_ROOM_C04 {'free_gib': 39.62, 'need_gib': 14.81}
+PASS ESTIMATED_GPU_ROOM_C05 {'free_gib': 39.62, 'need_gib': 14.78}
+PASS ESTIMATED_GPU_ROOM_C06 {'free_gib': 39.62, 'need_gib': 14.72}
+PASS ESTIMATED_GPU_ROOM_C07 {'free_gib': 39.62, 'need_gib': 14.8}
+PASS ESTIMATED_GPU_ROOM_C08 {'free_gib': 39.62, 'need_gib': 14.8}
+PASS ESTIMATED_GPU_ROOM_C09 {'free_gib': 39.62, 'need_gib': 14.75}
+PASS ESTIMATED_GPU_ROOM_C10 {'free_gib': 39.62, 'need_gib': 12.95}
+BASELINE 49 "UNKNOWN\n\nWithout access to the specific document, it's not possible to provide the exact heading that appears on PDF page 49 of the Siemens SINUMERIK ONE Universal Operating Manual. If you have the document available, you can check"
+BASELINE 147 "UNKNOWN\n\nWithout access to the specific document and page, it's not possible to provide the exact heading. If you can provide the heading or more context, I'd be happy to help further."
+BASELINE 243 "UNKNOWN\n\nWithout access to the specific document and page, it's impossible to provide the exact heading. If you can provide the document or more details, I'd be happy to help you find the answer."
+BASELINE 341 "UNKNOWN\n\nWithout access to the specific document and page, it's impossible to provide the exact heading. If you can provide the document or more details, I'd be happy to help you find the answer."
+BASELINE 437 "UNKNOWN\n\nWithout access to the specific document and page, it's impossible to provide the exact heading. If you can provide the document or more context, I'd be happy to help you find the answer."
+FORGE C01 PAGES 1 40 TOKENS 17959
+FORGE_PROGRESS C01 256 / 17990 GPU {'free_gib': 39.073, 'allocated_gib': 38.479, 'peak_gib': 39.002, 'total_gib': 79.251}
+FORGE_PROGRESS C01 8192 / 17990 GPU {'free_gib': 36.837, 'allocated_gib': 40.902, 'peak_gib': 41.429, 'total_gib': 79.251}
+FORGE_PROGRESS C01 16384 / 17990 GPU {'free_gib': 30.43, 'allocated_gib': 43.401, 'peak_gib': 43.932, 'total_gib': 79.251}
+PASS LOWER_ONLY_C01 
+FORGE C02 PAGES 41 96 TOKENS 17825
+FORGE_PROGRESS C02 256 / 17856 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.452, 'total_gib': 79.251}
+FORGE_PROGRESS C02 8192 / 17856 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.452, 'total_gib': 79.251}
+FORGE_PROGRESS C02 16384 / 17856 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.452, 'total_gib': 79.251}
+PASS LOWER_ONLY_C02 
+FORGE C03 PAGES 97 149 TOKENS 17963
+FORGE_PROGRESS C03 256 / 17994 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.452, 'total_gib': 79.251}
+FORGE_PROGRESS C03 8192 / 17994 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.452, 'total_gib': 79.251}
+FORGE_PROGRESS C03 16384 / 17994 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.452, 'total_gib': 79.251}
+PASS LOWER_ONLY_C03 
+FORGE C04 PAGES 150 197 TOKENS 17970
+FORGE_PROGRESS C04 256 / 18001 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.454, 'total_gib': 79.251}
+FORGE_PROGRESS C04 8192 / 18001 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.454, 'total_gib': 79.251}
+FORGE_PROGRESS C04 16384 / 18001 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.454, 'total_gib': 79.251}
+PASS LOWER_ONLY_C04 
+FORGE C05 PAGES 198 255 TOKENS 17874
+FORGE_PROGRESS C05 256 / 17905 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C05 8192 / 17905 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C05 16384 / 17905 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.457, 'total_gib': 79.251}
+PASS LOWER_ONLY_C05 
+FORGE C06 PAGES 256 311 TOKENS 17677
+FORGE_PROGRESS C06 256 / 17708 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C06 8192 / 17708 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C06 16384 / 17708 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.457, 'total_gib': 79.251}
+PASS LOWER_ONLY_C06 
+FORGE C07 PAGES 312 362 TOKENS 17941
+FORGE_PROGRESS C07 256 / 17972 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C07 8192 / 17972 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C07 16384 / 17972 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.457, 'total_gib': 79.251}
+PASS LOWER_ONLY_C07 
+FORGE C08 PAGES 363 415 TOKENS 17941
+FORGE_PROGRESS C08 256 / 17972 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C08 8192 / 17972 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C08 16384 / 17972 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.457, 'total_gib': 79.251}
+PASS LOWER_ONLY_C08 
+FORGE C09 PAGES 416 461 TOKENS 17784
+FORGE_PROGRESS C09 256 / 17815 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C09 8192 / 17815 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C09 16384 / 17815 GPU {'free_gib': 30.216, 'allocated_gib': 43.401, 'peak_gib': 44.457, 'total_gib': 79.251}
+PASS LOWER_ONLY_C09 
+FORGE C10 PAGES 462 486 TOKENS 11899
+FORGE_PROGRESS C10 256 / 11930 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.457, 'total_gib': 79.251}
+FORGE_PROGRESS C10 8192 / 11930 GPU {'free_gib': 36.846, 'allocated_gib': 40.901, 'peak_gib': 44.457, 'total_gib': 79.251}
+PASS LOWER_ONLY_C10 
+PASS PAGE_ROUTE_UNIQUE_49 
+QA_PROBE 49 C02 ORIGINAL RAW '3.3.9 Pocket calculator' EXACT False
+QA_PROBE 49 C02 PAGE_MARKER RAW 'UNKNOWN' EXACT False
+QA_PROBE 49 C02 TOKEN_WINDOW RAW 'The first substantive heading from the specified region (PDF page 49, near body token 3085 to 3408) is:\n\n**3.3.10 Pocket calculator functions**' EXACT False
+QA_PROBE 49 C02 MARKER_AND_OFFSET RAW 'UNKNOWN' EXACT False
+QA_WRONG 49 C03 'UNKNOWN'
+PASS PAGE_ROUTE_UNIQUE_147 
+QA_PROBE 147 C03 ORIGINAL RAW 'UNKNOWN\n\nThe provided text does not contain the exact content of PDF page 147, so I cannot determine the first substantive section heading on that page. The text provided is from multiple different pages of the manual, but not page' EXACT False
+QA_PROBE 147 C03 PAGE_MARKER RAW 'UNKNOWN' EXACT False
+QA_PROBE 147 C03 TOKEN_WINDOW RAW 'UNKNOWN\n\nThe provided text does not contain the specific content from PDF page 147, and the token range (16422 to 16770) is not directly identifiable in the given text. Therefore,' EXACT False
+QA_PROBE 147 C03 MARKER_AND_OFFSET RAW 'UNKNOWN' EXACT False
+QA_WRONG 147 C04 'UNKNOWN'
+PASS PAGE_ROUTE_UNIQUE_243 
+QA_PROBE 243 C05 ORIGINAL RAW '9.5 Generating a G code program' EXACT False
+QA_PROBE 243 C05 PAGE_MARKER RAW 'UNKNOWN' EXACT False
+QA_PROBE 243 C05 TOKEN_WINDOW RAW 'The first substantive heading from the specified region (PDF page 243) is:\n\n9.5 Generating a G code program' EXACT False
+QA_PROBE 243 C05 MARKER_AND_OFFSET RAW 'UNKNOWN' EXACT False
+QA_WRONG 243 C06 'UNKNOWN'
+PASS PAGE_ROUTE_UNIQUE_341 
+QA_PROBE 341 C07 ORIGINAL RAW '13.6 Searching directories and files' EXACT False
+QA_PROBE 341 C07 PAGE_MARKER RAW 'UNKNOWN' EXACT False
+QA_PROBE 341 C07 TOKEN_WINDOW RAW 'The first substantive heading on PDF page 341, based on the token range provided, is:\n\n13.7 Displaying the program in the Preview.' EXACT False
+QA_PROBE 341 C07 MARKER_AND_OFFSET RAW 'UNKNOWN' EXACT False
+QA_WRONG 341 C08 'UNKNOWN'
+PASS PAGE_ROUTE_UNIQUE_437 
+QA_PROBE 437 C09 ORIGINAL RAW '17.5.3 Control options' EXACT False
+QA_PROBE 437 C09 PAGE_MARKER RAW 'The first substantive heading immediately after the literal document marker [SIEMENS ORIGINAL PDF PAGE 437] is:\n\n"17.5.3 Control options"' EXACT False
+QA_PROBE 437 C09 TOKEN_WINDOW RAW 'The first substantive heading from the specified region (PDF page 437, near body token 8646 to 8884) is:\n\n**17.5.4 Displaying the program status**' EXACT False
+QA_PROBE 437 C09 MARKER_AND_OFFSET RAW 'UNKNOWN' EXACT False
+QA_WRONG 437 C10 'UNKNOWN'
+PASS WEIGHT_SENTINEL_UNCHANGED 
+TEST712_STATUS COMPLETE_POSITION_DIAGNOSTIC SCORES {'ORIGINAL': 0, 'PAGE_MARKER': 0, 'TOKEN_WINDOW': 0, 'MARKER_AND_OFFSET': 0} TOTAL_PAGES 486 TOTAL_TOKENS 172833 CARTS 10
+RESULTS /content/AKBASCORE_TEST712/TEST712_results.json
+LOG /content/AKBASCORE_TEST712/TEST712.log
