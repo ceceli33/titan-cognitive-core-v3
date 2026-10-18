@@ -1,0 +1,27 @@
+ TEST710 FULL PDF / ONE CUT3 CARTRIDGE / FIVE QUESTIONS / NO TRUNCATION
+PASS CUDA 
+PASS SINGLE_GPU 
+PASS A100_80GB 
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+SOURCE_PDF_SHA256 88c0f8293ce3302135042baf35d704303fb3b5a24915e28b8ca16f3192a7cc1d PAGES 486 BYTES 8696401
+PASS ALL_PAGES_TEXT_EXTRACTED 
+PASS FIVE_PAGE_GOLD_ANCHORS [(49, 'Fundamentals'), (147, 'Machining the workpiece'), (243, 'Creating a G code program'), (341, 'Managing programs'), (437, 'Editing the PLC user program')]
+FIVE_QUESTIONS_LOCKED [{"pdf_page": 49, "question": "What is the first substantive heading or text line printed on PDF page 49 of the Siemens manual? Give the exact wording; if unsure, say UNKNOWN.", "gold": "Fundamentals", "gold_sha256": "915ff7435daeac2f66aa866e59bf293f101b79403dbdde2b631fd37fa524f26b"}, {"pdf_page": 147, "question": "What is the first substantive heading or text line printed on PDF page 147 of the Siemens manual? Give the exact wording; if unsure, say UNKNOWN.", "gold": "Machining the workpiece", "gold_sha256": "49134fdbded9fc324bd0f877f340e099db742158d609ae3cab16e895c4b48f6a"}, {"pdf_page": 243, "question": "What is the first substantive heading or text line printed on PDF page 243 of the Siemens manual? Give the exact wording; if unsure, say UNKNOWN.", "gold": "Creating a G code program", "gold_sha256": "0bd6f4629c360dcb1ef0bb06905da079bcb6fee789c1c2e55fa4308e83e6871f"}, {"pdf_page": 341, "question": "What is the first substantive heading or text line printed on PDF page 341 of the Siemens manual? Give the exact wording; if unsure, say UNKNOWN.", "gold": "Managing programs", "gold_sha256": "060ec4a01c7b466327432adb5a382c95c24243e48a3651406db2a5b43e965d3c"}, {"pdf_page": 437, "question": "What is the first substantive heading or text line printed on PDF page 437 of the Siemens manual? Give the exact wording; if unsure, say UNKNOWN.", "gold": "Editing the PLC user program", "gold_sha256": "c12d38a743a4c6a779b1333eb43aa71a08ba5061da4765f9ae19d99faaf9d29d"}]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 88.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 893kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 68.3MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 70.8MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 128MB/s]FULL_DOCUMENT_TOKEN_COUNT 166723
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.17MB/s]Download complete:   125GB,  292MB/s  Reconstruction complete: 100%  145GB /  145GB,  658MB/s  Fetching 37 files: 100% 37/37 [06:47<00:00, 10.28s/it]Loading weights: 100% 963/963 [06:24<00:00,  3.27it/s]generation_config.json: 100% 242/242 [00:00<00:00, 28.9kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+CAPACITY_AUDIT {'tokens': 166753, 'kv_only_gib': 50.889, 'kv_only_limit_tokens': 100341, 'max_positions': 32768, 'gpu': {'free_gib': 39.622, 'allocated_gib': 38.392, 'peak_gib': 38.799, 'total_gib': 79.251}}
+FAIL POSITION_LIMIT 
+TEST710_STOP CAPACITY_FAIL RuntimeError('CHECK_FAILED_POSITION_LIMIT')
+Traceback (most recent call last):
+  File "/tmp/ipykernel_7514/375485965.py", line 74, in <cell line: 0>
+    ck('POSITION_LIMIT',n+ns['MAX_NEW']+512<=getattr(cfg,'max_position_embeddings',131072))
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "709_ENGINE_FOR_710", line 37, in ck
+RuntimeError: CHECK_FAILED_POSITION_LIMIT
+
+TEST710_STATUS CAPACITY_FAIL
+RESULTS /content/AKBASCORE_TEST710/TEST710_results.json
+LOG /content/AKBASCORE_TEST710/TEST710.log
