@@ -1,0 +1,320 @@
+AKBASCORE AI TECHNOLOGY — SILICON HIPPOCAMPUS · Qwen2.5-72B / SIEMENS SINUMERIK ONE
+new experiment — unpublished, no DOI
+session SIEM-20261018-190402 · started 2026-10-18T19:04:02+00:00 (2026-10-18T19:04:02.294+00:00 UTC) · written 2026-10-18T19:46:02+00:00
+
+EXPERIMENT  TEST718 — ten physical CUT3 cartridges of a real industrial manual, vanilla controls, removal control, text-mediated synthesis
+ENGINE      718.py git blob dabbb68008c40fe5312629d5e56ad8971d9121b7 (executed unchanged) · 716.py 913fa7a4951f2072df4be2eb49120ea86efa5477 · 709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+            engine run 2026-10-18T19:04:14.274+00:00 → 2026-10-18T19:37:21.553+00:00 UTC (1987.28 s) · status COMPLETE_SEQUENTIAL_PHYSICAL_READOUT_AND_TEXT_SYNTHESIS
+MODEL       Qwen/Qwen2.5-72B-Instruct · NF4 4-bit, BF16 compute, frozen · loaded snapshot 495f39366efef23836d0cfae4fbe635880d2be31 · Hub main 495f39366efef23836d0cfae4fbe635880d2be31
+            first public release 2024-09-19 — Qwen Team, “Qwen2.5: A Party of Foundation Models!”, blog post dated September 19, 2024 — https://qwenlm.github.io/blog/qwen2.5/ (checked by the code author on 2026-10-18 (web); not re-checked at run time)
+            Hugging Face repository created 2024-09-16 11:56:31+00:00 · last modified 2025-01-12 02:07:38+00:00 (creation is not publication)
+DOCUMENT    SINUMERIK ONE Universal Operating Manual · edition 07/2025 (printed on 486 of 486 pages — verified on the document)
+            order no. A5E48384812B AK · software V6.25 SP1 · 8696401 bytes · SHA-256 88c0f8293ce3302135042baf35d704303fb3b5a24915e28b8ca16f3192a7cc1d
+            downloaded 2026-10-18T19:04:08.872+00:00 → 2026-10-18T19:04:09.075+00:00 UTC from https://cache.industry.siemens.com/dl/files/087/109994087/att_1338962/v1/ONE_universal_op_man_0725_en-US.pdf
+            PDF metadata: created D:20250716120541+02'00' · modified D:20250716133359+02'00'
+            Not redistributed: Siemens terms restrict passing documents on to third parties (e.g. section 2.3 of the Siemens documentation terms). Download it from the official Siemens address and compare its SHA-256 with this record. (https://support.industry.siemens.com/dokumentation/ExtendedAGB.aspx)
+DATES       The manual edition 07/2025 is 285–315 days after the documented public release of Qwen/Qwen2.5-72B-Instruct (2024-09-19); the exact day of the edition is not printed.
+            The date gap alone is NOT evidence that the model lacks this information: earlier SINUMERIK manuals and other public texts may contain the same or similar content, and the vanilla 'UNKNOWN' answers also follow the prompt's instruction not to guess.
+
+INITIALIZATION (this session)
+  ✓ SOURCES             1.4 s  Verified sources (engine locks, licence, historical logs)
+  ✓ PREFLIGHT           5.1 s  System preflight: GPU, RAM, disk, model cache and model identity
+  ✓ DOCUMENT            5.4 s  Original Siemens PDF: download, SHA-256, pages, edition marking
+  ✓ EXPERIMENT       1987.4 s  TEST718 experiment, executed unchanged (model, 10 cartridges, readouts, controls, synthesis)
+  ✓ XRAY              354.7 s  Ten-cartridge X-ray: each cartridge mounted ALONE, K/V measured read-only on the GPU, released
+  ✓ VERIFY             15.9 s  Live verification of the experiment records
+  ✓ READY_MEMORY       36.8 s  Ready memory: cartridge C01 mounted on the GPU
+  ✓ FIGURES            14.0 s  Seven research figures and downloadable research artifacts
+
+TEN PHYSICAL CARTRIDGES AND ANSWERS (raw, NOT verified; automatic checks only)
+
+  C01  PDF pages 1–40 · 17279 tokens · rows 17310 · file 567217229 B · SHA-256 c635a55b5baaf69d9b8e6d3df28eaa7e8b7ff3d59c17750c55aaaeb8d447b50c
+      heading: Warranty and liability for application examples (PDF page 24, section 2.2)
+      readout: SSD+SHA 2229.36 ms · H2D 159.591 ms · wall 56.623 s · answer 144 tokens (limit reached)
+      checks : stated page 24 → same page · section number stated True · 5-gram support physical 24 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Warranty and liability for application examples". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the section titled "Warranty and liability for application examples" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be verified without access to the document. If you can provide the document or specific details from it, I can help you identify the relevant information.
+      PHYSICAL → According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), the section titled "Warranty and liability for application examples" is found on PDF page 24. The specific operating procedure, controls, or constraints described in this section are as follows:
+
+**Section 2.2 Warranty and liability for application examples (PDF Page 24):**
+
+- **Application Examples are Not Binding and Not Comprehensive:**
+  - Application examples provided in the documentation are not binding and do not claim to be complete regarding configuration, equipment, or any eventuality that may arise.
+  - These examples do not represent customer-specific solutions but are intended to provide assistance
+      AFTER RELEASE → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the section titled "Warranty and liability for application examples" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be verified without access to the document. If you can provide the document or specific details from it, I can help you identify the relevant information.  (identical to vanilla: True)
+
+  C02  PDF pages 41–96 · 16873 tokens · rows 16904 · file 553913421 B · SHA-256 6ae2546c74669e6db8be1dbec78bd4d71cecb79c4d8405825c2a2f6fe2751fbd
+      heading: Sidescreen with standard windows (PDF page 73, section 4.4.2)
+      readout: SSD+SHA 2169.315 ms · H2D 153.0 ms · wall 56.171 s · answer 144 tokens (limit reached)
+      checks : stated page 74 → different page · section number stated False · 5-gram support physical 49 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Sidescreen with standard windows". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the section titled "Sidescreen with standard windows" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be verified without access to the document. If you can provide the relevant section or page number, I can help you with the details.
+      PHYSICAL → The section "Sidescreen with standard windows" is found in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) on PDF page 74.
+
+### Sidescreen with Standard Windows
+
+When the sidescreen is activated, a navigation bar is shown on the left-hand side of the user interface. This navigation bar can be used to switch directly to the desired operating area, and to show and hide the sidescreen.
+
+#### Navigation Bar
+
+The navigation bar includes the following operator controls and their functions:
+
+1. **Machine Operating Area**
+   - **Function**: Opens the "Machine" operating area.
+
+2. **Tool List**
+   - **
+
+  C03  PDF pages 97–149 · 17062 tokens · rows 17093 · file 560106573 B · SHA-256 a4955a8b5e729c2bd057d11b43a0b928b9b06a7cca5a3098f40172544059bc81
+      heading: Monitoring axis and spindle data (PDF page 107, section 5.6)
+      readout: SSD+SHA 2187.201 ms · H2D 153.724 ms · wall 56.355 s · answer 144 tokens (limit reached)
+      checks : stated page 107 → same page · section number stated True · 5-gram support physical 71 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Monitoring axis and spindle data". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the section titled "Monitoring axis and spindle data" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be provided without access to the manual. If you have the manual and can provide the relevant section or page number, I can help you interpret the information.
+      PHYSICAL → According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), the section titled "Monitoring axis and spindle data" is found on PDF page 107. The specific operating procedure, controls, or constraints described in this section are as follows:
+
+### 5.6 Monitoring axis and spindle data
+
+#### 5.6.1 Specify working area limitations
+
+**Using the "Working area limitation" function you can limit the range within which a tool should traverse in all channel axes. This function allows you to set up protection zones in the working area that are inhibited for tool motion.**
+
+**In this way, you are able to restrict the
+
+  C04  PDF pages 150–197 · 17154 tokens · rows 17185 · file 563121229 B · SHA-256 719f8c21b0fef844d86ed51658db6736499ec19094bddbe767e449870f89eedb
+      heading: Open a DXF file (PDF page 191, section 7.17.2.1)
+      readout: SSD+SHA 2207.768 ms · H2D 154.48 ms · wall 57.002 s · answer 144 tokens (limit reached)
+      checks : stated page 191 → same page · section number stated True · 5-gram support physical 56 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Open a DXF file". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints for opening a DXF file in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) are not provided in the information available to me. If you have access to the manual, you can check the section titled "Open a DXF file" for the detailed instructions. If you provide the section or page number, I can help you verify the information.
+      PHYSICAL → According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), the specific operating procedure for opening a DXF file is described in section 7.17.2.1 "Open a DXF file" on PDF page 191. The procedure is as follows:
+
+1. Select the "Program Manager" operating area.
+2. Choose the desired storage location and position the cursor on the DXF file that you want to display.
+3. Press the "Open" softkey. The selected CAD drawing will be displayed with all its layers, i.e., with all graphic levels.
+4. Press the "Close" softkey to
+
+  C05  PDF pages 198–255 · 16888 tokens · rows 16919 · file 554404941 B · SHA-256 adef6bd642e0d03afa3bef50547b694a1e08d3e898b39eb31c9e7814db28e70d
+      heading: Mold making view (PDF page 202, section 7.18)
+      readout: SSD+SHA 2167.874 ms · H2D 153.323 ms · wall 56.077 s · answer 144 tokens (limit reached)
+      checks : stated page 202–210 → range contains heading page · section number stated True · 5-gram support physical 2 % vs vanilla 2 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Mold making view". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the "Mold making view" section of the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) are not provided in the information you have shared. To provide an accurate answer, I would need to refer to the actual manual. If you can provide the relevant section or page number, I can help you with the details.
+      PHYSICAL → The section titled "Mold making view" is found in the "Machining the workpiece" chapter of the Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1). The specific details are provided on PDF pages 202 to 210. Here is a summary of the key points and procedures described in this section:
+
+### 7.18 Mold making view
+
+#### Overview
+- **Purpose**: Provides a fast overview of large mold making programs, allowing for quick checking and correction.
+- **Machine Manufacturer Note**: The mold making view might be hidden, and users should refer to the machine manufacturer's information.
+
+#### Checking the Program
+- **What to Check
+      AFTER RELEASE → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the "Mold making view" section of the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) are not provided in the information you have shared. To provide an accurate answer, I would need to refer to the actual manual. If you can provide the relevant section or page number, I can help you with the details.  (identical to vanilla: True)
+
+  C06  PDF pages 256–311 · 16725 tokens · rows 16756 · file 549063757 B · SHA-256 8b2203274b078fdc0ba913dc6c067c011c83149bf2a9c64ddd8a74a9d9ea5810
+      heading: Relocating a tool (PDF page 296, section 12.8.2)
+      readout: SSD+SHA 2164.02 ms · H2D 152.533 ms · wall 55.797 s · answer 142 tokens
+      checks : stated page 297 → different page · section number stated True · 5-gram support physical 20 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Relocating a tool". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+I do not have access to the specific July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) to provide the exact details of the "Relocating a tool" section. If you can provide the relevant section or page number, I can help you interpret the information. Otherwise, I cannot accurately cite the content without having the document.
+      PHYSICAL → According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), the specific operating procedure for relocating a tool is described in section 12.8.2 "Relocating a tool" on PDF page 297. The procedure is as follows:
+
+1. **Open the Magazine List**:
+   - Select the "Parameter" operating area.
+   - Press the "Magazine” softkey to open the magazine list.
+
+2. **Position the Cursor**:
+   - Position the cursor on the tool that you wish to relocate to a different magazine location.
+
+3. **Press the "Relocate" Softkey**:
+
+  C07  PDF pages 312–362 · 17074 tokens · rows 17105 · file 560499789 B · SHA-256 30b15360a1fb5ff955cc809d81ac023694c06180b2762fe961a831f3477d31e1
+      heading: Viewing PDF documents (PDF page 358, section 13.13)
+      readout: SSD+SHA 2189.07 ms · H2D 154.413 ms · wall 56.363 s · answer 144 tokens (limit reached)
+      checks : stated page 358 → same page · section number stated True · 5-gram support physical 29 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Viewing PDF documents". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints for "Viewing PDF documents" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) are not provided in the information available to me. If you have access to the manual, you can check the table of contents or index for the section titled "Viewing PDF documents" to find the relevant details.
+      PHYSICAL → The specific operating procedure, controls, or constraints for "Viewing PDF documents" are described in Section 13.13 of the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), which corresponds to PDF page 358. The relevant details are as follows:
+
+### Procedure for Viewing PDF Documents
+
+1. **Select the Storage Medium:**
+   - In the "Program manager" operating area, select the desired storage medium.
+   - Alternatively, select the desired storage location in the "Commissioning" operating area in the data tree of the "System data".
+
+2. **Open the PDF or HTML File:**
+   - Position the
+
+  C08  PDF pages 363–415 · 17040 tokens · rows 17071 · file 559385677 B · SHA-256 c00ab9eb19cdbce74bc52c2b476ef68a8db90805bd553912e89d6fabd3416824
+      heading: Input parameters for teach-in blocks (PDF page 392, section 14.4.1)
+      readout: SSD+SHA 2183.321 ms · H2D 153.267 ms · wall 56.276 s · answer 144 tokens (limit reached)
+      checks : stated page 392 → same page · section number stated True · 5-gram support physical 47 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Input parameters for teach-in blocks". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the section titled "Input parameters for teach-in blocks" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be provided without access to the manual. If you have the manual and can provide the relevant section or page number, I can help you interpret the information.
+      PHYSICAL → The section titled "Input parameters for teach-in blocks" is found in the "Teaching in a program" chapter, specifically on PDF page 392 (Section 14.4.1).
+
+The section describes the parameters that can be input when teaching in blocks during the teach-in mode. The parameters are categorized into:
+
+### Parameters of Axes for Teach-In
+- **X**: Axis position in the X direction
+- **Y**: Axis position in the Y direction
+- **Z**: Axis position in the Z direction
+- **I**: Coordinate of the circle intermediate points in the X direction
+- **J**: Coordinate of the circle intermediate points in the Y direction
+- **K**: Coordinate of
+
+  C09  PDF pages 416–461 · 17002 tokens · rows 17033 · file 558140493 B · SHA-256 03dd2d3b7a2a86b3244f01b0aad6eb014d56c4fe2d33b2d1d68666787fe4fee7
+      heading: Alarm, error, and system messages (PDF page 455, section 18.1)
+      readout: SSD+SHA 2184.568 ms · H2D 153.032 ms · wall 56.526 s · answer 144 tokens (limit reached)
+      checks : stated page 455–460 → range contains heading page · section number stated True · 5-gram support physical 22 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Alarm, error, and system messages". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the section titled "Alarm, error, and system messages" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be provided without access to the manual. If you have the manual and can provide the relevant section or page number, I can help you interpret the information.
+      PHYSICAL → The section "Alarm, error, and system messages" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) is found on PDF pages 455-460. The specific operating procedures, controls, and constraints described in this section are as follows:
+
+### 18.1 Alarm, Error, and System Messages
+
+#### 18.1.1 Displaying Alarms
+- **Purpose**: To display and acknowledge alarms.
+- **Procedure**:
+  1. Select the "Diagnostics" operating area.
+  2. Press the "Alarm list" softkey to open the "Alarms" window.
+
+  C10  PDF pages 462–486 · 11474 tokens · rows 11505 · file 376998989 B · SHA-256 ec653be652b7e73c64006da43bab2abbbd7ceb0dfcbaad32374b49ab88d4c0a4
+      heading: Setting remote access (PDF page 474, section 18.7.1)
+      readout: SSD+SHA 1471.023 ms · H2D 102.162 ms · wall 42.764 s · answer 144 tokens (limit reached)
+      checks : stated page 474 → same page · section number stated True · 5-gram support physical 33 % vs vanilla 0 %
+      Q: According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Setting remote access". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      VANILLA  → UNKNOWN
+
+The specific operating procedure, controls, or constraints for "Setting remote access" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be provided without access to the manual. If you can provide the relevant section or page number, I can help you with the details.
+      PHYSICAL → According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), the specific operating procedure, controls, or constraints described in the section titled "Setting remote access" are as follows (Section 18.7.1, PDF Page 474):
+
+1. **Select the "Diagnostics" operating area.**
+2. **Press the "Remote diag." softkey.** This opens the "Remote diagnostics (RCS)" window.
+3. **Press the "Change" softkey.** This activates the "Selected in the HMI" settings.
+4. **If you want to use remote control, select the "Permit
+      AFTER RELEASE → UNKNOWN
+
+The specific operating procedure, controls, or constraints for "Setting remote access" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be provided without access to the manual. If you can provide the relevant section or page number, I can help you with the details.  (identical to vanilla: True)
+
+SYNTHESIS  mode VANILLA_TEXT_ONLY_OVER_PRIOR_PHYSICAL_READOUTS · 480 tokens (limit reached) · citations {'C01': 1, 'C02': 1, 'C03': 1, 'C04': 1, 'C05': 1, 'C06': 1, 'C07': 0, 'C08': 0, 'C09': 0, 'C10': 0}
+  The ten readouts were generated one cartridge at a time; their texts were concatenated and given to the frozen model with NO cartridge attached.
+  ### Technical Synthesis of the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1)
+  
+  #### 1. Warranty and Liability for Application Examples (C01)
+  - **Section 2.2 (PDF Page 24)**: Application examples provided in the manual are not binding and do not claim to be comprehensive. They are intended to provide assistance but are not customer-specific solutions.
+  
+  #### 2. Sidescreen with Standard Windows (C02)
+  - **Section (PDF Page 74)**: The sidescreen, when activated, displays a navigation bar on the left-hand side of the user interface. This bar includes controls to switch to different operating areas, such as "Machine Operating Area" and "Tool List."
+  
+  #### 3. Monitoring Axis and Spindle Data (C03)
+  - **Section 5.6 (PDF Page 107)**: The "Working area limitation" function allows users to set up protection zones in the working area, restricting tool motion within specified ranges. This function helps in setting up safety zones.
+  
+  #### 4. Opening a DXF File (C04)
+  - **Section 7.17.2.1 (PDF Page 191)**: To open a DXF file, users must:
+    1. Select the "Program Manager" operating area.
+    2. Choose the desired storage location and position the cursor on the DXF file.
+    3. Press the "Open" softkey to display the CAD drawing.
+    4. Press the "Close" softkey to close the file.
+  
+  #### 5. Mold Making View (C05)
+  - **Section 7.18 (PDF Pages 202-210)**: The mold making view provides a fast overview of large mold making programs, allowing for quick checking and correction. This view might be hidden, and users should refer to the machine manufacturer's information.
+  
+  #### 6. Relocating a Tool (C06)
+  - **Section 12.8.2 (PDF Page 297)**: To relocate a tool:
+    1. Open the "Parameter" operating area.
+    2. Press the "Magazine" softkey to open the magazine list.
+    3. Position
+
+COSINE MAP  cosine of mean 64 evenly sampled H3 activations per cartridge · not causal or validated semantic linkage
+  C01 1.000 0.974 0.971 0.972 0.975 0.975 0.972 0.974 0.968 0.973
+  C02 0.974 1.000 0.985 0.986 0.986 0.987 0.990 0.989 0.983 0.985
+  C03 0.971 0.985 1.000 0.990 0.990 0.989 0.984 0.989 0.987 0.981
+  C04 0.972 0.986 0.990 1.000 0.990 0.990 0.987 0.991 0.987 0.983
+  C05 0.975 0.986 0.990 0.990 1.000 0.991 0.985 0.989 0.989 0.984
+  C06 0.975 0.987 0.989 0.990 0.991 1.000 0.987 0.990 0.990 0.987
+  C07 0.972 0.990 0.984 0.987 0.985 0.987 1.000 0.988 0.983 0.985
+  C08 0.974 0.989 0.989 0.991 0.989 0.990 0.988 1.000 0.988 0.985
+  C09 0.968 0.983 0.987 0.987 0.989 0.990 0.983 0.988 1.000 0.985
+  C10 0.973 0.985 0.981 0.983 0.984 0.987 0.985 0.985 0.985 1.000
+
+TEN-CARTRIDGE X-RAY (each cartridge mounted alone, measured read-only, released — never jointly in GPU memory)
+  C01 mounted 2026-10-18T19:37:58.494+00:00 · measured 2026-10-18T19:37:58.667+00:00 · released 2026-10-18T19:37:59.097+00:00 UTC · 17310 rows × 80 layers · mean ‖K‖ 22.831 · mean ‖V‖ 7.776
+  C02 mounted 2026-10-18T19:38:35.071+00:00 · measured 2026-10-18T19:38:35.203+00:00 · released 2026-10-18T19:38:35.633+00:00 UTC · 16904 rows × 80 layers · mean ‖K‖ 22.792 · mean ‖V‖ 7.763
+  C03 mounted 2026-10-18T19:39:11.974+00:00 · measured 2026-10-18T19:39:12.111+00:00 · released 2026-10-18T19:39:12.535+00:00 UTC · 17093 rows × 80 layers · mean ‖K‖ 22.777 · mean ‖V‖ 7.695
+  C04 mounted 2026-10-18T19:39:49.333+00:00 · measured 2026-10-18T19:39:49.471+00:00 · released 2026-10-18T19:39:49.907+00:00 UTC · 17185 rows × 80 layers · mean ‖K‖ 22.885 · mean ‖V‖ 7.714
+  C05 mounted 2026-10-18T19:40:25.959+00:00 · measured 2026-10-18T19:40:26.094+00:00 · released 2026-10-18T19:40:26.523+00:00 UTC · 16919 rows × 80 layers · mean ‖K‖ 22.783 · mean ‖V‖ 7.733
+  C06 mounted 2026-10-18T19:41:02.049+00:00 · measured 2026-10-18T19:41:02.191+00:00 · released 2026-10-18T19:41:02.619+00:00 UTC · 16756 rows × 80 layers · mean ‖K‖ 23.090 · mean ‖V‖ 7.721
+  C07 mounted 2026-10-18T19:41:38.954+00:00 · measured 2026-10-18T19:41:39.090+00:00 · released 2026-10-18T19:41:39.520+00:00 UTC · 17105 rows × 80 layers · mean ‖K‖ 22.857 · mean ‖V‖ 7.682
+  C08 mounted 2026-10-18T19:42:15.772+00:00 · measured 2026-10-18T19:42:15.908+00:00 · released 2026-10-18T19:42:16.342+00:00 UTC · 17071 rows × 80 layers · mean ‖K‖ 22.850 · mean ‖V‖ 7.695
+  C09 mounted 2026-10-18T19:42:52.575+00:00 · measured 2026-10-18T19:42:52.710+00:00 · released 2026-10-18T19:42:53.143+00:00 UTC · 17033 rows × 80 layers · mean ‖K‖ 22.925 · mean ‖V‖ 7.744
+  C10 mounted 2026-10-18T19:43:15.722+00:00 · measured 2026-10-18T19:43:15.812+00:00 · released 2026-10-18T19:43:16.256+00:00 UTC · 11505 rows × 80 layers · mean ‖K‖ 22.630 · mean ‖V‖ 7.811
+
+LIVE VERIFICATION  14/14 passed
+  PASS  ENGINE_STATUS_LIVE  COMPLETE_SEQUENTIAL_PHYSICAL_READOUT_AND_TEXT_SYNTHESIS
+  PASS  ENGINE_GATES_PASSED  {"709_GIT_BLOB_LOCK": true, "PDF_SHA256_LOCK": true, "PDF_486_PAGES": true, "PANEL_MIN_30": true, "ALL_PAGES_COVERED": true, "CUDA_A100_80GB": true, "MODEL_ARCH": true, "FROZEN": true}
+  PASS  ENGINE_SOURCE_LOCKS  718.py (this program) · 716.py and 709.py (engine PASS lines)
+  PASS  SOURCE_PDF_SHA256_AND_PAGES  486 pages · 88c0f8293ce33021…
+  PASS  TEN_CARTRIDGES_SHA256_ON_SSD  10/10
+  PASS  TEN_PHYSICAL_READOUTS  10/10 cartridges rebuilt to prefix + body rows and answered
+  PASS  TEN_VANILLA_CONTROLS  10/10
+  PASS  REMOVAL_CONTROL_RECORDED  3 cartridges (C01, C05, C10) asked again after release
+  PASS  SYNTHESIS_TEXT_MEDIATED  VANILLA_TEXT_ONLY_OVER_PRIOR_PHYSICAL_READOUTS
+  PASS  WEIGHT_SENTINEL_ENGINE  8fef3b41bbb3562601c1f43d
+  PASS  WEIGHT_SENTINEL_AFTER_ALL_STEPS  8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41
+  PASS  GPU_SAFETY_RESERVE_NOT_REDUCED  9.0 GiB
+  PASS  TEN_XRAYS_FROM_LIVE_KV  10/10 cartridges mounted alone, 80-layer K and V measured, released
+  PASS  COSINE_MAP_FROM_LIVE_H3  cosine of mean 64 evenly sampled H3 activations per cartridge
+
+QUESTIONS ASKED IN THE INTERFACE
+  [C01] According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Warranty and liability for application examples". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      → According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), the section titled "Warranty and liability for application examples" is found on PDF page 24. The specific operating procedure, controls, or constraints described in this section are as follows:
+
+**Section 2.2 Warranty and liability for application examples (PDF Page 24):**
+
+- **Application Examples are Not Binding and Not Comprehensive:**
+  - Application examples provided in the documentation are not binding and do not claim to be complete regarding configuration, equipment, or any eventuality that may arise.
+  - These examples do not represent customer-specific solutions but are intended to provide assistance
+  [vanilla] According to the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1), explain the specific operating procedure, controls, or constraints described in the section titled "Warranty and liability for application examples". Identify the section and PDF page if verifiable. Do not guess; if evidence is unavailable say UNKNOWN. Do not invent a citation.
+      → UNKNOWN
+
+The specific operating procedure, controls, or constraints described in the section titled "Warranty and liability for application examples" in the July 2025 Siemens SINUMERIK ONE Universal Operating Manual (V6.25 SP1) cannot be verified without access to the document. If you can provide the document or specific details from it, I can help you identify the relevant information.
+
+PREVIOUSLY DEMONSTRATED — MULTI-CARTRIDGE MEMORY CONSOLIDATION
+The physical consolidation of three independent memory cartridges into a single live 80-layer K/V memory has already been demonstrated on frozen Qwen2.5-72B-Instruct, including sequential cartridge mounting, exact SHA-256 integrity verification, and internal memory X-ray measurements.
+For the implementation, experimental evidence, and multi-cartridge question-answering observations, see: Research Record III — Qwen2.5-72B, Direct Internal-State Injection · Zenodo Record 23434686 · https://zenodo.org/records/23434686
+(Previously published research — not a result of this experiment.)
+
+RESEARCH LINEAGE
+  Research Record I — Qwen2.5-7B: https://doi.org/10.5281/zenodo.23381336
+  Research Record II — Mistral-7B, Silicon Hippocampus v1.4: https://doi.org/10.5281/zenodo.23418927
+  Research Record III — Qwen2.5-72B, Direct Internal-State Injection: https://doi.org/10.5281/zenodo.23434686
+  This experiment: unpublished — no DOI.
+
+HISTORICAL REFERENCE (earlier runs, not this session): 716.log blob 1b87e698a0420bb524bd93854709cef9e4069484, 717.log blob 2f6225db7346854e9cebded269b002293a93392d, 718.log blob 25c96ade2942727289530526b7fe15dd9beddc02
+
+SCOPE  Answers are raw model output and not verified technical truth; checks are automatic. Questions contain the section heading (not blind QA). Cartridges are read one at a time; the synthesis is text-mediated.
+Mustafa Akbaş · AkbasCore AI Teknoloji · AKBASCORE RESEARCH SOFTWARE LICENSE · Copyright © 2026 Mustafa Akbaş
