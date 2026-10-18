@@ -1,0 +1,106 @@
+ PASS TEST716_GIT_BLOB_LOCK
+PASS 709_GIT_BLOB_LOCK
+PASS PDF_SHA256_LOCK
+PASS PDF_486_PAGES
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 79.2kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 878kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 68.1MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 71.1MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 130MB/s]TOKEN_COUNTS [17279, 16873, 17062, 17154, 16888, 16725, 17074, 17040, 17002, 11474]
+PASS PANEL_MIN_30
+PANEL_READY {"heading_candidates": 525, "unique_cartridge_heading_candidates": 491, "selected": 60, "per_cartridge": {"1": 6, "2": 6, "3": 6, "4": 6, "5": 6, "6": 6, "7": 6, "8": 6, "9": 6, "10": 6}, "selection": "SHA256 sort, up to 6 unique headings per cartridge, before scoring"}
+PASS ALL_PAGES_COVERED
+PASS CUDA_A100_80GB
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.24MB/s]Download complete:   125GB,  347MB/s  Reconstruction complete: 100%  145GB /  145GB,  573MB/s  Fetching 37 files: 100% 37/37 [06:43<00:00, 10.15s/it]Loading weights: 100% 963/963 [06:23<00:00,  3.26it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.7kB/s]PASS MODEL_ARCH
+PASS FROZEN
+FORGE C01 TOKENS 17279
+FORGE_PROGRESS C01 256 / 17310 GPU {'free_gib': 39.073, 'allocated_gib': 38.479, 'peak_gib': 39.002, 'total_gib': 79.251}
+FORGE_PROGRESS C01 8192 / 17310 GPU {'free_gib': 36.839, 'allocated_gib': 40.902, 'peak_gib': 41.428, 'total_gib': 79.251}
+FORGE_PROGRESS C01 16384 / 17310 GPU {'free_gib': 30.432, 'allocated_gib': 43.401, 'peak_gib': 43.933, 'total_gib': 79.251}
+FORGE C02 TOKENS 16873
+FORGE_PROGRESS C02 256 / 16904 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C02 8192 / 16904 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C02 16384 / 16904 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C03 TOKENS 17062
+FORGE_PROGRESS C03 256 / 17093 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C03 8192 / 17093 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C03 16384 / 17093 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C04 TOKENS 17154
+FORGE_PROGRESS C04 256 / 17185 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C04 8192 / 17185 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C04 16384 / 17185 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C05 TOKENS 16888
+FORGE_PROGRESS C05 256 / 16919 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C05 8192 / 16919 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C05 16384 / 16919 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C06 TOKENS 16725
+FORGE_PROGRESS C06 256 / 16756 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C06 8192 / 16756 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C06 16384 / 16756 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C07 TOKENS 17074
+FORGE_PROGRESS C07 256 / 17105 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C07 8192 / 17105 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C07 16384 / 17105 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C08 TOKENS 17040
+FORGE_PROGRESS C08 256 / 17071 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C08 8192 / 17071 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C08 16384 / 17071 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C09 TOKENS 17002
+FORGE_PROGRESS C09 256 / 17033 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C09 8192 / 17033 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C09 16384 / 17033 GPU {'free_gib': 30.968, 'allocated_gib': 43.401, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE C10 TOKENS 11474
+FORGE_PROGRESS C10 256 / 11505 GPU {'free_gib': 39.38, 'allocated_gib': 38.479, 'peak_gib': 44.236, 'total_gib': 79.251}
+FORGE_PROGRESS C10 8192 / 11505 GPU {'free_gib': 36.848, 'allocated_gib': 40.901, 'peak_gib': 44.236, 'total_gib': 79.251}
+XRAY_PROGRESS C01 256 / 17310
+XRAY_PROGRESS C01 8192 / 17310
+XRAY_PROGRESS C01 16384 / 17310
+XRAY_SAVED C01 83888517
+XRAY_PROGRESS C02 256 / 16904
+XRAY_PROGRESS C02 8192 / 16904
+XRAY_PROGRESS C02 16384 / 16904
+XRAY_SAVED C02 83888517
+XRAY_PROGRESS C03 256 / 17093
+XRAY_PROGRESS C03 8192 / 17093
+XRAY_PROGRESS C03 16384 / 17093
+XRAY_SAVED C03 83888517
+XRAY_PROGRESS C04 256 / 17185
+XRAY_PROGRESS C04 8192 / 17185
+XRAY_PROGRESS C04 16384 / 17185
+XRAY_SAVED C04 83888517
+XRAY_PROGRESS C05 256 / 16919
+XRAY_PROGRESS C05 8192 / 16919
+XRAY_PROGRESS C05 16384 / 16919
+XRAY_SAVED C05 83888517
+XRAY_PROGRESS C06 256 / 16756
+XRAY_PROGRESS C06 8192 / 16756
+XRAY_PROGRESS C06 16384 / 16756
+XRAY_SAVED C06 83888517
+XRAY_PROGRESS C07 256 / 17105
+XRAY_PROGRESS C07 8192 / 17105
+XRAY_PROGRESS C07 16384 / 17105
+XRAY_SAVED C07 83888517
+XRAY_PROGRESS C08 256 / 17071
+XRAY_PROGRESS C08 8192 / 17071
+XRAY_PROGRESS C08 16384 / 17071
+XRAY_SAVED C08 83888517
+XRAY_PROGRESS C09 256 / 17033
+XRAY_PROGRESS C09 8192 / 17033
+XRAY_PROGRESS C09 16384 / 17033
+XRAY_SAVED C09 83888517
+XRAY_PROGRESS C10 256 / 11505
+XRAY_PROGRESS C10 8192 / 11505
+XRAY_SAVED C10 83888517
+XRAY_BANK_READY 10 layers 80 samples 64
+XRAY_QUERY_PROGRESS 1 / 120
+XRAY_QUERY_PROGRESS 11 / 120
+XRAY_QUERY_PROGRESS 21 / 120
+XRAY_QUERY_PROGRESS 31 / 120
+XRAY_QUERY_PROGRESS 41 / 120
+XRAY_QUERY_PROGRESS 51 / 120
+XRAY_QUERY_PROGRESS 61 / 120
+XRAY_QUERY_PROGRESS 71 / 120
+XRAY_QUERY_PROGRESS 81 / 120
+XRAY_QUERY_PROGRESS 91 / 120
+XRAY_QUERY_PROGRESS 101 / 120
+XRAY_QUERY_PROGRESS 111 / 120
+PASS WEIGHTS_UNCHANGED
+TEST717_RESULT {"selected_layer": 27, "cut3": {"calibration": {"r1": 15, "r5": 36, "n": 60, "mrr": 0.409577}, "holdout": {"r1": 17, "r5": 42, "n": 60, "mrr": 0.460794}}, "selected": {"calibration": {"r1": 18, "r5": 38, "n": 60, "mrr": 0.464339}, "holdout": {"r1": 17, "r5": 40, "n": 60, "mrr": 0.454034}}, "status": "COMPLETE_XRAY_HELDOUT"}
