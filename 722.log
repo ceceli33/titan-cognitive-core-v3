@@ -1,0 +1,464 @@
+ ==============================================================================================================
+AKBASCORE PROMETHEUS — TEST722 — HARD NEGATIVES / VERSION COLLISIONS / OPEN-SET
+==============================================================================================================
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS RESERVE 
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 73.4kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 844kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 66.4MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 64.0MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 125MB/s]LOAD_FROZEN_72B_NF4
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.07MB/s]Download complete:   125GB, 1.39GB/s  Reconstruction complete: 100%  145GB /  145GB,  419MB/s  Fetching 37 files: 100% 37/37 [06:44<00:00,  8.86s/it]Loading weights: 100% 963/963 [06:30<00:00,  3.22it/s]generation_config.json: 100% 242/242 [00:00<00:00, 28.8kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+MODEL_READY {'free_gib': 39.673, 'allocated_gib': 38.379, 'peak_gib': 38.786, 'total_gib': 79.251}
+FORGE_NATIVE C01_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C01_R1 770a06f1a156ec032b62db26efb5b61d7dfe6a1fd34d723b6c7816a3899cf39f forge_s 2.028
+FORGE_NATIVE C01_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C01_R2 4fd687af4bf75d8df3f7ecd005d044b2ef0c049d90ac758b99289fc7e6128d88 forge_s 0.665
+FORGE_NATIVE C01_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C01_R3 e64f01d57c63aedc2dd7a65b93db911573bcf5a6acd3b456fddc0366706b7b24 forge_s 0.657
+FORGE_NATIVE C02_R1 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C02_R1 a9642a3e02ef9b612d549b5000872f7cd9564b21a13e7d70198800b01d762d9d forge_s 0.661
+FORGE_NATIVE C02_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C02_R2 3ab609e8e7cd3c77557852e03e2c260d342fc438f51df47e67988f2c67d483ec forge_s 0.668
+FORGE_NATIVE C02_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C02_R3 610b17434684ae325f800880e76f75267ffa5658b89350c02781cce43f458e7c forge_s 0.672
+FORGE_NATIVE C03_R1 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C03_R1 b3881a80374188f77b8b8a82da2cfeed5b838e2fa532c0b8695fc04c7f3bd8ed forge_s 0.659
+FORGE_NATIVE C03_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C03_R2 f3903533945894787ef2b8a9299e501b1040a667f43c5a19d5aa2a97826638e7 forge_s 0.654
+FORGE_NATIVE C03_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C03_R3 a607cbb7e5d252bb5f48563f5a5fe2960bbed170b740363e7bd935a35b8bd0c7 forge_s 0.663
+FORGE_NATIVE C04_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C04_R1 264395db92fa16308411b2165b680ea87f3f95aafed248573da3c4905712bf98 forge_s 0.666
+FORGE_NATIVE C04_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C04_R2 5593382c75debabdfa19b7e890f1829d07de318a3c239aaac9efdacd36908d17 forge_s 0.657
+FORGE_NATIVE C04_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C04_R3 7673361bff89d9364ec5510a1269a9657d8b0c56fa409c90245bf99f69101400 forge_s 0.665
+FORGE_NATIVE C05_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C05_R1 9e651a6723218675b2f032b67a0032ea08c85b50b3e883b959e53b0b01ab83fe forge_s 0.656
+FORGE_NATIVE C05_R2 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C05_R2 bc12f6c4693ef3bece79260265cc3901f412074a49ffae0a23d20f8b77371ef2 forge_s 0.66
+FORGE_NATIVE C05_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C05_R3 7d1c242e9d9cad94d2848761bc2bbedc0f73dc5836cf939ba4943d2012f62bce forge_s 0.658
+FORGE_NATIVE C06_R1 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C06_R1 9830815ace1914d1408516a6026b260e1901542b98adeddf6ec14eeee36eefe4 forge_s 0.663
+FORGE_NATIVE C06_R2 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C06_R2 82e72874c5eb93908e1d3ebf7b89faa45b863d2a2364ee50ec856db5b22bd229 forge_s 0.66
+FORGE_NATIVE C06_R3 body_tokens 60
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C06_R3 4132943e16a1b1263645a731d0181c2021612001449b0e73fb076a65669372f3 forge_s 0.672
+FORGE_NATIVE C07_R1 body_tokens 57
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C07_R1 16174ffcdfe069c9cdf3edeb3a925d28f56859f185028c049ea33b1e9c012589 forge_s 0.658
+FORGE_NATIVE C07_R2 body_tokens 57
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C07_R2 f8d8803d534825a1491118763a2de7ef31bcd868053dbfaf96e9f507d69b9993 forge_s 0.646
+FORGE_NATIVE C07_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C07_R3 ec66ac0025007c8e08f2110800b7bf39bce01e56da7ae3ef40a1dc1862ba2af4 forge_s 0.676
+FORGE_NATIVE C08_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C08_R1 d4b988b33b6ea1631503f24c70684f9a19e867fd2dd3d0624a53da7869a726fa forge_s 0.665
+FORGE_NATIVE C08_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C08_R2 ded02682e0ac8e7d61e0a9c2c9449a06c9378dd548871528e19e035ad94e8643 forge_s 0.657
+FORGE_NATIVE C08_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C08_R3 3db2182ba07096f261fe2668a05af4e10639626ccd1c653e51551637ff19285c forge_s 0.659
+FORGE_NATIVE C09_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C09_R1 74fc0a44616fd1db53b5ca371c5e1d684629bb57aa5ac1635ce033719437e546 forge_s 0.663
+FORGE_NATIVE C09_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C09_R2 2ea029b4ebd30abfafd25498254f080cb48f978b19dab6e82d8a4e9fa16fba67 forge_s 0.667
+FORGE_NATIVE C09_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C09_R3 6e9895da3d98e0ca0487a89719cd05da17a91b620086a3ec4a3d4f8360e18064 forge_s 0.662
+FORGE_NATIVE C10_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C10_R1 b776d8888b869585c77c38d7fdf9d6320079f261822b05ac111024a498c7da73 forge_s 0.657
+FORGE_NATIVE C10_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C10_R2 56adb70e67b74b646a741925bfc52d48ed2e1a3e2be15a9e68d6e7122270a8a5 forge_s 0.674
+FORGE_NATIVE C10_R3 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C10_R3 d38f57dbd18b64a58b5b8f2a5a0edce64411c501043657991cf0b1cabcdb11d1 forge_s 0.661
+PASS CARTRIDGES_30 
+PASS UNIQUE_CARTRIDGES 
+PASS MANIFEST_REOPEN 
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+PASS BANK_DISK_EXACT_C01_R1 
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS BANK_DISK_EXACT_C01_R2 
+PASS FILE_SHA_C01_R3 
+PASS CARTRIDGE_ID_C01_R3 
+PASS CARTRIDGE_SHA_C01_R3 
+PASS BANK_DISK_EXACT_C01_R3 
+PASS FILE_SHA_C02_R1 
+PASS CARTRIDGE_ID_C02_R1 
+PASS CARTRIDGE_SHA_C02_R1 
+PASS BANK_DISK_EXACT_C02_R1 
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS BANK_DISK_EXACT_C02_R2 
+PASS FILE_SHA_C02_R3 
+PASS CARTRIDGE_ID_C02_R3 
+PASS CARTRIDGE_SHA_C02_R3 
+PASS BANK_DISK_EXACT_C02_R3 
+PASS FILE_SHA_C03_R1 
+PASS CARTRIDGE_ID_C03_R1 
+PASS CARTRIDGE_SHA_C03_R1 
+PASS BANK_DISK_EXACT_C03_R1 
+PASS FILE_SHA_C03_R2 
+PASS CARTRIDGE_ID_C03_R2 
+PASS CARTRIDGE_SHA_C03_R2 
+PASS BANK_DISK_EXACT_C03_R2 
+PASS FILE_SHA_C03_R3 
+PASS CARTRIDGE_ID_C03_R3 
+PASS CARTRIDGE_SHA_C03_R3 
+PASS BANK_DISK_EXACT_C03_R3 
+PASS FILE_SHA_C04_R1 
+PASS CARTRIDGE_ID_C04_R1 
+PASS CARTRIDGE_SHA_C04_R1 
+PASS BANK_DISK_EXACT_C04_R1 
+PASS FILE_SHA_C04_R2 
+PASS CARTRIDGE_ID_C04_R2 
+PASS CARTRIDGE_SHA_C04_R2 
+PASS BANK_DISK_EXACT_C04_R2 
+PASS FILE_SHA_C04_R3 
+PASS CARTRIDGE_ID_C04_R3 
+PASS CARTRIDGE_SHA_C04_R3 
+PASS BANK_DISK_EXACT_C04_R3 
+PASS FILE_SHA_C05_R1 
+PASS CARTRIDGE_ID_C05_R1 
+PASS CARTRIDGE_SHA_C05_R1 
+PASS BANK_DISK_EXACT_C05_R1 
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS BANK_DISK_EXACT_C05_R2 
+PASS FILE_SHA_C05_R3 
+PASS CARTRIDGE_ID_C05_R3 
+PASS CARTRIDGE_SHA_C05_R3 
+PASS BANK_DISK_EXACT_C05_R3 
+PASS FILE_SHA_C06_R1 
+PASS CARTRIDGE_ID_C06_R1 
+PASS CARTRIDGE_SHA_C06_R1 
+PASS BANK_DISK_EXACT_C06_R1 
+PASS FILE_SHA_C06_R2 
+PASS CARTRIDGE_ID_C06_R2 
+PASS CARTRIDGE_SHA_C06_R2 
+PASS BANK_DISK_EXACT_C06_R2 
+PASS FILE_SHA_C06_R3 
+PASS CARTRIDGE_ID_C06_R3 
+PASS CARTRIDGE_SHA_C06_R3 
+PASS BANK_DISK_EXACT_C06_R3 
+PASS FILE_SHA_C07_R1 
+PASS CARTRIDGE_ID_C07_R1 
+PASS CARTRIDGE_SHA_C07_R1 
+PASS BANK_DISK_EXACT_C07_R1 
+PASS FILE_SHA_C07_R2 
+PASS CARTRIDGE_ID_C07_R2 
+PASS CARTRIDGE_SHA_C07_R2 
+PASS BANK_DISK_EXACT_C07_R2 
+PASS FILE_SHA_C07_R3 
+PASS CARTRIDGE_ID_C07_R3 
+PASS CARTRIDGE_SHA_C07_R3 
+PASS BANK_DISK_EXACT_C07_R3 
+PASS FILE_SHA_C08_R1 
+PASS CARTRIDGE_ID_C08_R1 
+PASS CARTRIDGE_SHA_C08_R1 
+PASS BANK_DISK_EXACT_C08_R1 
+PASS FILE_SHA_C08_R2 
+PASS CARTRIDGE_ID_C08_R2 
+PASS CARTRIDGE_SHA_C08_R2 
+PASS BANK_DISK_EXACT_C08_R2 
+PASS FILE_SHA_C08_R3 
+PASS CARTRIDGE_ID_C08_R3 
+PASS CARTRIDGE_SHA_C08_R3 
+PASS BANK_DISK_EXACT_C08_R3 
+PASS FILE_SHA_C09_R1 
+PASS CARTRIDGE_ID_C09_R1 
+PASS CARTRIDGE_SHA_C09_R1 
+PASS BANK_DISK_EXACT_C09_R1 
+PASS FILE_SHA_C09_R2 
+PASS CARTRIDGE_ID_C09_R2 
+PASS CARTRIDGE_SHA_C09_R2 
+PASS BANK_DISK_EXACT_C09_R2 
+PASS FILE_SHA_C09_R3 
+PASS CARTRIDGE_ID_C09_R3 
+PASS CARTRIDGE_SHA_C09_R3 
+PASS BANK_DISK_EXACT_C09_R3 
+PASS FILE_SHA_C10_R1 
+PASS CARTRIDGE_ID_C10_R1 
+PASS CARTRIDGE_SHA_C10_R1 
+PASS BANK_DISK_EXACT_C10_R1 
+PASS FILE_SHA_C10_R2 
+PASS CARTRIDGE_ID_C10_R2 
+PASS CARTRIDGE_SHA_C10_R2 
+PASS BANK_DISK_EXACT_C10_R2 
+PASS FILE_SHA_C10_R3 
+PASS CARTRIDGE_ID_C10_R3 
+PASS CARTRIDGE_SHA_C10_R3 
+PASS BANK_DISK_EXACT_C10_R3 
+ROUTE {"id": "C01_R1", "question": "Where is the AX-731 coolant regulator, revision R1, stored?", "selected": "C01_R1", "top5": ["C01_R1", "C01_R2", "C01_R3", "C02_R1", "C07_R1"], "gold": "C01_R1", "hit1": true, "hit5": true, "top1_score": 0.75708491, "margin": 0.00075215, "gold_score": 0.75708491}
+ROUTE {"id": "C01_R2", "question": "Where is the AX-731 coolant regulator, revision R2, stored?", "selected": "C01_R2", "top5": ["C01_R2", "C01_R3", "C01_R1", "C02_R2", "C07_R2"], "gold": "C01_R2", "hit1": true, "hit5": true, "top1_score": 0.75934392, "margin": 0.00519872, "gold_score": 0.75934392}
+ROUTE {"id": "C01_R3", "question": "Where is the AX-731 coolant regulator, revision R3, stored?", "selected": "C01_R3", "top5": ["C01_R3", "C01_R2", "C01_R1", "C02_R3", "C02_R2"], "gold": "C01_R3", "hit1": true, "hit5": true, "top1_score": 0.75753379, "margin": 0.00120813, "gold_score": 0.75753379}
+ROUTE {"id": "C02_R1", "question": "Where is the BT-962 torque controller, revision R1, stored?", "selected": "C02_R1", "top5": ["C02_R1", "C02_R2", "C02_R3", "C10_R1", "C10_R2"], "gold": "C02_R1", "hit1": true, "hit5": true, "top1_score": 0.75681341, "margin": 0.0015924, "gold_score": 0.75681341}
+ROUTE {"id": "C02_R2", "question": "Where is the BT-962 torque controller, revision R2, stored?", "selected": "C02_R2", "top5": ["C02_R2", "C02_R1", "C02_R3", "C10_R2", "C10_R1"], "gold": "C02_R2", "hit1": true, "hit5": true, "top1_score": 0.75823683, "margin": 0.00467807, "gold_score": 0.75823683}
+ROUTE {"id": "C02_R3", "question": "Where is the BT-962 torque controller, revision R3, stored?", "selected": "C02_R3", "top5": ["C02_R3", "C02_R2", "C02_R1", "C10_R3", "C10_R2"], "gold": "C02_R3", "hit1": true, "hit5": true, "top1_score": 0.75678849, "margin": 0.00159812, "gold_score": 0.75678849}
+ROUTE {"id": "C03_R1", "question": "Where is the DN-348 servo monitor, revision R1, stored?", "selected": "C03_R1", "top5": ["C03_R1", "C03_R2", "C03_R3", "C07_R1", "C05_R1"], "gold": "C03_R1", "hit1": true, "hit5": true, "top1_score": 0.75951976, "margin": 0.00316584, "gold_score": 0.75951976}
+ROUTE {"id": "C03_R2", "question": "Where is the DN-348 servo monitor, revision R2, stored?", "selected": "C03_R2", "top5": ["C03_R2", "C03_R1", "C03_R3", "C05_R2", "C07_R2"], "gold": "C03_R2", "hit1": true, "hit5": true, "top1_score": 0.75952715, "margin": 0.0032711, "gold_score": 0.75952715}
+ROUTE {"id": "C03_R3", "question": "Where is the DN-348 servo monitor, revision R3, stored?", "selected": "C03_R3", "top5": ["C03_R3", "C03_R2", "C03_R1", "C07_R3", "C10_R3"], "gold": "C03_R3", "hit1": true, "hit5": true, "top1_score": 0.75898117, "margin": 0.00271791, "gold_score": 0.75898117}
+ROUTE {"id": "C04_R1", "question": "Where is the EV-415 pressure sensor, revision R1, stored?", "selected": "C04_R1", "top5": ["C04_R1", "C04_R2", "C04_R3", "C03_R1", "C07_R1"], "gold": "C04_R1", "hit1": true, "hit5": true, "top1_score": 0.75357056, "margin": 0.00103289, "gold_score": 0.75357056}
+ROUTE {"id": "C04_R2", "question": "Where is the EV-415 pressure sensor, revision R2, stored?", "selected": "C04_R2", "top5": ["C04_R2", "C04_R3", "C04_R1", "C06_R2", "C07_R2"], "gold": "C04_R2", "hit1": true, "hit5": true, "top1_score": 0.75591749, "margin": 0.00508052, "gold_score": 0.75591749}
+ROUTE {"id": "C04_R3", "question": "Where is the EV-415 pressure sensor, revision R3, stored?", "selected": "C04_R3", "top5": ["C04_R3", "C04_R2", "C04_R1", "C03_R3", "C07_R3"], "gold": "C04_R3", "hit1": true, "hit5": true, "top1_score": 0.75399727, "margin": 0.00135589, "gold_score": 0.75399727}
+ROUTE {"id": "C05_R1", "question": "Where is the FK-276 spindle driver, revision R1, stored?", "selected": "C05_R1", "top5": ["C05_R1", "C05_R2", "C05_R3", "C03_R1", "C08_R1"], "gold": "C05_R1", "hit1": true, "hit5": true, "top1_score": 0.75950098, "margin": 0.00177234, "gold_score": 0.75950098}
+ROUTE {"id": "C05_R2", "question": "Where is the FK-276 spindle driver, revision R2, stored?", "selected": "C05_R2", "top5": ["C05_R2", "C05_R1", "C05_R3", "C03_R2", "C07_R2"], "gold": "C05_R2", "hit1": true, "hit5": true, "top1_score": 0.76046109, "margin": 0.00443769, "gold_score": 0.76046109}
+ROUTE {"id": "C05_R3", "question": "Where is the FK-276 spindle driver, revision R3, stored?", "selected": "C05_R3", "top5": ["C05_R3", "C05_R2", "C05_R1", "C03_R3", "C08_R3"], "gold": "C05_R3", "hit1": true, "hit5": true, "top1_score": 0.75928479, "margin": 0.00189632, "gold_score": 0.75928479}
+ROUTE {"id": "C06_R1", "question": "Where is the GL-583 motor coupler, revision R1, stored?", "selected": "C06_R1", "top5": ["C06_R1", "C06_R2", "C06_R3", "C07_R1", "C10_R1"], "gold": "C06_R1", "hit1": true, "hit5": true, "top1_score": 0.7589227, "margin": 0.00086445, "gold_score": 0.7589227}
+ROUTE {"id": "C06_R2", "question": "Where is the GL-583 motor coupler, revision R2, stored?", "selected": "C06_R2", "top5": ["C06_R2", "C06_R3", "C06_R1", "C07_R2", "C10_R2"], "gold": "C06_R2", "hit1": true, "hit5": true, "top1_score": 0.76098847, "margin": 0.00447035, "gold_score": 0.76098847}
+ROUTE {"id": "C06_R3", "question": "Where is the GL-583 motor coupler, revision R3, stored?", "selected": "C06_R3", "top5": ["C06_R3", "C06_R2", "C06_R1", "C07_R3", "C10_R3"], "gold": "C06_R3", "hit1": true, "hit5": true, "top1_score": 0.75964862, "margin": 0.00155085, "gold_score": 0.75964862}
+ROUTE {"id": "C07_R1", "question": "Where is the HM-824 encoder, revision R1, stored?", "selected": "C07_R1", "top5": ["C07_R1", "C07_R2", "C07_R3", "C10_R1", "C02_R1"], "gold": "C07_R1", "hit1": true, "hit5": true, "top1_score": 0.75962353, "margin": 0.0020566, "gold_score": 0.75962353}
+ROUTE {"id": "C07_R2", "question": "Where is the HM-824 encoder, revision R2, stored?", "selected": "C07_R2", "top5": ["C07_R2", "C07_R1", "C07_R3", "C10_R2", "C02_R2"], "gold": "C07_R2", "hit1": true, "hit5": true, "top1_score": 0.76095462, "margin": 0.00454849, "gold_score": 0.76095462}
+ROUTE {"id": "C07_R3", "question": "Where is the HM-824 encoder, revision R3, stored?", "selected": "C07_R3", "top5": ["C07_R3", "C07_R2", "C07_R1", "C10_R3", "C02_R3"], "gold": "C07_R3", "hit1": true, "hit5": true, "top1_score": 0.75957137, "margin": 0.00198489, "gold_score": 0.75957137}
+ROUTE {"id": "C08_R1", "question": "Where is the JP-139 feed controller, revision R1, stored?", "selected": "C08_R1", "top5": ["C08_R1", "C08_R2", "C08_R3", "C07_R1", "C02_R1"], "gold": "C08_R1", "hit1": true, "hit5": true, "top1_score": 0.75574613, "margin": 0.00286692, "gold_score": 0.75574613}
+ROUTE {"id": "C08_R2", "question": "Where is the JP-139 feed controller, revision R2, stored?", "selected": "C08_R2", "top5": ["C08_R2", "C08_R1", "C08_R3", "C05_R2", "C07_R2"], "gold": "C08_R2", "hit1": true, "hit5": true, "top1_score": 0.7558322, "margin": 0.00364041, "gold_score": 0.7558322}
+ROUTE {"id": "C08_R3", "question": "Where is the JP-139 feed controller, revision R3, stored?", "selected": "C08_R3", "top5": ["C08_R3", "C08_R2", "C08_R1", "C05_R3", "C07_R3"], "gold": "C08_R3", "hit1": true, "hit5": true, "top1_score": 0.75534707, "margin": 0.00268805, "gold_score": 0.75534707}
+ROUTE {"id": "C09_R1", "question": "Where is the KR-657 relay module, revision R1, stored?", "selected": "C09_R1", "top5": ["C09_R1", "C09_R2", "C09_R3", "C10_R1", "C03_R1"], "gold": "C09_R1", "hit1": true, "hit5": true, "top1_score": 0.75761116, "margin": 0.00230825, "gold_score": 0.75761116}
+ROUTE {"id": "C09_R2", "question": "Where is the KR-657 relay module, revision R2, stored?", "selected": "C09_R2", "top5": ["C09_R2", "C09_R1", "C09_R3", "C06_R2", "C07_R2"], "gold": "C09_R2", "hit1": true, "hit5": true, "top1_score": 0.75828272, "margin": 0.00404209, "gold_score": 0.75828272}
+ROUTE {"id": "C09_R3", "question": "Where is the KR-657 relay module, revision R3, stored?", "selected": "C09_R3", "top5": ["C09_R3", "C09_R2", "C09_R1", "C10_R3", "C06_R3"], "gold": "C09_R3", "hit1": true, "hit5": true, "top1_score": 0.75763571, "margin": 0.00226945, "gold_score": 0.75763571}
+ROUTE {"id": "C10_R1", "question": "Where is the LS-902 axis converter, revision R1, stored?", "selected": "C10_R1", "top5": ["C10_R1", "C10_R2", "C10_R3", "C02_R1", "C02_R2"], "gold": "C10_R1", "hit1": true, "hit5": true, "top1_score": 0.75865281, "margin": 0.00276697, "gold_score": 0.75865281}
+ROUTE {"id": "C10_R2", "question": "Where is the LS-902 axis converter, revision R2, stored?", "selected": "C10_R2", "top5": ["C10_R2", "C10_R3", "C10_R1", "C02_R2", "C07_R2"], "gold": "C10_R2", "hit1": true, "hit5": true, "top1_score": 0.75886273, "margin": 0.00349897, "gold_score": 0.75886273}
+ROUTE {"id": "C10_R3", "question": "Where is the LS-902 axis converter, revision R3, stored?", "selected": "C10_R3", "top5": ["C10_R3", "C10_R2", "C10_R1", "C02_R3", "C02_R2"], "gold": "C10_R3", "hit1": true, "hit5": true, "top1_score": 0.75861239, "margin": 0.00296223, "gold_score": 0.75861239}
+ROUTING_SUMMARY {'r1': 30, 'r5': 30, 'n': 30}
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C01_R1", "selected": "C01_R1", "expected": "north archive", "raw": "The AX-731 coolant regulator, revision R1, is stored in the north archive.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C01_R2", "selected": "C01_R2", "expected": "south annex", "raw": "The AX-731 coolant regulator, revision R2, is stored in the south annex.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C01_R3 
+PASS CARTRIDGE_ID_C01_R3 
+PASS CARTRIDGE_SHA_C01_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C01_R3", "selected": "C01_R3", "expected": "copper vault", "raw": "The AX-731 coolant regulator, revision R3, is stored in the copper vault.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C02_R1 
+PASS CARTRIDGE_ID_C02_R1 
+PASS CARTRIDGE_SHA_C02_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C02_R1", "selected": "C02_R1", "expected": "slate pavilion", "raw": "The BT-962 torque controller, revision R1, is stored in the slate pavilion.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C02_R2", "selected": "C02_R2", "expected": "glass depot", "raw": "The BT-962 torque controller, revision R2, is stored in the glass depot.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C02_R3 
+PASS CARTRIDGE_ID_C02_R3 
+PASS CARTRIDGE_SHA_C02_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C02_R3", "selected": "C02_R3", "expected": "amber bay", "raw": "The BT-962 torque controller, revision R3, is stored in amber bay.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C03_R1 
+PASS CARTRIDGE_ID_C03_R1 
+PASS CARTRIDGE_SHA_C03_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C03_R1", "selected": "C03_R1", "expected": "willow chamber", "raw": "The DN-348 servo monitor, revision R1, is stored in the willow chamber.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C03_R2 
+PASS CARTRIDGE_ID_C03_R2 
+PASS CARTRIDGE_SHA_C03_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C03_R2", "selected": "C03_R2", "expected": "cedar room", "raw": "The DN-348 servo monitor, revision R2, is stored in the cedar room.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C03_R3 
+PASS CARTRIDGE_ID_C03_R3 
+PASS CARTRIDGE_SHA_C03_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C03_R3", "selected": "C03_R3", "expected": "granite station", "raw": "The DN-348 servo monitor, revision R3, is stored at the granite station.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C04_R1 
+PASS CARTRIDGE_ID_C04_R1 
+PASS CARTRIDGE_SHA_C04_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C04_R1", "selected": "C04_R1", "expected": "amber vault", "raw": "The EV-415 pressure sensor, revision R1, is stored in the amber vault.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C04_R2 
+PASS CARTRIDGE_ID_C04_R2 
+PASS CARTRIDGE_SHA_C04_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C04_R2", "selected": "C04_R2", "expected": "river gallery", "raw": "The EV-415 pressure sensor, revision R2, is stored in the river gallery.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C04_R3 
+PASS CARTRIDGE_ID_C04_R3 
+PASS CARTRIDGE_SHA_C04_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C04_R3", "selected": "C04_R3", "expected": "moss annex", "raw": "The EV-415 pressure sensor, revision R3, is stored in the moss annex.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C05_R1 
+PASS CARTRIDGE_ID_C05_R1 
+PASS CARTRIDGE_SHA_C05_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C05_R1", "selected": "C05_R1", "expected": "copper annex", "raw": "The FK-276 spindle driver, revision R1, is stored in the copper annex.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C05_R2", "selected": "C05_R2", "expected": "silver hangar", "raw": "The FK-276 spindle driver, revision R2, is stored in the silver hangar.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C05_R3 
+PASS CARTRIDGE_ID_C05_R3 
+PASS CARTRIDGE_SHA_C05_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C05_R3", "selected": "C05_R3", "expected": "quartz store", "raw": "The FK-276 spindle driver, revision R3, is stored in the quartz store.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C06_R1 
+PASS CARTRIDGE_ID_C06_R1 
+PASS CARTRIDGE_SHA_C06_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C06_R1", "selected": "C06_R1", "expected": "river gallery", "raw": "The GL-583 motor coupler, revision R1, is stored in the river gallery.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C06_R2 
+PASS CARTRIDGE_ID_C06_R2 
+PASS CARTRIDGE_SHA_C06_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C06_R2", "selected": "C06_R2", "expected": "north bunker", "raw": "The GL-583 motor coupler, revision R2, is stored in the north bunker.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C06_R3 
+PASS CARTRIDGE_ID_C06_R3 
+PASS CARTRIDGE_SHA_C06_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C06_R3", "selected": "C06_R3", "expected": "blue pavilion", "raw": "The GL-583 motor coupler, revision R3, is stored in the blue pavilion.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C07_R1 
+PASS CARTRIDGE_ID_C07_R1 
+PASS CARTRIDGE_SHA_C07_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C07_R1", "selected": "C07_R1", "expected": "quartz station", "raw": "The HM-824 encoder, revision R1, is stored at the quartz station.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C07_R2 
+PASS CARTRIDGE_ID_C07_R2 
+PASS CARTRIDGE_SHA_C07_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C07_R2", "selected": "C07_R2", "expected": "slate room", "raw": "The HM-824 encoder, revision R2, is stored in the slate room.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C07_R3 
+PASS CARTRIDGE_ID_C07_R3 
+PASS CARTRIDGE_SHA_C07_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C07_R3", "selected": "C07_R3", "expected": "willow depot", "raw": "The HM-824 encoder, revision R3, is stored at the willow depot.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C08_R1 
+PASS CARTRIDGE_ID_C08_R1 
+PASS CARTRIDGE_SHA_C08_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C08_R1", "selected": "C08_R1", "expected": "cedar bay", "raw": "The JP-139 feed controller, revision R1, is stored in cedar bay.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C08_R2 
+PASS CARTRIDGE_ID_C08_R2 
+PASS CARTRIDGE_SHA_C08_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C08_R2", "selected": "C08_R2", "expected": "copper tower", "raw": "The JP-139 feed controller, revision R2, is stored in the copper tower.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C08_R3 
+PASS CARTRIDGE_ID_C08_R3 
+PASS CARTRIDGE_SHA_C08_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C08_R3", "selected": "C08_R3", "expected": "amber warehouse", "raw": "The JP-139 feed controller, revision R3, is stored in the amber warehouse.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C09_R1 
+PASS CARTRIDGE_ID_C09_R1 
+PASS CARTRIDGE_SHA_C09_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C09_R1", "selected": "C09_R1", "expected": "silver depot", "raw": "The KR-657 relay module, revision R1, is stored in the silver depot.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C09_R2 
+PASS CARTRIDGE_ID_C09_R2 
+PASS CARTRIDGE_SHA_C09_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C09_R2", "selected": "C09_R2", "expected": "moss gallery", "raw": "The KR-657 relay module, revision R2, is stored in the moss gallery.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C09_R3 
+PASS CARTRIDGE_ID_C09_R3 
+PASS CARTRIDGE_SHA_C09_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C09_R3", "selected": "C09_R3", "expected": "glass chamber", "raw": "The KR-657 relay module, revision R3, is stored in the glass chamber.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C10_R1 
+PASS CARTRIDGE_ID_C10_R1 
+PASS CARTRIDGE_SHA_C10_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C10_R1", "selected": "C10_R1", "expected": "moss chamber", "raw": "The LS-902 axis converter, revision R1, is stored in the moss chamber.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C10_R2 
+PASS CARTRIDGE_ID_C10_R2 
+PASS CARTRIDGE_SHA_C10_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C10_R2", "selected": "C10_R2", "expected": "quartz annex", "raw": "The LS-902 axis converter, revision R2, is stored in the quartz annex.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C10_R3 
+PASS CARTRIDGE_ID_C10_R3 
+PASS CARTRIDGE_SHA_C10_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PHYSICAL_QA {"id": "C10_R3", "selected": "C10_R3", "expected": "south pavilion", "raw": "The LS-902 axis converter, revision R3, is stored in the south pavilion.", "strict_correct": true, "routing_correct": true}
+PASS FILE_SHA_C10_R1 
+PASS CARTRIDGE_ID_C10_R1 
+PASS CARTRIDGE_SHA_C10_R1 
+PASS NATIVE_INIT_80_LAYERS 
+UNKNOWN_CONTROL {"question": "Where is the ZZ-000 optical transceiver, revision R1, stored?", "reason": "absent_code", "selected": "C10_R1", "top1_score": 0.70003903, "margin": 0.0022766, "raw": "UNKNOWN. The provided information only specifies the storage location for asset LS-902 revision R1, which is an axis converter, not the ZZ-000 optical transceiver.", "explicit_unknown": true}
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS NATIVE_INIT_80_LAYERS 
+UNKNOWN_CONTROL {"question": "Where is the AX-731 coolant regulator, revision R9, stored?", "reason": "absent_revision", "selected": "C01_R2", "top1_score": 0.75402129, "margin": 0.00074857, "raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of the AX-731 coolant regulator, not for revision R9.", "explicit_unknown": true}
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS NATIVE_INIT_80_LAYERS 
+UNKNOWN_CONTROL {"question": "Where is the BT-962 torque controller, revision R4, stored?", "reason": "absent_revision", "selected": "C02_R2", "top1_score": 0.75444871, "margin": 0.00054604, "raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of the BT-962 torque controller, not for revision R4.", "explicit_unknown": true}
+PASS FILE_SHA_C01_R3 
+PASS CARTRIDGE_ID_C01_R3 
+PASS CARTRIDGE_SHA_C01_R3 
+PASS NATIVE_INIT_80_LAYERS 
+UNKNOWN_CONTROL {"question": "Where is the PX-000 calibration cube, revision R3, stored?", "reason": "absent_code", "selected": "C01_R3", "top1_score": 0.71265036, "margin": 0.00218427, "raw": "UNKNOWN. The provided information does not mention the storage location for the PX-000 calibration cube, revision R3.", "explicit_unknown": true}
+PASS FILE_SHA_C03_R2 
+PASS CARTRIDGE_ID_C03_R2 
+PASS CARTRIDGE_SHA_C03_R2 
+PASS NATIVE_INIT_80_LAYERS 
+UNKNOWN_CONTROL {"question": "Where is the DN-348 servo monitor, revision R0, stored?", "reason": "absent_revision", "selected": "C03_R2", "top1_score": 0.75477743, "margin": 5.859e-05, "raw": "UNKNOWN. The provided information only specifies the storage location for DN-348 revision R2, not for revision R0.", "explicit_unknown": true}
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS NATIVE_INIT_80_LAYERS 
+UNKNOWN_CONTROL {"question": "Where is the FK-276 spindle driver, revision R8, stored?", "reason": "absent_revision", "selected": "C05_R2", "top1_score": 0.75548202, "margin": 0.00075346, "raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of FK-276, not for revision R8.", "explicit_unknown": true}
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+PASS NATIVE_INIT_80_LAYERS 
+CAUSAL_CONTROL {"type": "NO_MEMORY", "question": "Where is the AX-731 coolant regulator, revision R1, stored?", "raw": "To provide a precise answer, I would need more context or information about the specific system or facility you're referring to. The AX-731 coolant regulator, revision R1, could be stored in various locations depending on the application and"}
+CAUSAL_CONTROL {"type": "WRONG_REVISION", "cartridge": "C01_R2", "question": "Where is the AX-731 coolant regulator, revision R1, stored?", "raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of the AX-731 coolant regulator, not for revision R1."}
+CAUSAL_CONTROL {"type": "CORRECT_REVISION", "cartridge": "C01_R1", "question": "Where is the AX-731 coolant regulator, revision R1, stored?", "raw": "The AX-731 coolant regulator, revision R1, is stored in the north archive."}
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+REFERENCE_INIT_C01_R1
+DIRECT_INIT_C01_R1
+PASS NATIVE_INIT_80_LAYERS 
+PASS REFERENCE_DIRECT_80_LAYER_EXACT {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+TEST722_RESULT COMPLETE_HARD_NEGATIVES_MEASURED
+SUMMARY {'routing': {'r1': 30, 'r5': 30, 'n': 30}, 'qa_strict': 30, 'qa_n': 30, 'unknown_explicit': 6, 'unknown_n': 6}
+RESULT_JSON /content/AKBASCORE_TEST722/TEST722_results.json MANIFEST /content/AKBASCORE_TEST722/TEST722_manifest.json LOG /content/AKBASCORE_TEST722/TEST722.log
