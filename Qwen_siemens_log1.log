@@ -1,1 +1,723 @@
-1
+ 2026-10-19T11:34:24.133+00:00 SESSION_START      AKBASCORE Silicon Hippocampus · Qwen2.5-72B · Siemens SINUMERIK ONE · TEST719 {"session": "SIEM719-20261019-113424", "version_note": "new experiment TEST719 — unpublished, no DOI", "session_dir": "/content/AKBASCORE_SIEMENS_DEMO/sessions/SIEM719-20261019-113424"}
+
+################################################################################################################
+AKBASCORE AI TECHNOLOGY — SILICON HIPPOCAMPUS · Qwen2.5-72B / SIEMENS SINUMERIK ONE
+new experiment TEST719 — unpublished, no DOI · session SIEM719-20261019-113424 · records in /content/AKBASCORE_SIEMENS_DEMO/sessions/SIEM719-20261019-113424
+Automatic initialization: every step below is executed for real in this runtime; nothing is precomputed.
+################################################################################################################
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[1/9] Verified sources (engine locks, licence, historical logs, TEST719 program files)
+      started 2026-10-19T11:34:24+00:00 · 0.0 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T11:34:24.225+00:00 STEP_START         SOURCES {"title": "Verified sources (engine locks, licence, historical logs, TEST719 program files)"}
+2026-10-19T11:34:24.729+00:00 ENGINE_SOURCE      716.py and 709.py verified {"blob_716": "913fa7a4951f2072df4be2eb49120ea86efa5477", "blob_709": "6c9f8cbb1eeed848d45133d73f0d7676b68e9125"}
+2026-10-19T11:34:25.642+00:00 HISTORICAL_LOADED  published TEST716/717/718 logs verified (reference only, not this session) {"blobs": {"716.log": "1b87e698a0420bb524bd93854709cef9e4069484", "717.log": "2f6225db7346854e9cebded269b002293a93392d", "718.log": "25c96ade2942727289530526b7fe15dd9beddc02"}}
+  program  TEST719_demo_questions.json           8,837 bytes · SHA-256 991fa92dd40931e2…
+  program  TEST719_demo_build_config.json        2,761 bytes · SHA-256 7148366aae22c17a…
+  program  TEST719_common.py                    37,558 bytes · SHA-256 7ef7667512a06206…
+  program  TEST719_demo_build.py                16,332 bytes · SHA-256 62a32db92bbadc4f…
+  program  TEST719_demo_ask.py                  16,024 bytes · SHA-256 3ae13ddb17367bf0…
+──── ✔ SOURCES finished in 0.0 min (1.6 s) · GPU used 0 / 81920 MiB (nvidia-smi)
+2026-10-19T11:34:25.887+00:00 STEP_DONE          SOURCES {"seconds": 1.64, "result": {"sources": {"716.py": "913fa7a4951f2072df4be2eb49120ea86efa5477", "709.py": "6c9f8cbb1eeed848d45133d73f0d7676b68e9125", "716.log": "1b87e698a0420bb524bd93854709cef9e4069484", "717.log": "2f6225db7346854e9cebded269b002293a93392d", "718.log": "25c96ade2942727289530526b7fe15dd9beddc02", "LICENSE": "9aad4724d1072f9e56486650a9527380c867a53b"}, "historical": ["716.log", "717.log", "718.log"], "program": {"TEST719_demo_questions.json": "991fa92dd40931e2fb71a38f7b73b8b1ca2307a5ca423591619972bdc6776443", "TEST719_demo
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[2/9] System preflight: GPU, RAM, disk, model cache and model identity
+      started 2026-10-19T11:34:25+00:00 · 0.0 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T11:34:25.910+00:00 STEP_START         PREFLIGHT {"title": "System preflight: GPU, RAM, disk, model cache and model identity"}
+  GPU         NVIDIA A100-SXM4-80GB · total 80.0 GiB · used 0 MiB · count 1 · GPU processes 0
+  nvidia-smi  NVIDIA A100-SXM4-80GB, 81920 MiB, 0 MiB used, driver 580.82.07
+  RAM         164.2 / 167.1 GiB available
+  disk        193.0 GiB free for the model cache · 193.0 GiB free for the demonstration
+  model cache NOT CACHED — full download: 0/37 weight shards in /root/.cache/huggingface/hub · 135.4 GiB still to download
+  model       Qwen/Qwen2.5-72B-Instruct · public release 2024-09-19 (https://qwenlm.github.io/blog/qwen2.5/) · Hub main commit 495f39366efef23836d0cfae4fbe635880d2be31 · repo created 2024-09-16 11:56:31+00:00
+  time        planning estimate ≈ 1.7 h typical, ≈ 3.5 h bad case (not a guarantee; real times are logged)
+──── ✔ PREFLIGHT finished in 0.0 min (0.9 s) · GPU used 0 / 81920 MiB (nvidia-smi)
+2026-10-19T11:34:26.805+00:00 STEP_DONE          PREFLIGHT {"seconds": 0.87, "result": {"gpu": "NVIDIA A100-SXM4-80GB", "model_cache": "NOT CACHED — full download: 0/37 weight shards in /root/.cache/huggingface/hub · 135.4 GiB still to download"}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[3/9] Original Siemens PDF: download, SHA-256, pages, edition marking
+      started 2026-10-19T11:34:26+00:00 · 0.0 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T11:34:26.828+00:00 STEP_START         DOCUMENT {"title": "Original Siemens PDF: download, SHA-256, pages, edition marking"}
+  source        https://cache.industry.siemens.com/dl/files/087/109994087/att_1338962/v1/ONE_universal_op_man_0725_en-US.pdf
+  downloaded    2026-10-19T11:34:26.829+00:00 → 2026-10-19T11:34:26.983+00:00 UTC · 8,696,401 bytes · 5.42 s
+  SHA-256       88c0f8293ce3302135042baf35d704303fb3b5a24915e28b8ca16f3192a7cc1d (= TEST716 lock)
+  pages         486
+  edition       “07/2025” printed on 486 of 486 pages (first on page 1) · order no. A5E48384812B AK · software V6.25 SP1
+  PDF metadata  created D:20250716120541+02'00' · modified D:20250716133359+02'00' · producer PDFsharp 1.1.1 under Microsoft Windows 10.0.14393 (Original: Antenna House PDF Output Library 7.4.1889; modified using iTextSharp 5.0.2 (c) 1T3XT BVBA)
+──── ✔ DOCUMENT finished in 0.1 min (5.4 s) · GPU used 0 / 81920 MiB (nvidia-smi)
+2026-10-19T11:34:32.278+00:00 STEP_DONE          DOCUMENT {"seconds": 5.43, "result": {"bytes": 8696401, "sha256": "88c0f8293ce3302135042baf35d704303fb3b5a24915e28b8ca16f3192a7cc1d", "pages": 486, "edition_mark_pages": 486, "download_end_utc": "2026-10-19T11:34:26.983+00:00"}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[4/9] Five fixed questions: mandatory source check on the PDF and seal — before any model is loaded
+      started 2026-10-19T11:34:32+00:00 · 0.1 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T11:34:32.302+00:00 STEP_START         PANEL {"title": "Five fixed questions: mandatory source check on the PDF and seal — before any model is loaded"}
+  Q1 ✓ verified on the PDF · region C02 (pair P1)
+      Q: What is the exact keyboard shortcut used to activate the Korean IME character input system?
+      expected: Alt + S
+      evidence: C02 PDF page 53 · “yin method 1. open the screen form and position the cursor on the input field. press the <alt +s> keys. the editor is displayed. + 2. enter the desir…”
+  Q2 ✓ verified on the PDF · region C03 (pair P2)
+      Q: What does the working area limitation function do on a SINUMERIK ONE control, and what does the operator achieve with it?
+      expected: It limits the range within which the tool may traverse (in the channel axes); protection zones in the working area are set up that are inhibited for tool motion
+      evidence: C03 PDF page 106 · “thin which a tool should traverse in all channel axes. this function allows you to set up protection zones in the working area that are inhibited for…”
+  Q3 ✓ verified on the PDF · region C04 (pair P2) + C07 (pair P4) — two different pairs
+      Q: Explain how an operator opens a DXF drawing and how an operator views a PDF document on a SINUMERIK ONE control: which operating area is used, and what is done in each case?
+      expected: Both start in the "Program manager" operating area: for DXF, position the cursor on the DXF file and press the "Open" softkey (the CAD drawing is displayed with all its layers); for PDF documents, select the storage location in the Program manager and open the PDF file to view it
+      evidence: C04 PDF page 190 · “lay. 3. press the "open" softkey. the selected cad drawing will be displayed with all its layers, i.e. with all graphic levels. 4. press the "close"…”
+      evidence: C07 PDF page 357 · “art the control in order to activate the configuration and to obtain the softkeys in the "program manager" operating area. note if a drive is present…”
+  Q4 ✓ verified on the PDF · region C09 + C10 (pair P5) — two different cartridges
+      Q: Which operating area is used both for displaying alarms and for setting remote access, and which softkeys open the alarm list and the remote diagnostics window?
+      expected: The "Diagnostics" operating area; the "Alarm list" softkey opens the alarm list and the "Remote diag." softkey opens the remote diagnostics window
+      evidence: C09 PDF page 455 · “service and diagnostics 18 18.1 alarm, error, and system messages 18.1.1 displaying alarms if the machine develop”
+      evidence: C10 PDF page 473 · “service and diagnostics 18.6 logbook note deleting logbook entries up to the completion of the 2nd commissioning,”
+  Q5 ✓ verified on the PDF · region all cartridges (footer on every page) + C01 (title / legal pages)
+      Q: Which edition and software version of the SINUMERIK ONE Universal Operating Manual does your document information come from?
+      expected: Edition 07/2025, CNC software V6.25 SP1
+      evidence: C01 PDF page 1 · “7 program service and diagnostics 18 valid for control sinumerik one cnc software version v6.25 sp1 sinumerik operate for pcu/pc v6.25 sp1 07/2025 a5…”
+      evidence: '07/2025' found in 10/10 cartridges
+2026-10-19T11:34:32.406+00:00 SEAL               question panel sealed before any model load; all five expected answers found on the PDF {"questions_sha256": "991fa92dd40931e2fb71a38f7b73b8b1ca2307a5ca423591619972bdc6776443"}
+──── ✔ PANEL finished in 0.0 min (0.1 s) · GPU used 0 / 81920 MiB (nvidia-smi)
+2026-10-19T11:34:32.430+00:00 STEP_DONE          PANEL {"seconds": 0.1, "result": {"sealed_utc": "2026-10-19T11:34:32.405+00:00", "questions_sha256": "991fa92dd40931e2fb71a38f7b73b8b1ca2307a5ca423591619972bdc6776443", "verified": 5}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[5/9] PROCESS 1 — C01–C10, five physical pairs (80-layer SHA-256), S1–S5, C11
+      started 2026-10-19T11:34:32+00:00 · 0.1 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T11:34:32.455+00:00 STEP_START         BUILD {"title": "PROCESS 1 — C01–C10, five physical pairs (80-layer SHA-256), S1–S5, C11"}
+2026-10-19T11:34:32.545+00:00 PROCESS_START      BUILD {"script": "TEST719_demo_build.py", "gpu_used_mib": 0}
+
+················································································································
+▶ BUILD · unchanged TEST716 set-up: PDF lock, frozen Qwen2.5-72B NF4, ten CUT3 cartridges C01–C10 (real download / loading progress follows) · 2026-10-19T11:34:36+00:00 · +0.1 min · GPU used 6 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T11:34:36.922+00:00 STAGE_START            boot_and_C01-C10 
+  BUILD │ 2026-10-19T11:34:36.923+00:00 MODEL_DOWNLOAD         snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live) {"commit": "495f39366efef23836d0cfae4fbe635880d2be31"}
+  BUILD │ Fetching 47 files:   0%|          | 0/47 [00:00<?, ?it/s]
+  BUILD │ Fetching 47 files:   0%|          | 0/47 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  BUILD │ Fetching 47 files:  13%|█▎        | 6/47 [00:20<00:01, 30.10it/s]
+  ⏱ BUILD +1.0 min · lines 3 · last: Fetching 47 files:   0%|          | 0/47 [00:00<?, ?it/s]Warning: You are sending unauthen · GPU 6, 81920, 0 MiB/%, RAM 157.4 GiB free, Hugging Face cache 21.0 GiB
+
+  BUILD │ Fetching 47 files:  13%|█▎        | 6/47 [00:20<00:01, 30.10it/s]  [heartbeat 2026-10-19T11:35:36.920+00:00] +1.0 min · last: MODEL_DOWNLOAD snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live)
+  BUILD │ Fetching 47 files:  15%|█▍        | 7/47 [01:27<11:40, 17.50s/it]
+  ⏱ BUILD +2.0 min · lines 4 · last: Fetching 47 files:  13%|█▎        | 6/47 [00:20<00:01, 30.10it/s]  [heartbeat 2026-10-19T1 · GPU 6, 81920, 0 MiB/%, RAM 156.9 GiB free, Hugging Face cache 39.9 GiB
+
+  BUILD │ Fetching 47 files:  15%|█▍        | 7/47 [01:27<11:40, 17.50s/it]  [heartbeat 2026-10-19T11:36:36.921+00:00] +2.0 min · last: MODEL_DOWNLOAD snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live)
+
+  ⏱ BUILD +3.0 min · lines 5 · last: Fetching 47 files:  15%|█▍        | 7/47 [01:27<11:40, 17.50s/it]  [heartbeat 2026-10-19T1 · GPU 6, 81920, 0 MiB/%, RAM 162.3 GiB free, Hugging Face cache 58.6 GiB
+  BUILD │ Fetching 47 files:  32%|███▏      | 15/47 [02:55<06:55, 12.98s/it]
+  BUILD │ Fetching 47 files:  32%|███▏      | 15/47 [02:55<06:55, 12.98s/it]  [heartbeat 2026-10-19T11:37:36.921+00:00] +3.0 min · last: MODEL_DOWNLOAD snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live)
+
+  ⏱ BUILD +4.0 min · lines 6 · last: Fetching 47 files:  32%|███▏      | 15/47 [02:55<06:55, 12.98s/it]  [heartbeat 2026-10-19T · GPU 6, 81920, 0 MiB/%, RAM 157.9 GiB free, Hugging Face cache 80.5 GiB
+  BUILD │   [heartbeat 2026-10-19T11:38:36.921+00:00] +4.0 min · last: MODEL_DOWNLOAD snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live)
+  BUILD │ Fetching 47 files:  60%|█████▉    | 28/47 [04:45<02:52,  9.08s/it]
+  ⏱ BUILD +5.0 min · lines 7 · last:   [heartbeat 2026-10-19T11:38:36.921+00:00] +4.0 min · last: MODEL_DOWNLOAD snapshot_downl · GPU 6, 81920, 0 MiB/%, RAM 156.9 GiB free, Hugging Face cache 100.7 GiB
+
+  BUILD │ Fetching 47 files:  60%|█████▉    | 28/47 [04:45<02:52,  9.08s/it]  [heartbeat 2026-10-19T11:39:36.921+00:00] +5.0 min · last: MODEL_DOWNLOAD snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live)
+  BUILD │ Fetching 47 files:  68%|██████▊   | 32/47 [05:00<02:16,  9.08s/it]
+  ⏱ BUILD +6.0 min · lines 8 · last: Fetching 47 files:  60%|█████▉    | 28/47 [04:45<02:52,  9.08s/it]  [heartbeat 2026-10-19T · GPU 6, 81920, 0 MiB/%, RAM 158.3 GiB free, Hugging Face cache 122.3 GiB
+
+  BUILD │ Fetching 47 files:  68%|██████▊   | 32/47 [05:00<02:16,  9.08s/it]  [heartbeat 2026-10-19T11:40:36.922+00:00] +6.0 min · last: MODEL_DOWNLOAD snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live)
+  BUILD │ Fetching 47 files:  96%|█████████▌| 45/47 [06:44<00:13,  6.99s/it]
+  BUILD │ Fetching 47 files: 100%|██████████| 47/47 [06:44<00:00,  8.61s/it]
+  BUILD │ 2026-10-19T11:41:22.479+00:00 MODEL_PIN              refs/main -> pinned commit, offline mode {"pinned": true, "commit": "495f39366efef23836d0cfae4fbe635880d2be31", "snapshot": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-72B-Instruct/snapshots/495f39366efef23836d0cfae4fbe635880d2be31", "shar
+  BUILD │ 2026-10-19T11:41:22.487+00:00 LOCK                   716.py git blob verified {"blob": "913fa7a4951f2072df4be2eb49120ea86efa5477", "origin": "/content/716.py"}
+  BUILD │    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 59.2 MB/s eta 0:00:00
+
+  ⏱ BUILD +7.0 min · lines 13 · last:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 59.2 MB/s eta 0:00:00 · GPU 6, 81920, 0 MiB/%, RAM 163.0 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:41:36.926+00:00] +7.0 min · last: LOCK 716.py git blob verified
+  BUILD │ PASS 709_GIT_BLOB_LOCK
+  BUILD │ PASS PDF_SHA256_LOCK
+  BUILD │ PASS PDF_486_PAGES
+  BUILD │ TOKEN_COUNTS [17279, 16873, 17062, 17154, 16888, 16725, 17074, 17040, 17002, 11474]
+  BUILD │ PASS PANEL_MIN_30
+  BUILD │ PANEL_READY {"heading_candidates": 525, "unique_cartridge_heading_candidates": 491, "selected": 60, "per_cartridge": {"1": 6, "2": 6, "3": 6, "4": 6, "5": 6, "6": 6, "7": 6, "8": 6, "9": 6, "10": 6}, "selection": "SHA256 sort, up to 6 unique headings per cartridge, before scoring"}
+  BUILD │ PASS ALL_PAGES_COVERED
+  BUILD │ PASS CUDA_A100_80GB
+  BUILD │ Loading weights:   6%|▌         | 58/963 [00:33<05:44,  2.63it/s]
+  ⏱ BUILD +8.0 min · lines 22 · last: PASS CUDA_A100_80GB · GPU 38758, 81920, 4 MiB/%, RAM 162.5 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ Loading weights:   7%|▋         | 65/963 [00:36<07:04,  2.11it/s]
+  BUILD │ Loading weights:   7%|▋         | 65/963 [00:36<07:04,  2.11it/s]  [heartbeat 2026-10-19T11:42:36.926+00:00] +8.0 min · last: LOCK 716.py git blob verified
+  BUILD │ Loading weights:  22%|██▏       | 208/963 [01:32<04:21,  2.88it/s]
+  ⏱ BUILD +9.0 min · lines 23 · last: Loading weights:   7%|▋         | 65/963 [00:36<07:04,  2.11it/s]  [heartbeat 2026-10-19T1 · GPU 38790, 81920, 3 MiB/%, RAM 162.6 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ Loading weights:  22%|██▏       | 216/963 [01:36<04:04,  3.05it/s]
+  BUILD │ Loading weights:  22%|██▏       | 216/963 [01:36<04:04,  3.05it/s]  [heartbeat 2026-10-19T11:43:36.927+00:00] +9.0 min · last: LOCK 716.py git blob verified
+  BUILD │ Loading weights:  37%|███▋      | 353/963 [02:33<04:42,  2.16it/s]
+  ⏱ BUILD +10.0 min · lines 24 · last: Loading weights:  22%|██▏       | 216/963 [01:36<04:04,  3.05it/s]  [heartbeat 2026-10-19T · GPU 38820, 81920, 5 MiB/%, RAM 163.0 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ Loading weights:  38%|███▊      | 364/963 [02:36<03:19,  3.01it/s]
+  BUILD │ Loading weights:  38%|███▊      | 364/963 [02:36<03:19,  3.01it/s]  [heartbeat 2026-10-19T11:44:36.927+00:00] +10.0 min · last: LOCK 716.py git blob verified
+  BUILD │ Loading weights:  52%|█████▏    | 504/963 [03:33<02:24,  3.17it/s]
+  ⏱ BUILD +11.0 min · lines 25 · last: Loading weights:  38%|███▊      | 364/963 [02:36<03:19,  3.01it/s]  [heartbeat 2026-10-19T · GPU 38852, 81920, 3 MiB/%, RAM 163.1 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ Loading weights:  53%|█████▎    | 509/963 [03:35<03:26,  2.20it/s]
+  BUILD │ Loading weights:  53%|█████▎    | 509/963 [03:35<03:26,  2.20it/s]  [heartbeat 2026-10-19T11:45:36.927+00:00] +11.0 min · last: LOCK 716.py git blob verified
+  BUILD │ Loading weights:  68%|██████▊   | 653/963 [04:33<02:20,  2.21it/s]
+  ⏱ BUILD +12.0 min · lines 26 · last: Loading weights:  53%|█████▎    | 509/963 [03:35<03:26,  2.20it/s]  [heartbeat 2026-10-19T · GPU 38882, 81920, 5 MiB/%, RAM 163.1 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ Loading weights:  69%|██████▉   | 664/963 [04:36<01:36,  3.11it/s]
+  BUILD │ Loading weights:  69%|██████▉   | 664/963 [04:36<01:36,  3.11it/s]  [heartbeat 2026-10-19T11:46:36.927+00:00] +12.0 min · last: LOCK 716.py git blob verified
+  BUILD │ Loading weights:  83%|████████▎ | 802/963 [05:33<00:58,  2.77it/s]
+  ⏱ BUILD +13.0 min · lines 27 · last: Loading weights:  69%|██████▉   | 664/963 [04:36<01:36,  3.11it/s]  [heartbeat 2026-10-19T · GPU 38914, 81920, 4 MiB/%, RAM 163.0 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ Loading weights:  84%|████████▍ | 809/963 [05:36<01:09,  2.22it/s]
+  BUILD │ Loading weights:  84%|████████▍ | 809/963 [05:36<01:09,  2.22it/s]  [heartbeat 2026-10-19T11:47:36.928+00:00] +13.0 min · last: LOCK 716.py git blob verified
+  BUILD │ Loading weights:  99%|█████████▉| 952/963 [06:32<00:03,  3.01it/s]
+  ⏱ BUILD +14.0 min · lines 28 · last: Loading weights:  84%|████████▍ | 809/963 [05:36<01:09,  2.22it/s]  [heartbeat 2026-10-19T · GPU 40526, 81920, 3 MiB/%, RAM 163.0 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ Loading weights: 100%|█████████▉| 960/963 [06:36<00:00,  3.11it/s]
+  BUILD │ Loading weights: 100%|██████████| 963/963 [06:36<00:00,  2.43it/s]
+  BUILD │   [heartbeat 2026-10-19T11:48:39.110+00:00] +14.0 min · last: LOCK 716.py git blob verified
+  BUILD │ PASS MODEL_ARCH
+  BUILD │ PASS FROZEN
+  BUILD │ FORGE C01 TOKENS 17279
+  BUILD │ FORGE C02 TOKENS 16873
+
+  ⏱ BUILD +15.0 min · lines 38 · last: FORGE_PROGRESS C02 256 / 16904 GPU {'free_gib': 39.38, 'allocated_gib': 38.466, 'peak_gib' · GPU 43410, 81920, 98 MiB/%, RAM 162.5 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:49:39.110+00:00] +15.0 min · last: LOCK 716.py git blob verified
+  BUILD │ FORGE C03 TOKENS 17062
+
+  ⏱ BUILD +16.0 min · lines 45 · last: FORGE_PROGRESS C03 16384 / 17093 GPU {'free_gib': 33.479, 'allocated_gib': 43.388, 'peak_g · GPU 46970, 81920, 100 MiB/%, RAM 162.4 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:50:39.111+00:00] +16.0 min · last: LOCK 716.py git blob verified
+  BUILD │ FORGE C04 TOKENS 17154
+  BUILD │ FORGE C05 TOKENS 16888
+
+  ⏱ BUILD +17.0 min · lines 53 · last: FORGE_PROGRESS C05 8192 / 16919 GPU {'free_gib': 36.643, 'allocated_gib': 40.888, 'peak_gi · GPU 43730, 81920, 100 MiB/%, RAM 162.3 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:51:39.111+00:00] +17.0 min · last: LOCK 716.py git blob verified
+  BUILD │ FORGE C06 TOKENS 16725
+
+  ⏱ BUILD +18.0 min · lines 59 · last: FORGE_PROGRESS C06 16384 / 16756 GPU {'free_gib': 33.479, 'allocated_gib': 43.388, 'peak_g · GPU 46086, 81920, 0 MiB/%, RAM 161.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ FORGE C07 TOKENS 17074
+  BUILD │   [heartbeat 2026-10-19T11:52:39.111+00:00] +18.0 min · last: LOCK 716.py git blob verified
+  BUILD │ FORGE C08 TOKENS 17040
+
+  ⏱ BUILD +19.0 min · lines 67 · last: FORGE_PROGRESS C08 8192 / 17071 GPU {'free_gib': 36.643, 'allocated_gib': 40.888, 'peak_gi · GPU 44330, 81920, 98 MiB/%, RAM 162.3 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:53:39.112+00:00] +19.0 min · last: LOCK 716.py git blob verified
+  BUILD │ FORGE C09 TOKENS 17002
+
+  ⏱ BUILD +20.0 min · lines 73 · last: FORGE_PROGRESS C09 16384 / 17033 GPU {'free_gib': 33.479, 'allocated_gib': 43.388, 'peak_g · GPU 40186, 81920, 0 MiB/%, RAM 161.7 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ FORGE C10 TOKENS 11474
+  BUILD │   [heartbeat 2026-10-19T11:54:39.112+00:00] +20.0 min · last: LOCK 716.py git blob verified
+  BUILD │ 2026-10-19T11:54:58.727+00:00 ENGINE_BOOT            716 setup executed unchanged {"seconds": 816.2, "model_only": false, "P": 31, "arch": [80, 8192, 64, 8, 128], "kv_row_bytes": 327680, "sentinel_before": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "commit_hash": null}
+  BUILD │ 2026-10-19T11:55:14.806+00:00 STAGE_END              boot_and_C01-C10 {"seconds": 1237.9}
+
+················································································································
+▶ BUILD · physical pair P1: initialize(C01) → append(C02) · 80-layer SHA-256 · X-ray · general synthesis · 2026-10-19T11:55:14+00:00 · +20.7 min · GPU used 40186 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T11:55:14.807+00:00 STAGE_START            pair1 
+
+  ⏱ BUILD +21.0 min · lines 80 · last: 2026-10-19T11:55:14.807+00:00 STAGE_START            pair1  · GPU 44730, 81920, 100 MiB/%, RAM 162.3 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:55:39.112+00:00] +21.0 min · last: STAGE_START pair1
+  BUILD │ 2026-10-19T11:55:51.835+00:00 MOUNT                  C01 {"rows": 17310, "kv_gib": 5.283, "alloc_gib": 43.67, "ssd_load_ms": 2255.487, "h2d_ms": 163.002, "rebuild_ms": 34579.7, "end_to_end_ms": 37025.2}
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 34.147, 'allocated_gib': 44.186, 'peak_gib': 44.186, 'total_gib': 79.251}}
+
+  ⏱ BUILD +22.0 min · lines 89 · last: APPEND_PROGRESS 6144 / 16873 GPU {'free_gib': 30.688, 'allocated_gib': 46.325, 'peak_gib': · GPU 50048, 81920, 100 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:56:39.112+00:00] +22.0 min · last: MOUNT C01
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17310, 'new_tokens': 34183}
+  BUILD │ 2026-10-19T11:57:26.121+00:00 APPEND                 C02 {"verified": true, "old_rows": 17310, "rows": 34183, "seconds": 93.45, "peak_gib": 50.694}
+
+  ⏱ BUILD +23.0 min · lines 97 · last: 2026-10-19T11:57:26.121+00:00 APPEND                 C02 {"verified": true, "old_rows": 17 · GPU 51486, 81920, 2 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:57:39.112+00:00] +23.0 min · last: APPEND C02
+
+  ⏱ BUILD +24.0 min · lines 98 · last:   [heartbeat 2026-10-19T11:57:39.112+00:00] +23.0 min · last: APPEND C02 · GPU 63368, 81920, 69 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:58:39.113+00:00] +24.0 min · last: APPEND C02
+
+  ⏱ BUILD +25.0 min · lines 99 · last:   [heartbeat 2026-10-19T11:58:39.113+00:00] +24.0 min · last: APPEND C02 · GPU 63368, 81920, 71 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T11:59:39.113+00:00] +25.0 min · last: APPEND C02
+  BUILD │ 2026-10-19T11:59:53.483+00:00 GENERATION             SYNTHESIS_P1 {"status": "COMPLETE", "n": 808, "seconds": 108.83, "peak_gib": 60.36}
+  BUILD │ 2026-10-19T11:59:54.555+00:00 STAGE_END              pair1 {"seconds": 279.7}
+
+················································································································
+▶ BUILD · physical pair P2: initialize(C03) → append(C04) · 80-layer SHA-256 · X-ray · general synthesis · 2026-10-19T11:59:54+00:00 · +25.4 min · GPU used 40186 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T11:59:54.556+00:00 STAGE_START            pair2 
+  BUILD │ 2026-10-19T12:00:31.055+00:00 MOUNT                  C03 {"rows": 17093, "kv_gib": 5.216, "alloc_gib": 43.604, "ssd_load_ms": 2198.916, "h2d_ms": 158.214, "rebuild_ms": 34112.4, "end_to_end_ms": 36495.6}
+
+  ⏱ BUILD +26.0 min · lines 104 · last: 2026-10-19T12:00:31.055+00:00 MOUNT                  C03 {"rows": 17093, "kv_gib": 5.216,  · GPU 45626, 81920, 0 MiB/%, RAM 161.7 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:00:39.113+00:00] +26.0 min · last: MOUNT C03
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 34.245, 'allocated_gib': 44.128, 'peak_gib': 44.128, 'total_gib': 79.251}}
+
+  ⏱ BUILD +27.0 min · lines 115 · last: APPEND_PROGRESS 12288 / 17154 GPU {'free_gib': 28.149, 'allocated_gib': 48.139, 'peak_gib' · GPU 52668, 81920, 100 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:01:39.114+00:00] +27.0 min · last: MOUNT C03
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17093, 'new_tokens': 34247}
+  BUILD │ 2026-10-19T12:02:06.067+00:00 APPEND                 C04 {"verified": true, "old_rows": 17093, "rows": 34247, "seconds": 94.24, "peak_gib": 50.726}
+
+  ⏱ BUILD +28.0 min · lines 120 · last: 2026-10-19T12:02:06.067+00:00 APPEND                 C04 {"verified": true, "old_rows": 17 · GPU 51666, 81920, 2 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:02:39.114+00:00] +28.0 min · last: APPEND C04
+
+  ⏱ BUILD +29.0 min · lines 121 · last:   [heartbeat 2026-10-19T12:02:39.114+00:00] +28.0 min · last: APPEND C04 · GPU 63628, 81920, 70 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:03:39.114+00:00] +29.0 min · last: APPEND C04
+
+  ⏱ BUILD +30.0 min · lines 122 · last:   [heartbeat 2026-10-19T12:03:39.114+00:00] +29.0 min · last: APPEND C04 · GPU 63628, 81920, 69 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:04:39.114+00:00] +30.0 min · last: APPEND C04
+  BUILD │ 2026-10-19T12:04:43.667+00:00 GENERATION             SYNTHESIS_P2 {"status": "COMPLETE", "n": 884, "seconds": 118.92, "peak_gib": 60.4}
+  BUILD │ 2026-10-19T12:04:44.766+00:00 STAGE_END              pair2 {"seconds": 290.2}
+
+················································································································
+▶ BUILD · physical pair P3: initialize(C05) → append(C06) · 80-layer SHA-256 · X-ray · general synthesis · 2026-10-19T12:04:44+00:00 · +30.2 min · GPU used 40186 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T12:04:44.768+00:00 STAGE_START            pair3 
+  BUILD │ 2026-10-19T12:05:21.044+00:00 MOUNT                  C05 {"rows": 16919, "kv_gib": 5.163, "alloc_gib": 43.551, "ssd_load_ms": 2206.924, "h2d_ms": 160.421, "rebuild_ms": 33876.8, "end_to_end_ms": 36273.2}
+
+  ⏱ BUILD +31.0 min · lines 128 · last: APPEND_DIAG_BEFORE_SEAL {'old_tokens': 16919, 'new_tokens': 16725, 'gpu': {'free_gib': 34. · GPU 46006, 81920, 2 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:05:39.115+00:00] +31.0 min · last: MOUNT C05
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 34.323, 'allocated_gib': 44.062, 'peak_gib': 44.062, 'total_gib': 79.251}}
+
+  ⏱ BUILD +32.0 min · lines 139 · last: APPEND_PROGRESS 14336 / 16725 GPU {'free_gib': 27.739, 'allocated_gib': 48.695, 'peak_gib' · GPU 53488, 81920, 100 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:06:39.115+00:00] +32.0 min · last: MOUNT C05
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 16919, 'new_tokens': 33644}
+  BUILD │ 2026-10-19T12:06:54.188+00:00 APPEND                 C06 {"verified": true, "old_rows": 16919, "rows": 33644, "seconds": 92.38, "peak_gib": 50.479}
+
+  ⏱ BUILD +33.0 min · lines 143 · last: 2026-10-19T12:06:54.188+00:00 APPEND                 C06 {"verified": true, "old_rows": 16 · GPU 63088, 81920, 69 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:07:39.115+00:00] +33.0 min · last: APPEND C06
+
+  ⏱ BUILD +34.0 min · lines 144 · last:   [heartbeat 2026-10-19T12:07:39.115+00:00] +33.0 min · last: APPEND C06 · GPU 63088, 81920, 70 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:08:39.116+00:00] +34.0 min · last: APPEND C06
+
+  ⏱ BUILD +35.0 min · lines 145 · last:   [heartbeat 2026-10-19T12:08:39.116+00:00] +34.0 min · last: APPEND C06 · GPU 63088, 81920, 70 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:09:39.116+00:00] +35.0 min · last: APPEND C06
+  BUILD │ 2026-10-19T12:09:41.672+00:00 GENERATION             SYNTHESIS_P3 {"status": "COMPLETE", "n": 969, "seconds": 129.71, "peak_gib": 60.02}
+  BUILD │ 2026-10-19T12:09:42.748+00:00 STAGE_END              pair3 {"seconds": 298.0}
+
+················································································································
+▶ BUILD · physical pair P4: initialize(C07) → append(C08) · 80-layer SHA-256 · X-ray · general synthesis · 2026-10-19T12:09:42+00:00 · +35.2 min · GPU used 40186 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T12:09:42.750+00:00 STAGE_START            pair4 
+  BUILD │ 2026-10-19T12:10:19.296+00:00 MOUNT                  C07 {"rows": 17105, "kv_gib": 5.22, "alloc_gib": 43.608, "ssd_load_ms": 2217.472, "h2d_ms": 159.375, "rebuild_ms": 34135.4, "end_to_end_ms": 36543.3}
+
+  ⏱ BUILD +36.0 min · lines 151 · last: APPEND_DIAG_BEFORE_SEAL {'old_tokens': 17105, 'new_tokens': 17040, 'gpu': {'free_gib': 34. · GPU 46086, 81920, 2 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:10:39.116+00:00] +36.0 min · last: MOUNT C07
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 34.245, 'allocated_gib': 44.129, 'peak_gib': 44.129, 'total_gib': 79.251}}
+
+  ⏱ BUILD +37.0 min · lines 163 · last: APPEND_PROGRESS 16384 / 17040 GPU {'free_gib': 26.587, 'allocated_gib': 49.39, 'peak_gib': · GPU 53968, 81920, 100 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:11:39.116+00:00] +37.0 min · last: MOUNT C07
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17105, 'new_tokens': 34145}
+  BUILD │ 2026-10-19T12:11:54.230+00:00 APPEND                 C08 {"verified": true, "old_rows": 17105, "rows": 34145, "seconds": 94.16, "peak_gib": 50.664}
+
+  ⏱ BUILD +38.0 min · lines 166 · last: 2026-10-19T12:11:54.230+00:00 APPEND                 C08 {"verified": true, "old_rows": 17 · GPU 63348, 81920, 69 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:12:39.117+00:00] +38.0 min · last: APPEND C08
+
+  ⏱ BUILD +39.0 min · lines 167 · last:   [heartbeat 2026-10-19T12:12:39.117+00:00] +38.0 min · last: APPEND C08 · GPU 63348, 81920, 70 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:13:39.117+00:00] +39.0 min · last: APPEND C08
+
+  ⏱ BUILD +40.0 min · lines 168 · last:   [heartbeat 2026-10-19T12:13:39.117+00:00] +39.0 min · last: APPEND C08 · GPU 63348, 81920, 70 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:14:39.117+00:00] +40.0 min · last: APPEND C08
+  BUILD │ 2026-10-19T12:14:43.525+00:00 GENERATION             SYNTHESIS_P4 {"status": "COMPLETE", "n": 974, "seconds": 130.95, "peak_gib": 60.34}
+  BUILD │ 2026-10-19T12:14:44.592+00:00 STAGE_END              pair4 {"seconds": 301.8}
+
+················································································································
+▶ BUILD · physical pair P5: initialize(C09) → append(C10) · 80-layer SHA-256 · X-ray · general synthesis · 2026-10-19T12:14:44+00:00 · +40.2 min · GPU used 40186 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T12:14:44.594+00:00 STAGE_START            pair5 
+  BUILD │ 2026-10-19T12:15:21.065+00:00 MOUNT                  C09 {"rows": 17033, "kv_gib": 5.198, "alloc_gib": 43.586, "ssd_load_ms": 2200.685, "h2d_ms": 157.681, "rebuild_ms": 34083.1, "end_to_end_ms": 36469.0}
+
+  ⏱ BUILD +41.0 min · lines 174 · last: APPEND_DIAG_BEFORE_SEAL {'old_tokens': 17033, 'new_tokens': 11474, 'gpu': {'free_gib': 34. · GPU 45906, 81920, 2 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:15:39.117+00:00] +41.0 min · last: MOUNT C09
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 34.421, 'allocated_gib': 43.937, 'peak_gib': 43.937, 'total_gib': 79.251}}
+
+  ⏱ BUILD +42.0 min · lines 183 · last: APPEND_PROGRESS 10240 / 11474 GPU {'free_gib': 29.263, 'allocated_gib': 47.322, 'peak_gib' · GPU 51732, 81920, 2 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17033, 'new_tokens': 28507}
+  BUILD │ 2026-10-19T12:16:34.996+00:00 APPEND                 C10 {"verified": true, "old_rows": 17033, "rows": 28507, "seconds": 73.16, "peak_gib": 49.135}
+  BUILD │   [heartbeat 2026-10-19T12:16:39.118+00:00] +42.0 min · last: APPEND C10
+
+  ⏱ BUILD +43.0 min · lines 186 · last:   [heartbeat 2026-10-19T12:16:39.118+00:00] +42.0 min · last: APPEND C10 · GPU 59648, 81920, 66 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:17:39.118+00:00] +43.0 min · last: APPEND C10
+
+  ⏱ BUILD +44.0 min · lines 187 · last:   [heartbeat 2026-10-19T12:17:39.118+00:00] +43.0 min · last: APPEND C10 · GPU 59648, 81920, 64 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:18:39.119+00:00] +44.0 min · last: APPEND C10
+  BUILD │ 2026-10-19T12:19:00.754+00:00 GENERATION             SYNTHESIS_P5 {"status": "COMPLETE", "n": 834, "seconds": 113.53, "peak_gib": 56.72}
+  BUILD │ 2026-10-19T12:19:01.861+00:00 STAGE_END              pair5 {"seconds": 257.3}
+
+················································································································
+▶ BUILD · S1–S5 written as cartridges, physically joined (initialize S1 → append S2…S5), general final synthesis · 2026-10-19T12:19:01+00:00 · +44.5 min · GPU used 40750 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T12:19:01.863+00:00 STAGE_START            S1-S5_joint_and_final_synthesis 
+  BUILD │ 2026-10-19T12:19:04.202+00:00 FORGE_REGISTERED       S1 {"id": "S1", "cartridge_sha256": "4283473bfd6fe0ff2d5efc39f333793548289b4b0373d4bea227378dfb973139", "body_tokens": 808, "bytes": 27495422, "body_text_sha256": "03270f266d0731e617eb648b3ba67a531229d1214d1a9de16c0a9512f4b795e4", "reused": false,
+  BUILD │ 2026-10-19T12:19:06.687+00:00 FORGE_REGISTERED       S2 {"id": "S2", "cartridge_sha256": "924e0f6167fa2ea7a2b2008a1fccec2892dcb7044da60584e71c4411ecb94053", "body_tokens": 884, "bytes": 29985790, "body_text_sha256": "0dbe487d6e37964bce25836ff4eb004cab675b634ef5932e387a1011b6b707eb", "reused": false,
+  BUILD │ 2026-10-19T12:19:09.216+00:00 FORGE_REGISTERED       S3 {"id": "S3", "cartridge_sha256": "1e6bd20397ea5b03dc9a1962b5696c99ddcffbfc3a282022e9756c3ef065ee93", "body_tokens": 969, "bytes": 32771070, "body_text_sha256": "4e522e6946f21eb890991e0366ce134f3dd2139990c7a81d5b9aac910128fbd2", "reused": false,
+  BUILD │ 2026-10-19T12:19:11.756+00:00 FORGE_REGISTERED       S4 {"id": "S4", "cartridge_sha256": "7d2ccfd9499141d84971320e4cd0b689e0db0389ea08739e0999c73dea1753ca", "body_tokens": 974, "bytes": 32934910, "body_text_sha256": "b80c087667b8a8ffefc60efb4d1b9f5a18c88ebe5da967359f5c9f318b63d317", "reused": false,
+  BUILD │ 2026-10-19T12:19:14.196+00:00 FORGE_REGISTERED       S5 {"id": "S5", "cartridge_sha256": "d12f1c43cb165bcec59fb221d0fe5d6a7bc377764f0faa8f94dc9dda302495c6", "body_tokens": 834, "bytes": 28347390, "body_text_sha256": "ec2d4a5d2c9892a4bdda5f865ff89f28e5500acabd6273711f762883e03440de", "reused": false,
+  BUILD │ 2026-10-19T12:19:16.087+00:00 MOUNT                  S1 {"rows": 839, "kv_gib": 0.256, "alloc_gib": 38.644, "ssd_load_ms": 91.792, "h2d_ms": 7.751, "rebuild_ms": 1701.1, "end_to_end_ms": 1800.7}
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.753, 'allocated_gib': 38.672, 'peak_gib': 38.672, 'total_gib': 79.251}}
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 839, 'new_tokens': 1723}
+  BUILD │ 2026-10-19T12:19:20.236+00:00 APPEND                 S2 {"verified": true, "old_rows": 839, "rows": 1723, "seconds": 4.15, "peak_gib": 39.449}
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.44, 'allocated_gib': 38.944, 'peak_gib': 38.944, 'total_gib': 79.251}}
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 1723, 'new_tokens': 2692}
+  BUILD │ 2026-10-19T12:19:26.459+00:00 APPEND                 S3 {"verified": true, "old_rows": 1723, "rows": 2692, "seconds": 6.22, "peak_gib": 39.78}
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.089, 'allocated_gib': 39.24, 'peak_gib': 39.24, 'total_gib': 79.251}}
+
+  ⏱ BUILD +45.0 min · lines 218 · last: APPEND_PROGRESS 256 / 974 GPU {'free_gib': 38.323, 'allocated_gib': 39.359, 'peak_gib': 40 · GPU 41992, 81920, 2 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 2692, 'new_tokens': 3666}
+  BUILD │ 2026-10-19T12:19:34.822+00:00 APPEND                 S4 {"verified": true, "old_rows": 2692, "rows": 3666, "seconds": 8.36, "peak_gib": 40.094}
+  BUILD │ APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 38.757, 'allocated_gib': 39.533, 'peak_gib': 39.533, 'total_gib': 79.251}}
+  BUILD │   [heartbeat 2026-10-19T12:19:39.237+00:00] +45.0 min · last: APPEND S4
+  BUILD │ PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 3666, 'new_tokens': 4500}
+  BUILD │ 2026-10-19T12:19:45.220+00:00 APPEND                 S5 {"verified": true, "old_rows": 3666, "rows": 4500, "seconds": 10.4, "peak_gib": 40.652}
+
+  ⏱ BUILD +46.0 min · lines 227 · last: 2026-10-19T12:19:45.220+00:00 APPEND                 S5 {"verified": true, "old_rows": 366 · GPU 43588, 81920, 56 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:20:39.237+00:00] +46.0 min · last: APPEND S5
+
+  ⏱ BUILD +47.0 min · lines 228 · last:   [heartbeat 2026-10-19T12:20:39.237+00:00] +46.0 min · last: APPEND S5 · GPU 43588, 81920, 54 MiB/%, RAM 162.2 GiB free, Hugging Face cache 135.4 GiB
+  BUILD │   [heartbeat 2026-10-19T12:21:39.238+00:00] +47.0 min · last: APPEND S5
+  BUILD │ 2026-10-19T12:22:19.429+00:00 GENERATION             FINAL_SYNTHESIS {"status": "COMPLETE", "n": 1100, "seconds": 148.47, "peak_gib": 41.66}
+  BUILD │ 2026-10-19T12:22:20.484+00:00 STAGE_END              S1-S5_joint_and_final_synthesis {"seconds": 198.6}
+
+················································································································
+▶ BUILD · C11 written as a CUT3 cartridge (SHA-256) + hand-off for the new process · 2026-10-19T12:22:20+00:00 · +47.8 min · GPU used 40750 / 81920 MiB (nvidia-smi)
+················································································································
+  BUILD │ 2026-10-19T12:22:20.486+00:00 STAGE_START            C11_write_and_handoff 
+  BUILD │ 2026-10-19T12:22:23.267+00:00 FORGE_REGISTERED       C11 {"id": "C11", "cartridge_sha256": "4bf32cce9785bb84941cfeda95b2aa62ca93bab04f55bddbdf3abe1d6aea71b9", "body_tokens": 1100, "bytes": 37063757, "body_text_sha256": "5e55b20ddb50ffc10d1d9f09d2a3a7a70b051eedfa7048e9a6c43199acbefbe7", "reused": fal
+  BUILD │ 2026-10-19T12:22:29.012+00:00 STAGE_END              C11_write_and_handoff {"seconds": 8.5}
+  BUILD │ 2026-10-19T12:22:29.024+00:00 BUILD_RESULT           BUILD_COMPLETE 
+2026-10-19T12:22:33.977+00:00 PROCESS_END        BUILD {"exit_code": 0, "minutes": 48.0}
+
+  PROCESS 1 RESULT · status BUILD_COMPLETE
+  P1 C01+C02 · 34183 rows (expected 34183) · append 80-layer SHA-256 PASS · synthesis COMPLETE (finish EOS, END marker last line) · 808 tokens · 108.83 s
+  P2 C03+C04 · 34247 rows (expected 34247) · append 80-layer SHA-256 PASS · synthesis COMPLETE (finish EOS, END marker last line) · 884 tokens · 118.92 s
+  P3 C05+C06 · 33644 rows (expected 33644) · append 80-layer SHA-256 PASS · synthesis COMPLETE (finish EOS, END marker last line) · 969 tokens · 129.71 s
+  P4 C07+C08 · 34145 rows (expected 34145) · append 80-layer SHA-256 PASS · synthesis COMPLETE (finish EOS, END marker last line) · 974 tokens · 130.95 s
+  P5 C09+C10 · 28507 rows (expected 28507) · append 80-layer SHA-256 PASS · synthesis COMPLETE (finish EOS, END marker last line) · 834 tokens · 113.53 s
+  S1 cartridge · 808 tokens · SHA-256 4283473bfd6fe0ff…
+  S2 cartridge · 884 tokens · SHA-256 924e0f6167fa2ea7…
+  S3 cartridge · 969 tokens · SHA-256 1e6bd20397ea5b03…
+  S4 cartridge · 974 tokens · SHA-256 7d2ccfd9499141d8…
+  S5 cartridge · 834 tokens · SHA-256 d12f1c43cb165bce…
+  S1–S5 joint · 4500 rows · 4 appends PASS · final synthesis COMPLETE (finish EOS, END marker last line) · 1100 tokens · 148.47 s
+  C11 · 1100 tokens · SHA-256 4bf32cce9785bb84941cfeda95b2aa62ca93bab04f55bddbdf3abe1d6aea71b9
+──── ✔ BUILD finished in 48.0 min (2881.5 s) · GPU used 0 / 81920 MiB (nvidia-smi)
+2026-10-19T12:22:34.004+00:00 STEP_DONE          BUILD {"seconds": 2881.52, "result": {"status": "BUILD_COMPLETE", "c11_sha256": "4bf32cce9785bb84941cfeda95b2aa62ca93bab04f55bddbdf3abe1d6aea71b9", "minutes": 47.9}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[6/9] PROCESS 2 — new Python process: C11 alone, five questions; the same questions without any document
+      started 2026-10-19T12:22:34+00:00 · 48.2 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T12:22:34.028+00:00 STEP_START         ASK {"title": "PROCESS 2 — new Python process: C11 alone, five questions; the same questions without any document"}
+2026-10-19T12:22:34.075+00:00 QUARANTINE         build engine directory (C01–C10, S1–S5, PDF copy) moved into the quarantined area
+2026-10-19T12:22:34.144+00:00 PROCESS_START      ASK {"script": "TEST719_demo_ask.py", "gpu_used_mib": 0}
+
+················································································································
+▶ ASK · isolation checks BEFORE the model is loaded (new process, empty GPU, file-system scan, quarantine) · 2026-10-19T12:22:36+00:00 · +0.0 min · GPU used 6 / 81920 MiB (nvidia-smi)
+················································································································
+  ASK │ 2026-10-19T12:22:36.725+00:00 STAGE_START            independence_before_boot 
+
+  ⏱ ASK +1.0 min · lines 237 · last: 2026-10-19T12:22:36.725+00:00 STAGE_START            independence_before_boot  · GPU 6, 81920, 0 MiB/%, RAM 163.9 GiB free, Hugging Face cache 135.4 GiB
+  ASK │   [heartbeat 2026-10-19T12:23:36.728+00:00] +1.0 min · last: STAGE_START independence_before_boot
+  ASK │ 2026-10-19T12:23:46.048+00:00 INDEPENDENCE           pre-boot {"process": true, "gpu_empty": true, "fs": true}
+
+················································································································
+▶ ASK · frozen model (unchanged 716 model statements) + ONLY C11 in the cartridge registry · 2026-10-19T12:23:46+00:00 · +1.2 min · GPU used 6 / 81920 MiB (nvidia-smi)
+················································································································
+  ASK │ 2026-10-19T12:23:46.049+00:00 STAGE_START            model_boot_C11_only 
+  ASK │ 2026-10-19T12:23:46.049+00:00 MODEL_DOWNLOAD         snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live) {"commit": "495f39366efef23836d0cfae4fbe635880d2be31"}
+  ASK │ Fetching 47 files:   0%|          | 0/47 [00:00<?, ?it/s]
+  ASK │ Fetching 47 files: 100%|██████████| 47/47 [00:00<00:00, 1784.20it/s]
+  ASK │ 2026-10-19T12:23:46.631+00:00 MODEL_PIN              refs/main -> pinned commit, offline mode {"pinned": true, "commit": "495f39366efef23836d0cfae4fbe635880d2be31", "snapshot": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-72B-Instruct/snapshots/495f39366efef23836d0cfae4fbe635880d2be31", "shar
+  ASK │ 2026-10-19T12:23:46.632+00:00 LOCK                   716.py git blob verified {"blob": "913fa7a4951f2072df4be2eb49120ea86efa5477", "origin": "/content/716.py"}
+  ASK │ PASS 709_GIT_BLOB_LOCK
+  ASK │ PASS CUDA_A100_80GB
+  ASK │ Loading weights:   4%|▍         | 41/963 [00:34<08:01,  1.91it/s]
+  ⏱ ASK +2.0 min · lines 246 · last: PASS CUDA_A100_80GB · GPU 38754, 81920, 3 MiB/%, RAM 163.3 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ Loading weights:   5%|▍         | 48/963 [00:36<05:27,  2.80it/s]
+  ASK │ Loading weights:   5%|▍         | 48/963 [00:36<05:27,  2.80it/s]  [heartbeat 2026-10-19T12:24:36.733+00:00] +2.0 min · last: LOCK 716.py git blob verified
+  ASK │ Loading weights:  19%|█▊        | 180/963 [01:34<04:40,  2.79it/s]
+  ⏱ ASK +3.0 min · lines 247 · last: Loading weights:   5%|▍         | 48/963 [00:36<05:27,  2.80it/s]  [heartbeat 2026-10-19T1 · GPU 38784, 81920, 3 MiB/%, RAM 163.3 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ Loading weights:  19%|█▉        | 185/963 [01:38<06:47,  1.91it/s]
+  ASK │ Loading weights:  19%|█▉        | 185/963 [01:38<06:47,  1.91it/s]  [heartbeat 2026-10-19T12:25:36.733+00:00] +3.0 min · last: LOCK 716.py git blob verified
+  ASK │ Loading weights:  33%|███▎      | 316/963 [02:35<03:56,  2.74it/s]
+  ⏱ ASK +4.0 min · lines 248 · last: Loading weights:  19%|█▉        | 185/963 [01:38<06:47,  1.91it/s]  [heartbeat 2026-10-19T · GPU 38812, 81920, 3 MiB/%, RAM 163.3 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ Loading weights:  33%|███▎      | 317/963 [02:36<05:29,  1.96it/s]
+  ASK │ Loading weights:  33%|███▎      | 317/963 [02:36<05:29,  1.96it/s]  [heartbeat 2026-10-19T12:26:36.734+00:00] +4.0 min · last: LOCK 716.py git blob verified
+  ASK │ Loading weights:  47%|████▋     | 449/963 [03:35<04:22,  1.96it/s]
+  ⏱ ASK +5.0 min · lines 249 · last: Loading weights:  33%|███▎      | 317/963 [02:36<05:29,  1.96it/s]  [heartbeat 2026-10-19T · GPU 38840, 81920, 3 MiB/%, RAM 163.2 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ Loading weights:  47%|████▋     | 456/963 [03:37<02:57,  2.85it/s]
+  ASK │ Loading weights:  47%|████▋     | 456/963 [03:37<02:57,  2.85it/s]  [heartbeat 2026-10-19T12:27:36.734+00:00] +5.0 min · last: LOCK 716.py git blob verified
+  ASK │ Loading weights:  61%|██████    | 588/963 [04:35<02:09,  2.89it/s]
+  ⏱ ASK +6.0 min · lines 250 · last: Loading weights:  47%|████▋     | 456/963 [03:37<02:57,  2.85it/s]  [heartbeat 2026-10-19T · GPU 38870, 81920, 3 MiB/%, RAM 163.2 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ Loading weights:  61%|██████▏   | 592/963 [04:37<02:14,  2.76it/s]
+  ASK │ Loading weights:  61%|██████▏   | 592/963 [04:37<02:14,  2.76it/s]  [heartbeat 2026-10-19T12:28:36.734+00:00] +6.0 min · last: LOCK 716.py git blob verified
+  ASK │ Loading weights:  75%|███████▌  | 725/963 [05:35<01:58,  2.01it/s]
+  ⏱ ASK +7.0 min · lines 251 · last: Loading weights:  61%|██████▏   | 592/963 [04:37<02:14,  2.76it/s]  [heartbeat 2026-10-19T · GPU 38898, 81920, 3 MiB/%, RAM 163.2 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ Loading weights:  76%|███████▌  | 732/963 [05:38<01:18,  2.93it/s]
+  ASK │ Loading weights:  76%|███████▌  | 732/963 [05:38<01:18,  2.93it/s]  [heartbeat 2026-10-19T12:29:36.734+00:00] +7.0 min · last: LOCK 716.py git blob verified
+  ASK │ Loading weights:  90%|█████████ | 868/963 [06:35<00:33,  2.81it/s]
+  ⏱ ASK +8.0 min · lines 252 · last: Loading weights:  76%|███████▌  | 732/963 [05:38<01:18,  2.93it/s]  [heartbeat 2026-10-19T · GPU 38928, 81920, 5 MiB/%, RAM 163.1 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ Loading weights:  90%|█████████ | 869/963 [06:37<00:46,  2.03it/s]
+  ASK │ Loading weights:  90%|█████████ | 869/963 [06:37<00:46,  2.03it/s]  [heartbeat 2026-10-19T12:30:36.735+00:00] +8.0 min · last: LOCK 716.py git blob verified
+  ASK │ Loading weights: 100%|█████████▉| 960/963 [07:16<00:01,  2.84it/s]
+  ASK │ Loading weights: 100%|██████████| 963/963 [07:16<00:00,  2.21it/s]
+  ASK │ PASS MODEL_ARCH
+  ASK │ PASS FROZEN
+  ASK │ 2026-10-19T12:31:18.055+00:00 ENGINE_BOOT            716 setup executed unchanged (model-only statements) {"seconds": 451.4, "model_only": true, "P": 31, "arch": [80, 8192, 64, 8, 128], "kv_row_bytes": 327680, "sentinel_before": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "co
+  ASK │ /content/AKBASCORE_SIEMENS_DEMO/test719_program/TEST719_common.py:566: FutureWarning: `torch.distributed.reduce_op` is deprecated, please use `torch.distributed.ReduceOp` instead
+  ASK │   if isinstance(o, torch.Tensor) and getattr(o, 'is_cuda', False):
+
+················································································································
+▶ ASK · C11 mounted alone, GPU memory audit, five sealed questions; then the same questions without any document · 2026-10-19T12:31:20+00:00 · +8.8 min · GPU used 40186 / 81920 MiB (nvidia-smi)
+················································································································
+  ASK │ 2026-10-19T12:31:20.561+00:00 STAGE_START            questions 
+  ASK │ 2026-10-19T12:31:22.929+00:00 MOUNT                  C11 {"rows": 1131, "kv_gib": 0.345, "alloc_gib": 38.733, "ssd_load_ms": 155.496, "h2d_ms": 10.239, "rebuild_ms": 2196.6, "end_to_end_ms": 2364.6}
+  ASK │ /content/AKBASCORE_SIEMENS_DEMO/test719_program/TEST719_common.py:589: FutureWarning: `torch.distributed.reduce_op` is deprecated, please use `torch.distributed.ReduceOp` instead
+  ASK │   if isinstance(o, torch.Tensor) and getattr(o, 'is_cuda', False):
+  ASK │ 2026-10-19T12:31:24.514+00:00 C11_MOUNTED            only C11 in GPU memory {"rows": 1131, "audit": true}
+  ASK │ 2026-10-19T12:31:30.501+00:00 ANSWER                 C11 Q1 {"status": "COMPLETE", "n": 36, "seconds": 5.31}
+
+  ⏱ ASK +9.0 min · lines 265 · last: 2026-10-19T12:31:30.501+00:00 ANSWER                 C11 Q1 {"status": "COMPLETE", "n": 36 · GPU 41230, 81920, 52 MiB/%, RAM 162.7 GiB free, Hugging Face cache 135.4 GiB
+  ASK │ 2026-10-19T12:31:36.419+00:00 ANSWER                 C11 Q2 {"status": "COMPLETE", "n": 36, "seconds": 5.22}
+  ASK │   [heartbeat 2026-10-19T12:31:36.758+00:00] +9.0 min · last: ANSWER C11 Q2
+  ASK │ 2026-10-19T12:32:17.877+00:00 ANSWER                 C11 Q3 {"status": "COMPLETE", "n": 297, "seconds": 40.79}
+  ASK │ 2026-10-19T12:32:26.200+00:00 ANSWER                 C11 Q4 {"status": "COMPLETE", "n": 55, "seconds": 7.68}
+  ASK │ 2026-10-19T12:32:30.321+00:00 ANSWER                 C11 Q5 {"status": "COMPLETE", "n": 24, "seconds": 3.48}
+
+  ⏱ ASK +10.0 min · lines 270 · last: 2026-10-19T12:32:30.321+00:00 ANSWER                 C11 Q5 {"status": "COMPLETE", "n": 24 · GPU 40202, 81920, 53 MiB/%, RAM 162.7 GiB free, Hugging Face cache 135.4 GiB
+  ASK │   [heartbeat 2026-10-19T12:32:36.758+00:00] +10.0 min · last: ANSWER C11 Q5
+  ASK │ 2026-10-19T12:32:59.758+00:00 ANSWER                 NO_DOCUMENT Q1 {"status": "COMPLETE", "n": 202, "seconds": 27.76}
+
+  ⏱ ASK +11.0 min · lines 272 · last: 2026-10-19T12:32:59.758+00:00 ANSWER                 NO_DOCUMENT Q1 {"status": "COMPLETE", · GPU 40852, 81920, 53 MiB/%, RAM 162.6 GiB free, Hugging Face cache 135.4 GiB
+  ASK │   [heartbeat 2026-10-19T12:33:36.759+00:00] +11.0 min · last: ANSWER NO_DOCUMENT Q1
+  ASK │ 2026-10-19T12:33:54.974+00:00 ANSWER                 NO_DOCUMENT Q2 {"status": "COMPLETE", "n": 393, "seconds": 54.53}
+
+  ⏱ ASK +12.0 min · lines 274 · last: 2026-10-19T12:33:54.974+00:00 ANSWER                 NO_DOCUMENT Q2 {"status": "COMPLETE", · GPU 40870, 81920, 53 MiB/%, RAM 162.6 GiB free, Hugging Face cache 135.4 GiB
+  ASK │   [heartbeat 2026-10-19T12:34:36.759+00:00] +12.0 min · last: ANSWER NO_DOCUMENT Q2
+  ASK │ 2026-10-19T12:35:12.506+00:00 ANSWER                 NO_DOCUMENT Q3 {"status": "COMPLETE", "n": 558, "seconds": 76.84}
+  ASK │ 2026-10-19T12:35:31.940+00:00 ANSWER                 NO_DOCUMENT Q4 {"status": "COMPLETE", "n": 135, "seconds": 18.74}
+
+  ⏱ ASK +13.0 min · lines 277 · last: 2026-10-19T12:35:31.940+00:00 ANSWER                 NO_DOCUMENT Q4 {"status": "COMPLETE", · GPU 40762, 81920, 52 MiB/%, RAM 162.6 GiB free, Hugging Face cache 135.4 GiB
+  ASK │   [heartbeat 2026-10-19T12:35:36.759+00:00] +13.0 min · last: ANSWER NO_DOCUMENT Q4
+  ASK │ 2026-10-19T12:35:45.888+00:00 ANSWER                 NO_DOCUMENT Q5 {"status": "COMPLETE", "n": 95, "seconds": 13.27}
+  ASK │ 2026-10-19T12:35:45.897+00:00 ASK_RESULT             ASK_COMPLETE 
+2026-10-19T12:35:50.689+00:00 PROCESS_END        ASK {"exit_code": 0, "minutes": 13.3}
+
+  PROCESS 2 RESULT · status ASK_COMPLETE
+  PASS  new Python process, started after process 1 exited (same Colab VM — not a separate machine)
+  PASS  GPU empty before the model was loaded
+  PASS  no C01–C10 / S1–S5 file and no pair-synthesis text outside the quarantined directories
+  PASS  quarantined build directories never opened (audit hook)
+  PASS  engine cartridge registry = C11 only
+  PASS  same frozen weights as process 1 (weight sentinel)
+  PASS  GPU memory above the model-only baseline = C11 K/V (allocator + unique storages)
+
+  ── Q1 · C11 · COMPLETE · finish EOS · 36 tokens (ceiling 4096) · 5.31 s
+  Q: What is the exact keyboard shortcut used to activate the Korean IME character input system?
+  │ UNKNOWN
+  │ 
+  │ The provided technical operating manual for the SINUMERIK ONE control system does not contain information about the exact keyboard shortcut used to activate the Korean IME character input system.
+
+  ── Q2 · C11 · COMPLETE · finish EOS · 36 tokens (ceiling 4096) · 5.22 s
+  Q: What does the working area limitation function do on a SINUMERIK ONE control, and what does the operator achieve with it?
+  │ UNKNOWN. The provided technical operating manual for the SINUMERIK ONE control system does not specifically mention a "working area limitation function" or describe what the operator achieves with it.
+
+  ── Q3 · C11 · COMPLETE · finish EOS · 297 tokens (ceiling 4096) · 40.79 s
+  Q: Explain how an operator opens a DXF drawing and how an operator views a PDF document on a SINUMERIK ONE control: which operating area is used, and what is done in each case?
+  │ The provided information does not specify the exact steps for opening a DXF drawing or viewing a PDF document on the SINUMERIK ONE control system. However, based on the sections and topics covered in the manual, we can infer the following:
+  │ 
+  │ ### Opening a DXF Drawing:
+  │ 1. **Operating Area**: The section "Working with DXF Files" (Section 10) is likely the relevant area for this task.
+  │ 2. **Steps**:
+  │    - **Save the DXF File**: The operator would first need to save the DXF file to the control system.
+  │    - **Specify Reference Points**: The operator would then specify the reference points for the DXF file.
+  │    - **Accept Contours**: Finally, the operator would accept the contours to import the DXF file into the system.
+  │ 
+  │ ### Viewing a PDF Document:
+  │ 1. **Operating Area**: The section "User Interface and Data Management" (Section 18) might be the relevant area for this task.
+  │ 2. **Steps**:
+  │    - **Access System Data**: The operator would access the system data area where PDF documents are stored.
+  │    - **Open the PDF Document**: The operator would then open the PDF document using the system's file viewer or a dedicated PDF viewer application, if available.
+  │ 
+  │ However, the exact steps for these operations are not detailed in the provided information. For precise instructions, the operator should refer to the specific sections in the SINUMERIK ONE technical operating manual.
+
+  ── Q4 · C11 · COMPLETE · finish EOS · 55 tokens (ceiling 4096) · 7.68 s
+  Q: Which operating area is used both for displaying alarms and for setting remote access, and which softkeys open the alarm list and the remote diagnostics window?
+  │ The operating area used for both displaying alarms and setting remote access is the **Diagnostics and Maintenance** section. The softkeys that open the alarm list and the remote diagnostics window are typically labeled as **"Alarms"** and **"Remote Diagnostics"** respectively.
+
+  ── Q5 · C11 · COMPLETE · finish EOS · 24 tokens (ceiling 4096) · 3.48 s
+  Q: Which edition and software version of the SINUMERIK ONE Universal Operating Manual does your document information come from?
+  │ UNKNOWN
+  │ 
+  │ The provided information does not specify the edition or software version of the SINUMERIK ONE Universal Operating Manual.
+
+  ── Q1 · NO_DOCUMENT · COMPLETE · finish EOS · 202 tokens (ceiling 4096) · 27.76 s
+  Q: What is the exact keyboard shortcut used to activate the Korean IME character input system?
+  │ The exact keyboard shortcut to activate the Korean IME (Input Method Editor) character input system can vary depending on the operating system and the specific IME software being used. Here are the common shortcuts for Windows and macOS:
+  │ 
+  │ ### Windows:
+  │ - **Switch to Korean Input Mode:** `Alt + ~` (or `Alt + ` depending on your keyboard layout)
+  │ - **Switch between Hangul and English:** `Ctrl + Space`
+  │ - **Switch between different input methods (e.g., Hangul, Hanja, English):** `Ctrl + Shift`
+  │ 
+  │ ### macOS:
+  │ - **Switch to Korean Input Mode:** `Command + Space` (to open the input menu and select Korean)
+  │ - **Switch between Hangul and English:** `Option + Space`
+  │ - **Switch between different input methods:** `Control + Space`
+  │ 
+  │ If you are using a different operating system or a specific IME software, the shortcuts might be different. Always refer to the documentation or settings of your IME for the most accurate information.
+
+  ── Q2 · NO_DOCUMENT · COMPLETE · finish EOS · 393 tokens (ceiling 4096) · 54.53 s
+  Q: What does the working area limitation function do on a SINUMERIK ONE control, and what does the operator achieve with it?
+  │ The working area limitation function on a SINUMERIK ONE control is designed to restrict the movement of the machine's axes to a predefined, safe area. This function is particularly useful in scenarios where the machine needs to operate within specific boundaries to avoid collisions with fixtures, workpieces, or other obstacles, or to comply with safety regulations.
+  │ 
+  │ ### What Does It Do?
+  │ 1. **Define Safe Operating Zones**: The operator can define a specific area within which the machine is allowed to move. This area is typically defined by setting limits on the axes' positions.
+  │ 2. **Prevent Overtravel**: It prevents the machine from moving beyond the defined limits, which can help avoid overtravel and potential damage to the machine or workpieces.
+  │ 3. **Enhance Safety**: By limiting the machine's movement, it reduces the risk of accidents and ensures that the machine operates within a safe and controlled environment.
+  │ 4. **Compliance with Standards**: It can help in meeting safety standards and regulations that require machines to operate within certain boundaries.
+  │ 
+  │ ### What Does the Operator Achieve with It?
+  │ 1. **Increased Safety**: The operator can ensure that the machine does not move into areas where it could cause harm to the operator, the machine, or the workpieces.
+  │ 2. **Prevent Damage**: By setting limits, the operator can prevent the machine from colliding with fixed objects or moving parts, which can reduce the risk of damage to the machine and the workpieces.
+  │ 3. **Improved Efficiency**: The operator can optimize the machine's movements by defining the most efficient and safe working area, which can lead to better productivity and reduced downtime.
+  │ 4. **Compliance**: The operator can ensure that the machine complies with safety standards and regulations, which is essential in many industrial settings.
+  │ 
+  │ In summary, the working area limitation function on a SINUMERIK ONE control helps the operator define and enforce a safe and efficient operating area for the machine, enhancing both safety and productivity.
+
+  ── Q3 · NO_DOCUMENT · COMPLETE · finish EOS · 558 tokens (ceiling 4096) · 76.84 s
+  Q: Explain how an operator opens a DXF drawing and how an operator views a PDF document on a SINUMERIK ONE control: which operating area is used, and what is done in each case?
+  │ To open a DXF drawing and view a PDF document on a SINUMERIK ONE control, the operator needs to use specific operating areas and follow certain steps. Here’s a detailed explanation for each case:
+  │ 
+  │ ### Opening a DXF Drawing
+  │ 
+  │ 1. **Operating Area:**
+  │    - **Technology Area** or **Programming Area** (depending on the context and the specific task).
+  │ 
+  │ 2. **Steps:**
+  │    - **Navigate to the Technology Area:**
+  │      - From the main screen, select the "Technology" tab.
+  │    - **Access the DXF Import Function:**
+  │      - Within the Technology Area, look for the option to import or open a DXF file. This might be under a menu like "File" or "Import."
+  │    - **Select the DXF File:**
+  │      - Use the file browser to navigate to the location where the DXF file is stored.
+  │      - Select the DXF file and open it.
+  │    - **View and Manipulate the Drawing:**
+  │      - Once the DXF file is opened, you can view and manipulate the drawing using the tools provided in the Technology Area. This might include zooming, panning, and other viewing options.
+  │ 
+  │ ### Viewing a PDF Document
+  │ 
+  │ 1. **Operating Area:**
+  │    - **Documentation Area** or **Service Area** (depending on the context and the specific task).
+  │ 
+  │ 2. **Steps:**
+  │    - **Navigate to the Documentation Area:**
+  │      - From the main screen, select the "Documentation" tab.
+  │    - **Access the PDF Viewer:**
+  │      - Within the Documentation Area, look for the option to open or view a PDF document. This might be under a menu like "File" or "Open."
+  │    - **Select the PDF File:**
+  │      - Use the file browser to navigate to the location where the PDF file is stored.
+  │      - Select the PDF file and open it.
+  │    - **View the Document:**
+  │      - Once the PDF file is opened, you can view the document using the built-in PDF viewer. This might include features like zooming, panning, and searching within the document.
+  │ 
+  │ ### Summary
+  │ 
+  │ - **DXF Drawing:**
+  │   - **Operating Area:** Technology Area or Programming Area
+  │   - **Steps:** Navigate to the Technology Area, access the DXF import function, select the DXF file, and view/manipulate the drawing.
+  │ 
+  │ - **PDF Document:**
+  │   - **Operating Area:** Documentation Area or Service Area
+  │   - **Steps:** Navigate to the Documentation Area, access the PDF viewer, select the PDF file, and view the document.
+  │ 
+  │ By following these steps, the operator can effectively open and view both DXF drawings and PDF documents on a SINUMERIK ONE control.
+
+  ── Q4 · NO_DOCUMENT · COMPLETE · finish EOS · 135 tokens (ceiling 4096) · 18.74 s
+  Q: Which operating area is used both for displaying alarms and for setting remote access, and which softkeys open the alarm list and the remote diagnostics window?
+  │ The operating area used both for displaying alarms and for setting remote access is typically the **"Diagnostics"** or **"Alarms and Diagnostics"** area. The specific softkeys that open the alarm list and the remote diagnostics window can vary depending on the device or system you are using, but generally:
+  │ 
+  │ - The **"Alarms"** or **"Alarm List"** softkey opens the alarm list.
+  │ - The **"Diagnostics"** or **"Remote Diagnostics"** softkey opens the remote diagnostics window.
+  │ 
+  │ If you have a specific device or system in mind, it would be helpful to consult the user manual or documentation for precise instructions.
+
+  ── Q5 · NO_DOCUMENT · COMPLETE · finish EOS · 95 tokens (ceiling 4096) · 13.27 s
+  Q: Which edition and software version of the SINUMERIK ONE Universal Operating Manual does your document information come from?
+  │ To provide an accurate answer, I would need to check the specific document you are referring to, as the edition and software version can vary. However, if you have a copy of the SINUMERIK ONE Universal Operating Manual, you can typically find the edition and software version information on the title page or in the introduction section of the manual. If you can provide more details or the specific manual you are using, I can help you identify the correct edition and software version.
+──── ✔ ASK finished in 13.3 min (796.7 s) · GPU used 0 / 81920 MiB (nvidia-smi)
+2026-10-19T12:35:50.719+00:00 STEP_DONE          ASK {"seconds": 796.67, "result": {"status": "ASK_COMPLETE", "answers": 10, "minutes": 13.2}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[7/9] Live verification of the experiment records
+      started 2026-10-19T12:35:50+00:00 · 61.4 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T12:35:50.744+00:00 STEP_START         VERIFY {"title": "Live verification of the experiment records"}
+2026-10-19T12:36:07.645+00:00 DISK_CHECK         PASS {"files": 16, "passed": true, "seconds": 16.66}
+2026-10-19T12:36:07.660+00:00 VERIFICATION       VALID {"isolation": "SUPPORTED", "passed": 26, "total": 26, "failed": []}
+  PASS  INTEGRITY SOURCE_PDF_SHA256_AND_PAGES                  486 pages · 88c0f8293ce33021…
+  PASS  INTEGRITY ENGINE_SOURCE_LOCKS                          716.py + 709.py git blobs
+  PASS  INTEGRITY PROGRAM_FILES_SHA256                         5 files
+  PASS  INTEGRITY PANEL_VERIFIED_ON_PDF_BEFORE_MODEL_LOAD      5/5 questions · sealed 2026-10-19T11:34:32.405+00:00 · process 1 started 2026-1…
+  PASS  INTEGRITY PROCESS1_COMPLETE                            BUILD_COMPLETE
+  PASS  INTEGRITY TEN_SOURCE_CARTRIDGES_C01_C10                10/10
+  PASS  INTEGRITY FIVE_PAIR_APPENDS_ALL_80_LAYERS_SHA256       5/5 · engine line PASS APPEND_ALL_80_LAYERS_EXACT_SHA256
+  PASS  INTEGRITY FIVE_PAIR_SYNTHESES_ACCEPTED_NOT_CUT         ["P1: COMPLETE / EOS", "P2: COMPLETE / EOS", "P3: COMPLETE / EOS", "P4: COMPLET…
+  PASS  INTEGRITY S1_S5_WRITTEN_AND_PHYSICALLY_JOINED          5 cartridges · 4 appends
+  PASS  INTEGRITY FINAL_SYNTHESIS_ACCEPTED_NOT_CUT             COMPLETE / EOS · 1100 tokens
+  PASS  INTEGRITY C11_WRITTEN_SHA256                           4bf32cce9785bb84…
+  PASS  INTEGRITY TEN_ANSWERS_RECORDED                         10/10 raw answers produced (5 × C11 alone, 5 × no document)
+  PASS  INTEGRITY WEIGHT_SENTINEL_UNCHANGED                    process 1 and process 2
+  PASS  INTEGRITY CARTRIDGE_FILES_SHA256_ON_DISK               16/16 files (C01–C10, S1–S5, C11)
+  PASS  ISOLATION PROCESS2_COMPLETE                            ASK_COMPLETE
+  PASS  ISOLATION ISOLATION_PROCESS                            new Python process, started after process 1 exited (same Colab VM — not a separ…
+  PASS  ISOLATION ISOLATION_GPU_BEFORE_MODEL_LOAD              GPU empty before the model was loaded
+  PASS  ISOLATION ISOLATION_FILESYSTEM_SCAN                    no C01–C10 / S1–S5 file and no pair-synthesis text outside the quarantined dire…
+  PASS  ISOLATION ISOLATION_QUARANTINE_AUDIT                   quarantined build directories never opened (audit hook)
+  PASS  ISOLATION ISOLATION_CARTRIDGE_DIRECTORY                engine cartridge registry = C11 only
+  PASS  ISOLATION ISOLATION_SAME_WEIGHTS_AS_BUILD              same frozen weights as process 1 (weight sentinel)
+  PASS  ISOLATION ISOLATION_C11_MEMORY_AUDIT                   GPU memory above the model-only baseline = C11 K/V (allocator + unique storages)
+  PASS  FORMAL    XRAYS_FROM_LIVE_KV                           7/7 (five pairs, S1–S5 joint, C11 alone)
+  PASS  FORMAL    SYNTHESIS_FORMAT_AND_FINISH_FLAGS            none
+  PASS  FORMAL    DEFAULT_MEMORY_PROFILE_USED                  chunk 256 · reserve 9 GiB · cached-memory releases before the reserve check: 0
+  PASS  FORMAL    NO_PROCESS_NOTES                             none
+  → scientific result: VALID
+  → isolation of C11: SUPPORTED
+  → formal gaps: none
+──── ✔ VERIFY finished in 0.3 min (16.9 s) · GPU used 0 / 81920 MiB (nvidia-smi)
+2026-10-19T12:36:07.686+00:00 STEP_DONE          VERIFY {"seconds": 16.92, "result": {"passed": 26, "total": 26, "result": "VALID", "isolation": "SUPPORTED", "formal_gaps": [], "provenance": "GPU_REAL"}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[8/9] Ready memory: frozen model + C11 mounted in this notebook process (interface)
+      started 2026-10-19T12:36:07+00:00 · 61.7 min since start · GPU used 0 / 81920 MiB (nvidia-smi)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T12:36:07.711+00:00 STEP_START         READY_MEMORY {"title": "Ready memory: frozen model + C11 mounted in this notebook process (interface)"}
+  engine │ MODEL_DOWNLOAD     snapshot_download of the pinned commit - the Hugging Face progress bars follow (stderr is shown live) {"commit": "495f39366efef23836d0cfae4fbe635880d2be31"}
+  engine │ MODEL_PIN          refs/main -> pinned commit, offline mode {"pinned": true, "commit": "495f39366efef23836d0cfae4fbe635880d2be31", "snapshot": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-72B-Instruct/snapshots/495f39366efef23836d0cfae4fbe635880d2be31"…
+  engine │ LOCK               716.py git blob verified {"blob": "913fa7a4951f2072df4be2eb49120ea86efa5477", "origin": "/content/716.py"}
+PASS 709_GIT_BLOB_LOCK
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+PASS CUDA_A100_80GB
+Loading weights: 100% 963/963 [07:30<00:00,  2.84it/s]PASS MODEL_ARCH
+PASS FROZEN
+  engine │ ENGINE_BOOT        716 setup executed unchanged (model-only statements) {"seconds": 464.8, "model_only": true, "P": 31, "arch": [80, 8192, 64, 8, 128], "kv_row_bytes": 327680, "sentinel_before": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "commit_…
+  engine │ MOUNT              C11 {"rows": 1131, "kv_gib": 0.345, "alloc_gib": 38.733, "ssd_load_ms": 160.85, "h2d_ms": 11.222, "rebuild_ms": 3753.0, "end_to_end_ms": 3927.0}
+2026-10-19T12:43:59.998+00:00 WEIGHT_CHECK       PASS {"utc": "2026-10-19T12:43:59.998+00:00", "passed": true, "before": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "after": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "seconds": 0.01, "reference": "weight sentinel of process 1 at load"}
+2026-10-19T12:44:00.004+00:00 READY_MEMORY       frozen model + C11 mounted in this notebook process {"rows": 1131, "commit": null, "pin": true}
+──── ✔ READY_MEMORY finished in 7.9 min (472.3 s) · GPU free 39.66 GiB · allocated 38.73 GiB · peak 39.26 GiB
+2026-10-19T12:44:00.006+00:00 STEP_DONE          READY_MEMORY {"seconds": 472.29, "result": {"rows": 1131, "seconds": 3.96, "weights_equal_process1": true}}
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+[9/9] Three research figures and downloadable research artifacts
+      started 2026-10-19T12:44:00+00:00 · 69.6 min since start · GPU free 39.66 GiB · allocated 38.73 GiB · peak 39.26 GiB
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+2026-10-19T12:44:00.008+00:00 STEP_START         FIGURES {"title": "Three research figures and downloadable research artifacts"}
+  figure 1/3 · 3999×2250 JPEG · 2.0 MB · 4.0 s · FIGURE_01_PHYSICAL_PAIR_MEMORIES_XRAY.jpg
+  figure 2/3 · 3999×2250 JPEG · 1.4 MB · 1.7 s · FIGURE_02_S1_S5_JOINT_AND_C11_XRAY.jpg
+  figure 3/3 · 3999×2250 JPEG · 1.2 MB · 1.4 s · FIGURE_03_FIVE_QUESTIONS_C11_VS_NO_DOCUMENT.jpg
+2026-10-19T12:44:07.622+00:00 FIGURES            3 rendered {"not_generated": {}}
+──── ✔ FIGURES finished in 0.1 min (7.6 s) · GPU free 39.66 GiB · allocated 38.73 GiB · peak 39.26 GiB
+2026-10-19T12:44:07.624+00:00 STEP_DONE          FIGURES {"seconds": 7.61, "result": {"figures": ["FIGURE_01_PHYSICAL_PAIR_MEMORIES_XRAY.jpg", "FIGURE_02_S1_S5_JOINT_AND_C11_XRAY.jpg", "FIGURE_03_FIVE_QUESTIONS_C11_VS_NO_DOCUMENT.jpg"]}}
+2026-10-19T12:44:12.975+00:00 PACKAGE            SIEM719-20261019-113424_AKBASCORE_SIEMENS_TEST719_ALL_RESEARCH_ARTIFACTS.zip {"files": 119, "bytes": 142054121}
+
+################################################################################################################
+EXPERIMENT FINISHED in 69.7 min · RESULT VALID · C11 isolation supported · no gaps · provenance GPU_REAL
+  scientific result : VALID
+  C11 isolation     : SUPPORTED
+  interface memory  : C11 mounted (1,131 rows)
+################################################################################################################
+2026-10-19T12:44:12.977+00:00 FINISHED           RESULT VALID · C11 isolation supported · no gaps {"seconds": 4183.5, "gaps": 0}
+Colab notebook detected. To show errors in colab notebook, set debug=True in launch()
+* Running on public URL: https://dd11f325d2305dbfc7.gradio.live
+
+This share link is temporary and will last for up to 1 week (best effort). For free permanent hosting and GPU upgrades, run `gradio deploy` from the terminal in the working directory to deploy to Hugging Face Spaces (https://huggingface.co/spaces)
+
+################################################################################################################
+INTERFACE OPEN · https://dd11f325d2305dbfc7.gradio.live
+  public link : https://dd11f325d2305dbfc7.gradio.live
+  local       : http://127.0.0.1:7860/
+  also saved in /content/AKBASCORE_SIEMENS_DEMO/GRADIO_LINK.txt
+################################################################################################################
+2026-10-19T12:44:16.232+00:00 LAUNCH             interface open {"share_url": "https://dd11f325d2305dbfc7.gradio.live", "local_url": "http://127.0.0.1:7860/", "colab_window": null}
+'https://dd11f325d2305dbfc7.gradio.live'
