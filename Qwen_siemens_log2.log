@@ -1,1 +1,376 @@
-1
+AKBASCORE AI TECHNOLOGY — SILICON HIPPOCAMPUS · Qwen2.5-72B / SIEMENS SINUMERIK ONE
+new experiment TEST719 — unpublished, no DOI
+session SIEM719-20261019-113424 · started 2026-10-19T11:34:24+00:00 (2026-10-19T11:34:24.127+00:00 UTC) · written 2026-10-19T12:46:29+00:00
+FINAL STATUS  RESULT VALID · C11 isolation supported · no gaps
+  scientific result: VALID
+  C11 isolation    : SUPPORTED
+PROVENANCE  GPU_REAL
+
+EXPERIMENT  TEST719 — five physical CUT3 pair memories → five question-independent syntheses (S1–S5) → S1–S5 physically joined → final synthesis → new cartridge C11;
+            five fixed questions to C11 alone (new Python process) and to the same model without any document
+ENGINE      716.py git blob 913fa7a4951f2072df4be2eb49120ea86efa5477 · 709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125 (executed unchanged; only MAX_NEW is set per call)
+            process 1: 2026-10-19T11:34:32.545+00:00 → 2026-10-19T12:22:33.975+00:00 UTC · exit 0 · pid 1340 · 2881.4 s · status COMPLETE
+            process 2: 2026-10-19T12:22:34.143+00:00 → 2026-10-19T12:35:50.684+00:00 UTC · exit 0 · pid 14544 · 796.5 s · status COMPLETE
+MODEL       Qwen/Qwen2.5-72B-Instruct · NF4 4-bit, BF16 compute, frozen · pinned snapshot 495f39366efef23836d0cfae4fbe635880d2be31 · Hub main 495f39366efef23836d0cfae4fbe635880d2be31
+            first public release 2024-09-19 — Qwen Team, “Qwen2.5: A Party of Foundation Models!”, blog post dated September 19, 2024 — https://qwenlm.github.io/blog/qwen2.5/ (checked by the code author on 2026-10-18 (web); not re-checked at run time)
+DOCUMENT    SINUMERIK ONE Universal Operating Manual · edition 07/2025 (printed on 486 of 486 pages — verified on the document)
+            order no. A5E48384812B AK · software V6.25 SP1 · 8696401 bytes · SHA-256 88c0f8293ce3302135042baf35d704303fb3b5a24915e28b8ca16f3192a7cc1d
+            downloaded 2026-10-19T11:34:26.829+00:00 → 2026-10-19T11:34:26.983+00:00 UTC from https://cache.industry.siemens.com/dl/files/087/109994087/att_1338962/v1/ONE_universal_op_man_0725_en-US.pdf
+            Not redistributed: Siemens terms restrict passing documents on to third parties (e.g. section 2.3 of the Siemens documentation terms). Download it from the official Siemens address and compare its SHA-256 with this record. (https://support.industry.siemens.com/dokumentation/ExtendedAGB.aspx)
+
+INITIALIZATION (this session)
+  ✓ SOURCES             1.6 s  Verified sources (engine locks, licence, historical logs, TEST719 program files)
+  ✓ PREFLIGHT           0.9 s  System preflight: GPU, RAM, disk, model cache and model identity
+  ✓ DOCUMENT            5.4 s  Original Siemens PDF: download, SHA-256, pages, edition marking
+  ✓ PANEL               0.1 s  Five fixed questions: mandatory source check on the PDF and seal — before any model is loaded
+  ✓ BUILD            2881.5 s  PROCESS 1 — C01–C10, five physical pairs (80-layer SHA-256), S1–S5, C11
+  ✓ ASK               796.7 s  PROCESS 2 — new Python process: C11 alone, five questions; the same questions without any document
+  ✓ VERIFY             16.9 s  Live verification of the experiment records
+  ✓ READY_MEMORY      472.3 s  Ready memory: frozen model + C11 mounted in this notebook process (interface)
+  ✓ FIGURES             7.6 s  Three research figures and downloadable research artifacts
+
+QUESTION PANEL  sealed 2026-10-19T11:34:32.405+00:00 (before any model load) · questions SHA-256 991fa92dd40931e2fb71a38f7b73b8b1ca2307a5ca423591619972bdc6776443 · build config SHA-256 7148366aae22c17adabdf55624c21644e8f89e31c72f8e85174ca54c223a50bb
+
+PROCESS 1 — PHYSICAL MEMORY RECORD · status BUILD_COMPLETE
+  C01  PDF pages 1–40 · 17279 tokens · SHA-256 c635a55b5baaf69d9b8e6d3df28eaa7e8b7ff3d59c17750c55aaaeb8d447b50c
+  C02  PDF pages 41–96 · 16873 tokens · SHA-256 6ae2546c74669e6db8be1dbec78bd4d71cecb79c4d8405825c2a2f6fe2751fbd
+  C03  PDF pages 97–149 · 17062 tokens · SHA-256 a4955a8b5e729c2bd057d11b43a0b928b9b06a7cca5a3098f40172544059bc81
+  C04  PDF pages 150–197 · 17154 tokens · SHA-256 719f8c21b0fef844d86ed51658db6736499ec19094bddbe767e449870f89eedb
+  C05  PDF pages 198–255 · 16888 tokens · SHA-256 adef6bd642e0d03afa3bef50547b694a1e08d3e898b39eb31c9e7814db28e70d
+  C06  PDF pages 256–311 · 16725 tokens · SHA-256 8b2203274b078fdc0ba913dc6c067c011c83149bf2a9c64ddd8a74a9d9ea5810
+  C07  PDF pages 312–362 · 17074 tokens · SHA-256 30b15360a1fb5ff955cc809d81ac023694c06180b2762fe961a831f3477d31e1
+  C08  PDF pages 363–415 · 17040 tokens · SHA-256 c00ab9eb19cdbce74bc52c2b476ef68a8db90805bd553912e89d6fabd3416824
+  C09  PDF pages 416–461 · 17002 tokens · SHA-256 03dd2d3b7a2a86b3244f01b0aad6eb014d56c4fe2d33b2d1d68666787fe4fee7
+  C10  PDF pages 462–486 · 11474 tokens · SHA-256 ec653be652b7e73c64006da43bab2abbbd7ceb0dfcbaad32374b49ab88d4c0a4
+  P1 initialize(C01) → append(C02) · rows 34183 (expected 34183) · PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17310, 'new_tokens': 34183}
+      synthesis COMPLETE · finish EOS (forward passes 809, last token '<|im_end|>') · END marker last line True · 808 tokens (ceiling 8192) · 108.83 s
+  P2 initialize(C03) → append(C04) · rows 34247 (expected 34247) · PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17093, 'new_tokens': 34247}
+      synthesis COMPLETE · finish EOS (forward passes 885, last token '<|im_end|>') · END marker last line True · 884 tokens (ceiling 8192) · 118.92 s
+  P3 initialize(C05) → append(C06) · rows 33644 (expected 33644) · PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 16919, 'new_tokens': 33644}
+      synthesis COMPLETE · finish EOS (forward passes 970, last token '<|im_end|>') · END marker last line True · 969 tokens (ceiling 8192) · 129.71 s
+  P4 initialize(C07) → append(C08) · rows 34145 (expected 34145) · PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17105, 'new_tokens': 34145}
+      synthesis COMPLETE · finish EOS (forward passes 975, last token '<|im_end|>') · END marker last line True · 974 tokens (ceiling 8192) · 130.95 s
+  P5 initialize(C09) → append(C10) · rows 28507 (expected 28507) · PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 17033, 'new_tokens': 28507}
+      synthesis COMPLETE · finish EOS (forward passes 835, last token '<|im_end|>') · END marker last line True · 834 tokens (ceiling 8192) · 113.53 s
+  S1  808 tokens · SHA-256 4283473bfd6fe0ff2d5efc39f333793548289b4b0373d4bea227378dfb973139
+  S2  884 tokens · SHA-256 924e0f6167fa2ea7a2b2008a1fccec2892dcb7044da60584e71c4411ecb94053
+  S3  969 tokens · SHA-256 1e6bd20397ea5b03dc9a1962b5696c99ddcffbfc3a282022e9756c3ef065ee93
+  S4  974 tokens · SHA-256 7d2ccfd9499141d84971320e4cd0b689e0db0389ea08739e0999c73dea1753ca
+  S5  834 tokens · SHA-256 d12f1c43cb165bcec59fb221d0fe5d6a7bc377764f0faa8f94dc9dda302495c6
+  S1–S5 joint · 4500 rows · appends verified [True, True, True, True]
+      final synthesis COMPLETE · finish EOS · END marker last line True · 1100 tokens (ceiling 12288) · 148.47 s
+  C11  1100 tokens · SHA-256 4bf32cce9785bb84941cfeda95b2aa62ca93bab04f55bddbdf3abe1d6aea71b9
+
+PROCESS 2 — C11 ALONE IN A NEW PROCESS (same Colab VM) · status ASK_COMPLETE
+  PASS  new Python process, started after process 1 exited (same Colab VM — not a separate machine)
+  PASS  GPU empty before the model was loaded
+  PASS  no C01–C10 / S1–S5 file and no pair-synthesis text outside the quarantined directories
+  PASS  quarantined build directories never opened (audit hook)
+  PASS  engine cartridge registry = C11 only
+  PASS  same frozen weights as process 1 (weight sentinel)
+  PASS  GPU memory above the model-only baseline = C11 K/V (allocator + unique storages)
+  memory audit: (1) the mounted memory has exactly the rows of C11, its 160 K/V tensors hold exactly rows x 327,680 bytes and their unique storages are not smaller (and at most allocator rounding larger); (2) the allocator holds no more than that above the model-only baseline (+ allocator rounding), so no other K/V memory of material size is resident; (3) the content is C11 because cart_load verified the C11 file SHA-256 and the 80-layer seal of the mounted memory is recorded. Detection floor: resident foreign memory smaller than 32 MiB (about 100 K/V rows) cannot be excluded by the allocator check. The gc census (new non-model CUDA storages since the model-only baseline) is supporting only (fails the audit above 4 MiB): it cannot see tensors held inside C/C++ objects, and it can only fail the audit, never pass it.
+
+THE FIVE FIXED QUESTIONS — FULL RAW ANSWERS (unedited; the indicator is automatic, not expert verification)
+
+  Q1  What is the exact keyboard shortcut used to activate the Korean IME character input system?
+      region C02 (pair P1) · expected (PDF): Alt + S · source: 07/2025 manual, section 3.3.14 "Entering Korean characters" (printed pages 55-58) · PDF check before model load: verified
+      evidence: C02 PDF page 53 · “yin method 1. open the screen form and position the cursor on the input field. press the <alt +s> keys. the editor is displayed. + 2. enter the desired phonetic notation using latin lett”
+      C11 ALONE · COMPLETE · finish EOS · 36 tokens (ceiling 4096) · 5.31 s · indicator UNCLEAR (the answer abstains (UNKNOWN / not available))
+        UNKNOWN
+        
+        The provided technical operating manual for the SINUMERIK ONE control system does not contain information about the exact keyboard shortcut used to activate the Korean IME character input system.
+      NO DOCUMENT · COMPLETE · finish EOS · 202 tokens (ceiling 4096) · 27.76 s · indicator INCORRECT (expected content not found)
+        The exact keyboard shortcut to activate the Korean IME (Input Method Editor) character input system can vary depending on the operating system and the specific IME software being used. Here are the common shortcuts for Windows and macOS:
+        
+        ### Windows:
+        - **Switch to Korean Input Mode:** `Alt + ~` (or `Alt + ` depending on your keyboard layout)
+        - **Switch between Hangul and English:** `Ctrl + Space`
+        - **Switch between different input methods (e.g., Hangul, Hanja, English):** `Ctrl + Shift`
+        
+        ### macOS:
+        - **Switch to Korean Input Mode:** `Command + Space` (to open the input menu and select Korean)
+        - **Switch between Hangul and English:** `Option + Space`
+        - **Switch between different input methods:** `Control + Space`
+        
+        If you are using a different operating system or a specific IME software, the shortcuts might be different. Always refer to the documentation or settings of your IME for the most accurate information.
+
+  Q2  What does the working area limitation function do on a SINUMERIK ONE control, and what does the operator achieve with it?
+      region C03 (pair P2) · expected (PDF): It limits the range within which the tool may traverse (in the channel axes); protection zones in the working area are set up that are inhibited for tool motion · source: 07/2025 manual, section 5.6.1 "Specify working area limitations" (in section 5.6 "Monitoring axis and spindle data", PDF page about 107) · PDF check before model load: verified
+      evidence: C03 PDF page 106 · “thin which a tool should traverse in all channel axes. this function allows you to set up protection zones in the working area that are inhibited for tool motion. in this way, you are able to res”
+      C11 ALONE · COMPLETE · finish EOS · 36 tokens (ceiling 4096) · 5.22 s · indicator UNCLEAR (the answer abstains (UNKNOWN / not available))
+        UNKNOWN. The provided technical operating manual for the SINUMERIK ONE control system does not specifically mention a "working area limitation function" or describe what the operator achieves with it.
+      NO DOCUMENT · COMPLETE · finish EOS · 393 tokens (ceiling 4096) · 54.53 s · indicator CORRECT (rule met)
+        The working area limitation function on a SINUMERIK ONE control is designed to restrict the movement of the machine's axes to a predefined, safe area. This function is particularly useful in scenarios where the machine needs to operate within specific boundaries to avoid collisions with fixtures, workpieces, or other obstacles, or to comply with safety regulations.
+        
+        ### What Does It Do?
+        1. **Define Safe Operating Zones**: The operator can define a specific area within which the machine is allowed to move. This area is typically defined by setting limits on the axes' positions.
+        2. **Prevent Overtravel**: It prevents the machine from moving beyond the defined limits, which can help avoid overtravel and potential damage to the machine or workpieces.
+        3. **Enhance Safety**: By limiting the machine's movement, it reduces the risk of accidents and ensures that the machine operates within a safe and controlled environment.
+        4. **Compliance with Standards**: It can help in meeting safety standards and regulations that require machines to operate within certain boundaries.
+        
+        ### What Does the Operator Achieve with It?
+        1. **Increased Safety**: The operator can ensure that the machine does not move into areas where it could cause harm to the operator, the machine, or the workpieces.
+        2. **Prevent Damage**: By setting limits, the operator can prevent the machine from colliding with fixed objects or moving parts, which can reduce the risk of damage to the machine and the workpieces.
+        3. **Improved Efficiency**: The operator can optimize the machine's movements by defining the most efficient and safe working area, which can lead to better productivity and reduced downtime.
+        4. **Compliance**: The operator can ensure that the machine complies with safety standards and regulations, which is essential in many industrial settings.
+        
+        In summary, the working area limitation function on a SINUMERIK ONE control helps the operator define and enforce a safe and efficient operating area for the machine, enhancing both safety and productivity.
+
+  Q3  Explain how an operator opens a DXF drawing and how an operator views a PDF document on a SINUMERIK ONE control: which operating area is used, and what is done in each case?
+      region C04 (pair P2) + C07 (pair P4) — two different pairs · expected (PDF): Both start in the "Program manager" operating area: for DXF, position the cursor on the DXF file and press the "Open" softkey (the CAD drawing is displayed with all its layers); for PDF documents, select the storage location in the Program manager and open the PDF file to view it · source: 07/2025 manual, section 7.17.2.1 "Open a DXF file" (PDF page about 191, C04) and section 13.13 "Viewing PDF documents" (PDF page about 358, C07) · PDF check before model load: verified
+      evidence: C04 PDF page 190 · “lay. 3. press the "open" softkey. the selected cad drawing will be displayed with all its layers, i.e. with all graphic levels. 4. press the "close" softkey to close the cad drawing and”
+      evidence: C07 PDF page 357 · “art the control in order to activate the configuration and to obtain the softkeys in the "program manager" operating area. note if a drive is presently being used, e.g. a program is being execute”
+      C11 ALONE · COMPLETE · finish EOS · 297 tokens (ceiling 4096) · 40.79 s · indicator UNCLEAR (the answer abstains (UNKNOWN / not available))
+        The provided information does not specify the exact steps for opening a DXF drawing or viewing a PDF document on the SINUMERIK ONE control system. However, based on the sections and topics covered in the manual, we can infer the following:
+        
+        ### Opening a DXF Drawing:
+        1. **Operating Area**: The section "Working with DXF Files" (Section 10) is likely the relevant area for this task.
+        2. **Steps**:
+           - **Save the DXF File**: The operator would first need to save the DXF file to the control system.
+           - **Specify Reference Points**: The operator would then specify the reference points for the DXF file.
+           - **Accept Contours**: Finally, the operator would accept the contours to import the DXF file into the system.
+        
+        ### Viewing a PDF Document:
+        1. **Operating Area**: The section "User Interface and Data Management" (Section 18) might be the relevant area for this task.
+        2. **Steps**:
+           - **Access System Data**: The operator would access the system data area where PDF documents are stored.
+           - **Open the PDF Document**: The operator would then open the PDF document using the system's file viewer or a dedicated PDF viewer application, if available.
+        
+        However, the exact steps for these operations are not detailed in the provided information. For precise instructions, the operator should refer to the specific sections in the SINUMERIK ONE technical operating manual.
+      NO DOCUMENT · COMPLETE · finish EOS · 558 tokens (ceiling 4096) · 76.84 s · indicator UNCLEAR (only part of the expected answer)
+        To open a DXF drawing and view a PDF document on a SINUMERIK ONE control, the operator needs to use specific operating areas and follow certain steps. Here’s a detailed explanation for each case:
+        
+        ### Opening a DXF Drawing
+        
+        1. **Operating Area:**
+           - **Technology Area** or **Programming Area** (depending on the context and the specific task).
+        
+        2. **Steps:**
+           - **Navigate to the Technology Area:**
+             - From the main screen, select the "Technology" tab.
+           - **Access the DXF Import Function:**
+             - Within the Technology Area, look for the option to import or open a DXF file. This might be under a menu like "File" or "Import."
+           - **Select the DXF File:**
+             - Use the file browser to navigate to the location where the DXF file is stored.
+             - Select the DXF file and open it.
+           - **View and Manipulate the Drawing:**
+             - Once the DXF file is opened, you can view and manipulate the drawing using the tools provided in the Technology Area. This might include zooming, panning, and other viewing options.
+        
+        ### Viewing a PDF Document
+        
+        1. **Operating Area:**
+           - **Documentation Area** or **Service Area** (depending on the context and the specific task).
+        
+        2. **Steps:**
+           - **Navigate to the Documentation Area:**
+             - From the main screen, select the "Documentation" tab.
+           - **Access the PDF Viewer:**
+             - Within the Documentation Area, look for the option to open or view a PDF document. This might be under a menu like "File" or "Open."
+           - **Select the PDF File:**
+             - Use the file browser to navigate to the location where the PDF file is stored.
+             - Select the PDF file and open it.
+           - **View the Document:**
+             - Once the PDF file is opened, you can view the document using the built-in PDF viewer. This might include features like zooming, panning, and searching within the document.
+        
+        ### Summary
+        
+        - **DXF Drawing:**
+          - **Operating Area:** Technology Area or Programming Area
+          - **Steps:** Navigate to the Technology Area, access the DXF import function, select the DXF file, and view/manipulate the drawing.
+        
+        - **PDF Document:**
+          - **Operating Area:** Documentation Area or Service Area
+          - **Steps:** Navigate to the Documentation Area, access the PDF viewer, select the PDF file, and view the document.
+        
+        By following these steps, the operator can effectively open and view both DXF drawings and PDF documents on a SINUMERIK ONE control.
+
+  Q4  Which operating area is used both for displaying alarms and for setting remote access, and which softkeys open the alarm list and the remote diagnostics window?
+      region C09 + C10 (pair P5) — two different cartridges · expected (PDF): The "Diagnostics" operating area; the "Alarm list" softkey opens the alarm list and the "Remote diag." softkey opens the remote diagnostics window · source: 07/2025 manual, section 18.1 "Alarm, error, and system messages" (PDF pages about 455-460, C09) and section 18.7.1 "Setting remote access" (PDF page about 474, C10) · PDF check before model load: verified
+      evidence: C09 PDF page 455 · “service and diagnostics 18 18.1 alarm, error, and system messages 18.1.1 displaying alarms if the machine develop”
+      evidence: C10 PDF page 473 · “service and diagnostics 18.6 logbook note deleting logbook entries up to the completion of the 2nd commissioning,”
+      C11 ALONE · COMPLETE · finish EOS · 55 tokens (ceiling 4096) · 7.68 s · indicator CORRECT (rule met)
+        The operating area used for both displaying alarms and setting remote access is the **Diagnostics and Maintenance** section. The softkeys that open the alarm list and the remote diagnostics window are typically labeled as **"Alarms"** and **"Remote Diagnostics"** respectively.
+      NO DOCUMENT · COMPLETE · finish EOS · 135 tokens (ceiling 4096) · 18.74 s · indicator CORRECT (rule met)
+        The operating area used both for displaying alarms and for setting remote access is typically the **"Diagnostics"** or **"Alarms and Diagnostics"** area. The specific softkeys that open the alarm list and the remote diagnostics window can vary depending on the device or system you are using, but generally:
+        
+        - The **"Alarms"** or **"Alarm List"** softkey opens the alarm list.
+        - The **"Diagnostics"** or **"Remote Diagnostics"** softkey opens the remote diagnostics window.
+        
+        If you have a specific device or system in mind, it would be helpful to consult the user manual or documentation for precise instructions.
+
+  Q5  Which edition and software version of the SINUMERIK ONE Universal Operating Manual does your document information come from?
+      region all cartridges (footer on every page) + C01 (title / legal pages) · expected (PDF): Edition 07/2025, CNC software V6.25 SP1 · source: 07/2025 manual: title and legal pages; the edition 07/2025 is printed in the footer of every page · PDF check before model load: verified
+      evidence: C01 PDF page 1 · “7 program service and diagnostics 18 valid for control sinumerik one cnc software version v6.25 sp1 sinumerik operate for pcu/pc v6.25 sp1 07/2025 a5e48384812b ak legal information warning”
+      evidence: found in 10/10 cartridges
+      C11 ALONE · COMPLETE · finish EOS · 24 tokens (ceiling 4096) · 3.48 s · indicator UNCLEAR (the answer abstains (UNKNOWN / not available))
+        UNKNOWN
+        
+        The provided information does not specify the edition or software version of the SINUMERIK ONE Universal Operating Manual.
+      NO DOCUMENT · COMPLETE · finish EOS · 95 tokens (ceiling 4096) · 13.27 s · indicator INCORRECT (expected content not found)
+        To provide an accurate answer, I would need to check the specific document you are referring to, as the edition and software version can vary. However, if you have a copy of the SINUMERIK ONE Universal Operating Manual, you can typically find the edition and software version information on the title page or in the introduction section of the manual. If you can provide more details or the specific manual you are using, I can help you identify the correct edition and software version.
+
+C11 BODY TEXT (general final synthesis, model-generated)
+  The technical operating manual for the SINUMERIK ONE control system provides a comprehensive guide for setting up, operating, and maintaining a CNC machine. The manual is divided into several sections, each covering specific aspects of the system.
+  
+  ### Main Topics:
+  1. **Introduction and Overview**:
+     - Overview of the SINUMERIK CNC system, its applications, and benefits.
+     - Target audience, documentation, and online resources.
+  
+  2. **Fundamental Safety Instructions**:
+     - General safety instructions, warranty and liability, and cybersecurity information.
+  
+  3. **Fundamentals**:
+     - Product overview, operator components, and interface.
+     - Multi-touch operation and machine control panels.
+  
+  4. **Setting Up the Machine**:
+     - Switching on and off, approaching reference points, and modes of operation.
+     - Settings for coordinate systems and units of measurement.
+  
+  5. **Manual Mode Operations**:
+     - JOG mode, handwheel assignment, and MDI mode.
+  
+  6. **Program Execution**:
+     - Starting and stopping machining, program running-in, and correction.
+  
+  7. **Program Control**:
+     - Program control modes, overstore, and editing.
+  
+  8. **User Variables and G Functions**:
+     - Defining and displaying user variables, and G functions.
+  
+  9. **Synchronized Actions and Program Runtime**:
+     - Displaying synchronized actions and program runtime.
+  
+  10. **Working with DXF Files**:
+      - Saving, specifying reference points, and accepting contours.
+  
+  11. **Mold Making View**:
+      - Displaying and adapting the view, jumping to program blocks, and changing the view.
+  
+  12. **Simulating Machining**:
+      - Simulation process, different views, and editing the simulation display.
+  
+  13. **Creating a G Code Program**:
+      - Graphical programming, program views, and structure.
+  
+  14. **Tool Management**:
+      - Tool lists, types, dimensioning, and management.
+  
+  15. **Energy Management (Ctrl-Energy)**:
+      - Energy-saving profiles, energy analysis, and profile activation.
+  
+  16. **PLC Operations**:
+      - Ladder diagrams, PLC properties, and variables.
+  
+  17. **Diagnostics and Maintenance**:
+      - Alarms, messages, version data, and logbook.
+  
+  18. **User Interface and Data Management**:
+      - Screenshots, system data, and remote diagnostics.
+  
+  ### Operating Procedures and Functions:
+  - **Touch Panels and Multi-touch Operation**: Using touch panels and finger gestures for system control.
+  - **Machine Control Panels**: Instructions for using the MCP 2200c.
+  - **Program Execution**: Procedures for executing part programs in different modes.
+  - **Reference Point Approach**: Steps for referencing axes and confirming user agreements.
+  - **Unit and Coordinate System Switching**: Instructions for changing units and coordinate systems.
+  - **Manual Mode Operations**: Detailed steps for JOG, handwheel assignment, and MDI mode.
+  - **Program Control**: Settings for program control, overstore, and editing.
+  - **User Variables and G Functions**: Procedures for defining and displaying user variables and G functions.
+  - **Synchronized Actions and Program Runtime**: Displaying synchronized actions and program runtime.
+  - **Working with DXF Files**: Saving, specifying reference points, and accepting contours.
+  - **Mold Making View**: Displaying and adapting the view, jumping to program blocks.
+  - **Simulating Machining**: Simulation process, different views, and editing the display.
+  - **Creating a G Code Program**: Graphical programming, program views, and structure.
+  - **Tool Management**: Managing tool lists, types, and dimensions.
+  - **Energy Management**: Creating, editing, and activating energy-saving profiles.
+  - **PLC Operations**: Editing and displaying ladder diagrams, managing PLC variables.
+  - **Diagnostics and Maintenance**: Managing alarms, messages, version data, and logbook.
+  - **User Interface and Data Management**: Creating and managing screenshots, accessing system data, and setting up remote diagnostics.
+  
+  ### Important Conditions and Constraints:
+  - **Safety Instructions**: Emphasis on following safety guidelines to prevent accidents.
+  - **Cybersecurity**: Need for a comprehensive cybersecurity strategy and regular software updates.
+  - **User Responsibility**: Users are responsible for ensuring correct operation and maintenance.
+  - **Machine Data and Manufacturer Specifications**: Many procedures are dependent on machine data and manufacturer specifications.
+  - **Safety Interlocks**: Safety interlocks must be activated before executing a program.
+  - **Reset State**: Many operations require the machine to be in the reset state.
+  - **Program Integrity**: Changes to programs in the NC memory are immediate.
+  - **Energy-Saving Profiles**: A maximum of 8 profiles can be created.
+  - **PLC Operations**: The program status must be stopped before editing program blocks.
+  - **Alarms and Messages**: Alarms can be filtered by the machine OEM.
+  - **Remote Diagnostics**: Remote access requires manual or automatic confirmation.
+  
+  ### Relationship Between Sections:
+  - **Complementary Information**: The sections provide complementary information, with earlier sections laying the groundwork and later sections offering more detailed and specific instructions.
+  - **Seamless Workflow**: The procedures in all sections are designed to support a seamless workflow, from initial machine setup to advanced program execution and editing.
+  - **User Flexibility**: The manual emphasizes user flexibility, allowing operators to customize settings and procedures to suit their specific needs and machine configurations.
+  
+  END OF SYNTHESIS.
+
+QUESTIONS ASKED IN THE INTERFACE (not part of the sealed panel)
+  [C11] What is the exact keyboard shortcut used to activate the Korean IME character input system?
+      COMPLETE · finish EOS → UNKNOWN
+
+The provided technical operating manual for the SINUMERIK ONE control system does not contain information about the exact keyboard shortcut used to activate the Korean IME character input system.
+  [no document] What is the exact keyboard shortcut used to activate the Korean IME character input system?
+      COMPLETE · finish EOS → The exact keyboard shortcut to activate the Korean IME (Input Method Editor) character input system can vary depending on the operating system and the specific IME software being used. Here are the common shortcuts for Windows and macOS:
+
+### Windows:
+- **Switch to Korean Input Mode:** `Alt + ~` (or `Alt + ` depending on your keyboard layout)
+- **Switch between Hangul and English:** `Ctrl + Space`
+- **Switch between different input methods (e.g., Hangul, Hanja, English):** `Ctrl + Shift`
+
+### macOS:
+- **Switch to Korean Input Mode:** `Command + Space` (to open the input menu and select Korean)
+- **Switch between Hangul and English:** `Option + Space`
+- **Switch between different input methods:** `Control + Space`
+
+If you are using a different operating system or a specific IME software, the shortcuts might be different. Always refer to the documentation or settings of your IME for the most accurate information.
+
+LIVE VERIFICATION  26/26 passed
+  PASS  SOURCE_PDF_SHA256_AND_PAGES  486 pages · 88c0f8293ce33021…
+  PASS  ENGINE_SOURCE_LOCKS  716.py + 709.py git blobs
+  PASS  PROGRAM_FILES_SHA256  5 files
+  PASS  PANEL_VERIFIED_ON_PDF_BEFORE_MODEL_LOAD  5/5 questions · sealed 2026-10-19T11:34:32.405+00:00 · process 1 started 2026-10-19T11:34:32.545+00:00
+  PASS  PROCESS1_COMPLETE  BUILD_COMPLETE
+  PASS  TEN_SOURCE_CARTRIDGES_C01_C10  10/10
+  PASS  FIVE_PAIR_APPENDS_ALL_80_LAYERS_SHA256  5/5 · engine line PASS APPEND_ALL_80_LAYERS_EXACT_SHA256
+  PASS  FIVE_PAIR_SYNTHESES_ACCEPTED_NOT_CUT  ["P1: COMPLETE / EOS", "P2: COMPLETE / EOS", "P3: COMPLETE / EOS", "P4: COMPLETE / EOS", "P5: COMPLETE / EOS"]
+  PASS  S1_S5_WRITTEN_AND_PHYSICALLY_JOINED  5 cartridges · 4 appends
+  PASS  FINAL_SYNTHESIS_ACCEPTED_NOT_CUT  COMPLETE / EOS · 1100 tokens
+  PASS  C11_WRITTEN_SHA256  4bf32cce9785bb84…
+  PASS  TEN_ANSWERS_RECORDED  10/10 raw answers produced (5 × C11 alone, 5 × no document)
+  PASS  WEIGHT_SENTINEL_UNCHANGED  process 1 and process 2
+  PASS  CARTRIDGE_FILES_SHA256_ON_DISK  16/16 files (C01–C10, S1–S5, C11)
+  PASS  PROCESS2_COMPLETE  ASK_COMPLETE
+  PASS  ISOLATION_PROCESS  new Python process, started after process 1 exited (same Colab VM — not a separate machine)
+  PASS  ISOLATION_GPU_BEFORE_MODEL_LOAD  GPU empty before the model was loaded
+  PASS  ISOLATION_FILESYSTEM_SCAN  no C01–C10 / S1–S5 file and no pair-synthesis text outside the quarantined directories
+  PASS  ISOLATION_QUARANTINE_AUDIT  quarantined build directories never opened (audit hook)
+  PASS  ISOLATION_CARTRIDGE_DIRECTORY  engine cartridge registry = C11 only
+  PASS  ISOLATION_SAME_WEIGHTS_AS_BUILD  same frozen weights as process 1 (weight sentinel)
+  PASS  ISOLATION_C11_MEMORY_AUDIT  GPU memory above the model-only baseline = C11 K/V (allocator + unique storages)
+  PASS  XRAYS_FROM_LIVE_KV  7/7 (five pairs, S1–S5 joint, C11 alone)
+  PASS  SYNTHESIS_FORMAT_AND_FINISH_FLAGS  none
+  PASS  DEFAULT_MEMORY_PROFILE_USED  chunk 256 · reserve 9 GiB · cached-memory releases before the reserve check: 0
+  PASS  NO_PROCESS_NOTES  none
+
+PREVIOUSLY DEMONSTRATED — MULTI-CARTRIDGE MEMORY CONSOLIDATION
+The physical consolidation of three independent memory cartridges into a single live 80-layer K/V memory has already been demonstrated on frozen Qwen2.5-72B-Instruct, including sequential cartridge mounting, exact SHA-256 integrity verification, and internal memory X-ray measurements.
+For the implementation, experimental evidence, and multi-cartridge question-answering observations, see: Research Record III — Qwen2.5-72B, Direct Internal-State Injection · Zenodo Record 23434686 · https://zenodo.org/records/23434686
+(Previously published research — not a result of this experiment.)
+
+RESEARCH LINEAGE
+  Research Record I — Qwen2.5-7B: https://doi.org/10.5281/zenodo.23381336
+  Research Record II — Mistral-7B, Silicon Hippocampus v1.4: https://doi.org/10.5281/zenodo.23418927
+  Research Record III — Qwen2.5-72B, Direct Internal-State Injection: https://doi.org/10.5281/zenodo.23434686
+  This experiment: unpublished — no DOI.
+
+HISTORICAL REFERENCE (earlier runs, not this session): 716.log blob 1b87e698a0420bb524bd93854709cef9e4069484, 717.log blob 2f6225db7346854e9cebded269b002293a93392d, 718.log blob 25c96ade2942727289530526b7fe15dd9beddc02
+
+SCOPE  C11 is a new physical memory written from a model-generated general synthesis, not a lossless merge of C01–C10. Five questions are a live demonstration, not a statistic; the indicator is an automatic text rule. A correct no-document answer may come from pre-training. Process 2 is a new process on the same Colab VM, not a separate machine.
+Mustafa Akbaş · AkbasCore AI Teknoloji · AKBASCORE RESEARCH SOFTWARE LICENSE · Copyright © 2026 Mustafa Akbaş
