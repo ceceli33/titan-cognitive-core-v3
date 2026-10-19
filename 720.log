@@ -1,0 +1,42 @@
+ ============================================================================================================
+AKBASCORE PROMETHEUS — TEST720 — LOCKED TEST709 VS HOOK-FREE DIRECT CUT3
+============================================================================================================
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'torch_cuda': '13.0', 'visible_devices': 'UNSET'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS RESERVE 
+GPU_PREFLIGHT {'free_gib': 78.833, 'allocated_gib': 0.0, 'peak_gib': 0.0, 'total_gib': 79.251}
+FETCH_LOCKED_SOURCES
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT []
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 77.8kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 882kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 81.2MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.2MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 126MB/s]LOAD_FROZEN_72B_NF4
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.62MB/s]Download complete:   125GB, 1.28GB/s  Reconstruction complete: 100%  145GB /  145GB,  551MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00, 10.42s/it]Loading weights: 100% 963/963 [06:26<00:00,  3.29it/s]generation_config.json: 100% 242/242 [00:00<00:00, 26.3kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+MODEL_READY {'free_gib': 39.673, 'allocated_gib': 38.379, 'peak_gib': 38.786, 'total_gib': 79.251}
+PASS MULTICHUNK_BODY 
+REFERENCE_FORGE 465
+FORGE_PROGRESS T720 128 / 496 GPU {'free_gib': 39.421, 'allocated_gib': 38.427, 'peak_gib': 38.923, 'total_gib': 79.251}
+NATIVE_FORGE 465
+PASS NATIVE_FORGE_SHAPE 
+PASS CAPTURE_H3_EXACT_SHA 
+PASS CAPTURE_L0_L3_EXACT_SHA 
+FORGE_PARITY_PASS
+REFERENCE_INITIALIZE
+NATIVE_INITIALIZE
+PASS NATIVE_INIT_80_LAYERS 
+PASS FULL_80_LAYER_KV_SHA256_EXACT {'layers': 80, 'matched': 80}
+INITIALIZE_PARITY_PASS
+NATIVE_ANSWER
+REFERENCE_ANSWER
+PASS GREEDY_ANSWER_EXACT {'reference': 'The role of an original evidence cartridge is to serve as a source of physical memory that can be reloaded at CUT3. It is preserved by the controller and is not replaceable by a synthesis, which is not a lossless replacement for', 'native': 'The role of an original evidence cartridge is to serve as a source of physical memory that can be reloaded at CUT3. It is preserved by the controller and is not replaceable by a synthesis, which is not a lossless replacement for'}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+============================================================================================================
+TEST720_RESULT PASS_NATIVE_CAPTURE_AND_INITIALIZE_PARITY
+RESULT_JSON /content/AKBASCORE_TEST720/TEST720_results.json
+RESULT_LOG /content/AKBASCORE_TEST720/TEST720.log
+============================================================================================================
