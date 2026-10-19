@@ -1,0 +1,240 @@
+ ============================================================================================================
+AKBASCORE PROMETHEUS — TEST721 — H3 NUMERICAL ADDRESSING / SHA LEDGER / PHYSICAL RELOAD
+============================================================================================================
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS RESERVE 
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 83.7kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 916kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 83.1MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 67.4MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 129MB/s]LOAD_FROZEN_72B_NF4
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.19MB/s]Download complete:   125GB, 1.38GB/s  Reconstruction complete: 100%  145GB /  145GB,  845MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00,  9.65s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.26it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.1kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+MODEL_READY {'free_gib': 39.673, 'allocated_gib': 38.379, 'peak_gib': 38.786, 'total_gib': 79.251}
+FORGE_NATIVE C01
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C01 
+PASS NONEMPTY_H3_C01 
+PHYSICAL_COMMIT C01 eabe28d8ef7a45d1cdcb94bd46a61dcc5b5c302f54ae83397d3fc22fd2793120 tokens 55 forge_s 1.893
+FORGE_NATIVE C02
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C02 
+PASS NONEMPTY_H3_C02 
+PHYSICAL_COMMIT C02 d736d87fbfd15a97b2c5a884879f8d209daf529a1a1d200449b54350ad276a24 tokens 55 forge_s 0.592
+FORGE_NATIVE C03
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C03 
+PASS NONEMPTY_H3_C03 
+PHYSICAL_COMMIT C03 1c616ce4de4e8c3b57456a0e5c40abde59594ff92ef72c323e37ed153a491f97 tokens 55 forge_s 0.584
+FORGE_NATIVE C04
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C04 
+PASS NONEMPTY_H3_C04 
+PHYSICAL_COMMIT C04 7e9c51e465f1e94d21499192a0264a22083efe41e0bc4045a3c3eb905363729d tokens 55 forge_s 0.588
+FORGE_NATIVE C05
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C05 
+PASS NONEMPTY_H3_C05 
+PHYSICAL_COMMIT C05 7cf0cab76aa312f509c641f9c2c92d39e337a202af417a5d05de86d057c225e1 tokens 54 forge_s 0.588
+FORGE_NATIVE C06
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C06 
+PASS NONEMPTY_H3_C06 
+PHYSICAL_COMMIT C06 79dfa7a7dcaa2bf97a43f2faf5ffc560ef436f839f9cd8b5a5893ecc2d4c1582 tokens 56 forge_s 0.581
+FORGE_NATIVE C07
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C07 
+PASS NONEMPTY_H3_C07 
+PHYSICAL_COMMIT C07 5c6c5af08692512be12a68037a747fb47231f6dba7d04109f4b2226610a663b9 tokens 53 forge_s 0.582
+FORGE_NATIVE C08
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C08 
+PASS NONEMPTY_H3_C08 
+PHYSICAL_COMMIT C08 4e53688750370a549a5c105ed1fd7e683857f96320ae469fe652749278aeb063 tokens 54 forge_s 0.583
+FORGE_NATIVE C09
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C09 
+PASS NONEMPTY_H3_C09 
+PHYSICAL_COMMIT C09 744d33c38f5787deba0f1da21d4e8e5e661c322fccf33e97e4e80d9c2afd6c09 tokens 54 forge_s 0.584
+FORGE_NATIVE C10
+PASS NATIVE_FORGE_SHAPE 
+PASS BODY_TOKENS_C10 
+PASS NONEMPTY_H3_C10 
+PHYSICAL_COMMIT C10 2e67f0268df99232f1f55b4ae873e33bed4ca035c138a4fbdf5adf4302d1e37e tokens 55 forge_s 0.581
+PASS TEN_PHYSICAL_CARTRIDGES 
+PASS TEN_UNIQUE_SHA256 
+PASS MANIFEST_RELOAD 
+PASS FILE_SHA_C01 
+PASS CART_SHAPE_C01 
+PASS CART_TENSOR_SHA_C01 
+PASS NONEMPTY_H3_C01 
+PASS BANK_DISK_PARITY_C01 
+PASS FILE_SHA_C02 
+PASS CART_SHAPE_C02 
+PASS CART_TENSOR_SHA_C02 
+PASS NONEMPTY_H3_C02 
+PASS BANK_DISK_PARITY_C02 
+PASS FILE_SHA_C03 
+PASS CART_SHAPE_C03 
+PASS CART_TENSOR_SHA_C03 
+PASS NONEMPTY_H3_C03 
+PASS BANK_DISK_PARITY_C03 
+PASS FILE_SHA_C04 
+PASS CART_SHAPE_C04 
+PASS CART_TENSOR_SHA_C04 
+PASS NONEMPTY_H3_C04 
+PASS BANK_DISK_PARITY_C04 
+PASS FILE_SHA_C05 
+PASS CART_SHAPE_C05 
+PASS CART_TENSOR_SHA_C05 
+PASS NONEMPTY_H3_C05 
+PASS BANK_DISK_PARITY_C05 
+PASS FILE_SHA_C06 
+PASS CART_SHAPE_C06 
+PASS CART_TENSOR_SHA_C06 
+PASS NONEMPTY_H3_C06 
+PASS BANK_DISK_PARITY_C06 
+PASS FILE_SHA_C07 
+PASS CART_SHAPE_C07 
+PASS CART_TENSOR_SHA_C07 
+PASS NONEMPTY_H3_C07 
+PASS BANK_DISK_PARITY_C07 
+PASS FILE_SHA_C08 
+PASS CART_SHAPE_C08 
+PASS CART_TENSOR_SHA_C08 
+PASS NONEMPTY_H3_C08 
+PASS BANK_DISK_PARITY_C08 
+PASS FILE_SHA_C09 
+PASS CART_SHAPE_C09 
+PASS CART_TENSOR_SHA_C09 
+PASS NONEMPTY_H3_C09 
+PASS BANK_DISK_PARITY_C09 
+PASS FILE_SHA_C10 
+PASS CART_SHAPE_C10 
+PASS CART_TENSOR_SHA_C10 
+PASS NONEMPTY_H3_C10 
+PASS BANK_DISK_PARITY_C10 
+PASS QUERY_LIMIT_0 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the AX-731 coolant regulator stored?", "selected": "C01", "top3": ["C01", "C02", "C10"], "scores": {"C01": 0.70811993, "C02": 0.65666223, "C10": 0.65531242, "C05": 0.65381157, "C07": 0.65361816, "C04": 0.65260375, "C06": 0.65013981, "C03": 0.64892662, "C08": 0.64808965, "C09": 0.64552683}, "gold_cartridge": "C01", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_1 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the BT-962 torque controller stored?", "selected": "C02", "top3": ["C02", "C10", "C07"], "scores": {"C02": 0.7037704, "C10": 0.66194952, "C07": 0.65719366, "C08": 0.65624082, "C04": 0.65420157, "C01": 0.65394366, "C06": 0.65157628, "C03": 0.65126455, "C05": 0.65024126, "C09": 0.64842117}, "gold_cartridge": "C02", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_2 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the DN-348 servo monitor stored?", "selected": "C03", "top3": ["C03", "C04", "C07"], "scores": {"C03": 0.70333397, "C04": 0.65712368, "C07": 0.65550745, "C02": 0.65528786, "C10": 0.65356529, "C06": 0.65310884, "C05": 0.65233833, "C08": 0.6512289, "C01": 0.65038025, "C09": 0.64824921}, "gold_cartridge": "C03", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_3 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the EV-415 pressure sensor stored?", "selected": "C04", "top3": ["C04", "C02", "C07"], "scores": {"C04": 0.70427233, "C02": 0.65129298, "C07": 0.65014362, "C01": 0.64973253, "C10": 0.64962411, "C06": 0.64881337, "C03": 0.64828885, "C08": 0.64710438, "C05": 0.64461261, "C09": 0.64322996}, "gold_cartridge": "C04", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_4 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the FK-276 spindle driver stored?", "selected": "C05", "top3": ["C05", "C02", "C07"], "scores": {"C05": 0.70479202, "C02": 0.65624207, "C07": 0.65379268, "C01": 0.65366757, "C06": 0.65165955, "C03": 0.65149218, "C10": 0.65057164, "C04": 0.65021163, "C08": 0.64985526, "C09": 0.6490792}, "gold_cartridge": "C05", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_5 21
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the GL-583 motor coupler stored?", "selected": "C06", "top3": ["C06", "C07", "C10"], "scores": {"C06": 0.71668345, "C07": 0.65782475, "C10": 0.6552512, "C04": 0.65522283, "C02": 0.6540361, "C09": 0.65132755, "C01": 0.65084755, "C03": 0.64965755, "C05": 0.6489765, "C08": 0.64873594}, "gold_cartridge": "C06", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_6 19
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the HM-824 encoder stored?", "selected": "C07", "top3": ["C07", "C10", "C02"], "scores": {"C07": 0.70288348, "C10": 0.66700429, "C02": 0.66569948, "C06": 0.66368973, "C04": 0.66262406, "C01": 0.65971571, "C05": 0.65923864, "C03": 0.65910661, "C08": 0.65876466, "C09": 0.65571964}, "gold_cartridge": "C07", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_7 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the JP-139 feed controller stored?", "selected": "C08", "top3": ["C08", "C02", "C10"], "scores": {"C08": 0.70222431, "C02": 0.65688145, "C10": 0.65001142, "C07": 0.64974242, "C04": 0.64847869, "C01": 0.64738053, "C03": 0.64710081, "C05": 0.64687896, "C06": 0.64622664, "C09": 0.6436922}, "gold_cartridge": "C08", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_8 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the KR-657 relay module stored?", "selected": "C09", "top3": ["C09", "C06", "C02"], "scores": {"C09": 0.70090669, "C06": 0.65525544, "C02": 0.65481824, "C07": 0.65441823, "C04": 0.65396559, "C10": 0.65364486, "C05": 0.65299523, "C08": 0.6509124, "C03": 0.64991915, "C01": 0.64985609}, "gold_cartridge": "C09", "hit1": true, "hit3": true}
+PASS QUERY_LIMIT_9 20
+PASS QUERY_CAPTURE 
+ROUTE {"question": "Where is the LS-902 axis converter stored?", "selected": "C10", "top3": ["C10", "C02", "C07"], "scores": {"C10": 0.70619071, "C02": 0.66311872, "C07": 0.66110229, "C01": 0.6559149, "C06": 0.65565163, "C04": 0.65536809, "C03": 0.65052497, "C08": 0.65042663, "C05": 0.65000784, "C09": 0.64928985}, "gold_cartridge": "C10", "hit1": true, "hit3": true}
+ROUTING_SUMMARY {'r1': 10, 'r3': 10, 'n': 10}
+PASS FILE_SHA_C01 
+PASS CART_SHAPE_C01 
+PASS CART_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C01 
+PHYSICAL_RELOAD_QA {"question": "Where is the AX-731 coolant regulator stored?", "selected": "C01", "gold": "C01", "raw": "The AX-731 coolant regulator is stored in the north archive.", "expected": "north archive", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C02 
+PASS CART_SHAPE_C02 
+PASS CART_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C02 
+PHYSICAL_RELOAD_QA {"question": "Where is the BT-962 torque controller stored?", "selected": "C02", "gold": "C02", "raw": "The BT-962 torque controller is stored in the slate pavilion.", "expected": "slate pavilion", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C03 
+PASS CART_SHAPE_C03 
+PASS CART_TENSOR_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C03 
+PHYSICAL_RELOAD_QA {"question": "Where is the DN-348 servo monitor stored?", "selected": "C03", "gold": "C03", "raw": "The DN-348 servo monitor is stored in the willow chamber.", "expected": "willow chamber", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C04 
+PASS CART_SHAPE_C04 
+PASS CART_TENSOR_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C04 
+PHYSICAL_RELOAD_QA {"question": "Where is the EV-415 pressure sensor stored?", "selected": "C04", "gold": "C04", "raw": "The EV-415 pressure sensor is stored in the amber vault.", "expected": "amber vault", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C05 
+PASS CART_SHAPE_C05 
+PASS CART_TENSOR_SHA_C05 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C05 
+PHYSICAL_RELOAD_QA {"question": "Where is the FK-276 spindle driver stored?", "selected": "C05", "gold": "C05", "raw": "The FK-276 spindle driver is stored in the copper annex.", "expected": "copper annex", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C06 
+PASS CART_SHAPE_C06 
+PASS CART_TENSOR_SHA_C06 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C06 
+PHYSICAL_RELOAD_QA {"question": "Where is the GL-583 motor coupler stored?", "selected": "C06", "gold": "C06", "raw": "The GL-583 motor coupler is stored in the river gallery.", "expected": "river gallery", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C07 
+PASS CART_SHAPE_C07 
+PASS CART_TENSOR_SHA_C07 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C07 
+PHYSICAL_RELOAD_QA {"question": "Where is the HM-824 encoder stored?", "selected": "C07", "gold": "C07", "raw": "The HM-824 encoder is stored in the quartz station.", "expected": "quartz station", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C08 
+PASS CART_SHAPE_C08 
+PASS CART_TENSOR_SHA_C08 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C08 
+PHYSICAL_RELOAD_QA {"question": "Where is the JP-139 feed controller stored?", "selected": "C08", "gold": "C08", "raw": "The JP-139 feed controller is stored in the cedar bay.", "expected": "cedar bay", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C09 
+PASS CART_SHAPE_C09 
+PASS CART_TENSOR_SHA_C09 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C09 
+PHYSICAL_RELOAD_QA {"question": "Where is the KR-657 relay module stored?", "selected": "C09", "gold": "C09", "raw": "The KR-657 relay module is stored in the silver depot.", "expected": "silver depot", "contains_expected": true, "routing_correct": true}
+PASS FILE_SHA_C10 
+PASS CART_SHAPE_C10 
+PASS CART_TENSOR_SHA_C10 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C10 
+PHYSICAL_RELOAD_QA {"question": "Where is the LS-902 axis converter stored?", "selected": "C10", "gold": "C10", "raw": "The LS-902 axis converter is stored in the moss chamber.", "expected": "moss chamber", "contains_expected": true, "routing_correct": true}
+PASS QUERY_LIMIT_10 21
+PASS QUERY_CAPTURE 
+PASS FILE_SHA_C10 
+PASS CART_SHAPE_C10 
+PASS CART_TENSOR_SHA_C10 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C10 
+UNKNOWN_CONTROL {"question": "Where is the ZZ-000 optical transceiver stored?", "selected": "C10", "raw": "UNKNOWN", "expected_behavior": "UNKNOWN", "explicit_unknown": true, "scores": {"C10": 0.65355808, "C06": 0.64960468, "C02": 0.6488983, "C07": 0.64866161, "C04": 0.64847076, "C08": 0.64727342, "C01": 0.64618039, "C05": 0.64540064, "C03": 0.64426738, "C09": 0.63954782}}
+PASS QUERY_LIMIT_11 21
+PASS QUERY_CAPTURE 
+PASS FILE_SHA_C01 
+PASS CART_SHAPE_C01 
+PASS CART_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOAD_80_LAYERS_C01 
+UNKNOWN_CONTROL {"question": "Which vault holds the nonexistent PX-000 calibration cube?", "selected": "C01", "raw": "UNKNOWN", "expected_behavior": "UNKNOWN", "explicit_unknown": true, "scores": {"C01": 0.6401639, "C10": 0.63904881, "C04": 0.63876373, "C02": 0.63575107, "C07": 0.63552272, "C05": 0.63530904, "C08": 0.63296729, "C03": 0.63075721, "C06": 0.62828606, "C09": 0.62661958}}
+NO_MEMORY_CONTROL {'question': 'Where is the AX-731 coolant regulator stored?', 'raw': 'The AX-731 coolant regulator is typically stored in the engine compartment of a vehicle, usually near the coolant system components such as the radiator or the engine block. However, the exact location can vary depending on the make and model of'}
+PASS FILE_SHA_C01 
+PASS CART_SHAPE_C01 
+PASS CART_TENSOR_SHA_C01 
+REFERENCE_INIT_C01
+NATIVE_INIT_C01
+PASS NATIVE_INIT_80_LAYERS 
+PASS REFERENCE_NATIVE_80_LAYER_EXACT {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+TEST721_RESULT COMPLETE_ADDRESSING_AND_PROVENANCE_MEASURED
+ROUTING {'r1': 10, 'r3': 10, 'n': 10} SEMANTIC {'correct_selected': 10, 'n': 10, 'unknown_explicit': 2, 'unknown_n': 2}
+RESULT_JSON /content/AKBASCORE_TEST721/TEST721_results.json MANIFEST /content/AKBASCORE_TEST721/TEST721_manifest.json LOG /content/AKBASCORE_TEST721/TEST721.log
