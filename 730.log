@@ -20,9 +20,9 @@ PASS SOURCE_TEXT_SHA_P03
 SOURCE_LOCK {"id": "P03", "url": "https://doi.org/10.1016/j.caeai.2026.100571", "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13043820/fullTextXML", "title": "Catalysts of Change: Using AI To Lower the Activation Energy for Developing Gamified Learning Experiences in Health Profession Education", "license": "https://creativecommons.org/licenses/by/4.0/", "published": "2026 (article XML)", "full_html_sha256": "f2d039fad5ffc1a1f8b330d9f49fa0f43484610717c069003f357f327d3435fa", "excerpt_sha256": "ea8d07f10d1b7ac84bd8f3a44abdb5c6515739f47688593f52ab826155e766f9", "excerpt_chars": 10500, "source_method": "EUROPE_PMC_FULLTEXT", "pmcid": "PMC13043820", "original_url_rejected": "https://doi.org/10.1016/j.caeai.2026.100571", "replacement_reason": "RuntimeError('LICENSE_NOT_VERIFIED:P03')"}
 PASS THREE_DISTINCT_SOURCES 
 PASS SOURCE_REUSE_LICENSES_VERIFIED 
-config.json: 100% 663/663 [00:00<00:00, 80.9kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 829kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 81.5MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 71.7MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 130MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.84MB/s]Download complete:   125GB, 1.28GB/s  Reconstruction complete: 100%  145GB /  145GB,  476MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00, 10.39s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.21it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.8kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+config.json: 100% 663/663 [00:00<00:00, 84.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 924kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 66.8MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 67.5MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 123MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.26MB/s]Download complete:   125GB, 1.62GB/s  Reconstruction complete: 100%  145GB /  145GB,  561MB/s  Fetching 37 files: 100% 37/37 [06:45<00:00, 10.28s/it]Loading weights: 100% 963/963 [06:27<00:00,  3.25it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.0kB/s]PASS ARCH [80, 8192, 64, 8, 128]
 PASS FROZEN 
 PASS NF4 
 PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
@@ -206,6 +206,7 @@ PASS FILE_SHA_MASTER
 PASS CARTRIDGE_ID_MASTER 
 PASS CARTRIDGE_TENSOR_SHA_MASTER 
 PASS NATIVE_INIT_80_LAYERS 
+DEMO_FAST_PATH_READY {'layers': 80, 'init_seconds': 10.736}
 DEMO_QUESTION H1 What are the main conclusions of the three publications, and where do they disagree?
 DEMO_ANSWER H1 ### Main Conclusions of the Three Publications
 
@@ -234,10 +235,7 @@ DEMO_ANSWER H1 ### Main Conclusions of the Three Publications
 
 ### Summary
 The three publications agree on
-PASS FILE_SHA_MASTER 
-PASS CARTRIDGE_ID_MASTER 
-PASS CARTRIDGE_TENSOR_SHA_MASTER 
-PASS NATIVE_INIT_80_LAYERS 
+DEMO_QUESTION_SECONDS H1 99.993
 DEMO_QUESTION H2 Which claims are supported by empirical evidence, and what are the main limitations?
 DEMO_ANSWER H2 ### Claims Supported by Empirical Evidence
 
@@ -286,10 +284,7 @@ DEMO_ANSWER H2 ### Claims Supported by Empirical Evidence
 5. **Contextual Barriers:**
    - **Limitation:** The success of gamified learning can be influenced by non-movable barriers such as student time, faculty time, class size, curricular constraints, space, and available resources.
    - **Source:** P03 notes that these contextual barriers can affect the effectiveness of
-PASS FILE_SHA_MASTER 
-PASS CARTRIDGE_ID_MASTER 
-PASS CARTRIDGE_TENSOR_SHA_MASTER 
-PASS NATIVE_INIT_80_LAYERS 
+DEMO_QUESTION_SECONDS H2 99.804
 DEMO_QUESTION H3 After comparing all three publications, what is your own conclusion? Explain uncertainties and cite source IDs.
 DEMO_ANSWER H3 ### Independent Synthesis and Conclusion
 
@@ -346,10 +341,7 @@ The three documents provide a comprehensive and nuanced view of the integration 
 
 1. **Generalizability:**
    - The findings
-PASS FILE_SHA_MASTER 
-PASS CARTRIDGE_ID_MASTER 
-PASS CARTRIDGE_TENSOR_SHA_MASTER 
-PASS NATIVE_INIT_80_LAYERS 
+DEMO_QUESTION_SECONDS H3 100.408
 DEMO_QUESTION A1 Develop a new causal model that could reconcile apparently conflicting results across the three publications. Separate evidence, assumptions and predictions; cite sources.
 DEMO_ANSWER A1 ### Causal Model to Reconcile Conflicting Results in AI Integration in Education
 
@@ -402,10 +394,7 @@ The three documents provide a rich but sometimes conflicting view of the impact 
 
 2. **Improved Critical Thinking with Strategic AI Integration**
    - **Prediction**: Strategic integration of AI, particularly in ways that promote
-PASS FILE_SHA_MASTER 
-PASS CARTRIDGE_ID_MASTER 
-PASS CARTRIDGE_TENSOR_SHA_MASTER 
-PASS NATIVE_INIT_80_LAYERS 
+DEMO_QUESTION_SECONDS A1 100.22
 DEMO_QUESTION A2 Design a preregistered randomized experiment that could falsify your proposed causal model. Specify interventions, measures, confounders and discriminating outcomes.
 DEMO_ANSWER A2 To design a preregistered randomized experiment that could falsify the proposed causal model of AI's impact on learning outcomes, particularly focusing on the "critical thinking paradox" and the distinction between assistive and content-generative AI, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. Here is a detailed plan:
 
@@ -457,10 +446,7 @@ Does the use of AI in educational settings, particularly the distinction between
 - **Descriptive Statistics**: Summarize the data for each group.
 - **ANOVA**: Use Analysis of Variance (ANOVA) to compare the means of the three groups on short-term performance, long-term retention, and critical thinking.
 - **Regression Analysis**: Conduct regression analysis to control for confounders
-PASS FILE_SHA_MASTER 
-PASS CARTRIDGE_ID_MASTER 
-PASS CARTRIDGE_TENSOR_SHA_MASTER 
-PASS NATIVE_INIT_80_LAYERS 
+DEMO_QUESTION_SECONDS A2 99.9
 DEMO_QUESTION A3 Identify the most consequential unresolved contradiction, formulate two rival explanations, and propose the smallest decisive test. Explain what each possible result would imply.
 DEMO_ANSWER A3 ### Most Consequential Unresolved Contradiction
 
@@ -503,3 +489,15 @@ Conduct a controlled experiment with two groups of students in a creative educat
 ### Conclusion
 
 The proposed test aims to resolve the contradiction between perceived support and actual learning outcomes by examining the impact of different task designs on student performance. The results will provide valuable insights into how AI
+DEMO_QUESTION_SECONDS A3 100.312
+PASS FAST_PATH_MASTER_PREFIX_UNCHANGED 
+PASS FILE_SHA_MASTER 
+PASS CARTRIDGE_ID_MASTER 
+PASS CARTRIDGE_TENSOR_SHA_MASTER 
+PASS NATIVE_INIT_80_LAYERS 
+PASS MASTER_80_LAYER_PARITY {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+PASS ALL_PHYSICAL_SOURCES_PRESERVED 
+TEST730_RESULT DEMO_COMPLETED_UNGRADED
+SUMMARY {'fast_path_single_master_init': True, 'sources': 3, 'master': 1, 'question_count': 6, 'human_questions': 3, 'advanced_questions': 3, 'answered_nonempty': 6, 'ssd_sha_verified': True, 'master_80_layer_parity': True, 'weights_unchanged': True, 'independent_correctness_not_yet_graded': True}
+RESULT_JSON /content/AKBASCORE_TEST730/TEST730_results.json MANIFEST /content/AKBASCORE_TEST730/TEST730_manifest.json LOG /content/AKBASCORE_TEST730/TEST730.log
