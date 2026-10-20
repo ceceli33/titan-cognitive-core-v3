@@ -1,0 +1,160 @@
+10:23:38 [SOURCES] STAGE_DONE       SOURCES {"seconds": 9.9, "note": "3/3 excerpts re-derived byte-identical to the TEST730 record"}
+── [2/12] GPU gate — one NVIDIA A100 80 GB (TEST730 gates)
+  engine [GPU] · PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+  engine [GPU] · PASS ONE_GPU 
+  engine [GPU] · PASS A100_80GB NVIDIA A100-SXM4-80GB
+10:23:38 [GPU] STAGE_DONE       GPU {"seconds": 0.0, "note": "NVIDIA A100-SXM4-80GB · 79.25 GiB · torch 2.11.0+cu130 · transformers 5.20.1"}
+── [3/12] Frozen Qwen2.5-72B-Instruct — download / load NF4 on the GPU, architecture, weight sentinel
+10:24:09 [MODEL] MODEL_PROGRESS   0.5 min {"hf_cache_gb": 9.8}
+10:24:39 [MODEL] MODEL_PROGRESS   1.0 min {"hf_cache_gb": 20.7}
+10:25:09 [MODEL] MODEL_PROGRESS   1.5 min {"hf_cache_gb": 31.4}
+10:25:39 [MODEL] MODEL_PROGRESS   2.0 min {"hf_cache_gb": 73.1}
+10:26:09 [MODEL] MODEL_PROGRESS   2.5 min {"hf_cache_gb": 84.4}
+10:26:39 [MODEL] MODEL_PROGRESS   3.0 min {"hf_cache_gb": 94.3}
+10:27:09 [MODEL] MODEL_PROGRESS   3.5 min {"hf_cache_gb": 135.9}
+10:27:39 [MODEL] MODEL_PROGRESS   4.0 min {"hf_cache_gb": 147.0}
+10:28:09 [MODEL] MODEL_PROGRESS   4.5 min {"hf_cache_gb": 161.5}
+10:28:39 [MODEL] MODEL_PROGRESS   5.0 min {"hf_cache_gb": 203.7}
+10:29:09 [MODEL] MODEL_PROGRESS   5.5 min {"hf_cache_gb": 214.9}
+10:29:39 [MODEL] MODEL_PROGRESS   6.0 min {"hf_cache_gb": 226.5}
+10:30:09 [MODEL] MODEL_PROGRESS   6.5 min {"hf_cache_gb": 267.5}
+10:30:39 [MODEL] MODEL_PROGRESS   7.0 min {"hf_cache_gb": 290.8}
+10:31:09 [MODEL] MODEL_PROGRESS   7.5 min {"hf_cache_gb": 290.8}
+10:31:39 [MODEL] MODEL_PROGRESS   8.0 min {"hf_cache_gb": 290.8}
+10:32:09 [MODEL] MODEL_PROGRESS   8.5 min {"hf_cache_gb": 290.8}
+10:32:39 [MODEL] MODEL_PROGRESS   9.0 min {"hf_cache_gb": 290.8}
+10:33:09 [MODEL] MODEL_PROGRESS   9.5 min {"hf_cache_gb": 290.8}
+10:33:39 [MODEL] MODEL_PROGRESS   10.0 min {"hf_cache_gb": 290.8}
+10:34:09 [MODEL] MODEL_PROGRESS   10.5 min {"hf_cache_gb": 290.8}
+10:34:39 [MODEL] MODEL_PROGRESS   11.0 min {"hf_cache_gb": 290.8}
+10:35:09 [MODEL] MODEL_PROGRESS   11.5 min {"hf_cache_gb": 290.8}
+10:35:39 [MODEL] MODEL_PROGRESS   12.0 min {"hf_cache_gb": 290.8}
+10:36:09 [MODEL] MODEL_PROGRESS   12.5 min {"hf_cache_gb": 290.8}
+10:36:39 [MODEL] MODEL_PROGRESS   13.0 min {"hf_cache_gb": 290.8}
+  engine [MODEL] · PASS ARCH [80, 8192, 64, 8, 128]
+  engine [MODEL] · PASS FROZEN 
+  engine [MODEL] · PASS NF4 
+  engine [MODEL] · PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+10:37:04 [MODEL] MEASURED_MODEL   Qwen2.5-72B-Instruct loaded on the GPU {"model_id": "Qwen/Qwen2.5-72B-Instruct", "commit": null, "arch": [80, 8192, 64, 8, 128], "cut": 3, "prefix_tokens": 31, "total_seconds": 805.8, "from_pretrained_seconds": 801.3, "hf_cache_gb_before": 0.0, "hf_cache_gb_after": 290.8, "sentinel_before": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde4
+10:37:04 [MODEL] STAGE_DONE       MODEL {"seconds": 806.0, "note": "loaded in 13.4 min · 80 layers · prefix 31 tokens · GPU allocated 38.379 GiB · sentinel 8fef3b41bbb3…"}
+── [4/12] Physical cartridges P01 · P02 · P03 · MASTER — locate, SHA-256 verify (re-forge only if missing)
+10:37:04 [CARTRIDGES] TEST730_FILES    root=None {"P01": "MISSING", "P02": "MISSING", "P03": "MISSING", "MASTER": "MISSING"}
+  forging P01 with the unchanged 730.py commit() (native CUT3 forge → torch.save → SHA-256) …
+  engine [CARTRIDGES] · PASS RECOVERY_SOURCE_TEXT_SHA_P01 
+  engine [CARTRIDGES] · PASS RECOVERY_BODY_TOKENS_EQUAL_RECORD_P01 {'tokens': 1924, 'record': 1924}
+  engine [CARTRIDGES] · PASS NONEMPTY_BODY_P01 {'tokens': 1924}
+  engine [CARTRIDGES] · PASS NATIVE_FORGE_SHAPE 
+  engine [CARTRIDGES] · PHYSICAL_COMMIT P01 REAL_SOURCE 58e3e1e7c9c5b61d711e8e5a090510dda82cb113f83fad53fbc3c5ee69190c1d
+  P01 forged · 1924 body tokens · 6.862 s · file SHA-256 58e3e1e7c9c5b61d… · equal to TEST730 record: True
+  forging P02 with the unchanged 730.py commit() (native CUT3 forge → torch.save → SHA-256) …
+  engine [CARTRIDGES] · PASS RECOVERY_SOURCE_TEXT_SHA_P02 
+  engine [CARTRIDGES] · PASS RECOVERY_BODY_TOKENS_EQUAL_RECORD_P02 {'tokens': 1987, 'record': 1987}
+  engine [CARTRIDGES] · PASS NONEMPTY_BODY_P02 {'tokens': 1987}
+  engine [CARTRIDGES] · PASS NATIVE_FORGE_SHAPE 
+  engine [CARTRIDGES] · PHYSICAL_COMMIT P02 REAL_SOURCE 2ddfe65e99e5f910683d5862c05f778752b80a94b76242dd3da59c690e0a443a
+  P02 forged · 1987 body tokens · 5.51 s · file SHA-256 2ddfe65e99e5f910… · equal to TEST730 record: True
+  forging P03 with the unchanged 730.py commit() (native CUT3 forge → torch.save → SHA-256) …
+  engine [CARTRIDGES] · PASS RECOVERY_SOURCE_TEXT_SHA_P03 
+  engine [CARTRIDGES] · PASS RECOVERY_BODY_TOKENS_EQUAL_RECORD_P03 {'tokens': 2036, 'record': 2036}
+  engine [CARTRIDGES] · PASS NONEMPTY_BODY_P03 {'tokens': 2036}
+  engine [CARTRIDGES] · PASS NATIVE_FORGE_SHAPE 
+  engine [CARTRIDGES] · PHYSICAL_COMMIT P03 REAL_SOURCE ab2ddddf1f7ba6f39c4623ae8638374e2b73dda3339dfd6c42fe899a41552292
+  P03 forged · 2036 body tokens · 5.679 s · file SHA-256 ab2ddddf1f7ba6f3… · equal to TEST730 record: True
+  forging MASTER with the unchanged 730.py commit() (native CUT3 forge → torch.save → SHA-256) …
+  engine [CARTRIDGES] · PASS RECOVERY_BODY_TOKENS_EQUAL_RECORD_MASTER {'tokens': 2848, 'record': 2848}
+  engine [CARTRIDGES] · PASS NONEMPTY_BODY_MASTER {'tokens': 2848}
+  engine [CARTRIDGES] · PASS NATIVE_FORGE_SHAPE 
+  engine [CARTRIDGES] · PHYSICAL_COMMIT MASTER MASTER_SYNTHESIS 98802df91b6834099e89b95266387498626d7aa817862af95c388eff6f544bc5
+  MASTER forged · 2848 body tokens · 7.774 s · file SHA-256 98802df91b683409… · equal to TEST730 record: True
+10:37:34 [CARTRIDGES] CARTRIDGE_RECOVERED P01 {"file_sha_equal_test730_record": true, "sha": "58e3e1e7c9c5b61d"}
+10:37:34 [CARTRIDGES] CARTRIDGE_RECOVERED P02 {"file_sha_equal_test730_record": true, "sha": "2ddfe65e99e5f910"}
+10:37:34 [CARTRIDGES] CARTRIDGE_RECOVERED P03 {"file_sha_equal_test730_record": true, "sha": "ab2ddddf1f7ba6f3"}
+10:37:34 [CARTRIDGES] CARTRIDGE_RECOVERED MASTER {"file_sha_equal_test730_record": true, "sha": "98802df91b683409"}
+10:37:34 [CARTRIDGES] MEASURED_CARTRIDGE P01 {"status": "RECOVERED_BIT_IDENTICAL", "file": "/content/AKBASCORE_TEST730_DEMO/recovered_cartridges/P01.pt", "bytes": 64064634, "sha256_now": "58e3e1e7c9c5b61d711e8e5a090510dda82cb113f83fad53fbc3c5ee69190c1d", "sha256_test730_record": "58e3e1e7c9c5b61d711e8e5a090510dda82cb113f83fad53fbc3c5ee69190c1d
+10:37:35 [CARTRIDGES] MEASURED_CARTRIDGE P02 {"status": "RECOVERED_BIT_IDENTICAL", "file": "/content/AKBASCORE_TEST730_DEMO/recovered_cartridges/P02.pt", "bytes": 66129018, "sha256_now": "2ddfe65e99e5f910683d5862c05f778752b80a94b76242dd3da59c690e0a443a", "sha256_test730_record": "2ddfe65e99e5f910683d5862c05f778752b80a94b76242dd3da59c690e0a443a
+10:37:35 [CARTRIDGES] MEASURED_CARTRIDGE P03 {"status": "RECOVERED_BIT_IDENTICAL", "file": "/content/AKBASCORE_TEST730_DEMO/recovered_cartridges/P03.pt", "bytes": 67734650, "sha256_now": "ab2ddddf1f7ba6f39c4623ae8638374e2b73dda3339dfd6c42fe899a41552292", "sha256_test730_record": "ab2ddddf1f7ba6f39c4623ae8638374e2b73dda3339dfd6c42fe899a41552292
+10:37:35 [CARTRIDGES] MEASURED_CARTRIDGE MASTER {"status": "RECOVERED_BIT_IDENTICAL", "file": "/content/AKBASCORE_TEST730_DEMO/recovered_cartridges/MASTER.pt", "bytes": 94342887, "sha256_now": "98802df91b6834099e89b95266387498626d7aa817862af95c388eff6f544bc5", "sha256_test730_record": "98802df91b6834099e89b95266387498626d7aa817862af95c388eff6f544
+10:37:36 [CARTRIDGES] STAGE_DONE       CARTRIDGES {"seconds": 31.48, "note": "P01: recovered bit identical · P02: recovered bit identical · P03: recovered bit identical · MASTER: recovered bit identical"}
+── [5/12] MASTER fast path — verified SSD load → GPU → native CUT3 initialize, 80 layers
+  engine [MASTER] · PASS FILE_SHA_MASTER 
+  engine [MASTER] · PASS CARTRIDGE_ID_MASTER 
+  engine [MASTER] · PASS CARTRIDGE_TENSOR_SHA_MASTER 
+  engine [MASTER] · PASS NATIVE_INIT_80_LAYERS 
+10:37:47 [MASTER] MEASURED_MASTER_FAST_PATH MASTER mounted alone (80 layers) {"file_bytes": 94342887, "ssd_read_seconds": 0.056, "ssd_read_mb_s": 1686.4, "verified_load_seconds": 0.614, "verification": "730.py safe_load(): FILE_SHA + CARTRIDGE_ID + CARTRIDGE_TENSOR_SHA against the TEST730 manifest", "h2d_seconds": 0.028, "initialize_native_seconds": 7.197, "prefix_seal_secon
+10:37:47 [MASTER] STAGE_DONE       MASTER {"seconds": 10.88, "note": "80 layers · 2879 rows · verified load 0.61 s · H2D 0.03 s · initialize 7.20 s (record: 10.736 s incl. load)"}
+── [6/12] MASTER 80-layer parity — TEST709 initialize vs native initialize, exact SHA-256
+  engine [PARITY] · PASS MASTER_80_LAYER_PARITY {'matched': 80, 'layers': 80}
+10:37:57 [PARITY] MEASURED_PARITY  80/80 layers exact SHA-256 {"matched": 80, "layers": 80, "seconds": 10.59}
+10:37:58 [PARITY] STAGE_DONE       PARITY {"seconds": 10.98, "note": "80/80 layers exact SHA-256 (record: 80/80)"}
+── [7/12] Neural X-ray (read-only) — K/V norms of P01, P02, P03, MASTER · layers 0–79
+10:37:58 [XRAY] MEASURED_XRAY    MASTER {"rows": 2879, "layers": 80, "seconds": 0.0, "mounted": "MASTER fast-path memory (state B)", "file": "/content/AKBASCORE_TEST730_DEMO/sessions/P730-20261020-102247/measurements/xray/XRAY_MASTER.npz", "k_mean_L0_3": 25.993330001831055, "k_mean_L4_79": 20.93674727490074, "v_mean_L0_3": 0.7352311015129
+  engine [XRAY] · PASS FILE_SHA_P01 
+  engine [XRAY] · PASS CARTRIDGE_ID_P01 
+  engine [XRAY] · PASS CARTRIDGE_TENSOR_SHA_P01 
+  engine [XRAY] · PASS NATIVE_INIT_80_LAYERS 
+10:38:03 [XRAY] MEASURED_XRAY    P01 {"rows": 1955, "layers": 80, "seconds": 5.36, "mounted": "P01 mounted ALONE (separate initialize_native; not simultaneous with the other sources)", "file": "/content/AKBASCORE_TEST730_DEMO/sessions/P730-20261020-102247/measurements/xray/XRAY_P01.npz", "k_mean_L0_3": 25.978510856628418, "k_mean_L4_79
+  engine [XRAY] · PASS FILE_SHA_P02 
+  engine [XRAY] · PASS CARTRIDGE_ID_P02 
+  engine [XRAY] · PASS CARTRIDGE_TENSOR_SHA_P02 
+  engine [XRAY] · PASS NATIVE_INIT_80_LAYERS 
+10:38:09 [XRAY] MEASURED_XRAY    P02 {"rows": 2018, "layers": 80, "seconds": 5.39, "mounted": "P02 mounted ALONE (separate initialize_native; not simultaneous with the other sources)", "file": "/content/AKBASCORE_TEST730_DEMO/sessions/P730-20261020-102247/measurements/xray/XRAY_P02.npz", "k_mean_L0_3": 25.938724517822266, "k_mean_L4_79
+  engine [XRAY] · PASS FILE_SHA_P03 
+  engine [XRAY] · PASS CARTRIDGE_ID_P03 
+  engine [XRAY] · PASS CARTRIDGE_TENSOR_SHA_P03 
+  engine [XRAY] · PASS NATIVE_INIT_80_LAYERS 
+10:38:15 [XRAY] MEASURED_XRAY    P03 {"rows": 2067, "layers": 80, "seconds": 5.58, "mounted": "P03 mounted ALONE (separate initialize_native; not simultaneous with the other sources)", "file": "/content/AKBASCORE_TEST730_DEMO/sessions/P730-20261020-102247/measurements/xray/XRAY_P03.npz", "k_mean_L0_3": 25.936662197113037, "k_mean_L4_79
+10:38:16 [XRAY] STAGE_DONE       XRAY {"seconds": 18.04, "note": "measured: MASTER, P01, P02, P03 · 80 layers each · each source mounted alone"}
+── [8/12] Reproduction — sealed H1 and A1 asked again on MASTER, compared with the record
+10:40:08 [REPRO] MEASURED_ANSWER  reproduction of sealed H1 {"memory": "MASTER", "memory_rows": 2879, "n_generated": 768, "seconds": 112.049, "tokens_per_second": 6.85, "ceiling_reached": true, "sha256": "5444c54a4c968040e9c26e01db301ed9494defe13e7c1c10fbd2320143b3a024", "answer": "### Main Conclusions of the Three Publications\n\n1. **AI in Creative Educati
+10:40:08 [REPRO] REPRODUCTION     H1 {"identical": true, "seconds": 112.049, "n": 768}
+10:42:00 [REPRO] MEASURED_ANSWER  reproduction of sealed A1 {"memory": "MASTER", "memory_rows": 2879, "n_generated": 768, "seconds": 112.302, "tokens_per_second": 6.84, "ceiling_reached": true, "sha256": "bd00de9df58fa66e48463da5c0d502a9119507f89e63d665e7c3bfb53f30f4b0", "answer": "### Causal Model to Reconcile Conflicting Results in AI Integration in Educat
+10:42:00 [REPRO] REPRODUCTION     A1 {"identical": true, "seconds": 112.302, "n": 768}
+10:42:00 [REPRO] STAGE_DONE       REPRO {"seconds": 224.36, "note": "H1: byte-identical to the record (112 s) · A1: byte-identical to the record (112 s)"}
+── [9/12] New live questions (not sealed) — MASTER memory vs no memory
+10:42:08 [NEWQ] MEASURED_ANSWER  new demo question N1 {"memory": "MASTER", "memory_rows": 2879, "n_generated": 53, "seconds": 7.937, "tokens_per_second": 6.68, "ceiling_reached": false, "sha256": "c5642c898fd64735c89706fa11145ed83aa908d270dfe5ad256ead995953f1be", "answer": "Source ID [P01] describes a study of 133 undergraduate art students. The study 
+10:42:13 [NEWQ] MEASURED_ANSWER  new demo question N1 without memory {"memory": "NONE", "memory_rows": 0, "n_generated": 31, "seconds": 4.705, "tokens_per_second": 6.59, "ceiling_reached": false, "sha256": "60484e2ee5621ecbe773c0d0bfdd1fce828af7914585d87fae9a5ad8e1600330", "answer": "Source ID 1 describes a study of 133 undergraduate art students. It distinguishes be
+10:42:13 [NEWQ] NEW_QUESTION     N1 {"master_markers": 4, "no_memory_markers": 1}
+10:42:19 [NEWQ] MEASURED_ANSWER  new demo question N2 {"memory": "MASTER", "memory_rows": 2879, "n_generated": 43, "seconds": 6.459, "tokens_per_second": 6.66, "ceiling_reached": false, "sha256": "d5181e0b2fa37a24ed21df37126f34f5c7178a3abe11ae11a102dbea388627e6", "answer": "Source ID [P02] proposes the 'critical thinking paradox.' The paradox claims th
+10:42:30 [NEWQ] MEASURED_ANSWER  new demo question N2 without memory {"memory": "NONE", "memory_rows": 0, "n_generated": 74, "seconds": 10.887, "tokens_per_second": 6.8, "ceiling_reached": false, "sha256": "ffbbce888c3a830c68dba9583524f329bba2eea80e0c6a089f056fc100a10cef", "answer": "The 'critical thinking paradox' is proposed by Source ID 2, which is \"Facione, P. A
+10:42:30 [NEWQ] NEW_QUESTION     N2 {"master_markers": 3, "no_memory_markers": 1}
+10:42:30 [NEWQ] STAGE_DONE       NEWQ {"seconds": 30.0, "note": "N1: markers MASTER 4/4 vs no memory 1/4 · N2: markers MASTER 3/3 vs no memory 1/3"}
+── [10/12] Integrity after use — MASTER prefix seals, weight sentinel, cartridge files
+  engine [INTEGRITY] · PASS FAST_PATH_MASTER_PREFIX_UNCHANGED 
+  engine [INTEGRITY] · PASS WEIGHTS_SENTINEL_UNCHANGED 
+  engine [INTEGRITY] · PASS ALL_PHYSICAL_CARTRIDGES_PRESERVED {'P01': True, 'P02': True, 'P03': True, 'MASTER': True}
+10:42:35 [INTEGRITY] MEASURED_INTEGRITY after use {"master_prefix_unchanged": true, "sentinel_before": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "sentinel_after": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "trainable_tensors": 0, "cartridge_files": {"P01": {"sha256": "58e3e1e7c9c5b61d711e8e5a090510
+10:42:35 [INTEGRITY] STAGE_DONE       INTEGRITY {"seconds": 4.71, "note": "prefix unchanged True · weights unchanged True · files unchanged True"}
+── [11/12] Scientific figures — Figs. 1–12 + S1 (JPEG 300 dpi, layout QC)
+10:42:37 [FIGURES] FIGURE_WRITTEN   Fig. 1 FIG01_THREE_SOURCES_ONE_MASTER.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 1, "sha256_jpg": "13ac5a89e77bf3d342d84eecdadcecba9b317ffb3a6302b8351eb861b563fead", "badge": "SCHEMATIC"}
+  figure 1 · SCHEMATIC · 3999×2250 · layout QC pass · 1.6 s
+10:42:38 [FIGURES] FIGURE_WRITTEN   Fig. 2 FIG02_THREE_VERIFIED_PUBLICATIONS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "378ef685b40d0030d53fc44753760ce7a5af119ca8233d8796b75767305c4e19", "badge": "SOURCE VERIFIED"}
+  figure 2 · SOURCE VERIFIED · 3999×2250 · layout QC pass · 1.3 s
+10:42:39 [FIGURES] FIGURE_WRITTEN   Fig. 3 FIG03_CUT3_INJECTION_PROTOCOL.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "6c5f8a965e925ba510948b6e72e86807b7d84535c4691240529808560ca76e76", "badge": "SCHEMATIC"}
+  figure 3 · SCHEMATIC · 3999×2250 · layout QC pass · 1.1 s
+10:42:40 [FIGURES] FIGURE_WRITTEN   Fig. 4 FIG04_SSD_AND_LIVE_GPU_MEMORY.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "ed243e8a276d1d6b9df344f248ca84d72efcfefc7f9f5d22128b4a163e4d2907", "badge": "LIVE GPU MEASUREMENT"}
+  figure 4 · LIVE GPU MEASUREMENT · 3999×2250 · layout QC pass · 1.3 s
+10:42:42 [FIGURES] FIGURE_WRITTEN   Fig. 5 FIG05_SOURCE_MEMORY_XRAY.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "5f48996d7e1717eea5131774e9d6910e08a9bfd26c87e3a35181e9be0ec38f14", "badge": "LIVE GPU MEASUREMENT"}
+  figure 5 · LIVE GPU MEASUREMENT · 3999×2250 · layout QC pass · 1.6 s
+10:42:44 [FIGURES] FIGURE_WRITTEN   Fig. 6 FIG06_SOURCES_VS_MASTER.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "a0f5e81a63e02d49bf4566b584f82f54eb88ac8cc7f43a3b2280e09e7f6da10b", "badge": "LIVE GPU MEASUREMENT"}
+  figure 6 · LIVE GPU MEASUREMENT · 3999×2250 · layout QC pass · 1.7 s
+10:42:45 [FIGURES] FIGURE_WRITTEN   Fig. 7 FIG07_THREE_PERSPECTIVES_TO_SYNTHESIS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "09340351f1646c87d1326264ebf6caa85ca50f23e98a452d5fdd0a3a255edf60", "badge": "OBSERVATIONAL"}
+  figure 7 · OBSERVATIONAL · 3999×2250 · layout QC pass · 1.4 s
+10:42:46 [FIGURES] FIGURE_WRITTEN   Fig. 8 FIG08_MASTER_WRITE_SEAL_RELOAD.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "70650fed68d09789ad9505a4bd38e6b408988f0c0ddfc9d496530baa0b25ab74", "badge": "SEALED MEMORY"}
+  figure 8 · SEALED MEMORY · 3999×2250 · layout QC pass · 1.2 s
+10:42:47 [FIGURES] FIGURE_WRITTEN   Fig. 9 FIG09_SIX_PRESEALED_QUESTIONS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "da0a182d3829e33fab04cfea0e415fdf697f90c84a6761a6afab4ca568568b8a", "badge": "VERIFICATION RECORD"}
+  figure 9 · VERIFICATION RECORD · 3999×2250 · layout QC pass · 1.3 s
+10:42:49 [FIGURES] FIGURE_WRITTEN   Fig. 10 FIG10_STORED_SYNTHESIS_TO_HYPOTHESES.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "2569aad2d59e2617a629806d43551e7630517e58f65a82861f9c65475f15a515", "badge": "OBSERVATIONAL"}
+  figure 10 · OBSERVATIONAL · 3999×2250 · layout QC pass · 1.7 s
+10:42:50 [FIGURES] FIGURE_WRITTEN   Fig. 11 FIG11_FAST_PATH_PERFORMANCE.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "aa8ebaac1d3eade069bea75cae39e485d6f58eed54e5303888b1b03946d00c07", "badge": "LIVE GPU MEASUREMENT"}
+  figure 11 · LIVE GPU MEASUREMENT · 3999×2250 · layout QC pass · 1.2 s
+10:42:52 [FIGURES] FIGURE_WRITTEN   Fig. 12 FIG12_INTEGRITY_AND_BOUNDARIES.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "5f7a6c43655905664204f5b3a5e0a5d74ff45097d14e67ed34bb6e5bf8477ac2", "badge": "VERIFICATION RECORD"}
+  figure 12 · VERIFICATION RECORD · 3999×2250 · layout QC pass · 1.3 s
+10:42:53 [FIGURES] FIGURE_WRITTEN   Fig. S1 FIGS1_LIVE_MASTER_QUERIES.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "ef215235e330c5f01281afe4b6031a3c684d7a9b6c490463ef6bf48e0c89ecc8", "badge": "LIVE GPU MEASUREMENT"}
+  figure S1 · LIVE GPU MEASUREMENT · 3999×2250 · layout QC pass · 1.1 s
+10:42:53 [FIGURES] STAGE_DONE       FIGURES {"seconds": 17.74, "note": "13/13 JPEG figures written (300 dpi) · layout QC and JPEG QC passed for every figure"}
+── [12/12] Records — live measurements, real-time logs, SHA-256 manifest, provenance table (direct downloads, no ZIP)
+10:42:53 [PACKAGE] STAGE_DONE       PACKAGE {"seconds": 0.09, "note": "13 JPEG figures + 15 records/logs, each downloadable directly · SHA-256 manifest SHA256_MANIFEST.json (no ZIP)"}
+════════════════════════════════════════════════════════════════════════════════════════════════════
+RUN VERDICT: COMPLETE — every stage ran and passed
+RUN finished 2026-10-20T10:42:53+00:00 · mode LIVE · SOURCES:done · GPU:done · MODEL:done · CARTRIDGES:done · MASTER:done · PARITY:done · XRAY:done · REPRO:done · NEWQ:done · INTEGRITY:done · FIGURES:done · PACKAGE:done
+════════════════════════════════════════════════════════════════════════════════════════════════════
