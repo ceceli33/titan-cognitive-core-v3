@@ -1,0 +1,483 @@
+ 
+==============================================================================================================
+AKBASCORE PROMETHEUS — TEST729 — C11 MASTER INDEPENDENT PHYSICAL RELOAD + S01/S02/S03 + H01/H02
+==============================================================================================================
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+config.json: 100%
+
+ 663/663 [00:00<00:00, 87.5kB/s]
+tokenizer_config.json: 100%
+
+ 7.30k/7.30k [00:00<00:00, 873kB/s]
+vocab.json: 100%
+
+ 2.78M/2.78M [00:00<00:00, 66.1MB/s]
+merges.txt: 100%
+
+ 1.67M/1.67M [00:00<00:00, 68.9MB/s]
+tokenizer.json: 100%
+
+ 7.03M/7.03M [00:00<00:00, 125MB/s]
+model.safetensors.index.json: 100%
+
+ 79.0k/79.0k [00:00<00:00, 9.41MB/s]
+Download complete: 
+
+  125GB, 1.39GB/s  
+Reconstruction complete: 100%
+
+  145GB /  145GB,  658MB/s  
+Fetching 37 files: 100%
+
+ 37/37 [06:46<00:00, 10.32s/it]
+Loading weights: 100%
+
+ 963/963 [06:36<00:00,  3.28it/s]
+generation_config.json: 100%
+
+ 242/242 [00:00<00:00, 29.2kB/s]
+PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C01 SOURCE_S01 70757915d523a468e0f400be7c63071e7dee19b3f2462054993fc997ce9cc9e3
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C02 SOURCE_S01 827659ec17a2856172a961c80a6786664d6e0eaf18b20c80e5fd167797293d42
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C03 SOURCE_S01 f518877a6c73243aedd05acb8b43daa55e1cff86d43227509cc19786c1f48e9b
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C04 SOURCE_S02 884b0d4fa258fd6205a678689cab0e6a1a6a1fe632887033f5ad33d112827cae
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C05 SOURCE_S02 cb6e0e4959e56473d5a6c7c0c1139e5627025b031c6d021600c788cbdbf14412
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C06 SOURCE_S02 d62cc77c41616eeaa904b6e60f3fdb51943d9d6002fa1644238547fd9d1b053c
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C07 SOURCE_S03 0f1c9830823bf1b713abe66d3e46f3279f336a89e3e771003c3e4c6ca7e75412
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C08 SOURCE_S03 b2df6abeec3015fe0551e77f77e4af643b41abc8d126ff386f7541f5b3b36b62
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C09 SOURCE_S03 f8d060e2464a3953e038f19eecfbe8faf507259aac5d6f6f990a63b3c38e1059
+PASS SOURCE_CARTRIDGES_9 
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S01", "id": "C01", "question": "What is the AX-731 nominal DC bus voltage?", "raw": "The AX-731 nominal DC bus voltage is 540 volts.", "expected": "540 volts", "expected_found": true}
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S01", "id": "C02", "question": "What is the AX-731 continuous current rating?", "raw": "The AX-731 continuous current rating is 18 amperes.", "expected": "18 amperes", "expected_found": true}
+PASS FILE_SHA_C03 
+PASS CARTRIDGE_ID_C03 
+PASS CARTRIDGE_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S01", "id": "C03", "question": "What is the AX-731 overcurrent trip threshold?", "raw": "The AX-731 overcurrent trip threshold is 24 amperes.", "expected": "24 amperes", "expected_found": true}
+PASS NONEMPTY_SYNTHESIS_S01 807
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT S01 DOMAIN_SYNTHESIS 12180d07370ab5b38ce339d035229630c896eec918859831bb4b9498551d01c3
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+DOMAIN_RESULT {"domain": "S01", "synthesis": "INTEGRATED MEMORY:\n\n- **Nominal DC Bus Voltage:** 540 volts [C01]\n- **Continuous Current Rating:** 18 amperes [C02]\n- **Overcurrent Trip Threshold:** 24 amperes [C03]\n\n**Deductions:**\n- The AX-731 system is designed to operate with a nominal DC bus voltage of 540 volts, which is a critical parameter for ensuring the correct operation of the electrical components within the system.\n- The continuous current rating of 18 amperes indicates the maximum current the system can handle continuously without overheating or damaging the components.\n- The overcurrent trip threshold of 24 amperes is set to protect the system from excessive current, which could cause damage or failure. This threshold is 33.33% higher than the continuous current rating, providing a safety margin to prevent overcurrent conditions", "synthesis_sha256": "536e490ca848e7b42eac1fbd19525b2677932133f24dfa06f891011f0bfeefae", "readback": [{"id": "C01", "question": "What is the AX-731 nominal DC bus voltage?", "expected": "540 volts", "raw": "The AX-731 nominal DC bus voltage is 540 volts.", "hit": true}, {"id": "C02", "question": "What is the AX-731 continuous current rating?", "expected": "18 amperes", "raw": "The AX-731 continuous current rating is 18 amperes.", "hit": true}, {"id": "C03", "question": "What is the AX-731 overcurrent trip threshold?", "expected": "24 amperes", "raw": "The overcurrent trip threshold for the AX-731 system is 24 amperes.", "hit": true}], "readback_hits": 3, "missing_raw": "UNKNOWN", "missing_unknown": true}
+PASS FILE_SHA_C04 
+PASS CARTRIDGE_ID_C04 
+PASS CARTRIDGE_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S02", "id": "C04", "question": "What is the AX-731 actuator rated output torque?", "raw": "The AX-731 actuator rated output torque is 12 newton meters.", "expected": "12 newton meters", "expected_found": true}
+PASS FILE_SHA_C05 
+PASS CARTRIDGE_ID_C05 
+PASS CARTRIDGE_SHA_C05 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S02", "id": "C05", "question": "What is the AX-731 gearbox reduction ratio?", "raw": "The AX-731 gearbox reduction ratio is 5 to 1.", "expected": "5 to 1", "expected_found": true}
+PASS FILE_SHA_C06 
+PASS CARTRIDGE_ID_C06 
+PASS CARTRIDGE_SHA_C06 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S02", "id": "C06", "question": "What is the AX-731 maximum mechanical axis speed?", "raw": "The AX-731 maximum mechanical axis speed is 1200 rpm.", "expected": "1200 rpm", "expected_found": true}
+PASS NONEMPTY_SYNTHESIS_S02 664
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT S02 DOMAIN_SYNTHESIS f3023fe35ed6ac8e830ef0acc66455c9eb5f65eac024369a406f37ea598dabb7
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+DOMAIN_RESULT {"domain": "S02", "synthesis": "INTEGRATED MEMORY:\n\n- **Actuator Output Torque**: The AX-731 actuator is rated to produce an output torque of 12 newton meters. [C04]\n- **Gearbox Reduction Ratio**: The AX-731 incorporates a gearbox with a reduction ratio of 5 to 1. [C05]\n- **Maximum Mechanical Axis Speed**: The maximum speed of the mechanical axis in the AX-731 is 1200 rpm. [C06]\n\n**Deductions**:\n- Given the gearbox reduction ratio of 5 to 1, the input speed to the gearbox must be higher than the output speed. If the maximum mechanical axis speed (output speed) is 1200 rpm, the input speed to the gearbox would be 1200 rpm * 5 = 6000 rpm. However, this deduction is not explicitly stated in", "synthesis_sha256": "a4cc06108948e92e3ff3c1c11459258214071999f88c0d6e16717d0b1e4b40f8", "readback": [{"id": "C04", "question": "What is the AX-731 actuator rated output torque?", "expected": "12 newton meters", "raw": "The AX-731 actuator is rated to produce an output torque of 12 newton meters.", "hit": true}, {"id": "C05", "question": "What is the AX-731 gearbox reduction ratio?", "expected": "5 to 1", "raw": "The AX-731 gearbox reduction ratio is 5 to 1.", "hit": true}, {"id": "C06", "question": "What is the AX-731 maximum mechanical axis speed?", "expected": "1200 rpm", "raw": "The maximum mechanical axis speed of the AX-731 is 1200 rpm. [C06]", "hit": true}], "readback_hits": 3, "missing_raw": "UNKNOWN", "missing_unknown": true}
+PASS FILE_SHA_C07 
+PASS CARTRIDGE_ID_C07 
+PASS CARTRIDGE_SHA_C07 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S03", "id": "C07", "question": "How often does the AX-731 PLC sample drive current?", "raw": "The AX-731 PLC samples the drive current every 10 milliseconds.", "expected": "10 milliseconds", "expected_found": true}
+PASS FILE_SHA_C08 
+PASS CARTRIDGE_ID_C08 
+PASS CARTRIDGE_SHA_C08 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S03", "id": "C08", "question": "What fault code is raised when AX-731 drive current exceeds 24 amperes?", "raw": "The fault code raised when the AX-731 drive current exceeds 24 amperes is F17.", "expected": "F17", "expected_found": true}
+PASS FILE_SHA_C09 
+PASS CARTRIDGE_ID_C09 
+PASS CARTRIDGE_SHA_C09 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S03", "id": "C09", "question": "What reset is required after AX-731 fault F17?", "raw": "The reset required after AX-731 fault F17 is a manual reset. This reset should be performed after the current returns below the threshold.", "expected": "manual reset", "expected_found": true}
+PASS NONEMPTY_SYNTHESIS_S03 435
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT S03 DOMAIN_SYNTHESIS 163fbb03f95d08b257a8b155aa0fc1c3fb81ab39371aea9e6e61f08fda9f7cbd
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+DOMAIN_RESULT {"domain": "S03", "synthesis": "INTEGRATED MEMORY:\n\n- **Sampling Interval**: The AX-731 PLC samples the drive current every 10 milliseconds. [C07]\n- **Fault Code F17**: The fault code F17 is raised when the AX-731 drive current exceeds 24 amperes. [C08]\n- **Reset Procedure for F17**: After fault F17 is triggered, a manual reset is required. This reset should only be performed after the drive current has returned to a level below the threshold of 24 amperes. [C09]", "synthesis_sha256": "e4ddd7d1cae665ce0ec77585c5b8e55bef502a84960d9c334b7ba60fa77a7f96", "readback": [{"id": "C07", "question": "How often does the AX-731 PLC sample drive current?", "expected": "10 milliseconds", "raw": "The AX-731 PLC samples the drive current every 10 milliseconds. [C07]", "hit": true}, {"id": "C08", "question": "What fault code is raised when AX-731 drive current exceeds 24 amperes?", "expected": "F17", "raw": "The fault code F17 is raised when the AX-731 drive current exceeds 24 amperes. [C08]", "hit": true}, {"id": "C09", "question": "What reset is required after AX-731 fault F17?", "expected": "manual reset", "raw": "After the AX-731 fault F17 is triggered, a manual reset is required. This reset should only be performed after the drive current has returned to a level below the threshold of 24 amperes. [C09]", "hit": true}], "readback_hits": 3, "missing_raw": "UNKNOWN", "missing_unknown": true}
+PASS DOMAIN_CARTRIDGES_3 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C03 
+PASS CARTRIDGE_ID_C03 
+PASS CARTRIDGE_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04 
+PASS CARTRIDGE_ID_C04 
+PASS CARTRIDGE_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05 
+PASS CARTRIDGE_ID_C05 
+PASS CARTRIDGE_SHA_C05 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06 
+PASS CARTRIDGE_ID_C06 
+PASS CARTRIDGE_SHA_C06 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NONEMPTY_SYNTHESIS_H01 777
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT H01 CROSS_DOMAIN_SYNTHESIS ce6f909e85a6987f81d57df6138d4227304d5e7ab3c5e52fc07a1a82e63fb379
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+HYBRID_RESULT {"hybrid": "H01", "parents": ["S01", "S02"], "synthesis": "**AX-731 Cross-Domain Electrical-Mechanical Relations Engineering Synthesis**\n\n**Electrical Specifications:**\n- **Nominal DC Bus Voltage:** 540 volts [C01]\n- **Continuous Current Rating:** 18 amperes [C02]\n- **Overcurrent Trip Threshold:** 24 amperes [C03]\n\n**Deductions:**\n- The system is designed to operate with a nominal DC bus voltage of 540 volts.\n- The continuous current rating of 18 amperes is the maximum current the system can handle continuously without overheating or damaging the components.\n- The overcurrent trip threshold of 24 amperes is set to protect the system from excessive current, which is 33.33% higher than the continuous current rating, providing a safety margin to prevent overcurrent conditions.\n\n**Mechanical Specifications:**\n- **Actuator Output", "readouts": [{"id": "S01", "raw": "The AX-731 electrical technical specifications, numbers, and conditions available in the memory are as follows:\n\n- **Nominal DC Bus Voltage:** 540 volts [C01]\n- **Continuous Current Rating:** 18 amperes [C02]\n- **Overcurrent Trip Threshold:** 24 amperes [C03]\n\n**Deductions:**\n- The system is designed to operate with a nominal DC bus voltage of 540 volts.\n- The continuous current rating of 18 amperes is the maximum current the system can handle continuously without overheating or damaging the components.\n- The overcurrent trip threshold of 24 amperes is set to protect the system from excessive current, which is 33.33% higher than the continuous current rating, providing a safety margin to prevent overcurrent conditions.", "question": "List all AX-731 electrical technical specifications, numbers and conditions in the available memory.", "role": "domain"}, {"id": "S02", "raw": "The AX-731 mechanical technical specifications, numbers, and conditions available in the memory are as follows:\n\n- **Actuator Output Torque**: 12 newton meters. [C04]\n- **Gearbox Reduction Ratio**: 5 to 1. [C05]\n- **Maximum Mechanical Axis Speed**: 1200 rpm. [C06]\n\n**Deductions**:\n- Given the gearbox reduction ratio of 5 to 1, the input speed to the gearbox must be higher than the output speed. If the maximum mechanical axis speed (output speed) is 1200 rpm, the input speed to the gearbox would be 1200 rpm * 5 = 6000 rpm. However, this deduction is not explicitly stated in the provided information.", "question": "List all AX-731 mechanical technical specifications, numbers and conditions in the available memory.", "role": "domain"}, {"id": "C01", "raw": "The AX-731 nominal DC bus voltage is 540 volts.", "question": "What is the AX-731 nominal DC bus voltage?", "role": "original evidence"}, {"id": "C02", "raw": "The AX-731 continuous current rating is 18 amperes.", "question": "What is the AX-731 continuous current rating?", "role": "original evidence"}, {"id": "C03", "raw": "The AX-731 overcurrent trip threshold is 24 amperes.", "question": "What is the AX-731 overcurrent trip threshold?", "role": "original evidence"}, {"id": "C04", "raw": "The AX-731 actuator rated output torque is 12 newton meters.", "question": "What is the AX-731 actuator rated output torque?", "role": "original evidence"}, {"id": "C05", "raw": "The AX-731 gearbox reduction ratio is 5 to 1.", "question": "What is the AX-731 gearbox reduction ratio?", "role": "original evidence"}, {"id": "C06", "raw": "The AX-731 maximum mechanical axis speed is 1200 rpm.", "question": "What is the AX-731 maximum mechanical axis speed?", "role": "original evidence"}], "hybrid_questions": [{"question": "How does the AX-731 drive continuous current rating compare to its overcurrent trip threshold?", "raw": "The continuous current rating of the AX-731 is 18 amperes, while the overcurrent trip threshold is 24 amperes. This means the overcurrent trip threshold is 33.33% higher than the continuous current rating, providing a safety margin to prevent overcurrent conditions.", "unknown": false}, {"question": "Which electrical and mechanical specifications describe the AX-731 drive and actuator together?", "raw": "The electrical and mechanical specifications that describe the AX-731 drive and actuator together are as follows:\n\n**Electrical Specifications:**\n- **Nominal DC Bus Voltage:** 540 volts [C01]\n- **Continuous Current Rating:** 18 amperes [C02]\n- **Overcurrent Trip Threshold:** 24 amperes [C03]\n\n**Mechanical Specifications:**\n- **Actuator Output:** (The document does not provide specific details about the actuator output, so this information is UNKNOWN.)\n\nThe electrical specifications provide details about the voltage and current ratings, while the mechanical specifications are incomplete in the provided information.", "unknown": false}], "leaf_probes": [{"id": "C01", "expected": "540 volts", "raw": "The nominal DC bus voltage for the AX-731 is 540 volts.", "hit": true}, {"id": "C02", "expected": "18 amperes", "raw": "The AX-731 continuous current rating is 18 amperes.", "hit": true}, {"id": "C03", "expected": "24 amperes", "raw": "The overcurrent trip threshold for the AX-731 is 24 amperes.", "hit": true}, {"id": "C04", "expected": "12 newton meters", "raw": "UNKNOWN. The provided information does not include the actuator rated output torque for the AX-731.", "hit": false}, {"id": "C05", "expected": "5 to 1", "raw": "UNKNOWN. The provided information does not include the gearbox reduction ratio for the AX-731.", "hit": false}, {"id": "C06", "expected": "1200 rpm", "raw": "UNKNOWN. The provided information does not include the maximum mechanical axis speed for the AX-731.", "hit": false}], "leaf_hits": 3}
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04 
+PASS CARTRIDGE_ID_C04 
+PASS CARTRIDGE_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05 
+PASS CARTRIDGE_ID_C05 
+PASS CARTRIDGE_SHA_C05 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06 
+PASS CARTRIDGE_ID_C06 
+PASS CARTRIDGE_SHA_C06 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C07 
+PASS CARTRIDGE_ID_C07 
+PASS CARTRIDGE_SHA_C07 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C08 
+PASS CARTRIDGE_ID_C08 
+PASS CARTRIDGE_SHA_C08 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C09 
+PASS CARTRIDGE_ID_C09 
+PASS CARTRIDGE_SHA_C09 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NONEMPTY_SYNTHESIS_H02 714
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT H02 CROSS_DOMAIN_SYNTHESIS e600d00a840c9afee4e387e9fa878dde91e8440a478cd97679008fb83deb9611
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+HYBRID_RESULT {"hybrid": "H02", "parents": ["S02", "S03"], "synthesis": "**Integrated Technical Memory for AX-731 Cross-Domain Mechanical-Software Relations Engineering Synthesis**\n\n### Mechanical Specifications\n- **Actuator Output Torque**: 12 newton meters. [C04]\n- **Gearbox Reduction Ratio**: 5 to 1. [C05]\n- **Maximum Mechanical Axis Speed**: 1200 rpm. [C06]\n\n### Software Specifications\n- **Sampling Interval**: The AX-731 PLC samples the drive current every 10 milliseconds. [C07]\n- **Fault Code F17**: The fault code F17 is raised when the AX-731 drive current exceeds 24 amperes. [C08]\n- **Reset Procedure for F17**: After fault F17 is triggered, a manual reset is required. This reset should only be performed after the drive current has returned to a level below the threshold", "readouts": [{"id": "S02", "raw": "The AX-731 mechanical technical specifications, numbers, and conditions available in the memory are as follows:\n\n- **Actuator Output Torque**: 12 newton meters. [C04]\n- **Gearbox Reduction Ratio**: 5 to 1. [C05]\n- **Maximum Mechanical Axis Speed**: 1200 rpm. [C06]\n\n**Deductions**:\n- Given the gearbox reduction ratio of 5 to 1, the input speed to the gearbox must be higher than the output speed. If the maximum mechanical axis speed (output speed) is 1200 rpm, the input speed to the gearbox would be 1200 rpm * 5 = 6000 rpm. However, this deduction is not explicitly stated in the provided information.", "question": "List all AX-731 mechanical technical specifications, numbers and conditions in the available memory.", "role": "domain"}, {"id": "S03", "raw": "The technical specifications, numbers, and conditions for the AX-731 software, as available in the memory, are as follows:\n\n- **Sampling Interval**: The AX-731 PLC samples the drive current every 10 milliseconds. [C07]\n- **Fault Code F17**: The fault code F17 is raised when the AX-731 drive current exceeds 24 amperes. [C08]\n- **Reset Procedure for F17**: After fault F17 is triggered, a manual reset is required. This reset should only be performed after the drive current has returned to a level below the threshold of 24 amperes. [C09]", "question": "List all AX-731 software technical specifications, numbers and conditions in the available memory.", "role": "domain"}, {"id": "C04", "raw": "The AX-731 actuator rated output torque is 12 newton meters.", "question": "What is the AX-731 actuator rated output torque?", "role": "original evidence"}, {"id": "C05", "raw": "The AX-731 gearbox reduction ratio is 5 to 1.", "question": "What is the AX-731 gearbox reduction ratio?", "role": "original evidence"}, {"id": "C06", "raw": "The AX-731 maximum mechanical axis speed is 1200 rpm.", "question": "What is the AX-731 maximum mechanical axis speed?", "role": "original evidence"}, {"id": "C07", "raw": "The AX-731 PLC samples the drive current every 10 milliseconds.", "question": "How often does the AX-731 PLC sample drive current?", "role": "original evidence"}, {"id": "C08", "raw": "The fault code raised when the AX-731 drive current exceeds 24 amperes is F17.", "question": "What fault code is raised when AX-731 drive current exceeds 24 amperes?", "role": "original evidence"}, {"id": "C09", "raw": "The reset required after AX-731 fault F17 is a manual reset. This reset should be performed after the current returns below the threshold.", "question": "What reset is required after AX-731 fault F17?", "role": "original evidence"}], "hybrid_questions": [{"question": "What does the AX-731 PLC do when current exceeds 24 amperes, and what reset is required?", "raw": "When the drive current exceeds 24 amperes, the AX-731 PLC raises the fault code F17. After fault F17 is triggered, a manual reset is required. This reset should only be performed after the drive current has returned to a level below the threshold.", "unknown": false}, {"question": "Which mechanical axis speed and PLC current monitoring interval are specified for AX-731?", "raw": "The specified maximum mechanical axis speed for the AX-731 is 1200 rpm, and the PLC current monitoring interval is every 10 milliseconds.", "unknown": false}], "leaf_probes": [{"id": "C04", "expected": "12 newton meters", "raw": "The AX-731 actuator rated output torque is 12 newton meters. [C04]", "hit": true}, {"id": "C05", "expected": "5 to 1", "raw": "The gearbox reduction ratio for the AX-731 is 5 to 1. [C05]", "hit": true}, {"id": "C06", "expected": "1200 rpm", "raw": "The maximum mechanical axis speed of the AX-731 is 1200 rpm. [C06]", "hit": true}, {"id": "C07", "expected": "10 milliseconds", "raw": "The AX-731 PLC samples the drive current every 10 milliseconds. [C07]", "hit": true}, {"id": "C08", "expected": "F17", "raw": "The fault code F17 is raised when the AX-731 drive current exceeds 24 amperes.", "hit": true}, {"id": "C09", "expected": "manual reset", "raw": "After fault F17 is triggered on the AX-731, a manual reset is required. This reset should only be performed after the drive current has returned to a level below the threshold.", "hit": true}], "leaf_hits": 6}
+PASS HYBRID_CARTRIDGES_2 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C03 
+PASS CARTRIDGE_ID_C03 
+PASS CARTRIDGE_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS C11_SECTION_NONEMPTY_S01 546
+C11_SECTION {"domain": "S01", "text": "**Electrical Specifications:**\n\n- **Nominal DC Bus Voltage:** 540 volts [C01]\n- **Continuous Current Rating:** 18 amperes [C02]\n- **Overcurrent Trip Threshold:** 24 amperes [C03]\n\n**Operating Conditions:**\n- **Nominal DC Bus Voltage:** 540 volts [C01]\n- **Continuous Current Rating:** 18 amperes [C02]\n- **Overcurrent Trip Threshold:** 24 amperes [C03] \n\n**Source IDs:**\n- [C01] The AX-731 nominal DC bus voltage is 540 volts.\n- [C02] The AX-731 continuous current rating is 18 amperes.\n- [C03] The AX-731 overcurrent trip threshold is 24 amperes", "sha256": "f72c8e9e2f3e016fd35e5411f6f61583e614fd33420e32b310c170d485266ba5", "sources": ["S01", "C01", "C02", "C03"]}
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04 
+PASS CARTRIDGE_ID_C04 
+PASS CARTRIDGE_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05 
+PASS CARTRIDGE_ID_C05 
+PASS CARTRIDGE_SHA_C05 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06 
+PASS CARTRIDGE_ID_C06 
+PASS CARTRIDGE_SHA_C06 
+PASS NATIVE_INIT_80_LAYERS 
+PASS C11_SECTION_NONEMPTY_S02 190
+C11_SECTION {"domain": "S02", "text": "**AX-731 Mechanical Specifications:**\n\n- **Actuator Output Torque**: 12 newton meters. [C04]\n- **Gearbox Reduction Ratio**: 5 to 1. [C05]\n- **Maximum Mechanical Axis Speed**: 1200 rpm. [C06]", "sha256": "7c4cbf8adc01628ebc38af9803975c012d50793b53e4d69c0eab15fed3a247f5", "sources": ["S02", "C04", "C05", "C06"]}
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C07 
+PASS CARTRIDGE_ID_C07 
+PASS CARTRIDGE_SHA_C07 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C08 
+PASS CARTRIDGE_ID_C08 
+PASS CARTRIDGE_SHA_C08 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C09 
+PASS CARTRIDGE_ID_C09 
+PASS CARTRIDGE_SHA_C09 
+PASS NATIVE_INIT_80_LAYERS 
+PASS C11_SECTION_NONEMPTY_S03 242
+C11_SECTION {"domain": "S03", "text": "**AX-731 Master Neural-Memory Cartridge Specifications:**\n\n- **Sampling Interval**: 10 milliseconds [C07]\n- **Fault Code F17**: 24 amperes [C08]\n- **Reset Procedure for F17**: Manual reset required after current returns below 24 amperes [C09]", "sha256": "89ddc3481de97d61ca9df91898bd1f4b463f0fabc687bdf2cb23b28b3879dbb7", "sources": ["S03", "C07", "C08", "C09"]}
+PASS FILE_SHA_H01 
+PASS CARTRIDGE_ID_H01 
+PASS CARTRIDGE_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_H02 
+PASS CARTRIDGE_ID_H02 
+PASS CARTRIDGE_SHA_H02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS C11_BRIDGE_NONEMPTY 428
+PASS C11_MASTER_BODY_NONEMPTY 1616
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C11 MASTER_PHYSICAL_SYNTHESIS fd9167e122813133d8a3c7976da4b762f258182a67c8273d27b277413b10486b
+PASS SSD_PHYSICAL_CARTRIDGES_15 
+C11_NO_MEMORY_BASELINE [{"id": "C01", "raw": "The AX-731 nominal DC bus voltage is typically 750V DC. However, it's important to verify this specification in the specific documentation or manual for the AX-731 model you are working with, as variations can occur depending on the exact configuration and application.", "hit": false}, {"id": "C02", "raw": "I don't have specific information about the AX-731 continuous current rating. The AX-731 is a type of thyristor, but without consulting the datasheet or manufacturer specifications, I cannot provide an accurate value for its continuous current rating. To get the correct continuous current rating for the AX-731, you should refer to the official datasheet or contact the manufacturer directly. Datasheets typically provide detailed electrical characteristics, including continuous current ratings, for semiconductor devices.", "hit": false}, {"id": "C03", "raw": "To provide an accurate answer, I would need more specific information about the AX-731 device, as the overcurrent trip threshold can vary depending on the model and its configuration. However, generally speaking, the AX-731 is a type of circuit breaker or protective relay used in electrical systems to protect against overcurrent conditions.\n\nFor a typical AX-731 overcurrent relay, the trip threshold is usually set by the user or installer based on the system requirements. The threshold can be adjusted to a specific current level, often expressed in amperes (A), to ensure that the relay trips when the current exceeds a predetermined value.\n\nIf you have a specific AX-731 model and need to know the exact overcurrent trip threshold, you should refer to the device's technical manual or datasheet. These documents will provide detailed information on the adjustable settings, including the overcurrent trip threshold.\n\nIf you can provide more details about the", "hit": false}, {"id": "C04", "raw": "I don't have the exact rated output torque for the AX-731 actuator without more context or specifications. Actuator torque ratings can vary, so to get the precise value for the AX-731 model, you would need to:\n\n1. Check the manufacturer's datasheet or product specifications for the AX-731 actuator.\n2. Look for a \"Rated Torque\" or \"Output Torque\" specification.\n3. The value will likely be given in units like Nm (Newton-meters) or oz-in (ounce-inches).\n\nIf you have access to the actuator or its documentation, that would be the best source for this information. If you provide more details about the manufacturer or context, I may be able to help further in finding this specification.", "hit": false}, {"id": "C05", "raw": "I don't have specific information about the exact reduction ratio of the AX-731 gearbox. Gearbox reduction ratios can vary depending on the specific model and configuration. To get the precise reduction ratio for the AX-731, you would need to consult the manufacturer's specifications or documentation for that particular gearbox model. If you have access to a manual or datasheet for the AX-731, it should provide the detailed specifications including the reduction ratio.", "hit": false}, {"id": "C06", "raw": "I don't have the specific maximum mechanical axis speed for the AX-731 model without more context or technical documentation. The maximum mechanical axis speed can vary depending on the specific configuration and application of the AX-731. To get the accurate maximum mechanical axis speed for your particular AX-731 model, I recommend checking the technical specifications provided by the manufacturer or contacting their customer support for detailed information.", "hit": false}, {"id": "C07", "raw": "The AX-731 PLC samples the drive current at a frequency of 100 Hz, which means it takes a sample every 10 milliseconds. This high sampling rate ensures that the PLC can accurately monitor and control the drive current in real-time, providing precise and responsive control for the application it is used in.", "hit": true}, {"id": "C08", "raw": "The fault code that is typically raised when the drive current of an AX-731 drive exceeds 24 amperes would depend on the specific model and manufacturer's specifications. However, a common fault code for overcurrent conditions in many drives is \"OC\" or \"Over Current.\" \n\nFor the AX-731 drive, you should refer to the manufacturer's manual or documentation to find the exact fault code. If the manual is not available, you can usually find this information in the fault code section of the drive's user manual or technical documentation.\n\nIf you have the manual, look for a section that lists fault codes and their meanings, and search for the code associated with overcurrent conditions. If you don't have the manual, you can also contact the manufacturer's technical support for assistance.", "hit": false}, {"id": "C09", "raw": "For the AX-731 fault F17, the required reset procedure typically involves the following steps:\n\n1. **Power Down the Device**: Turn off the power supply to the AX-731 device.\n2. **Wait for a Few Minutes**: Allow the device to cool down and reset internally. This usually takes about 5-10 minutes.\n3. **Check Connections**: Ensure all connections, including power and signal lines, are secure and properly connected.\n4. **Power Up the Device**: Turn the power back on and observe if the fault persists.\n5. **Clear Fault Code**: If the device has a user interface, follow the manufacturer's instructions to clear the fault code. This might involve pressing specific buttons or navigating through a menu.\n6. **Run Diagnostic Tests**: If the fault code is cleared, run any diagnostic tests recommended by the manufacturer to ensure the device is functioning correctly.\n7. **Consult Documentation**: If the", "hit": false}]
+PASS C11_ONLY_ACTIVE_NODE 
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C01", "question": "What is the AX-731 nominal DC bus voltage?", "expected": "540 volts", "domain": "S01", "raw": "The AX-731 nominal DC bus voltage is 540 volts. [C01]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C02", "question": "What is the AX-731 continuous current rating?", "expected": "18 amperes", "domain": "S01", "raw": "The AX-731 continuous current rating is 18 amperes. [C02]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C03", "question": "What is the AX-731 overcurrent trip threshold?", "expected": "24 amperes", "domain": "S01", "raw": "The AX-731 overcurrent trip threshold is 24 amperes. [C03]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C04", "question": "What is the AX-731 actuator rated output torque?", "expected": "12 newton meters", "domain": "S02", "raw": "The AX-731 actuator rated output torque is 12 newton meters. [C04]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C05", "question": "What is the AX-731 gearbox reduction ratio?", "expected": "5 to 1", "domain": "S02", "raw": "The AX-731 gearbox reduction ratio is 5 to 1. [C05]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C06", "question": "What is the AX-731 maximum mechanical axis speed?", "expected": "1200 rpm", "domain": "S02", "raw": "The AX-731 maximum mechanical axis speed is 1200 rpm. [C06]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C07", "question": "How often does the AX-731 PLC sample drive current?", "expected": "10 milliseconds", "domain": "S03", "raw": "The AX-731 PLC samples the drive current every 10 milliseconds. [H02]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C08", "question": "What fault code is raised when AX-731 drive current exceeds 24 amperes?", "expected": "F17", "domain": "S03", "raw": "The fault code raised when the AX-731 drive current exceeds 24 amperes is **F17**. [C08]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_LEAF {"id": "C09", "question": "What reset is required after AX-731 fault F17?", "expected": "manual reset", "domain": "S03", "raw": "The reset procedure for AX-731 fault F17 requires a manual reset after the current returns below 24 amperes. [C09]", "hit": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_CROSS {"id": "X01", "question": "For AX-731, give both nominal DC bus voltage and actuator rated output torque.", "expected": ["540 volts", "12 newton meters"], "raw": "The nominal DC bus voltage for the AX-731 is 540 volts, and the actuator rated output torque is 12 newton meters.", "hits": [true, true], "complete": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_CROSS {"id": "X02", "question": "For AX-731, give both continuous current rating and gearbox reduction ratio.", "expected": ["18 amperes", "5 to 1"], "raw": "The continuous current rating for the AX-731 is 18 amperes, and the gearbox reduction ratio is 5 to 1.", "hits": [true, true], "complete": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_CROSS {"id": "X03", "question": "For AX-731, give both overcurrent trip threshold and maximum mechanical axis speed.", "expected": ["24 amperes", "1200 rpm"], "raw": "For the AX-731:\n\n- **Overcurrent Trip Threshold:** 24 amperes [C03]\n- **Maximum Mechanical Axis Speed:** 1200 rpm [C06]", "hits": [true, true], "complete": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_CROSS {"id": "X04", "question": "For AX-731, give both actuator rated output torque and PLC sampling interval.", "expected": ["12 newton meters", "10 milliseconds"], "raw": "For the AX-731:\n\n- **Actuator Rated Output Torque:** 12 newton meters [C04]\n- **PLC Sampling Interval:** Every 10 milliseconds [H02]", "hits": [true, true], "complete": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_CROSS {"id": "X05", "question": "For AX-731, give both gearbox reduction ratio and PLC overcurrent fault code.", "expected": ["5 to 1", "F17"], "raw": "For the AX-731:\n\n- **Gearbox Reduction Ratio:** 5 to 1 [C05]\n- **PLC Overcurrent Fault Code:** F17 [C08]", "hits": [true, true], "complete": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_CROSS {"id": "X06", "question": "For AX-731, give both maximum mechanical axis speed and reset procedure for fault F17.", "expected": ["1200 rpm", "manual reset"], "raw": "For the AX-731:\n\n- **Maximum Mechanical Axis Speed:** 1200 rpm [C06]\n- **Reset Procedure for F17:** Manual reset required after current returns below 24 amperes [C09]", "hits": [true, true], "complete": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_UNKNOWN {"question": "What is the AX-731 factory serial number? If absent, answer UNKNOWN.", "raw": "UNKNOWN", "unknown": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+C11_UNKNOWN {"question": "What is the AX-731 factory calibration date? If absent, answer UNKNOWN.", "raw": "UNKNOWN", "unknown": true}
+PASS FILE_SHA_C11 
+PASS CARTRIDGE_ID_C11 
+PASS CARTRIDGE_SHA_C11 
+PASS NATIVE_INIT_80_LAYERS 
+PASS C11_80_LAYER_PARITY {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+PASS SOURCE_AND_SYNTHESIS_SSD_SURVIVE 
+ACCEPT_PASS LEAF_9_9
+ACCEPT_PASS CROSS_6_6
+ACCEPT_PASS UNKNOWN_2_2
+ACCEPT_PASS BASELINE_DISTINGUISHABLE
+TEST729_RESULT PASS_C11_INDEPENDENT_MASTER
+SUMMARY {'source_readout_hits': 9, 'domain_semantic_hits': 9, 'domain_semantic_n': 9, 'hybrid_leaf_hits': 9, 'hybrid_leaf_n': 12, 'ssd_physical_nodes': 15, 'c11_independent_leaf_hits': 9, 'c11_independent_leaf_total': 9, 'c11_independent_cross_complete': 6, 'c11_independent_cross_total': 6, 'c11_unknown_correct': 2, 'c11_unknown_total': 2, 'no_memory_baseline_hits': 1, 'c11_80_layer_parity': True, 'weights_unchanged': True, 'ssd_sha_verified': True}
+
+
+RESULT_JSON /content/AKBASCORE_TEST729/TEST729_results.json MANIFEST /content/AKBASCORE_TEST729/TEST729_manifest.json LOG /content/AKBASCORE_TEST729/TEST729.log
