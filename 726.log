@@ -1,0 +1,163 @@
+ ==============================================================================================================
+AKBASCORE PROMETHEUS — TEST726 — PHYSICAL DOMAIN SYNTHESIS CARTRIDGES
+==============================================================================================================
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 80.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 917kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 82.6MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.2MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 132MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.70MB/s]Download complete:   125GB, 1.57GB/s  Reconstruction complete: 100%  145GB /  145GB,  257MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00,  8.14s/it]Loading weights: 100% 963/963 [06:23<00:00,  3.27it/s]generation_config.json: 100% 242/242 [00:00<00:00, 29.5kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C01 SOURCE_S01 70757915d523a468e0f400be7c63071e7dee19b3f2462054993fc997ce9cc9e3
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C02 SOURCE_S01 827659ec17a2856172a961c80a6786664d6e0eaf18b20c80e5fd167797293d42
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C03 SOURCE_S01 f518877a6c73243aedd05acb8b43daa55e1cff86d43227509cc19786c1f48e9b
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C04 SOURCE_S02 884b0d4fa258fd6205a678689cab0e6a1a6a1fe632887033f5ad33d112827cae
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C05 SOURCE_S02 cb6e0e4959e56473d5a6c7c0c1139e5627025b031c6d021600c788cbdbf14412
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C06 SOURCE_S02 d62cc77c41616eeaa904b6e60f3fdb51943d9d6002fa1644238547fd9d1b053c
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C07 SOURCE_S03 0f1c9830823bf1b713abe66d3e46f3279f336a89e3e771003c3e4c6ca7e75412
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C08 SOURCE_S03 b2df6abeec3015fe0551e77f77e4af643b41abc8d126ff386f7541f5b3b36b62
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT C09 SOURCE_S03 f8d060e2464a3953e038f19eecfbe8faf507259aac5d6f6f990a63b3c38e1059
+PASS SOURCE_CARTRIDGES_9 
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S01", "id": "C01", "question": "What does evidence record C01 say about the AX-731 electrical system? Answer with the exact stated measurement or rule.", "raw": "Evidence record C01 states that the AX-731 drive has a nominal DC bus voltage of 540 volts.", "expected": "540 volts", "expected_found": true}
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S01", "id": "C02", "question": "What does evidence record C02 say about the AX-731 electrical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 drive continuous current rating is 18 amperes.", "expected": "18 amperes", "expected_found": true}
+PASS FILE_SHA_C03 
+PASS CARTRIDGE_ID_C03 
+PASS CARTRIDGE_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S01", "id": "C03", "question": "What does evidence record C03 say about the AX-731 electrical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 drive overcurrent trip threshold is 24 amperes.", "expected": "24 amperes", "expected_found": true}
+PASS NONEMPTY_SYNTHESIS_S01 622
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT S01 MODEL_TEXT_SYNTHESIS b02e052900c8d979ed57c41979bdc44a50c77a68718b19617832d1cfa77fe5fc
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+DOMAIN_SYNTHESIS_RESULT {"domain": "S01", "synthesis": "**Technical Memory Note: AX-731 Electrical Drive Specifications**\n\n- **Nominal DC Bus Voltage:** 540 volts\n- **Continuous Current Rating:** 18 amperes\n- **Overcurrent Trip Threshold:** 24 amperes\n\nThese specifications are critical for the proper operation and protection of the AX-731 drive. The nominal DC bus voltage of 540 volts ensures stable power supply, while the continuous current rating of 18 amperes defines the maximum current the drive can handle under normal operating conditions. The overcurrent trip threshold of 24 amperes is set to protect the drive from damage in the event of an excessive current draw.", "synthesis_sha256": "67504718533f364adf31b964a7a34142ee529b480f789c13e50086685ac9930d", "evidence": [{"domain": "S01", "id": "C01", "question": "What does evidence record C01 say about the AX-731 electrical system? Answer with the exact stated measurement or rule.", "raw": "Evidence record C01 states that the AX-731 drive has a nominal DC bus voltage of 540 volts.", "expected": "540 volts", "expected_found": true}, {"domain": "S01", "id": "C02", "question": "What does evidence record C02 say about the AX-731 electrical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 drive continuous current rating is 18 amperes.", "expected": "18 amperes", "expected_found": true}, {"domain": "S01", "id": "C03", "question": "What does evidence record C03 say about the AX-731 electrical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 drive overcurrent trip threshold is 24 amperes.", "expected": "24 amperes", "expected_found": true}], "readback": [{"id": "C01", "expected": "540 volts", "raw": "UNKNOWN. The information in evidence record C01 is not provided in the available document memory.", "hit": false}, {"id": "C02", "expected": "18 amperes", "raw": "UNKNOWN. The information in evidence record C02 is not provided in the available document memory.", "hit": false}, {"id": "C03", "expected": "24 amperes", "raw": "UNKNOWN. The information in evidence record C03 is not provided in the available document memory.", "hit": false}], "readback_hits": 0, "missing_raw": "UNKNOWN", "missing_unknown": true, "cartridge_sha256": "b02e052900c8d979ed57c41979bdc44a50c77a68718b19617832d1cfa77fe5fc"}
+PASS FILE_SHA_C04 
+PASS CARTRIDGE_ID_C04 
+PASS CARTRIDGE_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S02", "id": "C04", "question": "What does evidence record C04 say about the AX-731 mechanical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 actuator rated output torque is 12 newton meters.", "expected": "12 newton meters", "expected_found": true}
+PASS FILE_SHA_C05 
+PASS CARTRIDGE_ID_C05 
+PASS CARTRIDGE_SHA_C05 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S02", "id": "C05", "question": "What does evidence record C05 say about the AX-731 mechanical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 actuator reduction gearbox ratio is 5 to 1.", "expected": "5 to 1", "expected_found": true}
+PASS FILE_SHA_C06 
+PASS CARTRIDGE_ID_C06 
+PASS CARTRIDGE_SHA_C06 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S02", "id": "C06", "question": "What does evidence record C06 say about the AX-731 mechanical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 axis maximum mechanical speed is 1200 rpm.", "expected": "1200 rpm", "expected_found": true}
+PASS NONEMPTY_SYNTHESIS_S02 500
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT S02 MODEL_TEXT_SYNTHESIS 78e6e9931877e582561cc7b160faaec45ce8ac2c4140b40464ed244bd27de209
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+DOMAIN_SYNTHESIS_RESULT {"domain": "S02", "synthesis": "**Technical Memory Note: AX-731 Actuator Specifications**\n\n- **Rated Output Torque:** The AX-731 actuator is rated to provide an output torque of 12 newton meters.\n- **Reduction Gearbox Ratio:** The reduction gearbox of the AX-731 actuator has a ratio of 5 to 1.\n- **Maximum Mechanical Speed:** The maximum mechanical speed of the AX-731 actuator axis is 1200 rpm.\n\nThese specifications are critical for ensuring the actuator operates within its designed parameters and maintains optimal performance.", "synthesis_sha256": "508b7b803da575c7ce8612ba517b0427a319fdcf5075c0f4fc1682e9ab209c11", "evidence": [{"domain": "S02", "id": "C04", "question": "What does evidence record C04 say about the AX-731 mechanical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 actuator rated output torque is 12 newton meters.", "expected": "12 newton meters", "expected_found": true}, {"domain": "S02", "id": "C05", "question": "What does evidence record C05 say about the AX-731 mechanical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 actuator reduction gearbox ratio is 5 to 1.", "expected": "5 to 1", "expected_found": true}, {"domain": "S02", "id": "C06", "question": "What does evidence record C06 say about the AX-731 mechanical system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 axis maximum mechanical speed is 1200 rpm.", "expected": "1200 rpm", "expected_found": true}], "readback": [{"id": "C04", "expected": "12 newton meters", "raw": "UNKNOWN. The information in evidence record C04 is not provided in the available document memory.", "hit": false}, {"id": "C05", "expected": "5 to 1", "raw": "UNKNOWN. The information in evidence record C05 is not provided in the available document memory.", "hit": false}, {"id": "C06", "expected": "1200 rpm", "raw": "UNKNOWN. The information in evidence record C06 is not provided in the available document memory.", "hit": false}], "readback_hits": 0, "missing_raw": "UNKNOWN", "missing_unknown": true, "cartridge_sha256": "78e6e9931877e582561cc7b160faaec45ce8ac2c4140b40464ed244bd27de209"}
+PASS FILE_SHA_C07 
+PASS CARTRIDGE_ID_C07 
+PASS CARTRIDGE_SHA_C07 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S03", "id": "C07", "question": "What does evidence record C07 say about the AX-731 software system? Answer with the exact stated measurement or rule.", "raw": "Evidence record C07 states that the AX-731 PLC samples the drive current every 10 milliseconds.", "expected": "10 milliseconds", "expected_found": true}
+PASS FILE_SHA_C08 
+PASS CARTRIDGE_ID_C08 
+PASS CARTRIDGE_SHA_C08 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S03", "id": "C08", "question": "What does evidence record C08 say about the AX-731 software system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 PLC raises fault F17 when measured current exceeds 24 amperes.", "expected": "F17", "expected_found": true}
+PASS FILE_SHA_C09 
+PASS CARTRIDGE_ID_C09 
+PASS CARTRIDGE_SHA_C09 
+PASS NATIVE_INIT_80_LAYERS 
+SOURCE_READ {"domain": "S03", "id": "C09", "question": "What does evidence record C09 say about the AX-731 software system? Answer with the exact stated measurement or rule.", "raw": "Evidence record C09 states that the AX-731 PLC fault F17 requires manual reset after current returns below threshold.", "expected": "manual reset", "expected_found": true}
+PASS NONEMPTY_SYNTHESIS_S03 386
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT S03 MODEL_TEXT_SYNTHESIS bf69e7d1cf9da0c9aa3b2c5879cb3eba56b8b92de159a8cc96c2d0786ec948ba
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+DOMAIN_SYNTHESIS_RESULT {"domain": "S03", "synthesis": "**Technical Memory Note: AX-731 PLC Current Monitoring and Fault Handling**\n\nThe AX-731 Programmable Logic Controller (PLC) samples the drive current every 10 milliseconds. If the measured current exceeds 24 amperes, the PLC raises fault F17. Once fault F17 is triggered, it requires a manual reset to clear the fault, even after the current has returned to a level below the threshold.", "synthesis_sha256": "eedc1bfd943a6f8bf25e3d53b0730afa577010b7b89dec56671d8adf9bb5acac", "evidence": [{"domain": "S03", "id": "C07", "question": "What does evidence record C07 say about the AX-731 software system? Answer with the exact stated measurement or rule.", "raw": "Evidence record C07 states that the AX-731 PLC samples the drive current every 10 milliseconds.", "expected": "10 milliseconds", "expected_found": true}, {"domain": "S03", "id": "C08", "question": "What does evidence record C08 say about the AX-731 software system? Answer with the exact stated measurement or rule.", "raw": "The AX-731 PLC raises fault F17 when measured current exceeds 24 amperes.", "expected": "F17", "expected_found": true}, {"domain": "S03", "id": "C09", "question": "What does evidence record C09 say about the AX-731 software system? Answer with the exact stated measurement or rule.", "raw": "Evidence record C09 states that the AX-731 PLC fault F17 requires manual reset after current returns below threshold.", "expected": "manual reset", "expected_found": true}], "readback": [{"id": "C07", "expected": "10 milliseconds", "raw": "UNKNOWN. The provided information does not contain any details about evidence record C07.", "hit": false}, {"id": "C08", "expected": "F17", "raw": "UNKNOWN. The information in evidence record C08 is not provided in the available document memory.", "hit": false}, {"id": "C09", "expected": "manual reset", "raw": "UNKNOWN. The information in evidence record C09 is not provided in the available document memory.", "hit": false}], "readback_hits": 0, "missing_raw": "UNKNOWN", "missing_unknown": true, "cartridge_sha256": "bf69e7d1cf9da0c9aa3b2c5879cb3eba56b8b92de159a8cc96c2d0786ec948ba"}
+PASS SYNTHESIS_CARTRIDGES_3 
+PASS SOURCE_FILES_REMOVED 
+PASS DOMAIN_FILE_SURVIVES_S01 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS DOMAIN_80_LAYER_PARITY_S01 {'matched': 80, 'layers': 80}
+PASS DOMAIN_FILE_SURVIVES_S02 
+PASS FILE_SHA_S02 
+PASS CARTRIDGE_ID_S02 
+PASS CARTRIDGE_SHA_S02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS DOMAIN_80_LAYER_PARITY_S02 {'matched': 80, 'layers': 80}
+PASS DOMAIN_FILE_SURVIVES_S03 
+PASS FILE_SHA_S03 
+PASS CARTRIDGE_ID_S03 
+PASS CARTRIDGE_SHA_S03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS DOMAIN_80_LAYER_PARITY_S03 {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+TEST726_RESULT COMPLETE_DOMAIN_SYNTHESIS_MEASURED
+SUMMARY {'domains': 3, 'source_readout_hits': 9, 'source_readout_n': 9, 'domain_readback_hits': 0, 'domain_readback_n': 9, 'domain_missing_unknown': 3}
+RESULT_JSON /content/AKBASCORE_TEST726/TEST726_results.json MANIFEST /content/AKBASCORE_TEST726/TEST726_manifest.json LOG /content/AKBASCORE_TEST726/TEST726.log
