@@ -1,0 +1,798 @@
+# =====================================================================================================================
+# AKBASCORE PROMETHEUS — TEST730 · LIVE RESEARCH DEMONSTRATION (Gradio)
+# Physical Neural Memory and Multi-Source Synthesis in a Frozen 72B Language Model
+# Qwen/Qwen2.5-72B-Instruct · NF4 4-bit frozen · BF16 compute · CUT3 · NVIDIA A100-SXM4-80GB · ONE Google Colab cell
+# PART 1 / 3 — locked sources, the recorded TEST730 experiment, the physical cartridges and the UNCHANGED engine
+# ---------------------------------------------------------------------------------------------------------------------
+# HOW TO RUN  Paste PART 1, PART 2 and PART 3 one below the other into ONE Colab cell and run the cell once.
+#             The interface opens in REPLAY MODE (recorded TEST730 results; no GPU is used). It has ONE button: RUN.
+#             RUN performs everything automatically, in this order, and shows every stage in the interface:
+#   [1] real sources      the three CC BY 4.0 articles are read again from Europe PMC; excerpt SHA-256 = TEST730 record
+#   [2] GPU               one NVIDIA A100 80 GB (the TEST730 gates CUDA_AVAILABLE / ONE_GPU / A100_80GB)
+#   [3] model             the real Qwen2.5-72B-Instruct is downloaded (≈145 GB, unless cached) and loaded NF4 on the GPU
+#   [4] cartridges        P01, P02, P03, MASTER: the existing TEST730 files are found and verified by SHA-256 against the
+#                         TEST730 commit record. ONLY if a file no longer exists in this runtime, it is re-forged with the
+#                         unchanged 730.py commit() from its SHA-verified sealed text (no generation; MASTER text = TEST730
+#                         log) into a SEPARATE folder, and its SHA-256 is compared with the TEST730 commit record.
+#   [5] MASTER fast path  verified SSD load → GPU → native CUT3 initialize (80 layers), measured
+#   [6] parity            TEST709 initialize vs native initialize on MASTER, exact SHA-256 on 80/80 layers
+#   [7] neural X-ray      read-only K/V norms of P01, P02, P03 and MASTER (each mounted alone), layers 0–79
+#   [8] reproduction      sealed questions H1 and A1 asked again on MASTER; compared with the TEST730 record by SHA-256
+#   [9] new questions     two live questions that are NOT part of the sealed panel: MASTER memory vs no memory
+#  [10] integrity         MASTER prefix seals, frozen-weight sentinel, cartridge files after use
+#  [11] figures           13 scientific figures: Figs. 1–12 + S1 (high-quality JPEG, 300 dpi, layout QC)
+#  [12] records           live measurements (JSON), real-time logs, SHA-256 manifest, provenance table — direct downloads, no ZIP
+#             After RUN the MASTER memory stays mounted: new questions typed in the LIVE QUERY tab are answered live
+#             (press Enter). They are never counted as part of the sealed six-question TEST730 panel.
+# NOT RE-RUN  The completed TEST730 experiment is not repeated: no reflection, no synthesis and none of the six recorded
+#             answers is regenerated or changed. The recorded results are documentation (REPLAY) and are kept apart from
+#             everything measured live in this session.
+# ENGINE      709.py (git blob 6c9f8cbb…) and 730.py (git blob b1bad9eb…) are downloaded, locked by git blob and their
+#             engine functions are executed unchanged (AST extraction, as 730.py itself imports 709.py). No new memory
+#             engine; CUT3, H3 injection and the L0–L3 K/V logic are untouched; the weights stay frozen.
+# STATUS      This demonstration code has NOT been executed on a GPU by its author (CPU simulation of the code paths
+#             only). Nothing is reported as measured unless it was measured in the run that reports it.
+# AUTHOR      Mustafa Akbaş · AkbasCore AI Teknoloji · Mersin, Türkiye · Copyright © 2026 Mustafa Akbaş
+#             AKBASCORE RESEARCH SOFTWARE LICENSE — https://github.com/ceceli33/titan-cognitive-core-v3/blob/main/LICENSE
+#             The three articles are CC BY 4.0 (attribution in the interface and figures). Qwen2.5-72B-Instruct and all
+#             third-party libraries remain governed by their own licences.
+# =====================================================================================================================
+import os,sys,re,io,ast,json,time,html,math,shutil,zipfile,hashlib,platform,threading,traceback,subprocess,importlib.util,textwrap,types,gc,csv
+from pathlib import Path
+from datetime import datetime,timezone
+from collections import OrderedDict,deque
+from io import BytesIO
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF","expandable_segments:True")      # identical to 730.py
+os.environ.pop("HF_HUB_DISABLE_PROGRESS_BARS",None)                               # keep the real download progress visible
+
+def _pip(*pk):subprocess.check_call([sys.executable,"-m","pip","install","-q",*pk])
+# dependency rule of 730.py: install a package only when it is missing (the Colab torch/transformers stay as they are)
+for _m,_p in [("torch","torch"),("transformers","transformers>=5.18,<6"),("accelerate","accelerate>=1.15"),("bitsandbytes","bitsandbytes>=0.50"),("psutil","psutil")]:
+    if importlib.util.find_spec(_m) is None:_pip(_p)
+for _m,_p in (("numpy","numpy"),("matplotlib","matplotlib"),("PIL","pillow")):
+    if importlib.util.find_spec(_m) is None:_pip(_p)
+if importlib.util.find_spec("gradio") is None:
+    _hv=None                                      # gradio must not replace the huggingface_hub that transformers needs
+    try:
+        _r=subprocess.run([sys.executable,"-c","import huggingface_hub;print(huggingface_hub.__version__)"],capture_output=True,text=True,timeout=120)
+        _hv=_r.stdout.strip() if _r.returncode==0 else None
+    except Exception:_hv=None
+    try:
+        if _hv:_pip("gradio",f"huggingface_hub=={_hv}")
+        else:raise RuntimeError("no installed hub")
+    except Exception:_pip("gradio")
+import numpy as np
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle,FancyBboxPatch,FancyArrowPatch
+from matplotlib.lines import Line2D
+from PIL import Image
+import gradio as gr
+import torch,transformers
+from transformers import AutoTokenizer,AutoModelForCausalLM,BitsAndBytesConfig
+from transformers.cache_utils import DynamicCache
+try:
+    import bitsandbytes;_BNB_ERR=None
+except Exception as _ex:bitsandbytes=None;_BNB_ERR=f"{type(_ex).__name__}: {_ex}"
+import urllib.request,xml.etree.ElementTree as ET
+from urllib.parse import quote,urlencode
+SIM=str(torch.__version__).startswith("sim")          # CPU simulation stack of the code author — never a result
+
+# ---------------------------------------------------------------------------------------------------------------------
+# identity, locks, colours
+# ---------------------------------------------------------------------------------------------------------------------
+APP_NAME="AKBASCORE PROMETHEUS";APP_SUB="Physical Neural Memory and Multi-Source Synthesis in a Frozen 72B Language Model"
+APP_SHORT="AKBASCORE PROMETHEUS · TEST730 · Qwen2.5-72B · CUT3"
+CODE_VERSION="P730-demo-1.0";EXPERIMENT="TEST730"
+AUTHOR="Mustafa Akbaş";ORG="AkbasCore AI Teknoloji";PLACE="Mersin, Türkiye"
+LICENSE_NAME="AKBASCORE RESEARCH SOFTWARE LICENSE";COPYRIGHT="Copyright © 2026 Mustafa Akbaş"
+REPO="https://github.com/ceceli33/titan-cognitive-core-v3";RAW_BASE="https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/"
+URL_LICENSE=REPO+"/blob/main/LICENSE";URL_730=REPO+"/blob/main/730.py";URL_730LOG=REPO+"/blob/main/730.log";URL_709=REPO+"/blob/main/709.py";URL_716=REPO+"/blob/main/716.py"
+LOCKS=OrderedDict([("730.py","b1bad9eb3b111b44413f8ef05a3a140ab66a77dd"),   # TEST730 program (engine functions executed unchanged)
+                   ("730.log","457fa50042700f6e6ea0e9e419e1e3134f49caeb"),  # the published TEST730 record (REPLAY source)
+                   ("709.py","6c9f8cbb1eeed848d45133d73f0d7676b68e9125"),   # TEST709 engine (locked by 730.py)
+                   ("716.py","913fa7a4951f2072df4be2eb49120ea86efa5477"),   # TEST716 (locked by 730.py)
+                   ("LICENSE","9aad4724d1072f9e56486650a9527380c867a53b")])
+MODEL_ID="Qwen/Qwen2.5-72B-Instruct";EXPECTED_ARCH=(80,8192,64,8,128)
+SRC_IDS=("P01","P02","P03");CARTS=("P01","P02","P03","MASTER")
+COL=dict(P01="#2455D6",P02="#C12566",P03="#BA601B",MASTER="#7626D9")
+OK_COL="#08785B";NEU="#374151";BG="#FFFFFF";INK="#111827";INK2="#374151";MUTED="#6B7280";RULE="#D1D5DB";PANEL="#F8FAFC";RED="#B91C1C";AMBER="#B45309"
+LOWER_COL="#08785B";UPPER_COL="#9CA3AF"
+# values of the TEST730 record that the parser of the locked 730.log must reproduce (self-check of the parser, not data)
+ANCHORS=dict(panel="bfc2bdac698847fe5545ec6dc1600f64348eef0cc0c9dd0ae15628b44a1a0f5a",
+             commit=dict(P01="58e3e1e7c9c5b61d711e8e5a090510dda82cb113f83fad53fbc3c5ee69190c1d",P02="2ddfe65e99e5f910683d5862c05f778752b80a94b76242dd3da59c690e0a443a",
+                         P03="ab2ddddf1f7ba6f39c4623ae8638374e2b73dda3339dfd6c42fe899a41552292",MASTER="98802df91b6834099e89b95266387498626d7aa817862af95c388eff6f544bc5"),
+             tokens=dict(P01=1924,P02=1987,P03=2036,MASTER=2848),pmcid=dict(P01="PMC13672588",P02="PMC13521781",P03="PMC13043820"),
+             result="DEMO_COMPLETED_UNGRADED",questions=("H1","H2","H3","A1","A2","A3"))
+TOPIC=dict(P01="Creative learning and authorship",P02="Cognitive depth and the critical-thinking paradox",P03="AI-assisted gamified learning design")   # editorial labels
+NEW_QUESTIONS=[   # written for this demonstration, published in this code BEFORE the run; NOT part of the sealed TEST730 panel
+    dict(id="N1",question="Which source ID describes a study of 133 undergraduate art students, and which two forms of AI use does it distinguish? Answer in two sentences.",
+         markers=["P01","133","assistive","content-generative"]),
+    dict(id="N2",question="Which source ID proposes the 'critical thinking paradox', and what does the paradox claim? Answer in two sentences.",
+         markers=["P02","short-term","critical thinking"])]
+REPRO_IDS=("H1","A1")       # sealed questions asked again live (reproduction probe; the recorded answers stay the official ones)
+
+def utc_now():return datetime.now(timezone.utc).isoformat(timespec="milliseconds")
+def local_now():return datetime.now().astimezone().isoformat(timespec="seconds")
+def sha_bytes(b):return hashlib.sha256(b).hexdigest()
+def sha_text(s):return sha_bytes(str(s).encode("utf-8"))
+def git_blob(b):return hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
+def sha_file(p,block=1<<22):
+    h=hashlib.sha256()
+    with open(p,"rb") as f:
+        for b in iter(lambda:f.read(block),b""):h.update(b)
+    return h.hexdigest()
+def jsafe(o):
+    if isinstance(o,dict):return {str(k):jsafe(v) for k,v in o.items()}
+    if isinstance(o,(list,tuple)):return [jsafe(v) for v in o]
+    if isinstance(o,np.floating):return float(o)
+    if isinstance(o,np.integer):return int(o)
+    if isinstance(o,np.ndarray):return jsafe(o.tolist())
+    if isinstance(o,Path):return str(o)
+    if isinstance(o,float) and (math.isnan(o) or math.isinf(o)):return None
+    if isinstance(o,(str,int,float,bool)) or o is None:return o
+    return str(o)
+def dump_json(path,obj):
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_suffix(path.suffix+".tmp")
+    tmp.write_text(json.dumps(jsafe(obj),ensure_ascii=False,indent=2),encoding="utf-8");tmp.replace(path);return path
+def jload(p,default=None):
+    try:return json.loads(Path(p).read_text(encoding="utf-8"))
+    except Exception:return default
+def short(s,n):
+    s=" ".join(str(s or "").split());return s if len(s)<=n else s[:n-1].rstrip()+"…"
+def gib(b):return b/2**30
+
+# ---------------------------------------------------------------------------------------------------------------------
+# directories and logs (the TEST730 run directory is only READ — nothing is ever written into it)
+# ---------------------------------------------------------------------------------------------------------------------
+_CROOT=Path("/content") if os.path.isdir("/content") else Path("/tmp")
+DEMO_ROOT=_CROOT/"AKBASCORE_TEST730_DEMO"
+SESSION_ID=datetime.now().astimezone().strftime("P730-%Y%m%d-%H%M%S")
+SESSION_DIR=DEMO_ROOT/"sessions"/SESSION_ID;FIG_DIR=SESSION_DIR/"figures";DATA_DIR=SESSION_DIR/"measurements";REC_DIR=SESSION_DIR/"test730_record"
+EVID_DIR=DEMO_ROOT/"locked_sources";RECOVERY_DIR=DEMO_ROOT/"recovered_cartridges";XRAY_DIR=DATA_DIR/"xray"
+for _d in (SESSION_DIR,FIG_DIR,DATA_DIR,REC_DIR,EVID_DIR,XRAY_DIR):_d.mkdir(parents=True,exist_ok=True)
+SESSION_LOG=SESSION_DIR/"SESSION.log";SESSION_EVENTS=SESSION_DIR/"SESSION_EVENTS.jsonl";ENGINE_LOG=SESSION_DIR/"ENGINE.log"
+LIVE_QA=SESSION_DIR/"LIVE_QUERY_ANSWERS.jsonl";LIVE_FILE=DATA_DIR/"LIVE_MEASUREMENTS.json";CHECK_FILE=SESSION_DIR/"VERIFICATION_RECORD.json"
+_OUT=sys.stdout;_LOG_LOCK=threading.Lock();CONSOLE=deque(maxlen=400)
+def _emit(line):
+    with _LOG_LOCK:CONSOLE.append(line[:400])
+    try:_OUT.write(line[:800]+"\n");_OUT.flush()
+    except Exception:pass
+def slog(kind,message="",**data):
+    """session log: one readable line + one JSON event"""
+    stg=(globals().get("STATE") or {}).get("current") or "-"
+    ev=dict(utc=utc_now(),session=SESSION_ID,stage=stg,kind=kind,message=str(message),data=jsafe(data),provenance=("SIMULATION" if SIM else "THIS SESSION"))
+    line=f"{ev['utc'][11:19]} [{stg}] {kind:<16} {message}"+(f" {json.dumps(jsafe(data),ensure_ascii=False)[:300]}" if data else "")
+    with _LOG_LOCK:
+        with SESSION_LOG.open("a",encoding="utf-8") as f:f.write(f"{ev['utc']} [{stg}] {kind:<16} {message} {json.dumps(jsafe(data),ensure_ascii=False) if data else ''}\n")
+        with SESSION_EVENTS.open("a",encoding="utf-8") as f:f.write(json.dumps(ev,ensure_ascii=False)+"\n")
+    _emit(line);return ev
+def banner(text,ch="═"):
+    _emit(ch*100);[_emit(x) for x in str(text).splitlines()];_emit(ch*100)
+
+# ---------------------------------------------------------------------------------------------------------------------
+# locked sources from the repository (git blob check; a changed file stops the program instead of being trusted)
+# ---------------------------------------------------------------------------------------------------------------------
+SOURCES={}
+def fetch_locked(name,timeout=180):
+    p=EVID_DIR/name
+    if p.is_file() and git_blob(p.read_bytes())==LOCKS[name]:raw=p.read_bytes()
+    else:
+        req=urllib.request.Request(RAW_BASE+name,headers={"User-Agent":"AKBASCORE-PROMETHEUS-DEMO"})
+        with urllib.request.urlopen(req,timeout=timeout) as f:raw=f.read()
+        if git_blob(raw)!=LOCKS[name]:
+            raise RuntimeError(f"LOCKED SOURCE CHANGED: {name} git blob {git_blob(raw)} != {LOCKS[name]} — the program stops instead of using an unverified file")
+        p.write_bytes(raw)
+    SOURCES[name]=dict(bytes=len(raw),git_blob=git_blob(raw),sha256=sha_bytes(raw),url=RAW_BASE+name,local=str(p),verified_utc=utc_now())
+    return raw
+
+# ---------------------------------------------------------------------------------------------------------------------
+# THE RECORDED TEST730 EXPERIMENT — parsed read-only from the locked 730.log (REPLAY source)
+# ---------------------------------------------------------------------------------------------------------------------
+_TAGS=("QUESTION_PANEL_PRESEALED_SHA256","PASS","FAIL","SOURCE_PRIMARY_REJECTED","SOURCE_EXPLICIT_REPLACEMENT","SOURCE_CANDIDATE_REJECTED","SOURCE_LOCK",
+       "PHYSICAL_COMMIT","READING_REFLECTION","MODEL_SYNTHESIS","DEMO_FAST_PATH_READY","DEMO_QUESTION_SECONDS","DEMO_QUESTION","DEMO_ANSWER",
+       "TEST730_RESULT","SUMMARY","RESULT_JSON","TEST730_ERROR")
+_START=re.compile(r"^(?:.*?(?:it/s|B/s)\])?("+"|".join(_TAGS)+r")(?: |$)(.*)$")
+_MULTI=("READING_REFLECTION","MODEL_SYNTHESIS","DEMO_ANSWER","TEST730_ERROR")
+def _lit(s):
+    try:return ast.literal_eval(s.strip()) if s and s.strip() else None
+    except Exception:return s.strip() or None
+def parse_730_log(text):
+    """returns the recorded experiment exactly as the log states it; multi-line texts are reproduced byte-exact
+    (730.py writes ' '.join(items)+'\\n' and the engine strips every generated text)"""
+    entries=[];cur=None
+    for line in text.split("\n"):
+        m=_START.match(line)
+        if m:
+            cur=[m.group(1),[m.group(2)]];entries.append(cur)
+        elif cur is not None and cur[0] in _MULTI:cur[1].append(line)
+    while entries and entries[-1][0] in _MULTI and entries[-1][1] and entries[-1][1][-1]=="":entries[-1][1].pop()
+    R=dict(checks=[],sources={},rejections={},replacements={},commits={},body_tokens={},reflections={},questions=OrderedDict(),raw_entries=len(entries))
+    for tag,lines in entries:
+        first=lines[0];body="\n".join(lines)
+        if tag=="QUESTION_PANEL_PRESEALED_SHA256":R["panel_sha256"]=first.strip()
+        elif tag in("PASS","FAIL"):
+            nm,_,det=first.partition(" ");R["checks"].append(dict(name=nm,passed=(tag=="PASS"),detail=_lit(det)))
+        elif tag=="SOURCE_LOCK":
+            d=json.loads(first);R["sources"][d["id"]]=d
+        elif tag=="SOURCE_PRIMARY_REJECTED":
+            i,_,why=first.partition(" ");R["rejections"][i]=why
+        elif tag=="SOURCE_EXPLICIT_REPLACEMENT":
+            p=first.split(" ");R["replacements"][p[0]]=dict(pmcid=p[1],license=p[-1],title=" ".join(p[2:-1]))
+        elif tag=="PHYSICAL_COMMIT":
+            i,role,s=first.split(" ");R["commits"][i]=dict(role=role,sha256=s)
+        elif tag=="READING_REFLECTION":
+            i,_,t=body.partition(" ");R["reflections"][i]=t
+        elif tag=="MODEL_SYNTHESIS":R["synthesis"]=body
+        elif tag=="DEMO_FAST_PATH_READY":R["fast_path"]=_lit(first)
+        elif tag=="DEMO_QUESTION":
+            i,_,q=first.partition(" ");R["questions"].setdefault(i,{})["question"]=q
+        elif tag=="DEMO_ANSWER":
+            i,_,t=body.partition(" ");R["questions"].setdefault(i,{})["answer"]=t
+        elif tag=="DEMO_QUESTION_SECONDS":
+            i,_,s=first.partition(" ");R["questions"].setdefault(i,{})["seconds"]=float(s)
+        elif tag=="TEST730_RESULT":R["result"]=first.strip()
+        elif tag=="SUMMARY":R["summary"]=_lit(first)
+        elif tag=="RESULT_JSON":R["result_paths"]=first.split()
+    for c in R["checks"]:
+        m=re.fullmatch(r"NONEMPTY_BODY_(\w+)",c["name"])
+        if m and isinstance(c["detail"],dict):R["body_tokens"][m.group(1)]=c["detail"].get("tokens")
+    env=next((c["detail"] for c in R["checks"] if c["name"]=="CUDA_AVAILABLE"),None) or {}
+    R["env"]=dict(torch=env.get("torch") if isinstance(env,dict) else None,cuda=env.get("cuda") if isinstance(env,dict) else None,
+                  gpu=next((c["detail"] for c in R["checks"] if c["name"]=="A100_80GB"),None),
+                  arch=next((c["detail"] for c in R["checks"] if c["name"]=="ARCH"),None))
+    flat=text.replace(" "," ")
+    def grab(rx):
+        m=re.search(rx,flat);return m.group(1) if m else None
+    R["model_io"]=dict(download=grab(r"Download complete:\s+([\d.]+\s*[GM]B)"),reconstructed=grab(r"Reconstruction complete:\s+100%\s+([\d.]+\s*GB)"),
+                       fetch_time=grab(r"Fetching \d+ files: 100%\s+\d+/\d+\s+\[([\d:]+)<"),shards=grab(r"Fetching (\d+) files: 100%"),
+                       load_time=grab(r"Loading weights: 100%\s+\d+/\d+\s+\[([\d:]+)<"),tensors=grab(r"Loading weights: 100%\s+(\d+)/"))
+    for i,q in R["questions"].items():
+        a=q.get("answer","");q["answer_sha256_log_text"]=sha_text(a);q["chars"]=len(a)
+        q["ends_cleanly"]=bool(re.search(r"[.!?)\]\"'`*]\s*$",a.strip()))
+    s=R.get("synthesis","");R["synthesis_sha256_log_text"]=sha_text(s);R["synthesis_chars"]=len(s)
+    R["synthesis_ends_cleanly"]=bool(re.search(r"[.!?)\]\"'`*]\s*$",s.strip()))
+    R["reflection_sha256_log_text"]={k:sha_text(v) for k,v in R["reflections"].items()}
+    R["checks_passed"]=sum(c["passed"] for c in R["checks"]);R["checks_total"]=len(R["checks"])
+    return R
+def parser_selfcheck(R):
+    probs=[]
+    if R.get("panel_sha256")!=ANCHORS["panel"]:probs.append("panel")
+    for k,v in ANCHORS["commit"].items():
+        if (R["commits"].get(k) or {}).get("sha256")!=v:probs.append("commit "+k)
+    for k,v in ANCHORS["tokens"].items():
+        if R["body_tokens"].get(k)!=v:probs.append("tokens "+k)
+    for k,v in ANCHORS["pmcid"].items():
+        if (R["sources"].get(k) or {}).get("pmcid")!=v:probs.append("pmcid "+k)
+    if R.get("result")!=ANCHORS["result"]:probs.append("result")
+    if tuple(R["questions"])!=ANCHORS["questions"]:probs.append("questions")
+    syn=next((c["detail"] for c in R["checks"] if c["name"]=="SYNTHESIS_NONEMPTY"),None)
+    if syn!=R.get("synthesis_chars"):probs.append(f"synthesis length {R.get('synthesis_chars')} != logged {syn}")
+    if any(not R["questions"][i].get("answer") for i in R["questions"]):probs.append("answer text")
+    if len(R["reflections"])!=3:probs.append("reflections")
+    if probs:raise RuntimeError("TEST730 RECORD PARSER CHECK FAILED: "+", ".join(probs))
+    return True
+
+# ---------------------------------------------------------------------------------------------------------------------
+# THE UNCHANGED ENGINE — functions of 709.py and 730.py, executed exactly as written (AST extraction, as 730.py does)
+# ---------------------------------------------------------------------------------------------------------------------
+NAMES_709={'pairs','cache_build','replace','half','rope','rephase','sentinel','free_gpu','ensure_room','forge_stream','cart_load','initialize','kv_digest','full_kv_seal','append','answer','mem'}
+NAMES_730_FN=('DirectCut3','sha','sync','gpu','release','forge_native','initialize_native','to_gpu','seal_cp','memory_seals','compare_seals',
+              'http_get','license_match','normalize_text','europe_pmc_fulltext','sha_file','atomic_json','safe_load','commit')
+NAMES_730_CONST=('TEST','MODEL_ID','CUT','EXPECTED','DTYPE','DEV','CHUNK','MAX_NEW','GPU_RESERVE_GIB','CC_RE','SOURCE_MAX_CHARS','MIN_SOURCE_CHARS','MAX_SOURCE_TOKENS','HUMAN','ADVANCED','QUESTION_SET')
+class IntegrityError(RuntimeError):pass
+_OLD_E=globals().get("E") if isinstance(globals().get("E"),dict) else {}
+E={}                    # engine namespace (globals of the unchanged engine functions)
+_KEEP=("model","tok","PIDS","P","cfg","NL","H","QH","KVH","HD","SENTINEL_BEFORE")   # a model already loaded by an earlier run of this cell is reused
+ENGINE_INFO={}
+LIVE_CHECKS=[]
+def _engine_log(*xs):
+    s=" ".join(map(str,xs));u=utc_now();stg=(globals().get("STATE") or {}).get("current") or "-"
+    with _LOG_LOCK:
+        with ENGINE_LOG.open("a",encoding="utf-8") as f:f.write(f"{u} [{stg}] {s}\n")
+        with SESSION_EVENTS.open("a",encoding="utf-8") as f:f.write(json.dumps(dict(utc=u,session=SESSION_ID,stage=stg,kind="ENGINE",message=s[:4000]),ensure_ascii=False)+"\n")
+    _emit(f"  engine [{stg}] · "+s[:300])
+def _engine_save():
+    try:dump_json(SESSION_DIR/"ENGINE_RECORD.json",E.get("R") or {})
+    except Exception:pass
+def _engine_check(name,ok,detail=None):
+    """the engine's check(): every call is recorded; a failed check raises (as in 730.py) — nothing is shown as passed"""
+    row=dict(name=name,passed=bool(ok),detail=jsafe(detail),utc=utc_now(),stage=STATE.get("current"))
+    LIVE_CHECKS.append(row);E.setdefault("R",{}).setdefault("checks",[]).append(row);_engine_log("PASS" if ok else "FAIL",name,"" if detail is None else detail)
+    if not ok:raise IntegrityError("CHECK_FAILED:"+name)
+def _nodes(tree,names,kinds):
+    return [n for n in tree.body if isinstance(n,kinds) and getattr(n,"name",None) in names]
+def _assign_nodes(tree,names):
+    return [n for n in tree.body if isinstance(n,ast.Assign) and len(n.targets)==1 and isinstance(n.targets[0],ast.Name) and n.targets[0].id in names]
+def _find_assign(tree,name):
+    return next((n for n in ast.walk(tree) if isinstance(n,ast.Assign) and len(n.targets)==1 and isinstance(n.targets[0],ast.Name) and n.targets[0].id==name),None)
+def define_engine(raw709,raw730):
+    """exec the locked engine functions into E; returns facts about what was executed"""
+    t709=ast.parse(raw709.decode("utf-8"));t730=ast.parse(raw730.decode("utf-8"))
+    f709=_nodes(t709,NAMES_709,(ast.FunctionDef,))
+    if {n.name for n in f709}!=NAMES_709:raise RuntimeError("709.py: locked functions missing: "+str(sorted(NAMES_709-{n.name for n in f709})))
+    f730=_nodes(t730,set(NAMES_730_FN),(ast.FunctionDef,ast.ClassDef));c730=_assign_nodes(t730,set(NAMES_730_CONST))
+    if {n.name for n in f730}!=set(NAMES_730_FN):raise RuntimeError("730.py: engine functions missing: "+str(sorted(set(NAMES_730_FN)-{n.name for n in f730})))
+    if {n.targets[0].id for n in c730}!=set(NAMES_730_CONST):raise RuntimeError("730.py: constants missing")
+    E.clear()
+    E.update(__name__="p730_engine",torch=torch,types=types,time=time,gc=gc,hashlib=hashlib,json=json,re=re,html=html,urllib=urllib,ET=ET,quote=quote,urlencode=urlencode,
+             Path=Path,DynamicCache=DynamicCache,BytesIO=BytesIO,log=_engine_log,save=_engine_save,check=_engine_check,R=dict(test="730-demo",checks=[]))
+    exec(compile(ast.fix_missing_locations(ast.Module(body=c730,type_ignores=[])),"730.py","exec"),E)
+    exec(compile(ast.fix_missing_locations(ast.Module(body=f709,type_ignores=[])),"709.py","exec"),E)
+    exec(compile(ast.fix_missing_locations(ast.Module(body=f730,type_ignores=[])),"730.py","exec"),E)
+    pre=_find_assign(t730,"PREFIX");E["PREFIX"]=ast.literal_eval(pre.value)
+    if _OLD_E.get("model") is not None:E.update({k:_OLD_E[k] for k in _KEEP if k in _OLD_E});ENGINE_INFO["model_reused_from_previous_cell_run"]=True
+    mb=_find_assign(t730,"master_body");ENGINE_INFO["master_body_code"]=compile(ast.Expression(mb.value),"730.py","eval")
+    rq=_find_assign(t730,"question");ENGINE_INFO["reading_prompt"]=ast.literal_eval(rq.value)
+    sp=_find_assign(t730,"synthesis_prompt");ENGINE_INFO["synthesis_prompt_source"]=ast.get_source_segment(raw730.decode("utf-8"),sp)
+    want=dict(CUT=3,CHUNK=128,MAX_NEW=768,GPU_RESERVE_GIB=9.0,EXPECTED=EXPECTED_ARCH,MODEL_ID=MODEL_ID)
+    bad={k:E.get(k) for k,v in want.items() if E.get(k)!=v}
+    if bad:raise RuntimeError(f"730.py constants differ from the TEST730 run: {bad}")
+    qs=json.dumps(E["QUESTION_SET"],ensure_ascii=False,indent=2,default=str).encode()   # = bytes 730.py wrote to SEALED_QUESTIONS.json
+    ENGINE_INFO.update(f709=sorted(NAMES_709),f730=list(NAMES_730_FN),constants={k:(str(E[k]) if k in("DTYPE","DEV","CC_RE") else E[k]) for k in NAMES_730_CONST if k not in("HUMAN","ADVANCED","QUESTION_SET")},
+                       panel_rederived_sha256=sha_bytes(qs),panel_rederived_bytes=len(qs),prefix=E["PREFIX"],defined_utc=utc_now(),
+                       note="709.py and 730.py functions executed unchanged from the locked files; only log/save/check write to this session's records")
+    return ENGINE_INFO
+def build_master_body(reflections,conclusion):
+    """the exact 730.py expression that composed the MASTER body (evaluated, not retyped)"""
+    return eval(ENGINE_INFO["master_body_code"],{"__builtins__":{}},{"reflections":reflections,"conclusion":conclusion})
+
+# ---------------------------------------------------------------------------------------------------------------------
+# pipeline state (one RUN; every stage reported; GPU stages are skipped honestly in REPLAY MODE)
+# ---------------------------------------------------------------------------------------------------------------------
+STAGES=OrderedDict([
+    ("SOURCES","Real sources — Europe PMC full-text XML read again; excerpt SHA-256 compared with the TEST730 record"),
+    ("GPU","GPU gate — one NVIDIA A100 80 GB (TEST730 gates)"),
+    ("MODEL","Frozen Qwen2.5-72B-Instruct — download / load NF4 on the GPU, architecture, weight sentinel"),
+    ("CARTRIDGES","Physical cartridges P01 · P02 · P03 · MASTER — locate, SHA-256 verify (re-forge only if missing)"),
+    ("MASTER","MASTER fast path — verified SSD load → GPU → native CUT3 initialize, 80 layers"),
+    ("PARITY","MASTER 80-layer parity — TEST709 initialize vs native initialize, exact SHA-256"),
+    ("XRAY","Neural X-ray (read-only) — K/V norms of P01, P02, P03, MASTER · layers 0–79"),
+    ("REPRO","Reproduction — sealed H1 and A1 asked again on MASTER, compared with the record"),
+    ("NEWQ","New live questions (not sealed) — MASTER memory vs no memory"),
+    ("INTEGRITY","Integrity after use — MASTER prefix seals, weight sentinel, cartridge files"),
+    ("FIGURES","Scientific figures — Figs. 1–12 + S1 (JPEG 300 dpi, layout QC)"),
+    ("PACKAGE","Records — live measurements, real-time logs, SHA-256 manifest, provenance table (direct downloads, no ZIP)")])
+GPU_STAGES=("MODEL","MASTER","PARITY","XRAY","REPRO","NEWQ","INTEGRITY")
+STATE=dict(started=None,finished=None,current=None,stages={k:dict(status="wait",seconds=None,note="") for k in STAGES},mode="REPLAY",version=0,running=False,
+           fig_version=0,error=None)
+GPU_LOCK=threading.RLock()
+def bump():STATE["version"]+=1
+def stage_set(key,status,note="",seconds=None):
+    st=STATE["stages"][key];st["status"]=status;st["note"]=str(note)[:500]
+    if seconds is not None:st["seconds"]=round(seconds,2)
+    bump()
+LIVE=dict(provenance=("SIMULATION" if SIM else None),session=SESSION_ID)     # everything measured in THIS session
+REC={}                  # the recorded TEST730 experiment (REPLAY)
+ART={}                  # the physical cartridge files (found / verified / recovered)
+ORIG=dict(root=None,manifest=None,results=None,sealed_sources={},notes=[])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# the TEST730 run directory of this runtime (cartridges, manifest, results) — located and READ, never written
+# ---------------------------------------------------------------------------------------------------------------------
+def _walk_find(base,fname,depth,limit=4000):
+    out=[];seen=0;base=Path(base);d0=len(base.parts)
+    for root,dirs,files in os.walk(base):
+        seen+=1
+        if seen>limit:break
+        if len(Path(root).parts)-d0>=depth:dirs[:]=[]
+        dirs[:]=[d for d in dirs if not d.startswith(".") and d not in("sample_data","AKBASCORE_TEST730_DEMO","sessions")]
+        if fname in files:out.append(Path(root))
+    return out
+def locate_test730_root():
+    cands=[_CROOT/"AKBASCORE_TEST730",Path("/content/AKBASCORE_TEST730"),Path("/tmp/AKBASCORE_TEST730")]
+    for base,depth in ((_CROOT,2),(Path("/content/drive/MyDrive"),4),(Path("/content/drive/My Drive"),4)):
+        if base.is_dir():
+            try:cands+=_walk_find(base,"TEST730_manifest.json",depth)+[p.parent for p in _walk_find(base,"MASTER.pt",depth+1) if p.name=="physical_cartridges"]
+            except Exception:pass
+    for c in OrderedDict((str(x),x) for x in cands).values():
+        if (c/"physical_cartridges").is_dir() and any((c/"physical_cartridges"/f"{k}.pt").is_file() for k in CARTS):return c
+    return None
+def _entry_from_json(e):
+    """JSON cannot hold tuples: the tensor seals of a manifest entry are restored to the exact form seal_cp() returns
+    ({'h':sha,'lower':[(k_sha,v_sha),...]}) so that the unchanged safe_load() compares like with like"""
+    if not e:return e
+    e=dict(e);ts=e.get("tensor_sha")
+    if isinstance(ts,dict):e["tensor_sha"]={"h":ts.get("h"),"lower":[tuple(x) for x in (ts.get("lower") or [])]}
+    return e
+def read_test730_directory():
+    """finds the TEST730 directory, verifies every file against the record and returns the per-cartridge status (CPU only)"""
+    root=locate_test730_root();ORIG.update(root=str(root) if root else None,manifest=None,results=None,sealed_sources={},notes=[])
+    man=jload(root/"TEST730_manifest.json") if root else None;res=jload(root/"TEST730_results.json") if root else None
+    ORIG["manifest"]=man;ORIG["results"]=res
+    if man:
+        ORIG["manifest_checks"]=dict(question_sha=(man.get("question_sha256")==REC["panel_sha256"]),
+            engine_locks=(man.get("engine")=={"709":LOCKS["709.py"],"716":LOCKS["716.py"]}),
+            commits_equal_log={e["id"]:e.get("sha256")==REC["commits"].get(e["id"],{}).get("sha256") for e in man.get("cartridges",[])})
+    if res:
+        qs={q["id"]:q for q in res.get("questions",[])}
+        ORIG["results_checks"]=dict(answers_equal_log={i:(qs.get(i,{}).get("answer_sha256")==q["answer_sha256_log_text"]) for i,q in REC["questions"].items()},
+            synthesis_equal_log=((res.get("model_synthesis") or {}).get("sha256")==REC["synthesis_sha256_log_text"]),status=res.get("status"),
+            baseline_available=bool(res.get("no_memory_baseline")))
+    for k in SRC_IDS:
+        p=root/"sealed_sources"/f"{k}.txt" if root else None
+        if p and p.is_file():
+            s=sha_file(p);ORIG["sealed_sources"][k]=dict(path=str(p),sha256=s,equal_record=(s==REC["sources"][k]["excerpt_sha256"]))
+    for cid in CARTS:
+        rec_sha=REC["commits"][cid]["sha256"];a=dict(id=cid,sha256_record=rec_sha,body_tokens_record=REC["body_tokens"].get(cid),role=REC["commits"][cid]["role"])
+        mentry=next((e for e in (man or {}).get("cartridges",[]) if e.get("id")==cid),None)
+        p=(root/"physical_cartridges"/f"{cid}.pt") if root else None
+        if p and p.is_file():
+            t=time.perf_counter();s=sha_file(p);a.update(path=str(p),bytes=p.stat().st_size,sha256_now=s,sha_seconds=round(time.perf_counter()-t,3),equal_record=(s==rec_sha),
+                        status="ORIGINAL_VERIFIED" if s==rec_sha else "ORIGINAL_SHA_MISMATCH",origin="TEST730 run directory of this runtime",
+                        entry=(_entry_from_json(mentry) if (mentry and mentry.get("sha256")==rec_sha) else None),tensor_record=bool(mentry and mentry.get("tensor_sha")))
+        else:a.update(status="MISSING",origin="not present in this runtime",equal_record=False,entry=None,tensor_record=False)
+        ART[cid]=a
+    slog("TEST730_FILES",f"root={root}",**{k:v["status"] for k,v in ART.items()});return ART
+
+# ---------------------------------------------------------------------------------------------------------------------
+# start-up work (no GPU): locked sources, the record, the engine definitions, the TEST730 files of this runtime
+# ---------------------------------------------------------------------------------------------------------------------
+RAW={}
+def startup():
+    banner(f"{APP_NAME} · {EXPERIMENT} · start-up {local_now()} · session {SESSION_ID}"+("\nSIMULATION STACK (code author's CPU test) — NOTHING HERE IS AN EXPERIMENTAL RESULT" if SIM else ""))
+    for n in LOCKS:RAW[n]=fetch_locked(n);slog("LOCKED_SOURCE",n,git_blob=SOURCES[n]["git_blob"],bytes=SOURCES[n]["bytes"])
+    REC.clear();REC.update(parse_730_log(RAW["730.log"].decode("utf-8")));parser_selfcheck(REC)
+    REC["source_git_blob"]=LOCKS["730.log"];REC["note"]="parsed read-only from the published 730.log (locked by git blob) — documentation of the completed TEST730 run"
+    dump_json(REC_DIR/"TEST730_RECORD_PARSED.json",REC);(REC_DIR/"730.log").write_bytes(RAW["730.log"]);(REC_DIR/"730.py").write_bytes(RAW["730.py"])
+    slog("TEST730_RECORD",f"{REC['checks_passed']}/{REC['checks_total']} recorded checks PASS · result {REC['result']}",panel=REC["panel_sha256"][:16])
+    define_engine(RAW["709.py"],RAW["730.py"])
+    if ENGINE_INFO["panel_rederived_sha256"]!=REC["panel_sha256"]:raise RuntimeError("SEALED PANEL MISMATCH: 730.py QUESTION_SET does not re-derive the recorded panel SHA-256")
+    for i,q in enumerate(E["QUESTION_SET"]):
+        if REC["questions"][q["id"]]["question"]!=q["question"]:raise RuntimeError("SEALED PANEL MISMATCH: question "+q["id"])
+    E["check"]("SEALED_PANEL_REDERIVED_FROM_730PY",ENGINE_INFO["panel_rederived_sha256"]==REC["panel_sha256"],ENGINE_INFO["panel_rederived_sha256"][:16])
+    slog("ENGINE_DEFINED",f"709.py {len(NAMES_709)} functions + 730.py {len(NAMES_730_FN)} functions/classes executed unchanged",panel_rederived=ENGINE_INFO["panel_rederived_sha256"][:16])
+    read_test730_directory()
+    dump_json(DATA_DIR/"STARTUP_RECORD.json",dict(sources=SOURCES,engine=ENGINE_INFO|{"master_body_code":"(compiled 730.py expression)"},test730_dir=ORIG|{"manifest":bool(ORIG["manifest"]),"results":bool(ORIG["results"])},
+                                                 cartridges=ART,session=SESSION_ID,utc=utc_now(),sim=SIM))
+
+# ---------------------------------------------------------------------------------------------------------------------
+# LIVE STAGES (called by RUN)
+# ---------------------------------------------------------------------------------------------------------------------
+def _xml_attribution(data):
+    """authors, journal, DOI and year of an article from its Europe PMC XML (for CC BY attribution)"""
+    out={}
+    try:
+        r=ET.fromstring(data);am=r.find(".//front/article-meta")
+        au=[]
+        for c in am.findall(".//contrib-group/contrib"):
+            if c.get("contrib-type") not in(None,"author"):continue
+            n=c.find("name")
+            if n is not None:au.append(" ".join(x for x in (n.findtext("given-names"),n.findtext("surname")) if x))
+        out["authors"]=au;out["journal"]=E["normalize_text"](" ".join(r.find(".//front/journal-meta//journal-title").itertext())) if r.find(".//front/journal-meta//journal-title") is not None else None
+        out["doi"]=next((x.text for x in am.findall("article-id") if x.get("pub-id-type")=="doi"),None)
+        out["year"]=next((d.findtext("year") for d in am.findall("pub-date") if d.findtext("year")),None)
+    except Exception as ex:out["error"]=f"{type(ex).__name__}: {ex}"
+    return out
+def stage_sources():
+    """the three articles are read again with the unchanged 730.py europe_pmc_fulltext(); the excerpt must equal the record"""
+    res={}
+    for k in SRC_IDS:
+        s=REC["sources"][k];row=dict(id=k,pmcid=s["pmcid"],record_excerpt_sha256=s["excerpt_sha256"],record_full_xml_sha256=s.get("full_html_sha256"))
+        try:
+            t=time.perf_counter();p=E["europe_pmc_fulltext"](s["pmcid"],dict(id=k,url=s["url"]))
+            data,_,_=E["http_get"]("https://www.ebi.ac.uk/europepmc/webservices/rest/"+quote(s["pmcid"],safe="")+"/fullTextXML",6_000_000)
+            row.update(seconds=round(time.perf_counter()-t,2),excerpt_sha256_now=p["excerpt_sha256"],excerpt_equal=(p["excerpt_sha256"]==s["excerpt_sha256"]),
+                       excerpt_chars=p["excerpt_chars"],title_now=p["title"],title_equal=(p["title"]==s["title"]),license_now=p["license"],
+                       full_xml_sha256_now=p["full_html_sha256"],full_xml_equal=(p["full_html_sha256"]==s.get("full_html_sha256")),attribution=_xml_attribution(data),utc=utc_now())
+            row["body"]=p["body"] if row["excerpt_equal"] else None
+        except Exception as ex:row.update(error=f"{type(ex).__name__}: {ex}",excerpt_equal=False,body=None)
+        res[k]=row;slog("SOURCE_REVERIFY",k,excerpt_equal=row.get("excerpt_equal"),full_xml_equal=row.get("full_xml_equal"),error=row.get("error"))
+    LIVE["sources"]={k:{x:y for x,y in v.items() if x!="body"} for k,v in res.items()};LIVE["_source_bodies"]={k:v.get("body") for k,v in res.items()}
+    ok=sum(1 for v in res.values() if v.get("excerpt_equal"))
+    return f"{ok}/3 excerpts re-derived byte-identical to the TEST730 record"+("" if ok==3 else " — see REAL SOURCES (an upstream change or a network error is reported, not hidden)")
+
+def stage_gpu():
+    rep=dict(cuda=bool(torch.cuda.is_available()))
+    if rep["cuda"]:
+        rep.update(count=torch.cuda.device_count(),name=torch.cuda.get_device_name(0),total_gib=round(gib(torch.cuda.get_device_properties(0).total_memory),2))
+    rep.update(torch=str(torch.__version__),cuda_version=str(getattr(torch.version,"cuda",None)) if hasattr(torch,"version") else None,transformers=str(transformers.__version__),
+               bitsandbytes=(getattr(bitsandbytes,"__version__",None) if bitsandbytes else None),bnb_error=_BNB_ERR,python=platform.python_version())
+    try:
+        du=shutil.disk_usage(str(_CROOT));rep["disk_free_gib"]=round(gib(du.free),1)
+    except Exception:pass
+    LIVE["gpu_env"]=rep
+    ok=rep["cuda"] and rep.get("count")==1 and rep.get("total_gib",0)>=70 and bitsandbytes is not None
+    if not ok:
+        STATE["mode"]="REPLAY";return False,("no NVIDIA A100 80 GB with CUDA in this runtime → REPLAY MODE (recorded results; live GPU stages are not run). "
+                                             "Colab: Runtime → Change runtime type → A100 GPU, then run the cell again.")
+    E["check"]("CUDA_AVAILABLE",torch.cuda.is_available(),{"torch":torch.__version__,"cuda":getattr(torch.version,"cuda",None)});E["check"]("ONE_GPU",torch.cuda.device_count()==1)
+    E["check"]("A100_80GB",torch.cuda.get_device_properties(0).total_memory>=70*2**30,torch.cuda.get_device_name(0))
+    STATE["mode"]="LIVE";return True,f"{rep['name']} · {rep['total_gib']} GiB · torch {rep['torch']} · transformers {rep['transformers']}"
+
+def _hf_cache_bytes():
+    try:
+        from huggingface_hub.constants import HF_HUB_CACHE
+        d=Path(HF_HUB_CACHE)/("models--"+MODEL_ID.replace("/","--"))
+        return sum(f.stat().st_size for f in d.rglob("*") if f.is_file()) if d.is_dir() else 0
+    except Exception:return None
+def _heartbeat(stop,t0):
+    while not stop.wait(30):
+        b=_hf_cache_bytes();el=time.perf_counter()-t0
+        STATE["stages"]["MODEL"]["note"]=f"downloading / loading … {el/60:.1f} min · model files in the Hugging Face cache: {('%.1f GB'%(b/1e9)) if b is not None else '—'}";bump()
+        slog("MODEL_PROGRESS",f"{el/60:.1f} min",hf_cache_gb=(round(b/1e9,1) if b is not None else None))
+def _kernel_model():
+    """the model object left in this Python kernel by a TEST730 run (730.py keeps `model` and `tok` as globals)"""
+    g=globals();m=g.get("model");t=g.get("tok")
+    try:
+        if m is None or t is None:return None
+        ok=(len(m.model.layers)==EXPECTED_ARCH[0] and int(m.config.hidden_size)==EXPECTED_ARCH[1] and str(getattr(m.config,"_name_or_path","")).endswith("Qwen2.5-72B-Instruct")
+            and any(isinstance(x,bitsandbytes.nn.Linear4bit) for x in m.modules()))
+        return (m,t) if ok else None
+    except Exception:return None
+def stage_model():
+    """the model is loaded exactly as in 730.py (tokenizer, PREFIX, NF4 config, from_pretrained arguments, checks, sentinel)"""
+    km=_kernel_model() if E.get("model") is None else None
+    if km is not None:
+        E["model"],E["tok"]=km;m=km[0];cfg=m.config;E["cfg"]=cfg
+        E["PIDS"]=E["tok"](E["PREFIX"],add_special_tokens=False).input_ids;E["P"]=len(E["PIDS"])
+        E["NL"]=len(m.model.layers);E["H"]=int(cfg.hidden_size);E["QH"]=int(cfg.num_attention_heads);E["KVH"]=int(cfg.num_key_value_heads);E["HD"]=int(getattr(cfg,'head_dim',None) or E["H"]//E["QH"])
+        arch=[E["NL"],E["H"],E["QH"],E["KVH"],E["HD"]];E["check"]('ARCH',tuple(arch)==EXPECTED_ARCH,arch)
+        for parameter in m.parameters():parameter.requires_grad_(False)
+        E["check"]('FROZEN',all(not p.requires_grad for p in m.parameters()))
+        E["check"]('DIRECT_FORWARD_NO_EXISTING_HOOKS',not m.model.layers[E["CUT"]]._forward_hooks and not m.model.layers[E["CUT"]]._forward_pre_hooks)
+        E["SENTINEL_BEFORE"]=E["sentinel"]();g=E["gpu"]()
+        LIVE["model"]=dict(model_id=MODEL_ID,commit=getattr(cfg,"_commit_hash",None),arch=arch,cut=E["CUT"],prefix_tokens=E["P"],sentinel_before=E["SENTINEL_BEFORE"],gpu_after_load=g,utc=utc_now(),
+                           reused=True,reused_from="the `model` object already loaded in this Python kernel (e.g. by the TEST730 run) — no second copy")
+        LIVE.setdefault("gpu_states",[]).append(dict(state="model weights only (NF4)",**g))
+        return f"the Qwen2.5-72B object already in this kernel (TEST730 run) is reused — no second copy on the GPU · GPU allocated {g['allocated_gib']} GiB · sentinel {E['SENTINEL_BEFORE'][:12]}…"
+    if E.get("model") is None and torch.cuda.is_available():
+        f,_=torch.cuda.mem_get_info()
+        if f<48*2**30:
+            gc.collect();torch.cuda.empty_cache();f,_=torch.cuda.mem_get_info()
+            if f<48*2**30:slog("GPU_NOTE",f"only {f/2**30:.1f} GiB free before loading the 72B model (NF4 needs ≈ 42 GiB + K/V) — another object holds GPU memory; if loading fails: Runtime → Restart session, run the cell again")
+    if E.get("model") is not None:
+        m=E["model"];arch=[E["NL"],E["H"],E["QH"],E["KVH"],E["HD"]];E["check"]('ARCH',tuple(arch)==EXPECTED_ARCH,arch)
+        E["check"]('FROZEN',all(not p.requires_grad for p in m.parameters()))
+        E["check"]('DIRECT_FORWARD_NO_EXISTING_HOOKS',not m.model.layers[E["CUT"]]._forward_hooks and not m.model.layers[E["CUT"]]._forward_pre_hooks)
+        now=E["sentinel"]()
+        if E.get("SENTINEL_BEFORE"):E["check"]('WEIGHTS_SENTINEL_UNCHANGED_SINCE_FIRST_LOAD',now==E["SENTINEL_BEFORE"])
+        E["SENTINEL_BEFORE"]=now
+        g=E["gpu"]();LIVE["model"]=dict(model_id=MODEL_ID,commit=getattr(E["cfg"],"_commit_hash",None),arch=[E["NL"],E["H"],E["QH"],E["KVH"],E["HD"]],cut=E["CUT"],prefix_tokens=E["P"],
+                           sentinel_before=E.get("SENTINEL_BEFORE"),gpu_after_load=g,utc=utc_now(),reused=True)
+        LIVE.setdefault("gpu_states",[]).append(dict(state="model weights only (NF4)",**g))
+        return "already loaded in this Python kernel by an earlier run of the cell — reused (no second copy on the GPU)"
+    t0=time.perf_counter();stop=threading.Event();hb=threading.Thread(target=_heartbeat,args=(stop,t0),daemon=True);hb.start();b0=_hf_cache_bytes()
+    try:
+        tok=AutoTokenizer.from_pretrained(MODEL_ID,trust_remote_code=False);E["tok"]=tok
+        E["PIDS"]=tok(E["PREFIX"],add_special_tokens=False).input_ids;E["P"]=len(E["PIDS"])
+        quant=BitsAndBytesConfig(load_in_4bit=True,bnb_4bit_quant_type='nf4',bnb_4bit_compute_dtype=E["DTYPE"],bnb_4bit_use_double_quant=True)
+        t1=time.perf_counter()
+        model=AutoModelForCausalLM.from_pretrained(MODEL_ID,quantization_config=quant,dtype=E["DTYPE"],device_map={'':0},low_cpu_mem_usage=True,trust_remote_code=False,attn_implementation='sdpa').eval()
+        load_s=time.perf_counter()-t1
+    finally:stop.set()
+    for parameter in model.parameters():parameter.requires_grad_(False)
+    E["model"]=model;cfg=model.config;E["cfg"]=cfg
+    E["NL"]=len(model.model.layers);E["H"]=int(cfg.hidden_size);E["QH"]=int(cfg.num_attention_heads);E["KVH"]=int(cfg.num_key_value_heads);E["HD"]=int(getattr(cfg,'head_dim',None) or E["H"]//E["QH"])
+    arch=[E["NL"],E["H"],E["QH"],E["KVH"],E["HD"]]
+    E["check"]('ARCH',tuple(arch)==EXPECTED_ARCH,arch);E["check"]('FROZEN',all(not p.requires_grad for p in model.parameters()))
+    E["check"]('NF4',any(isinstance(m,bitsandbytes.nn.Linear4bit) for m in model.modules()))
+    E["check"]('DIRECT_FORWARD_NO_EXISTING_HOOKS',not model.model.layers[E["CUT"]]._forward_hooks and not model.model.layers[E["CUT"]]._forward_pre_hooks)
+    t2=time.perf_counter();before=E["sentinel"]();sen_s=time.perf_counter()-t2;E["SENTINEL_BEFORE"]=before
+    g=E["gpu"]()
+    LIVE["model"]=dict(model_id=MODEL_ID,commit=getattr(cfg,"_commit_hash",None),arch=arch,cut=E["CUT"],prefix_tokens=E["P"],total_seconds=round(time.perf_counter()-t0,1),
+                       from_pretrained_seconds=round(load_s,1),hf_cache_gb_before=(round(b0/1e9,1) if b0 is not None else None),hf_cache_gb_after=(round((_hf_cache_bytes() or 0)/1e9,1)),
+                       sentinel_before=before,sentinel_seconds=round(sen_s,2),gpu_after_load=g,utc=utc_now(),reused=False)
+    LIVE.setdefault("gpu_states",[]).append(dict(state="model weights only (NF4)",**g))
+    slog("MEASURED_MODEL","Qwen2.5-72B-Instruct loaded on the GPU",**{k:v for k,v in LIVE["model"].items()})
+    return f"loaded in {LIVE['model']['total_seconds']/60:.1f} min · {arch[0]} layers · prefix {E['P']} tokens · GPU allocated {g['allocated_gib']} GiB · sentinel {before[:12]}…"
+
+def _tensor_facts(cp):
+    h=cp["h"];low=cp["lower"]
+    nb=lambda t:int(t.numel())*int(t.element_size())
+    return dict(n=int(cp["n"]),p=int(cp["p"]),body_tokens=int(cp["body_tokens"]),book_id=cp["book_id"],h_shape=list(h.shape),h_dtype=str(h.dtype),h_bytes=nb(h),
+                lower_layers=len(low),k_shape=list(low[0][0].shape),v_shape=list(low[0][1].shape),lower_bytes=sum(nb(k)+nb(v) for k,v in low),
+                full_80_layer_kv_bytes=int(cp["n"])*E["NL"]*E["KVH"]*E["HD"]*2*2 if E.get("NL") else int(cp["n"])*80*8*128*2*2)
+def _h3_norms(cp):
+    try:return cp["h"][0].float().norm(dim=-1).numpy().astype(np.float32)
+    except Exception:return None
+def _load_verified(cid):
+    """SSD → CPU with verification: the unchanged 730.py safe_load() when the TEST730 tensor record exists, otherwise the same
+    three checks with the tensor seal computed (and reported) because no TEST730 tensor record is available in this runtime"""
+    a=ART[cid];E["CART_DIR"]=Path(a["path"]).parent
+    if a.get("entry") and a["entry"].get("tensor_sha"):
+        cp=E["safe_load"](a["entry"]);a["tensor_check"]="730.py safe_load(): FILE_SHA + CARTRIDGE_ID + CARTRIDGE_TENSOR_SHA against the TEST730 manifest"
+    else:
+        path=Path(a["path"]);E["check"]('FILE_SHA_'+cid,path.exists() and sha_file(path)==a["sha256_expected"])
+        cp=torch.load(path,map_location='cpu',weights_only=True)
+        E["check"]('CARTRIDGE_ID_'+cid,cp['book_id']==cid and cp['p']==E["P"] and cp['n']==E["P"]+cp['body_tokens'])
+        seal=E["seal_cp"](cp);a["tensor_seal_now"]=seal["h"];a["tensor_check"]="FILE_SHA + CARTRIDGE_ID checked; tensor seal computed now (no TEST730 tensor record in this runtime)"
+    return cp
+
+def _is_oom_err(ex):return "OutOfMemoryError" in type(ex).__name__ or "out of memory" in str(ex).lower() or "GPU_SAFETY_STOP" in str(ex)
+def _recover_cartridges(missing):
+    """ONLY for cartridges absent from this runtime: the unchanged 730.py commit() forges them again from their SHA-verified
+    sealed texts into a SEPARATE folder. No text is generated: source texts = Europe PMC excerpt (SHA = record), MASTER body =
+    the exact 730.py expression over the reflections and the synthesis recorded in 730.log."""
+    RECOVERY_DIR.mkdir(parents=True,exist_ok=True);rman=RECOVERY_DIR/"RECOVERY_manifest.json";prev=jload(rman,{}) or {}
+    E["CART_DIR"]=RECOVERY_DIR;E["MANIFEST"]=rman;E["entries"]={}
+    E["ledger"]=dict(test="730-demo-recovery",note="re-forged with the unchanged 730.py commit() because the TEST730 files are not present in this runtime",
+                     engine={"709":LOCKS["709.py"],"730":LOCKS["730.py"]},cartridges=list(prev.get("cartridges",[])),session=SESSION_ID)
+    out={};errs={}
+    for cid in missing:
+      try:
+        old=next((e for e in E["ledger"]["cartridges"] if e.get("id")==cid),None)
+        if old and (RECOVERY_DIR/old["file"]).is_file() and sha_file(RECOVERY_DIR/old["file"])==old["sha256"]:
+            out[cid]=dict(_entry_from_json(old),reused_from_earlier_session=True);continue
+        _emit(f"  forging {cid} with the unchanged 730.py commit() (native CUT3 forge → torch.save → SHA-256) …")
+        if cid=="MASTER":
+            refl=[dict(id=k,reflection=REC["reflections"][k]) for k in SRC_IDS];body=build_master_body(refl,REC["synthesis"])
+            how="MASTER body = 730.py master_body expression over the three reflections and the synthesis recorded in 730.log (no regeneration)"
+        else:
+            body=(LIVE.get("_source_bodies") or {}).get(cid)
+            sp=ORIG["sealed_sources"].get(cid)
+            if body is None and sp and sp["equal_record"]:body=Path(sp["path"]).read_text(encoding="utf-8")
+            if body is None:raise IntegrityError(f"{cid}: no SHA-verified source text available (Europe PMC excerpt changed or unreachable) — the cartridge cannot be re-forged faithfully")
+            how="source text = Europe PMC full-text excerpt re-derived with 730.py europe_pmc_fulltext(), SHA-256 equal to the TEST730 record"
+            E["check"]("RECOVERY_SOURCE_TEXT_SHA_"+cid,sha_text(body)==REC["sources"][cid]["excerpt_sha256"])
+        ntok=len(E["tok"](body,add_special_tokens=False).input_ids)
+        E["check"]("RECOVERY_BODY_TOKENS_EQUAL_RECORD_"+cid,ntok==REC["body_tokens"][cid],{"tokens":ntok,"record":REC["body_tokens"][cid]})
+        e=E["commit"](cid,body,REC["commits"][cid]["role"],(["P01","P02","P03"] if cid=="MASTER" else []))
+        e=dict(e,how=how,session=SESSION_ID,utc=utc_now());out[cid]=e
+        E["ledger"]["cartridges"]=[x for x in E["ledger"]["cartridges"] if x.get("id")!=cid]+[e];E["atomic_json"](rman,E["ledger"])
+        _emit(f"  {cid} forged · {e['body_tokens']} body tokens · {e.get('forge_seconds')} s · file SHA-256 {e['sha256'][:16]}… · equal to TEST730 record: {e['sha256']==REC['commits'][cid]['sha256']}")
+      except Exception as ex:
+        errs[cid]=f"{type(ex).__name__}: {ex}";slog("CARTRIDGE_NOT_FORGED",cid,error=errs[cid])
+        if _is_oom_err(ex):E["release"]()
+    LIVE["forge_errors"]=errs
+    return out
+def stage_cartridges():
+    read_test730_directory()
+    for cid in CARTS:ART[cid]["sha256_expected"]=ART[cid]["sha256_record"]
+    missing=[c for c in CARTS if ART[c]["status"]!="ORIGINAL_VERIFIED"]
+    if missing and STATE["mode"]=="LIVE" and E.get("model") is not None:
+        rec=_recover_cartridges(missing)
+        for cid,e in rec.items():
+            p=RECOVERY_DIR/e["file"];same=(e["sha256"]==ART[cid]["sha256_record"])
+            ART[cid].update(path=str(p),bytes=p.stat().st_size,sha256_now=e["sha256"],equal_record=same,entry=e,tensor_record=True,sha256_expected=e["sha256"],
+                            status=("RECOVERED_BIT_IDENTICAL" if same else "RECOVERED_DIFFERENT_FILE"),forge_seconds=e.get("forge_seconds"),
+                            origin=("re-forged earlier in this runtime" if e.get("reused_from_earlier_session") else "re-forged in this session")+" from SHA-verified sealed text with unchanged 730.py commit()",how=e.get("how"))
+            slog("CARTRIDGE_RECOVERED",cid,file_sha_equal_test730_record=same,sha=e["sha256"][:16])
+    for cid in CARTS:
+        a=ART[cid]
+        if not a.get("path"):continue
+        t=time.perf_counter()
+        try:cp=torch.load(a["path"],map_location="cpu",weights_only=True)
+        except Exception as ex:a["load_error"]=f"{type(ex).__name__}: {ex}";continue
+        a["facts"]=_tensor_facts(cp);a["load_cpu_seconds"]=round(time.perf_counter()-t,3)
+        slog("MEASURED_CARTRIDGE",cid,status=a["status"],file=a["path"],bytes=a.get("bytes"),sha256_now=a.get("sha256_now"),sha256_test730_record=a["sha256_record"],
+             equal_to_record=a.get("equal_record"),**a["facts"])
+        hn=_h3_norms(cp)
+        if hn is not None:np.save(XRAY_DIR/f"H3_NORMS_{cid}.npy",hn);a["h3_norm_file"]=str(XRAY_DIR/f"H3_NORMS_{cid}.npy")
+        low=cp["lower"];a["lower_norms"]=[dict(layer=i,k_mean=float(k[0].float().norm(dim=-1).mean().item()),v_mean=float(v[0].float().norm(dim=-1).mean().item())) for i,(k,v) in enumerate(low)]
+        del cp,low;gc.collect()
+    LIVE["cartridges"]={k:{x:y for x,y in v.items() if x not in("entry",)} for k,v in ART.items()}
+    usable=[c for c in CARTS if ART[c]["status"] in("ORIGINAL_VERIFIED","RECOVERED_BIT_IDENTICAL","RECOVERED_DIFFERENT_FILE")]
+    LIVE["usable_cartridges"]=usable
+    if "MASTER" not in usable:
+        why=("the model is not loaded (no A100 / REPLAY MODE), so missing cartridges cannot be forged" if E.get("model") is None else
+             "forging failed: "+"; ".join(f"{k}: {v}" for k,v in (LIVE.get("forge_errors") or {}).items()))
+        raise IntegrityError("no usable MASTER cartridge — "+why+" · status: "+", ".join(f"{c} {ART[c]['status']}" for c in CARTS))
+    fe=LIVE.get("forge_errors") or {}
+    return " · ".join(f"{c}: {ART[c]['status'].replace('_',' ').lower()}" for c in CARTS)+("" if not fe else " · NOT FORGED: "+"; ".join(f"{k} — {v}" for k,v in fe.items()))
+
+def _memory_bytes(mem):return sum(int(k.numel())*int(k.element_size())+int(v.numel())*int(v.element_size()) for k,v in mem)
+def stage_master():
+    if "MASTER" not in LIVE.get("usable_cartridges",[]):raise IntegrityError("MASTER cartridge not available — no live MASTER operation is possible (nothing is substituted)")
+    a=ART["MASTER"];t_read=time.perf_counter();raw=Path(a["path"]).read_bytes();t_read=time.perf_counter()-t_read;del raw
+    t0=time.perf_counter();cpu=_load_verified("MASTER");t_safe=time.perf_counter()-t0
+    t1=time.perf_counter();gcp=E["to_gpu"](cpu);E["sync"]();t_h2d=time.perf_counter()-t1;del cpu
+    t2=time.perf_counter();memory=E["initialize_native"](gcp);E["sync"]();t_init=time.perf_counter()-t2
+    t3=time.perf_counter();seals=E["memory_seals"](memory);t_seal=time.perf_counter()-t3
+    STATE["master_memory"]=memory;STATE["master_gpu_cp"]=gcp;STATE["master_seals_before"]=seals
+    g=E["gpu"]();rows=int(memory[0][0].shape[-2])
+    LIVE["master_fast_path"]=dict(file_bytes=a["bytes"],ssd_read_seconds=round(t_read,3),ssd_read_mb_s=round(a["bytes"]/1e6/max(t_read,1e-9),1),
+        verified_load_seconds=round(t_safe,3),verification=a.get("tensor_check"),h2d_seconds=round(t_h2d,3),initialize_native_seconds=round(t_init,3),
+        prefix_seal_seconds=round(t_seal,3),total_seconds=round(time.perf_counter()-t0,3),layers=len(memory),rows=rows,memory_bytes=_memory_bytes(memory),
+        recorded_init_seconds=(REC.get("fast_path") or {}).get("init_seconds"),gpu=g,cartridge_status=a["status"],utc=utc_now())
+    slog("MEASURED_MASTER_FAST_PATH","MASTER mounted alone (80 layers)",**{k:v for k,v in LIVE["master_fast_path"].items()})
+    LIVE.setdefault("gpu_states",[]).append(dict(state="MASTER only (state B)",memory_bytes=_memory_bytes(memory),**g))
+    return f"{len(memory)} layers · {rows} rows · verified load {t_safe:.2f} s · H2D {t_h2d:.2f} s · initialize {t_init:.2f} s (record: {(REC.get('fast_path') or {}).get('init_seconds')} s incl. load)"
+
+def stage_parity():
+    gcp=STATE.get("master_gpu_cp")
+    if gcp is None or STATE.get("master_memory") is None:raise IntegrityError("MASTER is not mounted")
+    t=time.perf_counter();ref=E["initialize"](gcp);ref_seals=E["memory_seals"](ref);del ref;E["release"]()
+    nat=STATE["master_seals_before"];m=sum(a==b for a,b in zip(ref_seals,nat))
+    E["check"]('MASTER_80_LAYER_PARITY',E["compare_seals"](ref_seals,nat),{'matched':m,'layers':E["NL"]})
+    slog("MEASURED_PARITY",f"{m}/{E['NL']} layers exact SHA-256",matched=m,layers=E["NL"],seconds=round(time.perf_counter()-t,2))
+    LIVE["parity"]=dict(matched=m,layers=E["NL"],seconds=round(time.perf_counter()-t,2),reference="709.py initialize() (forward hook) vs 730.py initialize_native() (direct forward) — the mounted fast-path memory",
+                        recorded=next((c["detail"] for c in REC["checks"] if c["name"]=="MASTER_80_LAYER_PARITY"),None),utc=utc_now())
+    STATE["master_gpu_cp"]=None;del gcp;E["release"]()
+    return f"{m}/{E['NL']} layers exact SHA-256 (record: 80/80)"
+
+XRAY_BIN=32
+def _xray(memory):
+    """read-only: per token, L2 norm over head_dim, mean over the 8 KV heads; K and V for all layers"""
+    K=[];V=[]
+    with torch.no_grad():
+        for k,v in memory:
+            K.append(k[0].float().norm(dim=-1).mean(dim=0).cpu().numpy());V.append(v[0].float().norm(dim=-1).mean(dim=0).cpu().numpy())
+    return np.stack(K).astype(np.float32),np.stack(V).astype(np.float32)
+def _xray_store(cid,memory,seconds,mounted_note):
+    K,V=_xray(memory);np.savez_compressed(XRAY_DIR/f"XRAY_{cid}.npz",K=K,V=V)
+    P=int(E["P"]);body=slice(P,None)
+    meta=dict(cid=cid,rows=int(K.shape[1]),layers=int(K.shape[0]),prefix_tokens=P,file=str(XRAY_DIR/f"XRAY_{cid}.npz"),seconds=round(seconds,2),mounted=mounted_note,
+              k_layer_mean_body=K[:,body].mean(axis=1).tolist(),v_layer_mean_body=V[:,body].mean(axis=1).tolist(),
+              k_layer_p05_body=np.percentile(K[:,body],5,axis=1).tolist(),k_layer_p95_body=np.percentile(K[:,body],95,axis=1).tolist(),
+              v_layer_p05_body=np.percentile(V[:,body],5,axis=1).tolist(),v_layer_p95_body=np.percentile(V[:,body],95,axis=1).tolist(),
+              provenance=("SIMULATION" if SIM else "GPU_REAL"),method="‖K‖,‖V‖ = L2 over head_dim (128), mean over 8 KV heads, per memory row; read-only",utc=utc_now())
+    LIVE.setdefault("xray",{})[cid]=meta
+    slog("MEASURED_XRAY",cid,rows=meta["rows"],layers=meta["layers"],seconds=meta["seconds"],mounted=mounted_note,file=meta["file"],
+         k_mean_L0_3=float(np.mean(meta["k_layer_mean_body"][:4])),k_mean_L4_79=float(np.mean(meta["k_layer_mean_body"][4:])),
+         v_mean_L0_3=float(np.mean(meta["v_layer_mean_body"][:4])),v_mean_L4_79=float(np.mean(meta["v_layer_mean_body"][4:])))
+    return meta
+def stage_xray():
+    done=[]
+    if STATE.get("master_memory") is not None:
+        t=time.perf_counter();_xray_store("MASTER",STATE["master_memory"],time.perf_counter()-t,"MASTER fast-path memory (state B)");done.append("MASTER")
+    for cid in SRC_IDS:
+        if cid not in LIVE.get("usable_cartridges",[]):continue
+        t=time.perf_counter();cpu=_load_verified(cid);gcp=E["to_gpu"](cpu);del cpu;mem=E["initialize_native"](gcp);del gcp
+        g=E["gpu"]();LIVE.setdefault("gpu_states",[]).append(dict(state=f"{cid} alone + MASTER (X-ray)",memory_bytes=_memory_bytes(mem),**g))
+        _xray_store(cid,mem,time.perf_counter()-t,f"{cid} mounted ALONE (separate initialize_native; not simultaneous with the other sources)");del mem;E["release"]();done.append(cid)
+    dump_json(DATA_DIR/"XRAY_SUMMARY.json",LIVE.get("xray"))
+    return f"measured: {', '.join(done)} · 80 layers each · each source mounted alone"
+
+def answer_measured(memory,question,origin):
+    """the unchanged engine answer(); a read-only counter on lm_head (returns None) counts forward passes → generated tokens"""
+    calls=[0];h=E["model"].lm_head.register_forward_hook(lambda m,a,o:calls.__setitem__(0,calls[0]+1))
+    g0=E["gpu"]();t=time.perf_counter()
+    try:txt=E["answer"](memory,question)
+    finally:h.remove()
+    E["sync"]();s=time.perf_counter()-t;n=max(calls[0]-1,0)
+    rows=0 if memory is None else int(memory[0][0].shape[-2])
+    slog("MEASURED_ANSWER",origin,memory=("MASTER" if memory is not None else "NONE"),memory_rows=rows,n_generated=n,seconds=round(s,3),tokens_per_second=(round(n/s,2) if s>0 else None),
+         ceiling_reached=(n>=E["MAX_NEW"]),sha256=sha_text(txt),answer=txt[:4000])
+    return dict(question=question,answer=txt,sha256=sha_text(txt),seconds=round(s,3),n_generated=n,max_new=E["MAX_NEW"],ceiling_reached=(n>=E["MAX_NEW"]),
+                tokens_per_second=round(n/s,2) if s>0 else None,memory=("MASTER" if memory is not None else "NONE"),memory_rows=rows,origin=origin,
+                gpu_free_gib=g0.get("free_gib"),utc=utc_now(),provenance=("SIMULATION" if SIM else "GPU_REAL"))
+def stage_repro():
+    mem=STATE.get("master_memory")
+    if mem is None:raise IntegrityError("MASTER is not mounted")
+    out={}
+    for qid in REPRO_IDS:
+        q=REC["questions"][qid];r=answer_measured(mem,q["question"],"reproduction of sealed "+qid)
+        r.update(id=qid,recorded_sha256=q["answer_sha256_log_text"],recorded_seconds=q["seconds"],identical_to_record=(r["answer"]==q["answer"]),
+                 common_prefix_chars=len(os.path.commonprefix([r["answer"],q["answer"]])))
+        out[qid]=r;slog("REPRODUCTION",qid,identical=r["identical_to_record"],seconds=r["seconds"],n=r["n_generated"]);bump()
+        LIVE["repro"]=out
+    LIVE["repro"]=out
+    return " · ".join(f"{k}: {'byte-identical to the record' if v['identical_to_record'] else 'differs from the record after %d chars'%v['common_prefix_chars']} ({v['seconds']:.0f} s)" for k,v in out.items())
+def _markers(text,ms):return {m:(m.lower() in str(text).lower()) for m in ms}
+def stage_newq():
+    mem=STATE.get("master_memory")
+    if mem is None:raise IntegrityError("MASTER is not mounted")
+    out={}
+    for q in NEW_QUESTIONS:
+        r=answer_measured(mem,q["question"],"new demo question "+q["id"]);c=answer_measured(None,q["question"],"new demo question "+q["id"]+" without memory")
+        r["markers"]=_markers(r["answer"],q["markers"]);c["markers"]=_markers(c["answer"],q["markers"])
+        out[q["id"]]=dict(id=q["id"],question=q["question"],markers=q["markers"],master=r,no_memory=c,sealed_panel=False);LIVE["newq"]=out;bump()
+        slog("NEW_QUESTION",q["id"],master_markers=sum(r["markers"].values()),no_memory_markers=sum(c["markers"].values()))
+    return " · ".join(f"{k}: markers MASTER {sum(v['master']['markers'].values())}/{len(v['markers'])} vs no memory {sum(v['no_memory']['markers'].values())}/{len(v['markers'])}" for k,v in out.items())
+def stage_integrity():
+    res={}
+    mem=STATE.get("master_memory")
+    if mem is not None:
+        same=E["compare_seals"](STATE["master_seals_before"],E["memory_seals"](mem));E["check"]('FAST_PATH_MASTER_PREFIX_UNCHANGED',same);res["master_prefix_unchanged"]=same
+    if E.get("SENTINEL_BEFORE"):
+        after=E["sentinel"]();E["check"]('WEIGHTS_SENTINEL_UNCHANGED',after==E["SENTINEL_BEFORE"]);res.update(sentinel_before=E["SENTINEL_BEFORE"],sentinel_after=after)
+        res["trainable_tensors"]=sum(1 for p in E["model"].parameters() if p.requires_grad)
+    files={}
+    for cid in CARTS:
+        a=ART.get(cid) or {}
+        if a.get("path") and Path(a["path"]).is_file():files[cid]=dict(sha256=sha_file(a["path"]),expected=a.get("sha256_expected"),unchanged=(sha_file(a["path"])==a.get("sha256_expected")))
+    res["cartridge_files"]=files;res["all_files_unchanged"]=all(v["unchanged"] for v in files.values()) if files else None
+    E["check"]("ALL_PHYSICAL_CARTRIDGES_PRESERVED",bool(files) and res["all_files_unchanged"],{k:v["unchanged"] for k,v in files.items()})
+    res["utc"]=utc_now();LIVE["integrity"]=res;slog("MEASURED_INTEGRITY","after use",**res)
+    return f"prefix unchanged {res.get('master_prefix_unchanged')} · weights unchanged {res.get('sentinel_after')==res.get('sentinel_before') if res.get('sentinel_before') else '—'} · files unchanged {res['all_files_unchanged']}"
+
+def live_query(question):
+    """LIVE QUERY MODE: a new question to the mounted MASTER (never part of the sealed panel)"""
+    mem=STATE.get("master_memory")
+    if mem is None:raise IntegrityError("The MASTER memory is not mounted in this session (press RUN on an A100 runtime first). No recorded answer is shown instead.")
+    r=answer_measured(mem,question,"user (LIVE QUERY tab)");r["sealed_panel"]=False;r["session"]=SESSION_ID
+    with LIVE_QA.open("a",encoding="utf-8") as f:f.write(json.dumps(jsafe(r),ensure_ascii=False)+"\n")
+    LIVE.setdefault("user_queries",[]).append(r);bump();return r
+# ===== END OF PART 1/3 =====
