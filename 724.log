@@ -1,0 +1,574 @@
+ ==============================================================================================================
+AKBASCORE PROMETHEUS — TEST724 — HYPOTHESIS / COUNTEREVIDENCE / CAUSAL REVISION SWAP
+==============================================================================================================
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS RESERVE 
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 84.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 1.00MB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 83.7MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 74.2MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 122MB/s]LOAD_FROZEN_72B_NF4
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 10.1MB/s]Download complete:   125GB, 1.62GB/s  Reconstruction complete: 100%  145GB /  145GB,  692MB/s  Fetching 37 files: 100% 37/37 [06:49<00:00, 10.64s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.31it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.2kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+MODEL_READY {'free_gib': 39.673, 'allocated_gib': 38.379, 'peak_gib': 38.786, 'total_gib': 79.251}
+FORGE_NATIVE C01_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C01_R1 770a06f1a156ec032b62db26efb5b61d7dfe6a1fd34d723b6c7816a3899cf39f forge_s 1.842
+FORGE_NATIVE C01_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C01_R2 4fd687af4bf75d8df3f7ecd005d044b2ef0c049d90ac758b99289fc7e6128d88 forge_s 0.584
+FORGE_NATIVE C01_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C01_R3 e64f01d57c63aedc2dd7a65b93db911573bcf5a6acd3b456fddc0366706b7b24 forge_s 0.588
+FORGE_NATIVE C02_R1 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C02_R1 a9642a3e02ef9b612d549b5000872f7cd9564b21a13e7d70198800b01d762d9d forge_s 0.591
+FORGE_NATIVE C02_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C02_R2 3ab609e8e7cd3c77557852e03e2c260d342fc438f51df47e67988f2c67d483ec forge_s 0.59
+FORGE_NATIVE C02_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C02_R3 610b17434684ae325f800880e76f75267ffa5658b89350c02781cce43f458e7c forge_s 0.59
+FORGE_NATIVE C03_R1 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C03_R1 b3881a80374188f77b8b8a82da2cfeed5b838e2fa532c0b8695fc04c7f3bd8ed forge_s 0.592
+FORGE_NATIVE C03_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C03_R2 f3903533945894787ef2b8a9299e501b1040a667f43c5a19d5aa2a97826638e7 forge_s 0.614
+FORGE_NATIVE C03_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C03_R3 a607cbb7e5d252bb5f48563f5a5fe2960bbed170b740363e7bd935a35b8bd0c7 forge_s 0.593
+FORGE_NATIVE C04_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C04_R1 264395db92fa16308411b2165b680ea87f3f95aafed248573da3c4905712bf98 forge_s 0.588
+FORGE_NATIVE C04_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C04_R2 5593382c75debabdfa19b7e890f1829d07de318a3c239aaac9efdacd36908d17 forge_s 0.59
+FORGE_NATIVE C04_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C04_R3 7673361bff89d9364ec5510a1269a9657d8b0c56fa409c90245bf99f69101400 forge_s 0.588
+FORGE_NATIVE C05_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C05_R1 9e651a6723218675b2f032b67a0032ea08c85b50b3e883b959e53b0b01ab83fe forge_s 0.586
+FORGE_NATIVE C05_R2 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C05_R2 bc12f6c4693ef3bece79260265cc3901f412074a49ffae0a23d20f8b77371ef2 forge_s 0.589
+FORGE_NATIVE C05_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C05_R3 7d1c242e9d9cad94d2848761bc2bbedc0f73dc5836cf939ba4943d2012f62bce forge_s 0.584
+FORGE_NATIVE C06_R1 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C06_R1 9830815ace1914d1408516a6026b260e1901542b98adeddf6ec14eeee36eefe4 forge_s 0.588
+FORGE_NATIVE C06_R2 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C06_R2 82e72874c5eb93908e1d3ebf7b89faa45b863d2a2364ee50ec856db5b22bd229 forge_s 0.589
+FORGE_NATIVE C06_R3 body_tokens 60
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C06_R3 4132943e16a1b1263645a731d0181c2021612001449b0e73fb076a65669372f3 forge_s 0.595
+FORGE_NATIVE C07_R1 body_tokens 57
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C07_R1 16174ffcdfe069c9cdf3edeb3a925d28f56859f185028c049ea33b1e9c012589 forge_s 0.586
+FORGE_NATIVE C07_R2 body_tokens 57
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C07_R2 f8d8803d534825a1491118763a2de7ef31bcd868053dbfaf96e9f507d69b9993 forge_s 0.592
+FORGE_NATIVE C07_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C07_R3 ec66ac0025007c8e08f2110800b7bf39bce01e56da7ae3ef40a1dc1862ba2af4 forge_s 0.59
+FORGE_NATIVE C08_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C08_R1 d4b988b33b6ea1631503f24c70684f9a19e867fd2dd3d0624a53da7869a726fa forge_s 0.592
+FORGE_NATIVE C08_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C08_R2 ded02682e0ac8e7d61e0a9c2c9449a06c9378dd548871528e19e035ad94e8643 forge_s 0.587
+FORGE_NATIVE C08_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C08_R3 3db2182ba07096f261fe2668a05af4e10639626ccd1c653e51551637ff19285c forge_s 0.59
+FORGE_NATIVE C09_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C09_R1 74fc0a44616fd1db53b5ca371c5e1d684629bb57aa5ac1635ce033719437e546 forge_s 0.591
+FORGE_NATIVE C09_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C09_R2 2ea029b4ebd30abfafd25498254f080cb48f978b19dab6e82d8a4e9fa16fba67 forge_s 0.592
+FORGE_NATIVE C09_R3 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C09_R3 6e9895da3d98e0ca0487a89719cd05da17a91b620086a3ec4a3d4f8360e18064 forge_s 0.593
+FORGE_NATIVE C10_R1 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C10_R1 b776d8888b869585c77c38d7fdf9d6320079f261822b05ac111024a498c7da73 forge_s 0.592
+FORGE_NATIVE C10_R2 body_tokens 58
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C10_R2 56adb70e67b74b646a741925bfc52d48ed2e1a3e2be15a9e68d6e7122270a8a5 forge_s 0.585
+FORGE_NATIVE C10_R3 body_tokens 59
+PASS NATIVE_FORGE_SHAPE 
+COMMIT C10_R3 d38f57dbd18b64a58b5b8f2a5a0edce64411c501043657991cf0b1cabcdb11d1 forge_s 0.591
+PASS CARTRIDGES_30 
+PASS UNIQUE_CARTRIDGES 
+PASS MANIFEST_REOPEN 
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+PASS BANK_DISK_EXACT_C01_R1 
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS BANK_DISK_EXACT_C01_R2 
+PASS FILE_SHA_C01_R3 
+PASS CARTRIDGE_ID_C01_R3 
+PASS CARTRIDGE_SHA_C01_R3 
+PASS BANK_DISK_EXACT_C01_R3 
+PASS FILE_SHA_C02_R1 
+PASS CARTRIDGE_ID_C02_R1 
+PASS CARTRIDGE_SHA_C02_R1 
+PASS BANK_DISK_EXACT_C02_R1 
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS BANK_DISK_EXACT_C02_R2 
+PASS FILE_SHA_C02_R3 
+PASS CARTRIDGE_ID_C02_R3 
+PASS CARTRIDGE_SHA_C02_R3 
+PASS BANK_DISK_EXACT_C02_R3 
+PASS FILE_SHA_C03_R1 
+PASS CARTRIDGE_ID_C03_R1 
+PASS CARTRIDGE_SHA_C03_R1 
+PASS BANK_DISK_EXACT_C03_R1 
+PASS FILE_SHA_C03_R2 
+PASS CARTRIDGE_ID_C03_R2 
+PASS CARTRIDGE_SHA_C03_R2 
+PASS BANK_DISK_EXACT_C03_R2 
+PASS FILE_SHA_C03_R3 
+PASS CARTRIDGE_ID_C03_R3 
+PASS CARTRIDGE_SHA_C03_R3 
+PASS BANK_DISK_EXACT_C03_R3 
+PASS FILE_SHA_C04_R1 
+PASS CARTRIDGE_ID_C04_R1 
+PASS CARTRIDGE_SHA_C04_R1 
+PASS BANK_DISK_EXACT_C04_R1 
+PASS FILE_SHA_C04_R2 
+PASS CARTRIDGE_ID_C04_R2 
+PASS CARTRIDGE_SHA_C04_R2 
+PASS BANK_DISK_EXACT_C04_R2 
+PASS FILE_SHA_C04_R3 
+PASS CARTRIDGE_ID_C04_R3 
+PASS CARTRIDGE_SHA_C04_R3 
+PASS BANK_DISK_EXACT_C04_R3 
+PASS FILE_SHA_C05_R1 
+PASS CARTRIDGE_ID_C05_R1 
+PASS CARTRIDGE_SHA_C05_R1 
+PASS BANK_DISK_EXACT_C05_R1 
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS BANK_DISK_EXACT_C05_R2 
+PASS FILE_SHA_C05_R3 
+PASS CARTRIDGE_ID_C05_R3 
+PASS CARTRIDGE_SHA_C05_R3 
+PASS BANK_DISK_EXACT_C05_R3 
+PASS FILE_SHA_C06_R1 
+PASS CARTRIDGE_ID_C06_R1 
+PASS CARTRIDGE_SHA_C06_R1 
+PASS BANK_DISK_EXACT_C06_R1 
+PASS FILE_SHA_C06_R2 
+PASS CARTRIDGE_ID_C06_R2 
+PASS CARTRIDGE_SHA_C06_R2 
+PASS BANK_DISK_EXACT_C06_R2 
+PASS FILE_SHA_C06_R3 
+PASS CARTRIDGE_ID_C06_R3 
+PASS CARTRIDGE_SHA_C06_R3 
+PASS BANK_DISK_EXACT_C06_R3 
+PASS FILE_SHA_C07_R1 
+PASS CARTRIDGE_ID_C07_R1 
+PASS CARTRIDGE_SHA_C07_R1 
+PASS BANK_DISK_EXACT_C07_R1 
+PASS FILE_SHA_C07_R2 
+PASS CARTRIDGE_ID_C07_R2 
+PASS CARTRIDGE_SHA_C07_R2 
+PASS BANK_DISK_EXACT_C07_R2 
+PASS FILE_SHA_C07_R3 
+PASS CARTRIDGE_ID_C07_R3 
+PASS CARTRIDGE_SHA_C07_R3 
+PASS BANK_DISK_EXACT_C07_R3 
+PASS FILE_SHA_C08_R1 
+PASS CARTRIDGE_ID_C08_R1 
+PASS CARTRIDGE_SHA_C08_R1 
+PASS BANK_DISK_EXACT_C08_R1 
+PASS FILE_SHA_C08_R2 
+PASS CARTRIDGE_ID_C08_R2 
+PASS CARTRIDGE_SHA_C08_R2 
+PASS BANK_DISK_EXACT_C08_R2 
+PASS FILE_SHA_C08_R3 
+PASS CARTRIDGE_ID_C08_R3 
+PASS CARTRIDGE_SHA_C08_R3 
+PASS BANK_DISK_EXACT_C08_R3 
+PASS FILE_SHA_C09_R1 
+PASS CARTRIDGE_ID_C09_R1 
+PASS CARTRIDGE_SHA_C09_R1 
+PASS BANK_DISK_EXACT_C09_R1 
+PASS FILE_SHA_C09_R2 
+PASS CARTRIDGE_ID_C09_R2 
+PASS CARTRIDGE_SHA_C09_R2 
+PASS BANK_DISK_EXACT_C09_R2 
+PASS FILE_SHA_C09_R3 
+PASS CARTRIDGE_ID_C09_R3 
+PASS CARTRIDGE_SHA_C09_R3 
+PASS BANK_DISK_EXACT_C09_R3 
+PASS FILE_SHA_C10_R1 
+PASS CARTRIDGE_ID_C10_R1 
+PASS CARTRIDGE_SHA_C10_R1 
+PASS BANK_DISK_EXACT_C10_R1 
+PASS FILE_SHA_C10_R2 
+PASS CARTRIDGE_ID_C10_R2 
+PASS CARTRIDGE_SHA_C10_R2 
+PASS BANK_DISK_EXACT_C10_R2 
+PASS FILE_SHA_C10_R3 
+PASS CARTRIDGE_ID_C10_R3 
+PASS CARTRIDGE_SHA_C10_R3 
+PASS BANK_DISK_EXACT_C10_R3 
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C01", "phase": "HYPOTHESIS", "question": "Where is the AX-731 coolant regulator, revision R1, stored?", "generated_hypothesis": "The AX-731 coolant regulator, revision R1, is stored in the north archive.", "routing": {"selected": "C01_R1", "top3": ["C01_R1", "C01_R2", "C01_R3"], "score": 0.75708491, "margin": 0.00075215}, "routing_correct": true, "location_hits": ["north archive"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01_R3 
+PASS CARTRIDGE_ID_C01_R3 
+PASS CARTRIDGE_SHA_C01_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01_R3 
+PASS CARTRIDGE_ID_C01_R3 
+PASS CARTRIDGE_SHA_C01_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C01", "hypothesis": "The AX-731 coolant regulator, revision R1, is stored in the north archive.", "evidence": [{"revision": "R2", "question": "Where is the AX-731 coolant regulator, revision R2, stored?", "raw": "The AX-731 coolant regulator, revision R2, is stored in the south annex.", "routing": {"selected": "C01_R2", "top3": ["C01_R2", "C01_R3", "C01_R1"], "score": 0.75934392, "margin": 0.00519872}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the AX-731 coolant regulator, revision R3, stored?", "raw": "The AX-731 coolant regulator, revision R3, is stored in the copper vault.", "routing": {"selected": "C01_R3", "top3": ["C01_R3", "C01_R2", "C01_R1"], "score": 0.75753379, "margin": 0.00120813}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The AX-731 coolant regulator at revision R2 is stored in north archive\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for asset AX-731 at revision R1, but does not provide any details about the storage location for revision R2.", "R2": "CONTRADICTED. The document specifies that the official storage location for asset AX-731 revision R2 is the south annex, not the north archive.", "R3": "UNKNOWN. The provided information specifies the storage location for asset AX-731 at revision R3, but it does not provide any information about the storage location for revision R2. Therefore, we cannot determine whether the claim is supported or"}, "no_memory_decision": "UNKNOWN\n\nExplanation: The provided document memory does not contain any information about the AX-731 coolant regulator, its revision, or its storage location. Therefore, there is not enough information to determine whether the claim is supported or contradicted", "missing_question": "Where is the AX-731 coolant regulator, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of the AX-731 coolant regulator, not for revision R9.", "missing_route": {"selected": "C01_R2", "top3": ["C01_R2", "C01_R3", "C01_R1"], "score": 0.75402129, "margin": 0.00074857}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C02_R1 
+PASS CARTRIDGE_ID_C02_R1 
+PASS CARTRIDGE_SHA_C02_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C02", "phase": "HYPOTHESIS", "question": "Where is the BT-962 torque controller, revision R1, stored?", "generated_hypothesis": "The BT-962 torque controller, revision R1, is stored in the slate pavilion.", "routing": {"selected": "C02_R1", "top3": ["C02_R1", "C02_R2", "C02_R3"], "score": 0.75681341, "margin": 0.0015924}, "routing_correct": true, "location_hits": ["slate pavilion"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C02_R3 
+PASS CARTRIDGE_ID_C02_R3 
+PASS CARTRIDGE_SHA_C02_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C02_R1 
+PASS CARTRIDGE_ID_C02_R1 
+PASS CARTRIDGE_SHA_C02_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C02_R3 
+PASS CARTRIDGE_ID_C02_R3 
+PASS CARTRIDGE_SHA_C02_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C02", "hypothesis": "The BT-962 torque controller, revision R1, is stored in the slate pavilion.", "evidence": [{"revision": "R2", "question": "Where is the BT-962 torque controller, revision R2, stored?", "raw": "The BT-962 torque controller, revision R2, is stored in the glass depot.", "routing": {"selected": "C02_R2", "top3": ["C02_R2", "C02_R1", "C02_R3"], "score": 0.75823683, "margin": 0.00467807}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the BT-962 torque controller, revision R3, stored?", "raw": "The BT-962 torque controller, revision R3, is stored in amber bay.", "routing": {"selected": "C02_R3", "top3": ["C02_R3", "C02_R2", "C02_R1"], "score": 0.75678849, "margin": 0.00159812}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The BT-962 torque controller at revision R2 is stored in slate pavilion\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for BT-962 at revision R1, but does not provide any information about the storage location for revision R2.", "R2": "CONTRADICTED. The document states that the official storage location for asset BT-962 revision R2 is the glass depot, not the slate pavilion.", "R3": "UNKNOWN. The provided information only specifies the storage location for BT-962 revision R3, which is amber bay. There is no information about the storage location for revision R2."}, "no_memory_decision": "UNKNOWN\n\nThe provided document memory does not contain any information about the BT-962 torque controller, its revision, or its location. Therefore, there is not enough information to determine whether the claim is supported or contradicted.", "missing_question": "Where is the BT-962 torque controller, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of the BT-962 torque controller, not for revision R9.", "missing_route": {"selected": "C02_R2", "top3": ["C02_R2", "C02_R3", "C02_R1"], "score": 0.75307983, "margin": 0.0003618}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C03_R1 
+PASS CARTRIDGE_ID_C03_R1 
+PASS CARTRIDGE_SHA_C03_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C03", "phase": "HYPOTHESIS", "question": "Where is the DN-348 servo monitor, revision R1, stored?", "generated_hypothesis": "The DN-348 servo monitor, revision R1, is stored in the willow chamber.", "routing": {"selected": "C03_R1", "top3": ["C03_R1", "C03_R2", "C03_R3"], "score": 0.75951976, "margin": 0.00316584}, "routing_correct": true, "location_hits": ["willow chamber"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C03_R2 
+PASS CARTRIDGE_ID_C03_R2 
+PASS CARTRIDGE_SHA_C03_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C03_R3 
+PASS CARTRIDGE_ID_C03_R3 
+PASS CARTRIDGE_SHA_C03_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C03_R1 
+PASS CARTRIDGE_ID_C03_R1 
+PASS CARTRIDGE_SHA_C03_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C03_R2 
+PASS CARTRIDGE_ID_C03_R2 
+PASS CARTRIDGE_SHA_C03_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C03_R3 
+PASS CARTRIDGE_ID_C03_R3 
+PASS CARTRIDGE_SHA_C03_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C03_R3 
+PASS CARTRIDGE_ID_C03_R3 
+PASS CARTRIDGE_SHA_C03_R3 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C03", "hypothesis": "The DN-348 servo monitor, revision R1, is stored in the willow chamber.", "evidence": [{"revision": "R2", "question": "Where is the DN-348 servo monitor, revision R2, stored?", "raw": "The DN-348 servo monitor, revision R2, is stored in the cedar room.", "routing": {"selected": "C03_R2", "top3": ["C03_R2", "C03_R1", "C03_R3"], "score": 0.75952715, "margin": 0.0032711}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the DN-348 servo monitor, revision R3, stored?", "raw": "The DN-348 servo monitor, revision R3, is stored at the granite station.", "routing": {"selected": "C03_R3", "top3": ["C03_R3", "C03_R2", "C03_R1"], "score": 0.75898117, "margin": 0.00271791}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The DN-348 servo monitor at revision R2 is stored in willow chamber\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for DN-348 revision R1, but does not mention the storage location for revision R2. Therefore, there is insufficient information to determine if the claim is supported or contradicted.", "R2": "CONTRADICTED. The document specifies that the official storage location for DN-348 revision R2 is the cedar room, not the willow chamber.", "R3": "UNKNOWN. The provided information specifies the storage location for DN-348 revision R3, but does not mention the storage location for revision R2. Therefore, there is insufficient information to determine if the claim is supported or contradicted."}, "no_memory_decision": "UNKNOWN\n\nThe provided document memory does not contain any information about a DN-348 servo monitor, its revision, or its storage location. Therefore, there is not enough information to determine whether the claim is supported or contradicted.", "missing_question": "Where is the DN-348 servo monitor, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R3 of DN-348, not for revision R9.", "missing_route": {"selected": "C03_R3", "top3": ["C03_R3", "C03_R1", "C03_R2"], "score": 0.75467819, "margin": 0.00041807}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C04_R1 
+PASS CARTRIDGE_ID_C04_R1 
+PASS CARTRIDGE_SHA_C04_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C04", "phase": "HYPOTHESIS", "question": "Where is the EV-415 pressure sensor, revision R1, stored?", "generated_hypothesis": "The EV-415 pressure sensor, revision R1, is stored in the amber vault.", "routing": {"selected": "C04_R1", "top3": ["C04_R1", "C04_R2", "C04_R3"], "score": 0.75357056, "margin": 0.00103289}, "routing_correct": true, "location_hits": ["amber vault"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C04_R2 
+PASS CARTRIDGE_ID_C04_R2 
+PASS CARTRIDGE_SHA_C04_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04_R3 
+PASS CARTRIDGE_ID_C04_R3 
+PASS CARTRIDGE_SHA_C04_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04_R1 
+PASS CARTRIDGE_ID_C04_R1 
+PASS CARTRIDGE_SHA_C04_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04_R2 
+PASS CARTRIDGE_ID_C04_R2 
+PASS CARTRIDGE_SHA_C04_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04_R3 
+PASS CARTRIDGE_ID_C04_R3 
+PASS CARTRIDGE_SHA_C04_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C04_R2 
+PASS CARTRIDGE_ID_C04_R2 
+PASS CARTRIDGE_SHA_C04_R2 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C04", "hypothesis": "The EV-415 pressure sensor, revision R1, is stored in the amber vault.", "evidence": [{"revision": "R2", "question": "Where is the EV-415 pressure sensor, revision R2, stored?", "raw": "The EV-415 pressure sensor, revision R2, is stored in the river gallery.", "routing": {"selected": "C04_R2", "top3": ["C04_R2", "C04_R3", "C04_R1"], "score": 0.75591749, "margin": 0.00508052}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the EV-415 pressure sensor, revision R3, stored?", "raw": "The EV-415 pressure sensor, revision R3, is stored in the moss annex.", "routing": {"selected": "C04_R3", "top3": ["C04_R3", "C04_R2", "C04_R1"], "score": 0.75399727, "margin": 0.00135589}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The EV-415 pressure sensor at revision R2 is stored in amber vault\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The document memory specifies the storage location for EV-415 revision R1, but does not provide information about the storage location for revision R2.", "R2": "CONTRADICTED. The document states that the official storage location for asset EV-415 revision R2 is the river gallery, not the amber vault.", "R3": "UNKNOWN. The provided information only specifies the storage location for asset EV-415 at revision R3, which is the moss annex. There is no information about the storage location for revision R2."}, "no_memory_decision": "UNKNOWN\n\nExplanation: The provided document memory does not contain any information about the EV-415 pressure sensor, its revision, or where it is stored. Therefore, there is not enough information to determine if the claim is supported or contrad", "missing_question": "Where is the EV-415 pressure sensor, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of EV-415, not for revision R9.", "missing_route": {"selected": "C04_R2", "top3": ["C04_R2", "C04_R3", "C04_R1"], "score": 0.75046271, "margin": 0.00055963}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C05_R1 
+PASS CARTRIDGE_ID_C05_R1 
+PASS CARTRIDGE_SHA_C05_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C05", "phase": "HYPOTHESIS", "question": "Where is the FK-276 spindle driver, revision R1, stored?", "generated_hypothesis": "The FK-276 spindle driver, revision R1, is stored in the copper annex.", "routing": {"selected": "C05_R1", "top3": ["C05_R1", "C05_R2", "C05_R3"], "score": 0.75950098, "margin": 0.00177234}, "routing_correct": true, "location_hits": ["copper annex"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05_R3 
+PASS CARTRIDGE_ID_C05_R3 
+PASS CARTRIDGE_SHA_C05_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05_R1 
+PASS CARTRIDGE_ID_C05_R1 
+PASS CARTRIDGE_SHA_C05_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05_R3 
+PASS CARTRIDGE_ID_C05_R3 
+PASS CARTRIDGE_SHA_C05_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C05", "hypothesis": "The FK-276 spindle driver, revision R1, is stored in the copper annex.", "evidence": [{"revision": "R2", "question": "Where is the FK-276 spindle driver, revision R2, stored?", "raw": "The FK-276 spindle driver, revision R2, is stored in the silver hangar.", "routing": {"selected": "C05_R2", "top3": ["C05_R2", "C05_R1", "C05_R3"], "score": 0.76046109, "margin": 0.00443769}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the FK-276 spindle driver, revision R3, stored?", "raw": "The FK-276 spindle driver, revision R3, is stored in the quartz store.", "routing": {"selected": "C05_R3", "top3": ["C05_R3", "C05_R2", "C05_R1"], "score": 0.75928479, "margin": 0.00189632}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The FK-276 spindle driver at revision R2 is stored in copper annex\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for FK-276 at revision R1, but does not mention the storage location for revision R2. Therefore, there is insufficient information to determine if the claim is supported or contradicted", "R2": "CONTRADICTED. The official storage location for the FK-276 spindle driver at revision R2 is the silver hangar, not the copper annex.", "R3": "UNKNOWN. The provided information only specifies the storage location for asset FK-276 at revision R3, which is the quartz store. There is no information about the storage location for revision R2."}, "no_memory_decision": "UNKNOWN\n\nThe provided document memory does not contain any information about the FK-276 spindle driver, its revisions, or its storage location. Therefore, there is not enough information to determine whether the claim is supported or contradicted.", "missing_question": "Where is the FK-276 spindle driver, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of FK-276, not for revision R9.", "missing_route": {"selected": "C05_R2", "top3": ["C05_R2", "C05_R3", "C05_R1"], "score": 0.75535506, "margin": 0.00013679}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C06_R1 
+PASS CARTRIDGE_ID_C06_R1 
+PASS CARTRIDGE_SHA_C06_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C06", "phase": "HYPOTHESIS", "question": "Where is the GL-583 motor coupler, revision R1, stored?", "generated_hypothesis": "The GL-583 motor coupler, revision R1, is stored in the river gallery.", "routing": {"selected": "C06_R1", "top3": ["C06_R1", "C06_R2", "C06_R3"], "score": 0.7589227, "margin": 0.00086445}, "routing_correct": true, "location_hits": ["river gallery"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C06_R2 
+PASS CARTRIDGE_ID_C06_R2 
+PASS CARTRIDGE_SHA_C06_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06_R3 
+PASS CARTRIDGE_ID_C06_R3 
+PASS CARTRIDGE_SHA_C06_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06_R1 
+PASS CARTRIDGE_ID_C06_R1 
+PASS CARTRIDGE_SHA_C06_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06_R2 
+PASS CARTRIDGE_ID_C06_R2 
+PASS CARTRIDGE_SHA_C06_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06_R3 
+PASS CARTRIDGE_ID_C06_R3 
+PASS CARTRIDGE_SHA_C06_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C06_R2 
+PASS CARTRIDGE_ID_C06_R2 
+PASS CARTRIDGE_SHA_C06_R2 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C06", "hypothesis": "The GL-583 motor coupler, revision R1, is stored in the river gallery.", "evidence": [{"revision": "R2", "question": "Where is the GL-583 motor coupler, revision R2, stored?", "raw": "The GL-583 motor coupler, revision R2, is stored in the north bunker.", "routing": {"selected": "C06_R2", "top3": ["C06_R2", "C06_R3", "C06_R1"], "score": 0.76098847, "margin": 0.00447035}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the GL-583 motor coupler, revision R3, stored?", "raw": "The GL-583 motor coupler, revision R3, is stored in the blue pavilion.", "routing": {"selected": "C06_R3", "top3": ["C06_R3", "C06_R2", "C06_R1"], "score": 0.75964862, "margin": 0.00155085}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The GL-583 motor coupler at revision R2 is stored in river gallery\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for GL-583 at revision R1, but does not provide any details about the storage location for revision R2. Therefore, there is insufficient information to determine if the claim is supported", "R2": "CONTRADICTED. The document specifies that the official storage location for asset GL-583 revision R2 is the north bunker, not the river gallery.", "R3": "UNKNOWN. The provided information only specifies the storage location for GL-583 at revision R3, which is the blue pavilion. There is no information about the storage location for revision R2."}, "no_memory_decision": "UNKNOWN\n\nThe provided document memory does not contain any information about a \"GL-583 motor coupler\" or its storage location, particularly not in a \"river gallery.\" There is no mention of the revision \"R2\" either", "missing_question": "Where is the GL-583 motor coupler, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of GL-583, not for revision R9.", "missing_route": {"selected": "C06_R2", "top3": ["C06_R2", "C06_R3", "C06_R1"], "score": 0.7558037, "margin": 0.00028503}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C07_R1 
+PASS CARTRIDGE_ID_C07_R1 
+PASS CARTRIDGE_SHA_C07_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C07", "phase": "HYPOTHESIS", "question": "Where is the HM-824 encoder, revision R1, stored?", "generated_hypothesis": "The HM-824 encoder, revision R1, is stored at the quartz station.", "routing": {"selected": "C07_R1", "top3": ["C07_R1", "C07_R2", "C07_R3"], "score": 0.75962353, "margin": 0.0020566}, "routing_correct": true, "location_hits": ["quartz station"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C07_R2 
+PASS CARTRIDGE_ID_C07_R2 
+PASS CARTRIDGE_SHA_C07_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C07_R3 
+PASS CARTRIDGE_ID_C07_R3 
+PASS CARTRIDGE_SHA_C07_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C07_R1 
+PASS CARTRIDGE_ID_C07_R1 
+PASS CARTRIDGE_SHA_C07_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C07_R2 
+PASS CARTRIDGE_ID_C07_R2 
+PASS CARTRIDGE_SHA_C07_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C07_R3 
+PASS CARTRIDGE_ID_C07_R3 
+PASS CARTRIDGE_SHA_C07_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C07_R2 
+PASS CARTRIDGE_ID_C07_R2 
+PASS CARTRIDGE_SHA_C07_R2 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C07", "hypothesis": "The HM-824 encoder, revision R1, is stored at the quartz station.", "evidence": [{"revision": "R2", "question": "Where is the HM-824 encoder, revision R2, stored?", "raw": "The HM-824 encoder, revision R2, is stored in the slate room.", "routing": {"selected": "C07_R2", "top3": ["C07_R2", "C07_R1", "C07_R3"], "score": 0.76095462, "margin": 0.00454849}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the HM-824 encoder, revision R3, stored?", "raw": "The HM-824 encoder, revision R3, is stored at the willow depot.", "routing": {"selected": "C07_R3", "top3": ["C07_R3", "C07_R2", "C07_R1"], "score": 0.75957137, "margin": 0.00198489}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The HM-824 encoder at revision R2 is stored in quartz station\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "CONTRADICTED. The document specifies that the official storage location of quartz station applies only to revision R1 of HM-824. There is no information provided about the storage location for revision R2.", "R2": "CONTRADICTED. The document states that the official storage location for HM-824 revision R2 is the slate room, not the quartz station.", "R3": "UNKNOWN. The provided information specifies the storage location for HM-824 at revision R3, but it does not mention the storage location for revision R2. Therefore, there is insufficient information to determine if the claim is supported or contrad"}, "no_memory_decision": "UNKNOWN\n\nThe provided document memory does not contain any information about an HM-824 encoder, its revision, or its storage location. Therefore, there is not enough information to determine whether the claim is supported or contradicted.", "missing_question": "Where is the HM-824 encoder, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for HM-824 revision R2, not revision R9.", "missing_route": {"selected": "C07_R2", "top3": ["C07_R2", "C07_R3", "C07_R1"], "score": 0.7552287, "margin": 5.603e-05}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C08_R1 
+PASS CARTRIDGE_ID_C08_R1 
+PASS CARTRIDGE_SHA_C08_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C08", "phase": "HYPOTHESIS", "question": "Where is the JP-139 feed controller, revision R1, stored?", "generated_hypothesis": "The JP-139 feed controller, revision R1, is stored in cedar bay.", "routing": {"selected": "C08_R1", "top3": ["C08_R1", "C08_R2", "C08_R3"], "score": 0.75574613, "margin": 0.00286692}, "routing_correct": true, "location_hits": ["cedar bay"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C08_R2 
+PASS CARTRIDGE_ID_C08_R2 
+PASS CARTRIDGE_SHA_C08_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C08_R3 
+PASS CARTRIDGE_ID_C08_R3 
+PASS CARTRIDGE_SHA_C08_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C08_R1 
+PASS CARTRIDGE_ID_C08_R1 
+PASS CARTRIDGE_SHA_C08_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C08_R2 
+PASS CARTRIDGE_ID_C08_R2 
+PASS CARTRIDGE_SHA_C08_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C08_R3 
+PASS CARTRIDGE_ID_C08_R3 
+PASS CARTRIDGE_SHA_C08_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C08_R3 
+PASS CARTRIDGE_ID_C08_R3 
+PASS CARTRIDGE_SHA_C08_R3 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C08", "hypothesis": "The JP-139 feed controller, revision R1, is stored in cedar bay.", "evidence": [{"revision": "R2", "question": "Where is the JP-139 feed controller, revision R2, stored?", "raw": "The JP-139 feed controller, revision R2, is stored in the copper tower.", "routing": {"selected": "C08_R2", "top3": ["C08_R2", "C08_R1", "C08_R3"], "score": 0.7558322, "margin": 0.00364041}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the JP-139 feed controller, revision R3, stored?", "raw": "The JP-139 feed controller, revision R3, is stored in the amber warehouse.", "routing": {"selected": "C08_R3", "top3": ["C08_R3", "C08_R2", "C08_R1"], "score": 0.75534707, "margin": 0.00268805}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The JP-139 feed controller at revision R2 is stored in cedar bay\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for asset JP-139 at revision R1, but does not provide any information about the storage location for revision R2.", "R2": "CONTRADICTED. The document states that the official storage location for asset JP-139 revision R2 is the copper tower, not cedar bay.", "R3": "UNKNOWN. The provided information only specifies the storage location for asset JP-139 at revision R3, which is the amber warehouse. There is no information about the storage location for revision R2."}, "no_memory_decision": "UNKNOWN\n\nThe provided document memory does not contain any information about a \"JP-139 feed controller\" or its revision, nor does it mention \"cedar bay\" in relation to storing any equipment. Therefore, there is not enough", "missing_question": "Where is the JP-139 feed controller, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R3 of the JP-139 feed controller, not for revision R9.", "missing_route": {"selected": "C08_R3", "top3": ["C08_R3", "C08_R2", "C08_R1"], "score": 0.75102979, "margin": 0.00059062}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C09_R1 
+PASS CARTRIDGE_ID_C09_R1 
+PASS CARTRIDGE_SHA_C09_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C09", "phase": "HYPOTHESIS", "question": "Where is the KR-657 relay module, revision R1, stored?", "generated_hypothesis": "The KR-657 relay module, revision R1, is stored in the silver depot.", "routing": {"selected": "C09_R1", "top3": ["C09_R1", "C09_R2", "C09_R3"], "score": 0.75761116, "margin": 0.00230825}, "routing_correct": true, "location_hits": ["silver depot"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C09_R2 
+PASS CARTRIDGE_ID_C09_R2 
+PASS CARTRIDGE_SHA_C09_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C09_R3 
+PASS CARTRIDGE_ID_C09_R3 
+PASS CARTRIDGE_SHA_C09_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C09_R1 
+PASS CARTRIDGE_ID_C09_R1 
+PASS CARTRIDGE_SHA_C09_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C09_R2 
+PASS CARTRIDGE_ID_C09_R2 
+PASS CARTRIDGE_SHA_C09_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C09_R3 
+PASS CARTRIDGE_ID_C09_R3 
+PASS CARTRIDGE_SHA_C09_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C09_R3 
+PASS CARTRIDGE_ID_C09_R3 
+PASS CARTRIDGE_SHA_C09_R3 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C09", "hypothesis": "The KR-657 relay module, revision R1, is stored in the silver depot.", "evidence": [{"revision": "R2", "question": "Where is the KR-657 relay module, revision R2, stored?", "raw": "The KR-657 relay module, revision R2, is stored in the moss gallery.", "routing": {"selected": "C09_R2", "top3": ["C09_R2", "C09_R1", "C09_R3"], "score": 0.75828272, "margin": 0.00404209}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the KR-657 relay module, revision R3, stored?", "raw": "The KR-657 relay module, revision R3, is stored in the glass chamber.", "routing": {"selected": "C09_R3", "top3": ["C09_R3", "C09_R2", "C09_R1"], "score": 0.75763571, "margin": 0.00226945}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The KR-657 relay module at revision R2 is stored in silver depot\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for KR-657 revision R1, but does not mention the storage location for revision R2. Therefore, there is insufficient information to determine if the claim is supported or contradicted.", "R2": "CONTRADICTED. The document states that the official storage location for asset KR-657 revision R2 is the moss gallery, not the silver depot.", "R3": "UNKNOWN. The provided information specifies the storage location for asset KR-657 at revision R3, but it does not provide any information about the storage location for revision R2. Therefore, there is insufficient evidence to support or contradict the"}, "no_memory_decision": "**UNKNOWN**\n\nThe provided document memory does not contain any information about the KR-657 relay module, its revision, or where it is stored. Therefore, there is not enough information to determine whether the claim is supported or contradicted", "missing_question": "Where is the KR-657 relay module, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R3 of KR-657, not for revision R9.", "missing_route": {"selected": "C09_R3", "top3": ["C09_R3", "C09_R2", "C09_R1"], "score": 0.75361633, "margin": 0.00021529}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C10_R1 
+PASS CARTRIDGE_ID_C10_R1 
+PASS CARTRIDGE_SHA_C10_R1 
+PASS NATIVE_INIT_80_LAYERS 
+HYPOTHESIS {"family": "C10", "phase": "HYPOTHESIS", "question": "Where is the LS-902 axis converter, revision R1, stored?", "generated_hypothesis": "The LS-902 axis converter, revision R1, is stored in the moss chamber.", "routing": {"selected": "C10_R1", "top3": ["C10_R1", "C10_R2", "C10_R3"], "score": 0.75865281, "margin": 0.00276697}, "routing_correct": true, "location_hits": ["moss chamber"], "correct_R1": true, "other_revision_leak": false}
+PASS FILE_SHA_C10_R2 
+PASS CARTRIDGE_ID_C10_R2 
+PASS CARTRIDGE_SHA_C10_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C10_R3 
+PASS CARTRIDGE_ID_C10_R3 
+PASS CARTRIDGE_SHA_C10_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C10_R1 
+PASS CARTRIDGE_ID_C10_R1 
+PASS CARTRIDGE_SHA_C10_R1 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C10_R2 
+PASS CARTRIDGE_ID_C10_R2 
+PASS CARTRIDGE_SHA_C10_R2 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C10_R3 
+PASS CARTRIDGE_ID_C10_R3 
+PASS CARTRIDGE_SHA_C10_R3 
+PASS NATIVE_INIT_80_LAYERS 
+PASS FILE_SHA_C10_R3 
+PASS CARTRIDGE_ID_C10_R3 
+PASS CARTRIDGE_SHA_C10_R3 
+PASS NATIVE_INIT_80_LAYERS 
+EVIDENCE_AND_FALSIFICATION {"family": "C10", "hypothesis": "The LS-902 axis converter, revision R1, is stored in the moss chamber.", "evidence": [{"revision": "R2", "question": "Where is the LS-902 axis converter, revision R2, stored?", "raw": "The LS-902 axis converter, revision R2, is stored in the quartz annex.", "routing": {"selected": "C10_R2", "top3": ["C10_R2", "C10_R3", "C10_R1"], "score": 0.75886273, "margin": 0.00349897}, "routing_correct": true, "correct_fact": true, "R1_leak": false}, {"revision": "R3", "question": "Where is the LS-902 axis converter, revision R3, stored?", "raw": "The LS-902 axis converter, revision R3, is stored in the south pavilion.", "routing": {"selected": "C10_R3", "top3": ["C10_R3", "C10_R2", "C10_R1"], "score": 0.75861239, "margin": 0.00296223}, "routing_correct": true, "correct_fact": true, "R1_leak": false}], "challenge": "Is this claim supported by the available document memory: \"The LS-902 axis converter at revision R2 is stored in moss chamber\"? Answer SUPPORTED, CONTRADICTED, or UNKNOWN, then explain briefly.", "physical_decisions": {"R1": "UNKNOWN. The provided information specifies the storage location for LS-902 revision R1, but does not mention the storage location for revision R2. Therefore, there is insufficient information to determine if the claim is supported or contradicted.", "R2": "CONTRADICTED. The document specifies that the official storage location for asset LS-902 revision R2 is the quartz annex, not the moss chamber.", "R3": "UNKNOWN. The provided information specifies the storage location for asset LS-902 at revision R3, but it does not provide any information about the storage location for revision R2. Therefore, there is insufficient evidence to support or contradict the"}, "no_memory_decision": "UNKNOWN\n\nThe provided document memory does not contain any information about an LS-902 axis converter, its revision, or its storage location. Therefore, there is not enough information to determine whether the claim is supported or contradicted.", "missing_question": "Where is the LS-902 axis converter, revision R9, stored?", "missing_raw": "UNKNOWN. The provided information only specifies the storage location for revision R3 of LS-902, not for revision R9.", "missing_route": {"selected": "C10_R3", "top3": ["C10_R3", "C10_R2", "C10_R1"], "score": 0.75455588, "margin": 0.00096089}, "missing_unknown": true, "R2_decision_contradicted": true, "R2_decision_supported": false, "R2_decision_unknown": false}
+PASS FILE_SHA_C10_R1 
+PASS CARTRIDGE_ID_C10_R1 
+PASS CARTRIDGE_SHA_C10_R1 
+PASS NATIVE_INIT_80_LAYERS 
+OPEN_SET {"question": "Where is the ZZ-000 optical transceiver, revision R1, stored?", "reason": "absent_code", "route": {"selected": "C10_R1", "top3": ["C10_R1", "C10_R2", "C08_R1"], "score": 0.70003903, "margin": 0.0022766}, "raw": "UNKNOWN. The provided information only specifies the storage location for asset LS-902 revision R1, which is an axis converter, not the ZZ-000 optical transceiver.", "explicit_unknown": true}
+PASS FILE_SHA_C01_R2 
+PASS CARTRIDGE_ID_C01_R2 
+PASS CARTRIDGE_SHA_C01_R2 
+PASS NATIVE_INIT_80_LAYERS 
+OPEN_SET {"question": "Where is the AX-731 coolant regulator, revision R9, stored?", "reason": "absent_revision", "route": {"selected": "C01_R2", "top3": ["C01_R2", "C01_R3", "C01_R1"], "score": 0.75402129, "margin": 0.00074857}, "raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of the AX-731 coolant regulator, not for revision R9.", "explicit_unknown": true}
+PASS FILE_SHA_C02_R2 
+PASS CARTRIDGE_ID_C02_R2 
+PASS CARTRIDGE_SHA_C02_R2 
+PASS NATIVE_INIT_80_LAYERS 
+OPEN_SET {"question": "Where is the BT-962 torque controller, revision R4, stored?", "reason": "absent_revision", "route": {"selected": "C02_R2", "top3": ["C02_R2", "C02_R3", "C02_R1"], "score": 0.75444871, "margin": 0.00054604}, "raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of the BT-962 torque controller, not for revision R4.", "explicit_unknown": true}
+PASS FILE_SHA_C01_R3 
+PASS CARTRIDGE_ID_C01_R3 
+PASS CARTRIDGE_SHA_C01_R3 
+PASS NATIVE_INIT_80_LAYERS 
+OPEN_SET {"question": "Where is the PX-000 calibration cube, revision R3, stored?", "reason": "absent_code", "route": {"selected": "C01_R3", "top3": ["C01_R3", "C01_R2", "C10_R3"], "score": 0.71265036, "margin": 0.00218427}, "raw": "UNKNOWN. The provided information does not mention the storage location for the PX-000 calibration cube, revision R3.", "explicit_unknown": true}
+PASS FILE_SHA_C03_R2 
+PASS CARTRIDGE_ID_C03_R2 
+PASS CARTRIDGE_SHA_C03_R2 
+PASS NATIVE_INIT_80_LAYERS 
+OPEN_SET {"question": "Where is the DN-348 servo monitor, revision R0, stored?", "reason": "absent_revision", "route": {"selected": "C03_R2", "top3": ["C03_R2", "C03_R1", "C03_R3"], "score": 0.75477743, "margin": 5.859e-05}, "raw": "UNKNOWN. The provided information only specifies the storage location for DN-348 revision R2, not for revision R0.", "explicit_unknown": true}
+PASS FILE_SHA_C05_R2 
+PASS CARTRIDGE_ID_C05_R2 
+PASS CARTRIDGE_SHA_C05_R2 
+PASS NATIVE_INIT_80_LAYERS 
+OPEN_SET {"question": "Where is the FK-276 spindle driver, revision R8, stored?", "reason": "absent_revision", "route": {"selected": "C05_R2", "top3": ["C05_R2", "C05_R3", "C05_R1"], "score": 0.75548202, "margin": 0.00075346}, "raw": "UNKNOWN. The provided information only specifies the storage location for revision R2 of FK-276, not for revision R8.", "explicit_unknown": true}
+HYPOTHESIS_SUMMARY {'r1_correct': 10, 'r1_routing': 10, 'n': 10}
+EVIDENCE_SUMMARY {'correct_revisions': 20, 'routed_revisions': 20, 'revision_tests': 20, 'r2_contradicted': 10, 'r2_supported': 0, 'r2_unknown': 0, 'missing_unknown': 10, 'missing_n': 10}
+PASS FILE_SHA_C01_R1 
+PASS CARTRIDGE_ID_C01_R1 
+PASS CARTRIDGE_SHA_C01_R1 
+REFERENCE_INIT_C01_R1
+DIRECT_INIT_C01_R1
+PASS NATIVE_INIT_80_LAYERS 
+PASS REFERENCE_DIRECT_80_LAYER_EXACT {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+TEST724_RESULT COMPLETE_HYPOTHESIS_FALSIFICATION_MEASURED
+SUMMARY {'hypothesis': {'r1_correct': 10, 'r1_routing': 10, 'n': 10}, 'evidence': {'correct_revisions': 20, 'routed_revisions': 20, 'revision_tests': 20, 'r2_contradicted': 10, 'r2_supported': 0, 'r2_unknown': 0, 'missing_unknown': 10, 'missing_n': 10}, 'open_set_unknown': 6, 'open_set_n': 6}
+RESULT_JSON /content/AKBASCORE_TEST724/TEST724_results.json MANIFEST /content/AKBASCORE_TEST724/TEST724_manifest.json LOG /content/AKBASCORE_TEST724/TEST724.log
