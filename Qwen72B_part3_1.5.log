@@ -1,0 +1,413 @@
+# ===== PART 3/3 — paste directly after PART 2 in the same cell =====
+# =====================================================================================================================
+# PART 3 / 3 — Gradio interface: ONE button (RUN). The interface opens in REPLAY MODE with the recorded TEST730
+#              experiment; RUN executes every live stage automatically and fills all tabs as results arrive.
+#              The interface displays records and measurements; it never edits or invents an answer or a value.
+# =====================================================================================================================
+LINEAGE=[("Research Record I — Qwen2.5-7B","https://doi.org/10.5281/zenodo.23381336"),
+         ("Research Record II — Mistral-7B, Silicon Hippocampus v1.4","https://doi.org/10.5281/zenodo.23418927"),
+         ("Research Record III — Qwen2.5-72B, Direct Internal-State Injection","https://doi.org/10.5281/zenodo.23434686")]
+def esc(x):return html.escape(str(x))
+def card(title,body,kind="info"):return f'<div class="kz card {kind}"><div class="h">{esc(title)}</div><div class="small">{body}</div></div>'
+def chip(cid):c=COL.get(cid,NEU);return f'<span class="chip" style="color:#fff;background:{c};border-color:{c}">{esc(cid)}</span>'
+def ok_mark(v):return "<b style='color:#08785B'>PASS</b>" if v else ("<b style='color:#B91C1C'>FAIL</b>" if v is False else "<span style='opacity:.6'>—</span>")
+def tbl(rows,head=None,mono_cols=()):
+    h="".join(f"<th>{esc(x)}</th>" for x in head) if head else ""
+    b="".join("<tr>"+"".join(f"<td class='{'mono' if i in mono_cols else ''}'>{v if isinstance(v,Markup) else esc(v)}</td>" for i,v in enumerate(r))+"</tr>" for r in rows)
+    return f"<table class='tbl'>{('<tr>'+h+'</tr>') if h else ''}{b}</table>"
+class Markup(str):pass
+def pre(text,maxh=420):return f"<div class='ans' style='max-height:{maxh}px'>{esc(text)}</div>"
+def details(summary,inner,open_=False):return f"<details{' open' if open_ else ''}><summary>{summary}</summary>{inner}</details>"
+
+CSS="""
+:root{--kz-on:#08785B;--kz-fg:#111827;--kz-card:#ffffff;--kz-bd:#d1d5db;--kz-a:#2455D6;--kz-err:#b91c1c;--kz-warn:#b45309;--kz-m:#7626D9}
+.dark{--kz-on:#34d399;--kz-fg:#f3f4f6;--kz-card:#111827;--kz-bd:#4b5563;--kz-a:#93c5fd;--kz-err:#f87171;--kz-warn:#fbbf24;--kz-m:#c4b5fd}
+html,body{overflow-x:hidden!important}
+.gradio-container{width:100%!important;max-width:1180px!important;margin:0 auto!important;padding-left:10px!important;padding-right:10px!important;box-sizing:border-box!important}
+.gradio-container *{box-sizing:border-box}
+.kz{color:var(--kz-fg)!important;max-width:100%;overflow-wrap:anywhere;line-height:1.45}
+.kz *{color:inherit}
+.hero{background:#0b1220;border-radius:6px;padding:18px 18px 14px;margin:4px 0 8px}
+.hero,.hero *{color:#f9fafb!important}
+.rec{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;opacity:.85;border:1px solid rgba(255,255,255,.35);display:inline-block;padding:2px 8px;border-radius:3px}
+.brand{font-size:clamp(22px,6vw,34px);font-weight:800;letter-spacing:.6px;line-height:1.1;margin-top:10px}
+.title{font-size:clamp(14px,3.8vw,18px);font-weight:600;margin-top:6px;color:#ddd6fe!important}
+.by{font-size:13px;margin-top:10px;opacity:.9}
+.tiles{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tile{border:1px solid rgba(255,255,255,.3);border-radius:4px;padding:6px 9px;min-width:120px;flex:1}
+.tile b{font-size:18px;display:block}
+.tile span{font-size:11.5px;opacity:.85}
+.card{background:var(--kz-card);border:1px solid var(--kz-bd);border-left:4px solid var(--kz-bd);border-radius:4px;padding:10px 12px;margin:6px 0}
+.card.on{border-left-color:var(--kz-on)}.card.err{border-left-color:var(--kz-err)}.card.warn{border-left-color:var(--kz-warn)}.card.info{border-left-color:var(--kz-a)}.card.m{border-left-color:var(--kz-m)}
+.card .h{font-weight:700;font-size:15px;margin-bottom:4px}
+.small{font-size:13.5px}
+.mono,.kz code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.3px}
+.chip{display:inline-block;border:1px solid;border-radius:3px;padding:0 6px;font-size:12px;font-weight:700;white-space:nowrap}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl td,.tbl th{border-bottom:1px solid var(--kz-bd);padding:5px 4px;vertical-align:top;text-align:left}
+.tbl th{font-size:12px;opacity:.75}
+.stg{font-size:13.5px;margin:2px 0}.stg.done{color:var(--kz-on)!important}.stg.run{color:var(--kz-a)!important;font-weight:700}.stg.wait{opacity:.55}.stg.fail{color:var(--kz-err)!important;font-weight:700}.stg.skip{color:var(--kz-warn)!important}
+.stg .nt{font-size:12px;opacity:.85;margin-left:22px;display:block}
+.ans{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.6px;border:1px solid var(--kz-bd);border-radius:4px;padding:6px 8px;margin:3px 0;overflow:auto}
+.mode{font-weight:800;letter-spacing:.5px;font-size:14px}
+details{margin:4px 0}summary{cursor:pointer;font-weight:600}
+#kz_run button,#kz_run{font-size:clamp(17px,4.6vw,21px)!important;font-weight:800!important;min-height:58px!important;letter-spacing:1px}
+@media (max-width:640px){.tbl .hide-m{display:none}}
+"""
+def hero_html():
+    s=REC.get("summary") or {}
+    tiles=[("3","real CC BY 4.0 articles"),("4","physical cartridges"),(f"{REC['body_tokens']['MASTER']:,}","MASTER tokens"),("6/6","responses generated"),("80/80","layer parity (record)"),
+           ("NOT YET","independently graded")]
+    return (f'<div class="kz hero"><span class="rec">Live research demonstration · frozen Qwen2.5-72B-Instruct · NF4 · BF16 · CUT3 · A100 80 GB</span>'
+            f'<div class="brand">{esc(APP_NAME)}</div><div class="title">{esc(APP_SUB)}</div>'
+            f'<div class="by">TEST730 · three real 2026 publications → three physical source cartridges → model readouts → textual synthesis → MASTER cartridge → six sealed questions. '
+            f'Recorded result <b>{esc(REC["result"])}</b> · panel SHA-256 <span class="mono">{esc(REC["panel_sha256"][:16])}…</span></div>'
+            '<div class="tiles">'+"".join(f'<div class="tile"><b>{esc(a)}</b><span>{esc(b)}</span></div>' for a,b in tiles)+'</div>'
+            f'<div class="by"><b>{esc(AUTHOR)}</b> · {esc(ORG)} · {esc(PLACE)} · {esc(LICENSE_NAME)} · {esc(COPYRIGHT)} · <a href="{REPO}" target="_blank" rel="noopener">{esc(REPO)}</a></div></div>')
+def mode_html():
+    st=STATE;run=st.get("running");m=st["mode"]
+    if SIM:kind,t="err","SIMULATION STACK — code test of the author, NOT an experimental result"
+    elif run:kind,t="info",f"RUN IN PROGRESS — stage {list(STAGES).index(st['current'])+1 if st.get('current') else '…'}/{len(STAGES)}: {STAGES.get(st.get('current'),'')}"
+    elif st.get("finished") and m=="LIVE" and st.get("master_memory") is not None and all(v["status"]=="done" for v in st["stages"].values()):kind,t="on","LIVE MODE — RUN completed on the GPU · the MASTER memory is mounted · LIVE QUERY tab answers new questions"
+    elif st.get("finished") and m=="LIVE":kind,t="err",f"{run_verdict()} — failed or skipped stages are not shown as results; the reason of each is in the stage list and the log"
+    elif st.get("finished"):kind,t="warn","REPLAY MODE — RUN completed without a GPU: recorded TEST730 results + CPU verification only"
+    else:kind,t="info","NOT STARTED — only the recorded TEST730 results are shown (no GPU used yet). Press RUN: Qwen2.5-72B is loaded on the GPU, the cartridges are verified or forged, and every stage runs live."
+    f=", ".join(f"{c} {(ART.get(c) or {}).get('status','—').replace('_',' ').lower()}" for c in CARTS)
+    miss=all((ART.get(c) or {}).get("status")=="MISSING" for c in CARTS) and not st.get("running") and not st.get("finished")
+    f+=(" → RUN will forge them with the unchanged 730.py commit() on the GPU" if miss else "")
+    return card(t,f"TEST730 files in this runtime: {esc(f)}<br>Recorded results are documentation of the completed TEST730 run; everything measured in this session is labelled <b>LIVE</b>. "
+                "New questions are never counted as part of the sealed six-question panel.",kind)
+def stages_html():
+    out=[];n=len(STAGES);done=0
+    for i,(k,title) in enumerate(STAGES.items(),1):
+        s=STATE["stages"][k];stt=s["status"];mk={"done":"✓","run":"▶","fail":"✗","skip":"–","wait":"○"}[stt]
+        if stt in("done","skip","fail"):done+=1
+        tm=f" · {s['seconds']:.0f} s" if s.get("seconds") is not None else ""
+        out.append(f"<div class='stg {stt}'>{mk} {i}/{n} · {esc(title)}{tm}"+(f"<span class='nt'>{esc(s['note'])}</span>" if s.get("note") else "")+"</div>")
+    pc=100*done/n
+    bar=f'<div style="margin-top:6px;background:#e5e7eb;height:10px;border-radius:2px"><div style="width:{pc:.0f}%;height:10px;background:#7626D9;border-radius:2px"></div></div>'
+    head=(f"RUN {len(RUNS_DONE) or ''} · {run_verdict()} · "+"Stages"+(f" · started {STATE['started'][11:19]} UTC" if STATE.get("started") else " · not started")+(f" · finished {STATE['finished'][11:19]} UTC" if STATE.get("finished") else ""))
+    return card(head,"".join(out)+bar,"m")
+def console_text():
+    with _LOG_LOCK:return "\n".join(list(CONSOLE)[-160:])
+
+def overview_html():
+    rc=lambda n:_rec_check(n);lv=lambda n:_live_check(n)
+    steps=[("Three articles were given","3 real 2026 articles (CC BY 4.0) from Europe PMC; excerpts sealed by SHA-256",rc("THREE_DISTINCT_SOURCES"),(LIVE.get("sources") and all(v.get("excerpt_equal") for v in LIVE["sources"].values())) or None),
+           ("Each became a physical neural memory","P01, P02, P03 forged with native CUT3: H3 + L0–L3 K/V on the SSD",rc("THREE_PHYSICAL_SOURCES"),
+            (all((ART.get(c) or {}).get("equal_record") for c in SRC_IDS) if STATE["stages"]["CARTRIDGES"]["status"]=="done" else None)),
+           ("The model read each memory","each source mounted alone; one general reading prompt → a reflection (model text)",all(rc(f"SOURCE_REFLECTION_NONEMPTY_{c}") for c in SRC_IDS),None),
+           ("The model wrote a new synthesis",f"from the three reflections as text: {REC['synthesis_chars']:,} characters (no tensor fusion)",rc("SYNTHESIS_NONEMPTY"),None),
+           ("The synthesis became a new MASTER memory",f"MASTER cartridge {REC['body_tokens']['MASTER']:,} tokens, commit SHA-256 {REC['commits']['MASTER']['sha256'][:12]}…",rc("FOUR_PHYSICAL_CARTRIDGES"),
+            ((ART.get("MASTER") or {}).get("equal_record") if STATE["stages"]["CARTRIDGES"]["status"]=="done" else None)),
+           ("The source memories were preserved","P01–P03 stay on the SSD while only MASTER is active",rc("ALL_PHYSICAL_SOURCES_PRESERVED"),lv("ALL_PHYSICAL_CARTRIDGES_PRESERVED")),
+           ("Six sealed questions went to MASTER","3 human-level + 3 advanced; panel sealed before any source or model access",rc("SEALED_QUESTIONS_UNCHANGED"),ENGINE_INFO.get("panel_rederived_sha256")==REC["panel_sha256"]),
+           ("The model answered all six","6/6 responses generated · independent correctness NOT YET GRADED",(REC.get("summary") or {}).get("answered_nonempty")==6,
+            (all(v["identical_to_record"] for v in LIVE["repro"].values()) if LIVE.get("repro") else None))]
+    def lv8(i,l):
+        if i==8 and l is False:return "<b style='color:#B45309'>DIFFERS</b>"
+        return ok_mark(l)
+    rows=[(Markup(f"<b>{i}. {esc(a)}</b><br><span class='small' style='opacity:.85'>{esc(b)}</span>"),Markup(ok_mark(r)),Markup(lv8(i,l))) for i,(a,b,r,l) in enumerate(steps,1)]
+    note=("<br><span class='small'>“This session” for step 8 = live reproduction of H1 and A1: PASS = byte-identical to the record; DIFFERS = the live answer is not byte-identical "
+          "(the recorded answers remain the official TEST730 answers; see SIX-QUESTION DEMO).</span>" if LIVE.get("repro") else "")
+    sc=card("Scope of the evidence","Verified: physical neural memory persistence · model-generated textual synthesis · MASTER creation and reuse · frozen-weight operation. "
+            "Not yet independently established: zero-prompt autonomous learning (TEST730 uses general programmed prompts) · hallucination elimination · superhuman reasoning (no human baseline) · "
+            "semantic correctness of the six responses (not graded).","warn")
+    lin=card("Research lineage (published records — not results of this experiment)","<br>".join(f"{esc(t)} · <a href='{u}' target='_blank' rel='noopener'>{esc(u)}</a>" for t,u in LINEAGE)+
+             f"<br>This experiment: TEST730 — <a href='{URL_730}' target='_blank' rel='noopener'>730.py</a> · <a href='{URL_730LOG}' target='_blank' rel='noopener'>730.log</a> · unpublished, no DOI","info")
+    return card("What happened — for every viewer",tbl(rows,["step","TEST730 record","this session"])+note,"m")+sc+lin
+def sources_html():
+    out=[]
+    for c in SRC_IDS:
+        s=REC["sources"][c];L=(LIVE.get("sources") or {}).get(c) or {};at=L.get("attribution") or {}
+        rows=[("title",s["title"]),("PMCID",s["pmcid"]),("licence",Markup(f"<a href='{s['license']}' target='_blank' rel='noopener'>CC BY 4.0</a> · {esc(s['license'])}")),
+              ("resolved (730.py)",s["resolved_url"]),("published",s["published"]),("excerpt",f"{s['excerpt_chars']:,} characters · SHA-256 {s['excerpt_sha256']}"),
+              ("full XML SHA-256 (record)",s.get("full_html_sha256")),("body tokens / cartridge",f"{REC['body_tokens'][c]:,} tokens · commit SHA-256 {REC['commits'][c]['sha256']}")]
+        if c in REC["rejections"]:rows.append(("replacement",f"originally planned {s.get('original_url_rejected') or s['url']} was rejected: {REC['rejections'][c]} → disclosed Europe PMC replacement"))
+        if L:
+            rows+= [("re-read now",Markup(("✓ excerpt byte-identical to the record" if L.get("excerpt_equal") else "✗ "+esc(L.get("error") or "excerpt differs from the record"))+
+                     f" · full XML {'identical' if L.get('full_xml_equal') else 'changed upstream / not compared'} · {esc(L.get('utc',''))}")),
+                    ("authors (XML now)",", ".join(at.get("authors") or []) or "—"),("journal · DOI",f"{at.get('journal') or '—'} · {at.get('doi') or '—'}")]
+        else:rows.append(("re-read now","not run in this session (RUN performs it)"))
+        out.append(card(f"{c} · {TOPIC[c]} (editorial label)",tbl(rows,mono_cols=(1,)),"info"))
+    return "".join(out)+card("Licence and attribution","All three articles are published under CC BY 4.0. The excerpts were used unmodified as cartridge text (sealed_sources/P0x.txt in the TEST730 run). © the respective authors.","on")
+def cart_html():
+    rows=[]
+    for c in CARTS:
+        a=ART.get(c) or {};f=a.get("facts") or {}
+        rows.append((Markup(chip(c)),(a.get("status") or "—").replace("_"," ").lower(),a.get("origin") or "—",fmt_b(a.get("bytes")),
+                     Markup(f"record {esc(REC['commits'][c]['sha256'])}<br>now&nbsp;&nbsp;&nbsp; {esc(a.get('sha256_now') or '—')}"),
+                     (f"n={f['n']:,} (P {f['p']} + {f['body_tokens']:,}) · H3 {tuple(f['h_shape'])} · K/V 4×{tuple(f['k_shape'])}" if f else "—"),a.get("tensor_check") or "—"))
+    t=tbl(rows,["cartridge","status","origin","file","SHA-256","tensors (measured)","verification"],mono_cols=(4,5))
+    root=ORIG.get("root");mc=ORIG.get("manifest_checks") or {};rc=ORIG.get("results_checks") or {}
+    info=(f"TEST730 run directory in this runtime: <span class='mono'>{esc(root or 'not found')}</span><br>"+
+          (f"manifest: question SHA {ok_mark(mc.get('question_sha'))} · engine locks {ok_mark(mc.get('engine_locks'))} · commits = log {esc(mc.get('commits_equal_log'))}<br>" if mc else "manifest: not available<br>")+
+          (f"results.json: answers = log {esc(rc.get('answers_equal_log'))} · synthesis = log {ok_mark(rc.get('synthesis_equal_log'))} · baseline available {esc(rc.get('baseline_available'))}<br>" if rc else "results.json: not available<br>")+
+          "The TEST730 directory is only read. If a cartridge file is not present in this runtime (e.g. a new Colab VM), RUN re-forges it with the unchanged 730.py <code>commit()</code> from its "
+          "SHA-verified sealed text into a separate folder (<span class='mono'>"+esc(RECOVERY_DIR)+"</span>) — no text is generated, the MASTER text is the recorded synthesis — and compares the "
+          "new file SHA-256 with the TEST730 commit record. A different file hash is reported as such, never as identical.")
+    fp=LIVE.get("master_fast_path")
+    fpt=card("MASTER fast path (live)",tbl([(k,v) for k,v in fp.items() if k not in("gpu",)],mono_cols=(1,)),"on") if fp else card("MASTER fast path (live)","not run in this session","warn")
+    return card("Physical cartridges P01 · P02 · P03 · MASTER",t,"m")+card("Where the files come from",info,"info")+fpt
+def xray_html():
+    X=LIVE.get("xray") or {}
+    if not X:return card("Neural X-ray","Not measured in this session. The X-ray is a separate read-only stage of RUN on the GPU: each cartridge is mounted alone with the unchanged initialize_native and the norms "
+                         "of its real K/V tensors are read for all 80 layers. TEST730.log contains no X-ray tensors, so no heat map is drawn without this measurement.","warn")
+    rows=[]
+    for c in CARTS:
+        m=X.get(c)
+        if not m:rows.append((Markup(chip(c)),"not measured","","","",""));continue
+        k=np.array(m["k_layer_mean_body"]);v=np.array(m["v_layer_mean_body"])
+        rows.append((Markup(chip(c)),f"{m['rows']:,} rows · prefix {m['prefix_tokens']}",f"{k[:4].mean():.2f} / {k[4:].mean():.2f}",f"{v[:4].mean():.2f} / {v[4:].mean():.2f}",f"{m['seconds']} s",m["mounted"]))
+    return card("Neural X-ray — read-only measurement of the real K/V tensors (this session)",tbl(rows,["cartridge","memory","mean ‖K‖ L0–3 / L4–79","mean ‖V‖ L0–3 / L4–79","time","mounted"])+
+                f"<div class='small' style='margin-top:6px'>Method: {esc(next(iter(X.values()))['method'])}. Matrices: measurements/xray/XRAY_*.npz (80 × rows, float32).</div>","on")
+def synth_html():
+    rp=ENGINE_INFO.get("reading_prompt","");sp=ENGINE_INFO.get("synthesis_prompt_source") or ""
+    s=card("Programmed prompts of TEST730 (730.py, unchanged)",f"<b>Reading prompt</b> (identical for P01–P03):{pre(rp,120)}<b>Synthesis prompt</b> (730.py source code; the three reflections were inserted as text):{pre(sp,200)}"
+           "These are general instructions; no answer key, question of the sealed panel or preferred conclusion was given. TEST730 is therefore an orchestrated reading/synthesis pipeline, not zero-prompt autonomous learning.","info")
+    r="".join(details(f"{chip(c)} reflection — {len(REC['reflections'][c]):,} characters · SHA-256 {REC['reflection_sha256_log_text'][c][:16]}…",pre(REC["reflections"][c],520)) for c in SRC_IDS)
+    syn=details(f"MODEL SYNTHESIS — {REC['synthesis_chars']:,} characters · SHA-256 {REC['synthesis_sha256_log_text'][:16]}… · recorded text ends mid-sentence (768-token generation limit)",pre(REC["synthesis"],620),True)
+    mb=build_master_body([dict(id=c,reflection=REC["reflections"][c]) for c in SRC_IDS],REC["synthesis"])
+    mbt=(LIVE.get("recorded_synthesis_tokens"),)
+    comp=card("MASTER body (730.py master_body expression)",f"{len(mb):,} characters · SHA-256 {sha_text(mb)[:16]}… · recorded MASTER body: {REC['body_tokens']['MASTER']:,} tokens"
+              +("" if not ORIG.get("manifest") else " · manifest body SHA-256 "+esc(next((e.get('body_sha256','')[:16] for e in ORIG['manifest'].get('cartridges',[]) if e.get('id')=='MASTER'),'—'))+"…")
+              +details("show the MASTER body text",pre(mb,520)),"m")
+    return s+card("Three model readouts (recorded, verbatim)",r,"m")+card("The synthesis (recorded, verbatim)",syn,"m")+comp
+def six_html():
+    re_ok=ENGINE_INFO.get("panel_rederived_sha256")==REC["panel_sha256"]
+    head=(f"Panel SHA-256 (record) <span class='mono'>{esc(REC['panel_sha256'])}</span><br>re-derived in this session from 730.py QUESTION_SET: {ok_mark(re_ok)} · "
+          "<b>6/6 responses generated</b> · <b style='color:#B45309'>Independent correctness: NOT YET GRADED</b>")
+    out=[card("Six presealed academic questions — asked to MASTER alone (recorded TEST730 answers)",head,"m")]
+    base={b["id"]:b["answer"] for b in ((ORIG.get("results") or {}).get("no_memory_baseline") or [])}
+    for qid,q in REC["questions"].items():
+        inner=f"<div class='small'><b>{esc(q['question'])}</b><br>{q['seconds']} s · {esc(answer_status(qid))} · answer SHA-256 {esc(q['answer_sha256_log_text'][:16])}…</div>"+pre(q["answer"],460)
+        r=(LIVE.get("repro") or {}).get(qid)
+        if r:inner+=card(f"LIVE reproduction in this session — {'byte-identical to the record' if r['identical_to_record'] else 'differs after %d identical characters'%r['common_prefix_chars']}",
+                         f"{r['n_generated']} tokens · {r['seconds']} s · {r['tokens_per_second']} tok/s · SHA-256 {esc(r['sha256'][:16])}…"+("" if r["identical_to_record"] else pre(r["answer"],300)),"on" if r["identical_to_record"] else "warn")
+        if qid in base:inner+=details("no-memory baseline (TEST730 results.json)",pre(base[qid],300))
+        out.append(details(f"<b>{esc(qid)}</b> · {'human-level' if qid.startswith('H') else 'advanced'} · {esc(short(q['question'],110))}",inner,qid=="H1"))
+    if not base:out.append(card("No-memory baseline","The TEST730 no-memory baseline is stored only in TEST730_results.json, which is not available in this runtime (it is not printed in 730.log). Nothing is shown in its place.","warn"))
+    return "".join(out)
+def adv_html():
+    s=card("Model-generated hypotheses","A1–A3 are proposals generated by the model from the MASTER memory. They are not results established by P01–P03, and they have not been independently validated. "
+           "They show that the answers go beyond restating a text; no claim of novelty or superiority is made.","warn")
+    return s+"".join(card(f"{qid} · {short(REC['questions'][qid]['question'],120)}",f"{REC['questions'][qid]['seconds']} s · {esc(answer_status(qid))}"+pre(REC["questions"][qid]["answer"],560),"m") for qid in ("A1","A2","A3"))
+def perf_html():
+    rows=[(qid,q["seconds"],answer_status(qid)) for qid,q in REC["questions"].items()]
+    rec=card("Recorded TEST730 timings",tbl(rows,["question","seconds","status"])+f"<div class='small'>Fast path: one MASTER initialization {(REC.get('fast_path') or {}).get('init_seconds')} s (load + initialize). "
+             f"Model download {esc(REC['model_io'].get('fetch_time'))} · weights load {esc(REC['model_io'].get('load_time'))} (TEST730 record).</div>","info")
+    fp=LIVE.get("master_fast_path");md=LIVE.get("model") or {}
+    if not fp:return rec+card("Measured in this session","not measured (REPLAY MODE or RUN not finished)","warn")
+    rows=[("model load",("reused — already loaded in this kernel" if md.get("reused") else f"{md.get('total_seconds')} s")),("SSD read MASTER.pt",f"{fp['ssd_read_seconds']} s · {fp['ssd_read_mb_s']} MB/s"),("verified load",f"{fp['verified_load_seconds']} s"),
+          ("host→GPU",f"{fp['h2d_seconds']} s"),("initialize_native",f"{fp['initialize_native_seconds']} s"),("prefix seals",f"{fp['prefix_seal_seconds']} s")]
+    if LIVE.get("parity"):rows.append(("parity",f"{LIVE['parity']['seconds']} s"))
+    for qid,r in (LIVE.get("repro") or {}).items():rows.append((f"answer {qid}",f"{r['n_generated']} tok · {r['seconds']} s · {r['tokens_per_second']} tok/s"))
+    for qid,v in (LIVE.get("newq") or {}).items():
+        for lab in ("master","no_memory"):rows.append((f"{qid} {lab}",f"{v[lab]['n_generated']} tok · {v[lab]['seconds']} s · {v[lab]['tokens_per_second']} tok/s"))
+    return rec+card("Measured on the GPU in this session",tbl(rows,mono_cols=(1,)),"on")
+def verif_html():
+    rows=[(c["name"],Markup(ok_mark(c["passed"])),"" if c["detail"] is None else str(c["detail"])[:120]) for c in REC["checks"]]
+    lrows=[(c["name"],Markup(ok_mark(c["passed"])),c.get("stage") or "","" if c["detail"] is None else str(c["detail"])[:120]) for c in LIVE_CHECKS]
+    src=[(n,v["git_blob"],v["sha256"],f"{v['bytes']:,}") for n,v in SOURCES.items()]
+    return (card(f"Live checks of this session — {sum(c['passed'] for c in LIVE_CHECKS)}/{len(LIVE_CHECKS)} PASS",tbl(lrows,["check","result","stage","detail"],mono_cols=(3,)) if lrows else "none yet (press RUN)","on" if lrows and all(c["passed"] for c in LIVE_CHECKS) else "warn")+
+            card("Locked sources (git blob verified at start-up)",tbl(src,["file","git blob","SHA-256","bytes"],mono_cols=(1,2)),"info")+
+            details(f"<b>Recorded TEST730 checks — {REC['checks_passed']}/{REC['checks_total']} PASS · result {esc(REC['result'])}</b>",tbl(rows,["check","result","detail"],mono_cols=(2,))))
+def live_query_info():
+    ok=STATE.get("master_memory") is not None
+    return card("LIVE QUERY MODE — ask the mounted MASTER memory",("<b>Ready.</b> Type a question and press <b>Enter</b>. The real model answers from the MASTER cartridge (greedy, up to 768 new tokens, ≈ 7–8 tokens/s on an A100). "
+                "Your questions are recorded in LIVE_QUERY_ANSWERS.jsonl and are <b>not</b> part of the sealed TEST730 panel." if ok else
+                "Not available yet: the MASTER memory is mounted by RUN on an A100 80 GB GPU. In REPLAY MODE no live answer can be produced, and no recorded answer is shown instead."),"on" if ok else "warn")
+def live_answers_html():
+    q=LIVE.get("user_queries") or []
+    if not q:return ""
+    return "".join(card(f"LIVE · {short(r['question'],120)}",f"{r['n_generated']} tokens · {r['seconds']} s · {r['tokens_per_second']} tok/s · {esc(r['utc'][11:19])} UTC"+
+                        (" · stopped at the 768-token limit" if r["ceiling_reached"] else "")+pre(r["answer"],460),"on") for r in reversed(q[-10:]))
+
+TABS=["OVERVIEW","REAL SOURCES","PHYSICAL CARTRIDGES","NEURAL X-RAY","MASTER SYNTHESIS","SIX-QUESTION DEMO","ADVANCED REASONING","PERFORMANCE","VERIFICATION","SCIENTIFIC FIGURES","LIVE QUERY"]
+TAB_HTML={"OVERVIEW":overview_html,"REAL SOURCES":sources_html,"PHYSICAL CARTRIDGES":cart_html,"NEURAL X-RAY":xray_html,"MASTER SYNTHESIS":synth_html,"SIX-QUESTION DEMO":six_html,
+          "ADVANCED REASONING":adv_html,"PERFORMANCE":perf_html,"VERIFICATION":verif_html}
+def tab_gallery(tab):
+    keys=[k for k,m in FIGURES.items() if (m["tab"]==tab or tab=="SCIENTIFIC FIGURES") and k in FIG_FILES]
+    return [(FIG_FILES[k]["jpg"],f"Fig. {FIGURES[k]['n']} — {FIGURES[k]['title']} · {FIG_FILES[k]['badge']}") for k in keys]
+def figs_status_html():
+    n=len(FIG_FILES);tot=len(FIGURES)
+    if not n and not FIG_ERRORS:return card(f"Scientific figures of this RUN — 0/{tot}","The figures are produced by RUN (stage 11). All figures appear here, one below the other, as soon as they are written.","info")
+    def st(k):
+        f=FIG_FILES.get(k)
+        if not f:return "NOT GENERATED: "+str(FIG_ERRORS.get(k,"pending"))
+        q=f.get("layout_qc") or {};j=f.get("jpeg_qc") or {}
+        return f"{f['badge']} · {f['pixels'][0]}×{f['pixels'][1]} JPEG 300 dpi · layout QC {'PASS' if q.get('passed') else 'FAIL'} · JPEG QC {'PASS' if j.get('passed') else 'FAIL'}"
+    rows="".join(f"<div class='small'>{'✓' if k in FIG_FILES and (FIG_FILES[k].get('layout_qc') or {}).get('passed') else '✗'} Fig. {esc(m['n'])} — {esc(m['title'])} · <b>{esc(st(k))}</b></div>" for k,m in FIGURES.items())
+    ok=n==tot and all((v.get("layout_qc") or {}).get("passed") for v in FIG_FILES.values())
+    return card(f"Scientific figures of this RUN ({SESSION_ID}) — {n}/{tot} written",rows,"on" if ok else "warn")
+def file_url(p):return ("/gradio_api/file=" if _GR_MAJOR>=5 else "/file=")+quote(str(p),safe="/")
+def file_url_alt(p):return ("/file=" if _GR_MAJOR>=5 else "/gradio_api/file=")+quote(str(p),safe="/")
+def figs_main_html():
+    """all figures of THIS run, in order Fig. 1 … Fig. 12, Fig. S1 — each with its own direct JPEG download link below it"""
+    if not FIG_FILES:return card("Figures","No figure of this RUN yet. They appear here, in order, when stage 11 has written them (figures of an earlier RUN are never shown).","info")
+    keys=[k for k in FIGURES if k in FIG_FILES];out=[]
+    bulk=("<a href='#' onclick=\"var l=document.querySelectorAll('a.kz-dl');for(var i=0;i<l.length;i++){(function(a,d){setTimeout(function(){a.click()},d)})(l[i],i*900)};return false;\">"
+          f"<b>⬇ Download all {len(keys)} figures (JPEG), one after another</b></a>")
+    out.append(card("Direct downloads — no ZIP",f"{bulk}<br><span class='small'>The browser downloads the {len(keys)} JPEG files in order (Fig. 1 → Fig. 12 → Fig. S1). Some browsers ask once to "
+                    "“allow multiple downloads”; if the browser blocks it, use the link under each figure or the JPEG file list below — every file there downloads with one tap.</span>","on"))
+    for k in keys:
+        f=FIG_FILES[k];m=FIGURES[k];u=file_url(f["jpg"]);ua=file_url_alt(f["jpg"]);nm=Path(f["jpg"]).name;qc=(f.get("layout_qc") or {}).get("passed")
+        out.append(f"<div class='kz card {'on' if qc else 'err'}'><div class='h'>Fig. {esc(m['n'])} — {esc(m['title'])} · {esc(f['badge'])}"+("" if qc else " · LAYOUT QC FAIL")+"</div>"
+                   f"<img src='{u}' data-alt='{ua}' onerror=\"if(!this.dataset.done){{this.dataset.done=1;this.src=this.dataset.alt;var a=this.parentNode.querySelector('a.kz-dl');if(a)a.href=this.dataset.alt;}}\" "
+                   f"style='width:100%;height:auto;border:1px solid #d1d5db' alt='Fig. {esc(m['n'])}'>"
+                   f"<div class='small' style='margin-top:4px'><a class='kz-dl' href='{u}' download='{esc(nm)}'><b>⬇ Download Fig. {esc(m['n'])} (JPEG, {f['pixels'][0]}×{f['pixels'][1]}, 300 dpi)</b></a> · "
+                   f"<span class='mono'>{esc(nm)} · SHA-256 {esc(f['sha256_jpg'][:16])}…</span></div></div>")
+    return "".join(out)
+def jpg_files():return [FIG_FILES[k]["jpg"] for k in FIGURES if k in FIG_FILES]
+def _safe(fn):
+    try:return fn()
+    except Exception as ex:return card("Display error",f"<code>{esc(type(ex).__name__)}: {esc(ex)}</code> — the records are unaffected","err")
+def all_files():return [p for _,p in download_items()]
+def snapshot(last):
+    """the full output tuple; html parts are rebuilt only when the state version changed, galleries only when figures changed"""
+    v=STATE["version"];fv=STATE["fig_version"];out=[_safe(mode_html),_safe(stages_html),console_text()]
+    if last.get("v")!=v:
+        for t in TAB_HTML:out.append(_safe(TAB_HTML[t]))
+        last["v"]=v
+    else:out+=[gr.update() for _ in TAB_HTML]
+    if last.get("fv")!=fv:
+        out+=[tab_gallery(t) for t in TABS[:-1]];out+=[all_files() or None,jpg_files() or None,_safe(figs_status_html),_safe(figs_main_html)];last["fv"]=fv
+    else:out+=[gr.update() for _ in TABS[:-1]]+[gr.update(),gr.update(),gr.update(),gr.update()]
+    out+=[_safe(live_query_info)]
+    return tuple(out)
+def run_handler():
+    start_run();last={};time.sleep(.5)
+    while True:
+        t=RUN_THREAD["t"];alive=t is not None and t.is_alive()
+        yield snapshot(last)
+        if not alive:break
+        time.sleep(2.0)
+    STATE["fig_version"]+=1                     # final refresh: every record file of this RUN is listed
+    yield snapshot(last)
+def page_load():return snapshot({})
+def query_handler(question):
+    q=(question or "").strip()
+    if not q:yield card("Type a question first","","warn"),live_answers_html();return
+    if STATE.get("running"):yield card("RUN in progress","The live query becomes available when RUN has finished (the GPU is in use by the pipeline).","warn"),live_answers_html();return
+    if not GPU_LOCK.acquire(blocking=False):yield card("Busy","Another question is being answered on the GPU. Please wait and press Enter again.","warn"),live_answers_html();return
+    try:
+        yield card("Answering live …",f"MASTER memory mounted · question: {esc(short(q,200))} · up to 768 new tokens","info"),live_answers_html()
+        r=live_query(q[:3000])
+        try:package_session()
+        except Exception as ex:slog("PACKAGE_FAILED",str(ex))
+        yield card("Answer of the frozen Qwen2.5-72B from the MASTER memory — raw output, unedited, not graded",f"{r['n_generated']} tokens · {r['seconds']} s","on"),live_answers_html()
+    except Exception as ex:
+        slog("LIVE_QUERY_ERROR",f"{type(ex).__name__}: {ex}",traceback=traceback.format_exc()[-2000:])
+        yield card("Live query not possible",f"<code>{esc(type(ex).__name__)}: {esc(ex)}</code>","err"),live_answers_html()
+    finally:GPU_LOCK.release()
+
+def _tb(**kw):
+    for extra in (([{"buttons":["copy"]}] if _GR_MAJOR>=6 else [])+[{"show_copy_button":True},{}]):
+        try:return gr.Textbox(**extra,**kw)
+        except TypeError:continue
+def _gallery(**kw):
+    try:return gr.Gallery(columns=1,height="auto",object_fit="contain",preview=False,**kw)
+    except TypeError:return gr.Gallery(**kw)
+def _on(ev,fn,inputs,outputs,limit):
+    try:return ev(fn,inputs=inputs,outputs=outputs,concurrency_limit=limit)
+    except TypeError:return ev(fn,inputs=inputs,outputs=outputs)
+def build_ui():
+    blocks=gr.Blocks(title=APP_SHORT) if _GR_MAJOR>=6 else gr.Blocks(css=CSS,title=APP_SHORT)
+    with blocks as demo:
+        gr.HTML(hero_html());mode=gr.HTML(mode_html())
+        run_b=gr.Button("RUN",variant="primary",elem_id="kz_run")
+        stg=gr.HTML(stages_html())
+        fstat=gr.HTML(_safe(figs_status_html))
+        main_figs=gr.HTML(_safe(figs_main_html))
+        jpgs=gr.File(label="The JPEG figures of this RUN, in order (Fig. 1 … Fig. 12, Fig. S1) — each file downloads with one tap",value=(jpg_files() or None),file_count="multiple",interactive=False)
+        con=_tb(lines=10,max_lines=18,label="Live log of this RUN — written while the engine works (time · stage · event · measured value); also SESSION.log / SESSION_EVENTS.jsonl / ENGINE.log",value=console_text(),interactive=False)
+        files=gr.File(label="Real-time logs, live measurements, SHA-256 verification record, cartridge record, X-ray summary, provenance table, manifest — direct downloads (no ZIP)",value=(all_files() or None),file_count="multiple",interactive=False)
+        htmls={};gals={}
+        with gr.Tabs():
+            for t in TABS:
+                with gr.Tab(t):
+                    if t in TAB_HTML:htmls[t]=gr.HTML(_safe(TAB_HTML[t]))
+                    if t=="SCIENTIFIC FIGURES":gr.HTML(card("Scientific figures","All 13 figures of this RUN in high resolution (JPEG, 300 dpi). Each figure carries its badge and a provenance entry (PROVENANCE_TABLE.csv). Direct downloads are on the main page.","info"))
+                    if t=="LIVE QUERY":
+                        lq_info=gr.HTML(live_query_info());qbox=gr.Textbox(label="Your question to the MASTER memory — press Enter (not part of the sealed panel)",lines=2,max_lines=6)
+                        lq_status=gr.HTML("");lq_hist=gr.HTML(live_answers_html())
+                    else:gals[t]=_gallery(label=f"{t} · figures",value=tab_gallery(t))
+        gr.HTML(f'<div class="kz small" style="opacity:.8;margin:10px 0 18px">{esc(AUTHOR)} · {esc(ORG)} · {esc(LICENSE_NAME)} · {esc(COPYRIGHT)} · '
+                f'<a href="{URL_730}" target="_blank" rel="noopener">730.py</a> · <a href="{URL_730LOG}" target="_blank" rel="noopener">730.log</a> · <a href="{URL_709}" target="_blank" rel="noopener">709.py</a> · '
+                f'<a href="{URL_716}" target="_blank" rel="noopener">716.py</a> · <a href="{URL_LICENSE}" target="_blank" rel="noopener">LICENSE</a> · articles CC BY 4.0 © their authors · '
+                'Qwen2.5-72B-Instruct and third-party libraries remain under their own licences.</div>')
+        outs=[mode,stg,con]+[htmls[t] for t in TAB_HTML]+[gals[t] for t in TABS[:-1]]+[files,jpgs,fstat,main_figs,lq_info]
+        _on(run_b.click,run_handler,None,outs,8)
+        _on(qbox.submit,query_handler,[qbox],[lq_status,lq_hist],1)
+        try:demo.load(page_load,inputs=None,outputs=outs)
+        except Exception:pass
+    try:demo.queue(default_concurrency_limit=8)
+    except TypeError:
+        try:demo.queue(concurrency_count=8)
+        except TypeError:demo.queue()
+    return demo
+
+_GR_MAJOR=int(re.match(r"\d+",gr.__version__).group())
+GRADIO_LINK=DEMO_ROOT/"GRADIO_LINK.txt"
+demo=None
+def launch_interface():
+    """(re)opens the interface of THIS session (public link first, Colab port window as fallback); nothing is recomputed.
+    If the link stops working, run  launch_interface()  in a new cell."""
+    global demo
+    try:demo.close()
+    except Exception:pass
+    demo=build_ui()
+    kw=dict(share=True,allowed_paths=[str(DEMO_ROOT)],show_error=True,inline=False,prevent_thread_lock=True,debug=False)
+    if _GR_MAJOR>=6:kw["css"]=CSS
+    err=None
+    for _ in range(6):
+        try:demo.launch(**kw);break
+        except TypeError as ex:
+            bad=next((k for k in ("css","prevent_thread_lock","allowed_paths","debug") if k in str(ex) and k in kw),None)
+            if bad is None:raise
+            kw.pop(bad)
+        except Exception as ex:
+            if not kw.get("share"):raise
+            err=f"{type(ex).__name__}: {ex}";kw["share"]=False;slog("LAUNCH_NOTE","public share link not available — opening the local interface",error=err)
+    share=getattr(demo,"share_url",None);local=getattr(demo,"local_url",None);window=None
+    if not share:
+        try:
+            from google.colab import output as _co
+            port=int(re.search(r":(\d+)",str(local)).group(1));_co.serve_kernel_port_as_window(port,anchor_text="▶ Open the AKBASCORE PROMETHEUS TEST730 interface (Colab window)");window=f"Colab port window, port {port}"
+        except Exception as ex:window=f"not available ({type(ex).__name__})"
+    dump_json(GRADIO_LINK.with_suffix(".json"),dict(utc=utc_now(),session=SESSION_ID,share_url=share,local_url=local,colab_window=window,share_error=err))
+    GRADIO_LINK.write_text(f"{share or local}\n",encoding="utf-8")
+    banner(f"INTERFACE OPEN · {share or ('local only: '+str(local))}\n  public link : {share or '— (tunnel not available; use the Colab window link above)'}\n  local       : {local}\n"
+           f"  Press RUN in the interface — everything else runs automatically. If the link stops working: run  launch_interface()  in a new cell.","#")
+    slog("LAUNCH","interface open",share_url=share,local_url=local,colab_window=window);return share or local
+def keep_cell_running():
+    """keeps this Colab cell RUNNING while the interface is in use (as in the earlier demonstrations): the RUN progress, the
+    model download / loading bars and every stage are printed below; stop the cell (■) to close the interface"""
+    files_note=("TEST730 cartridge files found in this runtime: "+", ".join(f"{c} {ART[c]['status'].lower()}" for c in CARTS)) if any(ART[c]["status"]!="MISSING" for c in CARTS) else \
+               ("TEST730 cartridge files are NOT in this runtime (new Colab VM). RUN will load Qwen2.5-72B on the GPU and FORGE P01, P02, P03 and MASTER with the unchanged "
+                "730.py commit() from their SHA-verified sealed texts, then verify them by SHA-256 before any live use.")
+    banner("THE CELL STAYS RUNNING — the interface is live. Press RUN in the interface; all stages are printed here and shown in the interface.\n  "+files_note+
+           "\n  Stop this cell (■) only when you have finished; the session files stay in "+str(SESSION_DIR),"#")
+    try:demo.block_thread()
+    except (KeyboardInterrupt,AttributeError):
+        try:
+            while True:time.sleep(5)
+        except KeyboardInterrupt:pass
+    finally:
+        slog("CELL_STOPPED","the cell was stopped by the user")
+
+# ---------------------------------------------------------------------------------------------------------------------
+# START-UP: locked sources, the TEST730 record, the engine definitions, the TEST730 files — then the interface opens
+# ---------------------------------------------------------------------------------------------------------------------
+try:startup()
+except Exception as _ex:
+    _m=str(_ex)
+    _hint=("A locked source changed on GitHub — the program stops instead of running unverified code." if "LOCKED SOURCE" in _m else
+           "The TEST730 record could not be parsed as expected — nothing is shown instead of it." if "PARSER" in _m or "PANEL" in _m else
+           "Network error while downloading a locked source from GitHub: run the cell again." if any(x in _m for x in ("URLError","timed out","HTTP Error","Connection","Name or service")) else
+           "See the traceback above; nothing was changed in the engine or in the TEST730 files.")
+    banner(f"START-UP FAILED — {type(_ex).__name__}: {_m}\nWHAT TO DO: {_hint}\nRecords of this attempt: {SESSION_DIR}","!")
+    raise
+launch_interface()
+if os.environ.get("P730_NO_BLOCK")!="1":keep_cell_running()
+# ===== END OF PART 3/3 =====
