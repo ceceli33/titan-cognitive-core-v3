@@ -1,0 +1,834 @@
+# ===== PART 2/3 — paste directly after PART 1 in the same cell =====
+# =====================================================================================================================
+# PART 2 / 3 — 13 scientific figures (Figs. 1–12 + S1), measurements, provenance table, SHA-256 manifest,
+#              and the single RUN pipeline. Every number drawn comes from the TEST730 record (730.log, locked) or from a
+#              measurement of THIS session; a figure whose measurement is missing says so instead of showing a value.
+# =====================================================================================================================
+plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,"axes.linewidth":.9,"axes.edgecolor":NEU,"axes.labelcolor":INK,"xtick.color":NEU,"ytick.color":NEU,
+                     "xtick.labelsize":9.5,"ytick.labelsize":9.5,"axes.labelsize":10.5,"axes.titlesize":11.5,"axes.titleweight":"bold","axes.titlelocation":"left",
+                     "legend.fontsize":9.5,"legend.frameon":False})
+FW,FH=13.333,7.5;OUT_DPI=300;MONO="DejaVu Sans Mono"
+FIGURES=OrderedDict([
+    ("F1",dict(n=1,title="Three Real Publications, One Physical MASTER Memory",tab="OVERVIEW")),
+    ("F2",dict(n=2,title="Three Verified 2026 Publications",tab="REAL SOURCES")),
+    ("F3",dict(n=3,title="Physical Neural Memory Injection Protocol",tab="PHYSICAL CARTRIDGES")),
+    ("F4",dict(n=4,title="Silicon Hippocampus: Persistent SSD and Live GPU Memory",tab="PHYSICAL CARTRIDGES")),
+    ("F5",dict(n=5,title="Physical Source Memory X-Ray",tab="NEURAL X-RAY")),
+    ("F6",dict(n=6,title="Source Cartridges vs Synthesized MASTER",tab="NEURAL X-RAY")),
+    ("F7",dict(n=7,title="From Three Academic Perspectives to a New Synthesis",tab="MASTER SYNTHESIS")),
+    ("F8",dict(n=8,title="MASTER Cartridge: Write, Seal, Reload",tab="PHYSICAL CARTRIDGES")),
+    ("F9",dict(n=9,title="Six Presealed Academic Questions",tab="SIX-QUESTION DEMO")),
+    ("F10",dict(n=10,title="From Stored Synthesis to New Scientific Hypotheses",tab="ADVANCED REASONING")),
+    ("F11",dict(n=11,title="MASTER Memory Fast-Path: Measured Performance",tab="PERFORMANCE")),
+    ("F12",dict(n=12,title="Integrity, Reproducibility and Experimental Boundaries",tab="VERIFICATION")),
+    ("S1",dict(n="S1",title="Live MASTER Queries in This Session",tab="SIX-QUESTION DEMO"))])
+FIG_FILES={};FIG_ERRORS={};PROVENANCE={}
+BADGE_COL={"SCHEMATIC":NEU,"LIVE MEASUREMENT":OK_COL,"LIVE GPU MEASUREMENT":OK_COL,"SOURCE VERIFIED":"#2455D6","SEALED MEMORY":COL["MASTER"],
+           "OBSERVATIONAL":AMBER,"VERIFICATION RECORD":NEU,"MEASUREMENT REQUIRED":RED}
+def mt(s):return str(s).replace("$",r"\$")
+def wrap(s,n,lines=None):
+    w=textwrap.wrap(" ".join(str(s or "").split()),n,break_long_words=True,break_on_hyphens=False) or [""]
+    if lines and len(w)>lines:w=w[:lines];w[-1]=w[-1].rstrip(" ,;:.")+"…"
+    return "\n".join(w)
+def _bb(fig,t):return t.get_window_extent(fig.canvas.get_renderer()).transformed(fig.transFigure.inverted())
+def fit(fig,t,xmax=.965,minsize=6.0):
+    while t.get_fontsize()>minsize and _bb(fig,t).x1>xmax:t.set_fontsize(t.get_fontsize()-.25)
+    return t
+def T(fig,x,y,s,size=10,color=INK,weight="normal",ha="left",va="center",xmax=None,minsize=6.0,mono=False,**kw):
+    t=fig.text(x,y,mt(s),fontsize=size,color=color,weight=weight,ha=ha,va=va,family=(MONO if mono else "DejaVu Sans"),**kw)
+    if xmax is not None:fit(fig,t,xmax,minsize)
+    return t
+def box(fig,x,y,w,h,ec=NEU,fc="white",lw=1.3,ls="-",r=.006,z=1):
+    p=FancyBboxPatch((x,y),w,h,boxstyle=f"round,pad=0,rounding_size={r}",transform=fig.transFigure,fc=fc,ec=ec,lw=lw,ls=ls,zorder=z);p.set_gid("qc-box");fig.add_artist(p);return p
+def rect(fig,x,y,w,h,fc,ec="none",lw=0,z=1):
+    p=Rectangle((x,y),w,h,transform=fig.transFigure,fc=fc,ec=ec,lw=lw,zorder=z);fig.add_artist(p);return p
+def arrow(fig,x0,y0,x1,y1,col=NEU,lw=1.5,ms=13,cs="arc3",ls="-"):
+    a=FancyArrowPatch((x0,y0),(x1,y1),transform=fig.transFigure,arrowstyle="-|>",mutation_scale=ms,lw=lw,color=col,connectionstyle=cs,linestyle=ls,zorder=3);fig.add_artist(a);return a
+def hline(fig,x0,x1,y,col=RULE,lw=.8):fig.add_artist(Line2D([x0,x1],[y,y],transform=fig.transFigure,color=col,lw=lw))
+def k_sha(s,n=12):return (str(s)[:n]+"…") if s else "—"
+def fmt_b(b):
+    if b is None:return "—"
+    return f"{b/1e9:.2f} GB" if b>=1e9 else (f"{b/1e6:.1f} MB" if b>=1e6 else f"{b/1e3:.1f} kB")
+def is_live(key):return bool(LIVE.get(key))
+def _date():return datetime.now().astimezone().strftime("%Y-%m-%d")
+def fig_base(key,subtitle,badge):
+    meta=FIGURES[key];fig=plt.figure(figsize=(FW,FH),dpi=100,facecolor=BG)
+    bcol=BADGE_COL.get(badge,NEU)
+    b=fig.text(.965,.952,badge,fontsize=10,weight="bold",color=bcol,va="center",ha="right",bbox=dict(boxstyle="square,pad=0.35",fc="white",ec=bcol,lw=1.2))
+    bx0=_bb(fig,b).x0-.012
+    lab=f"Fig. {meta['n']} —"
+    T(fig,.035,.952,f"{lab} {meta['title']}",size=18,weight="bold",xmax=bx0,minsize=12)
+    T(fig,.035,.912,subtitle,size=11,color=INK2,xmax=.965,minsize=7.5)
+    hline(fig,.035,.965,.888,INK2,.8)
+    if SIM:
+        fig.text(.5,.47,"SIMULATION — NOT EXPERIMENTAL DATA",fontsize=40,color=RED,alpha=.12,rotation=18,ha="center",va="center",weight="bold",gid="qc-ignore",zorder=100)
+    return fig
+def fig_footer(fig,key,note,sha_ref=None):
+    meta=FIGURES[key];hline(fig,.035,.965,.072,RULE,.7)
+    T(fig,.035,.050,note,size=8.8,color=INK2,xmax=.965,minsize=6.2)
+    num=f"Fig. {meta['n']}/12" if isinstance(meta["n"],int) else f"Fig. {meta['n']} (live supplement to Figs. 1–12)"
+    ref=sha_ref or f"730.log git blob {LOCKS['730.log'][:10]}"
+    T(fig,.035,.022,f"{APP_NAME} · {EXPERIMENT} · code {CODE_VERSION} · {_date()} · {ref} · session {SESSION_ID}"+(" · SIMULATION" if SIM else "")+f" · {num}",
+      size=7.8,color=MUTED,xmax=.965,minsize=5.5,mono=True)
+
+class LayoutQCError(RuntimeError):pass
+def _hide_offview_ticks(fig):
+    for ax in fig.axes:
+        for axis,(lo,hi) in ((ax.xaxis,sorted(ax.get_xlim())),(ax.yaxis,sorted(ax.get_ylim()))):
+            eps=(hi-lo)*1e-6
+            for tk in axis.get_major_ticks()+axis.get_minor_ticks():
+                loc=tk.get_loc()
+                if loc is None or loc<lo-eps or loc>hi+eps:tk.label1.set_visible(False);tk.label2.set_visible(False)
+def _texts(fig):
+    import matplotlib.text as mtext
+    return [t for t in fig.findobj(mtext.Text) if t.get_visible() and str(t.get_text()).strip() and t.get_gid()!="qc-ignore" and t.get_alpha()!=0]
+def layout_qc(fig,max_rounds=10,tol=1.5):
+    """every visible text must lie inside the page and no two texts may overlap; overlapping texts are shrunk and re-checked"""
+    W,H=fig.bbox.width,fig.bbox.height;rep=dict(rounds=0,fixed=0)
+    for rnd in range(max_rounds+1):
+        fig.canvas.draw();_hide_offview_ticks(fig);r=fig.canvas.get_renderer();ts=_texts(fig);bbs=[]
+        for t in ts:
+            b=t.get_window_extent(r);bbs.append((b.x0+tol,b.y0+tol,b.x1-tol,b.y1-tol))
+        out=[i for i,b in enumerate(bbs) if b[0]<-1 or b[1]<-1 or b[2]>W+1 or b[3]>H+1];ov=[]
+        # a text that touches a box must lie completely inside it (no text crosses a box border)
+        boxes=[a.get_window_extent(r) for a in fig.artists if a.get_gid()=="qc-box"];cross=[]
+        for i,b in enumerate(bbs):
+            for B in boxes:
+                inter=b[0]<B.x1 and B.x0<b[2] and b[1]<B.y1 and B.y0<b[3]
+                inside=b[0]>=B.x0-1 and b[2]<=B.x1+1 and b[1]>=B.y0-1 and b[3]<=B.y1+1
+                if inter and not inside:cross.append(i);break
+        out=sorted(set(out)|set(cross))
+        for i in range(len(bbs)):
+            a=bbs[i]
+            for j in range(i+1,len(bbs)):
+                c=bbs[j]
+                if a[0]<c[2] and c[0]<a[2] and a[1]<c[3] and c[1]<a[3]:ov.append((i,j))
+        rep.update(rounds=rnd,texts=len(ts),outside=[str(ts[i].get_text())[:60] for i in out],min_font=round(min([t.get_fontsize() for t in ts] or [0]),2),overlaps=[(str(ts[i].get_text())[:40],str(ts[j].get_text())[:40]) for i,j in ov][:20])
+        if not out and not ov:rep["passed"]=True;return rep
+        if rnd==max_rounds:break
+        for i in set(out)|{x for p in ov for x in p}:
+            t=ts[i]
+            if t.get_fontsize()>5.5:t.set_fontsize(t.get_fontsize()-.5);rep["fixed"]+=1
+    rep["passed"]=False;return rep
+def jpeg_qc(path,min_w=3900,min_h=2190):
+    with Image.open(path) as im:
+        im.load();w,h=im.size;fmt=im.format;arr=np.asarray(im.convert("L").resize((400,int(400*h/w))),dtype=np.float32)
+    ok=(fmt=="JPEG" and w>=min_w and h>=min_h and float(arr.std())>8.0 and float((arr<200).mean())>0.01)
+    return dict(format=fmt,pixels=[w,h],luma_std=round(float(arr.std()),2),ink_share=round(float((arr<200).mean()),4),passed=bool(ok))
+def save_fig(fig,key,slug,badge,sources):
+    qc=layout_qc(fig);meta=FIGURES[key];num=meta["n"]
+    stem=("SIMULATION_" if SIM else "")+(f"FIG{num:02d}_" if isinstance(num,int) else f"FIG{num}_")+slug
+    paths={"jpg":FIG_DIR/(stem+".jpg")}          # delivery format: high-quality JPEG, 300 dpi (rendered losslessly in memory first)
+    buf=io.BytesIO();fig.savefig(buf,format="png",dpi=OUT_DPI,facecolor="white");plt.close(fig)
+    with Image.open(io.BytesIO(buf.getvalue())) as im:im.convert("RGB").save(paths["jpg"],"JPEG",quality=95,optimize=True,subsampling=0,dpi=(OUT_DPI,OUT_DPI))
+    jq=jpeg_qc(paths["jpg"])
+    rec=dict(key=key,figure=num,title=meta["title"],badge=badge,tab=meta["tab"],**{x:str(p) for x,p in paths.items()},pixels=jq["pixels"],
+             sha256_jpg=sha_file(paths["jpg"]),layout_qc=dict(passed=qc["passed"],texts=qc["texts"],rounds=qc["rounds"],font_reductions=qc["fixed"],overlaps=qc.get("overlaps")[:5]),
+             jpeg_qc=jq,data_sources=sources,utc=utc_now(),simulation=SIM)
+    PROVENANCE[key]=dict(figure=num,title=meta["title"],badge=badge,data_sources=sources)
+    flog_fig(f"{key} {stem} {jq['pixels']} qc={qc['passed']} sha256_jpg={rec['sha256_jpg'][:16]}")
+    slog("FIGURE_WRITTEN",f"Fig. {num} {stem}.jpg",pixels=jq["pixels"],dpi=OUT_DPI,layout_qc=qc["passed"],font_reductions=qc["fixed"],sha256_jpg=rec["sha256_jpg"],badge=badge);return rec
+def flog_fig(m):
+    with _LOG_LOCK:
+        with (SESSION_DIR/"FIGURE_GENERATION.log").open("a",encoding="utf-8") as f:f.write(f"{utc_now()} {m}\n")
+def fig_missing(key,slug,what,why):
+    fig=fig_base(key,"This figure requires a live measurement that is not available in this session — no value is drawn in its place","MEASUREMENT REQUIRED")
+    box(fig,.18,.30,.64,.46,ec=RED,lw=1.6,ls="--")
+    T(fig,.5,.66,"MEASUREMENT REQUIRED",size=24,weight="bold",color=RED,ha="center")
+    T(fig,.5,.57,wrap(what,95),size=12,color=INK,ha="center",linespacing=1.4)
+    T(fig,.5,.43,wrap(why,105),size=10.5,color=INK2,ha="center",linespacing=1.4)
+    fig_footer(fig,key,"Placeholder by design: TEST730 figures are drawn only from real records or from read-only measurements of this session (instruction: no representative values).")
+    return save_fig(fig,key,slug+"_MEASUREMENT_REQUIRED","MEASUREMENT REQUIRED",["(none — measurement missing)"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# markdown structure of the recorded model texts (quotes are cut, never reworded)
+# ---------------------------------------------------------------------------------------------------------------------
+def unmd(s):return re.sub(r"\s+"," ",re.sub(r"\*\*|__|`","",str(s))).strip(" -")
+def md_blocks(text):
+    out=OrderedDict();cur="_top";out[cur]=[]
+    for ln in str(text).split("\n"):
+        m=re.match(r"^\s*#{2,6}\s+(.*)$",ln)
+        if m:cur=unmd(m.group(1)).rstrip(":");out.setdefault(cur,[]);continue
+        out[cur].append(ln)
+    return out
+def md_items(lines):
+    items=[]
+    for ln in lines:
+        m=re.match(r"^\s*(\d+)\.\s+\*\*(.+?)\*\*\s*:?\s*(.*)$",ln)
+        b=re.match(r"^\s*-\s+\*\*(.+?)\*\*\s*:?\s*(.*)$",ln)
+        if m:items.append(dict(head=unmd(m.group(2)).rstrip(":"),text=unmd(m.group(3)),sub=[]))
+        elif b and items:items[-1]["sub"].append((unmd(b.group(1)).rstrip(":"),unmd(b.group(2)),unmd(ln)))
+        elif b:items.append(dict(head=unmd(b.group(1)).rstrip(":"),text=unmd(b.group(2)),sub=[],full=unmd(ln)))
+        elif items and ln.strip():items[-1]["sub"].append(("",unmd(ln),unmd(ln)))
+    for it in items:
+        blob=it["head"]+" "+it["text"]+" "+" ".join(f for a,b,f in it["sub"])
+        it["refs"]=sorted(set(re.findall(r"\bP0[123]\b",blob)))
+        it["first"]=it["text"] or next((f for a,b,f in it["sub"] if f),"")
+    return items
+def block(text,name):
+    bl=md_blocks(text);n=name.lower()
+    for k,v in bl.items():
+        if k.lower()==n:return v
+    return next((v for k,v in bl.items() if k.lower().startswith(n) and any(x.strip() for x in v)),[])
+def first_par(lines):
+    s=" ".join(x.strip() for x in lines if x.strip() and not x.strip().startswith(("-","1.")))
+    return unmd(s)
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 1 — overview
+# ---------------------------------------------------------------------------------------------------------------------
+def _rec_check(name):
+    c=next((x for x in REC["checks"] if x["name"]==name),None);return None if c is None else c["passed"]
+def _live_check(name):
+    c=[x for x in LIVE_CHECKS if x["name"]==name];return None if not c else all(x["passed"] for x in c)
+def fig1():
+    k="F1";fig=fig_base(k,"SOURCE CARTRIDGES → MODEL READOUTS → TEXTUAL SYNTHESIS → MASTER CARTRIDGE → QUESTIONS · frozen Qwen2.5-72B-Instruct · CUT3 physical memory","SCHEMATIC")
+    cols=[(.035,"SOURCE CARTRIDGES"),(.245,"FROZEN MODEL"),(.415,"MODEL READOUTS"),(.585,"TEXTUAL SYNTHESIS"),(.745,"MASTER CARTRIDGE"),(.885,"QUESTIONS")]
+    for x,l in cols:T(fig,x,.855,l,size=9.5,weight="bold",color=MUTED)
+    ys=[.665,.475,.285];S=REC["sources"]
+    for cid,y in zip(SRC_IDS,ys):
+        c=COL[cid];box(fig,.035,y,.18,.15,ec=c,lw=1.4);rect(fig,.035,y,.006,.15,c,z=2)
+        T(fig,.048,y+.128,f"{cid} · {S[cid]['pmcid']}",size=9.5,weight="bold",color=c,xmax=.21)
+        T(fig,.048,y+.083,wrap(S[cid]["title"],38,2),size=7.8,color=INK,linespacing=1.15,xmax=.212)
+        T(fig,.048,y+.037,"CC BY 4.0 · Europe PMC full text · 2026",size=7.4,color=MUTED,xmax=.212)
+        T(fig,.048,y+.014,f"{cid}.pt · {REC['body_tokens'][cid]:,} tokens · H3 + L0–L3 K/V",size=7.4,color=c,weight="bold",xmax=.212)
+        arrow(fig,.217,y+.075,.243,.475+.075,col=c,lw=1.3)
+    box(fig,.245,.30,.145,.50,ec=NEU,fc=PANEL,lw=1.5)
+    T(fig,.3175,.745,"Qwen2.5-72B",size=12,weight="bold",ha="center");T(fig,.3175,.715,"Instruct · frozen",size=9.5,ha="center",color=INK2)
+    for i,s in enumerate(["80 layers · hidden 8192","64 Q / 8 KV heads","NF4 4-bit · BF16","CUT3 = layer-3 boundary","weights never changed"]):T(fig,.3175,.66-i*.045,s,size=8.6,ha="center",color=INK2)
+    T(fig,.3175,.405,"each source mounted\nALONE: initialize_native\n→ one general reading\nprompt → reflection",size=7.8,ha="center",color=MUTED,linespacing=1.2)
+    for cid,y in zip(SRC_IDS,ys):
+        c=COL[cid];arrow(fig,.392,.55,.413,y+.075,col=c,lw=1.2)
+        box(fig,.415,y+.02,.15,.11,ec=c,lw=1.2,ls="--")
+        T(fig,.425,y+.105,f"Reflection {cid}",size=9,weight="bold",color=c);T(fig,.425,y+.072,f"{len(REC['reflections'][cid]):,} characters · model text",size=7.6,color=INK2,xmax=.562)
+        T(fig,.425,y+.042,f"SHA-256 {k_sha(REC['reflection_sha256_log_text'][cid],10)}",size=7.2,color=MUTED,mono=True,xmax=.562)
+        arrow(fig,.567,y+.075,.583,.55,col=c,lw=1.1)
+    box(fig,.585,.40,.135,.30,ec=NEU,lw=1.5)
+    T(fig,.6525,.665,"SYNTHESIS",size=11,weight="bold",ha="center");T(fig,.6525,.635,"model-generated text",size=8.4,ha="center",color=INK2)
+    T(fig,.6525,.585,f"{REC['synthesis_chars']:,} characters",size=9,ha="center");T(fig,.6525,.55,f"SHA-256 {k_sha(REC['synthesis_sha256_log_text'],10)}",size=7.4,ha="center",color=MUTED,mono=True)
+    T(fig,.6525,.48,"input: the three\nreflections as TEXT\n(no tensor fusion)",size=7.8,ha="center",color=MUTED,linespacing=1.2)
+    arrow(fig,.722,.55,.743,.55,col=COL["MASTER"],lw=1.6)
+    box(fig,.745,.40,.12,.30,ec=COL["MASTER"],lw=2.0);rect(fig,.745,.664,.12,.036,COL["MASTER"],z=2)
+    T(fig,.805,.682,"MASTER.pt",size=10.5,weight="bold",color="white",ha="center")
+    T(fig,.805,.625,f"{REC['body_tokens']['MASTER']:,} tokens",size=9.5,ha="center",weight="bold");T(fig,.805,.592,"3 reflections + synthesis",size=7.8,ha="center",color=INK2)
+    T(fig,.805,.555,"native CUT3 forge",size=7.8,ha="center",color=INK2);T(fig,.805,.515,"commit SHA-256",size=7.4,ha="center",color=MUTED)
+    T(fig,.805,.49,k_sha(REC["commits"]["MASTER"]["sha256"],16),size=7.4,ha="center",color=COL["MASTER"],mono=True)
+    T(fig,.805,.435,"sources preserved\non the SSD",size=7.6,ha="center",color=OK_COL,linespacing=1.2)
+    for j,(t1,t2,ids) in enumerate((("3 Human-Level","Questions",("H1","H2","H3")),("3 Advanced","Reasoning Questions",("A1","A2","A3")))):
+        y=.585-j*.20;box(fig,.885,y,.08,.15,ec=COL["MASTER"],lw=1.2);arrow(fig,.867,.55,.883,y+.075,col=COL["MASTER"],lw=1.2)
+        for tt,yy in ((t1,y+.115),(t2,y+.088)):
+            t_=T(fig,.925,yy,tt,size=7.8,weight="bold",ha="center")
+            while t_.get_fontsize()>5.5 and (_bb(fig,t_).x0<.887 or _bb(fig,t_).x1>.963):t_.set_fontsize(t_.get_fontsize()-.25)
+        T(fig,.925,y+.045," · ".join(ids),size=8,ha="center",color=COL["MASTER"],mono=True,xmax=.962)
+    tiles=[("3","source cartridges",_rec_check("THREE_PHYSICAL_SOURCES")),("1","MASTER cartridge",_rec_check("FOUR_PHYSICAL_CARTRIDGES")),
+           ("6","generated responses",(REC["summary"] or {}).get("answered_nonempty")==6),("80/80","layer parity",_rec_check("MASTER_80_LAYER_PARITY")),
+           ("✓","frozen weights verified",_rec_check("WEIGHTS_SENTINEL_UNCHANGED"))]
+    cd=STATE["stages"]["CARTRIDGES"]["status"]=="done"
+    live={0:(all((ART.get(c) or {}).get("equal_record") for c in SRC_IDS) if cd else None),1:((ART.get("MASTER") or {}).get("equal_record") if cd else None),
+          2:((all(v["identical_to_record"] for v in LIVE["repro"].values())) if LIVE.get("repro") else None),
+          3:_live_check("MASTER_80_LAYER_PARITY"),4:_live_check("WEIGHTS_SENTINEL_UNCHANGED")}
+    for i,(big,lab,ok) in enumerate(tiles):
+        x=.035+i*.188;box(fig,x,.105,.175,.115,ec=OK_COL if ok else RED,lw=1.3)
+        T(fig,x+.012,.177,big,size=17,weight="bold",color=OK_COL if ok else RED);T(fig,x+.075,.183,lab,size=9,weight="bold",xmax=x+.17)
+        lv=live.get(i);T(fig,x+.075,.152,"TEST730 record: "+("PASS" if ok else "not recorded"),size=7.6,color=INK2,xmax=x+.17)
+        T(fig,x+.075,.127,"this session: "+(("file SHA = record" if i<2 else ("H1, A1 byte-identical" if i==2 else "PASS")) if lv else (("file SHA ≠ record" if i<2 else ("H1/A1 differ" if i==2 else "FAIL")) if lv is False else "—")),size=7.6,color=(OK_COL if lv else (RED if lv is False else MUTED)),xmax=x+.17)
+    T(fig,.035,.242,"Physical memory = H3 hidden state + K/V of layers 0–3 per cartridge (CUT3); layers 4–79 are rebuilt by the model at mount time. "
+      "The source cartridges are never fused as tensors: the MASTER was forged from model-written text.",size=8.4,color=INK2,xmax=.965)
+    fig_footer(fig,k,"Flow of the completed TEST730 run (recorded). Values: 730.log (locked). Tiles: recorded checks of TEST730 and, if RUN was pressed on an A100, the live checks of this session.")
+    return save_fig(fig,k,"THREE_SOURCES_ONE_MASTER","SCHEMATIC",["730.log (locked): SOURCE_LOCK, PHYSICAL_COMMIT, NONEMPTY_BODY_*, READING_REFLECTION, MODEL_SYNTHESIS, checks","VERIFICATION_RECORD.json (live checks)"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 2 — the three publications
+# ---------------------------------------------------------------------------------------------------------------------
+def fig2():
+    k="F2";lv=LIVE.get("sources") or {}
+    fig=fig_base(k,"Real 2026 articles, CC BY 4.0, full text from Europe PMC (article XML) · licence and year verified by 730.py on the article XML · excerpt locked by SHA-256","SOURCE VERIFIED")
+    for i,cid in enumerate(SRC_IDS):
+        s=REC["sources"][cid];c=COL[cid];x=.035+i*.315;w=.295;y0,y1=.205,.86
+        box(fig,x,y0,w,y1-y0,ec=c,lw=1.5);rect(fig,x,y1-.05,w,.05,c,z=2)
+        T(fig,x+.012,y1-.025,cid,size=13,weight="bold",color="white");T(fig,x+.06,y1-.025,TOPIC[cid]+" (editorial label)",size=8.6,color="white",xmax=x+w-.01)
+        T(fig,x+.012,y1-.105,wrap(s["title"],52,4),size=9.2,weight="bold",color=INK,va="center",linespacing=1.2,xmax=x+w-.008)
+        rows=[("PMCID",s["pmcid"]),("Licence","CC BY 4.0 · "+s["license"].replace("https://","")),("Retrieved","Europe PMC full-text XML (730.py)"),("Published",s["published"]),
+              ("Excerpt",f"{s['excerpt_chars']:,} characters (sealed_sources/{cid}.txt)"),("Excerpt SHA-256",s["excerpt_sha256"][:32]),("",s["excerpt_sha256"][32:]),
+              ("Body tokens",f"{REC['body_tokens'][cid]:,} (Qwen2.5 tokenizer)"),("Cartridge commit",REC["commits"][cid]["sha256"][:32]),("",REC["commits"][cid]["sha256"][32:])]
+        for j,(a,b) in enumerate(rows):
+            yy=y1-.205-j*.034
+            if a:T(fig,x+.012,yy,a,size=8,color=MUTED,weight="bold")
+            T(fig,x+.105,yy,b,size=7.9,color=INK,mono=("SHA" in a or a=="" or a=="Cartridge commit"),xmax=x+w-.008)
+        L=lv.get(cid) or {};yy=y0+.07
+        if L:
+            ok=L.get("excerpt_equal");T(fig,x+.012,yy+.03,("✓ re-read now: excerpt SHA-256 identical to the record" if ok else "✗ re-read now: "+short(L.get("error") or "excerpt differs from the record",60)),
+                                         size=8.2,weight="bold",color=OK_COL if ok else RED,xmax=x+w-.008)
+            at=L.get("attribution") or {};au=at.get("authors") or []
+            T(fig,x+.012,yy,("Authors: "+(", ".join(au[:3])+(" et al." if len(au)>3 else "")) if au else "Authors: see article")+(f" · {at.get('journal')}" if at.get("journal") else ""),size=7.5,color=INK2,xmax=x+w-.008)
+            if at.get("doi"):T(fig,x+.012,yy-.026,"DOI "+at["doi"],size=7.5,color=INK2,mono=True,xmax=x+w-.008)
+        else:T(fig,x+.012,yy+.015,"live re-read: not run in this session (REPLAY)",size=8,color=MUTED)
+    rj=REC["rejections"]
+    T(fig,.035,.155,wrap("Footnote — P01 and P03 are disclosed replacements: the originally planned articles ("+", ".join(f"{k}: {REC['sources'][k]['url']}" for k in rj)+") were rejected by 730.py "
+      f"({', '.join(sorted(set(v.split('(')[1].split(':')[0].strip(chr(39)) for v in rj.values())))}) and replaced by licence-verified Europe PMC full texts of the same topic, as logged "
+      "(SOURCE_PRIMARY_REJECTED → SOURCE_EXPLICIT_REPLACEMENT). P02 is the originally planned article.",185,3),size=8.2,color=INK2,linespacing=1.3)
+    fig_footer(fig,k,"Attribution: articles © their authors, licensed CC BY 4.0 (creativecommons.org/licenses/by/4.0/). Excerpts were used unmodified as cartridge text. Authors/DOI: read now from the article XML.")
+    return save_fig(fig,k,"THREE_VERIFIED_PUBLICATIONS","SOURCE VERIFIED",["730.log SOURCE_LOCK / SOURCE_PRIMARY_REJECTED / SOURCE_EXPLICIT_REPLACEMENT / NONEMPTY_BODY_* / PHYSICAL_COMMIT","LIVE_MEASUREMENTS.json sources (Europe PMC re-read)"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 3 — the CUT3 protocol with sizes measured from the cartridge files
+# ---------------------------------------------------------------------------------------------------------------------
+def fig3():
+    k="F3";fig=fig_base(k,"Native CUT3 path of 730.py: the cartridge stores the layer-3 output H3 and the K/V of layers 0–3; layers 4–79 are recomputed when the cartridge is mounted","SCHEMATIC")
+    steps=[("1  READ","source text → tokens\n(PREFIX + body)"),("2  FORGE","forward pass L0–L79\nH3 captured at CUT3\n(direct forward, no hook)"),
+           ("3  PERSIST","torch.save → SSD\nSHA-256 of file\nand of the tensors"),("4  INJECT + REBUILD","zero inputs · H3 placed at\nlayer-3 output · L4–L79\nrecomputed naturally"),
+           ("5  ANSWER","question appended to the\n80-layer K/V memory\ngreedy decoding")]
+    for i,(h,t) in enumerate(steps):
+        x=.035+i*.188;box(fig,x,.70,.172,.16,ec=NEU,fc=PANEL,lw=1.2)
+        T(fig,x+.012,.835,h,size=10.5,weight="bold",xmax=x+.168);T(fig,x+.012,.765,t,size=8.4,color=INK2,linespacing=1.25,xmax=x+.168)
+        if i<4:arrow(fig,x+.173,.78,x+.187,.78,col=NEU,lw=1.4,ms=11)
+    x0,x1=.06,.94;w=(x1-x0)/80
+    for L in range(80):rect(fig,x0+L*w+.0008,.585,w-.0016,.05,LOWER_COL if L<=3 else "#E5E7EB",z=2)
+    fig.add_artist(Line2D([x0+4*w,x0+4*w],[.57,.65],transform=fig.transFigure,color=COL["MASTER"],lw=2.4,zorder=4))
+    for L in (0,20,40,60,79):T(fig,x0+L*w+w/2,.565,f"L{L}",size=7.5,ha="center",color=MUTED)
+    T(fig,x0+4*w-.003,.565,"L3",size=7.5,ha="right",color=MUTED);T(fig,x0+4*w+.003,.565,"L4 →",size=7.5,ha="left",color=MUTED)
+    T(fig,x0+4*w+.004,.665,"CUT3 boundary — H3 = output of layer 3 (stored; injected here at mount time)",size=8.8,weight="bold",color=COL["MASTER"])
+    T(fig,x0,.665,"L0–L3",size=8.8,weight="bold",color=LOWER_COL)
+    T(fig,.06,.535,"stored in the cartridge: K/V of L0–L3 + H3",size=8.6,color=LOWER_COL,weight="bold")
+    T(fig,.50,.535,"NOT stored: L4–L79 K/V are rebuilt by the frozen model's natural forward computation (initialize_native)",size=8.6,color=INK2,xmax=.965)
+    hdr=["cartridge","rows n = P + body","H3 tensor","H3 bytes","L0–L3 K, V tensors (×4 layers)","L0–L3 bytes","file on SSD","full 80-layer K/V","stored/full"]
+    xs=[.035,.105,.215,.335,.425,.62,.70,.785,.905];y=.475
+    T(fig,.035,.495,"Measured from the cartridge files in this session (shapes and bytes read with torch.load; no value carried over from TEST709)",size=9,weight="bold",color=INK)
+    for x,h in zip(xs,hdr):T(fig,x,y-.025,h,size=7.8,weight="bold",color=MUTED)
+    hline(fig,.035,.965,y-.04,RULE)
+    for j,cid in enumerate(CARTS):
+        yy=y-.075-j*.072;a=ART.get(cid) or {};f=a.get("facts")
+        T(fig,.035,yy,cid,size=9.5,weight="bold",color=COL[cid])
+        if not f:T(fig,.105,yy,"cartridge file not present in this runtime — not measured"+(" (press RUN on an A100 to recover it from its sealed text)" if a.get("status")=="MISSING" else ""),size=8.4,color=RED);continue
+        vals=[f"{f['n']:,} = {f['p']} + {f['body_tokens']:,}",f"{tuple(f['h_shape'])} {f['h_dtype'].replace('torch.','')}",fmt_b(f["h_bytes"]),f"K {tuple(f['k_shape'])} · V {tuple(f['v_shape'])}",
+              fmt_b(f["lower_bytes"]),fmt_b(a.get("bytes")),fmt_b(f["full_80_layer_kv_bytes"]),f"{(f['h_bytes']+f['lower_bytes'])/f['full_80_layer_kv_bytes']*100:.1f} %"]
+        for x,v,nx in zip(xs[1:],vals,xs[2:]+[.965]):T(fig,x,yy,v,size=8.0,color=INK,mono=True,xmax=nx-.006)
+    fig_footer(fig,k,"Full 80-layer K/V = n × 80 layers × 8 KV heads × 128 × 2 (K,V) × 2 bytes (BF16) = n × 327,680 bytes. The cartridge keeps H3 + L0–L3 only; the remainder is recomputed from H3 at mount time.")
+    return save_fig(fig,k,"CUT3_INJECTION_PROTOCOL","SCHEMATIC",["730.py (native CUT3 functions, locked)","cartridge files P01/P02/P03/MASTER.pt (torch.load, this session)","LIVE_MEASUREMENTS.json cartridges.facts"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 4 — SSD and GPU
+# ---------------------------------------------------------------------------------------------------------------------
+def fig4():
+    k="F4";gs=LIVE.get("gpu_states") or [];live=bool(gs) and not SIM or (bool(gs) and SIM);badge="LIVE GPU MEASUREMENT" if gs else "VERIFICATION RECORD"
+    fig=fig_base(k,"Four physical cartridges persist on the SSD; the frozen model holds at most one mounted 80-layer memory per operation · GPU values are measured in this session or not shown",badge)
+    T(fig,.035,.855,"SSD — persistent physical memory",size=12,weight="bold")
+    for j,cid in enumerate(CARTS):
+        a=ART.get(cid) or {};y=.715-j*.145;c=COL[cid];box(fig,.035,y,.39,.125,ec=c,lw=1.4);rect(fig,.035,y,.007,.125,c,z=2)
+        T(fig,.05,y+.098,f"{cid}.pt",size=11,weight="bold",color=c);T(fig,.13,y+.098,(a.get("status") or "—").replace("_"," ").lower(),size=8.4,color=OK_COL if "VERIFIED" in str(a.get("status")) or "BIT_IDENTICAL" in str(a.get("status")) else (RED if a.get("status") in("MISSING","ORIGINAL_SHA_MISMATCH") else AMBER),weight="bold",xmax=.42)
+        T(fig,.05,y+.066,f"file {fmt_b(a.get('bytes'))} · {REC['body_tokens'][cid]:,} body tokens · role {REC['commits'][cid]['role']}",size=8.2,color=INK2,xmax=.42)
+        T(fig,.05,y+.040,"record  "+REC["commits"][cid]["sha256"],size=6.9,color=MUTED,mono=True,xmax=.42,minsize=5)
+        T(fig,.05,y+.016,"now     "+(a.get("sha256_now") or "— (file not present)"),size=6.9,color=(OK_COL if a.get("equal_record") else (AMBER if a.get("sha256_now") else MUTED)),mono=True,xmax=.42,minsize=5)
+    T(fig,.47,.855,"GPU — live memory of the frozen model",size=12,weight="bold")
+    box(fig,.47,.62,.495,.21,ec=NEU,lw=1.2);T(fig,.482,.805,"A · Source reading and synthesis (TEST730 run)",size=10,weight="bold")
+    for i,cid in enumerate(SRC_IDS):
+        x=.49+i*.11;box(fig,x,.715,.09,.05,ec=COL[cid],lw=1.2);T(fig,x+.045,.74,f"{cid} alone",size=8.6,ha="center",color=COL[cid],weight="bold")
+        if i<2:arrow(fig,x+.091,.74,x+.109,.74,col=NEU,lw=1.1,ms=10)
+    T(fig,.82,.74,"→ synthesis\n→ MASTER forge",size=8,color=INK2,linespacing=1.2)
+    T(fig,.482,.675,"each source mounted on its own, read, released; GPU memory was not recorded in 730.log → no number is shown for state A",size=7.9,color=MUTED,xmax=.958)
+    T(fig,.482,.645,"source files remain on the SSD (recorded ALL_PHYSICAL_SOURCES_PRESERVED: "+("PASS" if _rec_check("ALL_PHYSICAL_SOURCES_PRESERVED") else "—")+")",size=7.9,color=OK_COL,xmax=.958)
+    T(fig,.482,.585,"B · MASTER-only question answering — measured in this session",size=10,weight="bold")
+    if gs:
+        ax=fig.add_axes([.64,.165,.31,.325]);labs=[g["state"] for g in gs];al=[g.get("allocated_gib") or 0 for g in gs];mb=[(g.get("memory_bytes") or 0)/2**30 for g in gs]
+        yy=np.arange(len(gs))[::-1];ax.barh(yy,al,color=[COL["MASTER"] if "MASTER only" in l else (COL.get(l.split()[0],NEU) if l.split()[0] in COL else NEU) for l in labs],height=.55)
+        for y_,v,m in zip(yy,al,mb):ax.text(v+max(al)*.01,y_,f"{v:.2f} GiB"+(f"  (memory {m*1024:.0f} MiB)" if m else ""),va="center",fontsize=8,color=INK)
+        ax.set_yticks(yy);ax.set_yticklabels([short(l,30) for l in labs],fontsize=7.8);ax.set_xlabel("GPU memory allocated by PyTorch (GiB)");ax.set_xlim(0,max(al)*1.62)
+        for s in ("top","right"):ax.spines[s].set_visible(False)
+        tot=(gs[0].get("total_gib"));m=LIVE.get("master_fast_path") or {}
+        T(fig,.482,.545,f"GPU total {tot} GiB · MASTER memory {fmt_b(m.get('memory_bytes'))} = {m.get('layers')} layers × {m.get('rows')} rows (K+V)",size=8.2,color=INK2,xmax=.958)
+        T(fig,.482,.515,"bars: torch.cuda.memory_allocated after each state (incl. the mounted MASTER while sources are X-rayed)",size=7.6,color=MUTED,xmax=.958)
+    else:
+        box(fig,.47,.16,.495,.40,ec=RULE,ls="--");T(fig,.7175,.36,"not measured in this session (REPLAY MODE)\npress RUN on an A100 80 GB runtime",size=11,ha="center",color=MUTED,linespacing=1.4)
+    fig_footer(fig,k,"File sizes and SHA-256 are read from the cartridge files now (record = PHYSICAL_COMMIT of 730.log). GPU values: torch.cuda in this session only; nothing is estimated.")
+    return save_fig(fig,k,"SSD_AND_LIVE_GPU_MEMORY",badge,["cartridge files (sha256 now)","730.log PHYSICAL_COMMIT","LIVE_MEASUREMENTS.json gpu_states, master_fast_path"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Figs. 5 and 6 — read-only X-ray of the real K/V tensors
+# ---------------------------------------------------------------------------------------------------------------------
+def _xr(cid):
+    m=(LIVE.get("xray") or {}).get(cid)
+    if not m or not Path(m["file"]).is_file():return None
+    if not SIM and m.get("provenance")!="GPU_REAL":return None
+    z=np.load(m["file"]);return z["K"],z["V"],m
+def binned(a,b=XRAY_BIN):
+    nb=int(np.ceil(a.shape[1]/b));return np.stack([a[:,i*b:(i+1)*b].mean(axis=1) for i in range(nb)],axis=1)
+def zlayer(a):
+    mu=a.mean(axis=1,keepdims=True);sd=a.std(axis=1,keepdims=True);sd[sd==0]=1;return np.clip((a-mu)/sd,-3,3)
+def _heat(ax,arr,P,title,col,show_y=True):
+    b=zlayer(binned(arr));im=ax.imshow(b,aspect="auto",origin="lower",cmap="RdBu_r",vmin=-3,vmax=3,interpolation="nearest",extent=[0,b.shape[1]*XRAY_BIN,-.5,79.5])
+    ax.set_xlim(0,arr.shape[1])
+    ax.axhline(3.5,color="#111827",lw=1.1,ls="--");ax.axvline(P,color="#111827",lw=.8,ls=":")
+    ax.set_title(title,fontsize=9.5,color=col);ax.set_yticks([0,20,40,60,79] if show_y else []);ax.tick_params(labelsize=7.5)
+    if show_y:ax.text(-.012,3.5,"CUT3",transform=ax.get_yaxis_transform(),ha="right",va="center",fontsize=7,color="#111827",weight="bold")
+    ax.set_xticks([x for x in (0,500,1000,1500,2000,2500) if x<arr.shape[1]])
+    return im
+def fig5():
+    k="F5";D={c:_xr(c) for c in SRC_IDS}
+    if not all(D.values()):return fig_missing(k,"SOURCE_MEMORY_XRAY","K and V norm heat maps of P01, P02 and P03 (layers 0–79) need the live read-only X-ray of the real GPU tensors (stage 7 of RUN).",
+                                           "Not available in this session: "+", ".join(c for c,v in D.items() if not v)+". TEST730.log contains no X-ray tensors; no heat map is drawn without a measurement.")
+    fig=fig_base(k,"Real K/V tensors of each source cartridge, mounted ALONE with initialize_native (three separate GPU states, not one simultaneous memory) · read-only","LIVE GPU MEASUREMENT")
+    xs=[.065,.36,.655];W=.255
+    for i,cid in enumerate(SRC_IDS):
+        K,V,m=D[cid]
+        for r,(arr,nm) in enumerate(((K,"‖K‖"),(V,"‖V‖"))):
+            ax=fig.add_axes([xs[i],.525-r*.37,W,.275]);im=_heat(ax,arr,m["prefix_tokens"],f"{cid} · {nm} · {arr.shape[1]:,} memory rows",COL[cid],show_y=(i==0))
+            if i==0:ax.set_ylabel("transformer layer",fontsize=9)
+            if r==1:ax.set_xlabel("memory row (token position)",fontsize=8.5)
+    cb=fig.colorbar(im,cax=fig.add_axes([.925,.155,.009,.645]));cb.set_label("per-layer z-score (clipped ±3)",fontsize=8.5);cb.ax.tick_params(labelsize=7.5)
+    T(fig,.065,.858,"dashed line = CUT3 boundary (L0–L3 stored in the cartridge · L4–L79 rebuilt) · dotted line = end of the PREFIX rows",size=8.6,color=INK2,xmax=.92)
+    fig_footer(fig,k,f"‖K‖,‖V‖: L2 norm over head_dim (128), mean of the 8 KV heads, per row; mean over bins of {XRAY_BIN} rows; colour = z-score within each layer of each cartridge. Raw values: measurements/xray/*.npz, XRAY_SUMMARY.json.")
+    return save_fig(fig,k,"SOURCE_MEMORY_XRAY","LIVE GPU MEASUREMENT",["measurements/xray/XRAY_P01.npz","XRAY_P02.npz","XRAY_P03.npz","XRAY_SUMMARY.json"])
+def fig6():
+    k="F6";D={c:_xr(c) for c in CARTS}
+    if not D["MASTER"]:return fig_missing(k,"SOURCES_VS_MASTER","Layer statistics of P01, P02, P03 and MASTER need the live read-only X-ray of the real GPU tensors (stage 7 of RUN).",
+                                         "The MASTER X-ray is not available in this session. No value is drawn without a measurement.")
+    fig=fig_base(k,"Same read-only measurement for all four cartridges · different lengths · per-layer statistics over body rows · no token alignment, therefore no cosine similarity","LIVE GPU MEASUREMENT")
+    K,V,m=D["MASTER"]
+    for r,(arr,nm) in enumerate(((K,"‖K‖"),(V,"‖V‖"))):
+        ax=fig.add_axes([.065,.525-r*.37,.27,.275]);im=_heat(ax,arr,m["prefix_tokens"],f"MASTER · {nm} · {arr.shape[1]:,} rows",COL["MASTER"]);ax.set_ylabel("transformer layer",fontsize=9)
+        if r==1:ax.set_xlabel("memory row (token position)",fontsize=8.5)
+    cb=fig.colorbar(im,cax=fig.add_axes([.343,.155,.007,.645]));cb.ax.tick_params(labelsize=7);cb.set_label("per-layer z-score",fontsize=8)
+    L=np.arange(80);avail=[c for c in CARTS if D[c]]
+    axk=fig.add_axes([.44,.525,.24,.275]);axv=fig.add_axes([.44,.155,.24,.275]);axr=fig.add_axes([.75,.155,.21,.645])
+    for c in avail:
+        mm=D[c][2];axk.plot(L,mm["k_layer_mean_body"],color=COL[c],lw=1.6 if c=="MASTER" else 1.1,label=f"{c} ({mm['rows']:,} rows)")
+        axv.plot(L,mm["v_layer_mean_body"],color=COL[c],lw=1.6 if c=="MASTER" else 1.1)
+        axk.fill_between(L,mm["k_layer_p05_body"],mm["k_layer_p95_body"],color=COL[c],alpha=.07,lw=0);axv.fill_between(L,mm["v_layer_p05_body"],mm["v_layer_p95_body"],color=COL[c],alpha=.07,lw=0)
+    for ax,nm in ((axk,"‖K‖ per layer: mean, band 5–95 % of rows"),(axv,"‖V‖ per layer: mean, band 5–95 % of rows")):
+        ax.axvline(3.5,color=NEU,ls="--",lw=.9);ax.set_title(nm,fontsize=9.5);ax.tick_params(labelsize=7.5);ax.set_xlim(0,79)
+        for s in ("top","right"):ax.spines[s].set_visible(False)
+    axv.set_xlabel("transformer layer",fontsize=8.5);axk.legend(fontsize=7.4,loc="upper left",ncol=1)
+    src=[c for c in SRC_IDS if D[c]]
+    if src:
+        for key_,col_,nm in (("k_layer_mean_body",COL["MASTER"],"‖K‖"),("v_layer_mean_body","#A78BFA","‖V‖")):
+            s=np.mean([D[c][2][key_] for c in src],axis=0);mv=np.array(m[key_]);axr.plot((mv-s)/s*100,L,color=col_,lw=1.5,label=nm)
+        axr.axvline(0,color=NEU,lw=.8);axr.axhline(3.5,color=NEU,ls="--",lw=.9);axr.set_ylim(0,79);axr.set_xlabel("relative difference (%)",fontsize=8.5);axr.set_ylabel("transformer layer",fontsize=8.5)
+        axr.set_title(f"MASTER vs mean of {'+'.join(src)}",fontsize=9.5);axr.legend(fontsize=7.6,loc="upper right");axr.tick_params(labelsize=7.5)
+        for s in ("top","right"):axr.spines[s].set_visible(False)
+    T(fig,.44,.858,"Differences describe the physical states only — they are not a measure of intelligence, consciousness or a proof of synthesis.",size=8.6,color=INK2,xmax=.965)
+    fig_footer(fig,k,"Relative difference per layer = (MASTER − mean of sources) / mean of sources, on the layer means of the body rows (rows after the shared PREFIX). Lengths differ; statistics are per layer.")
+    return save_fig(fig,k,"SOURCES_VS_MASTER","LIVE GPU MEASUREMENT",["measurements/xray/XRAY_*.npz","XRAY_SUMMARY.json (k/v_layer_mean_body)"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 7 — the synthesis (quotes from the recorded model texts; editorial text is marked)
+# ---------------------------------------------------------------------------------------------------------------------
+def fig7():
+    k="F7";fig=fig_base(k,"Quotes are taken verbatim from the model's recorded reflections and synthesis (730.log), shortened with “…” only · editorial labels are marked as such","OBSERVATIONAL")
+    for i,cid in enumerate(SRC_IDS):
+        c=COL[cid];x=.035+i*.315;w=.295;box(fig,x,.53,w,.33,ec=c,lw=1.4);rect(fig,x,.82,w,.04,c,z=2)
+        T(fig,x+.01,.84,f"{cid} · {TOPIC[cid]}",size=9.5,weight="bold",color="white",xmax=x+w-.07);T(fig,x+w-.008,.84,"editorial label",size=7,color="white",ha="right",style="italic")
+        items=md_items(block(REC["reflections"][cid],"Central Claims"))[:3]
+        T(fig,x+.01,.795,"model reflection — central claims (quoted)",size=7.8,color=MUTED,style="italic")
+        for j,it in enumerate(items):
+            T(fig,x+.01,.755-j*.072,"“"+wrap(f"{it['head']}: {it['first']}",62,3)+"”",size=7.6,color=INK,va="top",linespacing=1.18,xmax=x+w-.006)
+        arrow(fig,x+w/2,.528,.5,.468,col=c,lw=1.2)
+    box(fig,.035,.25,.93,.215,ec=NEU,lw=1.3,fc=PANEL)
+    T(fig,.045,.447,"MODEL SYNTHESIS — conflicts and consistencies (quoted from the synthesis written by the model)",size=9.5,weight="bold")
+    its=md_items(block(REC["synthesis"],"Conflicts"))[:4]
+    for j,it in enumerate(its):
+        x=.045+(j%2)*.465;y=.415-(j//2)*.085
+        T(fig,x,y,f"{it['head']} [{', '.join(it['refs'])}]",size=8.4,weight="bold",color=INK,xmax=x+.455)
+        T(fig,x,y-.022,"“"+wrap(it["first"],118,2)+"”",size=7.5,color=INK2,va="top",linespacing=1.15,xmax=x+.455)
+    box(fig,.035,.095,.93,.135,ec=COL["MASTER"],lw=1.6)
+    T(fig,.045,.205,"MASTER — the model's own overview statement (quoted, first sentences of its synthesis)",size=9.5,weight="bold",color=COL["MASTER"])
+    ov=first_par(block(REC["synthesis"],"Overview"))
+    T(fig,.045,.178,"“"+wrap(ov,215,3)+"”",size=8.0,color=INK,va="top",linespacing=1.2,xmax=.96)
+    fig_footer(fig,k,"Prompts were general (730.py): one identical reading prompt per source; one open synthesis prompt. The synthesis is text-mediated (no tensor fusion) and its recorded text ends at the 768-token generation limit.")
+    return save_fig(fig,k,"THREE_PERSPECTIVES_TO_SYNTHESIS","OBSERVATIONAL",["730.log READING_REFLECTION P01–P03","730.log MODEL_SYNTHESIS"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 8 — MASTER: write, seal, reload
+# ---------------------------------------------------------------------------------------------------------------------
+def fig8():
+    k="F8";a=ART.get("MASTER") or {};f=a.get("facts") or {};fp=LIVE.get("master_fast_path") or {};par=LIVE.get("parity") or {}
+    fig=fig_base(k,"The MASTER cartridge is forged from the model-generated synthesis, committed to the SSD, verified by SHA-256 and mounted alone for all six questions","SEALED MEMORY")
+    steps=[("Model-generated synthesis",f"{REC['synthesis_chars']:,} characters · SHA-256 of the text {k_sha(REC['synthesis_sha256_log_text'],12)}"),
+           ("Native CUT3 forge",f"MASTER body {REC['body_tokens']['MASTER']:,} tokens = 3 reflections + synthesis (730.py master_body)"),
+           ("H3 + L0–L3 K/V",(f"H3 {tuple(f['h_shape'])} · K/V 4 × {tuple(f['k_shape'])} · {f['n']:,} rows" if f else "tensor shapes: file not present in this runtime")),
+           ("SSD physical commit","MASTER.pt · commit SHA-256 recorded in 730.log (PHYSICAL_COMMIT)"),
+           ("SHA-256 verification","recorded FILE_SHA · CARTRIDGE_ID · CARTRIDGE_TENSOR_SHA = PASS"+((" · now safe_load() PASS (file + ID + tensor seals)" if a.get("entry") and (a.get("entry") or {}).get("tensor_sha") else " · now file SHA + ID PASS (no tensor record)") if fp else "")),
+           ("MASTER-only activation","recorded MASTER_ONLY_ACTIVE = PASS · one initialize for six questions ("+str((REC.get('fast_path') or {}).get('init_seconds'))+" s)"+(f" · now {fp.get('initialize_native_seconds')} s" if fp else "")),
+           ("80-layer parity check","recorded 80/80"+(f" · this session {par.get('matched')}/{par.get('layers')}" if par else " · this session: not run"))]
+    for i,(h,t) in enumerate(steps):
+        y=.80-i*.092;box(fig,.035,y,.50,.07,ec=COL["MASTER"] if i in(1,3,5) else NEU,lw=1.3,fc="white" if i%2 else PANEL)
+        T(fig,.047,y+.047,f"{i+1}. {h}",size=10,weight="bold",xmax=.53);T(fig,.047,y+.019,t,size=8.0,color=INK2,xmax=.53)
+        if i<6:arrow(fig,.285,y-.001,.285,y-.021,col=NEU,lw=1.2,ms=9)
+    x=.57;box(fig,x,.38,.395,.49,ec=COL["MASTER"],lw=1.8);rect(fig,x,.83,.395,.04,COL["MASTER"],z=2)
+    T(fig,x+.012,.85,"MASTER identity — three different records, kept apart",size=10,weight="bold",color="white",xmax=.96)
+    rows=[("file SHA-256 (physical commit, 730.log)",REC["commits"]["MASTER"]["sha256"]),
+          ("file SHA-256 measured now",a.get("sha256_now") or "— (file not present in this runtime)"),
+          ("tensor seals (TEST730 manifest)",("available — checked by 730.py safe_load()" if a.get("tensor_record") else "manifest not available in this runtime")),
+          ("cartridge identity","book_id MASTER · role MASTER_SYNTHESIS · parents P01, P02, P03"),
+          ("status of the file used now",(a.get("status") or "—").replace("_"," ").lower())]
+    for j,(l,v) in enumerate(rows):
+        y=.79-j*.08;T(fig,x+.012,y,l,size=8.2,color=MUTED,weight="bold",xmax=.96)
+        if len(v)==64:T(fig,x+.012,y-.026,v,size=7.6,color=COL["MASTER"] if j==0 else (OK_COL if v==REC["commits"]["MASTER"]["sha256"] else AMBER),mono=True,xmax=.96,minsize=5)
+        else:T(fig,x+.012,y-.026,v,size=8.2,color=INK,xmax=.96)
+    tiles=[("Source cartridges preserved","ALL_PHYSICAL_SOURCES_PRESERVED","ALL_PHYSICAL_CARTRIDGES_PRESERVED"),("MASTER-only active","MASTER_ONLY_ACTIVE",None),
+           ("80-layer parity","MASTER_80_LAYER_PARITY","MASTER_80_LAYER_PARITY"),("Weights unchanged","WEIGHTS_SENTINEL_UNCHANGED","WEIGHTS_SENTINEL_UNCHANGED")]
+    for i,(lab,rc,lc) in enumerate(tiles):
+        xx=.57+(i%2)*.2;yy=.255-(i//2)*.09;ok=_rec_check(rc);lv=_live_check(lc) if lc else None
+        box(fig,xx,yy,.19,.075,ec=OK_COL if ok else RED,lw=1.3)
+        val=("80/80" if "parity" in lab else "PASS") if ok else "—"
+        T(fig,xx+.01,yy+.05,lab,size=8.4,weight="bold",xmax=xx+.185);T(fig,xx+.01,yy+.02,f"record {val}"+(f" · now {'PASS' if lv else 'FAIL'}" if lv is not None else " · now —"),size=8.2,color=OK_COL if ok else RED,xmax=xx+.185)
+    fig_footer(fig,k,"File SHA-256 = hash of MASTER.pt bytes (commit record). Tensor seals = SHA-256 of H3 and of each L0–L3 K/V tensor (TEST730 manifest). Cartridge ID = book_id/p/n check of safe_load().")
+    return save_fig(fig,k,"MASTER_WRITE_SEAL_RELOAD","SEALED MEMORY",["730.log PHYSICAL_COMMIT MASTER, checks","MASTER.pt (sha256 now, torch.load facts)","LIVE_MEASUREMENTS.json master_fast_path, parity"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 9 — the six sealed questions
+# ---------------------------------------------------------------------------------------------------------------------
+def answer_status(qid):
+    q=REC["questions"][qid];n=(LIVE.get("recorded_answer_tokens") or {}).get(qid)
+    if n is not None:
+        if n>=E["MAX_NEW"]-8:return f"response generated · reached the 768-token limit (re-tokenized {n})"
+        if not q["ends_cleanly"]:return f"response generated · ends mid-sentence, consistent with the 768-token limit (re-tokenized {n})"
+        return f"response generated · ended before the limit (re-tokenized {n})"
+    return "response generated · "+("ends mid-sentence: consistent with the 768-token limit" if not q["ends_cleanly"] else "ends with complete sentence")
+def fig9():
+    k="F9";fig=fig_base(k,"Six questions sealed by SHA-256 before any source or model was accessed · asked to the MASTER memory alone · answers as recorded in 730.log","VERIFICATION RECORD")
+    xs=[.035,.085,.385,.80,.86];hd=["ID","question (sealed panel)","MASTER answer — opening excerpt (verbatim)","time","status"]
+    for x,h in zip(xs,hd):T(fig,x,.86,h,size=8.6,weight="bold",color=MUTED)
+    hline(fig,.035,.965,.845,NEU)
+    for i,(qid,q) in enumerate(REC["questions"].items()):
+        y=.80-i*.103;lvl="HUMAN" if qid.startswith("H") else "ADVANCED"
+        rect(fig,.035,y-.072,.93,.094,PANEL if i%2==0 else "white",z=0)
+        T(fig,.04,y-.005,qid,size=13,weight="bold",color=COL["MASTER"]);T(fig,.04,y-.04,lvl.lower(),size=7,color=MUTED)
+        T(fig,.085,y+.012,wrap(q["question"],62,3),size=7.8,va="top",linespacing=1.15,xmax=.378)
+        ex=unmd(re.sub(r"#+\s*","",q["answer"]))
+        T(fig,.385,y+.012,"“"+wrap(ex,92,3)+"”",size=7.5,va="top",color=INK2,linespacing=1.15,xmax=.795)
+        T(fig,.80,y-.02,f"{q['seconds']:.1f} s",size=9.5,weight="bold")
+        T(fig,.86,y+.012,wrap(answer_status(qid),28,4),size=6.9,va="top",color=INK2,linespacing=1.1,xmax=.965)
+    hline(fig,.035,.965,.165,NEU)
+    T(fig,.035,.14,f"Presealed question panel SHA-256  {REC['panel_sha256']}",size=8.6,mono=True,color=INK,xmax=.6)
+    T(fig,.62,.14,"6/6 responses generated",size=11.5,weight="bold",color=OK_COL);T(fig,.62,.105,"Independent correctness: NOT YET GRADED",size=11.5,weight="bold",color=AMBER,xmax=.965)
+    re_ok=ENGINE_INFO.get("panel_rederived_sha256")==REC["panel_sha256"]
+    T(fig,.035,.105,("✓ panel SHA-256 re-derived in this session from the QUESTION_SET of the locked 730.py" if re_ok else "✗ panel SHA-256 could not be re-derived"),size=8.2,color=OK_COL if re_ok else RED)
+    fig_footer(fig,k,"Answers were generated greedily on the MASTER memory with MAX_NEW = 768; full texts in the SIX-QUESTION DEMO tab and RUN_SUMMARY.txt. No grading was performed by TEST730 or by this demo.")
+    return save_fig(fig,k,"SIX_PRESEALED_QUESTIONS","VERIFICATION RECORD",["730.log QUESTION_PANEL_PRESEALED_SHA256, DEMO_QUESTION/ANSWER/SECONDS","730.py QUESTION_SET (re-derived panel SHA)"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 10 — advanced reasoning
+# ---------------------------------------------------------------------------------------------------------------------
+def fig10():
+    k="F10";Q=REC["questions"]
+    fig=fig_base(k,"Model-generated proposals from the MASTER memory (A1–A3, recorded) · shown as hypotheses, NOT as results established by P01–P03 · not independently validated","OBSERVATIONAL")
+    rect(fig,.035,.835,.93,.035,"#FEF3C7",z=0);T(fig,.045,.852,"MODEL-GENERATED HYPOTHESES — distinct from the source evidence; source IDs show which article each element cites",size=9,weight="bold",color=AMBER)
+    W=.297;xs=[.035,.3515,.668]
+    heads=[("A1 · Causal model",Q["A1"]["question"]),("A2 · Falsification experiment",Q["A2"]["question"]),("A3 · Rival explanations + decisive test",Q["A3"]["question"])]
+    for x,(h,qq) in zip(xs,heads):
+        box(fig,x,.10,W,.715,ec=COL["MASTER"],lw=1.3);T(fig,x+.01,.795,h,size=10.5,weight="bold",color=COL["MASTER"],xmax=x+W-.006)
+        T(fig,x+.01,.77,wrap(qq,70,2),size=7.0,color=MUTED,va="top",style="italic",linespacing=1.1,xmax=x+W-.006)
+    def lines(x,y,rows,width=60,ymin=.115):
+        for kind,txt,col in rows:
+            if y<ymin+.03:break
+            if kind=="h":t=T(fig,x+.01,y,txt,size=9.2,weight="bold",color=col or INK,va="top",xmax=x+W-.006)
+            else:t=T(fig,x+.016,y,wrap(txt,width,3),size=8.0,color=col or INK2,va="top",linespacing=1.13,xmax=x+W-.006)
+            b=_bb(fig,t);y=b.y0-(.010 if kind=="h" else .016)
+        return y
+    a1=md_items(block(Q["A1"]["answer"],"Causal Model"));pr=md_items(block(Q["A1"]["answer"],"Predictions"))
+    def _assume(it):
+        x_=next((bb for aa,bb,ff in it["sub"] if aa.lower().startswith("assumption")),"")
+        return f"{it['head']}  [{', '.join(it['refs']) or '—'}]"+(f" — assumption: {x_}" if x_ else "")
+    r=[("h","Model components (sources cited)",None)]+[("t",f"{i+1}. "+_assume(it),INK) for i,it in enumerate(a1[:5])]
+    r+=[("h","Predictions stated by the model",None)]+[("t","• "+it["head"]+(": "+it["first"] if it["first"] else ""),None) for it in pr[:2]]
+    lines(xs[0],.725,r)
+    iv=md_items(block(Q["A2"]["answer"],"Interventions"));ms=md_items(block(Q["A2"]["answer"],"Measures"));cf=md_items(block(Q["A2"]["answer"],"Confounders"))
+    pt=md_items(block(Q["A2"]["answer"],"Participants"))
+    r=[("h","Randomized arms",None)]+[("t",f"{it['head']}: {it['first']}",None) for it in iv[:3]]
+    r+=[("h","Measures",None)]+[("t","• "+it["head"]+(" — "+"; ".join(a for a,b,f in it["sub"][:2] if a) if it["sub"] else ""),None) for it in ms[:4]]
+    r+=[("h","Confounders · sample",None),("t",", ".join(it["head"] for it in cf[:4])+("" if not pt else " · "+"; ".join(f"{it['head']}: {it['first']}" for it in pt[:1])),None)]
+    lines(xs[1],.725,r)
+    rv=md_items(block(Q["A3"]["answer"],"Rival Explanations"));td=md_items(block(Q["A3"]["answer"],"Smallest Decisive Test"))
+    con=[ln for ln in block(Q["A3"]["answer"],"Most Consequential") if ln.strip()]
+    r=[("h","Contradiction named by the model",None),("t",unmd(con[0]) if con else "—",INK)]
+    for it in rv[:2]:
+        hyp=next((b for a,b,f in it["sub"] if a.lower().startswith("hypothesis")),it["first"])
+        r+=[("h",it["head"],COL["MASTER"]),("t",hyp,None)]
+    grp=[it for it in td if it["head"].lower().startswith("group")] or td
+    res=[it for it in td if it["head"].lower().startswith("if ")]
+    r+=[("h","Smallest decisive test (model proposal)",None)]+[("t",f"{it['head']}: {it['first']}",None) for it in grp[:2]]
+    r+=[("h","What each result would imply (model)",None)]+[("t",f"{it['head']} → {it['first']}",None) for it in res[:2]]
+    refs=sorted(set(re.findall(r"\bP0[123]\b",Q["A3"]["answer"])))
+    yend=lines(xs[2],.725,r);T(fig,xs[2]+.01,max(.115,yend-.008),f"sources cited in A3: {', '.join(refs) or '—'}",size=7.8,color=MUTED,va="top")
+    fig_footer(fig,k,"Item headings and sentences are extracted from the recorded answers (markdown structure), shortened with “…”. A1–A3 answers end at the 768-token limit. Novelty and validity are not assessed.")
+    return save_fig(fig,k,"STORED_SYNTHESIS_TO_HYPOTHESES","OBSERVATIONAL",["730.log DEMO_ANSWER A1, A2, A3"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 11 — performance
+# ---------------------------------------------------------------------------------------------------------------------
+def fig11():
+    k="F11";Q=REC["questions"];fp=LIVE.get("master_fast_path") or {};par=LIVE.get("parity") or {};rp=LIVE.get("repro") or {};nq=LIVE.get("newq") or {}
+    live=bool(fp);badge="LIVE GPU MEASUREMENT" if live else "VERIFICATION RECORD"
+    fig=fig_base(k,"Recorded TEST730 timings (730.log) and, separately, the timings measured on the GPU in this session · no SSD, transfer or token-rate value is estimated",badge)
+    ax=fig.add_axes([.065,.20,.36,.58]);ids=list(Q);v=[Q[i]["seconds"] for i in ids]
+    bars=ax.bar(ids,v,color=[COL["MASTER"] if i.startswith("H") else "#A78BFA" for i in ids],width=.62)
+    for b_,x in zip(bars,v):ax.text(b_.get_x()+b_.get_width()/2,x+1.5,f"{x:.3f}",ha="center",fontsize=8.6)
+    ax.set_ylim(0,max(v)*1.22);ax.set_ylabel("generation time (s)");ax.set_xlabel("question ID")
+    ax.set_title("TEST730 record — six answers on one MASTER initialization",fontsize=10)
+    for s in ("top","right"):ax.spines[s].set_visible(False)
+    T(fig,.065,.105,f"Σ {sum(v):.1f} s · mean {np.mean(v):.2f} s · all six recorded answers end mid-sentence (768-token limit) → near-constant time",size=8.4,color=INK2,xmax=.45)
+    x=.47;T(fig,x,.84,"Fast path (TEST730 record)",size=10.5,weight="bold")
+    fs=[("MASTER verification","FILE_SHA · ID · TENSOR_SHA = PASS"),("Single initialization",f"{(REC.get('fast_path') or {}).get('init_seconds')} s (load + initialize_native)"),
+        ("Six question evaluations",f"Σ {sum(v):.1f} s"),("Final memory integrity","FAST_PATH_MASTER_PREFIX_UNCHANGED = PASS")]
+    for i,(h,t) in enumerate(fs):
+        y=.745-i*.112;box(fig,x,y,.2,.085,ec=COL["MASTER"],lw=1.2);T(fig,x+.008,y+.058,h,size=8.8,weight="bold",xmax=x+.196);T(fig,x+.008,y+.025,t,size=7.6,color=INK2,xmax=x+.196)
+        if i<3:arrow(fig,x+.1,y-.001,x+.1,y-.026,col=NEU,lw=1.1,ms=9)
+    mi=REC.get("model_io") or {}
+    T(fig,x,.29,"TEST730 record, model I/O:",size=8,color=INK2,weight="bold")
+    T(fig,x,.262,f"download {mi.get('fetch_time')} · {mi.get('shards')} files",size=7.8,color=MUTED,xmax=x+.215)
+    T(fig,x,.236,f"{mi.get('download')} transferred · {mi.get('reconstructed')} reconstructed",size=7.8,color=MUTED,xmax=x+.215)
+    T(fig,x,.21,f"weights loaded {mi.get('load_time')} · {mi.get('tensors')} tensors",size=7.8,color=MUTED,xmax=x+.215)
+    x=.70;box(fig,x,.20,.265,.665,ec=OK_COL if live else RULE,lw=1.4,ls="-" if live else "--");T(fig,x+.01,.84,"Measured in THIS session (GPU)",size=10.5,weight="bold",color=OK_COL if live else MUTED)
+    if live:
+        rows=[("SSD read MASTER.pt",f"{fp['ssd_read_seconds']} s · {fp['ssd_read_mb_s']} MB/s"),("verified load (SHA + torch.load + seals)",f"{fp['verified_load_seconds']} s"),
+              ("host → GPU transfer",f"{fp['h2d_seconds']} s"),("initialize_native (80 layers)",f"{fp['initialize_native_seconds']} s"),("prefix seals (80 × K,V)",f"{fp['prefix_seal_seconds']} s"),
+              ("parity check",f"{par.get('seconds','—')} s · {par.get('matched','—')}/{par.get('layers','—')}")]
+        for qid,r in list(rp.items())+[(f"{kk} (MASTER)",vv["master"]) for kk,vv in nq.items()]:
+            rows.append((f"answer {qid}",f"{r['n_generated']} tok · {r['seconds']:.1f} s · {r['tokens_per_second']} tok/s"))
+        for j,(l,v_) in enumerate(rows[:13]):
+            y=.80-j*.046;T(fig,x+.01,y,l,size=7.8,color=INK2,xmax=x+.15);T(fig,x+.258,y,v_,size=7.8,color=INK,ha="right",mono=True,xmax=.962)
+    else:T(fig,x+.1325,.53,"not measured\n(REPLAY MODE)\n\npress RUN on an\nA100 80 GB runtime",size=10,color=MUTED,ha="center",linespacing=1.3)
+    fig_footer(fig,k,"Record: DEMO_FAST_PATH_READY and DEMO_QUESTION_SECONDS of 730.log. Session values: time.perf_counter with torch.cuda.synchronize; tokens counted from the forward passes of the unchanged answer().")
+    return save_fig(fig,k,"FAST_PATH_PERFORMANCE",badge,["730.log DEMO_FAST_PATH_READY, DEMO_QUESTION_SECONDS, download/load progress","LIVE_MEASUREMENTS.json master_fast_path, parity, repro, newq"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. 12 — verification record
+# ---------------------------------------------------------------------------------------------------------------------
+def fig12():
+    k="F12";fig=fig_base(k,"What TEST730 verified, what this session re-verified, and where the evidence ends","VERIFICATION RECORD")
+    md=LIVE.get("model") or {};ge=LIVE.get("gpu_env") or {}
+    box(fig,.035,.12,.235,.74,ec=NEU,lw=1.3);T(fig,.047,.835,"1 · Model and engine",size=11,weight="bold")
+    rows=[("model",MODEL_ID),("layers","80"),("hidden / heads","8192 · 64 Q / 8 KV · d 128"),("weights","NF4 4-bit, frozen"),("compute","BF16 · SDPA"),("memory","CUT3: H3 + L0–L3 K/V"),
+          ("GPU (record)",str(REC["env"].get("gpu"))),("torch (record)",str(REC["env"].get("torch"))),("GPU (now)",str(ge.get("name","—"))),("torch (now)",str(ge.get("torch","—"))),
+          ("709.py",LOCKS["709.py"][:12]+"…"),("730.py",LOCKS["730.py"][:12]+"…"),("730.log",LOCKS["730.log"][:12]+"…")]
+    for j,(a,b) in enumerate(rows):
+        y=.79-j*.05;T(fig,.047,y,a,size=7.8,color=MUTED,weight="bold");T(fig,.047,y-.02,b,size=7.8,color=INK,mono=("." in a),xmax=.265)
+    box(fig,.29,.12,.36,.74,ec=OK_COL,lw=1.3);T(fig,.302,.835,"2 · Passed checks",size=11,weight="bold");T(fig,.53,.835,"record",size=8,color=MUTED,weight="bold",ha="center");T(fig,.6,.835,"now",size=8,color=MUTED,weight="bold",ha="center")
+    chk=[("Frozen weights","FROZEN","FROZEN"),("Physical cartridge creation","FOUR_PHYSICAL_CARTRIDGES",None),("SSD SHA verification","FILE_SHA_MASTER","FILE_SHA_MASTER"),
+         ("Source cartridges preserved","ALL_PHYSICAL_SOURCES_PRESERVED","ALL_PHYSICAL_CARTRIDGES_PRESERVED"),("MASTER-only activation","MASTER_ONLY_ACTIVE",None),
+         ("Fast-path prefix unchanged","FAST_PATH_MASTER_PREFIX_UNCHANGED","FAST_PATH_MASTER_PREFIX_UNCHANGED"),("80/80 layer parity","MASTER_80_LAYER_PARITY","MASTER_80_LAYER_PARITY"),
+         ("Six responses generated",None,None),("Sealed panel unchanged","SEALED_QUESTIONS_UNCHANGED","SEALED_PANEL_REDERIVED_FROM_730PY"),("Weight sentinel unchanged","WEIGHTS_SENTINEL_UNCHANGED","WEIGHTS_SENTINEL_UNCHANGED")]
+    for j,(lab,rc,lc) in enumerate(chk):
+        y=.78-j*.058;ok=((REC["summary"] or {}).get("answered_nonempty")==6) if lab.startswith("Six") else _rec_check(rc);lv=_live_check(lc) if lc else None
+        T(fig,.302,y,lab,size=9,color=INK,xmax=.5);T(fig,.53,y,"PASS" if ok else "—",size=9,weight="bold",color=OK_COL if ok else MUTED,ha="center")
+        T(fig,.6,y,"PASS" if lv else ("FAIL" if lv is False else "—"),size=9,weight="bold",color=OK_COL if lv else (RED if lv is False else MUTED),ha="center")
+    T(fig,.302,.17,f"record: {REC['checks_passed']}/{REC['checks_total']} logged checks PASS · result {REC['result']}",size=7.8,color=INK2,xmax=.645)
+    nl=len(LIVE_CHECKS);npass=sum(c["passed"] for c in LIVE_CHECKS)
+    T(fig,.302,.145,f"this session: {npass}/{nl} live checks PASS"+(" (RUN not executed on a GPU)" if not LIVE.get("model") else ""),size=7.8,color=INK2,xmax=.645)
+    box(fig,.67,.12,.295,.74,ec=NEU,lw=1.3);T(fig,.682,.835,"3 · Scientific scope",size=11,weight="bold")
+    T(fig,.682,.795,"Verified by the records",size=9,weight="bold",color=OK_COL)
+    for j,s in enumerate(["Physical neural memory persistence","Model-generated textual synthesis","MASTER cartridge creation and reuse","Frozen-weight operation"]):
+        y=.76-j*.042;rect(fig,.684,y-.011,.006,.022,OK_COL,z=2);T(fig,.697,y,s,size=8.6,xmax=.96)
+    T(fig,.682,.565,"Not yet independently established",size=9,weight="bold",color=NEU)
+    T(fig,.682,.54,"open research questions — beyond what TEST730 measures",size=7.4,color=MUTED,style="italic")
+    for j,s in enumerate(["Zero-prompt autonomous learning (the pipeline uses general programmed prompts)","Hallucination elimination","Superhuman reasoning superiority (no human baseline)",
+                          "Semantic correctness of all six responses (not graded)"]):
+        y=.50-j*.075;box(fig,.684,y-.03,.272,.06,ec=RULE,fc=PANEL,lw=.9);T(fig,.694,y,wrap(s,46,2),size=7.8,color=INK2,linespacing=1.15,xmax=.952)
+    fig_footer(fig,k,"Record = PASS lines of the locked 730.log. Now = checks executed by the unchanged engine in this session (VERIFICATION_RECORD.json). “—” = not applicable or not run; nothing is assumed.")
+    return save_fig(fig,k,"INTEGRITY_AND_BOUNDARIES","VERIFICATION RECORD",["730.log PASS lines","VERIFICATION_RECORD.json (live checks)","LIVE_MEASUREMENTS.json model, gpu_env"])
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Fig. S1 — live queries of this session
+# ---------------------------------------------------------------------------------------------------------------------
+def figS1():
+    k="S1";rp=LIVE.get("repro") or {};nq=LIVE.get("newq") or {}
+    if not rp and not nq:return fig_missing(k,"LIVE_MASTER_QUERIES","Live answers of the MASTER memory (reproduction of H1 and A1; two new questions with and without memory) need RUN on an A100 80 GB GPU.",
+                                            "No live answer exists in this session. Recorded answers are never shown as live answers.")
+    fig=fig_base(k,"Answers generated NOW on the MASTER memory by the unchanged engine · reproduction of two sealed questions · two new questions (not sealed) with and without memory","LIVE GPU MEASUREMENT")
+    T(fig,.035,.855,"Reproduction of sealed questions (the recorded answers remain the official TEST730 answers)",size=10.5,weight="bold")
+    for i,(qid,r) in enumerate(rp.items()):
+        y=.80-i*.075;ok=r["identical_to_record"];box(fig,.035,y-.03,.93,.065,ec=OK_COL if ok else AMBER,lw=1.2)
+        T(fig,.045,y,qid,size=13,weight="bold",color=COL["MASTER"])
+        T(fig,.09,y+.012,("BYTE-IDENTICAL to the TEST730 record" if ok else f"differs from the record after {r['common_prefix_chars']:,} identical characters"),size=9.5,weight="bold",color=OK_COL if ok else AMBER,xmax=.6)
+        T(fig,.09,y-.014,f"record {k_sha(r['recorded_sha256'],16)} · now {k_sha(r['sha256'],16)}",size=7.8,mono=True,color=INK2,xmax=.6)
+        T(fig,.62,y,f"{r['n_generated']} tokens · {r['seconds']:.1f} s · {r['tokens_per_second']} tok/s · record {r['recorded_seconds']} s",size=8.4,color=INK,xmax=.96)
+    y0=.80-len(rp)*.075-.03
+    T(fig,.035,y0,"New questions written for this demonstration (published in the code before the run; NOT part of the sealed panel)",size=10.5,weight="bold")
+    for i,(qid,v) in enumerate(nq.items()):
+        y=y0-.05-i*.215;T(fig,.035,y,f"{qid} · "+v["question"],size=8.6,weight="bold",xmax=.965)
+        for j,(lab,r,col) in enumerate((("MASTER memory",v["master"],COL["MASTER"]),("no memory",v["no_memory"],NEU))):
+            x=.035+j*.47;box(fig,x,y-.19,.455,.165,ec=col,lw=1.2)
+            mk=r["markers"];T(fig,x+.01,y-.045,f"{lab} · {r['n_generated']} tok · {r['seconds']:.1f} s",size=8.4,weight="bold",color=col,xmax=x+.25)
+            T(fig,x+.445,y-.045,"keywords: "+" ".join(("✓" if hit else "✗")+m for m,hit in mk.items()),size=7.6,color=INK2,ha="right",xmax=x+.452)
+            T(fig,x+.01,y-.065,"“"+wrap(unmd(r["answer"]),98,4)+"”",size=7.5,color=INK,va="top",linespacing=1.15,xmax=x+.45)
+    fig_footer(fig,k,"BYTE-IDENTICAL = reproducibility of the recorded output, not proof of semantic correctness. Keyword check = observational, not a grade. Greedy, MAX_NEW 768, unchanged answer(); no-memory = answer(None, q).")
+    return save_fig(fig,k,"LIVE_MASTER_QUERIES","LIVE GPU MEASUREMENT",["LIVE_MEASUREMENTS.json repro, newq","LIVE_QUERY_ANSWERS.jsonl"])
+
+FIG_FUNCS=OrderedDict([("F1",fig1),("F2",fig2),("F3",fig3),("F4",fig4),("F5",fig5),("F6",fig6),("F7",fig7),("F8",fig8),("F9",fig9),("F10",fig10),("F11",fig11),("F12",fig12),("S1",figS1)])
+def render_figures():
+    errs={}
+    for key,fn in FIG_FUNCS.items():
+        t=time.perf_counter()
+        try:
+            rec=fn();FIG_FILES[key]=rec;STATE["fig_version"]+=1;bump()
+            _emit(f"  figure {FIGURES[key]['n']} · {rec['badge']} · {rec['pixels'][0]}×{rec['pixels'][1]} · layout QC {'pass' if rec['layout_qc']['passed'] else 'WARN'} · {time.perf_counter()-t:.1f} s")
+        except Exception as ex:
+            errs[key]=f"{type(ex).__name__}: {ex}";FIG_FILES.pop(key,None);flog_fig(f"{key} NOT GENERATED {traceback.format_exc()[-1500:]}");_emit(f"  figure {key} NOT GENERATED · {errs[key]}")
+            plt.close("all")
+    FIG_ERRORS.clear();FIG_ERRORS.update(errs)
+    dump_json(SESSION_DIR/"FIGURES_MANIFEST.json",dict(session=SESSION_ID,utc=utc_now(),simulation=SIM,figures=FIG_FILES,not_generated=errs))
+    return errs
+
+# ---------------------------------------------------------------------------------------------------------------------
+# measurements, provenance table, run summary, SHA-256 manifest (no ZIP)
+# ---------------------------------------------------------------------------------------------------------------------
+RUN_SUMMARY=SESSION_DIR/"RUN_SUMMARY.txt";MANIFEST=SESSION_DIR/"SHA256_MANIFEST.json";ZIP_PATH=SESSION_DIR/f"{SESSION_ID}_AKBASCORE_PROMETHEUS_TEST730_DEMO.zip"
+def write_measurements():
+    dump_json(LIVE_FILE,{k:v for k,v in LIVE.items() if not k.startswith("_")})
+    dump_json(CHECK_FILE,dict(session=SESSION_ID,utc=utc_now(),simulation=SIM,live_checks=LIVE_CHECKS,recorded_checks=REC.get("checks"),
+                              passed=sum(c["passed"] for c in LIVE_CHECKS),total=len(LIVE_CHECKS)))
+    dump_json(DATA_DIR/"CARTRIDGES.json",dict(test730_directory=ORIG.get("root"),cartridges=ART,manifest_checks=ORIG.get("manifest_checks"),results_checks=ORIG.get("results_checks"),
+                                               sealed_sources=ORIG.get("sealed_sources")))
+    dump_json(DATA_DIR/"STAGES.json",dict(verdict=run_verdict(),state={k:v for k,v in STATE.items() if k not in("master_memory","master_gpu_cp","master_seals_before")},stages=STAGES))
+    rows=[]
+    for key,meta in FIGURES.items():
+        p=PROVENANCE.get(key) or {};f=FIG_FILES.get(key) or {}
+        rows.append(dict(figure=meta["n"],key=key,title=meta["title"],tab=meta["tab"],badge=p.get("badge") or "not generated",data_sources=" | ".join(p.get("data_sources") or []),
+                         jpg=Path(f["jpg"]).name if f.get("jpg") else "",sha256_jpg=f.get("sha256_jpg",""),layout_qc=(f.get("layout_qc") or {}).get("passed"),simulation=SIM))
+    with (SESSION_DIR/"PROVENANCE_TABLE.csv").open("w",newline="",encoding="utf-8") as fh:
+        w=csv.DictWriter(fh,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+    dump_json(SESSION_DIR/"PROVENANCE_TABLE.json",rows)
+def write_run_summary():
+    L=[];a=L.append;fp=LIVE.get("master_fast_path") or {}
+    a(f"{APP_NAME} — {APP_SUB}\n{EXPERIMENT} live demonstration · code {CODE_VERSION} · session {SESSION_ID} · written {local_now()}")
+    if SIM:a("SIMULATION STACK — NOTHING IN THIS FILE IS AN EXPERIMENTAL RESULT")
+    a(f"MODE {STATE['mode']} · RUN started {STATE.get('started')} · finished {STATE.get('finished')}\nRUN VERDICT {run_verdict()}")
+    a("\nSTAGES OF THIS RUN")
+    for key,title in STAGES.items():
+        s=STATE["stages"][key];a(f"  [{s['status'].upper():<4}] {key:<10} {('%.1f s'%s['seconds']) if s['seconds'] is not None else '':>9}  {title}\n             {s['note']}")
+    a(f"\nRECORDED TEST730 (730.log git blob {LOCKS['730.log']}) — documentation, not re-run")
+    a(f"  result {REC['result']} · {REC['checks_passed']}/{REC['checks_total']} logged checks PASS · panel SHA-256 {REC['panel_sha256']}")
+    for k in SRC_IDS:
+        s=REC["sources"][k];a(f"  {k} {s['pmcid']} · {s['title']}\n      licence {s['license']} · excerpt SHA-256 {s['excerpt_sha256']} · {REC['body_tokens'][k]} tokens · cartridge {REC['commits'][k]['sha256']}")
+    a(f"  MASTER {REC['body_tokens']['MASTER']} tokens · commit SHA-256 {REC['commits']['MASTER']['sha256']}")
+    a("  6/6 responses generated · independent correctness: NOT YET GRADED")
+    for qid,q in REC["questions"].items():a(f"\n  {qid} ({q['seconds']} s) {q['question']}\n  --- recorded answer (verbatim, {answer_status(qid)}) ---\n  "+q["answer"].replace("\n","\n  "))
+    a("\nCARTRIDGES IN THIS SESSION")
+    for c in CARTS:
+        x=ART.get(c) or {};a(f"  {c}: {x.get('status')} · {x.get('origin')} · file {x.get('path')} · sha256 now {x.get('sha256_now')} · equal to record {x.get('equal_record')}")
+    if fp:a(f"\nMASTER FAST PATH (live) {json.dumps(jsafe(fp),ensure_ascii=False)}")
+    if LIVE.get("parity"):a(f"PARITY (live) {LIVE['parity']['matched']}/{LIVE['parity']['layers']}")
+    for qid,r in (LIVE.get("repro") or {}).items():a(f"\nREPRODUCTION {qid} identical to record: {r['identical_to_record']} · {r['n_generated']} tokens · {r['seconds']} s\n  "+r["answer"].replace("\n","\n  "))
+    for qid,v in (LIVE.get("newq") or {}).items():
+        a(f"\nNEW QUESTION {qid} (not sealed) {v['question']}")
+        for lab in ("master","no_memory"):r=v[lab];a(f"  [{lab}] {r['n_generated']} tok · {r['seconds']} s · keywords {r['markers']}\n  "+r["answer"].replace("\n","\n  "))
+    for r in LIVE.get("user_queries") or []:a(f"\nLIVE QUERY (user, not sealed) {r['question']}\n  {r['n_generated']} tok · {r['seconds']} s\n  "+r["answer"].replace("\n","\n  "))
+    a(f"\nLIVE CHECKS {sum(c['passed'] for c in LIVE_CHECKS)}/{len(LIVE_CHECKS)} PASS")
+    for c in LIVE_CHECKS:a(f"  {'PASS' if c['passed'] else 'FAIL'} {c['name']} {c['detail'] if c['detail'] is not None else ''}")
+    a("\nSCOPE  The completed TEST730 run is documented, not repeated. Reading and synthesis used general programmed prompts (no zero-prompt autonomy claim). "
+      "The six answers are not graded; no superhuman claim. New questions are not part of the sealed panel.")
+    a(f"{AUTHOR} · {ORG} · {LICENSE_NAME} · {COPYRIGHT} · articles CC BY 4.0 © their authors")
+    RUN_SUMMARY.write_text("\n".join(L)+"\n",encoding="utf-8")
+def _category(rel):
+    if rel.startswith("figures"):return "figure"
+    if rel.startswith("measurements"):return "measurement (this session)"
+    if rel.startswith("test730_record"):return "TEST730 record (locked, documentation)"
+    if rel.startswith("locked_sources"):return "locked source"
+    if rel.startswith("recovery"):return "recovery manifest"
+    return "session record"
+def package_session():
+    write_measurements();write_run_summary()
+    files=[(p,str(p.relative_to(SESSION_DIR))) for p in sorted(SESSION_DIR.rglob("*")) if p.is_file() and p.suffix not in(".zip",".tmp",".pt") and p!=MANIFEST]
+    files+=[(EVID_DIR/n,f"locked_sources/{n}") for n in LOCKS if (EVID_DIR/n).is_file()]
+    if (RECOVERY_DIR/"RECOVERY_manifest.json").is_file():files.append((RECOVERY_DIR/"RECOVERY_manifest.json","recovery/RECOVERY_manifest.json"))
+    man=OrderedDict((arc,dict(sha256=sha_file(p),bytes=p.stat().st_size,category=_category(arc))) for p,arc in files)
+    man["cartridge files (not packaged — hashes only)"]={c:dict(path=(ART.get(c) or {}).get("path"),sha256=(ART.get(c) or {}).get("sha256_now"),record=REC["commits"][c]["sha256"]) for c in CARTS}
+    dump_json(MANIFEST,dict(session=SESSION_ID,utc=utc_now(),simulation=SIM,note="SHA-256 of every file of this RUN (no ZIP is made; each file is downloaded directly). Cartridge tensors (.pt) are listed by hash only.",files=man))
+    return str(MANIFEST)
+def download_items():
+    items=[("Run summary",RUN_SUMMARY),("Live measurements",LIVE_FILE),("Verification record",CHECK_FILE),("Provenance table (CSV)",SESSION_DIR/"PROVENANCE_TABLE.csv"),
+           ("SHA-256 manifest",MANIFEST),("Session log",SESSION_LOG),("Engine log",ENGINE_LOG),("Cartridge record",DATA_DIR/"CARTRIDGES.json"),("X-ray summary",DATA_DIR/"XRAY_SUMMARY.json"),
+           ("Session events, timestamped (JSONL)",SESSION_EVENTS),("Stage record",DATA_DIR/"STAGES.json"),("Figure generation log",SESSION_DIR/"FIGURE_GENERATION.log"),
+           ("Figure manifest",SESSION_DIR/"FIGURES_MANIFEST.json"),("Live query answers",LIVE_QA),("Parsed TEST730 record (RECORD, not this session)",REC_DIR/"TEST730_RECORD_PARSED.json"),
+           ("TEST730 log (RECORD, locked)",REC_DIR/"730.log")]
+    return [(l,str(p)) for l,p in items if Path(p).is_file()]
+
+# ---------------------------------------------------------------------------------------------------------------------
+# THE RUN PIPELINE (one button) — every stage reported; failures are recorded and never shown as success
+# ---------------------------------------------------------------------------------------------------------------------
+def stage_figures():
+    if E.get("tok") is not None and "recorded_answer_tokens" not in LIVE:
+        LIVE["recorded_answer_tokens"]={qid:len(E["tok"](q["answer"],add_special_tokens=False).input_ids) for qid,q in REC["questions"].items()}
+        LIVE["recorded_synthesis_tokens"]=len(E["tok"](REC["synthesis"],add_special_tokens=False).input_ids)
+    errs=render_figures();n=len(FIG_FILES)
+    qcf=[k for k,v in FIG_FILES.items() if not (v.get("layout_qc") or {}).get("passed") or not (v.get("jpeg_qc") or {}).get("passed")]
+    note=f"{n}/{len(FIGURES)} JPEG figures written (300 dpi)"
+    if errs or qcf:raise RuntimeError(note+(f" · NOT GENERATED: {errs}" if errs else "")+(f" · LAYOUT/JPEG QC FAILED: {', '.join(qcf)} (shown, marked QC FAIL)" if qcf else ""))
+    return note+" · layout QC and JPEG QC passed for every figure"
+def stage_package():
+    package_session();n=len(download_items())
+    return f"{len(FIG_FILES)} JPEG figures + {n} records/logs, each downloadable directly · SHA-256 manifest {MANIFEST.name} (no ZIP)"
+STAGE_FUNCS=OrderedDict([("SOURCES",stage_sources),("GPU",stage_gpu),("MODEL",stage_model),("CARTRIDGES",stage_cartridges),("MASTER",stage_master),("PARITY",stage_parity),
+                         ("XRAY",stage_xray),("REPRO",stage_repro),("NEWQ",stage_newq),("INTEGRITY",stage_integrity),("FIGURES",stage_figures),("PACKAGE",stage_package)])
+NEEDS=dict(MASTER=("MODEL","CARTRIDGES"),PARITY=("MASTER",),XRAY=("MODEL","CARTRIDGES"),REPRO=("MASTER",),NEWQ=("MASTER",),INTEGRITY=("MODEL",))
+def _is_oom(ex):return "OutOfMemoryError" in type(ex).__name__ or "out of memory" in str(ex).lower() or "GPU_SAFETY_STOP" in str(ex)
+RUNS_DONE=[]
+def _new_run_dir():
+    """every RUN after the first one writes into its OWN folder (figures, measurements, logs); nothing of an earlier RUN
+    (live results, figures, measurements, checks, mounted memory) is carried into the new one"""
+    global SESSION_ID,SESSION_DIR,FIG_DIR,DATA_DIR,REC_DIR,XRAY_DIR,SESSION_LOG,SESSION_EVENTS,ENGINE_LOG,LIVE_QA,LIVE_FILE,CHECK_FILE,RUN_SUMMARY,MANIFEST,ZIP_PATH
+    if RUNS_DONE:
+        SESSION_ID=datetime.now().astimezone().strftime("P730-%Y%m%d-%H%M%S")+f"-RUN{len(RUNS_DONE)+1}"
+        SESSION_DIR=DEMO_ROOT/"sessions"/SESSION_ID;FIG_DIR=SESSION_DIR/"figures";DATA_DIR=SESSION_DIR/"measurements";REC_DIR=SESSION_DIR/"test730_record";XRAY_DIR=DATA_DIR/"xray"
+        for d in (SESSION_DIR,FIG_DIR,DATA_DIR,REC_DIR,XRAY_DIR):d.mkdir(parents=True,exist_ok=True)
+        SESSION_LOG=SESSION_DIR/"SESSION.log";SESSION_EVENTS=SESSION_DIR/"SESSION_EVENTS.jsonl";ENGINE_LOG=SESSION_DIR/"ENGINE.log"
+        LIVE_QA=SESSION_DIR/"LIVE_QUERY_ANSWERS.jsonl";LIVE_FILE=DATA_DIR/"LIVE_MEASUREMENTS.json";CHECK_FILE=SESSION_DIR/"VERIFICATION_RECORD.json"
+        RUN_SUMMARY=SESSION_DIR/"RUN_SUMMARY.txt";MANIFEST=SESSION_DIR/"SHA256_MANIFEST.json";ZIP_PATH=SESSION_DIR/f"{SESSION_ID}_AKBASCORE_PROMETHEUS_TEST730_DEMO.zip"
+        dump_json(REC_DIR/"TEST730_RECORD_PARSED.json",REC);(REC_DIR/"730.log").write_bytes(RAW["730.log"]);(REC_DIR/"730.py").write_bytes(RAW["730.py"])
+        slog("NEW_RUN",f"RUN {len(RUNS_DONE)+1} writes only into {SESSION_DIR} (earlier runs: {', '.join(RUNS_DONE)})")
+    RUNS_DONE.append(SESSION_ID)
+    for k in ("master_memory","master_gpu_cp","master_seals_before"):STATE.pop(k,None)       # no memory of an earlier RUN is reused
+    if E.get("release"):
+        try:E["release"]()
+        except Exception:pass
+    keep={k:LIVE[k] for k in ("provenance",) if k in LIVE};LIVE.clear();LIVE.update(keep,session=SESSION_ID)
+    LIVE_CHECKS[:]=[c for c in LIVE_CHECKS if c.get("stage") is None]         # keep only the start-up checks; every run records its own
+    FIG_FILES.clear();FIG_ERRORS.clear();PROVENANCE.clear();STATE["fig_version"]+=1
+def run_verdict():
+    st=STATE["stages"];bad=[k for k,v in st.items() if v["status"] in("fail","skip")]
+    if STATE.get("running"):return "RUNNING"
+    if not STATE.get("finished"):return "NOT STARTED"
+    if not bad:return "COMPLETE — every stage ran and passed"
+    return "INCOMPLETE — not a completed live experiment: "+", ".join(f"{k} {st[k]['status'].upper()}" for k in bad)
+def run_pipeline():
+    _new_run_dir()
+    STATE.update(running=True,started=utc_now(),finished=None,error=None)
+    for k in STAGES:STATE["stages"][k]=dict(status="wait",seconds=None,note="")
+    banner(f"RUN · {local_now()} · session {SESSION_ID}");live=False
+    try:
+        for key,fn in STAGE_FUNCS.items():
+            STATE["current"]=key
+            if key in GPU_STAGES and not live:stage_set(key,"skip","not run — "+("no A100 80 GB GPU in this runtime (REPLAY MODE)" if STATE["mode"]!="LIVE" else "the model is not loaded"));continue
+            bad=[d for d in NEEDS.get(key,()) if STATE["stages"][d]["status"]!="done"]
+            if bad:stage_set(key,"skip","not run — requires "+", ".join(bad));continue
+            stage_set(key,"run");_emit(f"── [{list(STAGES).index(key)+1}/{len(STAGES)}] {STAGES[key]}");t=time.perf_counter()
+            try:
+                with GPU_LOCK:r=fn()
+                if key=="GPU":
+                    live,note=r;stage_set(key,"done" if live else "skip",note,time.perf_counter()-t)
+                else:stage_set(key,"done",r,time.perf_counter()-t)
+                slog("STAGE_DONE",key,seconds=round(time.perf_counter()-t,2),note=STATE["stages"][key]["note"])
+            except Exception as ex:
+                tb=traceback.format_exc();stage_set(key,"fail",f"{type(ex).__name__}: {ex}",time.perf_counter()-t)
+                slog("STAGE_FAILED",key,error=f"{type(ex).__name__}: {ex}",traceback=tb[-3000:])
+                if key=="MODEL":live=False
+                if _is_oom(ex):
+                    try:E["release"]()
+                    except Exception:pass
+            try:write_measurements()
+            except Exception:pass
+    finally:
+        STATE.update(running=False,finished=utc_now(),current=None);bump()
+        try:
+            write_run_summary();dump_json(DATA_DIR/"STAGES.json",dict(verdict=run_verdict(),stages=STATE["stages"],session=SESSION_ID))
+            if MANIFEST.is_file():package_session()
+        except Exception:pass
+        banner(f"RUN VERDICT: {run_verdict()}\nRUN finished {local_now()} · mode {STATE['mode']} · "+" · ".join(f"{k}:{v['status']}" for k,v in STATE["stages"].items()))
+RUN_THREAD={"t":None}
+def start_run():
+    """starts the pipeline once; pressing RUN while it runs only follows the progress"""
+    t=RUN_THREAD["t"]
+    if t is not None and t.is_alive():return False
+    if STATE.get("finished") and STATE["mode"]=="LIVE" and STATE.get("master_memory") is not None:return False   # completed live run: results stay; reload the cell for a new run
+    RUN_THREAD["t"]=threading.Thread(target=run_pipeline,daemon=True,name="P730-RUN");RUN_THREAD["t"].start();return True
+# ===== END OF PART 2/3 =====
