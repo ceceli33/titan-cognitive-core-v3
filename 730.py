@@ -98,6 +98,7 @@ def seal_cp(cp):
 def memory_seals(mem):return [(kv_digest(k),kv_digest(v)) for k,v in mem]
 def compare_seals(a,b):return len(a)==len(b) and all(x==y for x,y in zip(a,b))
 
+# TEST730 FAST PATH: one master reload/initialize for six queries; model and CUT3 engine unchanged.
 # TEST730: real 2026 publications; source capture -> immutable physical CUT3 -> free model synthesis -> physical master -> six sealed questions.
 # IMPORTANT: This is an orchestrated reading/synthesis pipeline, NOT self-directed unsupervised learning.
 # No reference answers, preferred conclusions, or hard-coded evidence relationships are supplied to the model.
@@ -330,11 +331,20 @@ try:
  original=dict(entries);entries.clear();entries['MASTER']=original['MASTER']
  check('MASTER_ONLY_ACTIVE',set(entries)=={'MASTER'})
  check('SEALED_QUESTIONS_UNCHANGED',sha(panel_file.read_bytes())==panel_sha)
+ # FAST PATH: one verified SSD load and one 80-layer native initialization for all six queries.
+ # Preserve original immutable prefix KV tensors; the locked answer() handles query-local cache.
+ # Seal before/after to detect any accidental in-place cache mutation.
+ t_fast=time.perf_counter();master_cpu=safe_load(entries['MASTER']);master_gpu=to_gpu(master_cpu);del master_cpu
+ master_memory=initialize_native(master_gpu);master_seals_before=memory_seals(master_memory)
+ log('DEMO_FAST_PATH_READY',{'layers':len(master_memory),'init_seconds':round(time.perf_counter()-t_fast,3)})
  results=[]
  for q in QUESTION_SET:
-  raw=physical_read(entries['MASTER'],q['question'])
-  rec={**q,'answer':raw,'answer_sha256':sha(raw.encode()),'nonempty':bool(raw.strip())}
-  results.append(rec);R['questions']=results;save();log('DEMO_QUESTION',q['id'],q['question']);log('DEMO_ANSWER',q['id'],raw)
+  t_question=time.perf_counter()
+  raw=answer(master_memory,q['question'])
+  rec={**q,'answer':raw,'answer_sha256':sha(raw.encode()),'nonempty':bool(raw.strip()),'seconds':round(time.perf_counter()-t_question,3)}
+  results.append(rec);R['questions']=results;save();log('DEMO_QUESTION',q['id'],q['question']);log('DEMO_ANSWER',q['id'],raw);log('DEMO_QUESTION_SECONDS',q['id'],rec['seconds'])
+ check('FAST_PATH_MASTER_PREFIX_UNCHANGED',compare_seals(master_seals_before,memory_seals(master_memory)))
+ del master_memory,master_seals_before,master_gpu;release()
  # A baseline provides contrast, not an automatic correctness grade.
  baseline=[]
  for q in QUESTION_SET:
@@ -348,7 +358,7 @@ try:
  check('WEIGHTS_SENTINEL_UNCHANGED',sentinel()==before)
  entries.clear();entries.update(original)
  check('ALL_PHYSICAL_SOURCES_PRESERVED',len(entries)==4 and all((CART_DIR/(cid+'.pt')).exists() for cid in entries))
- summary={'sources':3,'master':1,'question_count':len(results),'human_questions':3,'advanced_questions':3,
+ summary={'fast_path_single_master_init':True,'sources':3,'master':1,'question_count':len(results),'human_questions':3,'advanced_questions':3,
   'answered_nonempty':sum(x['nonempty'] for x in results),'ssd_sha_verified':True,'master_80_layer_parity':True,
   'weights_unchanged':True,'independent_correctness_not_yet_graded':True}
  R['summary']=summary;R['status']='DEMO_COMPLETED_UNGRADED' if all(x['nonempty'] for x in results) else 'DEMO_INCOMPLETE';save()
