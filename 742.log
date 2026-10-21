@@ -1,0 +1,216 @@
+ PASS 740_GIT_BLOB_LOCK 
+PASS CUDA 
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS 709_GIT_BLOB_LOCK 
+PASS 730_SHA256_LOCK 
+PASS LOCKED_SYMBOLS_709.py []
+PASS LOCKED_SYMBOLS_730.py []
+config.json: 100% 663/663 [00:00<00:00, 72.4kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 841kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+vocab.json: 100% 2.78M/2.78M [00:00<00:00, 58.5MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 70.1MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 131MB/s]PASS LABELS_ONE_TOKEN ([362], [425])
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.38MB/s]Download complete:   125GB, 1.54GB/s  Reconstruction complete: 100%  145GB /  145GB,  273MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00,  9.00s/it]Loading weights: 100% 963/963 [06:23<00:00,  3.26it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.7kB/s]PASS ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C01 
+SEALED_CARTRIDGE C01 9d50f89aed6296edc44a5d39928d8914d52732cfcf9a4f6108f83c7e1a9bb80c tokens 117
+SOURCE_FORGED C01 seconds 2.112
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C02 
+SEALED_CARTRIDGE C02 ba1c6b4886dd8905e4e2d949fcc227e4994875533cbd0358f7c9540d5da1f165 tokens 169
+SOURCE_FORGED C02 seconds 0.995
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C03 
+SEALED_CARTRIDGE C03 a4fdd11033ebc5738206fc9dacb331d85fd747248c695348b0ad41d5c0ebdac0 tokens 156
+SOURCE_FORGED C03 seconds 0.849
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C03_DECOY 
+SEALED_CARTRIDGE C03_DECOY 34351da810f876daead473803620b0b1b70c48915f617c4fc25cae94617bf06e tokens 156
+SOURCE_FORGED C03_DECOY seconds 0.829
+PASS FOCUS_MODE_S01 
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS DISK_SHA_C02 
+PASS TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 117, 'new_tokens': 138, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 38.931, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 38.931, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.968, 'allocated_gib': 38.436, 'peak_gib': 38.931, 'total_gib': 79.251}
+APPEND_PROGRESS 128 / 138 GPU {'free_gib': 39.378, 'allocated_gib': 38.475, 'peak_gib': 38.971, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 117, 'new_tokens': 255}
+PASS JOINT_LENGTH_S01 
+PASS FOCUS_LENGTH_MATCH_S01 ('semantic', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_S01 
+PASS CP_SHAPE_S01 
+SEALED_CARTRIDGE S01 8f461e71dfc361a859e4ae79c750b2961fe6768f2dc072b2817e52f751693719 tokens 285
+PASS FOCUS_MODE_S01_NOFOCUS 
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS DISK_SHA_C02 
+PASS TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 117, 'new_tokens': 138, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 38.971, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 38.971, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.968, 'allocated_gib': 38.436, 'peak_gib': 38.971, 'total_gib': 79.251}
+APPEND_PROGRESS 128 / 138 GPU {'free_gib': 39.378, 'allocated_gib': 38.475, 'peak_gib': 38.971, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 117, 'new_tokens': 255}
+PASS JOINT_LENGTH_S01_NOFOCUS 
+PASS JOINT_H3_LENGTH_S01_NOFOCUS 
+PASS CP_SHAPE_S01_NOFOCUS 
+SEALED_CARTRIDGE S01_NOFOCUS dad82cb138b25d70e9d2e1aff01c839ac0f9f7d36a2254772395049b5d998792 tokens 255
+PASS FOCUS_MODE_S01_NEUTRAL 
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS DISK_SHA_C02 
+PASS TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 117, 'new_tokens': 138, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 38.971, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 38.971, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.968, 'allocated_gib': 38.436, 'peak_gib': 38.971, 'total_gib': 79.251}
+APPEND_PROGRESS 128 / 138 GPU {'free_gib': 39.378, 'allocated_gib': 38.475, 'peak_gib': 38.971, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 117, 'new_tokens': 255}
+PASS JOINT_LENGTH_S01_NEUTRAL 
+PASS NEUTRAL_POOL_LENGTH 
+PASS FOCUS_LENGTH_MATCH_S01_NEUTRAL ('neutral', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_S01_NEUTRAL 
+PASS CP_SHAPE_S01_NEUTRAL 
+SEALED_CARTRIDGE S01_NEUTRAL 63e31cba510187043fd86c020d300bdf8b8a66ea3e6ad818ee645c0ced0ae296 tokens 285
+PASS FOCUS_MODE_H01 
+PASS DISK_SHA_S01 
+PASS TENSOR_SHA_S01 
+PASS DISK_SHA_C03 
+PASS TENSOR_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 285, 'new_tokens': 125, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 38.982, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 38.982, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.909, 'allocated_gib': 38.494, 'peak_gib': 38.982, 'total_gib': 79.251}
+APPEND_PROGRESS 125 / 125 GPU {'free_gib': 39.325, 'allocated_gib': 38.532, 'peak_gib': 39.028, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 285, 'new_tokens': 410}
+PASS JOINT_LENGTH_H01 
+PASS FOCUS_LENGTH_MATCH_H01 ('semantic', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_H01 
+PASS CP_SHAPE_H01 
+SEALED_CARTRIDGE H01 12e35b9308c211f3a250e928b5787a25f5f39f81c2908899ceb047ff8846c8cf tokens 440
+PASS FOCUS_MODE_H01_NOFOCUS 
+PASS DISK_SHA_S01_NOFOCUS 
+PASS TENSOR_SHA_S01_NOFOCUS 
+PASS DISK_SHA_C03 
+PASS TENSOR_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 255, 'new_tokens': 125, 'gpu': {'free_gib': 39.302, 'allocated_gib': 38.48, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.302, 'allocated_gib': 38.48, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.923, 'allocated_gib': 38.484, 'peak_gib': 39.028, 'total_gib': 79.251}
+APPEND_PROGRESS 125 / 125 GPU {'free_gib': 39.335, 'allocated_gib': 38.522, 'peak_gib': 39.028, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 255, 'new_tokens': 380}
+PASS JOINT_LENGTH_H01_NOFOCUS 
+PASS JOINT_H3_LENGTH_H01_NOFOCUS 
+PASS CP_SHAPE_H01_NOFOCUS 
+SEALED_CARTRIDGE H01_NOFOCUS d103d4e67d320978df926acfa21915ccbaa23c1ee1e4e52d4bfc69ce01d6f338 tokens 380
+PASS FOCUS_MODE_H01_NEUTRAL 
+PASS DISK_SHA_S01_NEUTRAL 
+PASS TENSOR_SHA_S01_NEUTRAL 
+PASS DISK_SHA_C03 
+PASS TENSOR_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 285, 'new_tokens': 125, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.909, 'allocated_gib': 38.494, 'peak_gib': 39.028, 'total_gib': 79.251}
+APPEND_PROGRESS 125 / 125 GPU {'free_gib': 39.325, 'allocated_gib': 38.532, 'peak_gib': 39.028, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 285, 'new_tokens': 410}
+PASS JOINT_LENGTH_H01_NEUTRAL 
+PASS NEUTRAL_POOL_LENGTH 
+PASS FOCUS_LENGTH_MATCH_H01_NEUTRAL ('neutral', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_H01_NEUTRAL 
+PASS CP_SHAPE_H01_NEUTRAL 
+SEALED_CARTRIDGE H01_NEUTRAL ed76176c27e68e08f40a8ca650500e660599abc2b1e767019c36a3a03a8be00a tokens 440
+PASS FOCUS_MODE_MISSING_C02 
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS DISK_SHA_C03 
+PASS TENSOR_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 117, 'new_tokens': 125, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.968, 'allocated_gib': 38.435, 'peak_gib': 39.028, 'total_gib': 79.251}
+APPEND_PROGRESS 125 / 125 GPU {'free_gib': 39.38, 'allocated_gib': 38.474, 'peak_gib': 39.028, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 117, 'new_tokens': 242}
+PASS JOINT_LENGTH_MISSING_C02 
+PASS JOINT_H3_LENGTH_MISSING_C02 
+PASS CP_SHAPE_MISSING_C02 
+SEALED_CARTRIDGE MISSING_C02 fc542d157cbcd7ff3f21aff7259ebd4b5989dbf9c487e35b5674dc3d1af10285 tokens 242
+PASS FOCUS_MODE_H01_DECOY 
+PASS DISK_SHA_S01 
+PASS TENSOR_SHA_S01 
+PASS DISK_SHA_C03_DECOY 
+PASS TENSOR_SHA_C03_DECOY 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 285, 'new_tokens': 125, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 39.028, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.909, 'allocated_gib': 38.494, 'peak_gib': 39.028, 'total_gib': 79.251}
+APPEND_PROGRESS 125 / 125 GPU {'free_gib': 39.325, 'allocated_gib': 38.532, 'peak_gib': 39.028, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 285, 'new_tokens': 410}
+PASS JOINT_LENGTH_H01_DECOY 
+PASS FOCUS_LENGTH_MATCH_H01_DECOY ('semantic', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_H01_DECOY 
+PASS CP_SHAPE_H01_DECOY 
+SEALED_CARTRIDGE H01_DECOY cfbf3258f2111d0028473cd119be904bbf71af15080c6d408acf9354bf64881f tokens 440
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_FLAT_TEXT 
+SEALED_CARTRIDGE FLAT_TEXT 4227987873b661257524f718776aecc4aa5616fb25da3527ab9a44f529b17893 tokens 380
+SOURCE_FORGED FLAT_TEXT seconds 1.252
+PASS FLAT_SOURCES_SHA 
+PASS DISK_SHA_H01 
+PASS TENSOR_SHA_H01 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT H01 36 / 36 {'person_to_place': 12, 'place_to_person': 12, 'instrument_to_place': 12}
+PASS DISK_SHA_H01_NOFOCUS 
+PASS TENSOR_SHA_H01_NOFOCUS 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT H01_NOFOCUS 36 / 36 {'person_to_place': 12, 'place_to_person': 12, 'instrument_to_place': 12}
+PASS DISK_SHA_H01_NEUTRAL 
+PASS TENSOR_SHA_H01_NEUTRAL 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT H01_NEUTRAL 36 / 36 {'person_to_place': 12, 'place_to_person': 12, 'instrument_to_place': 12}
+PASS DISK_SHA_FLAT_TEXT 
+PASS TENSOR_SHA_FLAT_TEXT 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT FLAT_TEXT 36 / 36 {'person_to_place': 12, 'place_to_person': 12, 'instrument_to_place': 12}
+PASS DISK_SHA_S01 
+PASS TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT S01 19 / 36 {'person_to_place': 6, 'place_to_person': 6, 'instrument_to_place': 7}
+PASS DISK_SHA_C03 
+PASS TENSOR_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT C03 18 / 36 {'person_to_place': 6, 'place_to_person': 5, 'instrument_to_place': 7}
+PASS DISK_SHA_MISSING_C02 
+PASS TENSOR_SHA_MISSING_C02 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT MISSING_C02 25 / 36 {'person_to_place': 8, 'place_to_person': 8, 'instrument_to_place': 9}
+PASS DISK_SHA_H01_DECOY 
+PASS TENSOR_SHA_H01_DECOY 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT H01_DECOY 23 / 36 {'person_to_place': 6, 'place_to_person': 8, 'instrument_to_place': 9}
+PASS PANEL_UNCHANGED 
+PASS FINAL_DISK_C01 
+PASS FINAL_DISK_C02 
+PASS FINAL_DISK_C03 
+PASS FINAL_DISK_C03_DECOY 
+PASS FINAL_DISK_S01 
+PASS FINAL_DISK_S01_NOFOCUS 
+PASS FINAL_DISK_S01_NEUTRAL 
+PASS FINAL_DISK_H01 
+PASS FINAL_DISK_H01_NOFOCUS 
+PASS FINAL_DISK_H01_NEUTRAL 
+PASS FINAL_DISK_MISSING_C02 
+PASS FINAL_DISK_H01_DECOY 
+PASS FINAL_DISK_FLAT_TEXT 
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+TEST742_RESULT {"status": "COMPLETED_CROSS_SOURCE_EVALUATION", "scores": {"H01": 36, "H01_NOFOCUS": 36, "H01_NEUTRAL": 36, "FLAT_TEXT": 36, "S01": 19, "C03": 18, "MISSING_C02": 25, "H01_DECOY": 23}, "by_kind": {"H01": {"person_to_place": 12, "place_to_person": 12, "instrument_to_place": 12}, "H01_NOFOCUS": {"person_to_place": 12, "place_to_person": 12, "instrument_to_place": 12}, "H01_NEUTRAL": {"person_to_place": 12, "place_to_person": 12, "instrument_to_place": 12}, "FLAT_TEXT": {"person_to_place": 12, "place_to_person": 12, "instrument_to_place": 12}, "S01": {"person_to_place": 6, "place_to_person": 6, "instrument_to_place": 7}, "C03": {"person_to_place": 6, "place_to_person": 5, "instrument_to_place": 7}, "MISSING_C02": {"person_to_place": 8, "place_to_person": 8, "instrument_to_place": 9}, "H01_DECOY": {"person_to_place": 6, "place_to_person": 8, "instrument_to_place": 9}}, "hierarchy_exceeds_flat_text_accuracy": false, "hierarchy_exceeds_equal_information_controls": false, "margin_deltas": {"H01_NOFOCUS": -0.99251, "H01_NEUTRAL": -1.14399, "FLAT_TEXT": -1.47222, "S01": 13.12998, "C03": 14.46961, "MISSING_C02": 11.05528, "H01_DECOY": 12.21018}, "paired": {"H01_NOFOCUS": {"hier_only_correct": 0, "control_only_correct": 0, "same_prediction": 36}, "H01_NEUTRAL": {"hier_only_correct": 0, "control_only_correct": 0, "same_prediction": 36}, "FLAT_TEXT": {"hier_only_correct": 0, "control_only_correct": 0, "same_prediction": 36}, "S01": {"hier_only_correct": 17, "control_only_correct": 0, "same_prediction": 19}, "C03": {"hier_only_correct": 18, "control_only_correct": 0, "same_prediction": 18}, "MISSING_C02": {"hier_only_correct": 11, "control_only_correct": 0, "same_prediction": 25}, "H01_DECOY": {"hier_only_correct": 13, "control_only_correct": 0, "same_prediction": 23}}, "physical_tokens": {"C01": 117, "C02": 169, "C03": 156, "C03_DECOY": 156, "S01": 285, "S01_NOFOCUS": 255, "S01_NEUTRAL": 285, "H01": 440, "H01_NOFOCUS": 380, "H01_NEUTRAL": 440, "MISSING_C02": 242, "H01_DECOY": 440, "FLAT_TEXT": 380}, "novel_scientific_synthesis_proven": false, "elapsed_seconds": 915.56}
+TEST742_FILES /content/AKBASCORE_TEST742/TEST742_results.json /content/AKBASCORE_TEST742/TEST742.log
