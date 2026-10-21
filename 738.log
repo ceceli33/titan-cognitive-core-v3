@@ -1,0 +1,100 @@
+ PASS CUDA 
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS 709_GIT_BLOB_LOCK 
+PASS 730_SHA256_LOCK 
+PASS LOCKED_SYMBOLS_709.py []
+PASS LOCKED_SYMBOLS_730.py []
+config.json: 100% 663/663 [00:00<00:00, 76.6kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 939kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 78.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.8MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 118MB/s]PASS LABELS_ONE_TOKEN ([362], [425])
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.86MB/s]Download complete:   125GB, 1.56GB/s  Reconstruction complete: 100%  145GB /  145GB,  582MB/s  Fetching 37 files: 100% 37/37 [06:46<00:00,  9.80s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.9kB/s]PASS ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C01 
+SEALED_CARTRIDGE C01 9d50f89aed6296edc44a5d39928d8914d52732cfcf9a4f6108f83c7e1a9bb80c tokens 117
+SOURCE_FORGED C01 seconds 1.807
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C02 
+SEALED_CARTRIDGE C02 c65ba2b12d487bbe4bfd94566110c3e825d215940e812caa494b4e6340b3fdef tokens 142
+SOURCE_FORGED C02 seconds 0.961
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C03_DECOY 
+SEALED_CARTRIDGE C03_DECOY 1aa6d0f19cfced076541d7fd8361d0c8a425e4f1efe66b45ee079cdea4c725d6 tokens 142
+SOURCE_FORGED C03_DECOY seconds 0.788
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS DISK_SHA_C02 
+PASS TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 117, 'new_tokens': 111, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.433, 'peak_gib': 38.93, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.433, 'peak_gib': 38.93, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.968, 'allocated_gib': 38.435, 'peak_gib': 38.93, 'total_gib': 79.251}
+APPEND_PROGRESS 111 / 111 GPU {'free_gib': 39.384, 'allocated_gib': 38.469, 'peak_gib': 38.963, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 117, 'new_tokens': 228}
+PASS JOINT_LENGTH_S01 
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_S01 
+PASS CP_SHAPE_S01 
+SEALED_CARTRIDGE S01 3aff343d3a8ee76a55d11e80918e07d5e7bdd5ca15b23fbdcf6b86f953bf7355 tokens 258
+PASS DISK_SHA_C02 
+PASS TENSOR_SHA_C02 
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 142, 'new_tokens': 86, 'gpu': {'free_gib': 39.37, 'allocated_gib': 38.44, 'peak_gib': 38.963, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.37, 'allocated_gib': 38.44, 'peak_gib': 38.963, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.958, 'allocated_gib': 38.442, 'peak_gib': 38.963, 'total_gib': 79.251}
+APPEND_PROGRESS 86 / 86 GPU {'free_gib': 39.384, 'allocated_gib': 38.469, 'peak_gib': 38.963, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 142, 'new_tokens': 228}
+PASS JOINT_LENGTH_S01_REVERSE 
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_S01_REVERSE 
+PASS CP_SHAPE_S01_REVERSE 
+SEALED_CARTRIDGE S01_REVERSE 33b856dbf0422708611b563ffaca0ea76601f8c97a1074f3d0593add9da4ea9d tokens 258
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS DISK_SHA_C03_DECOY 
+PASS TENSOR_SHA_C03_DECOY 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 117, 'new_tokens': 111, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.433, 'peak_gib': 38.963, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.433, 'peak_gib': 38.963, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.968, 'allocated_gib': 38.435, 'peak_gib': 38.963, 'total_gib': 79.251}
+APPEND_PROGRESS 111 / 111 GPU {'free_gib': 39.384, 'allocated_gib': 38.469, 'peak_gib': 38.963, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 117, 'new_tokens': 228}
+PASS JOINT_LENGTH_S01_DECOY 
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_S01_DECOY 
+PASS CP_SHAPE_S01_DECOY 
+SEALED_CARTRIDGE S01_DECOY 22e12a3cfacf7f2cb6633c9c4c3c38c4db9fe3ee7ef361d45e9eb09bc05ac539 tokens 258
+PASS DISK_SHA_S01 
+PASS TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT S01 12 / 12
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT C01 7 / 12
+PASS DISK_SHA_C02 
+PASS TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT C02 6 / 12
+PASS DISK_SHA_S01_REVERSE 
+PASS TENSOR_SHA_S01_REVERSE 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT S01_REVERSE 12 / 12
+PASS DISK_SHA_S01_DECOY 
+PASS TENSOR_SHA_S01_DECOY 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT S01_DECOY 9 / 12
+PASS PANEL_UNCHANGED 
+PASS FINAL_DISK_C01 
+PASS FINAL_DISK_C02 
+PASS FINAL_DISK_C03_DECOY 
+PASS FINAL_DISK_S01 
+PASS FINAL_DISK_S01_REVERSE 
+PASS FINAL_DISK_S01_DECOY 
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+TEST738_RESULT {"status": "COMPLETED_UNGRADED_SYNTHESIS", "scores": {"S01": 12, "C01": 7, "C02": 6, "S01_REVERSE": 12, "S01_DECOY": 9}, "s01_exceeds_ablation_controls": true, "elapsed_seconds": 829.93}
+TEST738_FILES /content/AKBASCORE_TEST738/TEST738_results.json /content/AKBASCORE_TEST738/TEST738.log
