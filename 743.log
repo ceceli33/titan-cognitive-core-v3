@@ -1,0 +1,115 @@
+ PASS 740_GIT_BLOB_LOCK 
+PASS CUDA 
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+GPU_MEMORY_GIB 79.25 STRICT_80GB_ENGINE
+PASS 709_GIT_BLOB_LOCK 
+PASS 730_SHA256_LOCK 
+PASS LOCKED_SYMBOLS_709.py []
+PASS LOCKED_SYMBOLS_730.py []
+config.json: 100% 663/663 [00:00<00:00, 80.3kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 956kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 84.8MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 74.1MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 124MB/s]PASS LABELS_ONE_TOKEN ([362], [425])
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.14MB/s]Download complete:   125GB, 1.61GB/s  Reconstruction complete: 100%  145GB /  145GB,  412MB/s  Fetching 37 files: 100% 37/37 [06:51<00:00,  8.71s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.31it/s]generation_config.json: 100% 242/242 [00:00<00:00, 32.4kB/s]PASS ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS MODEL_GPU_FREE_HEADROOM 
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C01 
+SEALED_CARTRIDGE C01 9d50f89aed6296edc44a5d39928d8914d52732cfcf9a4f6108f83c7e1a9bb80c tokens 117
+SOURCE_FORGED C01 seconds 1.876
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C02 
+SEALED_CARTRIDGE C02 ba1c6b4886dd8905e4e2d949fcc227e4994875533cbd0358f7c9540d5da1f165 tokens 169
+SOURCE_FORGED C02 seconds 0.962
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C03 
+SEALED_CARTRIDGE C03 a4fdd11033ebc5738206fc9dacb331d85fd747248c695348b0ad41d5c0ebdac0 tokens 156
+SOURCE_FORGED C03 seconds 0.821
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_C04 
+SEALED_CARTRIDGE C04 9ad1d83892bf23c96cb3e36e16acbdac0ce526ad40ef2658270f66da8272384c tokens 637
+SOURCE_FORGED C04 seconds 1.833
+PASS FOCUS_MODE_S01 
+PASS DISK_SHA_C01 
+PASS TENSOR_SHA_C01 
+PASS DISK_SHA_C02 
+PASS TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 117, 'new_tokens': 138, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 39.078, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.386, 'allocated_gib': 38.434, 'peak_gib': 39.078, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.968, 'allocated_gib': 38.436, 'peak_gib': 39.078, 'total_gib': 79.251}
+APPEND_PROGRESS 128 / 138 GPU {'free_gib': 39.378, 'allocated_gib': 38.475, 'peak_gib': 39.078, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 117, 'new_tokens': 255}
+PASS JOINT_LENGTH_S01 
+PASS FOCUS_LENGTH_MATCH_S01 ('semantic', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_S01 
+PASS CP_SHAPE_S01 
+SEALED_CARTRIDGE S01 8f461e71dfc361a859e4ae79c750b2961fe6768f2dc072b2817e52f751693719 tokens 285
+PASS FOCUS_MODE_H01_OLD 
+PASS DISK_SHA_S01 
+PASS TENSOR_SHA_S01 
+PASS DISK_SHA_C03 
+PASS TENSOR_SHA_C03 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 285, 'new_tokens': 125, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 39.078, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.28, 'allocated_gib': 38.49, 'peak_gib': 39.078, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.909, 'allocated_gib': 38.494, 'peak_gib': 39.078, 'total_gib': 79.251}
+APPEND_PROGRESS 125 / 125 GPU {'free_gib': 39.325, 'allocated_gib': 38.532, 'peak_gib': 39.078, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 285, 'new_tokens': 410}
+PASS JOINT_LENGTH_H01_OLD 
+PASS FOCUS_LENGTH_MATCH_H01_OLD ('semantic', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_H01_OLD 
+PASS CP_SHAPE_H01_OLD 
+SEALED_CARTRIDGE H01_OLD ac04f5af933f950ef19584ecc4936f8f5c6b6081577177c69c1a975098794cec tokens 440
+PASS FOCUS_MODE_H02_UPDATED 
+PASS DISK_SHA_H01_OLD 
+PASS TENSOR_SHA_H01_OLD 
+PASS DISK_SHA_C04 
+PASS TENSOR_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+APPEND_DIAG_BEFORE_SEAL {'old_tokens': 440, 'new_tokens': 606, 'gpu': {'free_gib': 39.247, 'allocated_gib': 38.564, 'peak_gib': 39.078, 'total_gib': 79.251}}
+APPEND_PRIOR_SHA256_SEALED {'layers': 80, 'gpu': {'free_gib': 39.247, 'allocated_gib': 38.564, 'peak_gib': 39.078, 'total_gib': 79.251}}
+APPEND_DIAG_AFTER_RELEASE {'free_gib': 39.86, 'allocated_gib': 38.571, 'peak_gib': 39.078, 'total_gib': 79.251}
+APPEND_PROGRESS 128 / 606 GPU {'free_gib': 39.372, 'allocated_gib': 38.61, 'peak_gib': 39.106, 'total_gib': 79.251}
+PASS APPEND_ALL_80_LAYERS_EXACT_SHA256 {'old_tokens': 440, 'new_tokens': 1046}
+PASS JOINT_LENGTH_H02_UPDATED 
+PASS FOCUS_LENGTH_MATCH_H02_UPDATED ('semantic', 30)
+PASS FOCUS_NONEMPTY 
+PASS JOINT_H3_LENGTH_H02_UPDATED 
+PASS CP_SHAPE_H02_UPDATED 
+SEALED_CARTRIDGE H02_UPDATED 30104b751c527f948c5ad8a0f636b5c2ceac192ac5ff39f45d1508ddb78dbaa1 tokens 1076
+PASS NATIVE_FORGE_SHAPE 
+PASS CP_SHAPE_FLAT_UPDATED 
+SEALED_CARTRIDGE FLAT_UPDATED aecb17ef9cf56b0e2fc7db67e3a7eada6b22bdba247729a3a784ccc1770abed4 tokens 986
+SOURCE_FORGED FLAT_UPDATED seconds 2.74
+PASS DISK_SHA_H02_UPDATED 
+PASS TENSOR_SHA_H02_UPDATED 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT H02_UPDATED 24 / 28 {'conflict': 2, 'direct_conflict': 4, 'direct_revised': 4, 'missing': 8, 'revised': 3, 'unchanged': 3}
+PASS DISK_SHA_FLAT_UPDATED 
+PASS TENSOR_SHA_FLAT_UPDATED 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT FLAT_UPDATED 24 / 28 {'conflict': 2, 'direct_conflict': 4, 'direct_revised': 4, 'missing': 8, 'revised': 3, 'unchanged': 3}
+PASS DISK_SHA_H01_OLD 
+PASS TENSOR_SHA_H01_OLD 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT H01_OLD 12 / 28 {'conflict': 0, 'direct_conflict': 0, 'direct_revised': 0, 'missing': 8, 'revised': 0, 'unchanged': 4}
+PASS DISK_SHA_C04 
+PASS TENSOR_SHA_C04 
+PASS NATIVE_INIT_80_LAYERS 
+ARM_RESULT C04 24 / 28 {'conflict': 4, 'direct_conflict': 4, 'direct_revised': 4, 'missing': 8, 'revised': 2, 'unchanged': 2}
+PASS PANEL_UNCHANGED 
+PASS FINAL_DISK_C01 
+PASS FINAL_DISK_C02 
+PASS FINAL_DISK_C03 
+PASS FINAL_DISK_C04 
+PASS FINAL_DISK_S01 
+PASS FINAL_DISK_H01_OLD 
+PASS FINAL_DISK_H02_UPDATED 
+PASS FINAL_DISK_FLAT_UPDATED 
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+TEST743_RESULT {"status": "COMPLETED_CONFLICT_REVISION_EVALUATION", "scores": {"H02_UPDATED": 24, "FLAT_UPDATED": 24, "H01_OLD": 12, "C04": 24}, "by_kind": {"H02_UPDATED": {"conflict": 2, "direct_conflict": 4, "direct_revised": 4, "missing": 8, "revised": 3, "unchanged": 3}, "FLAT_UPDATED": {"conflict": 2, "direct_conflict": 4, "direct_revised": 4, "missing": 8, "revised": 3, "unchanged": 3}, "H01_OLD": {"conflict": 0, "direct_conflict": 0, "direct_revised": 0, "missing": 8, "revised": 0, "unchanged": 4}, "C04": {"conflict": 4, "direct_conflict": 4, "direct_revised": 4, "missing": 8, "revised": 2, "unchanged": 2}}, "paired": {"FLAT_UPDATED": {"updated_only_correct": 0, "control_only_correct": 0}, "H01_OLD": {"updated_only_correct": 13, "control_only_correct": 1}, "C04": {"updated_only_correct": 2, "control_only_correct": 2}}, "hierarchy_exceeds_flat_text_accuracy": false, "elapsed_seconds": 863.76}
+TEST743_FILES /content/AKBASCORE_TEST743/TEST743_results.json /content/AKBASCORE_TEST743/TEST743.log
