@@ -1,0 +1,544 @@
+ TEST736_REFERENCE_730_SHA256 c8dfa5bc7735ad2e00bd1b0141c7f0dc6af7cfb7232747e3bbf5b9a26f70dfaf
+==============================================================================================================
+AKBASCORE PROMETHEUS — TEST730 — THREE REAL SOURCES / AUTONOMOUS-STYLE SYNTHESIS / SEALED MASTER
+==============================================================================================================
+QUESTION_PANEL_PRESEALED_SHA256 bfc2bdac698847fe5545ec6dc1600f64348eef0cc0c9dd0ae15628b44a1a0f5a
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+SOURCE_PRIMARY_REJECTED P01 RuntimeError('LICENSE_NOT_VERIFIED:P01')
+SOURCE_EXPLICIT_REPLACEMENT P01 PMC13672588 Generative AI in creative education: baseline-linked evidence on learning processes, artistic performance, and authorship https://creativecommons.org/licenses/by/4.0/
+PASS SOURCE_TEXT_SHA_P01 
+SOURCE_LOCK {"id": "P01", "url": "https://www.nature.com/articles/s41599-026-07019-z", "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13672588/fullTextXML", "title": "Generative AI in creative education: baseline-linked evidence on learning processes, artistic performance, and authorship", "license": "https://creativecommons.org/licenses/by/4.0/", "published": "2026 (article XML)", "full_html_sha256": "473f44dd2d611d10cd9971c2137632b0302e8af42e6ba3079dfd3ec775c933be", "excerpt_sha256": "dd6a1b0311cc2c4055bb8b598eea906e11f4439d0f3938f6414ed78d90e07191", "excerpt_chars": 10500, "source_method": "EUROPE_PMC_FULLTEXT", "pmcid": "PMC13672588", "original_url_rejected": "https://www.nature.com/articles/s41599-026-07019-z", "replacement_reason": "RuntimeError('LICENSE_NOT_VERIFIED:P01')"}
+PASS SOURCE_TEXT_SHA_P02 
+SOURCE_LOCK {"id": "P02", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13521781/", "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13521781/fullTextXML", "title": "The critical-thinking paradox in generative AI-integrated learning: distinguishing efficiency from cognitive depth—a differentiated framework and testable propositions", "license": "https://creativecommons.org/licenses/by/4.0/", "published": "2026 (article XML)", "full_html_sha256": "f2e90eaa77b47c78c891d9245e27daf46f4a05a9b6d5ecc5a56e8f4999057aa2", "excerpt_sha256": "ead833c2a16df6ad6f2b965554cb5bf4bb2a936c088d704268ed87472668cee3", "excerpt_chars": 10500, "source_method": "EUROPE_PMC_FULLTEXT", "pmcid": "PMC13521781"}
+SOURCE_PRIMARY_REJECTED P03 RuntimeError('LICENSE_NOT_VERIFIED:P03')
+SOURCE_EXPLICIT_REPLACEMENT P03 PMC13043820 Catalysts of Change: Using AI To Lower the Activation Energy for Developing Gamified Learning Experiences in Health Profession Education https://creativecommons.org/licenses/by/4.0/
+PASS SOURCE_TEXT_SHA_P03 
+SOURCE_LOCK {"id": "P03", "url": "https://doi.org/10.1016/j.caeai.2026.100571", "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13043820/fullTextXML", "title": "Catalysts of Change: Using AI To Lower the Activation Energy for Developing Gamified Learning Experiences in Health Profession Education", "license": "https://creativecommons.org/licenses/by/4.0/", "published": "2026 (article XML)", "full_html_sha256": "f2d039fad5ffc1a1f8b330d9f49fa0f43484610717c069003f357f327d3435fa", "excerpt_sha256": "ea8d07f10d1b7ac84bd8f3a44abdb5c6515739f47688593f52ab826155e766f9", "excerpt_chars": 10500, "source_method": "EUROPE_PMC_FULLTEXT", "pmcid": "PMC13043820", "original_url_rejected": "https://doi.org/10.1016/j.caeai.2026.100571", "replacement_reason": "RuntimeError('LICENSE_NOT_VERIFIED:P03')"}
+PASS THREE_DISTINCT_SOURCES 
+PASS SOURCE_REUSE_LICENSES_VERIFIED 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 84.7kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 962kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 83.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 69.6MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 127MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.84MB/s]Download complete:   125GB, 1.58GB/s  Reconstruction complete: 100%  145GB /  145GB,  664MB/s  Fetching 37 files: 100% 37/37 [06:51<00:00, 10.42s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.25it/s]generation_config.json: 100% 242/242 [00:00<00:00, 32.0kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+PASS SOURCE_TEXT_FINAL_SHA_P01 
+PASS NONEMPTY_BODY_P01 {'tokens': 1924}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT P01 REAL_SOURCE 58e3e1e7c9c5b61d711e8e5a090510dda82cb113f83fad53fbc3c5ee69190c1d
+PASS SOURCE_TEXT_FINAL_SHA_P02 
+PASS NONEMPTY_BODY_P02 {'tokens': 1987}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT P02 REAL_SOURCE 2ddfe65e99e5f910683d5862c05f778752b80a94b76242dd3da59c690e0a443a
+PASS SOURCE_TEXT_FINAL_SHA_P03 
+PASS NONEMPTY_BODY_P03 {'tokens': 2036}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT P03 REAL_SOURCE ab2ddddf1f7ba6f39c4623ae8638374e2b73dda3339dfd6c42fe899a41552292
+PASS THREE_PHYSICAL_SOURCES 
+PASS FILE_SHA_P01 
+PASS CARTRIDGE_ID_P01 
+PASS CARTRIDGE_TENSOR_SHA_P01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS SOURCE_REFLECTION_NONEMPTY_P01 
+READING_REFLECTION P01 The document discusses the integration of artificial intelligence (AI) in higher education, particularly in art and design courses, and examines the impact of AI on creative learning processes and outcomes. Here are the central claims, evidence, uncertainties, and implications:
+
+### Central Claims:
+1. **AI in Creative Education**: AI, especially generative AI (GenAI), is increasingly used in higher education, particularly in creative disciplines. It can assist students in various ways, such as ideation, reference gathering, and technique learning, but it also raises concerns about the balance between support and substitution in the creative process.
+2. **Assistive vs. Content-Generative AI**: The document distinguishes between assistive AI, which supports the creative process without directly producing content, and content-generative AI, which can create part of the final work. This distinction is crucial for understanding the impact on student learning and authorship.
+3. **Process-Outcome Decoupling**: AI may enhance the perceived support and efficiency of creative learning, but this does not necessarily translate into better artistic outcomes or deeper learning. This phenomenon is referred to as process-outcome decoupling.
+4. **Sustainable Learning**: The document emphasizes the importance of sustainable learning, which involves long-term capability, autonomy, and the ability to continue learning beyond a single task or course. AI can support or hinder these goals depending on how it is used.
+
+### Evidence:
+- **Empirical Studies**: The document cites various studies that show mixed results on the impact of AI on learning outcomes. For example, some studies indicate that AI can improve academic performance and higher-order thinking, while others suggest that it may reduce mental effort and perceived competence.
+- **Case Study**: The document describes a study of 133 undergraduate art students, examining how different forms of AI use (assistive and content-generative) are associated with artistic performance, perceived learning support, and creative learning processes.
+- **Literature Review**: The document reviews existing literature on AI in education, highlighting the need to consider not just the technical capabilities of AI but also how students interpret and internalize AI support.
+
+### Uncertainties:
+- **Perceived vs. Actual Learning**: The document notes that students may feel more supported and productive with AI, but this perceived ease may not translate into actual improvements in artistic competence or long-term learning.
+- **Authorship and Ownership**: There is uncertainty about how AI-generated content affects the perceived authorship and ownership of student work, which is crucial in creative disciplines.
+- **Generalizability**: The findings from the case study may not be generalizable to all higher education settings or all types of creative disciplines.
+
+### Implications:
+- **Pedagogical Design**: Educators need to carefully design AI-supported learning environments to ensure that AI enhances rather than hinders the development of creative skills and autonomy.
+- **Assessment Methods**: Assessment methods should consider both the quality of the final product and the process through which it was created, including the role of AI.
+- **Student Awareness**: Students should be made aware of the potential risks and benefits of AI use in their creative work, including the importance of maintaining their own creative agency and judgment.
+- **Further Research**: More research is needed to understand the long-term effects of AI on creative learning and to develop best practices for integrating AI in higher education.
+
+In summary, the document provides a nuanced view of AI in creative education, highlighting both the potential benefits and the challenges that need to be addressed to ensure that AI supports rather than undermines the development of creative skills and autonomy.
+PASS FILE_SHA_P02 
+PASS CARTRIDGE_ID_P02 
+PASS CARTRIDGE_TENSOR_SHA_P02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS SOURCE_REFLECTION_NONEMPTY_P02 
+READING_REFLECTION P02 The document discusses the integration of generative artificial intelligence (GenAI) in educational settings, highlighting both its benefits and potential drawbacks. Here’s a summary of the central claims, evidence, uncertainties, and implications:
+
+### Central Claims:
+1. **Rapid Adoption and Ad Hoc Integration**: GenAI tools, such as large language models (LLMs) like ChatGPT, have been rapidly adopted in educational settings without a well-developed, evidence-based framework for their integration.
+2. **Mixed Empirical Findings**: Early studies show mixed results, with some indicating positive outcomes in terms of academic performance and creative thinking, while others highlight limitations in critical thinking and deep cognitive processing.
+3. **Critical Thinking Paradox**: The document proposes a "critical thinking paradox" where GenAI can enhance short-term performance but may erode deeper cognitive processes necessary for long-term, transferable learning.
+4. **Theoretical Frameworks**: The authors integrate several theoretical frameworks (levels-of-processing, desirable difficulties, cognitive load theory, and cognitive offloading) to explain the mixed findings and propose a three-level framework for AI integration.
+
+### Evidence:
+1. **Performance Gains**:
+   - **Mariñoso et al. (2025)**: AI-assisted students achieved higher academic scores in designing mathematical learning situations.
+   - **Pan and Li (2025)**: Positive attitudes toward GenAI mediated the relationship between teacher support and learner well-being.
+   - **Peng et al. (2025)**: A meta-analysis reported a moderate positive short-term effect of AI-supported learning on creative thinking.
+
+2. **Shallow Processing Concerns**:
+   - **Wang and Wu (2025)**: Identified themes of AI’s accessibility and efficiency, gaps in depth and critical thinking, and compensatory verification behaviors.
+   - **Choudhuri et al. (2026)**: Found that routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.
+
+### Uncertainties:
+1. **Methodological Limitations**: Many studies focus on short-term outcomes and product quality, rather than long-term retention and transfer of knowledge.
+2. **Heterogeneity in Findings**: The variation in tasks, populations, tools, and designs may produce genuine heterogeneity, making it difficult to draw uniform conclusions.
+3. **Causal Relationships**: Observational and cross-sectional studies do not establish causal relationships, leaving open the question of whether routine AI use directly causes declining engagement.
+
+### Implications:
+1. **Need for Balanced Integration**: The document calls for a more nuanced approach to AI integration, specifying conditions under which AI can enhance or undermine specific learning objectives.
+2. **Teacher Education and Policy**: There is a need for teacher education programs to address AI awareness and competencies, and for educational policies to guide the responsible use of AI in classrooms.
+3. **Further Research**: The authors propose a confirmatory experimental design and methodological implications, including real-time operational telemetry, to track shifts in cognitive offloading and test the proposed hypotheses.
+
+### Conclusion:
+The document presents a balanced and nuanced view of GenAI in education, acknowledging its potential benefits while highlighting the need for careful, evidence-based integration to avoid eroding deeper cognitive processes. The proposed theoretical and methodological frameworks aim to guide future research and practice in this rapidly evolving field.
+PASS FILE_SHA_P03 
+PASS CARTRIDGE_ID_P03 
+PASS CARTRIDGE_TENSOR_SHA_P03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS SOURCE_REFLECTION_NONEMPTY_P03 
+READING_REFLECTION P03 The document discusses the integration of gamified learning into health science education, particularly in medical training, and highlights the benefits and challenges of this approach. It also explores how artificial intelligence (AI) can facilitate the development and implementation of gamified learning strategies.
+
+### Central Claims:
+1. **Benefits of Gamified Learning:**
+   - **Enhanced Engagement and Satisfaction:** Gamified learning increases learner satisfaction and motivation.
+   - **Improved Learning Outcomes:** It aids in knowledge acquisition, critical thinking, problem-solving, and teamwork.
+   - **Theoretical Foundations:** Gamified learning is supported by various learning theories, including self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks.
+
+2. **Challenges in Adoption:**
+   - **Financial and Technical Constraints:** Limited funding, lack of infrastructure, and technical support can hinder the adoption of gamified learning.
+   - **Training and Professional Development:** Educators may lack the necessary training and professional development to effectively implement gamified strategies.
+   - **Negative Perceptions:** Some educators and students may have negative attitudes towards gamified learning.
+
+3. **Role of AI:**
+   - **Supporting Design and Implementation:** AI tools can help in selecting appropriate game types and mechanics, and in the creative process of designing gamified elements.
+   - **Lowering Activation Energy:** AI can reduce the effort required to develop and implement gamified learning, making it more accessible to educators.
+
+### Evidence:
+- **Empirical Studies:** The document cites multiple studies that demonstrate the effectiveness of gamified learning in various health science subjects, such as biochemistry, pharmacology, and physiology.
+- **Theoretical Frameworks:** It references self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks to support the rationale behind gamified learning.
+
+### Uncertainties:
+- **Heterogeneity in Results:** The document acknowledges that the results of studies evaluating gamified learning are heterogeneous, indicating that the effectiveness can vary.
+- **Contextual Barriers:** The success of gamified learning can be influenced by non-movable barriers such as student time, faculty time, class size, curricular constraints, space, and available resources.
+
+### Implications:
+- **Educational Design:** The document provides practical guidance for educators on how to integrate AI tools into the design and implementation of gamified learning, making it a valuable resource for health science educators.
+- **Future Research:** There is a need for further research to address the heterogeneity in results and to better understand the specific contexts in which gamified learning is most effective.
+- **Policy and Practice:** The document suggests that institutions should consider the benefits of gamified learning and the role of AI in supporting its implementation, potentially leading to policy changes and increased investment in educational technology.
+
+### Conclusion:
+The document presents a compelling case for the use of gamified learning in health science education, supported by both empirical evidence and theoretical frameworks. However, it also highlights the challenges and uncertainties that need to be addressed. The integration of AI is seen as a promising solution to lower the barriers to entry and enhance the effectiveness of gamified learning.
+PASS SYNTHESIS_NONEMPTY 3794
+MODEL_SYNTHESIS ### Independent Synthesis of the Three Perspectives on AI in Education
+
+#### Overview
+The three documents provide a comprehensive and nuanced view of the integration of artificial intelligence (AI) in educational settings, particularly in creative disciplines and health science education. Each document highlights the potential benefits and challenges of AI, with a focus on the impact on learning outcomes, student engagement, and the role of educators. Here is a synthesis of the key points, conflicts, and uncertainties, along with my own analysis and implications.
+
+#### Central Claims and Evidence
+
+1. **AI in Creative Education (P01)**
+   - **Key Claims:**
+     - AI, especially generative AI (GenAI), is increasingly used in creative disciplines.
+     - There is a distinction between assistive AI and content-generative AI.
+     - AI may enhance perceived support and efficiency but not necessarily lead to better artistic outcomes.
+     - Sustainable learning is crucial, and AI can support or hinder it.
+   - **Evidence:**
+     - Mixed results from empirical studies on the impact of AI on learning outcomes.
+     - Case study of 133 undergraduate art students.
+     - Literature review on AI in education.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Key Claims:**
+     - Rapid adoption of GenAI without a well-developed framework.
+     - Mixed empirical findings on academic performance and creative thinking.
+     - Critical thinking paradox: short-term gains but potential long-term erosion of deeper cognitive processes.
+     - Theoretical frameworks to explain mixed findings.
+   - **Evidence:**
+     - Studies showing positive and negative outcomes of AI use.
+     - Theoretical integration of levels-of-processing, desirable difficulties, cognitive load theory, and cognitive offloading.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Key Claims:**
+     - Gamified learning enhances engagement, satisfaction, and learning outcomes.
+     - Challenges include financial and technical constraints, lack of training, and negative perceptions.
+     - AI can support the design and implementation of gamified learning.
+   - **Evidence:**
+     - Empirical studies on the effectiveness of gamified learning.
+     - Theoretical support from self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks.
+
+#### Conflicts and Consistencies
+
+1. **Perceived vs. Actual Learning:**
+   - **P01** and **P02** both highlight the issue of perceived support and efficiency not necessarily translating into actual improvements in learning outcomes. This is a consistent concern across both creative and general educational contexts.
+
+2. **Critical Thinking and Deep Cognitive Processes:**
+   - **P02** introduces the concept of the "critical thinking paradox," where AI can enhance short-term performance but may erode deeper cognitive processes. This aligns with **P01**'s concern about process-outcome decoupling, where AI may improve perceived efficiency but not actual competence.
+
+3. **Role of AI in Education:**
+   - **P01** and **P03** both discuss the role of AI in supporting educational processes. **P01** focuses on the distinction between assistive and content-generative AI, while **P03** emphasizes AI's role in facilitating gamified learning. Both documents highlight the potential of AI to enhance or hinder learning depending on its implementation.
+
+4. **Educator and Student Awareness:**
+   - **P01** and **P02** stress the importance of educator and student awareness of the potential risks and benefits of AI use. **P03** also mentions the need for training and professional development for educators to effectively implement gamified learning.
+
+#### Uncertainties
+
+1. **Generalizability
+PASS NONEMPTY_BODY_MASTER {'tokens': 2848}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT MASTER MASTER_SYNTHESIS 98802df91b6834099e89b95266387498626d7aa817862af95c388eff6f544bc5
+PASS FOUR_PHYSICAL_CARTRIDGES 
+PASS MASTER_ONLY_ACTIVE 
+PASS SEALED_QUESTIONS_UNCHANGED 
+PASS FILE_SHA_MASTER 
+PASS CARTRIDGE_ID_MASTER 
+PASS CARTRIDGE_TENSOR_SHA_MASTER 
+PASS NATIVE_INIT_80_LAYERS 
+DEMO_FAST_PATH_READY {'layers': 80, 'init_seconds': 10.745}
+DEMO_QUESTION H1 What are the main conclusions of the three publications, and where do they disagree?
+DEMO_ANSWER H1 ### Main Conclusions of the Three Publications
+
+1. **AI in Creative Education (P01)**
+   - **Conclusion:** AI, particularly generative AI (GenAI), is increasingly used in creative disciplines and can assist students in various ways, such as ideation, reference gathering, and technique learning. However, it also raises concerns about the balance between support and substitution in the creative process. AI may enhance perceived support and efficiency but does not necessarily lead to better artistic outcomes or deeper learning. Sustainable learning, which involves long-term capability, autonomy, and the ability to continue learning, is crucial. AI can support or hinder these goals depending on its use.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Conclusion:** GenAI tools, such as large language models (LLMs) like ChatGPT, have been rapidly adopted in educational settings without a well-developed, evidence-based framework. Early studies show mixed results, with some indicating positive outcomes in terms of academic performance and creative thinking, while others highlight limitations in critical thinking and deep cognitive processing. The document proposes a "critical thinking paradox" where GenAI can enhance short-term performance but may erode deeper cognitive processes necessary for long-term, transferable learning. Theoretical frameworks are integrated to explain these mixed findings, and a three-level framework for AI integration is proposed.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Conclusion:** Gamified learning in health science education enhances learner satisfaction, motivation, and learning outcomes, including knowledge acquisition, critical thinking, problem-solving, and teamwork. However, the adoption of gamified learning faces challenges such as financial and technical constraints, lack of training, and negative perceptions. AI can support the design and implementation of gamified learning, making it more accessible and effective. The document provides practical guidance for educators and suggests the need for further research to address the heterogeneity in results and to better understand the specific contexts in which gamified learning is most effective.
+
+### Where They Disagree
+
+1. **Perceived vs. Actual Learning:**
+   - **P01** and **P02** both highlight the issue of perceived support and efficiency not necessarily translating into actual improvements in learning outcomes. However, **P03** does not explicitly address this issue, focusing more on the positive outcomes of gamified learning.
+
+2. **Critical Thinking and Deep Cognitive Processes:**
+   - **P02** introduces the concept of the "critical thinking paradox," where AI can enhance short-term performance but may erode deeper cognitive processes. **P01** also discusses the phenomenon of process-outcome decoupling, where AI may improve perceived efficiency but not actual competence. **P03** does not delve into this aspect, focusing instead on the positive impacts of gamified learning.
+
+3. **Role of AI in Education:**
+   - **P01** and **P03** both discuss the role of AI in supporting educational processes. **P01** focuses on the distinction between assistive and content-generative AI, while **P03** emphasizes AI's role in facilitating gamified learning. **P02** does not provide a detailed discussion on the specific types of AI but rather focuses on the rapid adoption and mixed outcomes of GenAI.
+
+4. **Educator and Student Awareness:**
+   - **P01** and **P02** stress the importance of educator and student awareness of the potential risks and benefits of AI use. **P03** also mentions the need for training and professional development for educators to effectively implement gamified learning, but it does not emphasize the risks and benefits of AI as strongly as the other two documents.
+
+### Summary
+The three publications agree on
+DEMO_QUESTION_SECONDS H1 98.992
+DEMO_QUESTION H2 Which claims are supported by empirical evidence, and what are the main limitations?
+DEMO_ANSWER H2 ### Claims Supported by Empirical Evidence
+
+1. **AI in Creative Education (P01)**
+   - **Claim:** AI, especially generative AI (GenAI), can improve academic performance and higher-order thinking.
+     - **Evidence:** The document cites various studies showing mixed results, with some indicating positive outcomes.
+   - **Claim:** AI may reduce mental effort and perceived competence.
+     - **Evidence:** The document cites studies that suggest this negative impact.
+   - **Claim:** AI can enhance perceived support and efficiency in creative learning.
+     - **Evidence:** A case study of 133 undergraduate art students examines the association between different forms of AI use and artistic performance, perceived learning support, and creative learning processes.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Claim:** AI-assisted students achieve higher academic scores in designing mathematical learning situations.
+     - **Evidence:** Mariñoso et al. (2025) found that AI-assisted students performed better.
+   - **Claim:** Positive attitudes toward GenAI mediate the relationship between teacher support and learner well-being.
+     - **Evidence:** Pan and Li (2025) reported this positive mediation.
+   - **Claim:** AI-supported learning has a moderate positive short-term effect on creative thinking.
+     - **Evidence:** Peng et al. (2025) conducted a meta-analysis supporting this claim.
+   - **Claim:** Routine GenAI use is negatively associated with reflection, critical thinking, and need for understanding.
+     - **Evidence:** Choudhuri et al. (2026) found this negative association.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Claim:** Gamified learning increases learner satisfaction and motivation.
+     - **Evidence:** Multiple studies demonstrate the effectiveness of gamified learning in various health science subjects.
+   - **Claim:** Gamified learning aids in knowledge acquisition, critical thinking, problem-solving, and teamwork.
+     - **Evidence:** Empirical studies support these benefits.
+
+### Main Limitations
+
+1. **Perceived vs. Actual Learning:**
+   - **Limitation:** Many studies focus on perceived support and efficiency rather than actual improvements in artistic competence or long-term learning.
+   - **Source:** P01 and P02 both highlight this issue, noting that perceived benefits may not translate into actual improvements.
+
+2. **Methodological Limitations:**
+   - **Limitation:** Many studies focus on short-term outcomes and product quality, rather than long-term retention and transfer of knowledge.
+   - **Source:** P02 notes that methodological limitations, such as the focus on short-term outcomes, make it difficult to draw uniform conclusions.
+
+3. **Heterogeneity in Findings:**
+   - **Limitation:** The variation in tasks, populations, tools, and designs may produce genuine heterogeneity, making it difficult to draw uniform conclusions.
+   - **Source:** P02 and P03 both acknowledge the heterogeneity in results, indicating that the effectiveness of AI and gamified learning can vary.
+
+4. **Causal Relationships:**
+   - **Limitation:** Observational and cross-sectional studies do not establish causal relationships, leaving open the question of whether routine AI use directly causes declining engagement.
+   - **Source:** P02 highlights this limitation, emphasizing the need for more robust experimental designs to establish causality.
+
+5. **Contextual Barriers:**
+   - **Limitation:** The success of gamified learning can be influenced by non-movable barriers such as student time, faculty time, class size, curricular constraints, space, and available resources.
+   - **Source:** P03 notes that these contextual barriers can affect the effectiveness of
+DEMO_QUESTION_SECONDS H2 98.566
+DEMO_QUESTION H3 After comparing all three publications, what is your own conclusion? Explain uncertainties and cite source IDs.
+DEMO_ANSWER H3 ### Independent Synthesis and Conclusion
+
+#### Overview
+The three documents provide a comprehensive and nuanced view of the integration of artificial intelligence (AI) in educational settings, particularly in creative disciplines and health science education. Each document highlights the potential benefits and challenges of AI, with a focus on the impact on learning outcomes, student engagement, and the role of educators. Here is a synthesis of the key points, conflicts, and uncertainties, along with my own analysis and implications.
+
+#### Central Claims and Evidence
+
+1. **AI in Creative Education (P01)**
+   - **Key Claims:**
+     - AI, especially generative AI (GenAI), is increasingly used in creative disciplines.
+     - There is a distinction between assistive AI and content-generative AI.
+     - AI may enhance perceived support and efficiency but not necessarily lead to better artistic outcomes.
+     - Sustainable learning is crucial, and AI can support or hinder it.
+   - **Evidence:**
+     - Mixed results from empirical studies on the impact of AI on learning outcomes.
+     - Case study of 133 undergraduate art students.
+     - Literature review on AI in education.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Key Claims:**
+     - Rapid adoption of GenAI without a well-developed framework.
+     - Mixed empirical findings on academic performance and creative thinking.
+     - Critical thinking paradox: short-term gains but potential long-term erosion of deeper cognitive processes.
+     - Theoretical frameworks to explain mixed findings.
+   - **Evidence:**
+     - Studies showing positive and negative outcomes of AI use.
+     - Theoretical integration of levels-of-processing, desirable difficulties, cognitive load theory, and cognitive offloading.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Key Claims:**
+     - Gamified learning enhances engagement, satisfaction, and learning outcomes.
+     - Challenges include financial and technical constraints, lack of training, and negative perceptions.
+     - AI can support the design and implementation of gamified learning.
+   - **Evidence:**
+     - Empirical studies on the effectiveness of gamified learning.
+     - Theoretical support from self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks.
+
+#### Conflicts and Consistencies
+
+1. **Perceived vs. Actual Learning:**
+   - **P01** and **P02** both highlight the issue of perceived support and efficiency not necessarily translating into actual improvements in learning outcomes. This is a consistent concern across both creative and general educational contexts.
+
+2. **Critical Thinking and Deep Cognitive Processes:**
+   - **P02** introduces the concept of the "critical thinking paradox," where AI can enhance short-term performance but may erode deeper cognitive processes. This aligns with **P01**'s concern about process-outcome decoupling, where AI may improve perceived efficiency but not actual competence.
+
+3. **Role of AI in Education:**
+   - **P01** and **P03** both discuss the role of AI in supporting educational processes. **P01** focuses on the distinction between assistive and content-generative AI, while **P03** emphasizes AI's role in facilitating gamified learning. Both documents highlight the potential of AI to enhance or hinder learning depending on its implementation.
+
+4. **Educator and Student Awareness:**
+   - **P01** and **P02** stress the importance of educator and student awareness of the potential risks and benefits of AI use. **P03** also mentions the need for training and professional development for educators to effectively implement gamified learning.
+
+#### Uncertainties
+
+1. **Generalizability:**
+   - The findings
+DEMO_QUESTION_SECONDS H3 99.065
+DEMO_QUESTION A1 Develop a new causal model that could reconcile apparently conflicting results across the three publications. Separate evidence, assumptions and predictions; cite sources.
+DEMO_ANSWER A1 ### Causal Model to Reconcile Conflicting Results in AI Integration in Education
+
+#### Overview
+The three documents provide a rich but sometimes conflicting view of the impact of AI in educational settings, particularly in creative disciplines and health science education. To reconcile these findings, a causal model is proposed that integrates the key concepts and evidence from each document. This model aims to explain the mixed results and provide a framework for understanding the conditions under which AI can enhance or hinder learning outcomes.
+
+#### Causal Model
+
+1. **AI Type and Function**
+   - **Assistive AI vs. Content-Generative AI** (P01, P02)
+     - **Assistive AI**: Supports the creative process without directly producing content.
+     - **Content-Generative AI**: Can create part of the final work.
+   - **Evidence**:
+     - P01: Assistive AI can enhance the creative process, while content-generative AI may lead to process-outcome decoupling.
+     - P02: Both types of AI can have mixed effects on learning outcomes, with content-generative AI potentially leading to shallow processing.
+
+2. **Perceived vs. Actual Learning**
+   - **Perceived Support and Efficiency** (P01, P02)
+     - **Assumption**: Students may feel more supported and productive with AI, but this perceived ease may not translate into actual improvements in learning outcomes.
+   - **Evidence**:
+     - P01: Case study of 133 undergraduate art students shows mixed results on the impact of AI on artistic performance.
+     - P02: Studies indicate that AI can improve academic performance but may reduce mental effort and perceived competence.
+
+3. **Critical Thinking and Deep Cognitive Processes**
+   - **Critical Thinking Paradox** (P02)
+     - **Assumption**: AI can enhance short-term performance but may erode deeper cognitive processes necessary for long-term, transferable learning.
+   - **Evidence**:
+     - P02: Wang and Wu (2025) identified gaps in depth and critical thinking with routine AI use.
+     - P01: Process-outcome decoupling suggests that perceived efficiency does not always lead to better artistic outcomes.
+
+4. **Educator and Student Awareness**
+   - **Awareness and Training** (P01, P02, P03)
+     - **Assumption**: Educators and students need to be aware of the potential risks and benefits of AI use to maximize its positive impact.
+   - **Evidence**:
+     - P01: Students should be made aware of the importance of maintaining their own creative agency.
+     - P02: Teacher education programs need to address AI awareness and competencies.
+     - P03: Educators may lack the necessary training to effectively implement gamified strategies.
+
+5. **Contextual Factors**
+   - **Financial and Technical Constraints** (P03)
+     - **Assumption**: The success of AI integration is influenced by non-movable barriers such as funding, infrastructure, and professional development.
+   - **Evidence**:
+     - P03: Limited funding and lack of infrastructure can hinder the adoption of gamified learning.
+
+#### Predictions
+
+1. **Enhanced Learning Outcomes with Balanced AI Use**
+   - **Prediction**: When AI is used in a balanced manner, with a focus on assistive rather than content-generative functions, it can enhance both perceived and actual learning outcomes.
+   - **Supporting Evidence**: P01 and P02 suggest that assistive AI can support the creative process without leading to process-outcome decoupling.
+
+2. **Improved Critical Thinking with Strategic AI Integration**
+   - **Prediction**: Strategic integration of AI, particularly in ways that promote
+DEMO_QUESTION_SECONDS A1 98.925
+DEMO_QUESTION A2 Design a preregistered randomized experiment that could falsify your proposed causal model. Specify interventions, measures, confounders and discriminating outcomes.
+DEMO_ANSWER A2 To design a preregistered randomized experiment that could falsify the proposed causal model of AI's impact on learning outcomes, particularly focusing on the "critical thinking paradox" and the distinction between assistive and content-generative AI, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. Here is a detailed plan:
+
+### Preregistered Randomized Experiment Design
+
+#### Research Question
+Does the use of AI in educational settings, particularly the distinction between assistive AI and content-generative AI, enhance or undermine critical thinking and long-term learning outcomes?
+
+#### Hypotheses
+1. **H1**: Assistive AI will enhance short-term academic performance and perceived learning support without significantly affecting long-term critical thinking and deep cognitive processes.
+2. **H2**: Content-generative AI will enhance short-term academic performance and perceived learning support but may erode long-term critical thinking and deep cognitive processes.
+
+#### Participants
+- **Sample Size**: 300 undergraduate students from a variety of creative and health science disciplines.
+- **Recruitment**: Students will be recruited from multiple universities and randomly assigned to one of three groups.
+
+#### Interventions
+1. **Control Group**: Students will complete assignments and projects without any AI assistance.
+2. **Assistive AI Group**: Students will use AI tools that provide support in the form of ideation, reference gathering, and technique learning but do not generate content.
+3. **Content-Generative AI Group**: Students will use AI tools that can generate part of the final work, such as text, images, or designs.
+
+#### Measures
+1. **Short-Term Academic Performance**:
+   - **Pre-test and Post-test Scores**: Measure academic performance in a standardized test before and after the intervention.
+   - **Project Quality**: Evaluate the quality of the final projects using a rubric that assesses creativity, originality, and technical skill.
+
+2. **Perceived Learning Support**:
+   - **Surveys**: Administer surveys to measure students' perceptions of support, ease of use, and satisfaction with the AI tools.
+
+3. **Long-Term Critical Thinking and Deep Cognitive Processes**:
+   - **Follow-up Tests**: Conduct follow-up tests 3 months after the intervention to measure retention and transfer of knowledge.
+   - **Critical Thinking Assessments**: Use standardized critical thinking tests to evaluate the ability to analyze, evaluate, and synthesize information.
+
+4. **Student Reflections**:
+   - **Reflective Essays**: Ask students to write reflective essays on their learning experiences, focusing on their use of AI and its impact on their creative and cognitive processes.
+
+#### Confounders
+- **Prior Knowledge**: Measure students' prior knowledge and experience with the subject matter to control for baseline differences.
+- **Motivation and Engagement**: Use pre-intervention surveys to assess students' initial motivation and engagement levels.
+- **Time and Effort**: Track the amount of time and effort students spend on their assignments and projects.
+
+#### Discriminating Outcomes
+- **Short-Term Performance**: Compare pre-test and post-test scores and project quality between the three groups.
+- **Long-Term Retention and Transfer**: Compare follow-up test scores and critical thinking assessments between the three groups.
+- **Perceived Support and Satisfaction**: Compare survey results on perceived learning support and satisfaction between the three groups.
+- **Reflective Essays**: Analyze the content of reflective essays to understand students' subjective experiences and insights.
+
+#### Data Analysis
+- **Descriptive Statistics**: Summarize the data for each group.
+- **ANOVA**: Use Analysis of Variance (ANOVA) to compare the means of the three groups on short-term performance, long-term retention, and critical thinking.
+- **Regression Analysis**: Conduct regression analysis to control for confounders
+DEMO_QUESTION_SECONDS A2 99.004
+DEMO_QUESTION A3 Identify the most consequential unresolved contradiction, formulate two rival explanations, and propose the smallest decisive test. Explain what each possible result would imply.
+DEMO_ANSWER A3 ### Most Consequential Unresolved Contradiction
+
+**Contradiction: Perceived Support vs. Actual Learning Outcomes**
+
+**Description:**
+The documents highlight a significant contradiction between the perceived support and efficiency provided by AI and the actual improvements in learning outcomes. While students may feel more supported and productive with AI, this perceived ease does not always translate into better academic performance or deeper learning. This contradiction is particularly evident in the context of creative education (P01) and the broader educational landscape (P02).
+
+### Rival Explanations
+
+1. **Explanation 1: Cognitive Offloading and Shallow Processing**
+   - **Hypothesis:** Students may rely too heavily on AI, leading to cognitive offloading and shallow processing. This means that while AI can provide immediate support and efficiency, it may prevent students from engaging in the deep cognitive processes necessary for long-term learning and skill development.
+   - **Implication:** If this explanation is correct, the use of AI in educational settings should be carefully managed to ensure that it does not become a crutch that hinders deeper learning. Educators should focus on designing tasks that require critical thinking and problem-solving, even when AI is available.
+
+2. **Explanation 2: Misalignment of AI and Learning Objectives**
+   - **Hypothesis:** The mismatch between the capabilities of AI and the learning objectives of the educational program can lead to perceived support without actual learning gains. AI may be effective in certain tasks but not in others, and if it is not aligned with the specific goals of the course, it may not enhance learning outcomes.
+   - **Implication:** If this explanation is correct, the integration of AI in education should be more strategic and aligned with the specific learning objectives. Educators should carefully select and design AI tools that support the intended learning outcomes, rather than using AI as a general solution.
+
+### Smallest Decisive Test
+
+**Test Design:**
+Conduct a controlled experiment with two groups of students in a creative education course. Both groups will use AI tools, but the tasks and learning objectives will differ:
+
+- **Group A (Cognitive Offloading):** Students will be given tasks that require minimal critical thinking and problem-solving, allowing them to rely heavily on AI for support.
+- **Group B (Strategic Alignment):** Students will be given tasks that require deep cognitive processing and critical thinking, with AI used as a supportive tool rather than a primary solution.
+
+**Outcome Measures:**
+- **Short-term Performance:** Immediate academic performance on the tasks.
+- **Long-term Retention:** Performance on a follow-up test or project that assesses deeper understanding and application of the learned material.
+- **Perceived Support:** Student self-reports on how supported and productive they felt with AI.
+
+**Possible Results and Implications:**
+
+1. **If Group A performs better in the short term but worse in the long term:**
+   - **Implication:** This would support the cognitive offloading and shallow processing hypothesis. It suggests that while AI can provide immediate support, it may hinder deeper learning and long-term retention. Educators should be cautious about over-reliance on AI and design tasks that require critical thinking.
+
+2. **If Group B performs better in both the short term and long term:**
+   - **Implication:** This would support the misalignment of AI and learning objectives hypothesis. It suggests that the effectiveness of AI depends on how well it is aligned with the specific learning goals. Educators should focus on integrating AI in a way that supports the intended learning outcomes, rather than using it as a general tool.
+
+### Conclusion
+
+The proposed test aims to resolve the contradiction between perceived support and actual learning outcomes by examining the impact of different task designs on student performance. The results will provide valuable insights into how AI
+DEMO_QUESTION_SECONDS A3 99.0
+PASS FAST_PATH_MASTER_PREFIX_UNCHANGED 
+PASS FILE_SHA_MASTER 
+PASS CARTRIDGE_ID_MASTER 
+PASS CARTRIDGE_TENSOR_SHA_MASTER 
+PASS NATIVE_INIT_80_LAYERS 
+PASS MASTER_80_LAYER_PARITY {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+PASS ALL_PHYSICAL_SOURCES_PRESERVED 
+TEST730_RESULT DEMO_COMPLETED_UNGRADED
+SUMMARY {'fast_path_single_master_init': True, 'sources': 3, 'master': 1, 'question_count': 6, 'human_questions': 3, 'advanced_questions': 3, 'answered_nonempty': 6, 'ssd_sha_verified': True, 'master_80_layer_parity': True, 'weights_unchanged': True, 'independent_correctness_not_yet_graded': True}
+RESULT_JSON /content/AKBASCORE_TEST730/TEST730_results.json MANIFEST /content/AKBASCORE_TEST730/TEST730_manifest.json LOG /content/AKBASCORE_TEST730/TEST730.log
+TEST736_PANEL_SHA256 5cc10e66646ab24cd957e1d63ce6d0a67da5fc900e03a22e1bb7874f63a157c4 CASES 32 LABEL_IDS 362 425
+PASS FILE_SHA_MASTER 
+PASS CARTRIDGE_ID_MASTER 
+PASS CARTRIDGE_TENSOR_SHA_MASTER 
+CASE736 {"id": "Q00", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "920b2815ec8015d4fe39526e2020950b736f49a629c737ca555f68fa089f9724", "append_sha256": {"TEMPORAL_RAW": "3c55efe2369666cd8fc0b5f3be71c93a9d004c900a3aea34347fbc4cc4e5f21a", "TEMPORAL_SHUFFLED": "07a3e4bca3928d870c3527d97717aa1913d6c151aa881c9633a3821edf540d5d", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "d95398ec15061d551133a77cac89b92929fe635c4e5d224c6603723d74c51bcd"}, "scale": 0.93359375, "h3_rms": 3.2813761234283447, "upper_rms": 3.5089187622070312, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 5.5, "p_gold": 0.9959298968315125, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 2.0625, "p_gold": 0.8872045874595642, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 1.6875, "p_gold": 0.8438951373100281, "top_token_id": 17}, "TEMPORAL_ZERO": {"pred": "A", "correct": true, "gold_margin": 0.625, "p_gold": 0.6513549089431763, "top_token_id": 362}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": true, "gold_margin": 3.75, "p_gold": 0.977022647857666, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.1015625, "p_gold": 0.750552773475647, "top_token_id": 279}}}
+CASE736 {"id": "Q01", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "6c1ee06ff4161057137aabadef621ab6be74c70b4c8be054338ac776860a26f8", "append_sha256": {"TEMPORAL_RAW": "fd5a74b05b6ab35e0881022fd2ba572541f9e4642d76e080992b0db5be697e5b", "TEMPORAL_SHUFFLED": "97cad8275133874677c0ebbdaa5eaeb702402c836dc722ed5994edb9a4294372", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "d46743907dad7257995fec162602382711159de2b67aa75426ce4af163b4396c"}, "scale": 0.7890625, "h3_rms": 2.923405408859253, "upper_rms": 3.7101032733917236, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -2.625, "p_gold": 0.06754669547080994, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -1.40625, "p_gold": 0.19682620465755463, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -1.96484375, "p_gold": 0.12294380366802216, "top_token_id": 13}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 1.875, "p_gold": 0.8670357465744019, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": false, "gold_margin": -0.5, "p_gold": 0.3775406777858734, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.265625, "p_gold": 0.22000709176063538, "top_token_id": 279}}}
+CASE736 {"id": "Q02", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "f785175158b7764f0d8c72dd027370d44b42e602e094f4c1f12d9d0086d2a9e9", "append_sha256": {"TEMPORAL_RAW": "fb533fc7fd8e454a4c5709fad2b0e545404a768c8bb9d92032e4ccc81f5c1f1d", "TEMPORAL_SHUFFLED": "7e8061f89090fa1b854ad3f2c38c08e33c6da5ef07c189b5e8d86f169977d3a5", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "464b76eeebe2399f3b89400cf3a1cb3b20edfaf836b4122c6a98ecffbc8e437e"}, "scale": 0.71875, "h3_rms": 2.66176438331604, "upper_rms": 3.6996872425079346, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 2.0, "p_gold": 0.8807970285415649, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 0.40625, "p_gold": 0.6001883149147034, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 2.03125, "p_gold": 0.8840392827987671, "top_token_id": 22}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -1.75, "p_gold": 0.14804719388484955, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -5.0, "p_gold": 0.006692850962281227, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.0078125, "p_gold": 0.7325918078422546, "top_token_id": 279}}}
+CASE736 {"id": "Q03", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "e597904043559f3f3d10b11a95fca1788ad29a706f91f8a00d5a8ece83b55a38", "append_sha256": {"TEMPORAL_RAW": "bde6f1551ee749f5e8e50bc7411b54e5b1faa3e8d0334d9309acb7e33f5fce38", "TEMPORAL_SHUFFLED": "4db88df723ec626714b202a920fff61dc963587b5e59f04cd848a4660a39994c", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "a6be90939b5433af976e8b85d32b585694c56e1634d21343afc044d8dc71cac1"}, "scale": 0.6796875, "h3_rms": 2.459810256958008, "upper_rms": 3.62699556350708, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -2.375, "p_gold": 0.08509904146194458, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -0.09375, "p_gold": 0.4765796661376953, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": true, "gold_margin": 0.359375, "p_gold": 0.5888891220092773, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 0.75, "p_gold": 0.6791787147521973, "top_token_id": 271}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 0.875, "p_gold": 0.7057850360870361, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.0390625, "p_gold": 0.2613309323787689, "top_token_id": 279}}}
+CASE736 {"id": "Q04", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "5303d3118ad095949d6c8397201d79d1bd22e0727ad51c72c251fe620f4ba18b", "append_sha256": {"TEMPORAL_RAW": "d19ce72f6430e2370a0c2ae7bd0bfd6685c015411b6db79b78f6ea3682e23d38", "TEMPORAL_SHUFFLED": "1eeca3c8a5407cb5c65a9f713cf067f73f927e9e56385684066fb3c790331528", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "55bdcf3348b847ee70472978c14c63f27d80e81dfc41913901dcea3612d2b6d3"}, "scale": 0.90625, "h3_rms": 3.281369686126709, "upper_rms": 3.619142532348633, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 8.875, "p_gold": 0.9998601675033569, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 2.8125, "p_gold": 0.9433475732803345, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 2.0, "p_gold": 0.8807970285415649, "top_token_id": 16}, "TEMPORAL_ZERO": {"pred": "A", "correct": true, "gold_margin": 1.875, "p_gold": 0.8670357465744019, "top_token_id": 362}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": true, "gold_margin": 6.5, "p_gold": 0.998498797416687, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.515625, "p_gold": 0.8198933005332947, "top_token_id": 279}}}
+CASE736 {"id": "Q05", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "3529bcb240fb31a729d7c65f0df1f7544405afe7e4ba62a9653dda26ce40cc54", "append_sha256": {"TEMPORAL_RAW": "48c2c8d5df378e609a98d0710b02f65910af35507da3cb6a8609bcf6ff11d663", "TEMPORAL_SHUFFLED": "955930e0e3973f519e1e70faef6a69c31187f981b31b21eb1801bbafee120038", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "f08744dd88ebbe195fcf218346b87677bc3971ba069526fa2bb1d1a66338dfa2"}, "scale": 0.79296875, "h3_rms": 2.923421859741211, "upper_rms": 3.68379282951355, "arms": {"BASE": {"pred": "B", "correct": true, "gold_margin": 2.625, "p_gold": 0.9324532747268677, "top_token_id": 425}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -0.625, "p_gold": 0.3486451506614685, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -0.109375, "p_gold": 0.47268345952033997, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 3.5, "p_gold": 0.970687747001648, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 7.25, "p_gold": 0.9992903470993042, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.3046875, "p_gold": 0.21337716281414032, "top_token_id": 279}}}
+CASE736 {"id": "Q06", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "a460451c98569d4321c245e93e8073b79f98efef831ee1dab76db8daed43fcf0", "append_sha256": {"TEMPORAL_RAW": "76c2035257ec7af63b639c5e56a0c0c022e48b292ba9f5a11743d151a81f7213", "TEMPORAL_SHUFFLED": "4ded085bf34089b27cdd2d3157dab799a7f377ff8b47f76f4c209f8b8ac5268a", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "21e7c15e42cec6edc68ea2651ce8185c32850f47a253e1dd054953ed4a97b263"}, "scale": 0.71484375, "h3_rms": 2.66178297996521, "upper_rms": 3.733414888381958, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 3.375, "p_gold": 0.9669140577316284, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 0.375, "p_gold": 0.5926666259765625, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": false, "gold_margin": -0.1875, "p_gold": 0.4532618820667267, "top_token_id": 16}, "TEMPORAL_ZERO": {"pred": "TIE", "correct": false, "gold_margin": 0.0, "p_gold": 0.5, "top_token_id": 271}, "TEMPORAL_NATIVE_H3": {"pred": "TIE", "correct": false, "gold_margin": 0.0, "p_gold": 0.5, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.140625, "p_gold": 0.7577943801879883, "top_token_id": 279}}}
+CASE736 {"id": "Q07", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "12ad33334fff4ffb9a10057032900b565d6bb068e9d07a6f0242032a4f99e4c7", "append_sha256": {"TEMPORAL_RAW": "a1e0d7ac56e1560beeb93b0b5544a35bb8e898d941aea1f90647eb70e2c08501", "TEMPORAL_SHUFFLED": "08bce754bc03adeff5233301bb72f3f29253fe1b2a07db90b38f7c88cbb72621", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "79fe245093467706b0fc42627567bf4ea100d4a826f30f9cba63c4e4774787ff"}, "scale": 0.66015625, "h3_rms": 2.4598333835601807, "upper_rms": 3.7211287021636963, "arms": {"BASE": {"pred": "B", "correct": true, "gold_margin": 3.5, "p_gold": 0.970687747001648, "top_token_id": 425}, "TEMPORAL_RAW": {"pred": "B", "correct": true, "gold_margin": 1.40625, "p_gold": 0.8031737804412842, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": true, "gold_margin": 0.40625, "p_gold": 0.6001883149147034, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 3.375, "p_gold": 0.9669140577316284, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 8.375, "p_gold": 0.9997695088386536, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.03125, "p_gold": 0.2628418505191803, "top_token_id": 279}}}
+CASE736 {"id": "Q08", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "640dedbe418bff1de96f05656ea01c7026709a017681fd22d46e5382600be960", "append_sha256": {"TEMPORAL_RAW": "d45475755e30ab77e6e6c6eafff251b6453b99525ff80423bc0eee270a95e317", "TEMPORAL_SHUFFLED": "fa535a71a0da206b9d24e2692f969d23f8a45145cdd0e53b52ee5c51488c1a6b", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "02f00501245ef4cc79f4a6e47bef599210f7e9de99ec6916ebad88101c86977e"}, "scale": 0.87109375, "h3_rms": 3.2813870906829834, "upper_rms": 3.7649552822113037, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 6.625, "p_gold": 0.9986749291419983, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 1.5, "p_gold": 0.8175744414329529, "top_token_id": 311}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 1.5390625, "p_gold": 0.8233283758163452, "top_token_id": 24}, "TEMPORAL_ZERO": {"pred": "A", "correct": true, "gold_margin": 0.875, "p_gold": 0.7057850360870361, "top_token_id": 362}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": true, "gold_margin": 5.875, "p_gold": 0.9971990585327148, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.3203125, "p_gold": 0.7892336845397949, "top_token_id": 334}}}
+CASE736 {"id": "Q09", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "4392b7d90fcedb95e2c9799b2ad2766d8e5e157852d9b5fb76081e28c28c73f7", "append_sha256": {"TEMPORAL_RAW": "cd526a56ea2ce34550b879ec48581042ebf99afb3b6d39ac0d80ff0fc2050b1a", "TEMPORAL_SHUFFLED": "06ec0fe3d584f95cfb09535a72956e7f3981de74de52d2f7c79c3934481438da", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "1207551d95206cf32c6e80ec13be32b52f7b5c2f15d7b7823d0ecc59e7b7417a"}, "scale": 0.796875, "h3_rms": 2.923426866531372, "upper_rms": 3.6669325828552246, "arms": {"BASE": {"pred": "B", "correct": true, "gold_margin": 2.375, "p_gold": 0.9149009585380554, "top_token_id": 425}, "TEMPORAL_RAW": {"pred": "B", "correct": true, "gold_margin": 0.03125, "p_gold": 0.5078118443489075, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": true, "gold_margin": 0.34375, "p_gold": 0.5851011276245117, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 3.625, "p_gold": 0.9740425944328308, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 7.125, "p_gold": 0.9991958737373352, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.1875, "p_gold": 0.23370634019374847, "top_token_id": 279}}}
+CASE736 {"id": "Q10", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "30dab62b49684c8ff2d95460cadcf8fa195b9b752d434f89ec47f7c254417216", "append_sha256": {"TEMPORAL_RAW": "cd036dde9e6b421c65d767263129d114dece3152997febc8fd97520801457198", "TEMPORAL_SHUFFLED": "1a3920297589bff89502fded968f7199f8ac4875a4416093306c4f4be5c6453e", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "0d86aad42efaa4960968b200e523d8c8a47799c110f149b27057b85e2a621ff4"}, "scale": 0.75390625, "h3_rms": 2.6617627143859863, "upper_rms": 3.5338785648345947, "arms": {"BASE": {"pred": "B", "correct": false, "gold_margin": -2.5, "p_gold": 0.07585817575454712, "top_token_id": 425}, "TEMPORAL_RAW": {"pred": "B", "correct": false, "gold_margin": -0.65625, "p_gold": 0.3415825068950653, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": false, "gold_margin": -0.6875, "p_gold": 0.3345894515514374, "top_token_id": 16}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -3.375, "p_gold": 0.03308597952127457, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -8.125, "p_gold": 0.0002959571429528296, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.2890625, "p_gold": 0.7839884757995605, "top_token_id": 279}}}
+CASE736 {"id": "Q11", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "7d9d17b721910da4d1d1b62ff2e69e2b47f0b09126ef105e04bd550ae5678934", "append_sha256": {"TEMPORAL_RAW": "13b04dd437b7459d1f0b8650ffaa87a7391f6a1ef7c94da5bc0fa9db4d6420c2", "TEMPORAL_SHUFFLED": "49fd1172740068785034c71e833b7f2b765b2d0a9b45fa5afe92a8c5ef1c6d22", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "0ce7196267a63ada7bfdbc81db538b32112b0da9c00ac12ae171d9efda1590c0"}, "scale": 0.671875, "h3_rms": 2.459803342819214, "upper_rms": 3.653383255004883, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -3.625, "p_gold": 0.02595735713839531, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -0.46875, "p_gold": 0.3849121630191803, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -0.3984375, "p_gold": 0.4016878008842468, "top_token_id": 19}, "TEMPORAL_ZERO": {"pred": "A", "correct": false, "gold_margin": -0.625, "p_gold": 0.3486451506614685, "top_token_id": 271}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": false, "gold_margin": -1.25, "p_gold": 0.22270014882087708, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.265625, "p_gold": 0.22000709176063538, "top_token_id": 279}}}
+CASE736 {"id": "Q12", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "608352340ecbc11049e5eccc3758b1a6b59062506931f4589633073d617af361", "append_sha256": {"TEMPORAL_RAW": "601fc03d99a9a55208ec81be5f849b9fd8c2fb453cf0f785f92e026eaea5a10d", "TEMPORAL_SHUFFLED": "3dce712b20cf0bcb0ef2c02495da25796c773253eb4de8b85c5c5ddc871a7477", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "d3543c246b2659f293ebc44535d83ef19174e0c18bd8de3a504772cdbc1cf33b"}, "scale": 0.9609375, "h3_rms": 3.2813472747802734, "upper_rms": 3.411505937576294, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 3.625, "p_gold": 0.9740425944328308, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 2.0, "p_gold": 0.8807970285415649, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 1.09375, "p_gold": 0.7490872144699097, "top_token_id": 16}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -2.0, "p_gold": 0.11920291930437088, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -2.375, "p_gold": 0.08509904146194458, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 0.984375, "p_gold": 0.7279754281044006, "top_token_id": 279}}}
+CASE736 {"id": "Q13", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "ed85b47f79280ad60598829d4fc1a6e575aa9075765960a61f0d53f7a538398b", "append_sha256": {"TEMPORAL_RAW": "29ae30d1406619216606a01cde00431afe138bdbb78815bb7628f39aee525f2c", "TEMPORAL_SHUFFLED": "38ef997cf8fa21843affd6c05e0e0c7a531c55c2416abf24481d9feaca4ef5ae", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "cea5c455e5f09d64bcd5047b9a240ad1fdf801e24cd56303fa4ac8c516c37076"}, "scale": 0.7734375, "h3_rms": 2.9233920574188232, "upper_rms": 3.7804946899414062, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -3.125, "p_gold": 0.042087726294994354, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -2.0625, "p_gold": 0.1127953976392746, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -0.375, "p_gold": 0.4073334336280823, "top_token_id": 20}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 0.625, "p_gold": 0.6513549089431763, "top_token_id": 271}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": false, "gold_margin": -1.0, "p_gold": 0.2689414322376251, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.1875, "p_gold": 0.23370634019374847, "top_token_id": 279}}}
+CASE736 {"id": "Q14", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "e90ef70ca7df0aceb30ae72ab4eced93f48789adabb22de027c4cfbbc931bb10", "append_sha256": {"TEMPORAL_RAW": "ec1ff2921462af180853b16c303664150840c7b3fe63de072fba976608579554", "TEMPORAL_SHUFFLED": "284b2e298574be4ec6684339cb7abf81850159cdff3933c17a91aa25e27b30e3", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "306626466fbc90eaaf7057e5978cd289582b60709087de180e47c35a631554a9"}, "scale": 0.69921875, "h3_rms": 2.66176176071167, "upper_rms": 3.8144290447235107, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 6.25, "p_gold": 0.9980732202529907, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 1.15625, "p_gold": 0.7606506943702698, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 0.875, "p_gold": 0.7057850360870361, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "A", "correct": true, "gold_margin": 1.125, "p_gold": 0.7549149990081787, "top_token_id": 362}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": true, "gold_margin": 2.25, "p_gold": 0.9046505093574524, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.21875, "p_gold": 0.7718434929847717, "top_token_id": 279}}}
+CASE736 {"id": "Q15", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "ef04af736f45da87276d73f08cc0aba85247713910209c405e250cdd73e0e71e", "append_sha256": {"TEMPORAL_RAW": "810fd00cf1ca1b8a8717664bbb51db56f051f0fc9f9382314bc3cd3c6140d25f", "TEMPORAL_SHUFFLED": "4efa2cc0673bc0ebc2bb5545927e6c9958f7f40dd591ecc202dbf0179a11fd90", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "7d316e49980548cd8260507cb6d9d2cfbc2968200b6146cf7462589a4c981b19"}, "scale": 0.6953125, "h3_rms": 2.4597911834716797, "upper_rms": 3.539351463317871, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -1.5, "p_gold": 0.18242551386356354, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "B", "correct": true, "gold_margin": 0.59375, "p_gold": 0.6442251205444336, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -0.96875, "p_gold": 0.2751297354698181, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 0.625, "p_gold": 0.6513549089431763, "top_token_id": 271}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 4.75, "p_gold": 0.9914224743843079, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.296875, "p_gold": 0.2146914154291153, "top_token_id": 279}}}
+CASE736 {"id": "Q16", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "b186d19db1f83832f3d31847c3210b80f3ef4bfe0caf17166b9e98c208a2789a", "append_sha256": {"TEMPORAL_RAW": "4a55072628fdc9ecbcf042c7268ecb949e6e8f9a04fff38e2135b373d45894dc", "TEMPORAL_SHUFFLED": "beac36fefc65afb96595eeb522083bc054cd37189c3c721330c64aba7175a63a", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "4cb363a5f309aedcc0697b4d36cdf590fd16b4ace998f1f610426bd340517a5b"}, "scale": 0.90625, "h3_rms": 3.2813572883605957, "upper_rms": 3.6260945796966553, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 3.75, "p_gold": 0.977022647857666, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 0.71875, "p_gold": 0.672331690788269, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 2.171875, "p_gold": 0.8976953029632568, "top_token_id": 22}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -1.5, "p_gold": 0.18242551386356354, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -0.75, "p_gold": 0.3208213150501251, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.4453125, "p_gold": 0.8092759251594543, "top_token_id": 279}}}
+CASE736 {"id": "Q17", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "d3e9cd0b0497d00d648d1ee49ddcccdf04904cab73978d78b8933a6e5f4a4f7e", "append_sha256": {"TEMPORAL_RAW": "aa69a922ea31b7425595fd4f3840d9ed7c9594a82ff3aa6c3290f24f1dfc1328", "TEMPORAL_SHUFFLED": "93e18c0f6771118cc72d5e229d032c2bc5ac42361cdd7e813899a69153d7ef7a", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "a2520c4c03c85139ee0f0ed94c0d284434d5765502403a0f9b39d4f41128216d"}, "scale": 0.796875, "h3_rms": 2.9233944416046143, "upper_rms": 3.664829730987549, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -1.75, "p_gold": 0.14804719388484955, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -1.4375, "p_gold": 0.1919327974319458, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -0.8125, "p_gold": 0.3073580265045166, "top_token_id": 16}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 1.0, "p_gold": 0.7310585379600525, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": false, "gold_margin": -1.25, "p_gold": 0.22270014882087708, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.15625, "p_gold": 0.2393493503332138, "top_token_id": 279}}}
+CASE736 {"id": "Q18", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "6d8ef02a8bdc533912a45e7584b0e24ee6f4fbe8a406ed957e26e0686f8126ac", "append_sha256": {"TEMPORAL_RAW": "b6aaff0cd9f371af4901b4133d1dcce9d74f50314b13512f0de9e7e88cd64c75", "TEMPORAL_SHUFFLED": "3a77c5bb15b4beb7dd6b17675b850b7cf1e63ecac300c3f2d4c83912af0e1279", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "a3bb5d3cfd35701f2540d6cd5388059849ff65c51e1b44fb0bf805a7f85d97c8"}, "scale": 0.69921875, "h3_rms": 2.661763906478882, "upper_rms": 3.8012776374816895, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 3.5, "p_gold": 0.970687747001648, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 0.21875, "p_gold": 0.5544704794883728, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 0.34375, "p_gold": 0.5851011276245117, "top_token_id": 18}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -0.75, "p_gold": 0.3208213150501251, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -4.25, "p_gold": 0.014063626527786255, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.296875, "p_gold": 0.7853085398674011, "top_token_id": 279}}}
+CASE736 {"id": "Q19", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "cd5ab6e6c03f32ce38e32541ed195eced97f88bf262456f1b093d42d79b1b082", "append_sha256": {"TEMPORAL_RAW": "bca715b5cea1935441a1d7cd723f547c7abc121558b423279983bdd69aef6eb3", "TEMPORAL_SHUFFLED": "b5123124565646168d49197b65f217c6fd2bc4daecf55a75a32cbc9401893c5f", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "8b04a14adbd61bd3eadf8be6be21d7f7ae2ec1135c537e307a3789e7dfb7a611"}, "scale": 0.67578125, "h3_rms": 2.4597814083099365, "upper_rms": 3.649894952774048, "arms": {"BASE": {"pred": "B", "correct": true, "gold_margin": 2.0, "p_gold": 0.8807970285415649, "top_token_id": 425}, "TEMPORAL_RAW": {"pred": "B", "correct": true, "gold_margin": 1.15625, "p_gold": 0.7606506943702698, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": true, "gold_margin": 0.125, "p_gold": 0.531209409236908, "top_token_id": 17}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 2.625, "p_gold": 0.9324532747268677, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 8.375, "p_gold": 0.9997695088386536, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -0.890625, "p_gold": 0.29098084568977356, "top_token_id": 279}}}
+CASE736 {"id": "Q20", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "e95ca48454c8e5bf8d797b3ea2b33391edd22c26af8a019fe840ceb1a38333cf", "append_sha256": {"TEMPORAL_RAW": "4638ebb1fee4cfe21c381976b1c68854ea6d4338f73ecc4e36f3ee3408731f22", "TEMPORAL_SHUFFLED": "750306ac2ebe670d9ac303960cea5fbb4b42e877390cb8131cb5d8fe7081affc", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "ebebb4da6d26700306b6dd998fdfff12d67a0f083b3a7ce43b794624a3664a13"}, "scale": 0.8984375, "h3_rms": 3.28133225440979, "upper_rms": 3.656233787536621, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 2.5, "p_gold": 0.9241418242454529, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 1.78125, "p_gold": 0.8558511734008789, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 3.171875, "p_gold": 0.9597620368003845, "top_token_id": 264}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -1.125, "p_gold": 0.24508501589298248, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -0.5, "p_gold": 0.3775406777858734, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.109375, "p_gold": 0.7520125508308411, "top_token_id": 279}}}
+CASE736 {"id": "Q21", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "fd2695af5916f0fd088a25d6db65541cf3faeaab733212f469755f415e4f7ce2", "append_sha256": {"TEMPORAL_RAW": "da190daf732723b86540b8d5471b5499959eb6b56205a94075b641b562b57f82", "TEMPORAL_SHUFFLED": "822163350836d89e475516e4efdf5c5aefe8936cc469485f3c4a827aa75401a2", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "97ace4f561e9ac9f85457efb3f1dd1bc24d81567be2ecfcb1654f8e2c71bc4b1"}, "scale": 0.765625, "h3_rms": 2.9233837127685547, "upper_rms": 3.813354730606079, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -3.375, "p_gold": 0.03308597952127457, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -1.1875, "p_gold": 0.23370634019374847, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -1.375, "p_gold": 0.2018132209777832, "top_token_id": 825}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 1.125, "p_gold": 0.7549149990081787, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 0.5, "p_gold": 0.622459352016449, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.265625, "p_gold": 0.22000709176063538, "top_token_id": 279}}}
+CASE736 {"id": "Q22", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "382701bef2f586db6c4e0a428c2a6c9f346094335d956a934abea82cdf56e626", "append_sha256": {"TEMPORAL_RAW": "d7ff86f036f95531e602628023ec3da438d58b51b5db7992e1dc70aaf085d16c", "TEMPORAL_SHUFFLED": "94be3f9ec638a8b3f2a123aa6a584af1362cd3f4e9a01a82a8f8bb6858a85375", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "e656aff9ed2c4afdb06d4e0c7205a5b3bdafea5bf6e83fad6d7fa6bda6e6002e"}, "scale": 0.703125, "h3_rms": 2.661752462387085, "upper_rms": 3.775442361831665, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 2.625, "p_gold": 0.9324532747268677, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 0.25, "p_gold": 0.562176525592804, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 0.1875, "p_gold": 0.5467381477355957, "top_token_id": 4236}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -1.0, "p_gold": 0.2689414322376251, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -5.25, "p_gold": 0.005220125894993544, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 0.953125, "p_gold": 0.7217432260513306, "top_token_id": 279}}}
+CASE736 {"id": "Q23", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "12154da34d53b71f4592a4084aa6443f8b5b3207652f0295d6fde634877ba878", "append_sha256": {"TEMPORAL_RAW": "878e3980a07aabbe3c082e3ffb0fa9d88c68185495e4964e1f0b1968e8f623b4", "TEMPORAL_SHUFFLED": "33a244f00101fc2d75fe4b4632cb37b28c1a04aa947475f539ac6cb611dd6fa3", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "7c9292fdae469ab7810bffa352230fee1bff92ce5b3c2df675a4b6f22a253a9e"}, "scale": 0.65625, "h3_rms": 2.459782600402832, "upper_rms": 3.754148006439209, "arms": {"BASE": {"pred": "B", "correct": true, "gold_margin": 1.5, "p_gold": 0.8175744414329529, "top_token_id": 425}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -0.09375, "p_gold": 0.4765796661376953, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -0.4375, "p_gold": 0.3923368453979492, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 2.75, "p_gold": 0.9399133324623108, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 6.75, "p_gold": 0.9988304972648621, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -0.9375, "p_gold": 0.28140559792518616, "top_token_id": 279}}}
+CASE736 {"id": "Q24", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "6b7789c676b6a7cbabc8d63dc5b44eeb07db904471f4799a208c17fbf4559e34", "append_sha256": {"TEMPORAL_RAW": "b2bafdc342b97ecd97f3ac0266eee401851c76affcec5890b5ac3905abbdfe55", "TEMPORAL_SHUFFLED": "420f634b1368cd753d6e0f5224c5d478eabd56ac93c92a319e7a0df4cab2ef56", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "d4a8d8eeea6a98c06986e9a5f2a1d4ea12bac4f11abf7e262aeb13b8b284243d"}, "scale": 0.89453125, "h3_rms": 3.2813453674316406, "upper_rms": 3.667628288269043, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 6.875, "p_gold": 0.9989677667617798, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 2.59375, "p_gold": 0.9304582476615906, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 2.203125, "p_gold": 0.9005298018455505, "top_token_id": 7022}, "TEMPORAL_ZERO": {"pred": "A", "correct": true, "gold_margin": 1.125, "p_gold": 0.7549149990081787, "top_token_id": 362}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": true, "gold_margin": 5.875, "p_gold": 0.9971990585327148, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.03125, "p_gold": 0.7371581792831421, "top_token_id": 279}}}
+CASE736 {"id": "Q25", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "535c16c1c4c0efca3a601de61222bf2741eead8540879e87e9e243baf968eafd", "append_sha256": {"TEMPORAL_RAW": "23d32003261857fd70696e137c4a3641aea601cf779d768643d67ee0738f3628", "TEMPORAL_SHUFFLED": "7d2d434c114185af8781ae812b34f17c0eb59d3b544600ca7f23a34ace57a691", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "a36aefcc7711eecf29099c057ca9e16c6d089ee1626900945518411ceb322243"}, "scale": 0.8125, "h3_rms": 2.9233829975128174, "upper_rms": 3.602975368499756, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -0.25, "p_gold": 0.43782350420951843, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -0.46875, "p_gold": 0.3849121630191803, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -0.9375, "p_gold": 0.28140559792518616, "top_token_id": 220}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 2.5, "p_gold": 0.9241418242454529, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 5.75, "p_gold": 0.9968273043632507, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -0.96875, "p_gold": 0.2751297354698181, "top_token_id": 279}}}
+CASE736 {"id": "Q26", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "e8770fd60e5ac2c6cfa00ec9228aff0708b57e3f6fc764af5a15f7f30bdc3b21", "append_sha256": {"TEMPORAL_RAW": "d7b780e9b3a66ae0f0a25c8b0de7b93db863dc9b1b436ef10aee740d0ac734a3", "TEMPORAL_SHUFFLED": "65b985fbfe4aff75d1a6fb94bc9e36eda5a4b85aadf52d4d4336891a320a1f1a", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "adc64cd5d5fe68f743d2a841c5ded5d076bb37b789815192bc4c5251800e8d74"}, "scale": 0.71484375, "h3_rms": 2.6617558002471924, "upper_rms": 3.7150144577026367, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 3.75, "p_gold": 0.977022647857666, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "B", "correct": false, "gold_margin": -0.28125, "p_gold": 0.43014732003211975, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 1.4375, "p_gold": 0.8080672025680542, "top_token_id": 24}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -0.125, "p_gold": 0.4687906503677368, "top_token_id": 18}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": false, "gold_margin": -1.25, "p_gold": 0.22270014882087708, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.125, "p_gold": 0.7549149990081787, "top_token_id": 279}}}
+CASE736 {"id": "Q27", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "d56211015b2b99a11c0a67bca996706d88fbcdc265090cdd65db91e6db5482e8", "append_sha256": {"TEMPORAL_RAW": "efa8cad6823c51d1bbdf2df4976855c668a483ef302646f583943f47b955367b", "TEMPORAL_SHUFFLED": "73729013c259b6b6e585c6dd2707d096675908ae6e324aa1373f221a38e07ce4", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "3a36a3846a93bc3d0fcd6c76e33d1892d26c7c93212ac35dba61a48d172ecc11"}, "scale": 0.66796875, "h3_rms": 2.4597833156585693, "upper_rms": 3.68550705909729, "arms": {"BASE": {"pred": "B", "correct": true, "gold_margin": 5.875, "p_gold": 0.9971990585327148, "top_token_id": 425}, "TEMPORAL_RAW": {"pred": "B", "correct": true, "gold_margin": 1.90625, "p_gold": 0.8705973029136658, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": true, "gold_margin": 0.375, "p_gold": 0.5926666259765625, "top_token_id": 11}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 4.375, "p_gold": 0.9875683188438416, "top_token_id": 17}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 10.375, "p_gold": 0.9999687671661377, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -0.78125, "p_gold": 0.314050555229187, "top_token_id": 279}}}
+CASE736 {"id": "Q28", "gold": "A", "tokens": 323, "parity_max_abs": 0.0, "f0_sha256": "5b8e7d0f2db89926c8479f1bf76bcc003b8cd319e087d1389d2db0c4135dbcbf", "append_sha256": {"TEMPORAL_RAW": "25995754a77ccaff58d028d12a904287eaca7c9f8bb90cc33bcccd6b31b94855", "TEMPORAL_SHUFFLED": "c1b5d4819bf5d212e0513bf6291454928e95a06eb50c9565111c3310e8daae1f", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "4029f85195f71146d6259e09e30629b6c065ea8a7b0f0e8bccd76221207ef782"}, "scale": 0.8984375, "h3_rms": 3.281355142593384, "upper_rms": 3.6481359004974365, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 3.875, "p_gold": 0.9796676635742188, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 1.21875, "p_gold": 0.7718434929847717, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": true, "gold_margin": 0.875, "p_gold": 0.7057850360870361, "top_token_id": 17}, "TEMPORAL_ZERO": {"pred": "B", "correct": false, "gold_margin": -0.75, "p_gold": 0.3208213150501251, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": true, "gold_margin": 4.0, "p_gold": 0.9820137619972229, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 0.890625, "p_gold": 0.709019124507904, "top_token_id": 279}}}
+CASE736 {"id": "Q29", "gold": "B", "tokens": 407, "parity_max_abs": 0.0, "f0_sha256": "7836f2da4f9f37fb3c1b17758c13917e3c521e5388fd66e93c370bf8f1208ad8", "append_sha256": {"TEMPORAL_RAW": "910a6744bbd276c98b0c3d2193a38b1d133cfb46b54da3a525e82d41864547cf", "TEMPORAL_SHUFFLED": "eacfe89f7fc77630c614d68bcfa45271430936dd5c65b3a0f26c67f407510ea1", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "0e7f89d121970282eaca70c2d4c7646e22adf70d1169e836f2393a13afbeee6f"}, "scale": 0.76171875, "h3_rms": 2.923381805419922, "upper_rms": 3.8386523723602295, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -4.375, "p_gold": 0.01243165135383606, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -1.84375, "p_gold": 0.13660839200019836, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -2.16796875, "p_gold": 0.10266400873661041, "top_token_id": 498}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 0.875, "p_gold": 0.7057850360870361, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": false, "gold_margin": -0.75, "p_gold": 0.3208213150501251, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.0625, "p_gold": 0.2568320035934448, "top_token_id": 279}}}
+CASE736 {"id": "Q30", "gold": "A", "tokens": 491, "parity_max_abs": 0.0, "f0_sha256": "bee8a70b737e6244f333d9edaae28eebd1970e22ee6f1282a77168edb42edc29", "append_sha256": {"TEMPORAL_RAW": "a80ecc2dd1a8336b00cefaca774beecc05f521716368ae84263d13a8f1389573", "TEMPORAL_SHUFFLED": "c3519a711417f8e4fc530cba62cd9347d248636ed03f8150f8f6ee3c2c0c0c2b", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "058759a3e2adf91c16045ae512f17f485ce7ae9d787ee826796efd742f0caba2"}, "scale": 0.703125, "h3_rms": 2.6617536544799805, "upper_rms": 3.7911994457244873, "arms": {"BASE": {"pred": "A", "correct": true, "gold_margin": 8.5, "p_gold": 0.9997965693473816, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": true, "gold_margin": 2.03125, "p_gold": 0.8840392827987671, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "B", "correct": false, "gold_margin": -0.140625, "p_gold": 0.46490156650543213, "top_token_id": 21}, "TEMPORAL_ZERO": {"pred": "A", "correct": true, "gold_margin": 2.0, "p_gold": 0.8807970285415649, "top_token_id": 18}, "TEMPORAL_NATIVE_H3": {"pred": "A", "correct": true, "gold_margin": 5.125, "p_gold": 0.9940890073776245, "top_token_id": 362}, "RAW_OVERWRITE": {"pred": "A", "correct": true, "gold_margin": 1.234375, "p_gold": 0.7745833992958069, "top_token_id": 279}}}
+CASE736 {"id": "Q31", "gold": "B", "tokens": 575, "parity_max_abs": 0.0, "f0_sha256": "696dce8ae21035860f0a6d13cc4b1386e1532535c886e08e4182c89368564688", "append_sha256": {"TEMPORAL_RAW": "a979fdc63ffb3b855ea0a28169304189a75bfbb5c8dcbf94766d2f119d39606c", "TEMPORAL_SHUFFLED": "85defb6c1b4706e4035de77439cdb24f1ae3ba46520d4b14b68441850db21a5f", "TEMPORAL_ZERO": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471", "TEMPORAL_NATIVE_H3": "58e66cb0c62c4849f378602c454925e4bc161d55561be6480d9259cb5eafe935"}, "scale": 0.6484375, "h3_rms": 2.4597814083099365, "upper_rms": 3.801295042037964, "arms": {"BASE": {"pred": "A", "correct": false, "gold_margin": -2.875, "p_gold": 0.0534033328294754, "top_token_id": 362}, "TEMPORAL_RAW": {"pred": "A", "correct": false, "gold_margin": -1.75, "p_gold": 0.14804719388484955, "top_token_id": 11}, "TEMPORAL_SHUFFLED": {"pred": "A", "correct": false, "gold_margin": -1.3125, "p_gold": 0.2120688110589981, "top_token_id": 19}, "TEMPORAL_ZERO": {"pred": "B", "correct": true, "gold_margin": 0.875, "p_gold": 0.7057850360870361, "top_token_id": 425}, "TEMPORAL_NATIVE_H3": {"pred": "B", "correct": true, "gold_margin": 2.5, "p_gold": 0.9241418242454529, "top_token_id": 425}, "RAW_OVERWRITE": {"pred": "A", "correct": false, "gold_margin": -1.21875, "p_gold": 0.22815649211406708, "top_token_id": 279}}}
+TEST736_PAIRED {"RAW_OVERWRITE": {"base_wrong_total": 11, "wrong_to_right": 1, "right_to_wrong": 6, "net_correct_change": -5}, "TEMPORAL_RAW": {"base_wrong_total": 11, "wrong_to_right": 1, "right_to_wrong": 3, "net_correct_change": -2}, "TEMPORAL_SHUFFLED": {"base_wrong_total": 11, "wrong_to_right": 1, "right_to_wrong": 4, "net_correct_change": -3}, "TEMPORAL_ZERO": {"base_wrong_total": 11, "wrong_to_right": 9, "right_to_wrong": 9, "net_correct_change": 0}, "TEMPORAL_NATIVE_H3": {"base_wrong_total": 11, "wrong_to_right": 5, "right_to_wrong": 8, "net_correct_change": -3}}
+TEST736_SUMMARY {"BASE": {"correct": 21, "total": 32, "accuracy": 0.65625, "mean_gold_margin": 1.91015625}, "RAW_OVERWRITE": {"correct": 16, "total": 32, "accuracy": 0.5, "mean_gold_margin": 0.025146484375}, "TEMPORAL_RAW": {"correct": 19, "total": 32, "accuracy": 0.59375, "mean_gold_margin": 0.3701171875}, "TEMPORAL_SHUFFLED": {"correct": 18, "total": 32, "accuracy": 0.5625, "mean_gold_margin": 0.292236328125}, "TEMPORAL_ZERO": {"correct": 21, "total": 32, "accuracy": 0.65625, "mean_gold_margin": 0.78515625}, "TEMPORAL_NATIVE_H3": {"correct": 18, "total": 32, "accuracy": 0.5625, "mean_gold_margin": 1.9921875}}
+TEST736_RESULT {"status": "NO_DEMONSTRATED_CORRECTION_GAIN", "checks": {"reference_complete": true, "sealed_panel_unchanged": true, "master_integrity_verified": true, "f0_preserved": true, "native_replay_parity": true, "weights_frozen": true, "weight_sentinel_unchanged": true, "temporal_improves_over_base": false, "temporal_exceeds_both_controls": false, "raw_corrects_at_least_one_base_error": true, "raw_net_improves": false, "raw_corrections_exceed_controls": false}, "seconds": 117.368}
+TEST736_JSON /content/AKBASCORE_TEST736/TEST736_results.json LOG /content/AKBASCORE_TEST736/TEST736.log
