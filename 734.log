@@ -1,0 +1,524 @@
+ TEST734_REFERENCE_730_SHA256 c8dfa5bc7735ad2e00bd1b0141c7f0dc6af7cfb7232747e3bbf5b9a26f70dfaf
+==============================================================================================================
+AKBASCORE PROMETHEUS — TEST730 — THREE REAL SOURCES / AUTONOMOUS-STYLE SYNTHESIS / SEALED MASTER
+==============================================================================================================
+QUESTION_PANEL_PRESEALED_SHA256 bfc2bdac698847fe5545ec6dc1600f64348eef0cc0c9dd0ae15628b44a1a0f5a
+PASS CUDA_AVAILABLE {'torch': '2.11.0+cu130', 'cuda': '13.0'}
+PASS ONE_GPU 
+PASS A100_80GB NVIDIA A100-SXM4-80GB
+PASS 709_GIT_BLOB_LOCK 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS 716_GIT_BLOB_LOCK 913fa7a4951f2072df4be2eb49120ea86efa5477
+PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+SOURCE_PRIMARY_REJECTED P01 RuntimeError('LICENSE_NOT_VERIFIED:P01')
+SOURCE_EXPLICIT_REPLACEMENT P01 PMC13672588 Generative AI in creative education: baseline-linked evidence on learning processes, artistic performance, and authorship https://creativecommons.org/licenses/by/4.0/
+PASS SOURCE_TEXT_SHA_P01 
+SOURCE_LOCK {"id": "P01", "url": "https://www.nature.com/articles/s41599-026-07019-z", "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13672588/fullTextXML", "title": "Generative AI in creative education: baseline-linked evidence on learning processes, artistic performance, and authorship", "license": "https://creativecommons.org/licenses/by/4.0/", "published": "2026 (article XML)", "full_html_sha256": "473f44dd2d611d10cd9971c2137632b0302e8af42e6ba3079dfd3ec775c933be", "excerpt_sha256": "dd6a1b0311cc2c4055bb8b598eea906e11f4439d0f3938f6414ed78d90e07191", "excerpt_chars": 10500, "source_method": "EUROPE_PMC_FULLTEXT", "pmcid": "PMC13672588", "original_url_rejected": "https://www.nature.com/articles/s41599-026-07019-z", "replacement_reason": "RuntimeError('LICENSE_NOT_VERIFIED:P01')"}
+PASS SOURCE_TEXT_SHA_P02 
+SOURCE_LOCK {"id": "P02", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13521781/", "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13521781/fullTextXML", "title": "The critical-thinking paradox in generative AI-integrated learning: distinguishing efficiency from cognitive depth—a differentiated framework and testable propositions", "license": "https://creativecommons.org/licenses/by/4.0/", "published": "2026 (article XML)", "full_html_sha256": "f2e90eaa77b47c78c891d9245e27daf46f4a05a9b6d5ecc5a56e8f4999057aa2", "excerpt_sha256": "ead833c2a16df6ad6f2b965554cb5bf4bb2a936c088d704268ed87472668cee3", "excerpt_chars": 10500, "source_method": "EUROPE_PMC_FULLTEXT", "pmcid": "PMC13521781"}
+SOURCE_PRIMARY_REJECTED P03 RuntimeError('LICENSE_NOT_VERIFIED:P03')
+SOURCE_EXPLICIT_REPLACEMENT P03 PMC13043820 Catalysts of Change: Using AI To Lower the Activation Energy for Developing Gamified Learning Experiences in Health Profession Education https://creativecommons.org/licenses/by/4.0/
+PASS SOURCE_TEXT_SHA_P03 
+SOURCE_LOCK {"id": "P03", "url": "https://doi.org/10.1016/j.caeai.2026.100571", "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13043820/fullTextXML", "title": "Catalysts of Change: Using AI To Lower the Activation Energy for Developing Gamified Learning Experiences in Health Profession Education", "license": "https://creativecommons.org/licenses/by/4.0/", "published": "2026 (article XML)", "full_html_sha256": "f2d039fad5ffc1a1f8b330d9f49fa0f43484610717c069003f357f327d3435fa", "excerpt_sha256": "ea8d07f10d1b7ac84bd8f3a44abdb5c6515739f47688593f52ab826155e766f9", "excerpt_chars": 10500, "source_method": "EUROPE_PMC_FULLTEXT", "pmcid": "PMC13043820", "original_url_rejected": "https://doi.org/10.1016/j.caeai.2026.100571", "replacement_reason": "RuntimeError('LICENSE_NOT_VERIFIED:P03')"}
+PASS THREE_DISTINCT_SOURCES 
+PASS SOURCE_REUSE_LICENSES_VERIFIED 
+config.json: 100% 663/663 [00:00<00:00, 75.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 782kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+vocab.json: 100% 2.78M/2.78M [00:00<00:00, 67.8MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.4MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 130MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.18MB/s]Download complete:   125GB, 1.82GB/s  Reconstruction complete: 100%  145GB /  145GB,  717MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00, 10.47s/it]Loading weights: 100% 963/963 [06:26<00:00,  3.25it/s]generation_config.json: 100% 242/242 [00:00<00:00, 26.4kB/s]PASS ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+PASS DIRECT_FORWARD_NO_EXISTING_HOOKS 
+PASS SOURCE_TEXT_FINAL_SHA_P01 
+PASS NONEMPTY_BODY_P01 {'tokens': 1924}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT P01 REAL_SOURCE 58e3e1e7c9c5b61d711e8e5a090510dda82cb113f83fad53fbc3c5ee69190c1d
+PASS SOURCE_TEXT_FINAL_SHA_P02 
+PASS NONEMPTY_BODY_P02 {'tokens': 1987}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT P02 REAL_SOURCE 2ddfe65e99e5f910683d5862c05f778752b80a94b76242dd3da59c690e0a443a
+PASS SOURCE_TEXT_FINAL_SHA_P03 
+PASS NONEMPTY_BODY_P03 {'tokens': 2036}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT P03 REAL_SOURCE ab2ddddf1f7ba6f39c4623ae8638374e2b73dda3339dfd6c42fe899a41552292
+PASS THREE_PHYSICAL_SOURCES 
+PASS FILE_SHA_P01 
+PASS CARTRIDGE_ID_P01 
+PASS CARTRIDGE_TENSOR_SHA_P01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS SOURCE_REFLECTION_NONEMPTY_P01 
+READING_REFLECTION P01 The document discusses the integration of artificial intelligence (AI) in higher education, particularly in art and design courses, and examines the impact of AI on creative learning processes and outcomes. Here are the central claims, evidence, uncertainties, and implications:
+
+### Central Claims:
+1. **AI in Creative Education**: AI, especially generative AI (GenAI), is increasingly used in higher education, particularly in creative disciplines. It can assist students in various ways, such as ideation, reference gathering, and technique learning, but it also raises concerns about the balance between support and substitution in the creative process.
+2. **Assistive vs. Content-Generative AI**: The document distinguishes between assistive AI, which supports the creative process without directly producing content, and content-generative AI, which can create part of the final work. This distinction is crucial for understanding the impact on student learning and authorship.
+3. **Process-Outcome Decoupling**: AI may enhance the perceived support and efficiency of creative learning, but this does not necessarily translate into better artistic outcomes or deeper learning. This phenomenon is referred to as process-outcome decoupling.
+4. **Sustainable Learning**: The document emphasizes the importance of sustainable learning, which involves long-term capability, autonomy, and the ability to continue learning beyond a single task or course. AI can support or hinder these goals depending on how it is used.
+
+### Evidence:
+- **Empirical Studies**: The document cites various studies that show mixed results on the impact of AI on learning outcomes. For example, some studies indicate that AI can improve academic performance and higher-order thinking, while others suggest that it may reduce mental effort and perceived competence.
+- **Case Study**: The document describes a study of 133 undergraduate art students, examining how different forms of AI use (assistive and content-generative) are associated with artistic performance, perceived learning support, and creative learning processes.
+- **Literature Review**: The document reviews existing literature on AI in education, highlighting the need to consider not just the technical capabilities of AI but also how students interpret and internalize AI support.
+
+### Uncertainties:
+- **Perceived vs. Actual Learning**: The document notes that students may feel more supported and productive with AI, but this perceived ease may not translate into actual improvements in artistic competence or long-term learning.
+- **Authorship and Ownership**: There is uncertainty about how AI-generated content affects the perceived authorship and ownership of student work, which is crucial in creative disciplines.
+- **Generalizability**: The findings from the case study may not be generalizable to all higher education settings or all types of creative disciplines.
+
+### Implications:
+- **Pedagogical Design**: Educators need to carefully design AI-supported learning environments to ensure that AI enhances rather than hinders the development of creative skills and autonomy.
+- **Assessment Methods**: Assessment methods should consider both the quality of the final product and the process through which it was created, including the role of AI.
+- **Student Awareness**: Students should be made aware of the potential risks and benefits of AI use in their creative work, including the importance of maintaining their own creative agency and judgment.
+- **Further Research**: More research is needed to understand the long-term effects of AI on creative learning and to develop best practices for integrating AI in higher education.
+
+In summary, the document provides a nuanced view of AI in creative education, highlighting both the potential benefits and the challenges that need to be addressed to ensure that AI supports rather than undermines the development of creative skills and autonomy.
+PASS FILE_SHA_P02 
+PASS CARTRIDGE_ID_P02 
+PASS CARTRIDGE_TENSOR_SHA_P02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS SOURCE_REFLECTION_NONEMPTY_P02 
+READING_REFLECTION P02 The document discusses the integration of generative artificial intelligence (GenAI) in educational settings, highlighting both its benefits and potential drawbacks. Here’s a summary of the central claims, evidence, uncertainties, and implications:
+
+### Central Claims:
+1. **Rapid Adoption and Ad Hoc Integration**: GenAI tools, such as large language models (LLMs) like ChatGPT, have been rapidly adopted in educational settings without a well-developed, evidence-based framework for their integration.
+2. **Mixed Empirical Findings**: Early studies show mixed results, with some indicating positive outcomes in terms of academic performance and creative thinking, while others highlight limitations in critical thinking and deep cognitive processing.
+3. **Critical Thinking Paradox**: The document proposes a "critical thinking paradox" where GenAI can enhance short-term performance but may erode deeper cognitive processes necessary for long-term, transferable learning.
+4. **Theoretical Frameworks**: The authors integrate several theoretical frameworks (levels-of-processing, desirable difficulties, cognitive load theory, and cognitive offloading) to explain the mixed findings and propose a three-level framework for AI integration.
+
+### Evidence:
+1. **Performance Gains**:
+   - **Mariñoso et al. (2025)**: AI-assisted students achieved higher academic scores in designing mathematical learning situations.
+   - **Pan and Li (2025)**: Positive attitudes toward GenAI mediated the relationship between teacher support and learner well-being.
+   - **Peng et al. (2025)**: A meta-analysis reported a moderate positive short-term effect of AI-supported learning on creative thinking.
+
+2. **Shallow Processing Concerns**:
+   - **Wang and Wu (2025)**: Identified themes of AI’s accessibility and efficiency, gaps in depth and critical thinking, and compensatory verification behaviors.
+   - **Choudhuri et al. (2026)**: Found that routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.
+
+### Uncertainties:
+1. **Methodological Limitations**: Many studies focus on short-term outcomes and product quality, rather than long-term retention and transfer of knowledge.
+2. **Heterogeneity in Findings**: The variation in tasks, populations, tools, and designs may produce genuine heterogeneity, making it difficult to draw uniform conclusions.
+3. **Causal Relationships**: Observational and cross-sectional studies do not establish causal relationships, leaving open the question of whether routine AI use directly causes declining engagement.
+
+### Implications:
+1. **Need for Balanced Integration**: The document calls for a more nuanced approach to AI integration, specifying conditions under which AI can enhance or undermine specific learning objectives.
+2. **Teacher Education and Policy**: There is a need for teacher education programs to address AI awareness and competencies, and for educational policies to guide the responsible use of AI in classrooms.
+3. **Further Research**: The authors propose a confirmatory experimental design and methodological implications, including real-time operational telemetry, to track shifts in cognitive offloading and test the proposed hypotheses.
+
+### Conclusion:
+The document presents a balanced and nuanced view of GenAI in education, acknowledging its potential benefits while highlighting the need for careful, evidence-based integration to avoid eroding deeper cognitive processes. The proposed theoretical and methodological frameworks aim to guide future research and practice in this rapidly evolving field.
+PASS FILE_SHA_P03 
+PASS CARTRIDGE_ID_P03 
+PASS CARTRIDGE_TENSOR_SHA_P03 
+PASS NATIVE_INIT_80_LAYERS 
+PASS SOURCE_REFLECTION_NONEMPTY_P03 
+READING_REFLECTION P03 The document discusses the integration of gamified learning into health science education, particularly in medical training, and highlights the benefits and challenges of this approach. It also explores how artificial intelligence (AI) can facilitate the development and implementation of gamified learning strategies.
+
+### Central Claims:
+1. **Benefits of Gamified Learning:**
+   - **Enhanced Engagement and Satisfaction:** Gamified learning increases learner satisfaction and motivation.
+   - **Improved Learning Outcomes:** It aids in knowledge acquisition, critical thinking, problem-solving, and teamwork.
+   - **Theoretical Foundations:** Gamified learning is supported by various learning theories, including self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks.
+
+2. **Challenges in Adoption:**
+   - **Financial and Technical Constraints:** Limited funding, lack of infrastructure, and technical support can hinder the adoption of gamified learning.
+   - **Training and Professional Development:** Educators may lack the necessary training and professional development to effectively implement gamified strategies.
+   - **Negative Perceptions:** Some educators and students may have negative attitudes towards gamified learning.
+
+3. **Role of AI:**
+   - **Supporting Design and Implementation:** AI tools can help in selecting appropriate game types and mechanics, and in the creative process of designing gamified elements.
+   - **Lowering Activation Energy:** AI can reduce the effort required to develop and implement gamified learning, making it more accessible to educators.
+
+### Evidence:
+- **Empirical Studies:** The document cites multiple studies that demonstrate the effectiveness of gamified learning in various health science subjects, such as biochemistry, pharmacology, and physiology.
+- **Theoretical Frameworks:** It references self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks to support the rationale behind gamified learning.
+
+### Uncertainties:
+- **Heterogeneity in Results:** The document acknowledges that the results of studies evaluating gamified learning are heterogeneous, indicating that the effectiveness can vary.
+- **Contextual Barriers:** The success of gamified learning can be influenced by non-movable barriers such as student time, faculty time, class size, curricular constraints, space, and available resources.
+
+### Implications:
+- **Educational Design:** The document provides practical guidance for educators on how to integrate AI tools into the design and implementation of gamified learning, making it a valuable resource for health science educators.
+- **Future Research:** There is a need for further research to address the heterogeneity in results and to better understand the specific contexts in which gamified learning is most effective.
+- **Policy and Practice:** The document suggests that institutions should consider the benefits of gamified learning and the role of AI in supporting its implementation, potentially leading to policy changes and increased investment in educational technology.
+
+### Conclusion:
+The document presents a compelling case for the use of gamified learning in health science education, supported by both empirical evidence and theoretical frameworks. However, it also highlights the challenges and uncertainties that need to be addressed. The integration of AI is seen as a promising solution to lower the barriers to entry and enhance the effectiveness of gamified learning.
+PASS SYNTHESIS_NONEMPTY 3794
+MODEL_SYNTHESIS ### Independent Synthesis of the Three Perspectives on AI in Education
+
+#### Overview
+The three documents provide a comprehensive and nuanced view of the integration of artificial intelligence (AI) in educational settings, particularly in creative disciplines and health science education. Each document highlights the potential benefits and challenges of AI, with a focus on the impact on learning outcomes, student engagement, and the role of educators. Here is a synthesis of the key points, conflicts, and uncertainties, along with my own analysis and implications.
+
+#### Central Claims and Evidence
+
+1. **AI in Creative Education (P01)**
+   - **Key Claims:**
+     - AI, especially generative AI (GenAI), is increasingly used in creative disciplines.
+     - There is a distinction between assistive AI and content-generative AI.
+     - AI may enhance perceived support and efficiency but not necessarily lead to better artistic outcomes.
+     - Sustainable learning is crucial, and AI can support or hinder it.
+   - **Evidence:**
+     - Mixed results from empirical studies on the impact of AI on learning outcomes.
+     - Case study of 133 undergraduate art students.
+     - Literature review on AI in education.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Key Claims:**
+     - Rapid adoption of GenAI without a well-developed framework.
+     - Mixed empirical findings on academic performance and creative thinking.
+     - Critical thinking paradox: short-term gains but potential long-term erosion of deeper cognitive processes.
+     - Theoretical frameworks to explain mixed findings.
+   - **Evidence:**
+     - Studies showing positive and negative outcomes of AI use.
+     - Theoretical integration of levels-of-processing, desirable difficulties, cognitive load theory, and cognitive offloading.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Key Claims:**
+     - Gamified learning enhances engagement, satisfaction, and learning outcomes.
+     - Challenges include financial and technical constraints, lack of training, and negative perceptions.
+     - AI can support the design and implementation of gamified learning.
+   - **Evidence:**
+     - Empirical studies on the effectiveness of gamified learning.
+     - Theoretical support from self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks.
+
+#### Conflicts and Consistencies
+
+1. **Perceived vs. Actual Learning:**
+   - **P01** and **P02** both highlight the issue of perceived support and efficiency not necessarily translating into actual improvements in learning outcomes. This is a consistent concern across both creative and general educational contexts.
+
+2. **Critical Thinking and Deep Cognitive Processes:**
+   - **P02** introduces the concept of the "critical thinking paradox," where AI can enhance short-term performance but may erode deeper cognitive processes. This aligns with **P01**'s concern about process-outcome decoupling, where AI may improve perceived efficiency but not actual competence.
+
+3. **Role of AI in Education:**
+   - **P01** and **P03** both discuss the role of AI in supporting educational processes. **P01** focuses on the distinction between assistive and content-generative AI, while **P03** emphasizes AI's role in facilitating gamified learning. Both documents highlight the potential of AI to enhance or hinder learning depending on its implementation.
+
+4. **Educator and Student Awareness:**
+   - **P01** and **P02** stress the importance of educator and student awareness of the potential risks and benefits of AI use. **P03** also mentions the need for training and professional development for educators to effectively implement gamified learning.
+
+#### Uncertainties
+
+1. **Generalizability
+PASS NONEMPTY_BODY_MASTER {'tokens': 2848}
+PASS NATIVE_FORGE_SHAPE 
+PHYSICAL_COMMIT MASTER MASTER_SYNTHESIS 98802df91b6834099e89b95266387498626d7aa817862af95c388eff6f544bc5
+PASS FOUR_PHYSICAL_CARTRIDGES 
+PASS MASTER_ONLY_ACTIVE 
+PASS SEALED_QUESTIONS_UNCHANGED 
+PASS FILE_SHA_MASTER 
+PASS CARTRIDGE_ID_MASTER 
+PASS CARTRIDGE_TENSOR_SHA_MASTER 
+PASS NATIVE_INIT_80_LAYERS 
+DEMO_FAST_PATH_READY {'layers': 80, 'init_seconds': 10.807}
+DEMO_QUESTION H1 What are the main conclusions of the three publications, and where do they disagree?
+DEMO_ANSWER H1 ### Main Conclusions of the Three Publications
+
+1. **AI in Creative Education (P01)**
+   - **Conclusion:** AI, particularly generative AI (GenAI), is increasingly used in creative disciplines and can assist students in various ways, such as ideation, reference gathering, and technique learning. However, it also raises concerns about the balance between support and substitution in the creative process. AI may enhance perceived support and efficiency but does not necessarily lead to better artistic outcomes or deeper learning. Sustainable learning, which involves long-term capability, autonomy, and the ability to continue learning, is crucial. AI can support or hinder these goals depending on its use.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Conclusion:** GenAI tools, such as large language models (LLMs) like ChatGPT, have been rapidly adopted in educational settings without a well-developed, evidence-based framework. Early studies show mixed results, with some indicating positive outcomes in terms of academic performance and creative thinking, while others highlight limitations in critical thinking and deep cognitive processing. The document proposes a "critical thinking paradox" where GenAI can enhance short-term performance but may erode deeper cognitive processes necessary for long-term, transferable learning. Theoretical frameworks are integrated to explain these mixed findings, and a three-level framework for AI integration is proposed.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Conclusion:** Gamified learning in health science education enhances learner satisfaction, motivation, and learning outcomes, including knowledge acquisition, critical thinking, problem-solving, and teamwork. However, the adoption of gamified learning faces challenges such as financial and technical constraints, lack of training, and negative perceptions. AI can support the design and implementation of gamified learning, making it more accessible and effective. The document provides practical guidance for educators and suggests the need for further research to address the heterogeneity in results and to better understand the specific contexts in which gamified learning is most effective.
+
+### Where They Disagree
+
+1. **Perceived vs. Actual Learning:**
+   - **P01** and **P02** both highlight the issue of perceived support and efficiency not necessarily translating into actual improvements in learning outcomes. However, **P03** does not explicitly address this issue, focusing more on the positive outcomes of gamified learning.
+
+2. **Critical Thinking and Deep Cognitive Processes:**
+   - **P02** introduces the concept of the "critical thinking paradox," where AI can enhance short-term performance but may erode deeper cognitive processes. **P01** also discusses the phenomenon of process-outcome decoupling, where AI may improve perceived efficiency but not actual competence. **P03** does not delve into this aspect, focusing instead on the positive impacts of gamified learning.
+
+3. **Role of AI in Education:**
+   - **P01** and **P03** both discuss the role of AI in supporting educational processes. **P01** focuses on the distinction between assistive and content-generative AI, while **P03** emphasizes AI's role in facilitating gamified learning. **P02** does not provide a detailed discussion on the specific types of AI but rather focuses on the rapid adoption and mixed outcomes of GenAI.
+
+4. **Educator and Student Awareness:**
+   - **P01** and **P02** stress the importance of educator and student awareness of the potential risks and benefits of AI use. **P03** also mentions the need for training and professional development for educators to effectively implement gamified learning, but it does not emphasize the risks and benefits of AI as strongly as the other two documents.
+
+### Summary
+The three publications agree on
+DEMO_QUESTION_SECONDS H1 104.753
+DEMO_QUESTION H2 Which claims are supported by empirical evidence, and what are the main limitations?
+DEMO_ANSWER H2 ### Claims Supported by Empirical Evidence
+
+1. **AI in Creative Education (P01)**
+   - **Claim:** AI, especially generative AI (GenAI), can improve academic performance and higher-order thinking.
+     - **Evidence:** The document cites various studies showing mixed results, with some indicating positive outcomes.
+   - **Claim:** AI may reduce mental effort and perceived competence.
+     - **Evidence:** The document cites studies that suggest this negative impact.
+   - **Claim:** AI can enhance perceived support and efficiency in creative learning.
+     - **Evidence:** A case study of 133 undergraduate art students examines the association between different forms of AI use and artistic performance, perceived learning support, and creative learning processes.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Claim:** AI-assisted students achieve higher academic scores in designing mathematical learning situations.
+     - **Evidence:** Mariñoso et al. (2025) found that AI-assisted students performed better.
+   - **Claim:** Positive attitudes toward GenAI mediate the relationship between teacher support and learner well-being.
+     - **Evidence:** Pan and Li (2025) reported this positive mediation.
+   - **Claim:** AI-supported learning has a moderate positive short-term effect on creative thinking.
+     - **Evidence:** Peng et al. (2025) conducted a meta-analysis supporting this claim.
+   - **Claim:** Routine GenAI use is negatively associated with reflection, critical thinking, and need for understanding.
+     - **Evidence:** Choudhuri et al. (2026) found this negative association.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Claim:** Gamified learning increases learner satisfaction and motivation.
+     - **Evidence:** Multiple studies demonstrate the effectiveness of gamified learning in various health science subjects.
+   - **Claim:** Gamified learning aids in knowledge acquisition, critical thinking, problem-solving, and teamwork.
+     - **Evidence:** Empirical studies support these benefits.
+
+### Main Limitations
+
+1. **Perceived vs. Actual Learning:**
+   - **Limitation:** Many studies focus on perceived support and efficiency rather than actual improvements in artistic competence or long-term learning.
+   - **Source:** P01 and P02 both highlight this issue, noting that perceived benefits may not translate into actual improvements.
+
+2. **Methodological Limitations:**
+   - **Limitation:** Many studies focus on short-term outcomes and product quality, rather than long-term retention and transfer of knowledge.
+   - **Source:** P02 notes that methodological limitations, such as the focus on short-term outcomes, make it difficult to draw uniform conclusions.
+
+3. **Heterogeneity in Findings:**
+   - **Limitation:** The variation in tasks, populations, tools, and designs may produce genuine heterogeneity, making it difficult to draw uniform conclusions.
+   - **Source:** P02 and P03 both acknowledge the heterogeneity in results, indicating that the effectiveness of AI and gamified learning can vary.
+
+4. **Causal Relationships:**
+   - **Limitation:** Observational and cross-sectional studies do not establish causal relationships, leaving open the question of whether routine AI use directly causes declining engagement.
+   - **Source:** P02 highlights this limitation, emphasizing the need for more robust experimental designs to establish causality.
+
+5. **Contextual Barriers:**
+   - **Limitation:** The success of gamified learning can be influenced by non-movable barriers such as student time, faculty time, class size, curricular constraints, space, and available resources.
+   - **Source:** P03 notes that these contextual barriers can affect the effectiveness of
+DEMO_QUESTION_SECONDS H2 104.79
+DEMO_QUESTION H3 After comparing all three publications, what is your own conclusion? Explain uncertainties and cite source IDs.
+DEMO_ANSWER H3 ### Independent Synthesis and Conclusion
+
+#### Overview
+The three documents provide a comprehensive and nuanced view of the integration of artificial intelligence (AI) in educational settings, particularly in creative disciplines and health science education. Each document highlights the potential benefits and challenges of AI, with a focus on the impact on learning outcomes, student engagement, and the role of educators. Here is a synthesis of the key points, conflicts, and uncertainties, along with my own analysis and implications.
+
+#### Central Claims and Evidence
+
+1. **AI in Creative Education (P01)**
+   - **Key Claims:**
+     - AI, especially generative AI (GenAI), is increasingly used in creative disciplines.
+     - There is a distinction between assistive AI and content-generative AI.
+     - AI may enhance perceived support and efficiency but not necessarily lead to better artistic outcomes.
+     - Sustainable learning is crucial, and AI can support or hinder it.
+   - **Evidence:**
+     - Mixed results from empirical studies on the impact of AI on learning outcomes.
+     - Case study of 133 undergraduate art students.
+     - Literature review on AI in education.
+
+2. **Rapid Adoption of GenAI in Education (P02)**
+   - **Key Claims:**
+     - Rapid adoption of GenAI without a well-developed framework.
+     - Mixed empirical findings on academic performance and creative thinking.
+     - Critical thinking paradox: short-term gains but potential long-term erosion of deeper cognitive processes.
+     - Theoretical frameworks to explain mixed findings.
+   - **Evidence:**
+     - Studies showing positive and negative outcomes of AI use.
+     - Theoretical integration of levels-of-processing, desirable difficulties, cognitive load theory, and cognitive offloading.
+
+3. **Gamified Learning in Health Science Education (P03)**
+   - **Key Claims:**
+     - Gamified learning enhances engagement, satisfaction, and learning outcomes.
+     - Challenges include financial and technical constraints, lack of training, and negative perceptions.
+     - AI can support the design and implementation of gamified learning.
+   - **Evidence:**
+     - Empirical studies on the effectiveness of gamified learning.
+     - Theoretical support from self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks.
+
+#### Conflicts and Consistencies
+
+1. **Perceived vs. Actual Learning:**
+   - **P01** and **P02** both highlight the issue of perceived support and efficiency not necessarily translating into actual improvements in learning outcomes. This is a consistent concern across both creative and general educational contexts.
+
+2. **Critical Thinking and Deep Cognitive Processes:**
+   - **P02** introduces the concept of the "critical thinking paradox," where AI can enhance short-term performance but may erode deeper cognitive processes. This aligns with **P01**'s concern about process-outcome decoupling, where AI may improve perceived efficiency but not actual competence.
+
+3. **Role of AI in Education:**
+   - **P01** and **P03** both discuss the role of AI in supporting educational processes. **P01** focuses on the distinction between assistive and content-generative AI, while **P03** emphasizes AI's role in facilitating gamified learning. Both documents highlight the potential of AI to enhance or hinder learning depending on its implementation.
+
+4. **Educator and Student Awareness:**
+   - **P01** and **P02** stress the importance of educator and student awareness of the potential risks and benefits of AI use. **P03** also mentions the need for training and professional development for educators to effectively implement gamified learning.
+
+#### Uncertainties
+
+1. **Generalizability:**
+   - The findings
+DEMO_QUESTION_SECONDS H3 104.887
+DEMO_QUESTION A1 Develop a new causal model that could reconcile apparently conflicting results across the three publications. Separate evidence, assumptions and predictions; cite sources.
+DEMO_ANSWER A1 ### Causal Model to Reconcile Conflicting Results in AI Integration in Education
+
+#### Overview
+The three documents provide a rich but sometimes conflicting view of the impact of AI in educational settings, particularly in creative disciplines and health science education. To reconcile these findings, a causal model is proposed that integrates the key concepts and evidence from each document. This model aims to explain the mixed results and provide a framework for understanding the conditions under which AI can enhance or hinder learning outcomes.
+
+#### Causal Model
+
+1. **AI Type and Function**
+   - **Assistive AI vs. Content-Generative AI** (P01, P02)
+     - **Assistive AI**: Supports the creative process without directly producing content.
+     - **Content-Generative AI**: Can create part of the final work.
+   - **Evidence**:
+     - P01: Assistive AI can enhance the creative process, while content-generative AI may lead to process-outcome decoupling.
+     - P02: Both types of AI can have mixed effects on learning outcomes, with content-generative AI potentially leading to shallow processing.
+
+2. **Perceived vs. Actual Learning**
+   - **Perceived Support and Efficiency** (P01, P02)
+     - **Assumption**: Students may feel more supported and productive with AI, but this perceived ease may not translate into actual improvements in learning outcomes.
+   - **Evidence**:
+     - P01: Case study of 133 undergraduate art students shows mixed results on the impact of AI on artistic performance.
+     - P02: Studies indicate that AI can improve academic performance but may reduce mental effort and perceived competence.
+
+3. **Critical Thinking and Deep Cognitive Processes**
+   - **Critical Thinking Paradox** (P02)
+     - **Assumption**: AI can enhance short-term performance but may erode deeper cognitive processes necessary for long-term, transferable learning.
+   - **Evidence**:
+     - P02: Wang and Wu (2025) identified gaps in depth and critical thinking with routine AI use.
+     - P01: Process-outcome decoupling suggests that perceived efficiency does not always lead to better artistic outcomes.
+
+4. **Educator and Student Awareness**
+   - **Awareness and Training** (P01, P02, P03)
+     - **Assumption**: Educators and students need to be aware of the potential risks and benefits of AI use to maximize its positive impact.
+   - **Evidence**:
+     - P01: Students should be made aware of the importance of maintaining their own creative agency.
+     - P02: Teacher education programs need to address AI awareness and competencies.
+     - P03: Educators may lack the necessary training to effectively implement gamified strategies.
+
+5. **Contextual Factors**
+   - **Financial and Technical Constraints** (P03)
+     - **Assumption**: The success of AI integration is influenced by non-movable barriers such as funding, infrastructure, and professional development.
+   - **Evidence**:
+     - P03: Limited funding and lack of infrastructure can hinder the adoption of gamified learning.
+
+#### Predictions
+
+1. **Enhanced Learning Outcomes with Balanced AI Use**
+   - **Prediction**: When AI is used in a balanced manner, with a focus on assistive rather than content-generative functions, it can enhance both perceived and actual learning outcomes.
+   - **Supporting Evidence**: P01 and P02 suggest that assistive AI can support the creative process without leading to process-outcome decoupling.
+
+2. **Improved Critical Thinking with Strategic AI Integration**
+   - **Prediction**: Strategic integration of AI, particularly in ways that promote
+DEMO_QUESTION_SECONDS A1 105.024
+DEMO_QUESTION A2 Design a preregistered randomized experiment that could falsify your proposed causal model. Specify interventions, measures, confounders and discriminating outcomes.
+DEMO_ANSWER A2 To design a preregistered randomized experiment that could falsify the proposed causal model of AI's impact on learning outcomes, particularly focusing on the "critical thinking paradox" and the distinction between assistive and content-generative AI, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. Here is a detailed plan:
+
+### Preregistered Randomized Experiment Design
+
+#### Research Question
+Does the use of AI in educational settings, particularly the distinction between assistive AI and content-generative AI, enhance or undermine critical thinking and long-term learning outcomes?
+
+#### Hypotheses
+1. **H1**: Assistive AI will enhance short-term academic performance and perceived learning support without significantly affecting long-term critical thinking and deep cognitive processes.
+2. **H2**: Content-generative AI will enhance short-term academic performance and perceived learning support but may erode long-term critical thinking and deep cognitive processes.
+
+#### Participants
+- **Sample Size**: 300 undergraduate students from a variety of creative and health science disciplines.
+- **Recruitment**: Students will be recruited from multiple universities and randomly assigned to one of three groups.
+
+#### Interventions
+1. **Control Group**: Students will complete assignments and projects without any AI assistance.
+2. **Assistive AI Group**: Students will use AI tools that provide support in the form of ideation, reference gathering, and technique learning but do not generate content.
+3. **Content-Generative AI Group**: Students will use AI tools that can generate part of the final work, such as text, images, or designs.
+
+#### Measures
+1. **Short-Term Academic Performance**:
+   - **Pre-test and Post-test Scores**: Measure academic performance in a standardized test before and after the intervention.
+   - **Project Quality**: Evaluate the quality of the final projects using a rubric that assesses creativity, originality, and technical skill.
+
+2. **Perceived Learning Support**:
+   - **Surveys**: Administer surveys to measure students' perceptions of support, ease of use, and satisfaction with the AI tools.
+
+3. **Long-Term Critical Thinking and Deep Cognitive Processes**:
+   - **Follow-up Tests**: Conduct follow-up tests 3 months after the intervention to measure retention and transfer of knowledge.
+   - **Critical Thinking Assessments**: Use standardized critical thinking tests to evaluate the ability to analyze, evaluate, and synthesize information.
+
+4. **Student Reflections**:
+   - **Reflective Essays**: Ask students to write reflective essays on their learning experiences, focusing on their use of AI and its impact on their creative and cognitive processes.
+
+#### Confounders
+- **Prior Knowledge**: Measure students' prior knowledge and experience with the subject matter to control for baseline differences.
+- **Motivation and Engagement**: Use pre-intervention surveys to assess students' initial motivation and engagement levels.
+- **Time and Effort**: Track the amount of time and effort students spend on their assignments and projects.
+
+#### Discriminating Outcomes
+- **Short-Term Performance**: Compare pre-test and post-test scores and project quality between the three groups.
+- **Long-Term Retention and Transfer**: Compare follow-up test scores and critical thinking assessments between the three groups.
+- **Perceived Support and Satisfaction**: Compare survey results on perceived learning support and satisfaction between the three groups.
+- **Reflective Essays**: Analyze the content of reflective essays to understand students' subjective experiences and insights.
+
+#### Data Analysis
+- **Descriptive Statistics**: Summarize the data for each group.
+- **ANOVA**: Use Analysis of Variance (ANOVA) to compare the means of the three groups on short-term performance, long-term retention, and critical thinking.
+- **Regression Analysis**: Conduct regression analysis to control for confounders
+DEMO_QUESTION_SECONDS A2 105.151
+DEMO_QUESTION A3 Identify the most consequential unresolved contradiction, formulate two rival explanations, and propose the smallest decisive test. Explain what each possible result would imply.
+DEMO_ANSWER A3 ### Most Consequential Unresolved Contradiction
+
+**Contradiction: Perceived Support vs. Actual Learning Outcomes**
+
+**Description:**
+The documents highlight a significant contradiction between the perceived support and efficiency provided by AI and the actual improvements in learning outcomes. While students may feel more supported and productive with AI, this perceived ease does not always translate into better academic performance or deeper learning. This contradiction is particularly evident in the context of creative education (P01) and the broader educational landscape (P02).
+
+### Rival Explanations
+
+1. **Explanation 1: Cognitive Offloading and Shallow Processing**
+   - **Hypothesis:** Students may rely too heavily on AI, leading to cognitive offloading and shallow processing. This means that while AI can provide immediate support and efficiency, it may prevent students from engaging in the deep cognitive processes necessary for long-term learning and skill development.
+   - **Implication:** If this explanation is correct, the use of AI in educational settings should be carefully managed to ensure that it does not become a crutch that hinders deeper learning. Educators should focus on designing tasks that require critical thinking and problem-solving, even when AI is available.
+
+2. **Explanation 2: Misalignment of AI and Learning Objectives**
+   - **Hypothesis:** The mismatch between the capabilities of AI and the learning objectives of the educational program can lead to perceived support without actual learning gains. AI may be effective in certain tasks but not in others, and if it is not aligned with the specific goals of the course, it may not enhance learning outcomes.
+   - **Implication:** If this explanation is correct, the integration of AI in education should be more strategic and aligned with the specific learning objectives. Educators should carefully select and design AI tools that support the intended learning outcomes, rather than using AI as a general solution.
+
+### Smallest Decisive Test
+
+**Test Design:**
+Conduct a controlled experiment with two groups of students in a creative education course. Both groups will use AI tools, but the tasks and learning objectives will differ:
+
+- **Group A (Cognitive Offloading):** Students will be given tasks that require minimal critical thinking and problem-solving, allowing them to rely heavily on AI for support.
+- **Group B (Strategic Alignment):** Students will be given tasks that require deep cognitive processing and critical thinking, with AI used as a supportive tool rather than a primary solution.
+
+**Outcome Measures:**
+- **Short-term Performance:** Immediate academic performance on the tasks.
+- **Long-term Retention:** Performance on a follow-up test or project that assesses deeper understanding and application of the learned material.
+- **Perceived Support:** Student self-reports on how supported and productive they felt with AI.
+
+**Possible Results and Implications:**
+
+1. **If Group A performs better in the short term but worse in the long term:**
+   - **Implication:** This would support the cognitive offloading and shallow processing hypothesis. It suggests that while AI can provide immediate support, it may hinder deeper learning and long-term retention. Educators should be cautious about over-reliance on AI and design tasks that require critical thinking.
+
+2. **If Group B performs better in both the short term and long term:**
+   - **Implication:** This would support the misalignment of AI and learning objectives hypothesis. It suggests that the effectiveness of AI depends on how well it is aligned with the specific learning goals. Educators should focus on integrating AI in a way that supports the intended learning outcomes, rather than using it as a general tool.
+
+### Conclusion
+
+The proposed test aims to resolve the contradiction between perceived support and actual learning outcomes by examining the impact of different task designs on student performance. The results will provide valuable insights into how AI
+DEMO_QUESTION_SECONDS A3 104.995
+PASS FAST_PATH_MASTER_PREFIX_UNCHANGED 
+PASS FILE_SHA_MASTER 
+PASS CARTRIDGE_ID_MASTER 
+PASS CARTRIDGE_TENSOR_SHA_MASTER 
+PASS NATIVE_INIT_80_LAYERS 
+PASS MASTER_80_LAYER_PARITY {'matched': 80, 'layers': 80}
+PASS WEIGHTS_SENTINEL_UNCHANGED 
+PASS ALL_PHYSICAL_SOURCES_PRESERVED 
+TEST730_RESULT DEMO_COMPLETED_UNGRADED
+SUMMARY {'fast_path_single_master_init': True, 'sources': 3, 'master': 1, 'question_count': 6, 'human_questions': 3, 'advanced_questions': 3, 'answered_nonempty': 6, 'ssd_sha_verified': True, 'master_80_layer_parity': True, 'weights_unchanged': True, 'independent_correctness_not_yet_graded': True}
+RESULT_JSON /content/AKBASCORE_TEST730/TEST730_results.json MANIFEST /content/AKBASCORE_TEST730/TEST730_manifest.json LOG /content/AKBASCORE_TEST730/TEST730.log
+TEST734_PANEL_SHA256 7f85fbcf055f72d097ea292923d5da04137b5f13a92ed69bed9478fc17fc822b CASES 12 LABEL_IDS 362 425
+PASS FILE_SHA_MASTER 
+PASS CARTRIDGE_ID_MASTER 
+PASS CARTRIDGE_TENSOR_SHA_MASTER 
+CASE733 {"id": "Q00", "gold": "A", "tokens": 50, "h3_sha256": "04cbaf1ce0415ddd22ed577127a71d3dced3d90d18af355503edeffc6d877635", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "A", "correct": true, "margin_a_minus_b": 11.0, "gold_margin": 11.0, "ab_probability": 0.9999833106994629, "top_token_id": 362}, "RAW1": {"pred": "A", "correct": true, "margin_a_minus_b": 1.25, "gold_margin": 1.25, "ab_probability": 0.7772998809814453, "top_token_id": 279}, "RAW2": {"pred": "A", "correct": true, "margin_a_minus_b": 0.5546875, "gold_margin": 0.5546875, "ab_probability": 0.6352224349975586, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": false, "margin_a_minus_b": -0.03125, "gold_margin": -0.03125, "ab_probability": 0.49218812584877014, "top_token_id": 13}, "SHUFFLED": {"pred": "B", "correct": false, "margin_a_minus_b": -0.25, "gold_margin": -0.25, "ab_probability": 0.43782350420951843, "top_token_id": 13}, "ZERO": {"pred": "A", "correct": true, "margin_a_minus_b": 0.28125, "gold_margin": 0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.0066666267812252045}
+CASE733 {"id": "Q01", "gold": "B", "tokens": 50, "h3_sha256": "40680d6c6603e466b7562a7edb6c4dbf00bd05a5fc1cb61896351b53b219352d", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "B", "correct": true, "margin_a_minus_b": -14.875, "gold_margin": 14.875, "ab_probability": 3.4663264614209766e-07, "top_token_id": 425}, "RAW1": {"pred": "A", "correct": false, "margin_a_minus_b": 0.59375, "gold_margin": -0.59375, "ab_probability": 0.6442251205444336, "top_token_id": 334}, "RAW2": {"pred": "A", "correct": false, "margin_a_minus_b": 0.58984375, "gold_margin": -0.58984375, "ab_probability": 0.6433292627334595, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": true, "margin_a_minus_b": -0.0625, "gold_margin": 0.0625, "ab_probability": 0.4843800961971283, "top_token_id": 13}, "SHUFFLED": {"pred": "A", "correct": false, "margin_a_minus_b": 0.1875, "gold_margin": -0.1875, "ab_probability": 0.5467381477355957, "top_token_id": 13}, "ZERO": {"pred": "A", "correct": false, "margin_a_minus_b": 0.28125, "gold_margin": -0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006682474631816149}
+CASE733 {"id": "Q02", "gold": "B", "tokens": 48, "h3_sha256": "151717aec284018a7b023f6b11c53b2682cb9bbe4cc39d35d1f1bcb4fe976c84", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "B", "correct": true, "margin_a_minus_b": -14.5, "gold_margin": 14.5, "ab_probability": 5.043474402555148e-07, "top_token_id": 425}, "RAW1": {"pred": "A", "correct": false, "margin_a_minus_b": 1.046875, "gold_margin": -1.046875, "ab_probability": 0.740174412727356, "top_token_id": 82}, "RAW2": {"pred": "A", "correct": false, "margin_a_minus_b": 0.21875, "gold_margin": -0.21875, "ab_probability": 0.5544704794883728, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": true, "margin_a_minus_b": -0.09375, "gold_margin": 0.09375, "ab_probability": 0.4765796661376953, "top_token_id": 13}, "SHUFFLED": {"pred": "A", "correct": false, "margin_a_minus_b": 0.421875, "gold_margin": -0.421875, "ab_probability": 0.6039317846298218, "top_token_id": 11}, "ZERO": {"pred": "A", "correct": false, "margin_a_minus_b": 0.28125, "gold_margin": -0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006793114356696606}
+CASE733 {"id": "Q03", "gold": "A", "tokens": 48, "h3_sha256": "93688143561b06f98126abdda9ba9e28e398821f7c8cc2f5036a8fde107140c5", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "A", "correct": true, "margin_a_minus_b": 10.375, "gold_margin": 10.375, "ab_probability": 0.9999687671661377, "top_token_id": 362}, "RAW1": {"pred": "A", "correct": true, "margin_a_minus_b": 1.46875, "gold_margin": 1.46875, "ab_probability": 0.8128673434257507, "top_token_id": 82}, "RAW2": {"pred": "A", "correct": true, "margin_a_minus_b": 0.34375, "gold_margin": 0.34375, "ab_probability": 0.5851011276245117, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": false, "margin_a_minus_b": -0.109375, "gold_margin": -0.109375, "ab_probability": 0.47268345952033997, "top_token_id": 13}, "SHUFFLED": {"pred": "B", "correct": false, "margin_a_minus_b": -0.46875, "gold_margin": -0.46875, "ab_probability": 0.3849121630191803, "top_token_id": 6303}, "ZERO": {"pred": "A", "correct": true, "margin_a_minus_b": 0.28125, "gold_margin": 0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006773998495191336}
+CASE733 {"id": "Q04", "gold": "A", "tokens": 48, "h3_sha256": "b3152c6ecb390a42bcf6847fe78519702868bb718372ad73c57a1fee5e390db9", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "A", "correct": true, "margin_a_minus_b": 10.375, "gold_margin": 10.375, "ab_probability": 0.9999687671661377, "top_token_id": 362}, "RAW1": {"pred": "A", "correct": true, "margin_a_minus_b": 0.15625, "gold_margin": 0.15625, "ab_probability": 0.5389832258224487, "top_token_id": 279}, "RAW2": {"pred": "A", "correct": true, "margin_a_minus_b": 0.359375, "gold_margin": 0.359375, "ab_probability": 0.5888891220092773, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": false, "margin_a_minus_b": -0.125, "gold_margin": -0.125, "ab_probability": 0.4687906503677368, "top_token_id": 13}, "SHUFFLED": {"pred": "B", "correct": false, "margin_a_minus_b": -0.171875, "gold_margin": -0.171875, "ab_probability": 0.45713675022125244, "top_token_id": 11}, "ZERO": {"pred": "A", "correct": true, "margin_a_minus_b": 0.28125, "gold_margin": 0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006680096499621868}
+CASE733 {"id": "Q05", "gold": "B", "tokens": 48, "h3_sha256": "198e6d339798fac142dd56cf9b88525e8e6fec77a5b9e19b7c7596dd768155be", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "B", "correct": true, "margin_a_minus_b": -14.5, "gold_margin": 14.5, "ab_probability": 5.043474402555148e-07, "top_token_id": 425}, "RAW1": {"pred": "B", "correct": true, "margin_a_minus_b": -0.71875, "gold_margin": 0.71875, "ab_probability": 0.32766830921173096, "top_token_id": 288}, "RAW2": {"pred": "A", "correct": false, "margin_a_minus_b": 0.171875, "gold_margin": -0.171875, "ab_probability": 0.5428633093833923, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": true, "margin_a_minus_b": -0.15625, "gold_margin": 0.15625, "ab_probability": 0.46101680397987366, "top_token_id": 13}, "SHUFFLED": {"pred": "B", "correct": true, "margin_a_minus_b": -0.078125, "gold_margin": 0.078125, "ab_probability": 0.4804786741733551, "top_token_id": 11}, "ZERO": {"pred": "A", "correct": false, "margin_a_minus_b": 0.28125, "gold_margin": -0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.00674472376704216}
+CASE733 {"id": "Q06", "gold": "B", "tokens": 55, "h3_sha256": "54734c137f3c70416831ff790bc2789c66bf10c9273a886396bde300a001fc81", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "B", "correct": true, "margin_a_minus_b": -15.75, "gold_margin": 15.75, "ab_probability": 1.4449801710725296e-07, "top_token_id": 425}, "RAW1": {"pred": "A", "correct": false, "margin_a_minus_b": 0.9375, "gold_margin": -0.9375, "ab_probability": 0.7185943722724915, "top_token_id": 288}, "RAW2": {"pred": "A", "correct": false, "margin_a_minus_b": 0.390625, "gold_margin": -0.390625, "ab_probability": 0.596433162689209, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": true, "margin_a_minus_b": -0.1953125, "gold_margin": 0.1953125, "ab_probability": 0.45132651925086975, "top_token_id": 13}, "SHUFFLED": {"pred": "A", "correct": false, "margin_a_minus_b": 0.6640625, "gold_margin": -0.6640625, "ab_probability": 0.6601723432540894,
+"top_token_id": 13}, "ZERO": {"pred": "A", "correct": false, "margin_a_minus_b": 0.28125, "gold_margin": -0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006565566174685955}
+CASE733 {"id": "Q07", "gold": "A", "tokens": 56, "h3_sha256": "ee827a6412cb7e131b06fc9a98ed4fe2459afbc308b736210fbf07a563959670", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "A", "correct": true, "margin_a_minus_b": 11.125, "gold_margin": 11.125, "ab_probability": 0.9999852180480957, "top_token_id": 362}, "RAW1": {"pred": "A", "correct": true, "margin_a_minus_b": 1.40625, "gold_margin": 1.40625, "ab_probability": 0.8031737804412842, "top_token_id": 220}, "RAW2": {"pred": "A", "correct": true, "margin_a_minus_b": 0.515625, "gold_margin": 0.515625, "ab_probability": 0.6261242032051086, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": false, "margin_a_minus_b": -0.125, "gold_margin": -0.125, "ab_probability": 0.4687906503677368, "top_token_id": 13}, "SHUFFLED": {"pred": "A", "correct": true, "margin_a_minus_b": 0.4140625, "gold_margin": 0.4140625, "ab_probability": 0.6020615696907043, "top_token_id": 13}, "ZERO": {"pred": "A", "correct": true, "margin_a_minus_b": 0.28125, "gold_margin": 0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006500537507236004}
+CASE733 {"id": "Q08", "gold": "B", "tokens": 45, "h3_sha256": "3f6d2d102a59ecbb6b188b3c0f3deed67310dcb57f6c84feccb2063cae9364e3", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "B", "correct": true, "margin_a_minus_b": -13.0, "gold_margin": 13.0, "ab_probability": 2.2603242086915998e-06, "top_token_id": 425}, "RAW1": {"pred": "B", "correct": true, "margin_a_minus_b": -0.03125, "gold_margin": 0.03125, "ab_probability": 0.49218812584877014, "top_token_id": 288}, "RAW2": {"pred": "A", "correct": false, "margin_a_minus_b": 0.4453125, "gold_margin": -0.4453125, "ab_probability": 0.6095241904258728, "top_token_id": 13}, "RAW3": {"pred": "B", "correct": true, "margin_a_minus_b": -0.078125, "gold_margin": 0.078125, "ab_probability": 0.4804786741733551, "top_token_id": 13}, "SHUFFLED": {"pred": "A", "correct": false, "margin_a_minus_b": 0.25, "gold_margin": -0.25, "ab_probability": 0.562176525592804, "top_token_id": 82}, "ZERO": {"pred": "A", "correct": false, "margin_a_minus_b": 0.28125, "gold_margin": -0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.007016226649284363}
+CASE733 {"id": "Q09", "gold": "A", "tokens": 45, "h3_sha256": "c69b2675623c7e70439a1a0b4564caef899927d9d4f122bdcae16fbfe4c6fe4f", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "A", "correct": true, "margin_a_minus_b": 8.25, "gold_margin": 8.25, "ab_probability": 0.9997387528419495, "top_token_id": 362}, "RAW1": {"pred": "A", "correct": true, "margin_a_minus_b": 0.5625, "gold_margin": 0.5625, "ab_probability": 0.637030839920044, "top_token_id": 288}, "RAW2": {"pred": "A", "correct": true, "margin_a_minus_b": 0.3359375, "gold_margin": 0.3359375, "ab_probability": 0.5832033753395081, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": false, "margin_a_minus_b": -0.0625, "gold_margin": -0.0625, "ab_probability": 0.4843800961971283, "top_token_id": 13}, "SHUFFLED": {"pred": "B", "correct": false, "margin_a_minus_b": -0.25, "gold_margin": -0.25, "ab_probability": 0.43782350420951843, "top_token_id": 82}, "ZERO": {"pred": "A", "correct": true, "margin_a_minus_b": 0.28125, "gold_margin": 0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.0069882990792393684}
+CASE733 {"id": "Q10", "gold": "A", "tokens": 59, "h3_sha256": "6842fc27edd3624264a4edcedc8f4940418fd1ed172798bda0478eb53a27d2b4", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "A", "correct": true, "margin_a_minus_b": 9.625, "gold_margin": 9.625, "ab_probability": 0.9999339580535889, "top_token_id": 362}, "RAW1": {"pred": "A", "correct": true, "margin_a_minus_b": 1.4375, "gold_margin": 1.4375, "ab_probability": 0.8080672025680542, "top_token_id": 279}, "RAW2": {"pred": "A", "correct": true, "margin_a_minus_b": 0.453125, "gold_margin": 0.453125, "ab_probability": 0.6113819479942322, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": false, "margin_a_minus_b": -0.078125, "gold_margin": -0.078125, "ab_probability": 0.4804786741733551, "top_token_id": 279}, "SHUFFLED": {"pred": "A", "correct": true, "margin_a_minus_b": 0.5859375, "gold_margin": 0.5859375, "ab_probability": 0.642432451248169, "top_token_id": 13}, "ZERO": {"pred": "A", "correct": true, "margin_a_minus_b": 0.28125, "gold_margin": 0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006083669140934944}
+CASE733 {"id": "Q11", "gold": "B", "tokens": 58, "h3_sha256": "85bb8fa479ab5732d575b565cbca7a415fcba3704d821e0d079df3919225145f", "parity_max_abs": 0.0, "arms": {"BASE": {"pred": "B", "correct": true, "margin_a_minus_b": -15.125, "gold_margin": 15.125, "ab_probability": 2.6995778057425923e-07, "top_token_id": 425}, "RAW1": {"pred": "A", "correct": false, "margin_a_minus_b": 1.0625, "gold_margin": -1.0625, "ab_probability": 0.7431679368019104, "top_token_id": 279}, "RAW2": {"pred": "A", "correct": false, "margin_a_minus_b": 0.546875, "gold_margin": -0.546875, "ab_probability": 0.6334102749824524, "top_token_id": 279}, "RAW3": {"pred": "B", "correct": true, "margin_a_minus_b": 0.0, "gold_margin": -0.0, "ab_probability": 0.5, "top_token_id": 13}, "SHUFFLED": {"pred": "A", "correct": false, "margin_a_minus_b": 0.5859375, "gold_margin": -0.5859375, "ab_probability": 0.642432451248169, "top_token_id": 13}, "ZERO": {"pred": "A", "correct": false, "margin_a_minus_b": 0.28125, "gold_margin": -0.28125, "ab_probability": 0.5698526501655579, "top_token_id": 15}}, "state_cosine": 0.006177857518196106}
+TEST734_SUMMARY {"BASE": {"correct": 12, "total": 12, "accuracy": 1.0, "mean_gold_margin": 12.375}, "RAW1": {"correct": 8, "total": 12, "accuracy": 0.6666666666666666, "mean_gold_margin": 0.2825520833333333}, "RAW2": {"correct": 6, "total": 12, "accuracy": 0.5, "mean_gold_margin": 0.0166015625}, "RAW3": {"correct": 6, "total": 12, "accuracy": 0.5, "mean_gold_margin": 0.004557291666666667}, "SHUFFLED": {"correct": 3, "total": 12, "accuracy": 0.25, "mean_gold_margin": -0.18098958333333334}, "ZERO": {"correct": 6, "total": 12, "accuracy": 0.5, "mean_gold_margin": 0.0}}
+TEST734_RESULT {"status": "NO_DEMONSTRATED_SEMANTIC_GAIN", "checks": {"reference_complete": true, "sealed_panel_unchanged": true, "master_integrity_verified": true, "native_replay_parity": true, "weights_frozen": true, "weight_sentinel_unchanged": true, "raw_improves_over_base": false, "raw_exceeds_controls": true}, "seconds": 24.738}
+TEST734_JSON /content/AKBASCORE_TEST734/TEST734_results.json LOG /content/AKBASCORE_TEST734/TEST734.log
