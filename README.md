@@ -1,344 +1,442 @@
-# titan-cognitive-core-v3
-# AKBASCORE Silicon Hippocampus v1.4 — Mistral
 
-**Architecture-adapted numerical memory cartridges in a frozen Mistral-7B-Instruct-v0.3**
-Research Record II of the AKBASCORE Silicon Hippocampus v1.4 programme · following Research Record I on Qwen2.5-7B-Instruct
+# AKBASCORE Silicon Hippocampus
 
-**Author:** Mustafa Akbaş · AkbasCore AI Teknoloji · Mersin, Türkiye
-**Paper:** *AKBASCORE_Silicon_Hippocampus_v1.4_Mistral_Research_Paper.pdf* (version 1.0, 16 October 2026) · **DOI: pending publication** (to be assigned by Zenodo)
-**Research Record I (Qwen):** [doi:10.5281/zenodo.23381336](https://doi.org/10.5281/zenodo.23381336)
-**License:** [AKBASCORE RESEARCH SOFTWARE LICENSE](LICENSE) · © 2026 Mustafa Akbaş
+### Persistent Numerical Memory Cartridges for Frozen Transformers
+
+**Research programme:** Titan Cognitive Core → AkbasCore → SEASC → NIRVANA → MAM (Model-Native Associative Memory) → Silicon Hippocampus  
+**Researcher and copyright holder:** Mustafa Akbaş · AkbasCore AI Teknoloji · Mersin, Türkiye  
+**Latest verified demonstration:** TEST745 · Qwen2.5-72B-Instruct · 22 October 2026  
+**Status:** Active research · interim sealed experimental record, not a final system  
+**License:** [AKBASCORE RESEARCH SOFTWARE LICENSE](LICENSE) · Copyright © 2026 Mustafa Akbaş
 
 ---
+
+## What is Silicon Hippocampus?
+
+Silicon Hippocampus investigates whether a frozen large language model can **write, persist, reload, and use model-native numerical memory outside its weights and ordinary text prompt**. Its physical *memory cartridges* are not natural-language files masquerading as memory: they contain internal tensors captured at a selected transformer boundary. A cartridge can be written to SSD, verified, loaded back into GPU memory, and injected into the model's computational path. The model's weights remain frozen.
+
+The research has progressed from single-fact and relational-memory experiments on 7B models to **physical, hierarchically generated memories and sealed before/after investigation records on Qwen2.5-72B**. The latest demonstration uses a real aviation investigation as a controlled case study. It does **not** establish human-level understanding, independent causal correctness, direct tensor fusion between cartridges, or a complete transformer bypass.
+
+**For a non-specialist:** Think of a cartridge as a saved fragment of the model's internal working state. The system can store that fragment on a disk, later reconnect it to the same model architecture, ask the model what it contains, and create a new cartridge from a synthesis of multiple earlier readouts. This is not the same as simply pasting a retrieved paragraph into a prompt; nor is it a biological memory or proof of human-like thought.
 
 ## Contents
 
-- [Research overview](#research-overview)
-- [Relationship to the Qwen implementation](#relationship-to-the-qwen-implementation)
-- [Scientific contribution and scope](#scientific-contribution-and-scope)
-- [Frozen Mistral architecture](#frozen-mistral-architecture)
-- [The CUT6 / H6 memory mechanism](#the-cut6--h6-memory-mechanism)
-- [Experimental setup](#experimental-setup)
-- [Results](#results)
-- [Strict TEST686 result vs. secondary content audit](#strict-test686-result-vs-secondary-content-audit)
-- [Limitations](#limitations)
-- [Figures 1–8](#figures-18)
-- [Reproduction (Google Colab, three parts)](#reproduction-google-colab-three-parts)
-- [Files, logs and source references](#files-logs-and-source-references)
-- [Qwen–Mistral comparison](#qwenmistral-comparison)
-- [Planned DeepSeek extension](#planned-deepseek-extension)
-- [Citation](#citation)
-- [License and copyright](#license-and-copyright)
+- [Latest release — TEST745](#latest-release--test745)
+- [Measured TEST745 results](#measured-test745-results)
+- [The physical CUT3 mechanism](#the-physical-cut3-mechanism)
+- [How hierarchical synthesis works](#how-hierarchical-synthesis-works)
+- [Closed loop, blind seal, and post-outcome consolidation](#closed-loop-blind-seal-and-post-outcome-consolidation)
+- [Live Gradio demonstration](#live-gradio-demonstration)
+- [Research lineage and earlier records](#research-lineage-and-earlier-records)
+- [Scientific claims and limitations](#scientific-claims-and-limitations)
+- [Reproduction and source files](#reproduction-and-source-files)
+- [Figures and supporting evidence](#figures-and-supporting-evidence)
+- [Citation and archival policy](#citation-and-archival-policy)
+- [License and rights](#license-and-rights)
+- [Next research questions](#next-research-questions)
 
 ---
 
-## Research overview
+## Latest release — TEST745
 
-A transformer normally receives new facts as text in its prompt, through the key–value (KV) cache produced by reading that text, or through weight updates. This research line studies a different route.
+**Title:** *AKBASCORE Silicon Hippocampus — Frozen 72B Hierarchical Physical Memory, Eight-Round Closed-Loop Analysis, and Sealed Blind-to-Outcome Consolidation*  
+**Date:** 22 October 2026  
+**Model:** `Qwen/Qwen2.5-72B-Instruct` · frozen NF4 weights, BF16 computation  
+**Hardware:** NVIDIA A100-SXM4-80GB · one GPU  
+**Architecture:** 80 layers · hidden size 8,192 · 64 attention query heads · 8 KV heads · head dimension 128  
+**Memory boundary:** CUT3 (`H3` plus K/V from layers 0–3)  
+**Source:** official Croatian Air, Maritime and Railway Traffic Accident Investigation Agency (AIN) preliminary and final reports concerning the Air Tractor AT-802A accident of 13 November 2025  
+**Run status:** original TEST745 completed; subsequent live Gradio reproduction completed with independent read-only verification.
 
-1. **Forge.** Each fact is read **alone** by the frozen model (instruction prefix + one fact).
-2. **Keep two internal tensors.** The model's hidden state at a chosen layer boundary and the attention keys/values of the layers below it. Together they form a **numerical cognitive cartridge**: numbers, no token ids.
-3. **Write and inject.** Cartridges are appended to an attention memory. For each new cartridge, the lower-layer K/V rows are written directly (with rotary positions re-phased), and a forward pass with **zero input embeddings** injects the stored hidden state at the boundary. The upper layers then recompute the new rows **against the facts already in memory**.
-4. **Answer.** The frozen model answers with **only the question template** as input. Earlier memory rows are never modified, and the model's weights are never changed.
+**Primary evidence:**
 
-The research question:
+- [Original unchanged experiment — `745.py`](745.py)
+- [Original experiment log — `745.log`](745.log)
+- [Live Gradio demo — complete code](Fly_72b_demo_full.py)
+- [Live Gradio demo — run log](Fly_72b_demo.log)
+- [Earlier 72B synthesis experiment — `730.py`](730.py) · [log](730.log)
+- [Locked CUT3 foundation — `709.py`](709.py)
 
-> In frozen transformers with different architectures, can numerical memory cartridges — produced by the model in a form adapted to its own layer structure, stored independently, recombined, and injected into the model's internal computation path — support recall and relational answers without presenting the source text again at question time?
+**Official accident source:** https://ain.hr/en/investigations/accident-of-the-aircraft-air-tractor-802a-or-2025-krivi-put-13-november-2025/
 
-This repository holds the **Mistral-7B-Instruct-v0.3** implementation of the v1.4 demonstration and its experimental log.
+**Important source distinction:** `C01`, `C02`, and `C03` are consecutive segments of **one four-page preliminary report**, not three independently corroborating documents. The final 23-page report was accessed by the experiment only after the C11 blind-memory seal. This is a procedural access boundary; it does not rule out information already present in the model's pretraining data.
 
-## Relationship to the Qwen implementation
+### The experimental chain
 
-| Record | Model | Boundary | Status |
-|---|---|---|---|
-| Research Record I | Qwen2.5-7B-Instruct | CUT3 (`H3`, K/V of layers 0–3) | published, [doi:10.5281/zenodo.23381336](https://doi.org/10.5281/zenodo.23381336) |
-| **Research Record II (this repository)** | **Mistral-7B-Instruct-v0.3** | **CUT6 (`H6`, K/V of layers 0–6)** | paper v1.0, DOI pending |
-| Research Record III | DeepSeek model | to be calibrated | **planned, not carried out** |
+```text
+Official AIN preliminary report (4 pages)
+              |
+       split in token order
+              |
+      C01    C02    C03             physical CUT3 cartridges
+        \    |    /
+       S01  S02  S03                new physical cartridges made from
+        \    |    /                TEXT synthesis of parent readouts
+       H01  H02  H03                cross-system physical cartridges
+          \ | /
+     INITIAL BLIND ANALYSIS
+              |
+     8 closed-loop review rounds    text-mediated; no new cartridge each round
+              |
+        C11 BLIND MASTER            physical cartridge; SHA-256 sealed
+              |
+     3 blind answers recorded
+              |
+       OFFICIAL OUTCOME UNLOCK
+              |
+      AIN final report (23 pages)
+              |
+      MODEL SELF-AUDIT              not independent expert grading
+              |
+       C12 POST-OUTCOME             new physical cartridge;
+       MASTER                       parent references C11 file SHA-256
 
-**Chronology note.** The consolidation algorithm itself was developed first on Mistral (TEST559/TEST560) and then ported to Qwen: the Qwen calibration TEST564 states that it uses the "TEST560 DC backbone". The public v1.4 demonstration (two fictional scenarios, nine memory conditions, a three-step question chain) was first published on Qwen. This repository returns the v1.4 protocol to Mistral, with the scenarios, questions and scoring metadata read unchanged from the Qwen v1.4 record.
-
-## Scientific contribution and scope
-
-**What this work shows** (measured; details in the paper):
-- A bit-level verified append-only memory in a frozen Mistral-7B:
-  - earlier rows stay bitwise unchanged after every append;
-  - the layer 0–6 rows are bitwise equal to the re-phased cartridge rows;
-  - the native CUDA path is bitwise identical to a pure-PyTorch reference path;
-  - the weights are unchanged.
-- On the identical v1.4 protocol, the cartridge memory and a joint-read control (the same facts read together as text) give **identical strict scores** within each model.
-- A counterfactual cartridge changes the final answers in the expected direction.
-- The same write–inject–rebuild **procedure** works on two different architectures, at model-specific boundaries.
-
-**What is not claimed:**
-- general reasoning, autonomous multi-hop planning, reliable abstention, thought transfer or consciousness;
-- that a cartridge made for one model can be used in another;
-- any speed advantage (no timing comparison was made);
-- that the composition idea has no precedent: KV-cache reuse, rotary re-phasing and residual-stream patching all exist in the literature. The contribution is their specific composition, its verification protocol, and its cross-model adaptation.
-
-> **A fair comparison.** A standard KV cache also answers later questions without re-reading the text. The distinguishing properties here are different:
-> - isolated per-fact encoding into stored internal tensors;
-> - append-only composition with earlier rows provably untouched;
-> - lower layers taken from the isolated read, upper layers recomputed from a layer-boundary checkpoint with no token input;
-> - bit-for-bit verification against a reference path.
-
-## Frozen Mistral architecture
-
-| Property | Value (asserted by the engine at start-up) |
-|---|---|
-| Model | `mistralai/Mistral-7B-Instruct-v0.3`, BF16, SDPA attention, frozen |
-| Layers / hidden size | 32 / 4096 |
-| Query heads / KV heads / head dim | 32 / 8 / 128 (grouped-query attention) |
-| Position encoding | RoPE |
-| Intervention boundary | **CUT6**: output of layer 6 (`model.model.layers[6]`) |
-| Cartridge | `H6` (4096 values per token) + K/V of layers 0–6 |
-| Recomputed per new fact | layers 7–31 |
-| Memory bytes per row | 2 · 32 · 8 · 128 · 2 B = **131,072 B** |
-| Cartridge bytes per row | 4096 · 2 B + 2 · 7 · 8 · 128 · 2 B = 8,192 + 28,672 = **36,864 B** |
-| Generation | greedy, at most **16 new tokens** (`MAX_NEW=16`, from TEST560) |
-
-**Why CUT6?** On the sealed 72-question panel (TEST559), batch consolidation reached 72/72 at CUT6 but only 43/72 at CUT10. Smaller Mistral cuts were not tested in these records, so CUT6 is the verified operating point, not a proven optimum. Qwen uses CUT3: there, several cuts were equivalent on the calibration panels, and CUT3 was then locked.
-
-## The CUT6 / H6 memory mechanism
-
-The five steps below correspond to Figure 1 of the paper.
-
-| Step | What happens | Engine function (TEST560) | Verified in the run |
-|---|---|---|---|
-| **1 FORGE** | The frozen model reads one fact alone (prefix + fact). `H6` and the K/V of layers 0–6 are kept. | `forge_checkpoint` | checkpoint shapes, e.g. `H6 [1,56,4096]`, `K/V [1,8,56,128]` |
-| **2 WRITE L0–L6** | The cartridge's K/V rows are appended to layers 0–6. Keys are re-phased to their new positions (RoPE); values are copied. The append uses the native TEST659 BF16 CUDA copy. | `append_incremental` → `native_splice678` | earlier rows bitwise unchanged; rows = re-phased cartridge rows |
-| **3 INJECT H6** | A forward pass over the new rows with **zero input embeddings**; a hook replaces the layer-6 output with the stored `H6`. | `init_incremental` / `append_incremental` | zero-embedding passes recorded by a read-only pre-hook |
-| **4 REBUILD L7–L31** | Layers 7–31 compute K/V for the new rows while attending to the memory. Weights are unchanged. | same pass | step-wise memory = engine path = PyTorch reference path |
-| **5 ANSWER** | Only the question template is fed; greedy decoding of up to 16 tokens. | `answer_layers` | no cartridge token sequence occurs in the question input |
-
-The **native component** is only the TEST659 kernel `append_kv`, a BF16 row copy along the sequence axis. It is gated bitwise against `torch.cat`. Attention, the transformer layers and decoding run in PyTorch / Hugging Face Transformers.
-
-## Experimental setup
-
-| Item | Value |
-|---|---|
-| Run | `MAM14M-20261016-105852-0001` |
-| Hardware / software | NVIDIA A100-SXM4-40GB · Python 3.13.15 · torch 2.11.0+cu130 · transformers 5.18.0 · gradio 6.29.0 |
-| Duration | 144.72 s for 36 engine runs, measurements, 8 figures and packaging |
-| Engine | locked TEST684 bootstrap → TEST560 (CUT6 engine) + TEST659 (native append) + TEST677; TEST686 scenario functions executed verbatim |
-| Protocol | Qwen v1.4 scenarios, questions and scoring metadata, read **as data** from the SHA-256-verified `HIPPOCAMPUS_1.4_part1.py` |
-| Scenarios | **A — AKBASCORE** and **B — The Matrix**; both fictional, three cartridges each (A, B, C) plus a counterfactual C′ |
-| Conditions | NONE, A, B, C, AB, AC, BC, ABC, ABC_CF (A, B, C′) |
-| Representations | **DC_CUT6_NATIVE** (cartridge memory, demonstrated path) and **TEXT_JOINT** (facts read together as text; standard KV cache; control) |
-| Questions | 5 (A) / 6 (B) direct questions + one predefined three-step chain per run → 198 question rows, 36 chains |
-| Weight checks | TEST560 sentinel, all-parameter guard before/after, full-weight SHA-256 at start-up (`be2f30e4…`; recorded, no published Mistral reference) |
-
-## Results
-
-All values are from the run log [`MISTRAL_v1.4_Demo.log`](MISTRAL_v1.4_Demo.log) and Figures 1–8.
-
-**Memory mechanics (ABC builds, DC_CUT6_NATIVE)**
-
-| Scenario | Memory | Bytes | Earlier rows unchanged | L0–6 = cartridge | = engine path | = PyTorch reference |
-|---|---|---|---|---|---|---|
-| AKBASCORE | 124 rows × 32 layers | 16,252,928 | ✓ | ✓ | ✓ | ✓ |
-| Matrix | 141 rows × 32 layers | 18,481,152 | ✓ | ✓ | ✓ | ✓ |
-
-**Strict TEST686 statuses (per representation; identical for DC_CUT6_NATIVE and TEXT_JOINT)**
-
-| | correct | correct UNKNOWN | unsupported | wrong | unscored |
-|---|---|---|---|---|---|
-| Direct questions (99) | 34 | 0 | 43 | 4 | 18 |
-| Three-step chains (18) | 4 | 2 | 11 | 1 | — |
-
-**Condition ABC, cartridge memory**
-
-| | Direct questions | Three-step chain |
-|---|---|---|
-| **Matrix** | ACTIVATION `Tank`, CONTENT `Kung Fu knowledge`, INJECTION `Layer-3`, EFFECT and FINAL `Bullet-dodge ability`: all strict **PASS** | `MX-71` → `Kung Fu knowledge` → `Bullet-dodge ability`: strict **PASS** |
-| **AKBASCORE** | ACTIVATION `AKBASCORE MAM` and CONVERSION `Morvex`: strict **PASS**. EFFECT and FINAL: strict **FAIL** (see next section) | hop 1 **PASS**, hop 2 **PASS**, hop 3 strict **FAIL** (`Reversal of time flow (or UNKNOWN if the information provided does`, cut at 16 tokens) |
-
-**Counterfactual (ABC_CF).** The final answers change to `Temporal stasis` (AKBASCORE) and `Slow-motion perception` (Matrix), in both representations, and both chains end in the counterfactual effect.
-
-**Parity with the sealed TEST686 record.** All 198 question outputs and all 36 chain outputs (raw answer and strict status) were identical to the sealed [`686.log`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/686.log). This shows that the frozen, greedy pipeline is **reproducible**. It is **not** a claim that 198 answers or 36 chains were correct.
-
-## Strict TEST686 result vs. secondary content audit
-
-The demonstration reports two kinds of evaluation and never combines them into one score.
-
-| | Primary: **strict TEST686** | Secondary: **content audit** |
-|---|---|---|
-| Source | `grade686` / `staged686`, executed verbatim from `686.py` | rule set of this demonstration (`v1.4-M content audit 1`), plus the verbatim TEST684 `audit680` labels |
-| Rule | normalised exact match with the expected answer or a listed alias | expected answer present? at the head? extra text? 16-token limit reached? semantic assessment: SUPPORTED / AMBIGUOUS / CONTRADICTED / NOT ASSESSED |
-| Role | the official result; never changed | explains the raw answer; never replaces the strict result |
-
-"Expected answer present" is **not** the same as "semantically correct", and AMBIGUOUS is **not** a success.
-
-**Strict failures on answerable questions** (cartridge memory; identical with the joint-read control):
-
-| Condition · question | Raw output (complete) | End | Content audit |
-|---|---|---|---|
-| AKBASCORE ABC · EFFECT | `Reversal of time flow in the target system (or UNKNOWN if` | 16-token limit | at head; AMBIGUOUS (hedge) |
-| AKBASCORE ABC · FINAL | `Time flow reversal in the target system (without modifying its frozen neural weights` | 16-token limit | at head; AMBIGUOUS (cut by the limit) |
-| AKBASCORE BC · EFFECT | `Time flow reversal in the target system.` | end-of-sequence | at head; SUPPORTED |
-| Matrix B · INJECTION | `UNKNOWN (The information provided does not specify the exact layer number, only` | 16-token limit | abstains; NOT ASSESSED |
-
-- Three of the four contain the expected answer, or its listed alias, at the head, followed by extra text. They are failures of answer **format**, not evidence that the information was missing.
-- They are still not equivalent to correct answers: the continuation hedges, or it was cut off before it could be assessed.
-- A longer generation limit would not turn them into exact matches. Under greedy decoding, the first 16 tokens stay the same.
-
-**Observation, cause not verified:** Mistral sometimes continues generating explanatory text after producing the expected answer, unlike the shorter responses observed in the corresponding Qwen demonstration. The behaviour also appears with the joint-read control, so it is not caused by cartridge injection.
-
-## Limitations
-
-- Two small fictional scenarios. No claim of scale, generality or real-world knowledge.
-- **No strict abstention** by Mistral on the 43 unanswerable direct-question rows: 19 explained-UNKNOWN answers, 4 mixed, 20 unsupported claims. Abstention is measured, not guaranteed.
-- Related cartridges can leak information: for example, the Matrix FINAL question is answerable from A and C alone.
-- The 16-token limit truncates long answers; the strict rule penalises verbose but correct answers. Both are inherited unchanged for comparability.
-- Cartridges are forged from text whenever a memory is built. Persistent cartridge storage and cross-model cartridge use are not demonstrated.
-- One hardware and software stack. No independent external replication yet.
-
-## Figures 1–8
-
-The figures below are the unchanged JPEG output (≈4000 px) of run `MAM14M-20261016-105852-0001`. Every value in them was measured in that run, except the sealed TEST686 summary in Figure 7.
-
-| # | Figure | Content |
-|---|---|---|
-| 1 | The memory injection protocol | five steps with measured checks; how cartridge C enters the 32 layers; distance to a standard KV cache; same question, two memories |
-| 2 | Architecture | executed path from source facts to source-free answer |
-| 3 | Cartridge creation and append-only consolidation | rows per step, bitwise prior-row checks, per-cartridge record |
-| 4 | Internal memory X-ray | K/V norm heat maps (32 layers × rows); difference to the TEXT_JOINT memory |
-| 5 | Demonstration A (AKBASCORE) | raw outputs, strict results, content audit, three-step chain |
-| 6 | Demonstration B (Matrix) | same layout |
-| 7 | Causal controls | nine conditions × both demonstrations; counterfactual; audits; parity with sealed TEST686 |
-| 8 | Verification record | engine identity, hashes, weight checks, claim boundary |
-
-The figures are included, full page and unchanged, in the paper PDF. The demonstration writes them, together with all records, into the ZIP package of every full research run.
-
-## Reproduction (Google Colab, three parts)
-
-**Requirements** (the values of the reported run):
-- Google Colab with an **NVIDIA A100 40 GB** GPU. Less than 22 GiB of GPU memory triggers a warning; GPUs without native BF16 support, such as the T4, are not suitable.
-- A Hugging Face account that has accepted the terms of the gated model `mistralai/Mistral-7B-Instruct-v0.3`, with its access token stored as the Colab secret **`HF_TOKEN`** (with notebook access enabled).
-- Internet access: the program downloads the locked sources from `titan-cognitive-core-v2` and the model weights.
-
-**Steps** (they also work from a phone):
-
-1. In Colab, choose *Runtime → Change runtime type → A100 GPU*.
-2. Paste **`Mistral_part1_v1.4.demo.py`** into a code cell. Run it, or keep pasting into the same cell.
-3. Paste **`Mistral_part2_v1.4.demo.py`** directly after part 1 (same cell), or into the next cell and run it.
-4. Paste **`Mistral_part3_v1.4.demo.py`** directly after part 2 (same cell), or into the next cell and run it.
-
-All three parts must run **in this order, in the same runtime**. Parts 1 and 2 only define the engine bootstrap, measurements and records. **Part 3 starts the engine and the interface; it cannot run on its own.** Alternatively, run the single combined file `Mistral_full_v1.4.demo.py`.
-
-At start-up the program:
-- checks the git blob or SHA-256 of every locked source;
-- loads the frozen model and compiles the native kernel;
-- runs its gates (`PASS …` lines);
-- records the full-weight SHA-256;
-- prints a public `gradio.live` link.
-
-If a locked source has changed, the program stops with an explanatory message instead of running unverified code.
-
-In the interface, press **FULL RESEARCH RUN** to reproduce all 36 engine runs, the 8 figures, `RUN_SUMMARY.txt`, `RAW_MODEL_ANSWERS.json`, the SHA-256 manifest and the ZIP package. A run takes about 2.5 minutes on an A100 after the model has loaded.
-
-## Files, logs and source references
-
-**This repository** — [`ceceli33/titan-cognitive-core-v3`](https://github.com/ceceli33/titan-cognitive-core-v3):
-
-| File | Content |
-|---|---|
-| [`Mistral_part1_v1.4.demo.py`](Mistral_part1_v1.4.demo.py) | header, locks, scoring metadata, engine bootstrap |
-| [`Mistral_part2_v1.4.demo.py`](Mistral_part2_v1.4.demo.py) | read-only measurement layer, TEST686 parity, content audit, orchestration, records |
-| [`Mistral_part3_v1.4.demo.py`](Mistral_part3_v1.4.demo.py) | eight figures, Gradio interface, start-up |
-| [`Mistral_full_v1.4.demo.py`](Mistral_full_v1.4.demo.py) | the three parts as one file |
-| [`MISTRAL_v1.4_Demo.log`](MISTRAL_v1.4_Demo.log) | run summary of `MAM14M-20261016-105852-0001` |
-| [`LICENSE`](LICENSE) | AKBASCORE RESEARCH SOFTWARE LICENSE |
-
-SHA-256 of the three parts:
-
-```
-9c4431f89145f6f297c4d91494f5679106408df3056552f71430dbd84572ca60  Mistral_part1_v1.4.demo.py
-4cf8398487058dc940a7cadbebae6e28ff61a06e3ce0ce2358dcb1465f765fa8  Mistral_part2_v1.4.demo.py
-ab48d1d2d6b36f0b4a37fe9ba049bd5aaf3afacf97f5cf84b42e542d31d2f0f7  Mistral_part3_v1.4.demo.py
+Human expert review: PENDING — not fabricated or claimed complete.
 ```
 
-**Locked Mistral engine and sealed records** — [`ceceli33/titan-cognitive-core-v2`](https://github.com/ceceli33/titan-cognitive-core-v2):
+## Measured TEST745 results
 
-| File | Role | Lock |
+The values below are from the completed 22 October 2026 run and its six generated scientific figures. **A technical PASS means that the specified mechanism or integrity check passed; it is not a score for causal correctness.**
+
+| Measure | Observed result |
+|---|---|
+| Model | Qwen2.5-72B-Instruct, NF4 frozen weights, BF16 compute |
+| GPU | A100-SXM4-80GB |
+| Memory boundary | CUT3, H3 and K/V layers 0–3 |
+| Source cartridges | C01, C02, C03 |
+| Subsystem synthesis cartridges | S01, S02, S03 |
+| Cross-system synthesis cartridges | H01, H02, H03 |
+| Sealed blind master | C11 |
+| Post-outcome master | C12 |
+| **Physical cartridges** | **11** |
+| Closed-loop review rounds | **8 completed** |
+| Demo stages | **15/15 complete** |
+| Independent post-run cartridge verification | **11/11** file SHA, tensor seal, and re-derived body checks |
+| Scientific figures | **6/6** JPEGs, 3,999 × 2,250 pixels, 300 dpi |
+| Demo session | `SH745-20261022-052501` |
+| Demo end status | `RUN VERDICT: COMPLETE` |
+| Downloadable run records/texts listed by demo | 53, plus 6 JPEGs |
+| Files in demo session SHA-256 manifest | 70 |
+| Independent human grading of blind answers | **Not evaluated / pending** |
+
+### Physical cartridge measurements
+
+`body tokens` are the textual contents used to forge each cartridge. `rows n` includes the canonical prefix. `file MB` is the decimal megabyte figure shown in the live measurement. The 80-layer K/V comparison is a calculated full-cache size, **not** a measured speedup or memory saving for the entire running model.
+
+| Cartridge | Role | Body tokens | Rows n | SSD file MB | Re-loads recorded |
+|---|---|---:|---:|---:|---:|
+| C01 | Preliminary segment 1 | 761 | 790 | 25.9 | 1 |
+| C02 | Preliminary segment 2 | 761 | 790 | 25.9 | 1 |
+| C03 | Preliminary segment 3 | 762 | 791 | 25.9 | 1 |
+| S01 | Subsystem synthesis | 1,225 | 1,254 | 41.1 | 2 |
+| S02 | Subsystem synthesis | 1,446 | 1,475 | 48.3 | 2 |
+| S03 | Subsystem synthesis | 1,220 | 1,249 | 40.9 | 2 |
+| H01 | Cross-system synthesis | 1,296 | 1,325 | 43.4 | 1 |
+| H02 | Cross-system synthesis | 1,025 | 1,054 | 34.5 | 1 |
+| H03 | Cross-system synthesis | 1,594 | 1,623 | 53.2 | 1 |
+| C11 | Blind master | 1,643 | 1,672 | 54.8 | 3 |
+| C12 | Post-outcome master | 1,843 | 1,872 | 61.3 | 0 |
+
+All eleven physical files passed the live demo's file SHA-256, tensor-seal, and re-derived body checks. C12's parent reference matched C11's file SHA-256. **C12 having zero recorded reloads does not mean it was not created or verified**; the count is the number of engine `PASS FILE_SHA` reload events recorded for that cartridge.
+
+The sealed physical identities in this run include:
+
+```text
+C11 SHA-256: 3f78c672465975d1170e57ab70a85af1b7fa5f1ddc902ec80f2670a48f045eea
+C12 SHA-256: fdd5add305d71d0a78c04f92a8d0724c19443d81ad2756b9f96160dd667d4e5a
+```
+
+The full manifest, rather than truncated figure labels, is authoritative for all individual cartridge hashes.
+
+## The physical CUT3 mechanism
+
+A cartridge is a serialized collection of **model-native numerical tensors**, not the source text itself. The frozen model reads the cartridge's source body during forging; the engine captures the boundary hidden state and lower-layer attention memory.
+
+1. **FORGE:** Run a forward pass on the canonical prefix plus cartridge body. Capture `H3` (hidden dimension 8,192) and the K/V states of transformer layers 0–3.
+2. **PERSIST:** Serialize the checkpoint to SSD with `torch.save`. Record a SHA-256 of the file and tensor-level seals.
+3. **RELOAD:** Verify the file hash, cartridge identity, and internal tensor seals; load the saved numerical state.
+4. **INJECT + REBUILD:** Mount the CUT3 checkpoint at the layer-3 boundary; use its stored lower-layer state while the frozen model recomputes upper layers 4–79.
+5. **READ:** Append a question to the rebuilt attention memory and let the model generate an answer without inserting the original cartridge body as question-time text.
+
+The 72B checkpoint contains `H3` of shape `(1, n, 8192)` plus K/V for four layers. With BF16 tensor elements and eight KV heads of dimension 128, the raw stored tensor payload is approximately:
+
+```text
+H3 bytes per row         = 8,192 × 2                         = 16,384 B
+K/V bytes per row        = 2 × 4 × 8 × 128 × 2              = 16,384 B
+Total CUT3 tensor bytes  = 32,768 B per row
+Full 80-layer K/V        = 2 × 80 × 8 × 128 × 2             = 327,680 B per row
+```
+
+This is a **10× comparison of the particular stored CUT3 tensor payload against a full 80-layer K/V payload per row**, not a 10× reduction in total GPU memory or execution time. Upper-layer memory must still be reconstructed, and model weights and decoding remain necessary. The serialized `.pt` files include additional metadata and serialization overhead.
+
+### How this differs from other approaches
+
+| Approach | What is stored or changed | Relationship to this work |
 |---|---|---|
-| [`560.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/560.py) | frozen Mistral CUT6 engine (`forge_checkpoint`, `init_incremental`, `append_incremental`, `answer_layers`) | git blob `35d95a92…` |
-| [`659.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/659.py) | native BF16 CUDA `append_kv` | git blob `5f906608…` |
-| [`684.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/684.py) | bootstrap and descriptive audit `audit680` | git blob `0af7ae24…` |
-| [`686.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/686.py) / [`686.log`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/686.log) | sealed v1.4 protocol on Mistral CUT6 | git blob `8ff95e75…` / SHA-256 `57424560…` |
-| [`559.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/559.py) / [`559.log`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/559.log) · [`560.log`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/560.log) | CUT6 vs CUT10; batch vs incremental consolidation on the 72-question panel | — |
+| Text retrieval / RAG | External text retrieved and placed in the prompt | Here the stored cartridge is internal numerical state; text is nevertheless used at **synthesis** stages |
+| Fine-tuning / LoRA | Model weights or trainable adapters updated | TEST745 leaves the model weights frozen |
+| Ordinary KV-cache reuse | Saved attention state from a prior forward pass | Related prior art; CUT3 also stores a boundary hidden state and reconstructs upper layers |
+| Direct multi-cartridge latent fusion | Multiple cartridges' internal tensors mathematically fused | **Not implemented in TEST745** |
+| Full transformer bypass | Transformer computation avoided altogether | **Not demonstrated**: layers 4–79 and decoding still execute |
 
-**Qwen implementation (Research Record I)** — same repository:
-- [`HIPPOCAMPUS_1.4_part1.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/HIPPOCAMPUS_1.4_part1.py), [`part2`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/HIPPOCAMPUS_1.4_part2.py), [`part3`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/HIPPOCAMPUS_1.4_part3.py)
-- [`HIPPOCAMPUS_1.4_log`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/HIPPOCAMPUS_1.4_log)
-- [`664.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/664.py) (locked Qwen CUT3 engine)
-- [`566.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/566.py) and [`573.py`](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/573.py), with their logs
+The novelty asserted by this research programme concerns the **specific architecture, implementation, sequencing, verification, and experimental combination**, not exclusive ownership of KV caches, residual-stream intervention, RoPE, or any general scientific principle.
 
-## Qwen–Mistral comparison
+## How hierarchical synthesis works
 
-| Aspect | Qwen2.5-7B-Instruct (Record I) | Mistral-7B-Instruct-v0.3 (Record II) |
+TEST745 separates **physical memory** from **semantic synthesis**. The parent cartridge is first mounted on its own; the model reads it and generates a textual account. The synthesis model then receives those textual accounts and produces a new synthesis body. That body is **forged as a new physical CUT3 cartridge**.
+
+```text
+physical_answer(parent_id, question)
+    -> verified physical parent checkpoint
+    -> mount / rebuild frozen transformer memory
+    -> model-generated text readout
+
+synthesize_text(parent_readouts, synthesis_task)
+    -> concatenate selected TEXT readouts and task instructions
+    -> frozen model generates a new synthesis TEXT
+
+commit(child_id, synthesis_text, role, parent_ids)
+    -> forge a fresh H3 + L0–3 K/V checkpoint
+    -> write physical .pt cartridge to SSD
+    -> record SHA-256 and parent identities
+```
+
+The actual parent graph is:
+
+```text
+S01 <- C01 + C02       H01 <- S01 + S02
+S02 <- C02 + C03       H02 <- S02 + S03
+S03 <- C01 + C03       H03 <- S01 + S03
+C11 <- H01 + H02 + H03
+C12 <- C11 + official final-report-derived self-audit material
+```
+
+These are **overlapping source segments and successive model-generated interpretations**. They are not independently measured aircraft electrical, mechanical, and software subsystems, and they do not constitute direct BF16 cross-cartridge tensor fusion. Each synthesis stage is physically materialized as its own cartridge after the text synthesis is complete.
+
+The original source text is not simply pasted into the question at each physical read. However, **text remains an explicit intermediate representation in the synthesis chain**. This distinction is essential for reproducibility and comparison with other memory systems.
+
+## Closed loop, blind seal, and post-outcome consolidation
+
+### Eight review rounds
+
+The system first constructs an initial blind hypothesis from the H01–H03 readouts. It then runs eight successive review prompts. The rounds are **text-mediated iterations**; they are not eight independently written physical cartridges. Their outputs are preserved as generated text, and the last review contributes to the C11 body.
+
+The Figure 4 measurements show an important limitation: word-sequence similarity to the previous text rises from approximately 0.94 to 0.98 and then rounds to 1.00 for later iterations. The count of items under `OPEN_UNCERTAINTIES` remains 18 across the eight review rounds. This supports successful execution of the review loop, **not** an assumption of eight substantive improvements or demonstrated self-correction.
+
+### C11 — sealed blind master
+
+After the review rounds, the experiment forges and seals C11, a new physical master cartridge. It asks C11 three pre-specified questions **before downloading the official final report**:
+
+1. What is the best-supported causal account of the accident, distinguishing initiating events, crew actions, and uncertainty?
+2. What are two plausible competing explanations and the evidence needed to distinguish them?
+3. Which conclusions remain unsupported or unknowable from the available factual records?
+
+The three generated blind answers and C11's physical file identity are recorded. The blind-answer seal is verified after the run. **This is a controlled sequence of data access, not a guarantee that the pretrained model had never encountered the accident or relevant facts.**
+
+### C12 — new post-outcome master
+
+Only after the C11 seal does the experiment unlock the official final report and ask the model to compare its earlier predictions with the report's findings. The self-audit is a **model-generated claim**, not independent human or expert grading. The result is forged into **C12, a new physical cartridge** whose metadata references C11's exact file SHA-256. C11 remains unchanged.
+
+The experiment records `HUMAN REVIEW PENDING`. C12 is therefore best described as **post-outcome model-assisted consolidation with a reserved human-review boundary**, not as a completed human-validated master.
+
+**Chronology note:** Figure 5 in the first six-figure set displays a report-download clock label earlier than the C11 seal, even though its access-boundary event is plotted after the seal. The label should be corrected against the original engine timestamps before republication. The sealed source code, engine events, and results files take precedence over an illustrative figure label. No scientific claim should rest solely on that inconsistent graphic.
+
+## Live Gradio demonstration
+
+The live interface is built on the earlier Silicon Hippocampus 1.5 demonstration infrastructure. It **does not replace the experiment engine**. It fetches the locked original `745.py` and executes that unchanged source in a separate Python process.
+
+The single **RUN** control launches the real workflow and displays timestamped engine output, stage progression, physical cartridge files, generated readouts, synthesis texts, loop outputs, blind answers, self-audit, and verification. It does not substitute recorded answers for live model outputs.
+
+The Gradio layer independently re-checks:
+
+- physical cartridge file SHA-256 values;
+- internal tensor seals using the locked `730.py` verification expression;
+- cartridge body hashes re-derived from this run's own generated texts;
+- C11's continued immutability and C12's parent reference;
+- the blind-answer seal and procedural access ordering.
+
+The completed live session reported **15/15 stages**, **11/11 cartridge verification**, **6/6 JPEGs**, and a **70-file SHA-256 manifest**. These results establish successful execution and recorded integrity checks; they do not grade the aircraft investigation's causal conclusions.
+
+### Live demo source files
+
+| File | Purpose |
+|---|---|
+| [`Fly_72b_demo_part1.py`](Fly_72b_demo_part1.py) | Source locks, records, engine parsing, independent physical verification |
+| [`Fly_72b_demo_part2.py`](Fly_72b_demo_part2.py) | Six figures, packaging, run pipeline |
+| [`Fly_72b_demo_part3.py`](Fly_72b_demo_part3.py) | Gradio interface, launch, notebook display |
+| [`Fly_72b_demo_full.py`](Fly_72b_demo_full.py) | Combined, single-file live demo |
+| [`Fly_72b_demo.log`](Fly_72b_demo.log) | Completed live GPU demonstration log |
+
+### Running on Google Colab
+
+1. Select a runtime with an **NVIDIA A100 80 GB** GPU and sufficient storage for the model, cartridges, and source files.
+2. Ensure that the model and its dependencies are accessible under their respective provider terms.
+3. Run [`Fly_72b_demo_full.py`](Fly_72b_demo_full.py) as a Colab code cell, **or** concatenate Parts 1, 2, and 3 in order in the same runtime.
+4. Wait for the Gradio link, open the interface, and press **RUN** once.
+5. Keep the runtime alive during the approximately 1.5-hour experiment. Download and archive the generated texts, cartridge manifests, integrity records, and six JPEGs.
+
+A fresh run uses a new session identifier. Do not treat the earlier `745.log` record as newly generated model output. The live demo does **not** provide post-run free-form chat with a permanently resident model; the unchanged engine executes in its own subprocess.
+
+## Research lineage and earlier records
+
+The current work is an extension of earlier public, test-numbered experiments. This repository is a **research archive**, not merely a single-model Mistral demo. Dates, test identities, and technical claims should be read with the original files and their versioned publications.
+
+| Stage | Model / system | Verified focus | Main evidence |
+|---|---|---|---|
+| Early cognitive steering / SEASC / NIRVANA | Qwen and Mistral 7B | Internal-state intervention, calibration, and associative-memory experiments | Historical repositories and Zenodo records |
+| TEST559–560 | Mistral-7B-Instruct-v0.3 | CUT6 / H6, physical memory composition and 72-question controls | [560 source](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/560.py) |
+| TEST564–575 | Qwen2.5-7B-Instruct | CUT3 calibration, causal controls, batch/incremental memory | [566 source](https://github.com/ceceli33/titan-cognitive-core-v2/blob/main/566.py) |
+| Silicon Hippocampus v1.4, Research Record I | Qwen2.5-7B | Cartridge memory vs joint-read control, counterfactuals, reproducibility | [Zenodo DOI](https://doi.org/10.5281/zenodo.23381336) |
+| Silicon Hippocampus v1.4, Research Record II | Mistral-7B | Same v1.4 protocol on architecture-adapted CUT6; strict grading and secondary content audit | [`MISTRAL_v1.4_Demo.log`](MISTRAL_v1.4_Demo.log) |
+| TEST610 / TEST642 | Qwen2.5-7B | Physical SSD cartridges, PCA/FAISS indexing and retrieval/routing experiments | Earlier sealed experiment records |
+| TEST663–664 | Qwen2.5-7B | Stepwise reasoning, feedback retry, missing information and misleading feedback controls | Earlier sealed experiment records |
+| TEST709 | Qwen2.5-72B | Native CUT3 foundation for large-model physical cartridges | [`709.py`](709.py) |
+| TEST730 | Qwen2.5-72B | Three real published sources → physical cartridges → text synthesis → sealed MASTER and six questions | [`730.py`](730.py), [`730.log`](730.log) |
+| Silicon Hippocampus 1.5 | Qwen2.5-72B | Live Gradio SSD recovery, 80-layer parity, neural X-ray and live memory-vs-no-memory questions | [`Qwen72B_1.5.log`](Qwen72B_1.5.log) · [Zenodo record](https://zenodo.org/records/23497732) |
+| **TEST745 / current interim seal** | **Qwen2.5-72B** | **11 physical cartridges, hierarchical synthesis, eight review rounds, blind C11, post-outcome C12** | [`745.py`](745.py), [`745.log`](745.log), [`Fly_72b_demo.log`](Fly_72b_demo.log) |
+
+### Historical Mistral v1.4 record — retained, not superseded
+
+The previous README focused on a frozen `mistralai/Mistral-7B-Instruct-v0.3` (32 layers, hidden 4,096, 32 query heads, 8 KV heads, head dimension 128) using **CUT6 / H6**. The sealed Mistral v1.4 demonstration compared physical cartridge memory with a joint-text control on two fictional scenarios and nine memory conditions. Its published strict and content-audit results should remain attributed to that **specific** 7B protocol, not to TEST745.
+
+Representative Mistral v1.4 results: 72/72 on the verified CUT6 batch/incremental 72-question consolidation panel (TEST560); the later v1.4 demo reported 34 correct, 43 unsupported, 4 wrong, and 18 unscored direct-question rows under the inherited strict grading rules, with 16-token generation truncation affecting some outputs. The direct-control counts matched within that protocol. These are **not** TEST745 metrics.
+
+The Mistral engine uses H6 and K/V layers 0–6, with upper layers 7–31 rebuilt. The Qwen 7B CUT3 and Qwen 72B CUT3 implementations are **architecture-specific**. A cartridge produced for one model is not demonstrated to be portable to another.
+
+### TEST730 and Silicon Hippocampus 1.5
+
+TEST730 combined **three independently sourced 2026 research publications** into source-specific physical cartridges (`P01`, `P02`, `P03`), read their contents, synthesized a new master body as text, and forged a physical `MASTER` cartridge. Its six generated answers were recorded separately from the technical integrity checks. The subsequent 1.5 live demo recovered all four physical cartridges bit-identically, initialized the 72B master, and verified **80/80 layer parity** between native and reference paths. It also measured live new-question responses with and without master memory. Those results establish the earlier large-model foundation for TEST745; they do not automatically establish independent causal correctness for either experiment.
+
+**Historical correction:** Older documentation described a DeepSeek extension as merely planned. Later research activity explored DeepSeek/MLA adaptation; that older statement should not be carried forward as a blanket claim that no DeepSeek work occurred. Individual DeepSeek claims require their own model-specific logs and verification.
+
+## Scientific claims and limitations
+
+### Supported by the cited runs
+
+- Model-native CUT3/CUT6 numerical states can be captured, persisted, verified, reloaded, and used in the corresponding frozen model's computational path.
+- TEST745 physically materialized eleven cartridges across source, subsystem, cross-system, blind-master, and post-outcome stages.
+- TEST745 executed eight text-mediated review rounds and created a sealed C11 before programmatic access to the official final report.
+- A distinct C12 was created with an exact C11 parent SHA-256 reference; post-run integrity checks passed.
+- The live Gradio demonstration ran the unchanged locked engine and completed all fifteen recorded stages.
+
+### Not established by TEST745
+
+- Correctness of all accident-cause hypotheses, independent expert agreement, or quantified causal accuracy.
+- Autonomous human-level reasoning, consciousness, or guaranteed ability to identify and correct its own errors.
+- Eight substantive improvements across eight review rounds: later text similarity was nearly unchanged.
+- Direct latent BF16 fusion of multiple parent cartridges; synthesis is **text-mediated**.
+- Elimination of transformer computation: upper layers and decoding still run.
+- A measured end-to-end speed advantage, superior energy efficiency, or general-purpose memory scaling on the TEST745 task.
+- Complete protection from pretrained knowledge leakage in a real-world blind case.
+- Completed human review of C12.
+
+The present release is an **interim experimental seal**. It records a working mechanism and a reproducible implementation milestone, not the conclusion of the research programme.
+
+## Reproduction and source files
+
+**Canonical repository:** https://github.com/ceceli33/titan-cognitive-core-v3
+
+| File | Role |
+|---|---|
+| [`745.py`](745.py) | Locked real-world investigation experiment |
+| [`745.log`](745.log) | Original GPU experiment log |
+| [`Fly_72b_demo_full.py`](Fly_72b_demo_full.py) | Complete live Gradio reproduction |
+| [`Fly_72b_demo_part1.py`](Fly_72b_demo_part1.py) | Gradio part 1 |
+| [`Fly_72b_demo_part2.py`](Fly_72b_demo_part2.py) | Gradio part 2 |
+| [`Fly_72b_demo_part3.py`](Fly_72b_demo_part3.py) | Gradio part 3 |
+| [`Fly_72b_demo.log`](Fly_72b_demo.log) | Completed live reproduction log |
+| [`730.py`](730.py) · [`730.log`](730.log) | Earlier real-source synthesis and sealed master |
+| [`709.py`](709.py) | Locked CUT3 engine foundation |
+| [`Qwen72B_1.5.log`](Qwen72B_1.5.log) | Earlier 72B Gradio validation |
+| [`LICENSE`](LICENSE) | Governing AKBASCORE research software license |
+
+**Pinned Git blob identities recorded at the time of this README update:**
+
+```text
+745.py                    de9e137e981fd57812d9a5e40d3c72dc278d2133
+745.log                   07d8fafb51e871549814442705d617f81e0322ba
+709.py                    6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+730.py                    b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+Fly_72b_demo_full.py      ed144ab2dbe926d6e6717983074e134a50ece0b0
+Fly_72b_demo_part1.py     4e2e012538606208f939f80aa93971361d951b84
+Fly_72b_demo_part2.py     b852f6f229a29f809c43575bfde6d699cf8f6efe
+Fly_72b_demo_part3.py     ef37db2598811dfda851cb284895680e6a2de21b
+Fly_72b_demo.log          459259d596d1a4a2d9d5f348d12da4f2f9120e8f
+```
+
+**Git blob SHA-1 identifiers are not SHA-256 file digests.** They identify the repository file contents at a given Git object; cartridge file SHA-256 values and the run's own SHA-256 manifest serve a different verification purpose. For archival releases, pin a Git tag/commit and publish the complete generated results, manifests, and selected raw outputs alongside the PDF and figures.
+
+## Figures and supporting evidence
+
+The completed TEST745 Gradio session produced six 3,999 × 2,250 JPEGs at 300 dpi:
+
+| Figure | Title | Evidence type |
 |---|---|---|
-| Layers / hidden / Q heads / KV heads / head dim | 28 / 3584 / 28 / 4 / 128 | 32 / 4096 / 32 / 8 / 128 |
-| Precision, attention | BF16, SDPA | BF16, SDPA |
-| Boundary | CUT3: `H3` + K/V of layers 0–3 | CUT6: `H6` + K/V of layers 0–6 |
-| Recomputed layers | 4–27 | 7–31 |
-| Cartridge bytes per row | 15,360 | 36,864 |
-| Native operation | TEST659 `append_kv` | identical kernel source |
-| 72-question panel (same panel SHA) | JOINT 72 · INDEP 32 · BATCH_DC3 72 · INCR_DC3 72 (TEST573) | JOINT 72 · INDEP 13 · BATCH_DC6 72 · INCR_DC6 72 (TEST560) |
-| v1.4 answerable direct questions (38) | 38 correct | 34 correct, 4 wrong |
-| v1.4 unanswerable direct questions (43) | 28 correct UNKNOWN, 15 unsupported | 0 correct UNKNOWN, 43 unsupported |
-| v1.4 chains (18) | 5 correct, 9 correct UNKNOWN, 4 unsupported | 4 correct, 2 correct UNKNOWN, 1 wrong, 11 unsupported |
-| DC vs joint-read control | identical strict counts; 93/99 raw answers identical | identical strict counts; 80/99 raw answers identical |
-| Counterfactual ABC_CF | final answer changes | final answer changes |
-| Scored answers reaching the 16-token limit | 0 / 81 | 33 / 81 |
-| Weight check | full-weight SHA-256 equal to the TEST575 reference | full-weight SHA-256 recorded (no reference) |
+| 1 | General Architecture | Schematic grounded in run measurements |
+| 2 | Physical Memory Cartridge | Live measurements of files, shapes, and integrity |
+| 3 | Hierarchical Synthesis | Schematic with measured token counts and readouts |
+| 4 | Eight-Round Closed Loop | Observed text lengths, sequence similarity, uncertainty items |
+| 5 | Blind Investigation and Official Outcome | Sealed chronology and selected excerpts; **clock label requires correction** |
+| 6 | C11 to C12 Memory Consolidation | Sealed lineage and independent integrity checks |
 
-**Reading the table.** The mechanism-level results agree across the two architectures:
-- consolidation with upper-layer recomputation equals joint reading on the 72-question panel;
-- independent caches without that recomputation fail;
-- the cartridge memory and the joint-read control give identical strict counts.
+The figures should be included as separate release assets or linked here **after** their final immutable file paths are published. Do not use placeholder image URLs or present them as embedded repository images until the files exist at those paths. Raw source files and results JSON take precedence over schematic labels.
 
-The answer-level results differ, because of the models' answer formats, not because of the memory mechanism. **The procedure transfers between models; the cartridges do not.** Hidden size, KV-head layout, layer count, tokenizer and chat template all differ, and no cross-model cartridge experiment was performed.
+## Citation and archival policy
 
-## Planned DeepSeek extension
+**Current TEST745 release — proposed citation until a Zenodo DOI is assigned:**
 
-A third implementation (**Research Record III**) on a DeepSeek model is planned. It has **not** been carried out, and no DeepSeek result exists. The plan:
-- calibrate the boundary with the 72-question four-arm protocol (JOINT, INDEP, BATCH, INCR);
-- port the v1.4 protocol unchanged;
-- keep the strict score, parity checks and content audit separate, as here.
-
-Architectures that differ more strongly may require changes to the re-phasing and append steps, which would then need the same bitwise verification.
-
-## Citation
-
-> Akbaş, M. (2026). *Architecture-Adapted Numerical Memory Cartridges in a Frozen Transformer: A second-model experimental study of the Silicon Hippocampus v1.4 protocol on Mistral-7B-Instruct-v0.3, following the Qwen2.5-7B-Instruct implementation* (AKBASCORE Silicon Hippocampus v1.4, Research Record II, version 1.0). Zenodo. DOI pending. https://github.com/ceceli33/titan-cognitive-core-v3
+> Akbaş, Mustafa (2026). *AKBASCORE Silicon Hippocampus: Hierarchical Physical CUT3 Memory, Eight-Round Closed-Loop Analysis, and Sealed Blind-to-Outcome Consolidation in Frozen Qwen2.5-72B-Instruct (TEST745)*. Interim research record, 22 October 2026. GitHub: https://github.com/ceceli33/titan-cognitive-core-v3. Zenodo DOI pending.
 
 ```bibtex
-@misc{akbas2026mistral,
+@misc{akbas2026siliconhippocampus745,
   author       = {Akba{\c{s}}, Mustafa},
-  title        = {Architecture-Adapted Numerical Memory Cartridges in a Frozen Transformer:
-                  A Second-Model Experimental Study of the Silicon Hippocampus v1.4 Protocol
-                  on Mistral-7B-Instruct-v0.3, Following the Qwen2.5-7B-Instruct Implementation},
+  title        = {AKBASCORE Silicon Hippocampus: Hierarchical Physical CUT3 Memory,
+                  Eight-Round Closed-Loop Analysis, and Sealed Blind-to-Outcome
+                  Consolidation in Frozen Qwen2.5-72B-Instruct (TEST745)},
   year         = {2026},
-  note         = {AKBASCORE Silicon Hippocampus v1.4, Research Record II, version 1.0. DOI pending},
-  howpublished = {\url{https://github.com/ceceli33/titan-cognitive-core-v3}}
+  month        = oct,
+  note         = {Interim sealed experimental record, 22 October 2026; DOI pending},
+  url          = {https://github.com/ceceli33/titan-cognitive-core-v3}
 }
 ```
 
-Please also cite Research Record I: Akbaş, M. (2026). AKBASCORE MAM Silicon Hippocampus v1.4 — Qwen2.5-7B-Instruct implementation. Zenodo. [doi:10.5281/zenodo.23381336](https://doi.org/10.5281/zenodo.23381336)
+**Earlier persistent records:**
 
-## License and copyright
+- [Silicon Hippocampus v1.4 — Qwen Research Record I](https://doi.org/10.5281/zenodo.23381336)
+- [Silicon Hippocampus 1.5 / TEST730 — Zenodo record 23497732](https://zenodo.org/records/23497732)
+- Earlier Mistral v1.4 paper and associated historical records: see the original release files; **do not invent an unassigned DOI**.
 
-**Copyright © 2026 Mustafa Akbaş.** All rights reserved except as expressly permitted by the [AKBASCORE RESEARCH SOFTWARE LICENSE](LICENSE).
+A Zenodo DOI creates a persistent citation and archived public record. A Git release, cryptographic hash, and dated disclosure can help document content and chronology, but none alone grants a patent, guarantees originality, or creates exclusive rights over independently developed ideas. Patent filing strategy and disclosure timing should be reviewed with a qualified patent professional before releasing previously undisclosed patentable subject matter.
 
-Summary of the license (the license text governs):
-- Research, education, reproduction, evaluation, modification, forking and derivative works are permitted.
-- Commercial use is permitted without a separate license where the user's combined consolidated annual gross revenue, including affiliates, is **below USD 50,000,000** in the most recently completed fiscal year.
-- At or above that threshold, commercial use requires a **separate commercial license** from the copyright holder.
-- Material released earlier under the MIT License remains under the MIT License.
-- The license does not by itself create exclusive rights over ideas, scientific principles, algorithms or methods. The software is provided "as is", without warranty.
+## License and rights
 
-**Third-party components.** Mistral-7B-Instruct-v0.3 (Mistral AI), Qwen2.5-7B-Instruct (Qwen team, Alibaba Cloud), PyTorch, Hugging Face Transformers, Gradio and the other dependencies belong to their respective owners and are governed by their own licenses. No rights in them are claimed. Users must accept the model providers' terms.
+**Copyright © 2026 Mustafa Akbaş.** All rights reserved except as expressly permitted under the [AKBASCORE RESEARCH SOFTWARE LICENSE](LICENSE). The full license controls; this section is only a summary.
 
-**Persistent records.** A Zenodo DOI provides a persistent identifier and a time-stamped public record of a version. It does not by itself establish patent rights, copyright ownership or commercial exclusivity.
+- Research, education, academic reproduction, evaluation, modification, forking, and derivative works are permitted under the license.
+- Commercial use of covered material is permitted without a separate commercial license where the user and its controlled/controlling/common-control affiliates have **combined consolidated annual gross revenue below USD 50,000,000** in the most recently completed fiscal year.
+- At or above **USD 50,000,000 annual gross revenue**, commercial use of covered material requires a separate commercial license from the copyright holder.
+- The threshold is **revenue**, not valuation, fundraising, market capitalization, or assets under management.
+- Earlier material originally released under MIT **remains under MIT**; no retroactive restrictions are asserted.
+- The license governs only original copyrightable material for which the rights holder owns applicable rights. It does not, by itself, monopolize abstract ideas, scientific principles, algorithms, or independent implementations.
+- Third-party models, source reports, libraries, and dependencies retain their own licensing terms. The software is experimental and supplied **AS IS** without warranty.
 
-**Research line:** Titan Cognitive Core → AkbasCore → SEASC → NIRVANA → MAM (Model-Native Associative Memory) → Silicon Hippocampus.
+**Commercial licensing inquiries:** Mustafa Akbaş, via the official repository.
+
+## Next research questions
+
+This is **not the final stage** of Silicon Hippocampus. The TEST745 release is a dated, technically verified **interim seal** on the way toward a more general persistent-memory architecture. Future work may test:
+
+1. Genuine cross-cartridge latent interaction versus the current text-mediated synthesis baseline.
+2. Causal necessity and sufficiency of individual cartridges, with removal, swap, and counterfactual controls.
+3. Independent blinded expert grading of C11 answers and systematic separation of supported inference from pretrained knowledge.
+4. Whether feedback changes an answer for a justified reason, rather than merely producing a longer or repeated text.
+5. Scaling to larger SSD memory banks, exact-address retrieval, selective loading, and multi-agent/shared-memory architectures.
+6. Cross-architecture adaptation with model-specific calibration, without claiming direct cartridge portability.
+7. Robustness, abstention, uncertainty calibration, and reproducible external replication.
+
+**The immediate milestone is complete: physical memory persistence, hierarchical cartridge production, a sealed blind master, and a distinct post-outcome master were executed on a frozen 72B model and verified in a live demonstration. The larger research goal remains open.**
+
+---
+
+**AKBASCORE Silicon Hippocampus · Active research · Interim sealed record · 22 October 2026**  
+**Mustafa Akbaş · Copyright © 2026 · [License](LICENSE)**
