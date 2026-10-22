@@ -1,0 +1,180 @@
+  745 [LOOP] GENERATION H03 TOKENS 1118 LIMIT 4096 POSSIBLE_TRUNCATION False
+06:20:55 [LOOP] ENGINE_GENERATION GENERATION H03 TOKENS 1118 LIMIT 4096 POSSIBLE_TRUNCATION False
+  745 [LOOP] PASS GENERATION_NONEMPTY_H03
+  745 [LOOP] PASS GENERATION_NOT_TRUNCATED_H03
+  745 [LOOP] PASS SYNTHESIS_CONTEXT_FITS_INITIAL {'tokens': 3040, 'max': 22000}
+06:21:00 [LOOP] TEXT_WRITTEN     H03_18.txt {"chars": 5701, "sha256": "4c5eef14e649f203e26f0b0c0e7a30cc07187eecebe2f8d798abbfedfcfab2e4"}
+06:21:30 [LOOP] ENGINE_ALIVE     56.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:22:30 [LOOP] ENGINE_ALIVE     57.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:23:30 [LOOP] ENGINE_ALIVE     58.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS SYNTHESIS_NONEMPTY_INITIAL
+  745 [LOOP] PASS SYNTHESIS_NOT_TRUNCATED_INITIAL
+  745 [LOOP] PASS LOOP_PROMPT_FITS_1
+06:23:50 [LOOP] TEXT_WRITTEN     INITIAL_synthesis.txt {"chars": 5940, "sha256": "7ca92ca47f7ffc7bf83deab386eea1539e3649e8f6fb0b231837788771000138"}
+06:24:30 [LOOP] ENGINE_ALIVE     59.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:25:30 [LOOP] ENGINE_ALIVE     60.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:26:30 [LOOP] ENGINE_ALIVE     61.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_1
+  745 [LOOP] PASS LOOP_NONEMPTY_1
+  745 [LOOP] PASS LOOP_PROMPT_FITS_2
+06:26:50 [LOOP] TEXT_WRITTEN     blind_round_01.txt {"chars": 6575, "sha256": "401daf89d68abb00adc991c4c761e67a648fa77a6232745d0165f6fa016c59e4"}
+06:27:30 [LOOP] ENGINE_ALIVE     62.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:28:30 [LOOP] ENGINE_ALIVE     63.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:29:30 [LOOP] ENGINE_ALIVE     64.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_2
+  745 [LOOP] PASS LOOP_NONEMPTY_2
+  745 [LOOP] PASS LOOP_PROMPT_FITS_3
+06:30:00 [LOOP] TEXT_WRITTEN     blind_round_02.txt {"chars": 6805, "sha256": "6a0e4ba7a8098caee5a94e3c4b1fb79d2d8f3935c373ad4d681f1d770c29bc41"}
+06:30:30 [LOOP] ENGINE_ALIVE     65.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:31:30 [LOOP] ENGINE_ALIVE     66.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:32:30 [LOOP] ENGINE_ALIVE     67.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_3
+  745 [LOOP] PASS LOOP_NONEMPTY_3
+  745 [LOOP] PASS LOOP_PROMPT_FITS_4
+06:33:00 [LOOP] TEXT_WRITTEN     blind_round_03.txt {"chars": 6805, "sha256": "6a0e4ba7a8098caee5a94e3c4b1fb79d2d8f3935c373ad4d681f1d770c29bc41"}
+06:33:30 [LOOP] ENGINE_ALIVE     68.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:34:30 [LOOP] ENGINE_ALIVE     69.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:35:30 [LOOP] ENGINE_ALIVE     70.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_4
+  745 [LOOP] PASS LOOP_NONEMPTY_4
+  745 [LOOP] PASS LOOP_PROMPT_FITS_5
+06:36:10 [LOOP] TEXT_WRITTEN     blind_round_04.txt {"chars": 6805, "sha256": "6a0e4ba7a8098caee5a94e3c4b1fb79d2d8f3935c373ad4d681f1d770c29bc41"}
+06:36:30 [LOOP] ENGINE_ALIVE     71.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:37:30 [LOOP] ENGINE_ALIVE     72.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:38:30 [LOOP] ENGINE_ALIVE     73.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_5
+  745 [LOOP] PASS LOOP_NONEMPTY_5
+  745 [LOOP] PASS LOOP_PROMPT_FITS_6
+06:39:20 [LOOP] TEXT_WRITTEN     blind_round_05.txt {"chars": 6805, "sha256": "6a0e4ba7a8098caee5a94e3c4b1fb79d2d8f3935c373ad4d681f1d770c29bc41"}
+06:39:30 [LOOP] ENGINE_ALIVE     74.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:40:30 [LOOP] ENGINE_ALIVE     75.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:41:30 [LOOP] ENGINE_ALIVE     76.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_6
+  745 [LOOP] PASS LOOP_NONEMPTY_6
+  745 [LOOP] PASS LOOP_PROMPT_FITS_7
+06:42:30 [LOOP] ENGINE_ALIVE     77.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:42:30 [LOOP] TEXT_WRITTEN     blind_round_06.txt {"chars": 6805, "sha256": "6a0e4ba7a8098caee5a94e3c4b1fb79d2d8f3935c373ad4d681f1d770c29bc41"}
+06:43:30 [LOOP] ENGINE_ALIVE     78.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:44:30 [LOOP] ENGINE_ALIVE     79.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:45:30 [LOOP] ENGINE_ALIVE     80.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_7
+  745 [LOOP] PASS LOOP_NONEMPTY_7
+  745 [LOOP] PASS LOOP_PROMPT_FITS_8
+06:45:40 [LOOP] TEXT_WRITTEN     blind_round_07.txt {"chars": 6805, "sha256": "6a0e4ba7a8098caee5a94e3c4b1fb79d2d8f3935c373ad4d681f1d770c29bc41"}
+06:46:30 [LOOP] ENGINE_ALIVE     81.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:47:30 [LOOP] ENGINE_ALIVE     82.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:48:30 [LOOP] ENGINE_ALIVE     83.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [LOOP] PASS LOOP_NOT_TRUNCATED_8
+  745 [LOOP] PASS LOOP_NONEMPTY_8
+  745 [C11] PASS C11_BODY_CONTEXT_FITS
+  745 [C11] PASS NONEMPTY_C11 1643
+06:48:40 [C11] TEXT_WRITTEN     blind_round_08.txt {"chars": 6805, "sha256": "6a0e4ba7a8098caee5a94e3c4b1fb79d2d8f3935c373ad4d681f1d770c29bc41"}
+  745 [C11] PASS NATIVE_FORGE_SHAPE
+  745 [C11] PASS CP_ON_DISK_C11
+  745 [C11] PHYSICAL_SEALED C11 3f78c672465975d1170e57ab70a85af1b7fa5f1ddc902ec80f2670a48f045eea PARENTS ['H01', 'H02', 'H03']
+06:48:45 [C11] ENGINE_SEALED    PHYSICAL_SEALED C11 3f78c672465975d1170e57ab70a85af1b7fa5f1ddc902ec80f2670a48f045eea PARENTS ['H01', 'H02', 'H03']
+  745 [C11] PASS FILE_SHA_C11
+  745 [C11] PASS TENSOR_SHA_C11
+  745 [C11] PASS CARTRIDGE_ID_C11
+  745 [C11] PASS NATIVE_INIT_80_LAYERS
+  745 [C11] PASS FULL_80_LAYER_MEMORY_C11
+06:49:30 [C11] ENGINE_ALIVE     84.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:50:30 [C11] ENGINE_ALIVE     85.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [C11] GENERATION C11 TOKENS 865 LIMIT 8192 POSSIBLE_TRUNCATION False
+06:50:45 [C11] ENGINE_GENERATION GENERATION C11 TOKENS 865 LIMIT 8192 POSSIBLE_TRUNCATION False
+  745 [C11] PASS GENERATION_NONEMPTY_C11
+  745 [C11] PASS GENERATION_NOT_TRUNCATED_C11
+  745 [C11] PASS FILE_SHA_C11
+  745 [C11] PASS TENSOR_SHA_C11
+  745 [C11] PASS CARTRIDGE_ID_C11
+  745 [C11] PASS NATIVE_INIT_80_LAYERS
+  745 [C11] PASS FULL_80_LAYER_MEMORY_C11
+06:50:50 [C11] TEXT_WRITTEN     C11_20.txt {"chars": 4263, "sha256": "33dc9bbeebb59f71245dcf7146a43213f92bb54611a1be0b0b2ae75774764f2c"}
+06:51:30 [C11] ENGINE_ALIVE     86.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:52:30 [C11] ENGINE_ALIVE     87.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [C11] GENERATION C11 TOKENS 935 LIMIT 8192 POSSIBLE_TRUNCATION False
+06:52:54 [C11] ENGINE_GENERATION GENERATION C11 TOKENS 935 LIMIT 8192 POSSIBLE_TRUNCATION False
+  745 [C11] PASS GENERATION_NONEMPTY_C11
+  745 [C11] PASS GENERATION_NOT_TRUNCATED_C11
+  745 [C11] PASS FILE_SHA_C11
+  745 [C11] PASS TENSOR_SHA_C11
+  745 [C11] PASS CARTRIDGE_ID_C11
+  745 [C11] PASS NATIVE_INIT_80_LAYERS
+  745 [C11] PASS FULL_80_LAYER_MEMORY_C11
+06:53:00 [C11] TEXT_WRITTEN     C11_21.txt {"chars": 4547, "sha256": "2c146d161618ea4aa04ad76c54109b04b20bc468d5bc2fa97554165466dbb83c"}
+06:53:30 [C11] ENGINE_ALIVE     88.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [C11] GENERATION C11 TOKENS 581 LIMIT 8192 POSSIBLE_TRUNCATION False
+06:54:15 [C11] ENGINE_GENERATION GENERATION C11 TOKENS 581 LIMIT 8192 POSSIBLE_TRUNCATION False
+  745 [C11] PASS GENERATION_NONEMPTY_C11
+  745 [C11] PASS GENERATION_NOT_TRUNCATED_C11
+  745 [C11] PASS C11_LOCKED_BEFORE_FINAL
+  745 [OUTCOME] OFFICIAL_OUTCOME_UNLOCK 2026-10-22T06:54:16.095032+00:00
+06:54:16 [OUTCOME] ENGINE_UNLOCK    OFFICIAL_OUTCOME_UNLOCK 2026-10-22T06:54:16.095032+00:00
+  745 [OUTCOME] PASS DOWNLOAD_WITHIN_LIMIT {'url': 'https://ain.hr/wp-content/uploads/2026/10/343-08_25-02_10_final_report.pdf', 'bytes': 2246534}
+  745 [OUTCOME] PASS FINAL_PDF_SIGNATURE
+  745 [OUTCOME] PASS FINAL_EXTRACTABLE {'pages': 23, 'chars': 54946}
+  745 [OUTCOME] PASS AUDIT_CONTEXT_FITS
+06:54:20 [OUTCOME] TEXT_WRITTEN     C11_22.txt {"chars": 2999, "sha256": "41b06929f15552db91bfc4ad22b1550bc3ab6aaa43a10077f00a4424ea285706"}
+06:54:30 [OUTCOME] ENGINE_ALIVE     89.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:55:30 [OUTCOME] ENGINE_ALIVE     90.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:56:30 [OUTCOME] ENGINE_ALIVE     91.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+06:57:30 [OUTCOME] ENGINE_ALIVE     92.0 min since start {"hf_cache_gb": 290.8, "last_progress": "Loading weights: 100%|██████████| 963/963 [06:20<00:00, 2.53it/s]"}
+  745 [OUTCOME] PASS AUDIT_NOT_TRUNCATED
+  745 [C12] PASS C12_BODY_FITS
+  745 [C12] PASS NONEMPTY_C12 1843
+06:57:50 [C12] TEXT_WRITTEN     POST_OUTCOME_SELF_AUDIT.txt {"chars": 8008, "sha256": "b67e79ffa4baabb503644283d9514b3eff74006463dd9ca4a4b7a75989aa3d10"}
+  745 [C12] PASS NATIVE_FORGE_SHAPE
+  745 [C12] PASS CP_ON_DISK_C12
+  745 [C12] PHYSICAL_SEALED C12 fdd5add305d71d0a78c04f92a8d0724c19443d81ad2756b9f96160dd667d4e5a PARENTS ['C11']
+06:57:54 [C12] ENGINE_SEALED    PHYSICAL_SEALED C12 fdd5add305d71d0a78c04f92a8d0724c19443d81ad2756b9f96160dd667d4e5a PARENTS ['C11']
+  745 [C12] PASS C11_IMMUTABLE
+  745 [C12] PASS C12_PARENT_SHA
+  745 [C12] PASS FROZEN_SENTINEL_UNCHANGED
+  745 [C12] TEST745_COMPLETED C11 3f78c672465975d1170e57ab70a85af1b7fa5f1ddc902ec80f2670a48f045eea C12 fdd5add305d71d0a78c04f92a8d0724c19443d81ad2756b9f96160dd667d4e5a SECONDS 5511.79
+06:57:55 [C12] ENGINE_COMPLETED TEST745_COMPLETED C11 3f78c672465975d1170e57ab70a85af1b7fa5f1ddc902ec80f2670a48f045eea C12 fdd5add305d71d0a78c04f92a8d0724c19443d81ad2756b9f96160dd667d4e5a SECONDS 5511.79
+  745 [C12] OUTPUT_DIR /content/AKBASCORE_TEST745
+06:57:59 [C12] ENGINE_EXIT      exit code 0 {"pid": 7143}
+06:57:59 [C12] EXPERIMENT_DIR   moved into this RUN: /content/AKBASCORE_TEST745_DEMO/sessions/SH745-20261022-052501/TEST745_EXPERIMENT
+── [13/15] Independent re-verification (read-only) — files, tensor seals, re-derived cartridge bodies, C11 → C12 lineage
+06:58:01 [VERIFY] VERIFIED_CARTRIDGE C01 {"present": true, "role": "AIN_PRELIMINARY_SEGMENT", "body_tokens": 761, "forge_seconds": 3.766, "created": "2026-10-22T05:39:33.571785+00:00", "bytes": 25889914, "sha256_now": "784c9d3a0162db208b13a40fab6a968742c90ee50f46ccd1e8538e9abc0d47d0", "sha256_manifest": "784c9d3a0162db208b13a40fab6a968742c
+06:58:01 [VERIFY] VERIFIED_CARTRIDGE C02 {"present": true, "role": "AIN_PRELIMINARY_SEGMENT", "body_tokens": 761, "forge_seconds": 2.304, "created": "2026-10-22T05:39:36.371344+00:00", "bytes": 25889914, "sha256_now": "f18ef9d772792f7fdf5623bca3ba92255117957aa4a7778638a7f288537e0c48", "sha256_manifest": "f18ef9d772792f7fdf5623bca3ba9225511
+06:58:02 [VERIFY] VERIFIED_CARTRIDGE C03 {"present": true, "role": "AIN_PRELIMINARY_SEGMENT", "body_tokens": 762, "forge_seconds": 2.301, "created": "2026-10-22T05:39:39.125825+00:00", "bytes": 25922682, "sha256_now": "f877ab129f1d6e4c32b46b7bf2f2d9cdc1d33c4fbcaad55ea5ba7901d0eaeff0", "sha256_manifest": "f877ab129f1d6e4c32b46b7bf2f2d9cdc1d
+06:58:02 [VERIFY] VERIFIED_CARTRIDGE S01 {"present": true, "role": "SUBSYSTEM_SYNTHESIS", "body_tokens": 1225, "forge_seconds": 3.367, "created": "2026-10-22T05:47:26.895486+00:00", "bytes": 41094266, "sha256_now": "25ba4e37cf0c92dcbe715a3efbacc6afdb67959331ac4d7120b98d18b5700217", "sha256_manifest": "25ba4e37cf0c92dcbe715a3efbacc6afdb6795
+06:58:02 [VERIFY] VERIFIED_CARTRIDGE S02 {"present": true, "role": "SUBSYSTEM_SYNTHESIS", "body_tokens": 1446, "forge_seconds": 3.99, "created": "2026-10-22T05:50:42.300175+00:00", "bytes": 48335994, "sha256_now": "b4e5adf99b77d2d98543cbbe8c534dafedabdf5db6d78bf65690d53481cce3bf", "sha256_manifest": "b4e5adf99b77d2d98543cbbe8c534dafedabdf5
+06:58:02 [VERIFY] VERIFIED_CARTRIDGE S03 {"present": true, "role": "SUBSYSTEM_SYNTHESIS", "body_tokens": 1220, "forge_seconds": 3.363, "created": "2026-10-22T05:53:27.924702+00:00", "bytes": 40930426, "sha256_now": "425a336d8c1901de4a3ffe939ff3191a24a6ed8a3de2bb6191c090488b241f86", "sha256_manifest": "425a336d8c1901de4a3ffe939ff3191a24a6ed
+06:58:03 [VERIFY] VERIFIED_CARTRIDGE H01 {"present": true, "role": "CROSS_SYSTEM_SYNTHESIS", "body_tokens": 1296, "forge_seconds": 3.64, "created": "2026-10-22T06:00:33.766271+00:00", "bytes": 43420794, "sha256_now": "b5c6ba6de2b87dfeb2514d5cb8c895c8a159a3f9ed17c7b7e3aefa4cb5e0fc01", "sha256_manifest": "b5c6ba6de2b87dfeb2514d5cb8c895c8a159
+06:58:03 [VERIFY] VERIFIED_CARTRIDGE H02 {"present": true, "role": "CROSS_SYSTEM_SYNTHESIS", "body_tokens": 1025, "forge_seconds": 2.952, "created": "2026-10-22T06:06:33.170165+00:00", "bytes": 34540666, "sha256_now": "d33b703cd581cea410fe8b14015446c895c0015014b9127b11c60affd27e0103", "sha256_manifest": "d33b703cd581cea410fe8b14015446c895c
+06:58:03 [VERIFY] VERIFIED_CARTRIDGE H03 {"present": true, "role": "CROSS_SYSTEM_SYNTHESIS", "body_tokens": 1594, "forge_seconds": 4.312, "created": "2026-10-22T06:14:14.842547+00:00", "bytes": 53185658, "sha256_now": "a117e960e7524fe473a9fae53e6fccd2c222487e9c28df25eb5afc92cc320df0", "sha256_manifest": "a117e960e7524fe473a9fae53e6fccd2c22
+06:58:04 [VERIFY] VERIFIED_CARTRIDGE C11 {"present": true, "role": "BLIND_MASTER", "body_tokens": 1643, "forge_seconds": 4.52, "created": "2026-10-22T06:48:45.331938+00:00", "bytes": 54791290, "sha256_now": "3f78c672465975d1170e57ab70a85af1b7fa5f1ddc902ec80f2670a48f045eea", "sha256_manifest": "3f78c672465975d1170e57ab70a85af1b7fa5f1ddc902e
+06:58:04 [VERIFY] VERIFIED_CARTRIDGE C12 {"present": true, "role": "HUMAN_AI_MASTER_HUMAN_REVIEW_PENDING", "body_tokens": 1843, "forge_seconds": 5.0, "created": "2026-10-22T06:57:54.691941+00:00", "bytes": 61344890, "sha256_now": "fdd5add305d71d0a78c04f92a8d0724c19443d81ad2756b9f96160dd667d4e5a", "sha256_manifest": "fdd5add305d71d0a78c04f9
+06:58:04 [VERIFY] STAGE_DONE       VERIFY {"note": "11/11 cartridges: file SHA-256 + tensor seals + re-derived body all equal to the manifest · C12 parent = C11: True"}
+── [14/15] Six scientific figures (JPEG 300 dpi, layout QC)
+06:58:05 [FIGURES] FIGURE_WRITTEN   Figure 1 TEST745_FIG1_GENERAL_ARCHITECTURE.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "cec540adfa7dd52983e46a05537b0d908063980deab4db9c24bc40f1ea2ae558", "badge": "SCHEMATIC"}
+  figure 1 · SCHEMATIC · 3999×2250 · layout QC pass · 1.3 s
+06:58:07 [FIGURES] FIGURE_WRITTEN   Figure 2 TEST745_FIG2_PHYSICAL_MEMORY_CARTRIDGE.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "351fbe6a732b18d824a9b4c4c24c321de2be670f2584c60b02ff1c89202478c6", "badge": "LIVE MEASUREMENT"}
+  figure 2 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.4 s
+06:58:08 [FIGURES] FIGURE_WRITTEN   Figure 3 TEST745_FIG3_HIERARCHICAL_SYNTHESIS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "1f085380db24dad3e8a6cb6c0460364df260b46f8dd617c1040860802a24341f", "badge": "SCHEMATIC"}
+  figure 3 · SCHEMATIC · 3999×2250 · layout QC pass · 1.3 s
+06:58:10 [FIGURES] FIGURE_WRITTEN   Figure 4 TEST745_FIG4_EIGHT_ROUND_CLOSED_LOOP.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "62a65136f5c5a8a42dd782e0920f3f5010d9961a77624cacaa8a74bacc8d7b1e", "badge": "OBSERVATIONAL"}
+  figure 4 · OBSERVATIONAL · 3999×2250 · layout QC pass · 1.5 s
+06:58:11 [FIGURES] FIGURE_WRITTEN   Figure 5 TEST745_FIG5_BLIND_INVESTIGATION_AND_OFFICIAL_OUTCOME.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "7754163a2f80cef1a5d823df49710706af887de3c933e4df66c04df6e4bbd37f", "badge": "SEALED MEMORY"}
+  figure 5 · SEALED MEMORY · 3999×2250 · layout QC pass · 1.2 s
+06:58:12 [FIGURES] FIGURE_WRITTEN   Figure 6 TEST745_FIG6_C11_TO_C12_MEMORY_CONSOLIDATION.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "1ff9dcb29ec90a7204b150560009ee949a15f19d31868e50ec9347de3aa358d6", "badge": "SEALED MEMORY"}
+  figure 6 · SEALED MEMORY · 3999×2250 · layout QC pass · 1.2 s
+06:58:12 [FIGURES] STAGE_DONE       FIGURES {"note": "6/6 JPEG figures written (300 dpi) · layout QC and JPEG QC passed for every figure"}
+── [15/15] Records — real-time engine output, logs, texts, manifests (direct downloads, no ZIP)
+06:58:13 [RECORDS] STAGE_DONE       RECORDS {"note": "6 JPEG figures + 53 records/texts, each downloadable directly · SHA-256 manifest of 70 files (no ZIP)"}
+════════════════════════════════════════════════════════════════════════════════════════════════════
+RUN VERDICT: COMPLETE — every stage ran and passed
+RUN SH745-20261022-052501 finished 2026-10-22T06:58:15+00:00 · PRECHECK:done · GATES:done · SOURCES:done · MODEL:done · CARTRIDGES:done · READOUTS:done · SUBSYSTEM:done · CROSS:done · LOOP:done · C11:done · OUTCOME:done · C12:done · VERIFY:done · FIGURES:done · RECORDS:done
+════════════════════════════════════════════════════════════════════════════════════════════════════
+####################################################################################################
+FIGURES OF THIS RUN (SH745-20261022-052501) — 6/6 — shown below in the cell, each also downloaded by the browser
+  folder: /content/AKBASCORE_TEST745_DEMO/sessions/SH745-20261022-052501/figures
+####################################################################################################
+06:58:16 [-] CELL_DOWNLOAD    TEST745_FIG1_GENERAL_ARCHITECTURE.jpg
+06:58:17 [-] CELL_DOWNLOAD    TEST745_FIG2_PHYSICAL_MEMORY_CARTRIDGE.jpg
+06:58:18 [-] CELL_DOWNLOAD    TEST745_FIG3_HIERARCHICAL_SYNTHESIS.jpg
+06:58:19 [-] CELL_DOWNLOAD    TEST745_FIG4_EIGHT_ROUND_CLOSED_LOOP.jpg
+06:58:20 [-] CELL_DOWNLOAD    TEST745_FIG5_BLIND_INVESTIGATION_AND_OFFICIAL_OUTCOME.jpg
+06:58:21 [-] CELL_DOWNLOAD    TEST745_FIG6_C11_TO_C12_MEMORY_CONSOLIDATION.jpg
