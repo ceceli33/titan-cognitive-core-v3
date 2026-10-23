@@ -1,0 +1,1244 @@
+ PASS ALL_LOCKED_FUNCTIONS_PRESENT 
+TEST755 START | LOCKED TEST754 TOP2 + NATIVE CAUSAL CARTRIDGE ABLATION
+PASS CUDA 
+PASS ONE_GPU 
+PASS A100_80GB 
+PASS LOCKED_709_716_730 
+PASS PANEL_SHA 
+config.json: 100% 663/663 [00:00<00:00, 82.7kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 908kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 67.1MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 73.4MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 126MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.46MB/s]Download complete:   125GB, 1.44GB/s  Reconstruction complete: 100%  145GB /  145GB,  451MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00,  9.82s/it]Loading weights: 100% 963/963 [06:28<00:00,  3.25it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.9kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PREVIOUS_CARTRIDGES_UNAVAILABLE; FORGING_ONCE
+SOURCE_PRIMARY_REJECTED P01 RuntimeError('LICENSE_NOT_VERIFIED:P01')
+SOURCE_EXPLICIT_REPLACEMENT P01 PMC13672588 Generative AI in creative education: baseline-linked evidence on learning processes, artistic performance, and authorship https://creativecommons.org/licenses/by/4.0/
+PASS SOURCE_SHA_P01 
+PASS SOURCE_SHA_P02 
+SOURCE_PRIMARY_REJECTED P03 RuntimeError('LICENSE_NOT_VERIFIED:P03')
+SOURCE_EXPLICIT_REPLACEMENT P03 PMC13043820 Catalysts of Change: Using AI To Lower the Activation Energy for Developing Gamified Learning Experiences in Health Profession Education https://creativecommons.org/licenses/by/4.0/
+PASS SOURCE_SHA_P03 
+PASS SOURCE_INDEPENDENCE 
+PASS SOURCE_LICENSES 
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P01_00 eed4a350a52925874737cd0c0e38924bb0071f54c70424239d6641f5682871c9
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P01_01 4fb6cfd26e59dd5d9fde5da6f05260db2d3641520603f9439f5adf1037525d12
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P01_02 127d779e227f1d8aad3e1408ddfc66ffa6ba35aa3f430aa9c536face785c2c49
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P02_00 1f2b306c1d2874a3bbc3a18fd816e338a27a57196ca01e73a9f713d6e4da04aa
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P02_01 5f5d9a46cd084e39e6a91441440180bc8bc62eb2e2c78d0c5b404d4cdbab4fae
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P02_02 98b04a0c5639a83e200db0b2b44cce1f48ac0b8e5d2113d4e1e70f076b0d0daf
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P02_03 8e85e0d4c6c56af2b00572ae06e0a3654af4f8d64cd34f780db64dd2dad871c9
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P03_00 b98e152e30f2d506cfe855efc3a423eb9d4c235fddf7dd192394aa34d43d295d
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P03_01 e2ac0860a57f42490a971e4b4e1d58f90100e3fa8b8bb45a8b6729d697e8a713
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P03_02 5718e79c95e3ba4f4f82263d15071fab70524ed9e67e8bfa1a68ce9df13d24ad
+PASS NATIVE_FORGE_SHAPE 
+FORGED_AND_SEALED P03_03 216b83872d1a34ad26cec38e8cdb09a1989dbbcd1ee4acc20a4255e987217ef3
+PASS CARTRIDGES_READY 
+PASS TOKEN_BUDGET 
+NOTICE_NEW_COLAB_RUNTIME: 754/753 physical cartridges not mounted; source cartridges recreated
+PASS FILE_SHA_P01_00 
+PASS CARTRIDGE_ID_P01_00 
+PASS CARTRIDGE_TENSOR_SHA_P01_00 
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+PASS FILE_SHA_P02_03 
+PASS CARTRIDGE_ID_P02_03 
+PASS CARTRIDGE_TENSOR_SHA_P02_03 
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+PASS FILE_SHA_P03_03 
+PASS CARTRIDGE_ID_P03_03 
+PASS CARTRIDGE_TENSOR_SHA_P03_03 
+PASS NUMERIC_BANK 
+PASS TOP2_SELECTED_FIVE_H1 
+PASS TOP2_SELECTED_FIVE_H2 
+PASS TOP2_SELECTED_FIVE_H3 
+PASS TOP2_SELECTED_FIVE_A1 
+PASS TOP2_SELECTED_FIVE_A2 
+PASS TOP2_SELECTED_FIVE_A3 
+ROUTING_PRESEALED 35fb06b05bd1d78c7ffe0ac1bcbcf5840dd6f2c6060b1112e8982b3d16a8568d
+ROUTING_SUMMARY {"LEGACY_MEAN": {"distinct_top5_sets": 1, "distinct_top1": 1, "mean_pairwise_overlap": 1.0, "source_coverage_per_question": [2, 2, 2, 2, 2, 2]}, "NATIVE8192_MAXMEAN": {"distinct_top5_sets": 6, "distinct_top1": 4, "mean_pairwise_overlap": 0.59365, "source_coverage_per_question": [3, 2, 3, 3, 2, 3]}, "NATIVE8192_TOP2": {"distinct_top5_sets": 6, "distinct_top1": 3, "mean_pairwise_overlap": 0.64762, "source_coverage_per_question": [3, 2, 3, 3, 3, 3]}, "NATIVE8192_PEAK50": {"distinct_top5_sets": 6, "distinct_top1": 4, "mean_pairwise_overlap": 0.44048, "source_coverage_per_question": [3, 3, 2, 3, 3, 3]}}
+PASS SOURCE_EXCERPT_SHA_P01 
+PASS PIECE_LENGTH_P01_00 
+PASS PIECE_LENGTH_P01_01 
+PASS PIECE_LENGTH_P01_02 
+PASS SOURCE_EXCERPT_SHA_P02 
+PASS PIECE_LENGTH_P02_00 
+PASS PIECE_LENGTH_P02_01 
+PASS PIECE_LENGTH_P02_02 
+PASS PIECE_LENGTH_P02_03 
+PASS SOURCE_EXCERPT_SHA_P03 
+PASS PIECE_LENGTH_P03_00 
+PASS PIECE_LENGTH_P03_01 
+PASS PIECE_LENGTH_P03_02 
+PASS PIECE_LENGTH_P03_03 
+PASS PIECE_TEXT_COVERAGE 
+PASS PANEL_STILL_SEALED 
+CAUSAL_ARMS_PRESEALED 0577d9ef338573e5511086f74f6d87acd5714557c0b390d9448648b7692f6c09 COUNT 55
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TOP2_BASE_H1 P03_01 {'ssd_verify_ms': 146.591, 'h2d_ms': 25.01, 'fusion_ms': 1736.026, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP TOP2_BASE_H1 P02_02 {'ssd_verify_ms': 142.952, 'h2d_ms': 6.647, 'fusion_ms': 3503.666, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP TOP2_BASE_H1 P02_01 {'ssd_verify_ms': 143.524, 'h2d_ms': 6.111, 'fusion_ms': 4922.41, 'cid': 'P02_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP TOP2_BASE_H1 P03_02 {'ssd_verify_ms': 150.375, 'h2d_ms': 6.269, 'fusion_ms': 6297.993, 'cid': 'P03_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP TOP2_BASE_H1 P01_01 {'ssd_verify_ms': 143.679, 'h2d_ms': 6.025, 'fusion_ms': 7665.987, 'cid': 'P01_01', 'memory_tokens': 3280}
+FUSION_ANSWER TOP2_BASE_H1 H1 'The provided text discusses several studies that explore the impact of generative AI (GenAI) on learning and creative thinking. Here are the main conclusions of the three key publications and where they disagree:\n\n1. **Mariñoso et al. (2025)**:\n   - **Conclusion**: Found that an AI-assisted group of undergraduate early-childhood-education students achieved significantly higher academic scores in designing mathematical learning situations compared to a control group using traditional resources.\n   - **Key Point**: AI can reduce extraneous processing demands, freeing cognitive resources for higher-level conceptual work.\n\n2. **Peng et al. (2025)**:\n   - **Conclusion**: Reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54) based on a meta-analysis of 56 experimental studies.\n   - **Key Point**: AI can enhance creative thinking, but there is substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments.\n\n3. **Wang and Wu (2025)**:\n   - **Conclusion**: Identified three qualitative themes in a mixed-methods study with 363 undergraduate design students: (a) students valued AI’s accessibility and efficiency; (b) students identified gaps in depth, interpretation, and critical thinking; (c) students engaged in critical trust and verification behaviors.\n   - **Key Point**: AI may promote surface-level processing and reduce deep cognitive engagement, as students rely on AI to bypass cognitive struggle.\n\n### Disagreements:\n- **Efficiency vs. Depth**:\n  - **Mariñoso et al.** and **Peng et al.** emphasize the positive effects of AI on performance and creative thinking, respectively.\n  - **Wang and Wu** highlight the potential for AI to promote surface-level processing and reduce deep cognitive engagement, suggesting a trade-off between efficiency'
+PASS MEMORY_UNCHANGED_AFTER_QA_TOP2_BASE_H1 
+CAUSAL_SUMMARY {"tested_removals": 0, "removal_answer_changes": 0, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H1_0 P02_02 {'ssd_verify_ms': 143.432, 'h2d_ms': 6.267, 'fusion_ms': 1753.57, 'cid': 'P02_02', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H1_0 P02_01 {'ssd_verify_ms': 144.637, 'h2d_ms': 6.145, 'fusion_ms': 3495.931, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP DROP_H1_0 P03_02 {'ssd_verify_ms': 141.892, 'h2d_ms': 6.028, 'fusion_ms': 4952.949, 'cid': 'P03_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H1_0 P01_01 {'ssd_verify_ms': 142.897, 'h2d_ms': 6.157, 'fusion_ms': 6321.677, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H1_0 H1 'The three publications reviewed in the document draw different conclusions about the impact of generative AI (GenAI) on learning, particularly in the context of higher education. Here are the main conclusions and areas of disagreement:\n\n1. **Mariñoso et al. (2025)**\n   - **Conclusion**: Found that an AI-assisted group of undergraduate early-childhood-education students achieved significantly higher academic scores in designing mathematical learning situations compared to a control group using traditional resources.\n   - **Interpretation**: This suggests that GenAI can reduce extraneous cognitive load, allowing learners to focus more on higher-level conceptual work and achieve better academic outcomes.\n\n2. **Peng et al. (2025)**\n   - **Conclusion**: Reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54) based on a meta-analysis of 56 experimental studies.\n   - **Interpretation**: While the study found a positive effect, it also noted substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments, indicating that the benefits of AI in creative thinking may not be consistent or durable.\n\n3. **Wang and Wu (2025)**\n   - **Conclusion**: Identified three qualitative themes among undergraduate design students using a domain-specific AI teaching assistant: (a) valuing AI’s accessibility and efficiency, (b) identifying gaps in depth, interpretation, and critical thinking, and (c) engaging in critical trust and verification behaviors.\n   - **Interpretation**: This suggests that while students find AI useful, it may promote surface-level processing and a reliance on ready-made answers, potentially undermining deep conceptual understanding and critical thinking.\n\n### Areas of Disagreement\n\n1. **Depth of Learning and Critical Thinking**\n   - **Mariñoso et al. (2025)** and **P'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H1_0 
+CAUSAL_SUMMARY {"tested_removals": 1, "removal_answer_changes": 1, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H1_1 P03_01 {'ssd_verify_ms': 144.537, 'h2d_ms': 6.124, 'fusion_ms': 1760.006, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H1_1 P02_01 {'ssd_verify_ms': 143.427, 'h2d_ms': 6.185, 'fusion_ms': 3510.224, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP DROP_H1_1 P03_02 {'ssd_verify_ms': 143.047, 'h2d_ms': 6.169, 'fusion_ms': 4889.303, 'cid': 'P03_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H1_1 P01_01 {'ssd_verify_ms': 142.749, 'h2d_ms': 6.234, 'fusion_ms': 6327.332, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H1_1 H1 'The provided text does not contain specific details about the conclusions of three distinct publications or where they disagree. The text primarily discusses the use of AI in education, the potential benefits and challenges, and the need to consider both the process and outcomes of AI-supported learning. It mentions a critical thinking paradox and the potential for a product-process dissociation, but it does not provide detailed conclusions from specific publications. Therefore, the answer to this question is UNKNOWN based on the given information.'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H1_1 
+CAUSAL_SUMMARY {"tested_removals": 2, "removal_answer_changes": 2, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H1_2 P03_01 {'ssd_verify_ms': 142.468, 'h2d_ms': 6.235, 'fusion_ms': 1756.897, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H1_2 P02_02 {'ssd_verify_ms': 142.11, 'h2d_ms': 6.137, 'fusion_ms': 3491.742, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP DROP_H1_2 P03_02 {'ssd_verify_ms': 143.784, 'h2d_ms': 6.101, 'fusion_ms': 4920.848, 'cid': 'P03_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H1_2 P01_01 {'ssd_verify_ms': 143.432, 'h2d_ms': 6.177, 'fusion_ms': 6306.0, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H1_2 H1 'The provided text discusses three studies that examine the impact of AI on learning, particularly in creative and educational contexts. Here are the main conclusions of each, along with areas where they disagree:\n\n1. **Peng et al. (2025)**\n   - **Main Conclusion:** A meta-analysis of 56 experimental studies found a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n   - **Key Points:**\n     - AI tools can enhance creative thinking in the short term.\n     - There is substantial heterogeneity in effect sizes.\n     - There is a severe under-representation of long-term follow-up assessments.\n\n2. **Wang and Wu (2025)**\n   - **Main Conclusion:** A mixed-methods study with 363 undergraduate design students identified three themes: students valued AI’s accessibility and efficiency, identified gaps in depth, interpretation, and critical thinking, and engaged in critical trust and verification behaviors.\n   - **Key Points:**\n     - AI can promote surface-level processing by providing ready-made answers.\n     - Students use metacognitive strategies to compensate for AI’s limitations rather than to deepen their own understanding.\n     - The efficiency of AI may inadvertently promote a surface approach to learning.\n\n3. **Choudhuri et al. (2026)**\n   - **Main Conclusion:** A preprint analysis of survey data from 299 STEM students found that trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n   - **Key Points:**\n     - Routine use of AI can lead to disengagement in critical thinking and reflection.\n     - Students with higher technophilic motivations and greater computer self-efficacy showed stronger associations with disengagement.\n\n### Areas of Disagreement:\n- **Short-term vs. Long-term'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H1_2 
+CAUSAL_SUMMARY {"tested_removals": 3, "removal_answer_changes": 3, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H1_3 P03_01 {'ssd_verify_ms': 145.031, 'h2d_ms': 6.077, 'fusion_ms': 1754.004, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H1_3 P02_02 {'ssd_verify_ms': 143.192, 'h2d_ms': 6.481, 'fusion_ms': 3522.241, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H1_3 P02_01 {'ssd_verify_ms': 144.245, 'h2d_ms': 6.175, 'fusion_ms': 4941.448, 'cid': 'P02_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H1_3 P01_01 {'ssd_verify_ms': 141.436, 'h2d_ms': 5.987, 'fusion_ms': 6258.189, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H1_3 H1 'The three publications reviewed in the text provide insights into the impact of generative AI (GenAI) on learning, particularly in higher education. Here are the main conclusions and areas of disagreement:\n\n1. **Mariñoso et al. (2025)**:\n   - **Conclusion**: Found that an AI-assisted group of undergraduate early-childhood-education students achieved significantly higher academic scores in designing mathematical learning situations compared to a control group using traditional resources.\n   - **Key Points**: The study suggests that GenAI can reduce extraneous cognitive load, allowing learners to focus more on higher-level conceptual work. This aligns with cognitive load theory, which posits that reducing unnecessary mental effort can enhance learning.\n\n2. **Peng et al. (2025)**:\n   - **Conclusion**: Reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54) based on a meta-analysis of 56 experimental studies.\n   - **Key Points**: The study highlights the potential of AI to enhance creative thinking, but it also notes substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments. This suggests that while AI can improve short-term creative performance, its long-term impact is less clear.\n\n3. **Wang and Wu (2025)**:\n   - **Conclusion**: Identified three qualitative themes from a mixed-methods study with 363 undergraduate design students: (a) students valued AI’s accessibility and efficiency; (b) students identified gaps in depth, interpretation, and critical thinking; (c) students engaged in critical trust and verification behaviors to compensate for AI’s limitations.\n   - **Key Points**: The study raises concerns about the potential for AI to promote surface-level processing, where students rely on ready-made answers without deep cognitive engagement. This aligns with the distinction between deep and surface approaches to'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H1_3 
+CAUSAL_SUMMARY {"tested_removals": 4, "removal_answer_changes": 4, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H1_4 P03_01 {'ssd_verify_ms': 144.698, 'h2d_ms': 6.233, 'fusion_ms': 1771.95, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H1_4 P02_02 {'ssd_verify_ms': 144.63, 'h2d_ms': 6.456, 'fusion_ms': 3515.672, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H1_4 P02_01 {'ssd_verify_ms': 144.731, 'h2d_ms': 6.355, 'fusion_ms': 4929.46, 'cid': 'P02_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP DROP_H1_4 P03_02 {'ssd_verify_ms': 142.995, 'h2d_ms': 6.262, 'fusion_ms': 6305.719, 'cid': 'P03_02', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H1_4 H1 "The three publications reviewed in the text provide insights into the impact of generative AI (GenAI) on learning, particularly in the context of health professions education and broader educational settings. Here are the main conclusions and areas of disagreement:\n\n### Main Conclusions:\n\n1. **Mariñoso et al. (2025)**\n   - **Conclusion:** AI-assisted learning can lead to significant performance gains, particularly in reducing extraneous cognitive load and freeing up cognitive resources for higher-level conceptual work.\n   - **Evidence:** Undergraduate early-childhood-education students using AI assistance achieved higher academic scores in designing mathematical learning situations compared to those using traditional resources.\n\n2. **Peng et al. (2025)**\n   - **Conclusion:** AI-supported learning has a moderate positive short-term effect on creative thinking.\n   - **Evidence:** A meta-analysis of 56 experimental studies reported a standardized mean difference (SMD) of 0.54, indicating a moderate effect size.\n\n3. **Wang and Wu (2025)**\n   - **Conclusion:** While students value AI's accessibility and efficiency, they also identify gaps in depth, interpretation, and critical thinking. Students engage in critical trust and verification behaviors to compensate for AI's limitations.\n   - **Evidence:** A mixed-methods design with 363 undergraduate design students revealed that AI's efficiency may promote surface-level processing, leading to a critical thinking paradox where students bypass deep cognitive processing.\n\n### Areas of Disagreement:\n\n1. **Depth of Learning vs. Surface Processing:**\n   - **Mariñoso et al. (2025)** and **Peng et al. (2025)** focus on the positive outcomes of AI in terms of performance gains and creative thinking, respectively.\n   - **Wang and Wu (2025)** highlight a critical thinking paradox"
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H1_4 
+CAUSAL_SUMMARY {"tested_removals": 5, "removal_answer_changes": 5, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REPLACE_H1 P03_00 {'ssd_verify_ms': 143.212, 'h2d_ms': 6.264, 'fusion_ms': 1770.172, 'cid': 'P03_00', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REPLACE_H1 P02_02 {'ssd_verify_ms': 144.949, 'h2d_ms': 6.394, 'fusion_ms': 3512.992, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REPLACE_H1 P02_01 {'ssd_verify_ms': 143.842, 'h2d_ms': 6.04, 'fusion_ms': 4899.391, 'cid': 'P02_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP REPLACE_H1 P03_02 {'ssd_verify_ms': 142.222, 'h2d_ms': 6.147, 'fusion_ms': 6237.28, 'cid': 'P03_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REPLACE_H1 P01_01 {'ssd_verify_ms': 144.897, 'h2d_ms': 6.253, 'fusion_ms': 7667.112, 'cid': 'P01_01', 'memory_tokens': 3280}
+FUSION_ANSWER REPLACE_H1 H1 "The provided text discusses several studies that examine the impact of generative AI (GenAI) on learning, particularly in higher education. Here are the main conclusions of the three key publications and where they disagree:\n\n1. **Peng et al. (2025)**\n   - **Conclusion**: Reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n   - **Disagreement**: This study focuses on the short-term effects of AI on creative thinking, but it notes substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments. This suggests that while AI can enhance creative thinking in the short term, the long-term impact is unclear.\n\n2. **Wang and Wu (2025)**\n   - **Conclusion**: Identified three qualitative themes: (a) students valued AI’s accessibility and efficiency, (b) students identified gaps in depth, interpretation, and critical thinking, and (c) students engaged in critical trust and verification behaviors to compensate for AI’s limitations.\n   - **Disagreement**: This study highlights a critical thinking paradox, where AI's efficiency may promote surface-level processing and reduce deep cognitive engagement. This contrasts with Peng et al.'s positive short-term effects, suggesting that while AI can improve certain aspects of learning, it may also lead to superficial understanding.\n\n3. **Choudhuri et al. (2026)**\n   - **Conclusion**: Found that trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding. Students with higher technophilic motivations and greater computer self-efficacy showed stronger associations with disengagement.\n   - **Disagreement**: This study aligns with Wang and Wu's findings on the critical thinking paradox, emphasizing that routine AI use can lead to disengagement and reduced deep cognitive processing. This"
+PASS MEMORY_UNCHANGED_AFTER_QA_REPLACE_H1 
+CAUSAL_SUMMARY {"tested_removals": 5, "removal_answer_changes": 5, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP SINGLE_H1 P03_01 {'ssd_verify_ms': 147.569, 'h2d_ms': 6.319, 'fusion_ms': 1758.151, 'cid': 'P03_01', 'memory_tokens': 680}
+FUSION_ANSWER SINGLE_H1 H1 'UNKNOWN\n\nThe provided text does not contain specific details about the conclusions of three publications or where they disagree. The text mentions that results evaluating learning outcomes from gamification and game-based learning approaches are heterogenous, but it does not provide specific conclusions or disagreements from individual studies.'
+PASS MEMORY_UNCHANGED_AFTER_QA_SINGLE_H1 
+CAUSAL_SUMMARY {"tested_removals": 5, "removal_answer_changes": 5, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REVERSE_H1 P01_01 {'ssd_verify_ms': 146.231, 'h2d_ms': 6.324, 'fusion_ms': 1767.329, 'cid': 'P01_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP REVERSE_H1 P03_02 {'ssd_verify_ms': 144.836, 'h2d_ms': 6.51, 'fusion_ms': 3525.878, 'cid': 'P03_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REVERSE_H1 P02_01 {'ssd_verify_ms': 147.506, 'h2d_ms': 6.318, 'fusion_ms': 4937.32, 'cid': 'P02_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REVERSE_H1 P02_02 {'ssd_verify_ms': 144.573, 'h2d_ms': 6.248, 'fusion_ms': 6326.889, 'cid': 'P02_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REVERSE_H1 P03_01 {'ssd_verify_ms': 145.24, 'h2d_ms': 6.041, 'fusion_ms': 7756.969, 'cid': 'P03_01', 'memory_tokens': 3280}
+FUSION_ANSWER REVERSE_H1 H1 'The provided text does not contain specific details about the conclusions of three distinct publications or where they disagree. The text discusses a broader review of the literature on AI in education, focusing on the critical thinking paradox and the potential for a product-process dissociation. It highlights that while AI can lead to performance gains in terms of product quality, there is a concern that these gains may not translate into durable, transferable knowledge. The text also mentions the potential for AI to promote surface-level processing rather than deep conceptual understanding. However, without more specific information about the three publications, it is not possible to accurately summarize their main conclusions or areas of disagreement. Therefore, the answer to this question is UNKNOWN based on the provided information.'
+PASS MEMORY_UNCHANGED_AFTER_QA_REVERSE_H1 
+CAUSAL_SUMMARY {"tested_removals": 5, "removal_answer_changes": 5, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TOP2_BASE_H2 P01_02 {'ssd_verify_ms': 138.359, 'h2d_ms': 5.99, 'fusion_ms': 1720.795, 'cid': 'P01_02', 'memory_tokens': 654}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP TOP2_BASE_H2 P02_01 {'ssd_verify_ms': 143.855, 'h2d_ms': 6.388, 'fusion_ms': 3465.902, 'cid': 'P02_01', 'memory_tokens': 1304}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP TOP2_BASE_H2 P01_01 {'ssd_verify_ms': 145.387, 'h2d_ms': 6.245, 'fusion_ms': 4876.653, 'cid': 'P01_01', 'memory_tokens': 1954}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP TOP2_BASE_H2 P02_02 {'ssd_verify_ms': 145.152, 'h2d_ms': 6.333, 'fusion_ms': 6336.873, 'cid': 'P02_02', 'memory_tokens': 2604}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP TOP2_BASE_H2 P02_00 {'ssd_verify_ms': 146.138, 'h2d_ms': 6.465, 'fusion_ms': 7750.583, 'cid': 'P02_00', 'memory_tokens': 3254}
+FUSION_ANSWER TOP2_BASE_H2 H2 "The document provides several claims supported by empirical evidence, along with the main limitations of these findings:\n\n### Supported Claims:\n1. **Performance Gains:**\n   - **Empirical Evidence:** Studies show that AI-assisted students can achieve higher academic scores compared to those using traditional resources (Mariñoso et al., 2025).\n   - **Example:** In a study with 238 undergraduate early-childhood-education students, an AI-assisted group achieved significantly higher academic scores in designing mathematical learning situations.\n\n2. **Positive Attitudes and Well-Being:**\n   - **Empirical Evidence:** Positive attitudes toward GenAI mediate the relationship between teacher support and learner well-being (Pan and Li, 2025).\n   - **Example:** A study with 486 Chinese university EFL learners found that positive attitudes toward GenAI enhanced intrinsic motivation and well-being.\n\n3. **Short-Term Effects on Creative Thinking:**\n   - **Empirical Evidence:** A meta-analysis of 56 experimental studies reported a moderate positive short-term effect of AI-supported learning on creative thinking (Peng et al., 2025).\n   - **Example:** The standardized mean difference (SMD) was 0.54, indicating a moderate effect size.\n\n4. **Critical Thinking and Verification Behaviors:**\n   - **Empirical Evidence:** Process-oriented research identifies limitations in critical-thinking depth and compensatory verification behaviors in response to weaknesses in AI-generated content (Wang and Wu, 2025).\n   - **Example:** A mixed-methods study with 363 undergraduate design students found that students engaged in critical trust and verification behaviors to compensate for AI's interpretive shallowness.\n\n5. **Reflection and Need for Understanding:**\n   - **Empirical Evidence:** Trust-driven routine GenAI use is negatively associated with reflection, critical"
+PASS MEMORY_UNCHANGED_AFTER_QA_TOP2_BASE_H2 
+CAUSAL_SUMMARY {"tested_removals": 5, "removal_answer_changes": 5, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H2_0 P02_01 {'ssd_verify_ms': 148.445, 'h2d_ms': 6.569, 'fusion_ms': 1775.95, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H2_0 P01_01 {'ssd_verify_ms': 146.56, 'h2d_ms': 6.462, 'fusion_ms': 3539.577, 'cid': 'P01_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H2_0 P02_02 {'ssd_verify_ms': 148.144, 'h2d_ms': 6.702, 'fusion_ms': 4983.233, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_H2_0 P02_00 {'ssd_verify_ms': 146.274, 'h2d_ms': 6.457, 'fusion_ms': 6391.284, 'cid': 'P02_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H2_0 H2 "The claims supported by empirical evidence include:\n\n1. **Performance Gains**: Studies like Mariñoso et al. (2025) show that AI-assisted students can achieve higher academic scores compared to those using traditional resources. This is particularly evident in tasks such as designing mathematical learning situations.\n\n2. **Positive Attitudes and Well-Being**: Research by Pan and Li (2025) indicates that positive attitudes toward GenAI can mediate the relationship between teacher support and learner well-being, suggesting that AI tools can enhance intrinsic motivation and well-being.\n\n3. **Short-Term Creative Thinking Improvement**: A meta-analysis by Peng et al. (2025) reports a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n\n4. **Shallow Processing and Critical Thinking Gaps**: Qualitative studies by Wang and Wu (2025) and Choudhuri et al. (2026) highlight that while students value AI's efficiency, they also identify gaps in depth, interpretation, and critical thinking. Students engage in compensatory verification behaviors, indicating a surface-level approach to learning.\n\nThe main limitations of the current empirical evidence include:\n\n1. **Outcome Measure Focus**: Many studies primarily measure product quality (e.g., assignment grades, self-reported attitudes) rather than process quality or long-term learning outcomes. This limits the ability to assess whether AI enhances durable, transferable knowledge.\n\n2. **Heterogeneity in Studies**: There is substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments, making it difficult to draw generalized conclusions.\n\n3. **Ad Hoc Adoption**: The rapid and ad hoc adoption of GenAI in educational settings has outpaced the development of evidence-based pedagogical frameworks, leading to insufficient attention to managing cognitive load and accounting for individual differences between novice and expert learners"
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H2_0 
+CAUSAL_SUMMARY {"tested_removals": 6, "removal_answer_changes": 6, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H2_1 P01_02 {'ssd_verify_ms': 140.849, 'h2d_ms': 6.094, 'fusion_ms': 1721.416, 'cid': 'P01_02', 'memory_tokens': 654}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H2_1 P01_01 {'ssd_verify_ms': 146.614, 'h2d_ms': 6.448, 'fusion_ms': 3499.342, 'cid': 'P01_01', 'memory_tokens': 1304}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H2_1 P02_02 {'ssd_verify_ms': 146.132, 'h2d_ms': 6.432, 'fusion_ms': 4937.751, 'cid': 'P02_02', 'memory_tokens': 1954}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_H2_1 P02_00 {'ssd_verify_ms': 147.339, 'h2d_ms': 6.464, 'fusion_ms': 6311.495, 'cid': 'P02_00', 'memory_tokens': 2604}
+FUSION_ANSWER DROP_H2_1 H2 "The claims supported by empirical evidence include:\n\n1. **Positive Short-Term Effects on Creative Thinking**: A meta-analysis by Peng et al. (2025) reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54). However, this effect size varied significantly across studies, and there was a lack of long-term follow-up assessments.\n\n2. **Enhanced Academic Performance**: Quasi-experimental evidence indicates that AI-assisted students can achieve higher academic scores than peers using traditional resources (Mariñoso et al., 2025).\n\n3. **Positive Attitudes and Well-Being**: Survey research suggests that positive attitudes toward GenAI mediate the relationship between teacher support and learner well-being (Pan and Li, 2025).\n\n4. **Critical Thinking Paradox**: Process-oriented mixed-methods research by Wang and Wu (2025) identified that while students value AI's accessibility and efficiency, they also recognize gaps in depth, interpretation, and critical thinking. Students engage in critical trust and verification behaviors to compensate for AI's interpretive shallowness.\n\n5. **Negative Associations with Reflection and Critical Thinking**: Choudhuri et al. (2026) found that trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and the need for understanding, particularly among students with higher technophilic motivations and greater computer self-efficacy.\n\nThe main limitations of the empirical evidence include:\n\n1. **Outcome Measure Focus**: Many studies primarily measure product quality (e.g., assignment grades, self-reported attitudes, perceived well-being) rather than deeper learning processes or long-term outcomes. This limits the ability to assess whether AI enhances durable, transferable knowledge.\n\n2. **Lack of Long-Term Follow-Up**: There is a severe under-representation of long-term follow-up assessments, making"
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H2_1 
+CAUSAL_SUMMARY {"tested_removals": 7, "removal_answer_changes": 7, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H2_2 P01_02 {'ssd_verify_ms': 142.378, 'h2d_ms': 6.282, 'fusion_ms': 1718.318, 'cid': 'P01_02', 'memory_tokens': 654}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H2_2 P02_01 {'ssd_verify_ms': 148.988, 'h2d_ms': 6.29, 'fusion_ms': 3498.961, 'cid': 'P02_01', 'memory_tokens': 1304}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H2_2 P02_02 {'ssd_verify_ms': 147.658, 'h2d_ms': 6.498, 'fusion_ms': 4941.525, 'cid': 'P02_02', 'memory_tokens': 1954}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_H2_2 P02_00 {'ssd_verify_ms': 146.546, 'h2d_ms': 6.103, 'fusion_ms': 6321.633, 'cid': 'P02_00', 'memory_tokens': 2604}
+FUSION_ANSWER DROP_H2_2 H2 "The claims supported by empirical evidence include:\n\n1. **Performance Gains**: Studies show that AI-assisted students can achieve higher academic scores compared to those using traditional resources (Mariñoso et al., 2025). For example, an AI-assisted group of undergraduate early-childhood-education students achieved significantly higher scores in designing mathematical learning situations.\n\n2. **Positive Attitudes and Well-Being**: Positive attitudes toward GenAI can mediate the relationship between teacher support and learner well-being (Pan and Li, 2025). This suggests that AI tools can enhance intrinsic motivation by supporting learners' needs for autonomy, competence, and relatedness.\n\n3. **Creative Thinking**: A meta-analysis of 56 experimental studies reported a moderate positive short-term effect of AI-supported learning on creative thinking (Peng et al., 2025). However, the effect sizes were heterogeneous, and there was a lack of long-term follow-up assessments.\n\n4. **Critical Thinking and Depth**: Process-oriented research indicates that while students value AI's accessibility and efficiency, they also identify gaps in depth, interpretation, and critical thinking (Wang and Wu, 2025). Students engage in critical trust and verification behaviors, suggesting that AI may promote surface-level processing rather than deep cognitive engagement.\n\n5. **Disengagement and Reflection**: Trust-driven routine GenAI use is negatively associated with reflection, critical thinking, and the need for understanding (Choudhuri et al., 2026). This pattern is more pronounced among students with higher technophilic motivations and greater computer self-efficacy.\n\n### Main Limitations:\n\n1. **Outcome Measures**: Many studies focus on product-oriented outcome measures (e.g., assignment grades, self-reported attitudes) rather than process-oriented measures that capture deeper cognitive processes and long-term learning outcomes. This limits the ability to determine whether AI enhances durable"
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H2_2 
+CAUSAL_SUMMARY {"tested_removals": 8, "removal_answer_changes": 8, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H2_3 P01_02 {'ssd_verify_ms': 143.273, 'h2d_ms': 6.315, 'fusion_ms': 1704.346, 'cid': 'P01_02', 'memory_tokens': 654}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H2_3 P02_01 {'ssd_verify_ms': 147.713, 'h2d_ms': 6.331, 'fusion_ms': 3504.391, 'cid': 'P02_01', 'memory_tokens': 1304}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H2_3 P01_01 {'ssd_verify_ms': 147.159, 'h2d_ms': 6.213, 'fusion_ms': 4932.422, 'cid': 'P01_01', 'memory_tokens': 1954}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_H2_3 P02_00 {'ssd_verify_ms': 148.33, 'h2d_ms': 6.553, 'fusion_ms': 6340.378, 'cid': 'P02_00', 'memory_tokens': 2604}
+FUSION_ANSWER DROP_H2_3 H2 'Empirical evidence supports several claims regarding the impact of generative artificial intelligence (GenAI) on learning and performance:\n\n1. **Performance Gains**: Studies show that AI-assisted students can achieve higher academic scores compared to those using traditional resources (Mariñoso et al., 2025). This is supported by cognitive load theory, which suggests that GenAI can reduce extraneous processing demands, allowing learners to allocate more cognitive resources to higher-level conceptual work (Sweller et al., 2011).\n\n2. **Positive Attitudes**: Survey research indicates that positive attitudes toward GenAI can mediate the relationship between teacher support and learner well-being (Pan and Li, 2025).\n\n3. **Creative Thinking**: A meta-analysis of 56 experimental studies reports a moderate positive short-term effect of AI-supported learning on creative thinking (Peng et al., 2025).\n\n4. **Critical Thinking Depth**: Process-oriented mixed-methods research identifies limitations in critical-thinking depth and compensatory verification behaviors in response to weaknesses in AI-generated content (Wang and Wu, 2025).\n\n5. **Teacher Competencies**: Teacher-education studies report moderate AI awareness but weaker problem-solving, critical-evaluation, and pedagogical-integration competencies (Han, 2025; Kazmaci et al., 2025).\n\n### Main Limitations:\n\n1. **Mixed Findings**: The empirical findings on AI-supported learning outcomes remain mixed, suggesting that AI effects are shaped by task design, learner characteristics, disciplinary context, and assessment methods (Zhai et al., 2021).\n\n2. **Self-Reported Perceptions**: Many findings are based on self-reported perceptions rather than objective learning outcomes, which can introduce bias (Alghamdi, 2025).\n\n3. **Process-Outcome Decou'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H2_3 
+CAUSAL_SUMMARY {"tested_removals": 9, "removal_answer_changes": 9, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H2_4 P01_02 {'ssd_verify_ms': 143.255, 'h2d_ms': 6.225, 'fusion_ms': 1707.604, 'cid': 'P01_02', 'memory_tokens': 654}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H2_4 P02_01 {'ssd_verify_ms': 149.531, 'h2d_ms': 6.185, 'fusion_ms': 3486.567, 'cid': 'P02_01', 'memory_tokens': 1304}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H2_4 P01_01 {'ssd_verify_ms': 146.557, 'h2d_ms': 6.381, 'fusion_ms': 4925.527, 'cid': 'P01_01', 'memory_tokens': 1954}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H2_4 P02_02 {'ssd_verify_ms': 147.205, 'h2d_ms': 6.136, 'fusion_ms': 6338.487, 'cid': 'P02_02', 'memory_tokens': 2604}
+FUSION_ANSWER DROP_H2_4 H2 "The document provides several claims supported by empirical evidence, along with the main limitations of these findings:\n\n### Supported Claims:\n1. **AI-Enhanced Learning Outcomes:**\n   - **Positive Short-Term Effects:** Empirical studies show that AI-supported learning can improve academic performance, affective-motivational states, and higher-order thinking propensities (Deng et al., 2025; Peng et al., 2025).\n   - **Performance Gains:** Studies like Mariñoso et al. (2025) and Pan and Li (2025) demonstrate that AI can help students achieve higher academic scores and reduce cognitive load, potentially freeing cognitive resources for higher-level conceptual work.\n\n2. **Impact on Creative Problem Solving:**\n   - **Enhanced Creativity:** Experimental evidence indicates that AI, particularly ChatGPT, can improve the quality, elaboration, and originality of students' creative problem-solving outputs (Urban et al., 2024).\n   - **Reduced Mental Effort:** AI can make tasks feel easier and less effortful, which may help students explore more alternatives (Urban et al., 2024).\n\n3. **Critical Thinking and Cognitive Processing:**\n   - **Surface-Level Processing:** Research by Wang and Wu (2025) and Choudhuri et al. (2026) suggests that AI may promote surface-level processing and reduce the cognitive struggle necessary for deep conceptual understanding.\n   - **Metacognitive Strategies:** Students may use metacognitive strategies to compensate for AI's limitations, rather than to deepen their own understanding (Wang and Wu, 2025).\n\n### Main Limitations:\n1. **Mixed Findings:**\n   - **Heterogeneity in Effect Sizes:** Studies show substantial heterogeneity in effect sizes, indicating that the"
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H2_4 
+CAUSAL_SUMMARY {"tested_removals": 10, "removal_answer_changes": 10, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_00 
+PASS CARTRIDGE_ID_P01_00 
+PASS CARTRIDGE_TENSOR_SHA_P01_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REPLACE_H2 P01_00 {'ssd_verify_ms': 144.906, 'h2d_ms': 6.141, 'fusion_ms': 1776.513, 'cid': 'P01_00', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REPLACE_H2 P02_01 {'ssd_verify_ms': 148.423, 'h2d_ms': 6.312, 'fusion_ms': 3542.187, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REPLACE_H2 P01_01 {'ssd_verify_ms': 147.625, 'h2d_ms': 6.238, 'fusion_ms': 4986.064, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REPLACE_H2 P02_02 {'ssd_verify_ms': 147.679, 'h2d_ms': 6.13, 'fusion_ms': 6378.294, 'cid': 'P02_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP REPLACE_H2 P02_00 {'ssd_verify_ms': 147.468, 'h2d_ms': 6.282, 'fusion_ms': 7784.178, 'cid': 'P02_00', 'memory_tokens': 3280}
+FUSION_ANSWER REPLACE_H2 H2 'The claims supported by empirical evidence include:\n\n1. **Performance Gains**: Studies like Mariñoso et al. (2025) show that AI-assisted students can achieve higher academic scores compared to those using traditional resources. This is particularly evident in tasks like designing mathematical learning situations.\n2. **Positive Attitudes**: Research by Pan and Li (2025) indicates that positive attitudes toward GenAI can mediate the relationship between teacher support and learner well-being.\n3. **Short-Term Creative Thinking Improvement**: A meta-analysis by Peng et al. (2025) reports a moderate positive short-term effect of AI-supported learning on creative thinking.\n4. **Critical Thinking Limitations**: Process-oriented research by Wang and Wu (2025) identifies gaps in depth, interpretation, and critical thinking when students use AI, leading to compensatory verification behaviors.\n5. **Disengagement Patterns**: Choudhuri et al. (2026) found that routine GenAI use is negatively associated with reflection, critical thinking, and the need for understanding, particularly among students with higher technophilic motivations and computer self-efficacy.\n\n### Main Limitations:\n\n1. **Outcome Measures**: Many studies focus on product quality (e.g., assignment grades, self-reported attitudes) rather than process quality (e.g., depth of understanding, critical thinking). This limits the ability to assess whether AI enhances durable, transferable knowledge.\n2. **Short-Term Focus**: Most studies lack long-term follow-up assessments, making it difficult to determine the long-term effects of AI on learning.\n3. **Heterogeneity**: There is substantial variation in effect sizes across studies, which may be due to differences in tasks, populations, GenAI systems, instructional supports, and outcome measures. This heterogeneity complicates the interpretation of findings.\n4. **Ad Hoc Adoption**: The'
+PASS MEMORY_UNCHANGED_AFTER_QA_REPLACE_H2 
+CAUSAL_SUMMARY {"tested_removals": 10, "removal_answer_changes": 10, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP SINGLE_H2 P01_02 {'ssd_verify_ms': 141.992, 'h2d_ms': 6.039, 'fusion_ms': 1722.726, 'cid': 'P01_02', 'memory_tokens': 654}
+FUSION_ANSWER SINGLE_H2 H2 "The claims supported by empirical evidence include:\n\n1. **AI's Impact on Learning Outcomes**: Empirical findings on AI-supported learning outcomes are mixed, indicating that AI effects are shaped by task design, learner characteristics, disciplinary context, and assessment methods (Zhai et al., 2021).\n2. **GenAI's Role in Task Interaction**: Empirical studies based on educators' perspectives suggest that GenAI changes how learners interact with tasks, particularly by enabling content generation and task automation (Lee et al., 2024).\n3. **ChatGPT's Impact on Academic Performance**: ChatGPT-based interventions have been associated with improvements in academic performance, affective-motivational states, and higher-order thinking propensities, but also with reduced reported mental effort (Deng et al., 2025).\n4. **GenAI's Influence on Creativity and Critical Thinking**: Experimental evidence shows that ChatGPT can improve the quality, elaboration, and originality of students' creative problem-solving outputs, while also making tasks feel easier and less effortful (Urban et al., 2024).\n5. **Structured Learning Environments**: Recent review evidence suggests that GenAI can support critical and creative thinking when embedded in structured and scaffolded learning environments (Li et al., 2026).\n\nThe main limitations of these claims include:\n\n1. **Mixed Empirical Findings**: The mixed nature of empirical findings on AI-supported learning outcomes suggests that the effects of AI are context-dependent and not universally positive or negative.\n2. **Self-Reported Perceptions**: Many findings, especially those related to creativity and critical thinking, are based on self-reported perceptions rather than objective learning outcomes (Alghamdi, 2025).\n3. **Learner Autonomy and Depth**: Interdisciplinary research highlights both opportunities and risks associated with Gen"
+PASS MEMORY_UNCHANGED_AFTER_QA_SINGLE_H2 
+CAUSAL_SUMMARY {"tested_removals": 10, "removal_answer_changes": 10, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REVERSE_H2 P02_00 {'ssd_verify_ms': 147.274, 'h2d_ms': 6.578, 'fusion_ms': 1758.849, 'cid': 'P02_00', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REVERSE_H2 P02_02 {'ssd_verify_ms': 145.691, 'h2d_ms': 6.161, 'fusion_ms': 3521.904, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REVERSE_H2 P01_01 {'ssd_verify_ms': 147.216, 'h2d_ms': 6.118, 'fusion_ms': 4983.387, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REVERSE_H2 P02_01 {'ssd_verify_ms': 148.504, 'h2d_ms': 6.184, 'fusion_ms': 6369.898, 'cid': 'P02_01', 'memory_tokens': 2630}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+NATIVE_FUSION_STEP REVERSE_H2 P01_02 {'ssd_verify_ms': 142.482, 'h2d_ms': 6.252, 'fusion_ms': 7539.437, 'cid': 'P01_02', 'memory_tokens': 3254}
+FUSION_ANSWER REVERSE_H2 H2 'The document provides a nuanced view of the empirical evidence regarding the impact of generative artificial intelligence (GenAI) on education, highlighting both supportive and critical findings. Here are the key claims supported by empirical evidence and their main limitations:\n\n### Supported Claims:\n1. **Performance Gains:**\n   - **Empirical Evidence:** Studies like those by Mariñoso et al. (2025) and Peng et al. (2025) show that AI-assisted students can achieve higher academic scores and demonstrate improved creative thinking.\n   - **Limitation:** These studies primarily measure product outcomes (e.g., assignment grades, self-reported attitudes) rather than deeper cognitive processes or long-term learning.\n\n2. **Positive Attitudes and Well-Being:**\n   - **Empirical Evidence:** Pan and Li (2025) found that positive attitudes toward GenAI mediate the relationship between teacher support and learner well-being.\n   - **Limitation:** This finding is based on self-reported attitudes and may not capture the actual cognitive and affective processes involved in learning.\n\n3. **Critical Thinking and Depth:**\n   - **Empirical Evidence:** Wang and Wu (2025) identified limitations in critical thinking depth and compensatory verification behaviors in response to AI-generated content.\n   - **Limitation:** These findings are based on qualitative themes and may not be generalizable to all educational contexts or populations.\n\n4. **Cognitive Offloading:**\n   - **Empirical Evidence:** Choudhuri et al. (2026) found that routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n   - **Limitation:** The study is based on survey data and may not capture the dynamic, real-time interactions between students and AI tools.\n\n### Main Limitations:\n1. **Outcome Measures:**\n   - **Product vs. Process'
+PASS MEMORY_UNCHANGED_AFTER_QA_REVERSE_H2 
+CAUSAL_SUMMARY {"tested_removals": 10, "removal_answer_changes": 10, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TOP2_BASE_H3 P03_01 {'ssd_verify_ms': 150.732, 'h2d_ms': 6.335, 'fusion_ms': 1755.127, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP TOP2_BASE_H3 P02_01 {'ssd_verify_ms': 148.903, 'h2d_ms': 6.053, 'fusion_ms': 3542.115, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP TOP2_BASE_H3 P02_02 {'ssd_verify_ms': 147.13, 'h2d_ms': 6.246, 'fusion_ms': 4971.695, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP TOP2_BASE_H3 P01_01 {'ssd_verify_ms': 147.811, 'h2d_ms': 6.281, 'fusion_ms': 6367.231, 'cid': 'P01_01', 'memory_tokens': 2630}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP TOP2_BASE_H3 P03_00 {'ssd_verify_ms': 148.372, 'h2d_ms': 6.186, 'fusion_ms': 7772.724, 'cid': 'P03_00', 'memory_tokens': 3280}
+FUSION_ANSWER TOP2_BASE_H3 H3 'The provided text does not contain a direct comparison of three publications, but rather a detailed exploration of the use of gamified learning and AI in educational settings, particularly in health professions education. However, based on the information provided, I can summarize the key points and draw a conclusion regarding the use of AI and gamified learning in education, while also noting the uncertainties.\n\n### Conclusion:\n**1. Effectiveness of Gamified Learning:**\n- **Positive Outcomes:** Studies have shown that gamified learning can enhance learner satisfaction, knowledge acquisition, critical thinking, problem-solving, and teamwork skills (Sources: [4-7]).\n- **Theoretical Foundations:** Gamified learning is supported by multiple learning theories, including self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks (Sources: [7-13]).\n\n**2. Role of AI in Gamified Learning:**\n- **Lowering Activation Energy:** AI tools can reduce the "activation energy" required to develop and implement gamified learning, making it more accessible to educators (Sources: [15]).\n- **Supporting Design:** AI can assist in selecting game types and mechanics, and in the creative process of designing gamified elements that align with course content and learning objectives (Sources: [15]).\n\n**3. Challenges and Concerns:**\n- **Non-Movable Barriers:** Educators must consider several non-movable barriers, such as student time, faculty time, class size, curricular constraints, space, and resources (Sources: [7, 14-16]).\n- **Shallow Processing:** There is a concern that AI may promote surface-level processing and reduce the cognitive struggle necessary for deep conceptual understanding (Sources: [2025, 2026]).\n- **Cognitive Offloading:** Reliance on AI can lead to reduced effort in internalizing'
+PASS MEMORY_UNCHANGED_AFTER_QA_TOP2_BASE_H3 
+CAUSAL_SUMMARY {"tested_removals": 10, "removal_answer_changes": 10, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H3_0 P02_01 {'ssd_verify_ms': 149.587, 'h2d_ms': 6.321, 'fusion_ms': 1763.918, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H3_0 P02_02 {'ssd_verify_ms': 150.908, 'h2d_ms': 6.24, 'fusion_ms': 3537.395, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H3_0 P01_01 {'ssd_verify_ms': 147.414, 'h2d_ms': 6.045, 'fusion_ms': 4983.878, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_H3_0 P03_00 {'ssd_verify_ms': 148.568, 'h2d_ms': 6.33, 'fusion_ms': 6388.742, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H3_0 H3 'Based on the provided information, the following conclusions can be drawn, along with the associated uncertainties:\n\n### Conclusion:\nThe evidence suggests a **critical thinking paradox** in the context of AI-assisted learning. This paradox is characterized by the observation that while AI can lead to significant performance gains in terms of product quality (e.g., higher academic scores, positive attitudes, and short-term creative thinking), it may also promote shallow cognitive processing and reduce the depth of critical thinking and long-term learning. This pattern is supported by both product-oriented and process-sensitive research.\n\n### Evidence:\n1. **Product-Oriented Evidence:**\n   - **Mariñoso et al. (2025)**: Found that AI-assisted groups achieved higher academic scores in designing mathematical learning situations.\n   - **Pan and Li (2025)**: Demonstrated that positive attitudes toward AI mediated the relationship between teacher support and learner well-being.\n   - **Peng et al. (2025)**: Reported a moderate positive short-term effect of AI-supported learning on creative thinking, but noted substantial heterogeneity and a lack of long-term follow-up.\n\n2. **Process-Sensitive Evidence:**\n   - **Wang and Wu (2025)**: Identified themes of AI’s accessibility and efficiency, but also gaps in depth, interpretation, and critical thinking. Students engaged in critical trust and verification behaviors, indicating a reliance on AI to compensate for its limitations.\n   - **Choudhuri et al. (2026)**: Found that trust-driven routine AI use was negatively associated with reflection, critical thinking, and need for understanding, especially among students with higher technophilic motivations and computer self-efficacy.\n\n### Uncertainties:\n1. **Heterogeneity in Studies:**\n   - The studies reviewed show substantial heterogeneity in tasks, populations, tools, and designs, which may'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H3_0 
+CAUSAL_SUMMARY {"tested_removals": 11, "removal_answer_changes": 11, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H3_1 P03_01 {'ssd_verify_ms': 150.201, 'h2d_ms': 6.218, 'fusion_ms': 1774.944, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H3_1 P02_02 {'ssd_verify_ms': 148.855, 'h2d_ms': 6.342, 'fusion_ms': 3548.568, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H3_1 P01_01 {'ssd_verify_ms': 147.847, 'h2d_ms': 6.109, 'fusion_ms': 4966.545, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_H3_1 P03_00 {'ssd_verify_ms': 147.979, 'h2d_ms': 6.265, 'fusion_ms': 6362.375, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H3_1 H3 'The provided text does not contain a direct comparison of three specific publications, so I cannot provide a conclusion based on a comparison of three distinct sources. However, I can summarize the key points and uncertainties from the information given:\n\n1. **Positive Outcomes of AI in Learning:**\n   - **Enhanced Motivation and Well-being:** Studies suggest that positive attitudes toward generative AI (GenAI) can mediate the relationship between teacher support and learner well-being, enhancing intrinsic motivation (Chiu, 2024).\n   - **Improved Creative Thinking:** A meta-analysis reported a moderate positive short-term effect of AI-supported learning on creative thinking (Peng et al., 2025).\n\n2. **Concerns and Limitations:**\n   - **Shallow Processing:** Research indicates that AI may promote surface-level processing, where students rely on ready-made answers without deep cognitive engagement (Wang and Wu, 2025).\n   - **Cognitive Offloading:** Trust-driven routine use of AI can negatively impact reflection, critical thinking, and the need for understanding (Choudhuri et al., 2026).\n   - **Process-Outcome Decoupling:** AI may intensify visible creative activity without strengthening the underlying skills and judgment necessary for long-term creative development (Choudhuri et al., 2026).\n\n3. **Methodological Limitations:**\n   - **Primary Outcome Measures:** Most studies focus on product quality (e.g., assignment grades, self-reported attitudes) rather than long-term retention and transfer of knowledge (Martin et al., 2025).\n   - **Process Research:** Shifts in methodological focus from product to process reveal more troubling patterns, such as students compensating for AI limitations rather than deepening their own understanding (Wang and Wu, 2025).\n\n**Conclusion:**\nWhile AI'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H3_1 
+CAUSAL_SUMMARY {"tested_removals": 12, "removal_answer_changes": 12, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H3_2 P03_01 {'ssd_verify_ms': 149.415, 'h2d_ms': 6.304, 'fusion_ms': 1767.921, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H3_2 P02_01 {'ssd_verify_ms': 149.81, 'h2d_ms': 6.311, 'fusion_ms': 3534.641, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H3_2 P01_01 {'ssd_verify_ms': 148.459, 'h2d_ms': 6.147, 'fusion_ms': 4948.776, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_H3_2 P03_00 {'ssd_verify_ms': 149.185, 'h2d_ms': 6.276, 'fusion_ms': 6380.938, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H3_2 H3 'The provided text does not contain three distinct publications or studies that can be compared to draw a conclusion. The text is a single, cohesive document that discusses the use of gamified learning in health professions education, the challenges educators face, and the potential of AI to support the development and implementation of gamified learning strategies. Therefore, it is not possible to compare multiple publications or sources to draw a conclusion.\n\nIf you have specific questions about the content within this document, I can certainly help address those. However, based on the information provided, here is a summary of the key points:\n\n1. **Gamified Learning in Health Professions Education**:\n   - Gamified learning is a powerful strategy that can enhance learner satisfaction, knowledge acquisition, critical thinking, problem-solving, and teamwork skills.\n   - It aligns with adult and experiential learning theories, making it effective for developing practical competencies and clinical reasoning.\n\n2. **Theoretical Foundations**:\n   - Self-determination theory, experiential learning theory, cognitive load theory, and social constructivist frameworks provide a cohesive rationale for gamified learning.\n\n3. **Challenges**:\n   - Financial constraints, lack of infrastructure, limited training, and negative perceptions can deter educators from adopting gamified learning.\n\n4. **Role of AI**:\n   - AI tools can lower the "activation energy" needed to develop and implement gamified learning, making it more accessible and supporting broader adoption.\n\n5. **Non-movable Barriers**:\n   - Considerations such as student time, faculty time, class size, curricular constraints, space, and resources must be addressed when implementing gamified learning.\n\nIf you have a specific question or need further clarification on any of these points, please let me know!'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H3_2 
+CAUSAL_SUMMARY {"tested_removals": 13, "removal_answer_changes": 13, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H3_3 P03_01 {'ssd_verify_ms': 150.481, 'h2d_ms': 6.343, 'fusion_ms': 1766.251, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H3_3 P02_01 {'ssd_verify_ms': 151.069, 'h2d_ms': 6.69, 'fusion_ms': 3548.757, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H3_3 P02_02 {'ssd_verify_ms': 149.041, 'h2d_ms': 6.27, 'fusion_ms': 4994.23, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_H3_3 P03_00 {'ssd_verify_ms': 149.867, 'h2d_ms': 6.369, 'fusion_ms': 6357.987, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H3_3 H3 'The provided text does not contain three distinct publications or studies that can be compared to draw a conclusion. Instead, the text is a single, cohesive document that discusses various aspects of gamified learning in health professions education, including the benefits, challenges, and the role of AI in facilitating gamified learning.\n\n### Key Points from the Document:\n1. **Benefits of Gamified Learning**:\n   - Enhances learner satisfaction, knowledge acquisition, critical thinking, problem-solving, and teamwork skills.\n   - Aligns with adult and experiential learning theories, making it effective for developing practical competencies and clinical reasoning.\n\n2. **Theoretical Foundations**:\n   - **Self-Determination Theory**: Game mechanics enhance intrinsic motivation by supporting autonomy, competence, and relatedness.\n   - **Experiential Learning Theory**: Promotes learning through cycles of action, reflection, and iteration.\n   - **Cognitive Load Theory**: Highlights the need to manage intrinsic and extraneous load to support learners.\n   - **Social Constructivist Frameworks**: Emphasize knowledge construction through interaction, shared problem-solving, and peer feedback.\n\n3. **Challenges**:\n   - Financial constraints, lack of infrastructure and technical support, limited training, and negative perceptions towards gamified learning.\n   - The "activation energy" required for development and implementation can be high, limiting broader adoption.\n\n4. **Role of AI**:\n   - AI tools can lower the "activation energy" needed for the development and implementation of gamified learning, making it more accessible.\n   - AI can support the selection of game types and mechanics, and assist in the creative process of designing gamified elements.\n\n### Conclusion:\nThe document emphasizes the potential of gamified learning to enhance various aspects of health professions education, supported by multiple learning theories. However, it also acknowledges the challenges that educators face in adopting these methods. The introduction of AI tools is presented as a'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H3_3 
+CAUSAL_SUMMARY {"tested_removals": 14, "removal_answer_changes": 14, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_H3_4 P03_01 {'ssd_verify_ms': 152.584, 'h2d_ms': 6.363, 'fusion_ms': 1772.457, 'cid': 'P03_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP DROP_H3_4 P02_01 {'ssd_verify_ms': 151.028, 'h2d_ms': 6.45, 'fusion_ms': 3582.066, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_H3_4 P02_02 {'ssd_verify_ms': 150.347, 'h2d_ms': 6.252, 'fusion_ms': 5031.923, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_H3_4 P01_01 {'ssd_verify_ms': 149.472, 'h2d_ms': 6.424, 'fusion_ms': 6431.917, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_H3_4 H3 'The provided text does not contain three distinct publications or studies that can be directly compared to draw a conclusion. Instead, the text appears to be a single, cohesive document that discusses various aspects of gamified learning and the use of AI in education. Here’s a summary of the key points and the uncertainties based on the provided information:\n\n### Key Points:\n1. **Success of Gamified Learning**:\n   - Gamified learning has been successful in foundational sciences such as biochemistry, pharmacology, toxicology, physiology, radiology, and system-based practices.\n   - Studies show that gamified learning can support or improve teamwork, collaboration, motivation, and immersion.\n\n2. **Non-movable Barriers**:\n   - Several barriers must be considered when implementing gamified learning, including student time, faculty time, class size, curricular constraints, space, and resources.\n\n3. **AI in Gamified Learning**:\n   - AI tools can lower the "activation energy" needed to develop and implement gamified learning, making it more accessible to faculty.\n   - AI can support the planning and creation of various gamified strategies.\n\n4. **Critical Thinking Paradox**:\n   - While AI can enhance performance and efficiency, there is a concern that it may promote surface-level processing and reduce deep cognitive engagement.\n   - Studies show that students may use AI to compensate for its limitations rather than to deepen their own understanding.\n\n### Uncertainties:\n1. **Heterogeneity in Results**:\n   - The effectiveness of gamified learning and AI in education is heterogeneous, with varying results across different studies.\n   - The text mentions that the literature is mixed, and more research is needed to understand the long-term effects of AI on learning outcomes.\n\n2. **Methodological Limitations**:\n   - Many studies focus on product quality (e.g., assignment grades) rather than process (e.g., deep cognitive processing'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_H3_4 
+CAUSAL_SUMMARY {"tested_removals": 15, "removal_answer_changes": 15, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REPLACE_H3 P03_02 {'ssd_verify_ms': 149.618, 'h2d_ms': 6.18, 'fusion_ms': 1773.261, 'cid': 'P03_02', 'memory_tokens': 680}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REPLACE_H3 P02_01 {'ssd_verify_ms': 150.691, 'h2d_ms': 6.597, 'fusion_ms': 3545.551, 'cid': 'P02_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REPLACE_H3 P02_02 {'ssd_verify_ms': 148.025, 'h2d_ms': 6.102, 'fusion_ms': 4959.299, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REPLACE_H3 P01_01 {'ssd_verify_ms': 149.516, 'h2d_ms': 6.277, 'fusion_ms': 6380.138, 'cid': 'P01_01', 'memory_tokens': 2630}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP REPLACE_H3 P03_00 {'ssd_verify_ms': 148.332, 'h2d_ms': 6.098, 'fusion_ms': 7789.218, 'cid': 'P03_00', 'memory_tokens': 3280}
+FUSION_ANSWER REPLACE_H3 H3 "Based on the provided information, the following conclusions can be drawn, along with the associated uncertainties:\n\n### Conclusion:\nThe evidence suggests a critical thinking paradox in the use of generative AI (GenAI) in educational settings. While GenAI can lead to significant performance gains in terms of product quality, such as higher academic scores and positive attitudes, there is a concern that these gains may be superficial and not necessarily translate into deeper, more durable learning. This paradox is supported by both product-oriented and process-sensitive research, indicating that while AI can enhance efficiency and immediate performance, it may also promote surface-level processing and reduce the cognitive effort required for deep conceptual understanding.\n\n### Uncertainties:\n1. **Heterogeneity in Findings**:\n   - The literature reviewed shows substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments. This makes it difficult to generalize the findings across different contexts and populations (Peng et al., 2025).\n\n2. **Methodological Limitations**:\n   - Most studies focus on product-oriented outcomes (e.g., assignment grades, self-reported attitudes) rather than process-oriented outcomes (e.g., critical thinking, long-term retention). This limits the ability to fully understand the impact of AI on deeper learning (Mariñoso et al., 2025; Pan and Li, 2025).\n\n3. **Surface vs. Deep Processing**:\n   - There is evidence that students may rely on AI to bypass cognitive struggle, leading to surface-level processing. This is supported by qualitative themes from Wang and Wu (2025) and Choudhuri et al. (2026), who found that students engage in critical trust and verification behaviors to compensate for AI's interpretive shallowness.\n\n4. **Cognitive Offloading**:\n   - Cognitive offloading research suggests that reliance on external tools can reduce the"
+PASS MEMORY_UNCHANGED_AFTER_QA_REPLACE_H3 
+CAUSAL_SUMMARY {"tested_removals": 15, "removal_answer_changes": 15, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP SINGLE_H3 P03_01 {'ssd_verify_ms': 150.731, 'h2d_ms': 6.493, 'fusion_ms': 1774.408, 'cid': 'P03_01', 'memory_tokens': 680}
+FUSION_ANSWER SINGLE_H3 H3 'UNKNOWN. The provided text does not contain information about comparing three specific publications. The text focuses on the implementation of gamified learning in health science education and the factors to consider, such as student time, faculty time, class size, curricular constraints, space, and resources. It also mentions the potential of AI tools to reduce the "activation energy" needed for developing and implementing gamified learning strategies. There is no mention of a comparison of three publications.'
+PASS MEMORY_UNCHANGED_AFTER_QA_SINGLE_H3 
+CAUSAL_SUMMARY {"tested_removals": 15, "removal_answer_changes": 15, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REVERSE_H3 P03_00 {'ssd_verify_ms': 151.905, 'h2d_ms': 6.575, 'fusion_ms': 1761.612, 'cid': 'P03_00', 'memory_tokens': 680}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REVERSE_H3 P01_01 {'ssd_verify_ms': 150.6, 'h2d_ms': 6.448, 'fusion_ms': 3585.811, 'cid': 'P01_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REVERSE_H3 P02_02 {'ssd_verify_ms': 149.989, 'h2d_ms': 6.113, 'fusion_ms': 5001.658, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REVERSE_H3 P02_01 {'ssd_verify_ms': 149.568, 'h2d_ms': 6.166, 'fusion_ms': 6411.651, 'cid': 'P02_01', 'memory_tokens': 2630}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REVERSE_H3 P03_01 {'ssd_verify_ms': 154.166, 'h2d_ms': 6.363, 'fusion_ms': 7847.92, 'cid': 'P03_01', 'memory_tokens': 3280}
+FUSION_ANSWER REVERSE_H3 H3 'The provided text does not contain three distinct publications or studies that can be compared to draw a conclusion. Instead, the text is a single, cohesive document that discusses the integration of gamified learning and AI in health professions education. Therefore, I cannot compare multiple publications or draw a conclusion based on a comparison of different sources.\n\nHowever, I can summarize the key points and uncertainties from the provided document:\n\n### Key Points:\n1. **Gamified Learning in Health Science Education:**\n   - Gamified learning is an effective strategy to enhance learner satisfaction, knowledge acquisition, critical thinking, problem-solving, and teamwork skills.\n   - It aligns with adult and experiential learning theories, making it suitable for developing practical competencies and clinical reasoning in healthcare professionals.\n\n2. **Theoretical Foundations:**\n   - **Self-Determination Theory:** Supports intrinsic motivation through choice, challenge, feedback, and collaboration.\n   - **Experiential Learning Theory:** Promotes learning through cycles of action, reflection, and iteration.\n   - **Cognitive Load Theory:** Emphasizes managing intrinsic and extraneous cognitive load.\n   - **Social Constructivist Frameworks:** Highlight the importance of knowledge construction through interaction and peer feedback.\n\n3. **Challenges in Adoption:**\n   - Financial constraints, lack of infrastructure, limited training, and negative perceptions can deter health science educators from adopting gamified learning.\n   - AI tools can help overcome these barriers by making gamified learning more accessible and manageable.\n\n4. **Practical Tips for AI Integration:**\n   - Clarify learning objectives and identify non-movable barriers.\n   - Use AI to support the selection of game types and mechanics.\n   - AI can assist in designing gamified elements that align with course content and learning objectives.\n\n### Uncertainties:\n1. **Long-term Efficacy:**\n   - While AI can support the development and implementation of gamified learning,'
+PASS MEMORY_UNCHANGED_AFTER_QA_REVERSE_H3 
+CAUSAL_SUMMARY {"tested_removals": 15, "removal_answer_changes": 15, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TOP2_BASE_A1 P02_01 {'ssd_verify_ms': 150.915, 'h2d_ms': 6.496, 'fusion_ms': 1759.381, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP TOP2_BASE_A1 P02_02 {'ssd_verify_ms': 148.588, 'h2d_ms': 6.476, 'fusion_ms': 3540.689, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP TOP2_BASE_A1 P02_00 {'ssd_verify_ms': 148.186, 'h2d_ms': 6.247, 'fusion_ms': 4972.567, 'cid': 'P02_00', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP TOP2_BASE_A1 P03_01 {'ssd_verify_ms': 151.202, 'h2d_ms': 6.432, 'fusion_ms': 6399.538, 'cid': 'P03_01', 'memory_tokens': 2630}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP TOP2_BASE_A1 P01_01 {'ssd_verify_ms': 150.141, 'h2d_ms': 6.363, 'fusion_ms': 7824.397, 'cid': 'P01_01', 'memory_tokens': 3280}
+FUSION_ANSWER TOP2_BASE_A1 A1 'To develop a new causal model that reconciles the apparently conflicting results across the three publications—Mariñoso et al. (2025), Wang and Wu (2025), and Choudhuri et al. (2026)—we need to integrate the evidence, make reasonable assumptions, and derive testable predictions. Here is a structured approach:\n\n### Evidence\n1. **Mariñoso et al. (2025)**:\n   - **Finding**: AI-assisted students achieved significantly higher academic scores in designing mathematical learning situations.\n   - **Methodology**: Product-oriented outcome measures (assignment grades).\n\n2. **Wang and Wu (2025)**:\n   - **Finding**: Students identified gaps in depth, interpretation, and critical thinking when using AI, and engaged in compensatory verification behaviors.\n   - **Methodology**: Process-sensitive mixed-methods design (qualitative themes).\n\n3. **Choudhuri et al. (2026)**:\n   - **Finding**: Trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n   - **Methodology**: Survey data and Partial Least Squares Structural Equation Modeling.\n\n### Assumptions\n1. **Cognitive Load Theory**:\n   - AI can reduce extraneous cognitive load, allowing learners to focus on germane processing (Sweller et al., 2011).\n   - However, if AI reduces the cognitive struggle necessary for deep learning, it may lead to superficial processing (Soderstrom and Bjork, 2015).\n\n2. **Desirable Difficulties**:\n   - Learning is more durable when it involves cognitive struggle and effort (Bjork and Bjork, 2011).\n   - AI may provide too much assistance, reducing the necessary cognitive effort.\n\n3. **Cognitive Off'
+PASS MEMORY_UNCHANGED_AFTER_QA_TOP2_BASE_A1 
+CAUSAL_SUMMARY {"tested_removals": 15, "removal_answer_changes": 15, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A1_0 P02_02 {'ssd_verify_ms': 150.445, 'h2d_ms': 6.452, 'fusion_ms': 1780.897, 'cid': 'P02_02', 'memory_tokens': 680}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_A1_0 P02_00 {'ssd_verify_ms': 149.477, 'h2d_ms': 6.233, 'fusion_ms': 3541.512, 'cid': 'P02_00', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A1_0 P03_01 {'ssd_verify_ms': 151.107, 'h2d_ms': 6.223, 'fusion_ms': 4979.365, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A1_0 P01_01 {'ssd_verify_ms': 150.369, 'h2d_ms': 6.14, 'fusion_ms': 6318.206, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A1_0 A1 '### Causal Model to Reconcile Conflicting Results\n\n#### Evidence\n1. **Positive Outcomes (Product-Focused Studies):**\n   - **Mariñoso et al. (2025)**: AI-assisted students achieved higher academic scores.\n   - **Pan and Li (2025)**: Positive attitudes toward GenAI mediated the relationship between teacher support and learner well-being.\n   - **Peng et al. (2025)**: Meta-analysis of 56 experimental studies reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n\n2. **Negative Outcomes (Process-Focused Studies):**\n   - **Wang and Wu (2025)**: Identified gaps in depth, interpretation, and critical thinking among students using AI.\n   - **Choudhuri et al. (2026)**: Trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n   - **Jose et al. (2025)**: Framed the dual effect as a cognitive paradox between enhancement and erosion, grounded in cognitive load theory, Bloom’s taxonomy, and self-determination theory.\n\n#### Assumptions\n1. **Cognitive Load Theory**: AI can reduce cognitive load, making tasks easier but potentially leading to surface-level processing.\n2. **Bloom’s Taxonomy**: AI may enhance lower-order thinking skills (e.g., knowledge, comprehension) but may not effectively support higher-order thinking skills (e.g., analysis, evaluation, creation).\n3. **Self-Determination Theory**: AI can enhance intrinsic motivation by supporting autonomy, competence, and relatedness, but over-reliance on AI can undermine these needs.\n4. **Process-Outcome Decoupling**: AI can intensify visible activity (product) without necessarily strengthening the underlying'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A1_0 
+CAUSAL_SUMMARY {"tested_removals": 16, "removal_answer_changes": 16, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A1_1 P02_01 {'ssd_verify_ms': 152.331, 'h2d_ms': 6.389, 'fusion_ms': 1757.233, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_A1_1 P02_00 {'ssd_verify_ms': 149.641, 'h2d_ms': 6.345, 'fusion_ms': 3541.708, 'cid': 'P02_00', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A1_1 P03_01 {'ssd_verify_ms': 151.417, 'h2d_ms': 6.167, 'fusion_ms': 4976.681, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A1_1 P01_01 {'ssd_verify_ms': 147.237, 'h2d_ms': 6.117, 'fusion_ms': 6369.296, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A1_1 A1 'To develop a new causal model that reconciles the apparently conflicting results across the three publications (Mariñoso et al., 2025; Wang and Wu, 2025; Jose et al., 2025), we need to integrate the evidence, assumptions, and predictions from each study. The model will aim to explain the observed product–process dissociation, where AI-assisted learning can lead to higher performance but may also undermine deeper cognitive processes.\n\n### Evidence\n1. **Mariñoso et al. (2025)**:\n   - **Finding**: AI-assisted students achieved significantly higher academic scores in designing mathematical learning situations.\n   - **Cognitive Load Theory**: AI reduces extraneous cognitive load, allowing learners to focus more on germane processing and higher-level conceptual work.\n\n2. **Wang and Wu (2025)**:\n   - **Finding**: AI-assisted students showed limitations in critical-thinking depth and compensatory verification behaviors.\n   - **Process-Oriented Research**: AI may lead to superficial engagement and reduced critical evaluation.\n\n3. **Jose et al. (2025)**:\n   - **Finding**: Framed the dual effect of AI as a cognitive paradox between enhancement and erosion.\n   - **Theoretical Foundations**: Grounded in cognitive load theory, Bloom’s taxonomy, and self-determination theory.\n\n### Assumptions\n1. **Cognitive Load Theory**:\n   - AI can reduce extraneous cognitive load, but this reduction may not always translate to deeper cognitive processing.\n   - The level of cognitive load reduction and the type of cognitive processing (surface, intermediate, deep) are critical factors.\n\n2. **Bloom’s Taxonomy**:\n   - AI may enhance lower-order cognitive skills (e.g., knowledge, comprehension) but may not necessarily support higher-order skills (e.g., analysis, evaluation,'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A1_1 
+CAUSAL_SUMMARY {"tested_removals": 17, "removal_answer_changes": 17, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A1_2 P02_01 {'ssd_verify_ms': 151.95, 'h2d_ms': 6.669, 'fusion_ms': 1776.421, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A1_2 P02_02 {'ssd_verify_ms': 150.286, 'h2d_ms': 6.35, 'fusion_ms': 3536.274, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A1_2 P03_01 {'ssd_verify_ms': 152.354, 'h2d_ms': 6.241, 'fusion_ms': 4972.964, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A1_2 P01_01 {'ssd_verify_ms': 152.103, 'h2d_ms': 6.486, 'fusion_ms': 6385.286, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A1_2 A1 'To develop a new causal model that reconciles the apparently conflicting results across the three publications, we need to integrate the evidence, assumptions, and predictions from the reviewed studies. The model will aim to explain the observed product gains and process concerns, particularly in the context of AI-assisted learning.\n\n### Evidence\n1. **Product Gains:**\n   - **Mariñoso et al. (2025)**: AI-assisted groups achieved significantly higher academic scores in designing mathematical learning situations.\n   - **Pan and Li (2025)**: Positive attitudes toward AI mediated the relationship between teacher support and learner well-being.\n   - **Peng et al. (2025)**: A moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n\n2. **Process Concerns:**\n   - **Wang and Wu (2025)**: Students valued AI’s efficiency but identified gaps in depth, interpretation, and critical thinking.\n   - **Choudhuri et al. (2026)**: Trust-driven routine AI use was negatively associated with reflection, critical thinking, and need for understanding.\n\n### Assumptions\n1. **Cognitive Load Theory**: AI can reduce extraneous cognitive load, allowing learners to focus on germane processing and higher-level conceptual work (Sweller et al., 2011).\n2. **Desirable Difficulties**: Conditions that enhance performance during acquisition may diverge from those enhancing long-term retention and transfer (Soderstrom and Bjork, 2015).\n3. **Cognitive Offloading**: Reliance on external tools can reduce the effort needed for internalization, potentially leading to surface-level processing (Risko and Gilbert, 2016).\n\n### Predictions\n1. **Short-term vs. Long-term Effects**: AI-ass'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A1_2 
+CAUSAL_SUMMARY {"tested_removals": 18, "removal_answer_changes": 18, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A1_3 P02_01 {'ssd_verify_ms': 152.383, 'h2d_ms': 6.156, 'fusion_ms': 1771.611, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A1_3 P02_02 {'ssd_verify_ms': 150.463, 'h2d_ms': 6.305, 'fusion_ms': 3548.877, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_A1_3 P02_00 {'ssd_verify_ms': 150.992, 'h2d_ms': 6.323, 'fusion_ms': 4972.795, 'cid': 'P02_00', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A1_3 P01_01 {'ssd_verify_ms': 150.52, 'h2d_ms': 5.983, 'fusion_ms': 6351.065, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A1_3 A1 'To develop a new causal model that reconciles the apparently conflicting results across the three publications—Mariñoso et al. (2025), Wang and Wu (2025), and Choudhuri et al. (2026)—we need to integrate the evidence, assumptions, and predictions from each study. The model will aim to explain the observed product–process dissociation, where AI-assisted learning can lead to higher performance on immediate tasks but may not necessarily enhance deeper cognitive processing and long-term learning.\n\n### Evidence\n1. **Mariñoso et al. (2025)**:\n   - **Product Gains**: AI-assisted students achieved significantly higher academic scores in designing mathematical learning situations.\n   - **Cognitive Load Theory**: AI reduces extraneous processing demands, allowing learners to allocate more cognitive resources to higher-level conceptual work.\n\n2. **Wang and Wu (2025)**:\n   - **Process Concerns**: Students valued AI’s accessibility and efficiency but identified gaps in depth, interpretation, and critical thinking.\n   - **Metacognitive Strategies**: Students engaged in critical trust and verification behaviors to compensate for AI’s interpretive shallowness.\n\n3. **Choudhuri et al. (2026)**:\n   - **Negative Associations**: Trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n   - **Technophilic Motivations**: Higher technophilic motivations and computer self-efficacy were linked to stronger disengagement patterns.\n\n### Assumptions\n1. **Cognitive Load Theory**: AI can reduce extraneous cognitive load, potentially enhancing performance on immediate tasks.\n2. **Deep vs. Surface Processing**: AI may promote surface-level processing by providing ready-made answers, which can lead to short-term gains but may not support deep conceptual understanding.\n3. **'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A1_3 
+CAUSAL_SUMMARY {"tested_removals": 19, "removal_answer_changes": 19, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A1_4 P02_01 {'ssd_verify_ms': 152.315, 'h2d_ms': 6.129, 'fusion_ms': 1774.031, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A1_4 P02_02 {'ssd_verify_ms': 151.806, 'h2d_ms': 6.629, 'fusion_ms': 3544.213, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP DROP_A1_4 P02_00 {'ssd_verify_ms': 150.608, 'h2d_ms': 6.353, 'fusion_ms': 4965.606, 'cid': 'P02_00', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A1_4 P03_01 {'ssd_verify_ms': 153.072, 'h2d_ms': 6.651, 'fusion_ms': 6340.716, 'cid': 'P03_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A1_4 A1 'To develop a new causal model that reconciles the apparently conflicting results across the three publications (Mariñoso et al., 2025; Wang and Wu, 2025; Choudhuri et al., 2026), we need to integrate the evidence, make reasonable assumptions, and derive testable predictions. Here is a structured approach:\n\n### Evidence\n1. **Mariñoso et al. (2025)**:\n   - **Finding**: AI-assisted students achieved significantly higher academic scores in designing mathematical learning situations.\n   - **Interpretation**: AI can reduce extraneous cognitive load, allowing learners to focus on higher-level conceptual work.\n\n2. **Wang and Wu (2025)**:\n   - **Finding**: Students valued AI’s accessibility and efficiency but identified gaps in depth, interpretation, and critical thinking.\n   - **Interpretation**: AI may promote surface-level processing, leading to superficial learning.\n\n3. **Choudhuri et al. (2026)**:\n   - **Finding**: Trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n   - **Interpretation**: Routine AI use can lead to disengagement and a lack of deep cognitive processing.\n\n### Assumptions\n1. **Cognitive Load Theory**: AI can reduce extraneous cognitive load, but this reduction can also lead to a lack of cognitive struggle necessary for deep learning (Sweller et al., 2011).\n2. **Levels of Processing Framework**: Surface-level processing (e.g., memorization) is less durable and transferable than deep processing (Craik and Lockhart, 1972).\n3. **Desirable Difficulties**: Learning is more durable when it involves cognitive struggle (Bjork and Bjork, 2011'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A1_4 
+CAUSAL_SUMMARY {"tested_removals": 20, "removal_answer_changes": 20, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_03 
+PASS CARTRIDGE_ID_P02_03 
+PASS CARTRIDGE_TENSOR_SHA_P02_03 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REPLACE_A1 P02_03 {'ssd_verify_ms': 28.755, 'h2d_ms': 1.389, 'fusion_ms': 311.214, 'cid': 'P02_03', 'memory_tokens': 67}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REPLACE_A1 P02_02 {'ssd_verify_ms': 152.182, 'h2d_ms': 6.283, 'fusion_ms': 2218.415, 'cid': 'P02_02', 'memory_tokens': 717}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP REPLACE_A1 P02_00 {'ssd_verify_ms': 148.224, 'h2d_ms': 6.447, 'fusion_ms': 3615.21, 'cid': 'P02_00', 'memory_tokens': 1367}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REPLACE_A1 P03_01 {'ssd_verify_ms': 151.125, 'h2d_ms': 6.328, 'fusion_ms': 5050.487, 'cid': 'P03_01', 'memory_tokens': 2017}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REPLACE_A1 P01_01 {'ssd_verify_ms': 151.732, 'h2d_ms': 6.28, 'fusion_ms': 6444.033, 'cid': 'P01_01', 'memory_tokens': 2667}
+FUSION_ANSWER REPLACE_A1 A1 'To develop a new causal model that reconciles the apparently conflicting results across the three publications, we need to integrate the findings and methodological approaches of each study. The model will aim to explain how AI use in educational settings can simultaneously enhance performance and erode deeper cognitive processes. Here’s a structured approach to this model:\n\n### Evidence\n1. **Product-Quality Focus:**\n   - **Mariñoso et al. (2025)**: AI-assisted students achieved higher academic scores.\n   - **Pan and Li (2025)**: Positive attitudes toward GenAI mediated the relationship between teacher support and learner well-being.\n   - **Peng et al. (2025)**: Meta-analysis reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n\n2. **Process-Quality Focus:**\n   - **Wang and Wu (2025)**: Identified themes of AI’s accessibility and efficiency, gaps in depth and critical thinking, and compensatory verification behaviors.\n   - **Choudhuri et al. (2026)**: Routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n   - **Jose et al. (2025)**: Framed the dual effect as a cognitive paradox between enhancement and erosion, grounded in cognitive load theory, Bloom’s taxonomy, and self-determination theory.\n\n### Assumptions\n1. **Cognitive Load Theory**: AI can reduce extraneous cognitive load, allowing students to focus on task completion, but it may also reduce the intrinsic cognitive load necessary for deep learning (Sweller, 1988).\n2. **Surface vs. Deep Learning**: AI may promote surface-level learning by providing ready-made answers, which can lead to higher short-term performance but may not support long-term retention and'
+PASS MEMORY_UNCHANGED_AFTER_QA_REPLACE_A1 
+CAUSAL_SUMMARY {"tested_removals": 20, "removal_answer_changes": 20, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP SINGLE_A1 P02_01 {'ssd_verify_ms': 148.341, 'h2d_ms': 6.133, 'fusion_ms': 1764.815, 'cid': 'P02_01', 'memory_tokens': 680}
+FUSION_ANSWER SINGLE_A1 A1 "To develop a new causal model that reconciles the apparently conflicting results across the three publications (Mariñoso et al., 2025; Pan and Li, 2025; and the theoretical review in the provided document), we can integrate the theoretical frameworks mentioned in the document: the levels-of-processing framework, desirable difficulties, cognitive load theory, and cognitive offloading research. Here’s a structured approach:\n\n### Evidence\n1. **Mariñoso et al. (2025)**:\n   - **Finding**: AI-assisted group achieved significantly higher academic scores in designing mathematical learning situations.\n   - **Context**: Undergraduate early-childhood-education students.\n   - **Interpretation**: AI reduced extraneous cognitive load, allowing learners to focus more on germane processing and higher-level conceptual work.\n\n2. **Pan and Li (2025)**:\n   - **Finding**: (Assumed) AI-assisted group showed mixed or no significant improvement in critical thinking tasks.\n   - **Context**: (Assumed) Different population, tasks, or tools.\n   - **Interpretation**: AI may have facilitated surface-level processing but not deep cognitive processing.\n\n3. **Theoretical Review**:\n   - **Finding**: Product gains may diverge from durable learning.\n   - **Context**: General educational settings.\n   - **Interpretation**: AI can lead to short-term performance gains but may not always enhance long-term learning or critical thinking.\n\n### Assumptions\n1. **Levels of Processing**:\n   - **Assumption**: AI can facilitate both surface and deep processing, but the level of processing depends on the task and the learner's engagement.\n   - **Source**: Craik and Lockhart (1972).\n\n2. **Desirable Difficulties**:\n   - **Assumption**: AI can create a balance between reducing extraneous load"
+PASS MEMORY_UNCHANGED_AFTER_QA_SINGLE_A1 
+CAUSAL_SUMMARY {"tested_removals": 20, "removal_answer_changes": 20, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REVERSE_A1 P01_01 {'ssd_verify_ms': 154.744, 'h2d_ms': 6.269, 'fusion_ms': 1757.131, 'cid': 'P01_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REVERSE_A1 P03_01 {'ssd_verify_ms': 153.471, 'h2d_ms': 6.342, 'fusion_ms': 3540.06, 'cid': 'P03_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP REVERSE_A1 P02_00 {'ssd_verify_ms': 150.332, 'h2d_ms': 6.355, 'fusion_ms': 4978.173, 'cid': 'P02_00', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REVERSE_A1 P02_02 {'ssd_verify_ms': 149.643, 'h2d_ms': 6.077, 'fusion_ms': 6367.033, 'cid': 'P02_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REVERSE_A1 P02_01 {'ssd_verify_ms': 151.786, 'h2d_ms': 6.219, 'fusion_ms': 7812.246, 'cid': 'P02_01', 'memory_tokens': 3280}
+FUSION_ANSWER REVERSE_A1 A1 '### Causal Model to Reconcile Conflicting Results\n\n#### Evidence\n1. **Product-Oriented Studies:**\n   - **Mariñoso et al. (2025)**: AI-assisted students achieved higher academic scores in designing mathematical learning situations compared to those using traditional resources.\n   - **Peng et al. (2025)**: Meta-analysis of 56 experimental studies reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n\n2. **Process-Oriented Studies:**\n   - **Wang and Wu (2025)**: Identified gaps in depth, interpretation, and critical thinking among students using AI, leading to compensatory verification behaviors.\n   - **Choudhuri et al. (2026)**: Found that trust-driven routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n\n#### Assumptions\n1. **Cognitive Load Theory (Sweller et al., 2011)**: AI can reduce extraneous cognitive load, allowing learners to focus more on germane processing and higher-level conceptual work.\n2. **Levels-of-Processing Framework (Craik and Lockhart, 1972)**: Deeper processing leads to better long-term retention and transfer of knowledge.\n3. **Desirable Difficulties (Bjork and Bjork, 2011)**: Learning is more effective when it involves some level of challenge and effort.\n4. **Cognitive Offloading (Risko and Gilbert, 2016)**: Reliance on external tools can reduce the effort needed for internalization, potentially leading to surface-level processing.\n\n#### Predictions\n1. **Short-Term Performance Gains**: AI can enhance short-term performance by reducing extraneous cognitive load and providing'
+PASS MEMORY_UNCHANGED_AFTER_QA_REVERSE_A1 
+CAUSAL_SUMMARY {"tested_removals": 20, "removal_answer_changes": 20, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TOP2_BASE_A2 P02_01 {'ssd_verify_ms': 150.198, 'h2d_ms': 6.681, 'fusion_ms': 1778.015, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP TOP2_BASE_A2 P03_02 {'ssd_verify_ms': 150.376, 'h2d_ms': 6.158, 'fusion_ms': 3527.466, 'cid': 'P03_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP TOP2_BASE_A2 P03_01 {'ssd_verify_ms': 150.977, 'h2d_ms': 6.43, 'fusion_ms': 5001.908, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP TOP2_BASE_A2 P02_02 {'ssd_verify_ms': 150.481, 'h2d_ms': 6.213, 'fusion_ms': 6396.532, 'cid': 'P02_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP TOP2_BASE_A2 P01_01 {'ssd_verify_ms': 155.257, 'h2d_ms': 6.683, 'fusion_ms': 7798.623, 'cid': 'P01_01', 'memory_tokens': 3280}
+FUSION_ANSWER TOP2_BASE_A2 A2 "To design a preregistered randomized experiment that could falsify the proposed causal model, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test whether AI-assisted learning leads to superficial performance gains without enhancing durable, transferable knowledge. Here’s a detailed outline of the experimental design:\n\n### 1. **Research Hypotheses**\n- **H1:** AI-assisted learning will lead to higher immediate performance on product-oriented tasks (e.g., assignment grades) compared to traditional learning.\n- **H2:** AI-assisted learning will not lead to significant improvements in long-term retention and transfer of knowledge compared to traditional learning.\n- **H3:** AI-assisted learning will be associated with more surface-level processing and less deep processing compared to traditional learning.\n\n### 2. **Participants**\n- **Sample Size:** 300 undergraduate students (150 in the AI-assisted group, 150 in the control group).\n- **Recruitment:** Students from a variety of disciplines to ensure generalizability.\n- **Random Assignment:** Randomly assign students to either the AI-assisted group or the control group.\n\n### 3. **Interventions**\n- **AI-Assisted Group:** Students will use an AI tool (e.g., ChatGPT) to complete a series of learning tasks over a 12-week period. The AI tool will provide support in the form of content generation, feedback, and problem-solving assistance.\n- **Control Group:** Students will complete the same learning tasks using traditional resources (e.g., textbooks, lectures, peer discussions).\n\n### 4. **Measures**\n- **Immediate Performance (Product-Oriented):**\n  - **Assignment Grades:** Scores on weekly assignments.\n  - **Self-Reported Attitudes:** Surveys measuring students' attitudes toward the learning process, including"
+PASS MEMORY_UNCHANGED_AFTER_QA_TOP2_BASE_A2 
+CAUSAL_SUMMARY {"tested_removals": 20, "removal_answer_changes": 20, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A2_0 P03_02 {'ssd_verify_ms': 146.189, 'h2d_ms': 6.0, 'fusion_ms': 1764.127, 'cid': 'P03_02', 'memory_tokens': 680}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A2_0 P03_01 {'ssd_verify_ms': 147.632, 'h2d_ms': 6.262, 'fusion_ms': 3522.796, 'cid': 'P03_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A2_0 P02_02 {'ssd_verify_ms': 152.861, 'h2d_ms': 6.224, 'fusion_ms': 5002.955, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A2_0 P01_01 {'ssd_verify_ms': 152.07, 'h2d_ms': 6.265, 'fusion_ms': 6393.225, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A2_0 A2 'To design a preregistered randomized experiment to falsify the proposed causal model regarding the impact of AI use on creative learning processes and outcomes, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. Here is a detailed plan:\n\n### 1. Research Hypotheses\n- **H1:** Assistive AI use will positively impact multidimensional artistic performance, perceived learning support, creative experience, skill transfer, learner agency, and development-oriented learning outcomes.\n- **H2:** Content-generative AI use will negatively impact multidimensional artistic performance, perceived learning support, creative experience, skill transfer, learner agency, and development-oriented learning outcomes.\n\n### 2. Participants\n- **Sample Size:** 200 undergraduate art students (100 in the assistive AI group, 100 in the content-generative AI group).\n- **Recruitment:** Students will be recruited from an undergraduate art course at a university. They will be randomly assigned to one of the two groups.\n\n### 3. Interventions\n- **Assistive AI Group:** Students will use AI tools that provide suggestions, feedback, and guidance on their creative processes (e.g., idea generation, method selection, reflection on alternatives).\n- **Content-generative AI Group:** Students will use AI tools that generate content (e.g., images, text, designs) that they can incorporate into their final projects.\n\n### 4. Measures\n- **Multidimensional Artistic Performance:** Assessed through a final creative-performance assessment by a panel of art instructors.\n- **Perceived Learning Support:** Measured using a questionnaire with items like "The AI tool provided useful feedback" and "The AI tool helped me clarify my ideas."\n- **Creative Experience:** Measured using a questionnaire with items like "I felt inspired while using the AI tool" and "The AI tool enhanced my creative'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A2_0 
+CAUSAL_SUMMARY {"tested_removals": 21, "removal_answer_changes": 21, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A2_1 P02_01 {'ssd_verify_ms': 153.766, 'h2d_ms': 6.339, 'fusion_ms': 1772.697, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A2_1 P03_01 {'ssd_verify_ms': 152.436, 'h2d_ms': 6.127, 'fusion_ms': 3558.575, 'cid': 'P03_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A2_1 P02_02 {'ssd_verify_ms': 152.662, 'h2d_ms': 6.111, 'fusion_ms': 4998.143, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A2_1 P01_01 {'ssd_verify_ms': 150.858, 'h2d_ms': 6.125, 'fusion_ms': 6294.824, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A2_1 A2 'To design a preregistered randomized experiment that could falsify the proposed causal model, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test the hypothesis that AI use in education can lead to product gains (improved performance on specific tasks) but may not necessarily lead to durable, transferable learning (deep cognitive processing and long-term retention).\n\n### Study Design\n\n#### 1. **Interventions**\n- **Control Group**: Students receive traditional learning resources and methods.\n- **AI-Assisted Group**: Students have access to AI tools for learning and task completion.\n  - **Subgroups**:\n    - **Assistive AI**: AI provides support in the form of hints, feedback, and guidance.\n    - **Content-Generative AI**: AI generates content, such as solutions, essays, or creative outputs.\n\n#### 2. **Measures**\n- **Primary Outcome Measures**:\n  - **Product Quality**: Scores on specific tasks (e.g., assignment grades, project evaluations).\n  - **Process Quality**: Measures of cognitive processing depth, critical thinking, and metacognitive strategies.\n  - **Long-term Retention**: Scores on delayed post-tests (e.g., 1 month after the initial assessment).\n  - **Transferability**: Performance on tasks that require the application of learned skills in new contexts.\n\n- **Secondary Outcome Measures**:\n  - **Student Attitudes**: Surveys measuring attitudes toward AI, perceived well-being, and intrinsic motivation.\n  - **Cognitive Load**: Self-reports and physiological measures (e.g., heart rate variability) to assess cognitive load during task completion.\n  - **Metacognitive Strategies**: Observations and self-reports of the strategies students use to verify and cross-check AI outputs.\n\n#### 3. **Confounders**\n- **Prior Knowledge**: Pre-test scores to control'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A2_1 
+CAUSAL_SUMMARY {"tested_removals": 22, "removal_answer_changes": 22, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A2_2 P02_01 {'ssd_verify_ms': 154.07, 'h2d_ms': 6.621, 'fusion_ms': 1765.265, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP DROP_A2_2 P03_02 {'ssd_verify_ms': 151.964, 'h2d_ms': 6.175, 'fusion_ms': 3561.583, 'cid': 'P03_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A2_2 P02_02 {'ssd_verify_ms': 153.28, 'h2d_ms': 6.58, 'fusion_ms': 5007.661, 'cid': 'P02_02', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A2_2 P01_01 {'ssd_verify_ms': 151.836, 'h2d_ms': 6.247, 'fusion_ms': 6392.763, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A2_2 A2 "To design a preregistered randomized experiment that could falsify the proposed causal model, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test the hypothesis that AI integration in educational settings can lead to product gains (improved performance on immediate tasks) but may not necessarily result in durable, transferable learning (long-term retention and application of knowledge).\n\n### Study Design\n\n#### 1. **Interventions**\n- **Control Group**: Students receive traditional learning resources and methods.\n- **AI-Assisted Group**: Students have access to AI tools for learning and task completion. This group is further divided into:\n  - **Assistive AI**: AI provides support in the form of hints, feedback, and scaffolding.\n  - **Content-Generative AI**: AI generates content, such as solutions, essays, or creative outputs.\n\n#### 2. **Measures**\n- **Primary Outcome Measures**:\n  - **Product Quality**: Immediate task performance (e.g., assignment grades, test scores).\n  - **Durable Learning**: Long-term retention and transfer of knowledge (e.g., delayed post-test, application of knowledge in new contexts).\n- **Secondary Outcome Measures**:\n  - **Metacognitive Strategies**: Use of self-regulation, critical thinking, and verification behaviors.\n  - **Perceived Learning Support**: Student reports on how AI supported their learning.\n  - **Creative Outcomes**: Quality of creative work, originality, and authorship.\n  - **Learner Agency**: Sense of ownership and control over the learning process.\n\n#### 3. **Confounders**\n- **Prior Knowledge**: Pre-test to measure students' baseline knowledge.\n- **Technophilic Motivations**: Survey to assess students' attitudes towards technology.\n- **Computer Self-Efficacy**: Survey to measure students' confidence in using technology"
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A2_2 
+CAUSAL_SUMMARY {"tested_removals": 23, "removal_answer_changes": 23, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A2_3 P02_01 {'ssd_verify_ms': 153.546, 'h2d_ms': 6.269, 'fusion_ms': 1765.788, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP DROP_A2_3 P03_02 {'ssd_verify_ms': 152.467, 'h2d_ms': 6.604, 'fusion_ms': 3556.375, 'cid': 'P03_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A2_3 P03_01 {'ssd_verify_ms': 155.487, 'h2d_ms': 6.281, 'fusion_ms': 5001.361, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A2_3 P01_01 {'ssd_verify_ms': 152.278, 'h2d_ms': 6.389, 'fusion_ms': 6396.979, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A2_3 A2 "To design a preregistered randomized experiment that could falsify the proposed causal model, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test the hypotheses derived from the theoretical framework, particularly focusing on the process–outcome decoupling and the impact of AI use on both immediate performance and long-term learning outcomes.\n\n### 1. **Interventions**\n\n**1.1. Control Group:**\n- **No AI Assistance:** Students complete tasks without any AI support.\n\n**1.2. Experimental Groups:**\n- **Assistive AI Use:** Students have access to AI tools that provide support in the form of suggestions, feedback, and guidance but do not generate content.\n- **Content-Generative AI Use:** Students have access to AI tools that can generate content, such as text, images, or solutions to problems.\n\n### 2. **Measures**\n\n**2.1. Pre-Intervention Measures:**\n- **Baseline Cognitive Load:** Measure students' baseline cognitive load using self-report scales (e.g., NASA-TLX).\n- **Prior Knowledge:** Assess students' prior knowledge of the subject matter using a pre-test.\n- **Creativity and Artistic Skills:** Use a pre-test to measure students' baseline creativity and artistic skills.\n\n**2.2. In-Intervention Measures:**\n- **Cognitive Load:** Measure cognitive load during the task using self-report scales.\n- **Process Support:** Assess the perceived level of support from AI using a questionnaire.\n- **Creative Experience:** Measure the quality of the creative experience using a questionnaire.\n- **Learner Agency:** Assess students' sense of agency and control over their learning using a questionnaire.\n\n**2.3. Post-Intervention Measures:**\n- **Final Creative Performance:** Evaluate the final creative output using a rubric that assesses creativity,"
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A2_3 
+CAUSAL_SUMMARY {"tested_removals": 24, "removal_answer_changes": 24, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A2_4 P02_01 {'ssd_verify_ms': 154.015, 'h2d_ms': 6.317, 'fusion_ms': 1755.133, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP DROP_A2_4 P03_02 {'ssd_verify_ms': 153.653, 'h2d_ms': 6.38, 'fusion_ms': 3564.124, 'cid': 'P03_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A2_4 P03_01 {'ssd_verify_ms': 153.661, 'h2d_ms': 6.188, 'fusion_ms': 4961.101, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A2_4 P02_02 {'ssd_verify_ms': 154.241, 'h2d_ms': 6.34, 'fusion_ms': 6420.335, 'cid': 'P02_02', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A2_4 A2 'To design a preregistered randomized experiment that could falsify the proposed causal model, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test whether the use of GenAI in educational settings leads to product gains that are superficial and do not translate into durable, transferable knowledge. Here is a detailed outline of the experimental design:\n\n### 1. **Interventions**\n- **Control Group**: Students receive traditional learning resources and methods.\n- **Experimental Group 1**: Students use GenAI tools to assist with their learning tasks.\n- **Experimental Group 2**: Students use GenAI tools but are also provided with structured metacognitive prompts to encourage deeper processing.\n\n### 2. **Measures**\n- **Primary Outcome Measures**:\n  - **Product Quality**: Assignment grades, project scores, and other performance metrics.\n  - **Durable Learning**: Long-term retention and transfer of knowledge, measured through delayed post-tests and application tasks.\n- **Secondary Outcome Measures**:\n  - **Metacognitive Strategies**: Self-reports and observational data on the use of metacognitive strategies.\n  - **Critical Thinking**: Tasks that require analysis, evaluation, and synthesis of information.\n  - **Intrinsic Motivation**: Self-reports using validated scales (e.g., Intrinsic Motivation Inventory).\n  - **Trust in AI**: Self-reports on the level of trust in AI tools.\n\n### 3. **Confounders**\n- **Prior Knowledge**: Pre-test to measure baseline knowledge.\n- **Cognitive Load**: Measures of cognitive load during learning tasks.\n- **Individual Differences**: Measures of prior experience with AI, computer self-efficacy, and technophilic motivations.\n- **Learning Environment**: Consistency in the learning environment across groups.\n\n### 4. **Discriminating Outcomes**\n- **Product Quality vs.'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A2_4 
+CAUSAL_SUMMARY {"tested_removals": 25, "removal_answer_changes": 25, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REPLACE_A2 P02_00 {'ssd_verify_ms': 154.356, 'h2d_ms': 6.177, 'fusion_ms': 1779.363, 'cid': 'P02_00', 'memory_tokens': 680}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP REPLACE_A2 P03_02 {'ssd_verify_ms': 153.384, 'h2d_ms': 6.162, 'fusion_ms': 3553.529, 'cid': 'P03_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REPLACE_A2 P03_01 {'ssd_verify_ms': 154.776, 'h2d_ms': 6.247, 'fusion_ms': 4941.237, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REPLACE_A2 P02_02 {'ssd_verify_ms': 148.654, 'h2d_ms': 5.817, 'fusion_ms': 6261.415, 'cid': 'P02_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REPLACE_A2 P01_01 {'ssd_verify_ms': 151.102, 'h2d_ms': 6.226, 'fusion_ms': 7812.463, 'cid': 'P01_01', 'memory_tokens': 3280}
+FUSION_ANSWER REPLACE_A2 A2 'To design a preregistered randomized experiment that could falsify the proposed causal model regarding the impact of GenAI on learning processes and outcomes, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test whether GenAI enhances learning in a manner that produces durable, transferable knowledge or whether it primarily enhances performance without deepening cognitive processing.\n\n### Study Design\n\n#### 1. **Interventions:**\n- **Control Group:** Students receive traditional learning resources (textbooks, lectures, and standard assignments).\n- **Experimental Group 1:** Students use GenAI tools (e.g., ChatGPT) to assist with their learning, focusing on content generation (e.g., generating summaries, answers to questions).\n- **Experimental Group 2:** Students use GenAI tools to assist with their learning, focusing on process support (e.g., providing feedback, suggesting study strategies, and encouraging critical thinking).\n\n#### 2. **Measures:**\n- **Primary Outcome Measures:**\n  - **Short-term Performance:** Assignment grades, quiz scores, and immediate post-test scores.\n  - **Long-term Retention:** Delayed post-test scores (e.g., 1 month after the initial test) to assess retention.\n  - **Transfer of Knowledge:** Performance on novel tasks that require the application of learned concepts in different contexts.\n- **Secondary Outcome Measures:**\n  - **Critical Thinking:** Scores on standardized critical thinking assessments (e.g., Watson-Glaser Critical Thinking Appraisal).\n  - **Metacognitive Skills:** Self-report measures of metacognitive awareness and strategies (e.g., Metacognitive Awareness Inventory).\n  - **Intrinsic Motivation:** Self-report measures of intrinsic motivation (e.g., Intrinsic Motivation Inventory).\n\n#### 3. **Confounders:**\n- **Prior Knowledge:** Pre-test scores to control for'
+PASS MEMORY_UNCHANGED_AFTER_QA_REPLACE_A2 
+CAUSAL_SUMMARY {"tested_removals": 25, "removal_answer_changes": 25, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP SINGLE_A2 P02_01 {'ssd_verify_ms': 154.924, 'h2d_ms': 6.301, 'fusion_ms': 1766.469, 'cid': 'P02_01', 'memory_tokens': 680}
+FUSION_ANSWER SINGLE_A2 A2 "To design a preregistered randomized experiment that could falsify the proposed causal model, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The experiment should be structured to test the hypotheses derived from the theoretical framework, particularly focusing on the critical-thinking paradox and the differentiated three-level framework of AI integration.\n\n### Experimental Design\n\n#### 1. **Interventions**\n- **AI-Assisted Group**: Participants will use an AI tool to assist them in a learning task. The AI tool will be designed to support surface, intermediate, and deep cognitive processing, depending on the task.\n- **Control Group**: Participants will use traditional resources (e.g., textbooks, lectures) to complete the same learning task.\n\n#### 2. **Measures**\n- **Primary Outcome Measures**:\n  - **Product Gains**: Academic scores on a standardized test or task (e.g., designing mathematical learning situations).\n  - **Process Measures**: Real-time cognitive load, as measured by self-reports and physiological indicators (e.g., heart rate variability, eye-tracking data).\n  - **Cognitive Debt**: Long-term retention and transfer of knowledge, measured through follow-up tests and real-world application tasks.\n- **Secondary Outcome Measures**:\n  - **Critical Thinking**: Performance on tasks that require higher-order thinking, such as problem-solving and reasoning.\n  - **Episodic and Habitual Offloading**: Frequency and nature of offloading behaviors, tracked through chat-log prompt dynamics and Experience Sampling Methodology (ESM).\n\n#### 3. **Confounders**\n- **Prior Knowledge**: Pre-test to measure participants' baseline knowledge of the subject matter.\n- **Cognitive Abilities**: Assessments of working memory, attention, and other cognitive abilities.\n- **Motivation and Engagement**: Self-report measures to control for individual differences in motivation and engagement.\n- **Task Complexity**: Ensure that"
+PASS MEMORY_UNCHANGED_AFTER_QA_SINGLE_A2 
+CAUSAL_SUMMARY {"tested_removals": 25, "removal_answer_changes": 25, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REVERSE_A2 P01_01 {'ssd_verify_ms': 154.571, 'h2d_ms': 6.466, 'fusion_ms': 1778.522, 'cid': 'P01_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REVERSE_A2 P02_02 {'ssd_verify_ms': 154.355, 'h2d_ms': 6.46, 'fusion_ms': 3548.438, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REVERSE_A2 P03_01 {'ssd_verify_ms': 154.508, 'h2d_ms': 6.17, 'fusion_ms': 4953.776, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP REVERSE_A2 P03_02 {'ssd_verify_ms': 149.949, 'h2d_ms': 6.231, 'fusion_ms': 6267.007, 'cid': 'P03_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REVERSE_A2 P02_01 {'ssd_verify_ms': 154.534, 'h2d_ms': 6.142, 'fusion_ms': 7828.023, 'cid': 'P02_01', 'memory_tokens': 3280}
+FUSION_ANSWER REVERSE_A2 A2 "To design a preregistered randomized experiment that could falsify the proposed causal model, we need to carefully specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test whether different forms of AI use (assistive vs. content-generative) lead to different outcomes in terms of process support, artistic outcomes, authorship, and longer-term creative development.\n\n### Study Design\n\n#### 1. **Interventions**\n- **Assistive AI Use**: Students are provided with AI tools that offer suggestions, feedback, and guidance but do not generate content. Examples include AI-driven critiques, idea generation, and methodological advice.\n- **Content-Generative AI Use**: Students are provided with AI tools that generate content, such as images, text, or designs, which students can use directly in their projects.\n\n#### 2. **Participants**\n- **Sample Size**: 133 undergraduate art students (as in the original study).\n- **Randomization**: Students are randomly assigned to one of three groups: Assistive AI, Content-Generative AI, or Control (no AI).\n\n#### 3. **Measures**\n- **Prior Course Performance**: Grades and assessments from previous courses.\n- **Final Creative-Performance Assessment**: A comprehensive evaluation of the final project, including artistic quality, originality, and technical skill.\n- **Post-Project Questionnaire**: \n  - **Perceived Learning Support**: Students' self-reported feelings of support and productivity.\n  - **Creative Experience**: Students' self-reported engagement, enjoyment, and sense of ownership.\n  - **Skill Transfer**: Students' self-reported ability to apply learned skills to new contexts.\n  - **Learner Agency**: Students' self-reported confidence in their creative decisions and ability to explain their work.\n\n#### 4. **Confounders**\n- **Prior Artistic Experience**: Students' previous"
+PASS MEMORY_UNCHANGED_AFTER_QA_REVERSE_A2 
+CAUSAL_SUMMARY {"tested_removals": 25, "removal_answer_changes": 25, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TOP2_BASE_A3 P02_01 {'ssd_verify_ms': 154.866, 'h2d_ms': 6.667, 'fusion_ms': 1758.937, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP TOP2_BASE_A3 P02_02 {'ssd_verify_ms': 152.998, 'h2d_ms': 6.619, 'fusion_ms': 3546.041, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP TOP2_BASE_A3 P03_01 {'ssd_verify_ms': 154.845, 'h2d_ms': 6.156, 'fusion_ms': 4961.825, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP TOP2_BASE_A3 P01_01 {'ssd_verify_ms': 153.491, 'h2d_ms': 6.121, 'fusion_ms': 6391.367, 'cid': 'P01_01', 'memory_tokens': 2630}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP TOP2_BASE_A3 P03_00 {'ssd_verify_ms': 153.794, 'h2d_ms': 6.427, 'fusion_ms': 7776.469, 'cid': 'P03_00', 'memory_tokens': 3280}
+FUSION_ANSWER TOP2_BASE_A3 A3 "The most consequential unresolved contradiction in the provided text is the **critical thinking paradox**—the apparent dissociation between the positive short-term performance gains observed in AI-assisted learning and the concerns about the depth and durability of the learning process. This paradox is evident in the contrast between the efficiency evidence (product gains) and the shallow-processing concern (process limitations).\n\n### Rival Explanations:\n\n1. **Product-Process Dissociation (Critical Thinking Paradox):**\n   - **Explanation:** AI tools enhance the efficiency and quality of the final product (e.g., higher grades, better creative outputs) but may not support deep cognitive processing or long-term retention and transfer of knowledge. This is because AI can reduce extraneous cognitive load, allowing students to produce better work in the short term, but it may also promote surface-level processing by providing ready-made answers that bypass the cognitive struggle necessary for deep understanding.\n   - **Implication:** If this explanation is correct, the use of AI in education may lead to superficial learning that does not translate into durable, transferable knowledge.\n\n2. **Genuine Heterogeneity:**\n   - **Explanation:** The mixed findings in the literature are due to genuine differences in tasks, populations, tools, and designs. Different studies may show varying results because they are not measuring the same constructs or because the context and implementation of AI vary widely. This heterogeneity means that the positive and negative findings are both valid and reflect the complex, context-dependent nature of AI's impact on learning.\n   - **Implication:** If this explanation is correct, the effectiveness of AI in education is highly context-dependent, and a one-size-fits-all approach is not appropriate. Educators need to carefully tailor AI use to specific learning objectives and contexts.\n\n### Smallest Decisive Test:\n\n**Test Design:**\n- **Participants:** A sample of undergraduate students from a variety of disciplines.\n-"
+PASS MEMORY_UNCHANGED_AFTER_QA_TOP2_BASE_A3 
+CAUSAL_SUMMARY {"tested_removals": 25, "removal_answer_changes": 25, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A3_0 P02_02 {'ssd_verify_ms': 153.74, 'h2d_ms': 6.376, 'fusion_ms': 1756.652, 'cid': 'P02_02', 'memory_tokens': 680}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A3_0 P03_01 {'ssd_verify_ms': 155.307, 'h2d_ms': 6.385, 'fusion_ms': 3551.684, 'cid': 'P03_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A3_0 P01_01 {'ssd_verify_ms': 152.406, 'h2d_ms': 6.334, 'fusion_ms': 4980.52, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_A3_0 P03_00 {'ssd_verify_ms': 152.995, 'h2d_ms': 6.426, 'fusion_ms': 6387.73, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A3_0 A3 '### The Most Consequential Unresolved Contradiction\n\nThe most consequential unresolved contradiction in the provided information is the **process–outcome decoupling** in AI-supported learning. Specifically, while AI tools can enhance the efficiency and quality of student outputs, they may not necessarily support deep, durable, and transferable learning. This contradiction is evident in the following findings:\n\n1. **Positive Short-Term Effects on Product Quality**: Studies show that AI can improve assignment grades, self-reported attitudes, and perceived well-being (Peng et al., 2025).\n2. **Negative Impact on Deep Learning and Critical Thinking**: Other studies indicate that AI use can lead to surface-level processing, reduced reflection, and disengagement from deep cognitive tasks (Wang and Wu, 2025; Choudhuri et al., 2026).\n\n### Rival Explanations\n\n#### Explanation 1: AI as a Cognitive Support Tool\n**Hypothesis**: AI tools primarily function as cognitive support, enhancing the efficiency and quality of student outputs by providing ready-made solutions and reducing cognitive load. This can lead to better short-term performance but may not foster deep, long-term learning.\n\n**Supporting Evidence**:\n- **Positive Short-Term Effects**: AI improves assignment grades and self-reported attitudes (Peng et al., 2025).\n- **Cognitive Offloading**: Students may rely on AI to reduce the effort needed for internalization (Risko and Gilbert, 2016).\n\n#### Explanation 2: AI as a Cognitive Crutch\n**Hypothesis**: AI tools can become a cognitive crutch, leading students to engage in surface-level processing and reducing their engagement in deep cognitive tasks. This can result in short-term gains but long-term deficits in critical thinking and knowledge transfer.\n\n**Supporting Evidence**:\n- **Surface-Level Processing**: Students use'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A3_0 
+CAUSAL_SUMMARY {"tested_removals": 26, "removal_answer_changes": 26, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A3_1 P02_01 {'ssd_verify_ms': 149.099, 'h2d_ms': 5.864, 'fusion_ms': 1763.722, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A3_1 P03_01 {'ssd_verify_ms': 149.369, 'h2d_ms': 5.99, 'fusion_ms': 3470.881, 'cid': 'P03_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A3_1 P01_01 {'ssd_verify_ms': 148.693, 'h2d_ms': 6.148, 'fusion_ms': 4869.974, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_A3_1 P03_00 {'ssd_verify_ms': 148.568, 'h2d_ms': 5.995, 'fusion_ms': 6223.086, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A3_1 A3 'The most consequential unresolved contradiction in the provided text is the **critical thinking paradox**—the apparent dissociation between product gains and durable learning. This paradox is evident in the mixed findings of studies on the use of generative AI in education, where AI-assisted groups often show significant performance gains on immediate assessments but may not demonstrate corresponding improvements in deeper, more sustainable learning outcomes.\n\n### Rival Explanations:\n\n1. **Product-Process Dissociation (Critical Thinking Paradox):**\n   - **Explanation:** AI tools can enhance immediate performance by reducing extraneous cognitive load and providing just-in-time support, but they may not necessarily foster deeper cognitive processing, such as critical thinking, problem-solving, and long-term retention. This can lead to a situation where students perform well on immediate assessments but fail to internalize the material or develop the skills needed for long-term success.\n   - **Implication:** If this explanation is correct, the use of AI in education should be carefully calibrated to ensure that it supports both immediate performance and deeper learning. This might involve designing AI interventions that explicitly promote higher-order thinking and long-term retention.\n\n2. **Genuine Heterogeneity:**\n   - **Explanation:** The mixed findings in the literature may be due to genuine differences in the tasks, populations, tools, and designs used in different studies. For example, some tasks may be more amenable to AI assistance, leading to better performance gains, while others may require more intrinsic cognitive effort, leading to less significant gains.\n   - **Implication:** If this explanation is correct, the effectiveness of AI in education is highly context-dependent. Educators and researchers should focus on identifying the specific conditions under which AI is most beneficial and designing interventions that are tailored to these conditions.\n\n### Smallest Decisive Test:\n\n**Test Design:**\n- **Participants:** Undergraduate students in a course that requires both immediate performance (e.g'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A3_1 
+CAUSAL_SUMMARY {"tested_removals": 27, "removal_answer_changes": 27, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A3_2 P02_01 {'ssd_verify_ms': 149.564, 'h2d_ms': 6.287, 'fusion_ms': 1755.196, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A3_2 P02_02 {'ssd_verify_ms': 150.274, 'h2d_ms': 6.09, 'fusion_ms': 3468.906, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A3_2 P01_01 {'ssd_verify_ms': 151.247, 'h2d_ms': 6.132, 'fusion_ms': 4849.448, 'cid': 'P01_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_A3_2 P03_00 {'ssd_verify_ms': 150.505, 'h2d_ms': 5.932, 'fusion_ms': 6227.865, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A3_2 A3 'The most consequential unresolved contradiction in the provided text is the **critical thinking paradox**—the apparent discrepancy between the positive short-term performance gains and the potential negative long-term effects on deep cognitive processing and durable learning when using GenAI in education.\n\n### Rival Explanations:\n\n1. **Product-Process Dissociation (Critical Thinking Paradox):**\n   - **Explanation:** GenAI tools can enhance the efficiency and quality of student work (product) by reducing extraneous cognitive load and providing ready-made solutions. However, this efficiency may lead to surface-level processing, where students rely on AI to bypass the cognitive struggle necessary for deep conceptual understanding and long-term retention (process).\n   - **Implication:** This explanation suggests that while AI can help students produce better work in the short term, it may undermine their ability to develop the deep, transferable knowledge and critical thinking skills needed for long-term success.\n\n2. **Genuine Heterogeneity:**\n   - **Explanation:** The mixed findings in the literature are due to genuine differences in tasks, populations, tools, and designs. Different studies may show varying results because the specific context and implementation of AI tools can significantly influence outcomes.\n   - **Implication:** This explanation suggests that the effectiveness of AI in education is highly context-dependent, and there is no one-size-fits-all answer. Some implementations may lead to both short-term and long-term benefits, while others may not.\n\n### Smallest Decisive Test:\n\n**Test Design:**\n- **Participants:** A sample of undergraduate students from a variety of disciplines.\n- **Conditions:**\n  - **Condition 1 (AI-Assisted):** Students use AI tools to complete a series of tasks over a semester.\n  - **Condition 2 (Traditional):** Students complete the same tasks using traditional resources.\n- **Outcome Measures:**\n  - **Short-Term Performance:** Immediate assignment grades and'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A3_2 
+CAUSAL_SUMMARY {"tested_removals": 28, "removal_answer_changes": 28, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A3_3 P02_01 {'ssd_verify_ms': 150.883, 'h2d_ms': 6.58, 'fusion_ms': 1776.636, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A3_3 P02_02 {'ssd_verify_ms': 150.836, 'h2d_ms': 6.106, 'fusion_ms': 3483.988, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A3_3 P03_01 {'ssd_verify_ms': 150.496, 'h2d_ms': 5.881, 'fusion_ms': 4868.618, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP DROP_A3_3 P03_00 {'ssd_verify_ms': 148.987, 'h2d_ms': 5.829, 'fusion_ms': 6235.078, 'cid': 'P03_00', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A3_3 A3 'The most consequential unresolved contradiction in the provided text is the **critical thinking paradox**—the apparent discrepancy between the positive short-term performance gains observed in AI-assisted learning and the concerns about the depth and durability of the learning outcomes. This paradox is evident in the contrast between the efficiency evidence (product gains) and the shallow-processing concern (process limitations).\n\n### Rival Explanations:\n\n1. **Product-Process Dissociation (Critical Thinking Paradox):**\n   - **Explanation:** AI tools enhance the efficiency and quality of the final product (e.g., higher grades, positive attitudes) but may not necessarily lead to deep, durable, or transferable learning. This is because AI can reduce extraneous cognitive load, allowing students to produce better work, but it may also promote surface-level processing by providing ready-made answers that bypass the cognitive struggle necessary for deep understanding.\n   - **Implication:** If this explanation is correct, the use of AI in education may lead to short-term gains but fail to produce long-term benefits in critical thinking and deep conceptual understanding.\n\n2. **Genuine Heterogeneity:**\n   - **Explanation:** The mixed findings in the literature are due to genuine differences in tasks, populations, tools, and designs. Different studies may show different outcomes because they are not measuring the same constructs or because the context and implementation of AI vary widely.\n   - **Implication:** If this explanation is correct, the effectiveness of AI in education is highly context-dependent, and the observed variability in outcomes reflects the diverse nature of educational settings and the specific ways in which AI is used.\n\n### Smallest Decisive Test:\n\n**Test Design:**\n- **Participants:** A sample of undergraduate students from a variety of disciplines.\n- **Conditions:**\n  - **Condition 1 (AI-Assisted):** Students use AI tools to complete a series of tasks designed to assess both short-term performance ('
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A3_3 
+CAUSAL_SUMMARY {"tested_removals": 29, "removal_answer_changes": 29, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP DROP_A3_4 P02_01 {'ssd_verify_ms': 149.883, 'h2d_ms': 5.92, 'fusion_ms': 1766.264, 'cid': 'P02_01', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP DROP_A3_4 P02_02 {'ssd_verify_ms': 150.879, 'h2d_ms': 6.101, 'fusion_ms': 3487.394, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP DROP_A3_4 P03_01 {'ssd_verify_ms': 151.407, 'h2d_ms': 6.124, 'fusion_ms': 4865.156, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP DROP_A3_4 P01_01 {'ssd_verify_ms': 153.147, 'h2d_ms': 6.091, 'fusion_ms': 6270.918, 'cid': 'P01_01', 'memory_tokens': 2630}
+FUSION_ANSWER DROP_A3_4 A3 'The most consequential unresolved contradiction in the provided text is the **critical thinking paradox**—the apparent discrepancy between the positive short-term performance gains and the potential negative impact on deeper cognitive processing and long-term learning outcomes when using generative AI in education.\n\n### Rival Explanations:\n\n1. **Product-Process Dissociation (Critical Thinking Paradox):**\n   - **Explanation:** AI tools can enhance the efficiency and quality of the final product (e.g., higher grades, better creative outputs) but may do so at the cost of deeper cognitive processing and long-term learning. Students may rely on AI to produce high-quality work without engaging in the cognitive struggle necessary for deep understanding and retention.\n   - **Implication:** If this explanation is correct, the use of AI in education may lead to superficial learning that does not translate into durable, transferable knowledge.\n\n2. **Genuine Heterogeneity:**\n   - **Explanation:** The mixed findings in the literature are due to genuine differences in tasks, populations, tools, and designs. Some students and contexts may benefit from AI in ways that promote both short-term performance and long-term learning, while others may not.\n   - **Implication:** If this explanation is correct, the effectiveness of AI in education is highly context-dependent, and a one-size-fits-all approach is inappropriate. Tailored AI strategies that account for individual differences and specific learning objectives are necessary.\n\n### Smallest Decisive Test:\n\n**Design:**\n- **Participants:** A sample of undergraduate students from a variety of disciplines (e.g., early childhood education, STEM, arts).\n- **Conditions:**\n  - **Control Group:** Students complete a task without AI assistance.\n  - **AI-Assisted Group:** Students complete the same task with AI assistance.\n- **Outcome Measures:**\n  - **Short-term Performance:** Immediate task performance (e.g., assignment grades, creative outputs'
+PASS MEMORY_UNCHANGED_AFTER_QA_DROP_A3_4 
+CAUSAL_SUMMARY {"tested_removals": 30, "removal_answer_changes": 30, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REPLACE_A3 P02_00 {'ssd_verify_ms': 149.615, 'h2d_ms': 6.426, 'fusion_ms': 1772.261, 'cid': 'P02_00', 'memory_tokens': 680}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REPLACE_A3 P02_02 {'ssd_verify_ms': 151.453, 'h2d_ms': 6.161, 'fusion_ms': 3507.43, 'cid': 'P02_02', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REPLACE_A3 P03_01 {'ssd_verify_ms': 155.006, 'h2d_ms': 6.102, 'fusion_ms': 4885.06, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REPLACE_A3 P01_01 {'ssd_verify_ms': 151.911, 'h2d_ms': 6.189, 'fusion_ms': 6261.05, 'cid': 'P01_01', 'memory_tokens': 2630}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP REPLACE_A3 P03_00 {'ssd_verify_ms': 151.324, 'h2d_ms': 6.491, 'fusion_ms': 7659.047, 'cid': 'P03_00', 'memory_tokens': 3280}
+FUSION_ANSWER REPLACE_A3 A3 'The most consequential unresolved contradiction in the integration of generative artificial intelligence (GenAI) in education is whether GenAI enhances learning or merely enhances performance while eroding the cognitive processes necessary for deep, durable, and transferable learning. This contradiction is critical because it affects the long-term educational outcomes and the development of critical thinking and problem-solving skills in students.\n\n### Rival Explanations\n\n1. **Enhancement Hypothesis**:\n   - **Explanation**: GenAI tools enhance learning by providing immediate feedback, personalized support, and access to a vast array of information. This support helps students achieve higher academic scores, improve creative thinking, and foster positive attitudes toward learning. The efficiency and accessibility of AI can reduce cognitive load, allowing students to focus on higher-order thinking tasks.\n   - **Evidence**: Studies show that AI-assisted students achieve higher academic scores (Mariñoso et al., 2025), have positive attitudes toward GenAI (Pan and Li, 2025), and show improved creative thinking (Peng et al., 2025).\n\n2. **Erosion Hypothesis**:\n   - **Explanation**: GenAI tools may enhance performance on specific tasks but can lead to shallow processing and a lack of deep cognitive engagement. Students may rely on AI to provide ready-made answers, reducing the cognitive struggle necessary for deep conceptual understanding. This can result in weaker critical thinking, problem-solving, and long-term retention of knowledge.\n   - **Evidence**: Research indicates that students using AI may engage in surface-level processing (Wang and Wu, 2025) and show reduced reflection and critical thinking (Choudhuri et al., 2026).\n\n### Smallest Decisive Test\n\n**Test Design**:\n- **Participants**: A group of undergraduate students from a variety of disciplines.\n- **Conditions**: \n  - **Control'
+PASS MEMORY_UNCHANGED_AFTER_QA_REPLACE_A3 
+CAUSAL_SUMMARY {"tested_removals": 30, "removal_answer_changes": 30, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP SINGLE_A3 P02_01 {'ssd_verify_ms': 153.023, 'h2d_ms': 6.097, 'fusion_ms': 1774.547, 'cid': 'P02_01', 'memory_tokens': 680}
+FUSION_ANSWER SINGLE_A3 A3 'The most consequential unresolved contradiction in the reviewed evidence is the **critical-thinking paradox**: the observation that while GenAI can lead to significant performance gains in product-oriented tasks, these gains may not necessarily translate into deeper, more durable learning or critical thinking skills.\n\n### Rival Explanations\n\n1. **Product-Process Dissociation (Critical-Thinking Paradox):**\n   - **Explanation:** GenAI tools can enhance the efficiency and quality of task completion (product gains) by reducing extraneous cognitive load, but they may not foster the deeper cognitive processing required for durable learning and critical thinking (process gains). This dissociation suggests that while learners may perform better on immediate tasks, they may not develop the long-term cognitive skills needed for critical thinking.\n   - **Implication:** If this explanation holds, it would indicate that the use of GenAI in education should be carefully managed to ensure that it complements, rather than replaces, activities that promote deep cognitive processing.\n\n2. **Genuine Heterogeneity:**\n   - **Explanation:** The observed variation in outcomes across different studies and contexts is due to genuine differences in tasks, populations, tools, and designs. This heterogeneity means that the effectiveness of GenAI in promoting both product and process gains can vary widely depending on specific conditions.\n   - **Implication:** If this explanation is correct, it would suggest that the benefits of GenAI are context-dependent and that a one-size-fits-all approach to its integration in education is not appropriate. Instead, tailored strategies are needed to maximize its potential in different educational settings.\n\n### Smallest Decisive Test\n\n**Test Design:**\n- **Participants:** A sample of undergraduate students from a variety of disciplines.\n- **Conditions:**\n  - **Condition 1 (AI-Assisted):** Students use GenAI tools to complete a series of tasks designed to assess both immediate performance (product gains) and long'
+PASS MEMORY_UNCHANGED_AFTER_QA_SINGLE_A3 
+CAUSAL_SUMMARY {"tested_removals": 30, "removal_answer_changes": 30, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP REVERSE_A3 P03_00 {'ssd_verify_ms': 149.455, 'h2d_ms': 5.889, 'fusion_ms': 1757.121, 'cid': 'P03_00', 'memory_tokens': 680}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP REVERSE_A3 P01_01 {'ssd_verify_ms': 149.547, 'h2d_ms': 5.896, 'fusion_ms': 3475.908, 'cid': 'P01_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP REVERSE_A3 P03_01 {'ssd_verify_ms': 153.871, 'h2d_ms': 6.249, 'fusion_ms': 4850.303, 'cid': 'P03_01', 'memory_tokens': 1980}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP REVERSE_A3 P02_02 {'ssd_verify_ms': 151.023, 'h2d_ms': 6.328, 'fusion_ms': 6216.251, 'cid': 'P02_02', 'memory_tokens': 2630}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP REVERSE_A3 P02_01 {'ssd_verify_ms': 150.605, 'h2d_ms': 5.797, 'fusion_ms': 7589.202, 'cid': 'P02_01', 'memory_tokens': 3280}
+FUSION_ANSWER REVERSE_A3 A3 'The most consequential unresolved contradiction in the literature on generative AI (GenAI) in education is the **critical thinking paradox**: while GenAI can enhance immediate performance and efficiency, it may simultaneously undermine deeper cognitive processing and long-term learning outcomes. This paradox is evident in the mixed findings from various studies, where GenAI shows positive short-term effects on product quality but raises concerns about the depth of learning and critical thinking.\n\n### Rival Explanations\n\n1. **Surface-Level Processing Hypothesis**:\n   - **Explanation**: GenAI tools provide ready-made solutions that reduce the cognitive load on learners, leading to higher immediate performance. However, this efficiency may promote a surface-level approach to learning, where students rely on the tool to bypass the cognitive struggle necessary for deep understanding and long-term retention.\n   - **Implication**: If this hypothesis is correct, the use of GenAI will lead to higher short-term performance but poorer long-term retention and transfer of knowledge.\n\n2. **Cognitive Offloading Hypothesis**:\n   - **Explanation**: GenAI tools can offload cognitive tasks, allowing learners to focus on higher-order thinking and creative tasks. However, this offloading can become habitual, leading to a dependency on the tool and a reduction in the development of independent cognitive skills.\n   - **Implication**: If this hypothesis is correct, the use of GenAI will initially enhance performance and creativity but may lead to a decline in the ability to perform tasks independently over time.\n\n### Smallest Decisive Test\n\n**Method**:\n- **Design**: Conduct a longitudinal study with a pretest, posttest, and follow-up assessment.\n- **Participants**: Randomly assign students to two groups: one using GenAI tools and one using traditional methods.\n- **Tasks**: Assign a complex, open-ended task that requires both immediate performance and long-term retention and transfer of knowledge.\n- **Measures**'
+PASS MEMORY_UNCHANGED_AFTER_QA_REVERSE_A3 
+CAUSAL_SUMMARY {"tested_removals": 30, "removal_answer_changes": 30, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS FILE_SHA_P01_00 
+PASS CARTRIDGE_ID_P01_00 
+PASS CARTRIDGE_TENSOR_SHA_P01_00 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P01_00 {'ssd_verify_ms': 151.852, 'h2d_ms': 6.217, 'fusion_ms': 1756.578, 'cid': 'P01_00', 'memory_tokens': 680}
+PASS FILE_SHA_P01_01 
+PASS CARTRIDGE_ID_P01_01 
+PASS CARTRIDGE_TENSOR_SHA_P01_01 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P01_01 {'ssd_verify_ms': 151.527, 'h2d_ms': 5.913, 'fusion_ms': 3476.206, 'cid': 'P01_01', 'memory_tokens': 1330}
+PASS FILE_SHA_P01_02 
+PASS CARTRIDGE_ID_P01_02 
+PASS CARTRIDGE_TENSOR_SHA_P01_02 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P01_02 {'ssd_verify_ms': 146.158, 'h2d_ms': 5.8, 'fusion_ms': 4647.914, 'cid': 'P01_02', 'memory_tokens': 1954}
+PASS FILE_SHA_P02_00 
+PASS CARTRIDGE_ID_P02_00 
+PASS CARTRIDGE_TENSOR_SHA_P02_00 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P02_00 {'ssd_verify_ms': 150.587, 'h2d_ms': 5.921, 'fusion_ms': 6162.387, 'cid': 'P02_00', 'memory_tokens': 2604}
+PASS FILE_SHA_P02_01 
+PASS CARTRIDGE_ID_P02_01 
+PASS CARTRIDGE_TENSOR_SHA_P02_01 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P02_01 {'ssd_verify_ms': 152.229, 'h2d_ms': 6.058, 'fusion_ms': 7545.39, 'cid': 'P02_01', 'memory_tokens': 3254}
+PASS FILE_SHA_P02_02 
+PASS CARTRIDGE_ID_P02_02 
+PASS CARTRIDGE_TENSOR_SHA_P02_02 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P02_02 {'ssd_verify_ms': 153.966, 'h2d_ms': 6.026, 'fusion_ms': 8898.219, 'cid': 'P02_02', 'memory_tokens': 3904}
+PASS FILE_SHA_P02_03 
+PASS CARTRIDGE_ID_P02_03 
+PASS CARTRIDGE_TENSOR_SHA_P02_03 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P02_03 {'ssd_verify_ms': 29.498, 'h2d_ms': 1.102, 'fusion_ms': 8525.051, 'cid': 'P02_03', 'memory_tokens': 3941}
+PASS FILE_SHA_P03_00 
+PASS CARTRIDGE_ID_P03_00 
+PASS CARTRIDGE_TENSOR_SHA_P03_00 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P03_00 {'ssd_verify_ms': 150.69, 'h2d_ms': 5.991, 'fusion_ms': 10337.674, 'cid': 'P03_00', 'memory_tokens': 4591}
+PASS FILE_SHA_P03_01 
+PASS CARTRIDGE_ID_P03_01 
+PASS CARTRIDGE_TENSOR_SHA_P03_01 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P03_01 {'ssd_verify_ms': 151.842, 'h2d_ms': 5.808, 'fusion_ms': 11675.918, 'cid': 'P03_01', 'memory_tokens': 5241}
+PASS FILE_SHA_P03_02 
+PASS CARTRIDGE_ID_P03_02 
+PASS CARTRIDGE_TENSOR_SHA_P03_02 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P03_02 {'ssd_verify_ms': 151.636, 'h2d_ms': 6.064, 'fusion_ms': 13082.967, 'cid': 'P03_02', 'memory_tokens': 5891}
+PASS FILE_SHA_P03_03 
+PASS CARTRIDGE_ID_P03_03 
+PASS CARTRIDGE_TENSOR_SHA_P03_03 
+NATIVE_FUSION_STEP FULL_NATIVE_REFERENCE P03_03 {'ssd_verify_ms': 41.104, 'h2d_ms': 1.379, 'fusion_ms': 12622.462, 'cid': 'P03_03', 'memory_tokens': 5977}
+FUSION_ANSWER FULL_NATIVE_REFERENCE H1 'The provided text does not specify three distinct publications or their conclusions. Instead, it appears to be a single, cohesive document that discusses the integration of generative artificial intelligence (GenAI) in educational settings, particularly in higher education and creative disciplines. The document synthesizes various studies and reviews to develop a theoretical framework for understanding the impact of GenAI on learning. Here are the main conclusions and themes discussed in the document:\n\n1. **Performance Gains and Efficiency**:\n   - **Mariñoso et al. (2025)**: Found that AI-assisted students achieved higher academic scores in designing mathematical learning situations compared to those using traditional resources.\n   - **Pan and Li (2025)**: Demonstrated that positive attitudes toward GenAI mediated the relationship between teacher support and learner well-being.\n   - **Peng et al. (2025)**: Reported a moderate positive short-term effect of AI-supported learning on creative thinking, though with substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments.\n\n2. **Shallow Processing and Cognitive Offloading**:\n   - **Wang and Wu (2025)**: Identified that while students valued AI’s accessibility and efficiency, they also noted gaps in depth, interpretation, and critical thinking, leading to compensatory verification behaviors.\n   - **Choudhuri et al. (2026)**: Found that routine GenAI use was negatively associated with reflection, critical thinking, and the need for understanding, particularly among students with higher technophilic motivations and computer self-efficacy.\n\n3. **Theoretical Frameworks and Cognitive Paradox**:\n   - The document integrates cognitive load theory, levels-of-processing framework, desirable difficulties, and cognitive offloading research to explain the potential divergence between product gains and durable learning.\n   - It proposes a three-level framework for AI integration, mapping AI'
+FUSION_ANSWER FULL_NATIVE_REFERENCE H2 'The claims supported by empirical evidence and their main limitations are as follows:\n\n### Claims Supported by Empirical Evidence:\n\n1. **Performance Gains with AI-Assisted Learning:**\n   - **Evidence:** Studies like Mariñoso et al. (2025) and Peng et al. (2025) show that AI-assisted students can achieve higher academic scores and demonstrate improved creative thinking in the short term.\n   - **Limitations:** These studies primarily use product-oriented outcome measures (e.g., assignment grades, self-reported attitudes) and lack long-term follow-up assessments. They do not fully address whether AI helps students learn in a manner that produces durable, transferable knowledge.\n\n2. **Positive Attitudes and Well-Being:**\n   - **Evidence:** Pan and Li (2025) found that positive attitudes toward GenAI mediate the relationship between teacher support and learner well-being.\n   - **Limitations:** The study is based on self-reported attitudes and well-being, which may not accurately reflect deeper cognitive processes or long-term educational outcomes.\n\n3. **Moderate Positive Short-Term Effect on Creative Thinking:**\n   - **Evidence:** Peng et al. (2025) reported a moderate positive short-term effect of AI-supported learning on creative thinking.\n   - **Limitations:** The meta-analysis noted substantial heterogeneity in effect sizes and a lack of long-term follow-up assessments, making it difficult to generalize the findings.\n\n### Claims with Mixed or Limited Evidence:\n\n1. **Shallow Processing and Critical Thinking:**\n   - **Evidence:** Wang and Wu (2025) identified gaps in depth, interpretation, and critical thinking among students using AI, and Choudhuri et al. (2026) found that routine AI use was negatively associated with reflection and critical thinking.\n   - **Limitations:** These studies are qualitative and observational'
+FUSION_ANSWER FULL_NATIVE_REFERENCE H3 'After reviewing the three publications, the following conclusions can be drawn:\n\n1. **AI in Creative Education**:\n   - **Assistive vs. Content-Generative AI**: The study by Holmes and Tuomi (2022) and Kasneci et al. (2023) highlights the importance of distinguishing between assistive AI use (e.g., ideation, reference gathering) and content-generative AI use (e.g., producing final work). Assistive AI can support creative processes without undermining student agency, while content-generative AI can lead to process–outcome decoupling, where the visible activity of creative learning is intensified without corresponding gains in internalized competence.\n   - **Educational Outcomes**: The study suggests that AI-supported creative processes may lead to perceived support and efficiency but may not necessarily improve long-term creative development, authorship, and judgment. This is supported by the concept of cognitive offloading, where reliance on external tools can reduce the effort needed for internalization (Risko and Gilbert, 2016).\n\n2. **GenAI in Higher Education**:\n   - **Performance vs. Learning**: The review by Jose et al. (2025) and the meta-analysis by Peng et al. (2025) indicate that GenAI can enhance academic performance and creative thinking in the short term. However, these gains may be superficial, and there is a risk of cognitive erosion, where the ease of task completion may reduce the depth of learning and critical thinking.\n   - **Cognitive Paradox**: The critical thinking paradox, as framed by Jose et al. (2025), suggests that while GenAI can improve performance, it may also lead to shallower processing and reduced engagement in deep cognitive tasks. This is supported by the findings of Wang and Wu (2025) and Choudhuri et al'
+FUSION_ANSWER FULL_NATIVE_REFERENCE A1 '### Causal Model to Reconcile Conflicting Results in AI-Enhanced Learning\n\n#### Evidence\n1. **Mariñoso et al. (2025)**: AI-assisted students achieved higher academic scores in designing mathematical learning situations compared to a control group using traditional resources.\n2. **Pan and Li (2025)**: Positive attitudes toward GenAI mediated the relationship between teacher support and learner well-being among university EFL learners.\n3. **Peng et al. (2025)**: Meta-analysis of 56 experimental studies reported a moderate positive short-term effect of AI-supported learning on creative thinking (SMD = 0.54).\n4. **Wang and Wu (2025)**: Identified gaps in depth, interpretation, and critical thinking among students using AI, leading to compensatory verification behaviors.\n5. **Choudhuri et al. (2026)**: Routine GenAI use was negatively associated with reflection, critical thinking, and need for understanding.\n\n#### Assumptions\n1. **Cognitive Load Theory**: AI can reduce extraneous cognitive load, potentially enhancing short-term performance but may also reduce the cognitive effort required for deep processing (Sweller et al., 2011).\n2. **Desirable Difficulties**: Tasks that require more cognitive effort can lead to better long-term retention and transfer of knowledge (Bjork and Bjork, 2011).\n3. **Self-Determination Theory**: AI can enhance intrinsic motivation by supporting autonomy, competence, and relatedness, but over-reliance can lead to a decrease in these factors (Ryan and Deci, 2000).\n4. **Cognitive Offloading**: Reliance on external tools can reduce the effort needed for internalization, potentially leading to a decrease in long-term learning (Risko and Gilbert'
+FUSION_ANSWER FULL_NATIVE_REFERENCE A2 "To design a preregistered randomized experiment that could falsify the proposed causal model of the critical thinking paradox in AI-supported learning, we need to specify the interventions, measures, confounders, and discriminating outcomes. The goal is to test whether AI-supported learning enhances short-term performance but potentially erodes long-term cognitive processes and transferable learning.\n\n### 1. **Interventions**\n\n**Groups:**\n- **Control Group:** Students receive traditional learning resources and no AI support.\n- **AI-Assisted Group:** Students receive access to a generative AI tool (e.g., ChatGPT) to support their learning.\n\n**Conditions:**\n- **Low AI Use:** Students are encouraged to use AI minimally, primarily for reference and ideation.\n- **High AI Use:** Students are encouraged to use AI extensively, including for content generation and task completion.\n\n### 2. **Measures**\n\n**Primary Outcomes:**\n- **Short-term Performance:** Measured by immediate post-intervention test scores (e.g., quizzes, assignments).\n- **Long-term Retention:** Measured by a delayed test (e.g., 1 month after the intervention) to assess knowledge retention.\n- **Transferable Skills:** Measured by a problem-solving task that requires the application of learned concepts in a new context.\n\n**Secondary Outcomes:**\n- **Cognitive Load:** Measured using self-report scales and physiological measures (e.g., heart rate variability, eye-tracking).\n- **Metacognitive Strategies:** Measured by self-report questionnaires and think-aloud protocols.\n- **Critical Thinking Depth:** Measured by qualitative analysis of students' responses to open-ended questions and problem-solving tasks.\n- **Perceived Learning Support:** Measured by self-report questionnaires.\n\n### 3. **Confounders**\n\n- **Prior Knowledge:** Pre-test scores to control for initial differences in knowledge.\n-"
+FUSION_ANSWER FULL_NATIVE_REFERENCE A3 'The most consequential unresolved contradiction in the literature on generative artificial intelligence (GenAI) in education is the apparent paradox between performance gains and cognitive erosion. On one hand, studies show that GenAI can lead to higher academic scores, improved creative thinking, and enhanced well-being. On the other hand, process-oriented research indicates that GenAI may reduce the depth of critical thinking and promote surface-level processing, potentially undermining long-term learning and transferable skills.\n\n### Rival Explanations\n\n1. **Enhancement Hypothesis**:\n   - **Explanation**: GenAI primarily enhances the efficiency and quality of learning outcomes by reducing extraneous cognitive load and providing timely, personalized support. This leads to better performance on immediate tasks and assessments.\n   - **Implication**: If this hypothesis is supported, it suggests that GenAI is a valuable tool for improving short-term academic performance and can be integrated into educational settings to support immediate learning goals.\n\n2. **Erosion Hypothesis**:\n   - **Explanation**: GenAI can lead to cognitive offloading, where students rely on AI to perform tasks that would otherwise require deeper cognitive processing. This reliance may reduce the effort students put into understanding and internalizing the material, leading to superficial learning and poor long-term retention.\n   - **Implication**: If this hypothesis is supported, it suggests that while GenAI may improve short-term performance, it can undermine the development of deep, transferable skills and long-term learning.\n\n### Smallest Decisive Test\n\n**Design**:\n- **Participants**: A sample of undergraduate students enrolled in a creative arts course.\n- **Conditions**:\n  - **Control Group**: Students complete a creative project using traditional resources and methods.\n  - **AI-Assisted Group**: Students complete the same project with access to GenAI for both assistive (ideation, reference gathering) and content-generative (producing parts of the final'
+PASS MEMORY_UNCHANGED_AFTER_QA_FULL_NATIVE_REFERENCE 
+CAUSAL_SUMMARY {"tested_removals": 30, "removal_answer_changes": 30, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+PASS WEIGHT_SENTINEL_UNCHANGED 
+PASS NO_RESIDUAL_HOOKS 
+CAUSAL_SUMMARY {"tested_removals": 30, "removal_answer_changes": 30, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+TEST755_COMPLETED {"tested_removals": 30, "removal_answer_changes": 30, "interpretation": "Cannot claim essential causal evidence without independently scored truth and targeted counterfactuals", "routing_quality": "UNSCORED", "semantic_fusion": "UNSCORED"}
+FILES /content/AKBASCORE_TEST755/TEST755_results.json /content/AKBASCORE_TEST755/TEST755.log
