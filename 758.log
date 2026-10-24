@@ -1,0 +1,274 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_BLOB_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_BLOB_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_745.py 26075
+PASS GIT_BLOB_LOCK_745.py de9e137e981fd57812d9a5e40d3c72dc278d2133
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_BLOB_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS LOCKED_SYMBOLS_709.py []
+PASS LOCKED_SYMBOLS_730.py []
+PASS LOCKED_SYMBOLS_757.py []
+PASS LOCKED_SYMBOLS_745.py []
+PASS DEPENDENCIES_forge_native []
+PASS DEPENDENCIES_initialize_native []
+PASS DEPENDENCIES_native_append_direct []
+PASS DEPENDENCIES_build_fusion []
+PASS DEPENDENCIES_load_verified []
+PASS DEPENDENCIES_safe_load []
+PASS DEPENDENCIES_pdf_text []
+============================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST758D / NUMERICAL PARITY DIAGNOSIS
+============================================================================================================
+GPU NVIDIA A100-SXM4-80GB GiB 79.25
+TORCH 2.11.0+cu130 TRANSFORMERS 5.20.2
+LOCKS {'709.py': '6c9f8cbb1eeed848d45133d73f0d7676b68e9125', '730.py': 'b1bad9eb3b111b44413f8ef05a3a140ab66a77dd', '745.py': 'de9e137e981fd57812d9a5e40d3c72dc278d2133', '757.py': '3d88bf8638390995858f23391f1e043faa586835'}
+RUN_ROOT /content/AKBASCORE_TEST758D_20261024T024442_309777Z PANEL_SHA256 89bf469e7af8f1e945316aaef217848fbabc3e9aca34773ff70fb10a7729cb65
+PASS PANEL_PRESEALED 
+PASS HTTP_LIMIT 123518
+PASS AIN_HOST ain.hr
+PASS AIN_PRELIMINARY_LINK_FOUND 
+PASS AIN_PRELIMINARY_LINK_UNAMBIGUOUS [('preliminary report', 'https://ain.hr/wp-content/uploads/2025/12/343-08_25-02_10_Preliminary-Report.pdf')]
+PASS NO_FINAL_PDF_BEFORE_TEST 
+PASS HTTP_LIMIT 703925
+PASS AIN_HOST ain.hr
+PASS PRELIMINARY_PDF_SIGNATURE 
+PASS PRELIMINARY_TEXT_EXTRACTED {'pages': 4, 'characters': 9615}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 81.7kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 1.01MB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 79.6MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 70.3MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 129MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.28MB/s]Download complete:   125GB, 1.37GB/s  Reconstruction complete: 100%  145GB /  145GB,  552MB/s  Fetching 37 files: 100% 37/37 [06:48<00:00, 10.37s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.28it/s]generation_config.json: 100% 242/242 [00:00<00:00, 33.6kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS PRELIMINARY_ENOUGH_TOKENS {'tokens': 2283}
+PASS SOURCE_NONEMPTY_C01 761
+PASS SOURCE_WITHIN_BUDGET_C01 761
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01 
+PASS FRESH_CARTRIDGE_C01 
+PASS PHYSICAL_SHA_C01 
+PHYSICAL_COMMIT C01 1ed74a1b8caa187c7dcb549e0056b8cbb0c5fb452a0f4a0ee3e1707da3b60cae PARENTS []
+PASS SOURCE_NONEMPTY_C02 761
+PASS SOURCE_WITHIN_BUDGET_C02 761
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02 
+PASS FRESH_CARTRIDGE_C02 
+PASS PHYSICAL_SHA_C02 
+PHYSICAL_COMMIT C02 cefce7b5ff2aa15b28c88eb8886279dcd6124518a7b8e5757b3326fe47193cde PARENTS []
+PASS TWO_PARENTS 
+PASS FUSION_TOKEN_BUDGET 1552
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP NATIVE_S01 C01 {'ssd_verify_ms': 163.508, 'h2d_ms': 23.093, 'fusion_ms': 1991.676, 'cid': 'C01', 'memory_tokens': 791}
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+NATIVE_FUSION_STEP NATIVE_S01 C02 {'ssd_verify_ms': 164.516, 'h2d_ms': 7.378, 'fusion_ms': 3886.427, 'cid': 'C02', 'memory_tokens': 1552}
+PASS ALL_PARENTS_ACTIVE ['C01', 'C02']
+PASS FUSED_LENGTH 1552
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS PREFIX_MATCH_C01 
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS PREFIX_MATCH_C02 
+PASS FUSED_H3_SHAPE (1, 1552, 8192)
+PASS CPU_CARTRIDGE_S01 
+PASS FRESH_CARTRIDGE_S01 
+PASS PHYSICAL_SHA_S01 
+PHYSICAL_COMMIT S01 afdba3b80c706d4568a98519b4d3fc762c2c944b3f3cbc2c88532635cd90b071 PARENTS ['C01', 'C02']
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS RELOADED_LAYER_COUNT 80
+EXACT_80_LAYER_PARITY FAIL LAYERS 4 / 80
+DIVERGENCE_LAYER 4 K_OLD_MAX 0.0625 K_NEW_MAX 0.0625 V_OLD_MAX 0.0078125 V_NEW_MAX 0.0078125
+DIVERGENCE_LAYER 5 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.01171875 V_NEW_MAX 0.015625
+DIVERGENCE_LAYER 6 K_OLD_MAX 0.0625 K_NEW_MAX 0.125 V_OLD_MAX 0.015625 V_NEW_MAX 0.0234375
+DIVERGENCE_LAYER 7 K_OLD_MAX 0.0625 K_NEW_MAX 0.125 V_OLD_MAX 0.015625 V_NEW_MAX 0.015625
+DIVERGENCE_LAYER 8 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.0078125 V_NEW_MAX 0.015625
+DIVERGENCE_LAYER 9 K_OLD_MAX 0.125 K_NEW_MAX 0.25 V_OLD_MAX 0.015625 V_NEW_MAX 0.01953125
+DIVERGENCE_LAYER 10 K_OLD_MAX 0.125 K_NEW_MAX 0.25 V_OLD_MAX 0.0166015625 V_NEW_MAX 0.04296875
+DIVERGENCE_LAYER 11 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.03125 V_NEW_MAX 0.033203125
+DIVERGENCE_LAYER 12 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.01953125 V_NEW_MAX 0.0322265625
+DIVERGENCE_LAYER 13 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.015625 V_NEW_MAX 0.0390625
+DIVERGENCE_LAYER 14 K_OLD_MAX 0.125 K_NEW_MAX 0.1875 V_OLD_MAX 0.015625 V_NEW_MAX 0.0390625
+DIVERGENCE_LAYER 15 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.0234375 V_NEW_MAX 0.046875
+DIVERGENCE_LAYER 16 K_OLD_MAX 0.078125 K_NEW_MAX 0.25 V_OLD_MAX 0.0234375 V_NEW_MAX 0.044921875
+DIVERGENCE_LAYER 17 K_OLD_MAX 0.125 K_NEW_MAX 0.1875 V_OLD_MAX 0.01953125 V_NEW_MAX 0.04296875
+DIVERGENCE_LAYER 18 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.03125 V_NEW_MAX 0.0390625
+DIVERGENCE_LAYER 19 K_OLD_MAX 0.125 K_NEW_MAX 0.1875 V_OLD_MAX 0.03125 V_NEW_MAX 0.04296875
+DIVERGENCE_LAYER 20 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.017578125 V_NEW_MAX 0.0390625
+DIVERGENCE_LAYER 21 K_OLD_MAX 0.125 K_NEW_MAX 0.25 V_OLD_MAX 0.015625 V_NEW_MAX 0.03515625
+DIVERGENCE_LAYER 22 K_OLD_MAX 0.125 K_NEW_MAX 0.12744140625 V_OLD_MAX 0.03125 V_NEW_MAX 0.123046875
+DIVERGENCE_LAYER 23 K_OLD_MAX 0.125 K_NEW_MAX 0.1875 V_OLD_MAX 0.025390625 V_NEW_MAX 0.05126953125
+DIVERGENCE_LAYER 24 K_OLD_MAX 0.125 K_NEW_MAX 0.15625 V_OLD_MAX 0.0244140625 V_NEW_MAX 0.046875
+DIVERGENCE_LAYER 25 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.02734375 V_NEW_MAX 0.0625
+DIVERGENCE_LAYER 26 K_OLD_MAX 0.125 K_NEW_MAX 0.125 V_OLD_MAX 0.029296875 V_NEW_MAX 0.0625
+DIVERGENCE_LAYER 27 K_OLD_MAX 0.125 K_NEW_MAX 0.25 V_OLD_MAX 0.03125 V_NEW_MAX 0.08203125
+DIVERGENCE_LAYER 28 K_OLD_MAX 0.125 K_NEW_MAX 0.1796875 V_OLD_MAX 0.0234375 V_NEW_MAX 0.1015625
+DIVERGENCE_LAYER 29 K_OLD_MAX 0.25 K_NEW_MAX 0.25 V_OLD_MAX 0.03125 V_NEW_MAX 0.1171875
+DIVERGENCE_LAYER 30 K_OLD_MAX 0.125 K_NEW_MAX 0.375 V_OLD_MAX 0.03125 V_NEW_MAX 0.103515625
+DIVERGENCE_LAYER 31 K_OLD_MAX 0.125 K_NEW_MAX 0.3125 V_OLD_MAX 0.044921875 V_NEW_MAX 0.125
+DIVERGENCE_LAYER 32 K_OLD_MAX 0.125 K_NEW_MAX 0.25 V_OLD_MAX 0.03515625 V_NEW_MAX 0.1484375
+DIVERGENCE_LAYER 33 K_OLD_MAX 0.125 K_NEW_MAX 0.25 V_OLD_MAX 0.03271484375 V_NEW_MAX 0.096923828125
+DIVERGENCE_LAYER 34 K_OLD_MAX 0.25 K_NEW_MAX 0.375 V_OLD_MAX 0.0390625 V_NEW_MAX 0.1171875
+DIVERGENCE_LAYER 35 K_OLD_MAX 0.125 K_NEW_MAX 0.375 V_OLD_MAX 0.0419921875 V_NEW_MAX 0.141845703125
+DIVERGENCE_LAYER 36 K_OLD_MAX 0.125 K_NEW_MAX 0.25 V_OLD_MAX 0.0390625 V_NEW_MAX 0.134765625
+DIVERGENCE_LAYER 37 K_OLD_MAX 0.125 K_NEW_MAX 0.3203125 V_OLD_MAX 0.03564453125 V_NEW_MAX 0.234375
+DIVERGENCE_LAYER 38 K_OLD_MAX 0.125 K_NEW_MAX 0.40234375 V_OLD_MAX 0.03515625 V_NEW_MAX 0.1484375
+DIVERGENCE_LAYER 39 K_OLD_MAX 0.125 K_NEW_MAX 0.3465576171875 V_OLD_MAX 0.0390625 V_NEW_MAX 0.1640625
+DIVERGENCE_LAYER 40 K_OLD_MAX 0.125 K_NEW_MAX 0.46875 V_OLD_MAX 0.046875 V_NEW_MAX 0.2734375
+DIVERGENCE_LAYER 41 K_OLD_MAX 0.125 K_NEW_MAX 0.66796875 V_OLD_MAX 0.03515625 V_NEW_MAX 0.2734375
+DIVERGENCE_LAYER 42 K_OLD_MAX 0.25 K_NEW_MAX 0.54931640625 V_OLD_MAX 0.046875 V_NEW_MAX 0.28125
+DIVERGENCE_LAYER 43 K_OLD_MAX 0.125 K_NEW_MAX 0.6640625 V_OLD_MAX 0.04296875 V_NEW_MAX 0.28125
+DIVERGENCE_LAYER 44 K_OLD_MAX 0.125 K_NEW_MAX 0.869140625 V_OLD_MAX 0.046875 V_NEW_MAX 0.30078125
+DIVERGENCE_LAYER 45 K_OLD_MAX 0.125 K_NEW_MAX 0.765625 V_OLD_MAX 0.046875 V_NEW_MAX 0.3203125
+DIVERGENCE_LAYER 46 K_OLD_MAX 0.125 K_NEW_MAX 0.78125 V_OLD_MAX 0.078125 V_NEW_MAX 0.54931640625
+DIVERGENCE_LAYER 47 K_OLD_MAX 0.125 K_NEW_MAX 0.84375 V_OLD_MAX 0.08203125 V_NEW_MAX 0.880859375
+DIVERGENCE_LAYER 48 K_OLD_MAX 0.125 K_NEW_MAX 0.80859375 V_OLD_MAX 0.0712890625 V_NEW_MAX 0.6171875
+DIVERGENCE_LAYER 49 K_OLD_MAX 0.125 K_NEW_MAX 1.0625 V_OLD_MAX 0.078125 V_NEW_MAX 0.71484375
+DIVERGENCE_LAYER 50 K_OLD_MAX 0.125 K_NEW_MAX 1.56640625 V_OLD_MAX 0.064453125 V_NEW_MAX 0.5390625
+DIVERGENCE_LAYER 51 K_OLD_MAX 0.125 K_NEW_MAX 1.10546875 V_OLD_MAX 0.06640625 V_NEW_MAX 0.56640625
+DIVERGENCE_LAYER 52 K_OLD_MAX 0.25 K_NEW_MAX 1.359375 V_OLD_MAX 0.08984375 V_NEW_MAX 1.01171875
+DIVERGENCE_LAYER 53 K_OLD_MAX 0.1875 K_NEW_MAX 1.654296875 V_OLD_MAX 0.09375 V_NEW_MAX 0.837890625
+DIVERGENCE_LAYER 54 K_OLD_MAX 0.1484375 K_NEW_MAX 1.96484375 V_OLD_MAX 0.1015625 V_NEW_MAX 1.15234375
+DIVERGENCE_LAYER 55 K_OLD_MAX 0.1875 K_NEW_MAX 1.8427734375 V_OLD_MAX 0.09375 V_NEW_MAX 1.640625
+DIVERGENCE_LAYER 56 K_OLD_MAX 0.25 K_NEW_MAX 1.96484375 V_OLD_MAX 0.1328125 V_NEW_MAX 1.1171875
+DIVERGENCE_LAYER 57 K_OLD_MAX 0.140625 K_NEW_MAX 1.6357421875 V_OLD_MAX 0.1015625 V_NEW_MAX 1.09375
+DIVERGENCE_LAYER 58 K_OLD_MAX 0.15625 K_NEW_MAX 1.7578125 V_OLD_MAX 0.1015625 V_NEW_MAX 1.068359375
+DIVERGENCE_LAYER 59 K_OLD_MAX 0.1806640625 K_NEW_MAX 1.7578125 V_OLD_MAX 0.1171875 V_NEW_MAX 1.794921875
+DIVERGENCE_LAYER 60 K_OLD_MAX 0.15625 K_NEW_MAX 2.15625 V_OLD_MAX 0.1015625 V_NEW_MAX 1.662109375
+DIVERGENCE_LAYER 61 K_OLD_MAX 0.140625 K_NEW_MAX 2.0859375 V_OLD_MAX 0.1171875 V_NEW_MAX 1.28515625
+DIVERGENCE_LAYER 62 K_OLD_MAX 0.1875 K_NEW_MAX 1.4140625 V_OLD_MAX 0.1064453125 V_NEW_MAX 1.2109375
+DIVERGENCE_LAYER 63 K_OLD_MAX 0.125 K_NEW_MAX 1.734375 V_OLD_MAX 0.09375 V_NEW_MAX 1.06640625
+DIVERGENCE_LAYER 64 K_OLD_MAX 0.1875 K_NEW_MAX 1.490234375 V_OLD_MAX 0.0859375 V_NEW_MAX 1.125
+DIVERGENCE_LAYER 65 K_OLD_MAX 0.14453125 K_NEW_MAX 2.390625 V_OLD_MAX 0.09375 V_NEW_MAX 0.9775390625
+DIVERGENCE_LAYER 66 K_OLD_MAX 0.130859375 K_NEW_MAX 1.47265625 V_OLD_MAX 0.109375 V_NEW_MAX 1.0672607421875
+DIVERGENCE_LAYER 67 K_OLD_MAX 0.125 K_NEW_MAX 1.75 V_OLD_MAX 0.1015625 V_NEW_MAX 1.16015625
+DIVERGENCE_LAYER 68 K_OLD_MAX 0.15625 K_NEW_MAX 2.25 V_OLD_MAX 0.12890625 V_NEW_MAX 1.01171875
+DIVERGENCE_LAYER 69 K_OLD_MAX 0.125 K_NEW_MAX 1.4921875 V_OLD_MAX 0.09375 V_NEW_MAX 1.20703125
+DIVERGENCE_LAYER 70 K_OLD_MAX 0.125 K_NEW_MAX 1.84375 V_OLD_MAX 0.125 V_NEW_MAX 1.359375
+DIVERGENCE_LAYER 71 K_OLD_MAX 0.140625 K_NEW_MAX 1.8125 V_OLD_MAX 0.15625 V_NEW_MAX 1.37353515625
+DIVERGENCE_LAYER 72 K_OLD_MAX 0.125 K_NEW_MAX 1.61328125 V_OLD_MAX 0.1875 V_NEW_MAX 1.375
+DIVERGENCE_LAYER 73 K_OLD_MAX 0.125 K_NEW_MAX 1.765625 V_OLD_MAX 0.1875 V_NEW_MAX 1.5614013671875
+DIVERGENCE_LAYER 74 K_OLD_MAX 0.125 K_NEW_MAX 1.65625 V_OLD_MAX 0.15625 V_NEW_MAX 1.89453125
+DIVERGENCE_LAYER 75 K_OLD_MAX 0.125 K_NEW_MAX 1.6875 V_OLD_MAX 0.171875 V_NEW_MAX 1.828125
+DIVERGENCE_LAYER 76 K_OLD_MAX 0.125 K_NEW_MAX 1.6875 V_OLD_MAX 0.21875 V_NEW_MAX 2.234375
+DIVERGENCE_LAYER 77 K_OLD_MAX 0.171875 K_NEW_MAX 1.359375 V_OLD_MAX 0.31640625 V_NEW_MAX 2.9375
+DIVERGENCE_LAYER 78 K_OLD_MAX 0.1328125 K_NEW_MAX 0.94140625 V_OLD_MAX 0.265625 V_NEW_MAX 2.17578125
+DIVERGENCE_LAYER 79 K_OLD_MAX 0.125 K_NEW_MAX 0.953125 V_OLD_MAX 0.125 V_NEW_MAX 1.390625
+NATIVE_VS_RELOAD Q01 EXACT_TEXT True COMMON_PREFIX_TOKENS 192
+NATIVE_VS_RELOAD Q02 EXACT_TEXT True COMMON_PREFIX_TOKENS 192
+NATIVE_VS_RELOAD Q03 EXACT_TEXT False COMMON_PREFIX_TOKENS 26
+NATIVE_VS_RELOAD Q04 EXACT_TEXT False COMMON_PREFIX_TOKENS 52
+NATIVE_VS_RELOAD Q05 EXACT_TEXT True COMMON_PREFIX_TOKENS 192
+PASS PHYSICAL_S01_STILL_VERIFIED 
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+QA C01 Q01 "The investigative evidence identifies the following details about the aircraft and the occurrence:\n\n**Aircraft:**\n- **Manufacturer:** Air Tractor\n- **Model:** AT 802A\n- **State of Registry:** Republic of Turkiye\n- **Registration:** OR 2025\n- **Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye\n\n**Occurrence:**\n- **Location:** The village of 'Krivi put', near the town of Senj, Croatia\n- **Date:** 13 November 2025\n- **Time:** 16:37 LT (15:37 UTC)\n\n**Type of Operation:**\n- **Operation Type:** Premještanje (Ferry)\n- **Operator Type:** Državni (Government Agency)\n\n**Observations:**\n- The aircraft is a Air Tractor AT 802A, registered in the Republic"
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+QA C01 Q02 "The provided document is a preliminary report of an accident or serious incident. The observations documented in the report include:\n\n1. **Location of the Accident or Serious Incident:**\n   - The village of 'Krivi put', near the town of Senj, Croatia.\n\n2. **Date of the Accident or Serious Incident:**\n   - 13 November 2025.\n\n3. **Time of the Accident or Serious Incident:**\n   - 16:37 LT (15:37 UTC).\n\n4. **Aircraft Manufacturer:**\n   - Air Tractor.\n\n5. **Aircraft Type:**\n   - AT 802A.\n\n6. **State of Registry:**\n   - Republic of Turkiye.\n\n7. **Registration:**\n   - OR 2025.\n\n8. **Aircraft Operator:**\n   - Ministry of Agriculture and Forestry, Republic of Turkiye.\n\n9. **"
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+QA C01 Q03 '### Preliminary Explanations and Disconfirming Observations\n\n#### Explanation 1: Mechanical Failure\n**Hypothesis:**\nThe accident was caused by a mechanical failure, such as an engine malfunction or a structural issue with the aircraft.\n\n**Supporting Evidence:**\n- The aircraft, an Air Tractor AT 802A, is a complex machine with multiple systems that could fail.\n- The aircraft was in operation for a specific task, which could have put additional stress on its systems.\n\n**Disconfirming Observations:**\n- **Maintenance Records:** If the maintenance records show that the aircraft was recently and thoroughly inspected and no issues were found, this would cast doubt on the mechanical failure hypothesis.\n- **Pilot Reports:** If the pilot reported no unusual engine sounds or vibrations before the accident, this would also disconfirm the mechanical failure hypothesis.\n- **Post-Accident Examination:** If the post-accident examination of the aircraft'
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+QA C01 Q04 'UNKNOWN\n\nThe provided document excerpt does not contain enough information to identify what specific missing evidence would best distinguish rival explanations. The document primarily provides identification and basic details about an accident or serious incident, but it does not discuss any competing explanations or the evidence needed to differentiate between them.'
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+QA C01 Q05 "### Preliminary Evidence-Limited Assessment\n\n#### Facts:\n1. **Location of the Incident**: The village of 'Krivi put', near the town of Senj, Croatia.\n2. **Date of the Incident**: 13 November 2025.\n3. **Time of the Incident**: 16:37 LT (15:37 UTC).\n4. **Aircraft Manufacturer**: Air Tractor.\n5. **Aircraft Model**: AT 802A.\n6. **State of Registry**: Republic of Turkiye.\n7. **Registration**: OR 2025.\n8. **Aircraft Operator**: Ministry of Agriculture and Forestry, Republic of Turkiye.\n9. **Type of Operation**: Premještanje (Ferry).\n10. **Type of Operator**: Državni (Government Agency).\n\n#### Inferences:\n1. **Purpose of the Flight**: Given that the"
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+QA C02 Q01 'The investigative evidence describes an occurrence involving two Air Tractor AT802A aircrafts. On November 12, 2025, these aircrafts arrived at Rijeka Airport (LDRI) from Turkey. The next day, on November 13, 2025, at approximately 15:37 local time, both aircraft departed Rijeka Airport on a VFR (Visual Flight Rules) flight to Zagreb International Airport (LDZA). The flight was uneventful until they encountered unfavorable meteorological conditions, which prevented them from landing at Zagreb. As a result, they were diverted back to Rijeka Airport (LDRI).\n\nThe report indicates that one crew member sustained fatal injuries, and the aircraft was destroyed. The exact circumstances leading to the fatal injury and the destruction of the aircraft are not detailed in the provided information, so these aspects remain uncertain.'
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+QA C02 Q02 'The document provides the following observations:\n\n1. **Aircraft and Flight Details:**\n   - Two Air Tractor AT802A aircrafts arrived from Turkey at Rijeka Airport (LDRI) on November 12, 2025.\n   - The planned destination was Zagreb International Airport (LDZA), but they were diverted to Rijeka due to unfavorable meteorological conditions.\n   - The purpose of the arrival was to perform certain works on the aircrafts at the Aviation Technical Center in Zagreb.\n   - On November 13, 2025, at approximately 15:37 local time, both aircraft departed Rijeka Airport on a VFR flight to Zagreb.\n   - They maintained a distance of about half a nautical mile from each other, with continuous visual and radio contact.\n\n2. **Injuries:**\n   - One crew member sustained fatal injuries.\n   - No'
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+QA C02 Q03 '### Preliminary Explanations\n\n#### Explanation 1: Weather-Related Incident\n**Hypothesis:** The aircraft encountered severe weather conditions, such as sudden turbulence, strong winds, or poor visibility, which led to the accident.\n\n**Supporting Observations:**\n- The flight was initially diverted to Rijeka due to unfavorable meteorological conditions at Zagreb.\n- The weather conditions at the time of the accident (VMC or IMC) could have deteriorated, leading to a loss of control or difficulty in navigation.\n\n**Disconfirming Observations:**\n- Weather reports from the area at the time of the accident showing clear skies and calm winds.\n- Pilot reports or black box data indicating stable flight conditions and no mention of weather-related issues.\n\n#### Explanation 2: Mechanical Failure\n**Hypothesis:** One or both aircraft experienced a mechanical failure, such as engine failure, structural damage, or system malfunction, leading to the accident.'
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+QA C02 Q04 "UNKNOWN\n\nThe provided information does not specify the exact cause of the accident or the specific events that led to the crash. To distinguish between rival explanations, the following missing evidence would be crucial:\n\n1. **Detailed Flight Data Recorder (FDR) and Cockpit Voice Recorder (CVR) Information**: This would provide insights into the aircraft's performance, pilot communications, and any system malfunctions leading up to the accident.\n\n2. **Meteorological Data at the Time of the Accident**: Detailed weather conditions, including visibility, cloud cover, and any sudden changes, could help determine if weather was a contributing factor.\n\n3. **Pilot Statements and Training Records**: Information about the pilots' experience, training, and any recent medical or psychological evaluations could provide context on their ability to handle the flight.\n\n4. **Aircraft Maintenance Records**: Reviewing the maintenance history of the aircraft could reveal any pre-existing issues that might have contributed to the accident.\n\n5. **"
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+QA C02 Q05 '### Preliminary Evidence-Limited Assessment\n\n#### Facts:\n1. **Aircraft and Arrival:**\n   - Two Air Tractor AT802A aircrafts arrived from Turkey at Rijeka Airport (LDRI) on November 12, 2025.\n   - The purpose of their arrival was to perform certain works on the aircrafts at the Aviation Technical Center in Zagreb.\n\n2. **Initial Landing Attempt:**\n   - The aircrafts were initially planning to land at Zagreb International Airport (LDZA).\n   - Due to unfavorable meteorological conditions, they were diverted to Rijeka Airport (LDRI).\n\n3. **Departure from Rijeka:**\n   - On November 13, 2025, at approximately 15:37 local time, both aircraft departed Rijeka Airport on a VFR (Visual Flight Rules) flight to Zagreb.\n   - They maintained a'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_S01 
+QA S01 Q01 "The investigative evidence describes an occurrence involving two Air Tractor AT802A aircrafts. The key details are as follows:\n\n- **Aircraft:**\n  - **Manufacturer:** Air Tractor\n  - **Model:** AT 802A\n  - **State of Registry:** Republic of Turkiye\n  - **Registration:** OR 2025\n  - **Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye\n\n- **Occurrence:**\n  - **Date:** 13 November 2025\n  - **Time:** 16:37 LT (15:37 UTC)\n  - **Location:** The village of 'Krivi put', near the town of Senj, Croatia\n  - **Type of Operation:** Ferry\n  - **Type of Operator:** Državni (Government Agency)\n  - **Last Departure Point:** Rijeka"
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_S01 
+QA S01 Q02 "The following observations are documented in the preliminary report:\n\n1. **Location and Date of the Accident:**\n   - The accident occurred in the village of 'Krivi put', near the town of Senj, Croatia, on 13 November 2025 at 16:37 LT (15:37 UTC).\n\n2. **Aircraft Information:**\n   - The aircraft involved is an Air Tractor AT 802A, registered as OR 2025, and operated by the Ministry of Agriculture and Forestry, Republic of Turkiye.\n\n3. **Type of Operation:**\n   - The operation was a ferry flight, and the operator is a government agency.\n\n4. **Flight History:**\n   - The aircraft arrived from Turkiye at Rijeka Airport (LDRI) on 12 November 2025.\n   - The planned destination was Zagreb International Airport (LD"
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_S01 
+QA S01 Q03 '### Preliminary Explanations\n\n#### Explanation 1: Pilot Error\n**Hypothesis:**\nThe accident was caused by pilot error, specifically a misjudgment in navigation or a failure to maintain proper visual and radio contact with the other aircraft.\n\n**Supporting Observations:**\n- Both aircraft were flying in Visual Meteorological Conditions (VMC) and had continuous visual and radio contact.\n- The pilots were experienced but may have been fatigued or distracted.\n- The aircraft were maintaining a distance of about half a nautical mile from each other, which is relatively close.\n\n**Disconfirming Observations:**\n- Evidence of clear and consistent communication between the pilots, indicating no miscommunication or confusion.\n- Flight data recorder (FDR) and cockpit voice recorder (CVR) data showing that the pilots were following all standard operating procedures and maintaining proper navigation.\n- Witness statements or other evidence indicating that the pilots were not fatigued or'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_S01 
+QA S01 Q04 "To distinguish between rival explanations, the most critical missing evidence would be a detailed account of the events leading up to the accident, particularly the specific reasons for the aircraft's inability to land at Zagreb International Airport and the exact circumstances that led to the crash. This would include:\n\n1. **Pilot Communications and Decision-Making**: Transcripts or recordings of the pilots' communications with air traffic control and each other. This would provide insight into their decision-making process, any concerns they had, and the specific conditions they were responding to.\n\n2. **Meteorological Data**: Detailed meteorological reports for the area around the time of the accident, including visibility, cloud cover, wind conditions, and any other relevant weather phenomena. This would help determine if weather conditions played a significant role in the accident.\n\n3. **Aircraft Maintenance and Technical Records**: Information on the maintenance history and any recent technical issues with the aircraft. This would help rule out or confirm mechanical failures"
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_S01 
+QA S01 Q05 "### Preliminary Evidence-Limited Assessment\n\n#### Facts:\n1. **Accident Location and Date:**\n   - The accident occurred in the village of 'Krivi put', near the town of Senj, Croatia, on 13 November 2025 at 16:37 LT (15:37 UTC).\n\n2. **Aircraft Information:**\n   - Manufacturer: Air Tractor\n   - Model: AT 802A\n   - State of Registry: Republic of Turkiye\n   - Registration: OR 2025\n   - Operator: Ministry of Agriculture and Forestry, Republic of Turkiye\n\n3. **Flight Details:**\n   - Type of Operation: Premještanje (Ferry)\n   - Type of Operator: Državni (Government Agency)\n   - Last Departure Point: Rijeka airport (LDRI), Croatia\n   - Planned Destination"
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS MODEL_WEIGHTS_UNCHANGED 
+PASS NO_RESIDUAL_HOOKS 
+PASS PANEL_UNCHANGED 
+TEST758D_COMPLETED {"physical_sources": 2, "physical_fused_cartridges": 1, "fusion": "TEST757 native numerical append / persistent compact CUT3", "text_mediated_fusion": false, "exact_80_layer_parity": false, "semantic_grade": "PENDING_INDEPENDENT_REVIEW", "autonomous_research": "NOT_TESTED", "parity_failure_is_recorded": true, "diagnostic_layers": 80, "paired_answer_questions": 5}
+FILES /content/AKBASCORE_TEST758D_20261024T024442_309777Z/TEST758D_results.json /content/AKBASCORE_TEST758D_20261024T024442_309777Z/TEST758D.log /content/AKBASCORE_TEST758D_20261024T024442_309777Z/TEST758D_manifest.json
