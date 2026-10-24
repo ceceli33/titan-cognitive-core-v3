@@ -1,0 +1,258 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+============================================================================================================
+AKBASCORE TEST771 / QK ATTENTION MASS / CAUSAL BIAS / HIDDEN STATE
+============================================================================================================
+PASS PANEL_SEALED 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS FRESH_GPU Restart Colab runtime if 72B already loaded
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 87.2kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 868kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 65.6MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 71.4MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 131MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.65MB/s]Download complete:   125GB, 1.74GB/s  Reconstruction complete: 100%  145GB /  145GB,  679MB/s  Fetching 37 files: 100% 37/37 [06:45<00:00, 10.29s/it]Loading weights: 100% 963/963 [06:29<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.7kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS ALL_20_PHYSICAL_CARTRIDGES 20
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP RESIDENT_C00 C00_B0 {'ssd_verify_ms': 19.096, 'h2d_ms': 1.135, 'fusion_ms': 288.582, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP RESIDENT_C00 C00_B1 {'ssd_verify_ms': 17.782, 'h2d_ms': 0.959, 'fusion_ms': 793.647, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS ACTIVE_PAIR_C00 ['C00_B0', 'C00_B1']
+PASS SPAN_TOTAL_C00 {'actual': 97, 'expected': 97, 'prefix': 30, 'b0': 35, 'b1': 32}
+OBS C00 CURRENT FULL MARGIN_NEW_MINUS_OLD 26.01423 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0069131, 'B1_mass': 0.0091309, 'entropy': 0.398461}, '20': {'calls': 1, 'B0_mass': 0.011607, 'B1_mass': 0.0185401, 'entropy': 0.697221}, '40': {'calls': 1, 'B0_mass': 0.0176293, 'B1_mass': 0.0490949, 'entropy': 1.357241}, '79': {'calls': 1, 'B0_mass': 0.0955741, 'B1_mass': 0.095682, 'entropy': 2.985705}} CUT3_DELTA_L2 0.0 WALL_MS 746.554
+OBS C00 CURRENT BIAS_B0 MARGIN_NEW_MINUS_OLD 25.7138 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0437496, 'B1_mass': 0.0078457, 'entropy': 0.596069}, '20': {'calls': 1, 'B0_mass': 0.0729089, 'B1_mass': 0.0136267, 'entropy': 0.977922}, '40': {'calls': 1, 'B0_mass': 0.0997663, 'B1_mass': 0.0389914, 'entropy': 1.58211}, '79': {'calls': 1, 'B0_mass': 0.3586754, 'B1_mass': 0.0526262, 'entropy': 2.999787}} CUT3_DELTA_L2 0.0 WALL_MS 503.937
+OBS C00 CURRENT BIAS_B1 MARGIN_NEW_MINUS_OLD 25.65362 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0057143, 'B1_mass': 0.0555744, 'entropy': 0.628304}, '20': {'calls': 1, 'B0_mass': 0.009947, 'B1_mass': 0.0702807, 'entropy': 0.930697}, '40': {'calls': 1, 'B0_mass': 0.0109614, 'B1_mass': 0.1899579, 'entropy': 1.573401}, '79': {'calls': 1, 'B0_mass': 0.0534863, 'B1_mass': 0.3612708, 'entropy': 2.976504}} CUT3_DELTA_L2 0.0 WALL_MS 503.078
+OBS C00 CURRENT STATE_SAME MARGIN_NEW_MINUS_OLD 25.76819 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0069388, 'B1_mass': 0.0091725, 'entropy': 0.380291}, '20': {'calls': 1, 'B0_mass': 0.0116223, 'B1_mass': 0.0185267, 'entropy': 0.697082}, '40': {'calls': 1, 'B0_mass': 0.0177117, 'B1_mass': 0.0494276, 'entropy': 1.358912}, '79': {'calls': 1, 'B0_mass': 0.0944709, 'B1_mass': 0.0956139, 'entropy': 2.993634}} CUT3_DELTA_L2 1.39637 WALL_MS 554.151
+OBS C00 CURRENT STATE_OPPOSITE MARGIN_NEW_MINUS_OLD 25.95812 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0067451, 'B1_mass': 0.0089022, 'entropy': 0.373831}, '20': {'calls': 1, 'B0_mass': 0.0115853, 'B1_mass': 0.0183772, 'entropy': 0.695164}, '40': {'calls': 1, 'B0_mass': 0.0176303, 'B1_mass': 0.04961, 'entropy': 1.357842}, '79': {'calls': 1, 'B0_mass': 0.0957984, 'B1_mass': 0.0959513, 'entropy': 2.982081}} CUT3_DELTA_L2 1.39648 WALL_MS 506.163
+OBS C00 CURRENT STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD 26.01828 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0069697, 'B1_mass': 0.0092218, 'entropy': 0.36571}, '20': {'calls': 1, 'B0_mass': 0.0115165, 'B1_mass': 0.0184971, 'entropy': 0.692315}, '40': {'calls': 1, 'B0_mass': 0.0177358, 'B1_mass': 0.0495689, 'entropy': 1.360148}, '79': {'calls': 1, 'B0_mass': 0.094926, 'B1_mass': 0.0954041, 'entropy': 2.985542}} CUT3_DELTA_L2 2.79273 WALL_MS 506.284
+OBS C00 HISTORICAL FULL MARGIN_NEW_MINUS_OLD -25.3125 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0066099, 'B1_mass': 0.0076527, 'entropy': 0.362226}, '20': {'calls': 1, 'B0_mass': 0.0123946, 'B1_mass': 0.0165817, 'entropy': 0.712531}, '40': {'calls': 1, 'B0_mass': 0.0174024, 'B1_mass': 0.0550623, 'entropy': 1.276956}, '79': {'calls': 1, 'B0_mass': 0.0932282, 'B1_mass': 0.0834162, 'entropy': 3.024394}} CUT3_DELTA_L2 0.0 WALL_MS 501.888
+OBS C00 HISTORICAL BIAS_B0 MARGIN_NEW_MINUS_OLD -25.5625 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0424543, 'B1_mass': 0.0066909, 'entropy': 0.558296}, '20': {'calls': 1, 'B0_mass': 0.0751341, 'B1_mass': 0.0118918, 'entropy': 0.990022}, '40': {'calls': 1, 'B0_mass': 0.101218, 'B1_mass': 0.0425048, 'entropy': 1.505259}, '79': {'calls': 1, 'B0_mass': 0.3433361, 'B1_mass': 0.0462369, 'entropy': 3.05507}} CUT3_DELTA_L2 0.0 WALL_MS 501.309
+OBS C00 HISTORICAL BIAS_B1 MARGIN_NEW_MINUS_OLD -25.0625 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0056682, 'B1_mass': 0.0484852, 'entropy': 0.578034}, '20': {'calls': 1, 'B0_mass': 0.0101253, 'B1_mass': 0.0685352, 'entropy': 0.933008}, '40': {'calls': 1, 'B0_mass': 0.0105705, 'B1_mass': 0.1922956, 'entropy': 1.468089}, '79': {'calls': 1, 'B0_mass': 0.0522096, 'B1_mass': 0.3344671, 'entropy': 3.032697}} CUT3_DELTA_L2 0.0 WALL_MS 501.623
+OBS C00 HISTORICAL STATE_SAME MARGIN_NEW_MINUS_OLD -25.1875 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0064539, 'B1_mass': 0.0074793, 'entropy': 0.341419}, '20': {'calls': 1, 'B0_mass': 0.0121852, 'B1_mass': 0.0164382, 'entropy': 0.704035}, '40': {'calls': 1, 'B0_mass': 0.0173926, 'B1_mass': 0.0551328, 'entropy': 1.279933}, '79': {'calls': 1, 'B0_mass': 0.0932846, 'B1_mass': 0.0840486, 'entropy': 3.027707}} CUT3_DELTA_L2 1.34946 WALL_MS 504.449
+OBS C00 HISTORICAL STATE_OPPOSITE MARGIN_NEW_MINUS_OLD -25.25 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0066163, 'B1_mass': 0.0076625, 'entropy': 0.345798}, '20': {'calls': 1, 'B0_mass': 0.0122993, 'B1_mass': 0.0165308, 'entropy': 0.706333}, '40': {'calls': 1, 'B0_mass': 0.0174039, 'B1_mass': 0.0549415, 'entropy': 1.278268}, '79': {'calls': 1, 'B0_mass': 0.0931283, 'B1_mass': 0.0834714, 'entropy': 3.024469}} CUT3_DELTA_L2 1.34949 WALL_MS 504.003
+OBS C00 HISTORICAL STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD -25.4375 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.006311, 'B1_mass': 0.0073126, 'entropy': 0.323415}, '20': {'calls': 1, 'B0_mass': 0.0121685, 'B1_mass': 0.0164071, 'entropy': 0.700691}, '40': {'calls': 1, 'B0_mass': 0.0173286, 'B1_mass': 0.0549379, 'entropy': 1.280534}, '79': {'calls': 1, 'B0_mass': 0.0932326, 'B1_mass': 0.083924, 'entropy': 3.022721}} CUT3_DELTA_L2 2.69892 WALL_MS 504.335
+PASS RESIDENT_MEMORY_UNCHANGED_C00 
+PASS PAIR_SHA_UNCHANGED_C00_C00_B0 
+PASS PAIR_SHA_UNCHANGED_C00_C00_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP RESIDENT_C01 C01_B0 {'ssd_verify_ms': 18.914, 'h2d_ms': 1.032, 'fusion_ms': 286.667, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP RESIDENT_C01 C01_B1 {'ssd_verify_ms': 19.536, 'h2d_ms': 1.011, 'fusion_ms': 650.09, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS ACTIVE_PAIR_C01 ['C01_B0', 'C01_B1']
+PASS SPAN_TOTAL_C01 {'actual': 97, 'expected': 97, 'prefix': 30, 'b0': 35, 'b1': 32}
+OBS C01 CURRENT FULL MARGIN_NEW_MINUS_OLD 27.00039 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0052014, 'B1_mass': 0.0073448, 'entropy': 0.341607}, '20': {'calls': 1, 'B0_mass': 0.011188, 'B1_mass': 0.0179316, 'entropy': 0.611013}, '40': {'calls': 1, 'B0_mass': 0.0207067, 'B1_mass': 0.0489633, 'entropy': 1.330788}, '79': {'calls': 1, 'B0_mass': 0.1057884, 'B1_mass': 0.1033273, 'entropy': 3.014344}} CUT3_DELTA_L2 0.0 WALL_MS 507.09
+OBS C01 CURRENT BIAS_B0 MARGIN_NEW_MINUS_OLD 26.93809 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0351898, 'B1_mass': 0.0067305, 'entropy': 0.516667}, '20': {'calls': 1, 'B0_mass': 0.0589555, 'B1_mass': 0.0107801, 'entropy': 0.821098}, '40': {'calls': 1, 'B0_mass': 0.1135404, 'B1_mass': 0.0409111, 'entropy': 1.583824}, '79': {'calls': 1, 'B0_mass': 0.3693245, 'B1_mass': 0.0530288, 'entropy': 3.016446}} CUT3_DELTA_L2 0.0 WALL_MS 503.827
+OBS C01 CURRENT BIAS_B1 MARGIN_NEW_MINUS_OLD 27.12598 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0046224, 'B1_mass': 0.0477232, 'entropy': 0.55519}, '20': {'calls': 1, 'B0_mass': 0.0074411, 'B1_mass': 0.0637389, 'entropy': 0.801879}, '40': {'calls': 1, 'B0_mass': 0.0146832, 'B1_mass': 0.1924863, 'entropy': 1.534944}, '79': {'calls': 1, 'B0_mass': 0.0549723, 'B1_mass': 0.3743048, 'entropy': 3.0198}} CUT3_DELTA_L2 0.0 WALL_MS 503.422
+OBS C01 CURRENT STATE_SAME MARGIN_NEW_MINUS_OLD 27.06301 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0052381, 'B1_mass': 0.0073991, 'entropy': 0.325368}, '20': {'calls': 1, 'B0_mass': 0.0112615, 'B1_mass': 0.0179648, 'entropy': 0.614113}, '40': {'calls': 1, 'B0_mass': 0.0202375, 'B1_mass': 0.048776, 'entropy': 1.331994}, '79': {'calls': 1, 'B0_mass': 0.1057233, 'B1_mass': 0.1030275, 'entropy': 3.002614}} CUT3_DELTA_L2 1.40065 WALL_MS 506.07
+OBS C01 CURRENT STATE_OPPOSITE MARGIN_NEW_MINUS_OLD 27.12541 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0050746, 'B1_mass': 0.007189, 'entropy': 0.319448}, '20': {'calls': 1, 'B0_mass': 0.0112607, 'B1_mass': 0.0178609, 'entropy': 0.612719}, '40': {'calls': 1, 'B0_mass': 0.0206755, 'B1_mass': 0.0478382, 'entropy': 1.331149}, '79': {'calls': 1, 'B0_mass': 0.1052175, 'B1_mass': 0.1026312, 'entropy': 3.009719}} CUT3_DELTA_L2 1.40064 WALL_MS 507.019
+OBS C01 CURRENT STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD 26.93798 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0052695, 'B1_mass': 0.0074447, 'entropy': 0.312821}, '20': {'calls': 1, 'B0_mass': 0.0113735, 'B1_mass': 0.0179077, 'entropy': 0.614376}, '40': {'calls': 1, 'B0_mass': 0.0203476, 'B1_mass': 0.0494993, 'entropy': 1.337897}, '79': {'calls': 1, 'B0_mass': 0.1062234, 'B1_mass': 0.1031583, 'entropy': 3.009596}} CUT3_DELTA_L2 2.80129 WALL_MS 506.579
+OBS C01 HISTORICAL FULL MARGIN_NEW_MINUS_OLD -21.93743 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0050267, 'B1_mass': 0.0065999, 'entropy': 0.324458}, '20': {'calls': 1, 'B0_mass': 0.0105812, 'B1_mass': 0.0187777, 'entropy': 0.616934}, '40': {'calls': 1, 'B0_mass': 0.0220384, 'B1_mass': 0.0550362, 'entropy': 1.30914}, '79': {'calls': 1, 'B0_mass': 0.1023786, 'B1_mass': 0.0804136, 'entropy': 3.043139}} CUT3_DELTA_L2 0.0 WALL_MS 501.548
+OBS C01 HISTORICAL BIAS_B0 MARGIN_NEW_MINUS_OLD -22.31242 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0343765, 'B1_mass': 0.0061042, 'entropy': 0.498137}, '20': {'calls': 1, 'B0_mass': 0.0595842, 'B1_mass': 0.0117168, 'entropy': 0.834368}, '40': {'calls': 1, 'B0_mass': 0.1250806, 'B1_mass': 0.0433812, 'entropy': 1.574494}, '79': {'calls': 1, 'B0_mass': 0.3650264, 'B1_mass': 0.0417924, 'entropy': 3.09777}} CUT3_DELTA_L2 0.0 WALL_MS 501.703
+OBS C01 HISTORICAL BIAS_B1 MARGIN_NEW_MINUS_OLD -21.4374 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0045538, 'B1_mass': 0.0435378, 'entropy': 0.528151}, '20': {'calls': 1, 'B0_mass': 0.0073122, 'B1_mass': 0.0641494, 'entropy': 0.807698}, '40': {'calls': 1, 'B0_mass': 0.0145335, 'B1_mass': 0.1988711, 'entropy': 1.529362}, '79': {'calls': 1, 'B0_mass': 0.0588052, 'B1_mass': 0.3257746, 'entropy': 3.14262}} CUT3_DELTA_L2 0.0 WALL_MS 501.418
+OBS C01 HISTORICAL STATE_SAME MARGIN_NEW_MINUS_OLD -21.81241 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0048853, 'B1_mass': 0.0064434, 'entropy': 0.302469}, '20': {'calls': 1, 'B0_mass': 0.0106536, 'B1_mass': 0.0187479, 'entropy': 0.616112}, '40': {'calls': 1, 'B0_mass': 0.0218934, 'B1_mass': 0.0544665, 'entropy': 1.31285}, '79': {'calls': 1, 'B0_mass': 0.1025899, 'B1_mass': 0.0802576, 'entropy': 3.041348}} CUT3_DELTA_L2 1.35217 WALL_MS 505.016
+OBS C01 HISTORICAL STATE_OPPOSITE MARGIN_NEW_MINUS_OLD -21.74994 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0050572, 'B1_mass': 0.0066481, 'entropy': 0.30887}, '20': {'calls': 1, 'B0_mass': 0.0106119, 'B1_mass': 0.0187242, 'entropy': 0.615516}, '40': {'calls': 1, 'B0_mass': 0.0213276, 'B1_mass': 0.0551697, 'entropy': 1.312611}, '79': {'calls': 1, 'B0_mass': 0.1023701, 'B1_mass': 0.0803686, 'entropy': 3.044453}} CUT3_DELTA_L2 1.35235 WALL_MS 504.59
+OBS C01 HISTORICAL STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD -21.74991 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0048002, 'B1_mass': 0.0063602, 'entropy': 0.286606}, '20': {'calls': 1, 'B0_mass': 0.0106633, 'B1_mass': 0.0186299, 'entropy': 0.615182}, '40': {'calls': 1, 'B0_mass': 0.0218995, 'B1_mass': 0.0548494, 'entropy': 1.311844}, '79': {'calls': 1, 'B0_mass': 0.1020925, 'B1_mass': 0.080259, 'entropy': 3.031175}} CUT3_DELTA_L2 2.70434 WALL_MS 504.14
+PASS RESIDENT_MEMORY_UNCHANGED_C01 
+PASS PAIR_SHA_UNCHANGED_C01_C01_B0 
+PASS PAIR_SHA_UNCHANGED_C01_C01_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP RESIDENT_C02 C02_B0 {'ssd_verify_ms': 20.034, 'h2d_ms': 1.203, 'fusion_ms': 287.047, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP RESIDENT_C02 C02_B1 {'ssd_verify_ms': 20.642, 'h2d_ms': 1.104, 'fusion_ms': 704.345, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS ACTIVE_PAIR_C02 ['C02_B0', 'C02_B1']
+PASS SPAN_TOTAL_C02 {'actual': 99, 'expected': 99, 'prefix': 30, 'b0': 36, 'b1': 33}
+OBS C02 CURRENT FULL MARGIN_NEW_MINUS_OLD 26.75015 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0071066, 'B1_mass': 0.0095748, 'entropy': 0.43659}, '20': {'calls': 1, 'B0_mass': 0.0080137, 'B1_mass': 0.0178511, 'entropy': 0.574239}, '40': {'calls': 1, 'B0_mass': 0.0198572, 'B1_mass': 0.0205687, 'entropy': 1.315955}, '79': {'calls': 1, 'B0_mass': 0.0857964, 'B1_mass': 0.0705368, 'entropy': 2.885285}} CUT3_DELTA_L2 0.0 WALL_MS 506.804
+OBS C02 CURRENT BIAS_B0 MARGIN_NEW_MINUS_OLD 26.43761 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0457572, 'B1_mass': 0.0083649, 'entropy': 0.651117}, '20': {'calls': 1, 'B0_mass': 0.0501404, 'B1_mass': 0.0143685, 'entropy': 0.780352}, '40': {'calls': 1, 'B0_mass': 0.0996484, 'B1_mass': 0.0151799, 'entropy': 1.506356}, '79': {'calls': 1, 'B0_mass': 0.3144878, 'B1_mass': 0.0380793, 'entropy': 2.921641}} CUT3_DELTA_L2 0.0 WALL_MS 503.98
+OBS C02 CURRENT BIAS_B1 MARGIN_NEW_MINUS_OLD 26.50006 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0059907, 'B1_mass': 0.059331, 'entropy': 0.691199}, '20': {'calls': 1, 'B0_mass': 0.0066498, 'B1_mass': 0.0585789, 'entropy': 0.747932}, '40': {'calls': 1, 'B0_mass': 0.0136226, 'B1_mass': 0.119403, 'entropy': 1.519155}, '79': {'calls': 1, 'B0_mass': 0.0503, 'B1_mass': 0.2958475, 'entropy': 2.91802}} CUT3_DELTA_L2 0.0 WALL_MS 503.948
+OBS C02 CURRENT STATE_SAME MARGIN_NEW_MINUS_OLD 27.00014 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0071371, 'B1_mass': 0.0096135, 'entropy': 0.413161}, '20': {'calls': 1, 'B0_mass': 0.007936, 'B1_mass': 0.0179224, 'entropy': 0.571472}, '40': {'calls': 1, 'B0_mass': 0.0199467, 'B1_mass': 0.0210425, 'entropy': 1.316705}, '79': {'calls': 1, 'B0_mass': 0.0854914, 'B1_mass': 0.0706295, 'entropy': 2.875877}} CUT3_DELTA_L2 1.40692 WALL_MS 505.992
+OBS C02 CURRENT STATE_OPPOSITE MARGIN_NEW_MINUS_OLD 26.75015 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0069597, 'B1_mass': 0.0093936, 'entropy': 0.40559}, '20': {'calls': 1, 'B0_mass': 0.0079646, 'B1_mass': 0.0178148, 'entropy': 0.570472}, '40': {'calls': 1, 'B0_mass': 0.0199437, 'B1_mass': 0.0207309, 'entropy': 1.318124}, '79': {'calls': 1, 'B0_mass': 0.0859688, 'B1_mass': 0.0706544, 'entropy': 2.896497}} CUT3_DELTA_L2 1.40696 WALL_MS 506.599
+OBS C02 CURRENT STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD 26.68763 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0071787, 'B1_mass': 0.0096772, 'entropy': 0.396572}, '20': {'calls': 1, 'B0_mass': 0.008016, 'B1_mass': 0.0181073, 'entropy': 0.57328}, '40': {'calls': 1, 'B0_mass': 0.0197689, 'B1_mass': 0.0207995, 'entropy': 1.323362}, '79': {'calls': 1, 'B0_mass': 0.0870911, 'B1_mass': 0.0716183, 'entropy': 2.917343}} CUT3_DELTA_L2 2.81383 WALL_MS 506.9
+OBS C02 HISTORICAL FULL MARGIN_NEW_MINUS_OLD -24.125 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0067718, 'B1_mass': 0.0083264, 'entropy': 0.407253}, '20': {'calls': 1, 'B0_mass': 0.0081231, 'B1_mass': 0.0174281, 'entropy': 0.57557}, '40': {'calls': 1, 'B0_mass': 0.0275286, 'B1_mass': 0.0229804, 'entropy': 1.329211}, '79': {'calls': 1, 'B0_mass': 0.0928521, 'B1_mass': 0.0630579, 'entropy': 3.039167}} CUT3_DELTA_L2 0.0 WALL_MS 502.557
+OBS C02 HISTORICAL BIAS_B0 MARGIN_NEW_MINUS_OLD -24.0625 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0449428, 'B1_mass': 0.0074899, 'entropy': 0.624131}, '20': {'calls': 1, 'B0_mass': 0.0513283, 'B1_mass': 0.0136412, 'entropy': 0.786689}, '40': {'calls': 1, 'B0_mass': 0.1186248, 'B1_mass': 0.0155379, 'entropy': 1.543406}, '79': {'calls': 1, 'B0_mass': 0.3487427, 'B1_mass': 0.0356009, 'entropy': 3.144377}} CUT3_DELTA_L2 0.0 WALL_MS 502.039
+OBS C02 HISTORICAL BIAS_B1 MARGIN_NEW_MINUS_OLD -23.68751 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0059683, 'B1_mass': 0.053914, 'entropy': 0.650673}, '20': {'calls': 1, 'B0_mass': 0.0067192, 'B1_mass': 0.056348, 'entropy': 0.743297}, '40': {'calls': 1, 'B0_mass': 0.0167258, 'B1_mass': 0.125444, 'entropy': 1.552017}, '79': {'calls': 1, 'B0_mass': 0.0591924, 'B1_mass': 0.2884724, 'entropy': 3.175115}} CUT3_DELTA_L2 0.0 WALL_MS 502.196
+OBS C02 HISTORICAL STATE_SAME MARGIN_NEW_MINUS_OLD -24.0 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0066244, 'B1_mass': 0.0081575, 'entropy': 0.380089}, '20': {'calls': 1, 'B0_mass': 0.0082101, 'B1_mass': 0.0175813, 'entropy': 0.577718}, '40': {'calls': 1, 'B0_mass': 0.027978, 'B1_mass': 0.0235228, 'entropy': 1.33962}, '79': {'calls': 1, 'B0_mass': 0.092965, 'B1_mass': 0.0632768, 'entropy': 3.032197}} CUT3_DELTA_L2 1.35784 WALL_MS 504.345
+OBS C02 HISTORICAL STATE_OPPOSITE MARGIN_NEW_MINUS_OLD -24.0 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0068074, 'B1_mass': 0.0083755, 'entropy': 0.38768}, '20': {'calls': 1, 'B0_mass': 0.0082015, 'B1_mass': 0.0175159, 'entropy': 0.578195}, '40': {'calls': 1, 'B0_mass': 0.0273772, 'B1_mass': 0.0227136, 'entropy': 1.331249}, '79': {'calls': 1, 'B0_mass': 0.0928828, 'B1_mass': 0.0632256, 'entropy': 3.034444}} CUT3_DELTA_L2 1.35755 WALL_MS 505.083
+OBS C02 HISTORICAL STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD -24.00001 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0065221, 'B1_mass': 0.0080335, 'entropy': 0.358286}, '20': {'calls': 1, 'B0_mass': 0.0083017, 'B1_mass': 0.0177854, 'entropy': 0.581733}, '40': {'calls': 1, 'B0_mass': 0.0276827, 'B1_mass': 0.0228635, 'entropy': 1.339983}, '79': {'calls': 1, 'B0_mass': 0.0935659, 'B1_mass': 0.0643359, 'entropy': 3.042167}} CUT3_DELTA_L2 2.71569 WALL_MS 505.43
+PASS RESIDENT_MEMORY_UNCHANGED_C02 
+PASS PAIR_SHA_UNCHANGED_C02_C02_B0 
+PASS PAIR_SHA_UNCHANGED_C02_C02_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP RESIDENT_C03 C03_B0 {'ssd_verify_ms': 21.006, 'h2d_ms': 1.129, 'fusion_ms': 286.907, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP RESIDENT_C03 C03_B1 {'ssd_verify_ms': 20.579, 'h2d_ms': 0.977, 'fusion_ms': 699.121, 'cid': 'C03_B1', 'memory_tokens': 99}
+PASS ACTIVE_PAIR_C03 ['C03_B0', 'C03_B1']
+PASS SPAN_TOTAL_C03 {'actual': 99, 'expected': 99, 'prefix': 30, 'b0': 36, 'b1': 33}
+OBS C03 CURRENT FULL MARGIN_NEW_MINUS_OLD 26.00067 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0052261, 'B1_mass': 0.0072196, 'entropy': 0.361037}, '20': {'calls': 1, 'B0_mass': 0.0079555, 'B1_mass': 0.0203347, 'entropy': 0.596464}, '40': {'calls': 1, 'B0_mass': 0.0161401, 'B1_mass': 0.0195901, 'entropy': 1.356323}, '79': {'calls': 1, 'B0_mass': 0.0696055, 'B1_mass': 0.0641154, 'entropy': 2.953564}} CUT3_DELTA_L2 0.0 WALL_MS 507.127
+OBS C03 CURRENT BIAS_B0 MARGIN_NEW_MINUS_OLD 25.62544 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0351639, 'B1_mass': 0.0066127, 'entropy': 0.536199}, '20': {'calls': 1, 'B0_mass': 0.0499778, 'B1_mass': 0.0155962, 'entropy': 0.801661}, '40': {'calls': 1, 'B0_mass': 0.0940845, 'B1_mass': 0.0157449, 'entropy': 1.591394}, '79': {'calls': 1, 'B0_mass': 0.2984662, 'B1_mass': 0.0390155, 'entropy': 3.061211}} CUT3_DELTA_L2 0.0 WALL_MS 503.061
+OBS C03 CURRENT BIAS_B1 MARGIN_NEW_MINUS_OLD 26.12541 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.004643, 'B1_mass': 0.0472246, 'entropy': 0.576916}, '20': {'calls': 1, 'B0_mass': 0.0067391, 'B1_mass': 0.0624873, 'entropy': 0.791116}, '40': {'calls': 1, 'B0_mass': 0.0130791, 'B1_mass': 0.1092007, 'entropy': 1.571378}, '79': {'calls': 1, 'B0_mass': 0.0454922, 'B1_mass': 0.2816791, 'entropy': 3.075008}} CUT3_DELTA_L2 0.0 WALL_MS 503.207
+OBS C03 CURRENT STATE_SAME MARGIN_NEW_MINUS_OLD 26.00054 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0052571, 'B1_mass': 0.0072684, 'entropy': 0.343582}, '20': {'calls': 1, 'B0_mass': 0.0081951, 'B1_mass': 0.020691, 'entropy': 0.605127}, '40': {'calls': 1, 'B0_mass': 0.0163702, 'B1_mass': 0.0190693, 'entropy': 1.354046}, '79': {'calls': 1, 'B0_mass': 0.0705143, 'B1_mass': 0.0640195, 'entropy': 2.949061}} CUT3_DELTA_L2 1.41086 WALL_MS 506.113
+OBS C03 CURRENT STATE_OPPOSITE MARGIN_NEW_MINUS_OLD 26.063 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0051557, 'B1_mass': 0.0071593, 'entropy': 0.338753}, '20': {'calls': 1, 'B0_mass': 0.0082026, 'B1_mass': 0.0205535, 'entropy': 0.604396}, '40': {'calls': 1, 'B0_mass': 0.0163225, 'B1_mass': 0.019156, 'entropy': 1.354059}, '79': {'calls': 1, 'B0_mass': 0.0706881, 'B1_mass': 0.0641919, 'entropy': 2.961701}} CUT3_DELTA_L2 1.41098 WALL_MS 505.973
+OBS C03 CURRENT STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD 26.0005 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.005271, 'B1_mass': 0.0072934, 'entropy': 0.329817}, '20': {'calls': 1, 'B0_mass': 0.0082618, 'B1_mass': 0.0207056, 'entropy': 0.607474}, '40': {'calls': 1, 'B0_mass': 0.0168327, 'B1_mass': 0.0191135, 'entropy': 1.362506}, '79': {'calls': 1, 'B0_mass': 0.0710425, 'B1_mass': 0.0642034, 'entropy': 2.973083}} CUT3_DELTA_L2 2.82173 WALL_MS 506.478
+OBS C03 HISTORICAL FULL MARGIN_NEW_MINUS_OLD -22.87501 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0053527, 'B1_mass': 0.0067701, 'entropy': 0.366621}, '20': {'calls': 1, 'B0_mass': 0.0088993, 'B1_mass': 0.0190909, 'entropy': 0.598333}, '40': {'calls': 1, 'B0_mass': 0.018457, 'B1_mass': 0.0200711, 'entropy': 1.326579}, '79': {'calls': 1, 'B0_mass': 0.092127, 'B1_mass': 0.0709734, 'entropy': 3.153172}} CUT3_DELTA_L2 0.0 WALL_MS 502.977
+OBS C03 HISTORICAL BIAS_B0 MARGIN_NEW_MINUS_OLD -23.31251 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0365692, 'B1_mass': 0.0062673, 'entropy': 0.551017}, '20': {'calls': 1, 'B0_mass': 0.0534197, 'B1_mass': 0.0134515, 'entropy': 0.801744}, '40': {'calls': 1, 'B0_mass': 0.1058838, 'B1_mass': 0.0163875, 'entropy': 1.578432}, '79': {'calls': 1, 'B0_mass': 0.3511206, 'B1_mass': 0.0392551, 'entropy': 3.215509}} CUT3_DELTA_L2 0.0 WALL_MS 502.312
+OBS C03 HISTORICAL BIAS_B1 MARGIN_NEW_MINUS_OLD -22.50001 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0048662, 'B1_mass': 0.0449532, 'entropy': 0.577718}, '20': {'calls': 1, 'B0_mass': 0.0070626, 'B1_mass': 0.0603272, 'entropy': 0.781402}, '40': {'calls': 1, 'B0_mass': 0.0147755, 'B1_mass': 0.1154778, 'entropy': 1.556781}, '79': {'calls': 1, 'B0_mass': 0.0559538, 'B1_mass': 0.309604, 'entropy': 3.269634}} CUT3_DELTA_L2 0.0 WALL_MS 501.975
+OBS C03 HISTORICAL STATE_SAME MARGIN_NEW_MINUS_OLD -23.06251 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.005244, 'B1_mass': 0.0066644, 'entropy': 0.343589}, '20': {'calls': 1, 'B0_mass': 0.0090451, 'B1_mass': 0.0191511, 'entropy': 0.603717}, '40': {'calls': 1, 'B0_mass': 0.0184191, 'B1_mass': 0.0199954, 'entropy': 1.324353}, '79': {'calls': 1, 'B0_mass': 0.0933929, 'B1_mass': 0.0715447, 'entropy': 3.143298}} CUT3_DELTA_L2 1.35844 WALL_MS 504.925
+OBS C03 HISTORICAL STATE_OPPOSITE MARGIN_NEW_MINUS_OLD -23.06251 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0053769, 'B1_mass': 0.0068022, 'entropy': 0.349927}, '20': {'calls': 1, 'B0_mass': 0.0089323, 'B1_mass': 0.0190383, 'entropy': 0.597868}, '40': {'calls': 1, 'B0_mass': 0.0185603, 'B1_mass': 0.0198048, 'entropy': 1.324503}, '79': {'calls': 1, 'B0_mass': 0.0934918, 'B1_mass': 0.0718394, 'entropy': 3.161648}} CUT3_DELTA_L2 1.35845 WALL_MS 505.048
+OBS C03 HISTORICAL STATE_HIGH_GAIN MARGIN_NEW_MINUS_OLD -22.87501 ATTN_NEW {'4': {'calls': 1, 'B0_mass': 0.0051535, 'B1_mass': 0.006578, 'entropy': 0.323849}, '20': {'calls': 1, 'B0_mass': 0.0092731, 'B1_mass': 0.0192234, 'entropy': 0.606919}, '40': {'calls': 1, 'B0_mass': 0.0187849, 'B1_mass': 0.0200738, 'entropy': 1.325818}, '79': {'calls': 1, 'B0_mass': 0.0934703, 'B1_mass': 0.0717572, 'entropy': 3.1502}} CUT3_DELTA_L2 2.71688 WALL_MS 504.738
+PASS RESIDENT_MEMORY_UNCHANGED_C03 
+PASS PAIR_SHA_UNCHANGED_C03_C03_B0 
+PASS PAIR_SHA_UNCHANGED_C03_C03_B1 
+PASS OBSERVATION_MATRIX 48
+PASS MODEL_WEIGHTS_UNCHANGED 
+PASS NO_RESIDUAL_HOOKS 
+PASS PANEL_UNCHANGED 
+TEST771_COMPLETED {"model": "frozen Qwen2.5-72B NF4", "cards": 20, "pairs": 4, "observations": 48, "score": {"FULL": {"n": 8, "median_margin_new_minus_old": 2.03162, "median_wall_ms": 504.89, "mean_cut3_delta_l2": 0.0, "current_prefers_new": 4, "historical_prefers_old": 4}, "BIAS_B0": {"n": 8, "median_margin_new_minus_old": 1.65651, "median_wall_ms": 502.687, "mean_cut3_delta_l2": 0.0, "current_prefers_new": 4, "historical_prefers_old": 4}, "BIAS_B1": {"n": 8, "median_margin_new_minus_old": 2.10811, "median_wall_ms": 502.637, "mean_cut3_delta_l2": 0.0, "current_prefers_new": 4, "historical_prefers_old": 4}, "STATE_SAME": {"n": 8, "median_margin_new_minus_old": 1.97789, "median_wall_ms": 505.504, "mean_cut3_delta_l2": 1.37909, "current_prefers_new": 4, "historical_prefers_old": 4}, "STATE_OPPOSITE": {"n": 8, "median_margin_new_minus_old": 2.10409, "median_wall_ms": 505.528, "mean_cut3_delta_l2": 1.37911, "current_prefers_new": 4, "historical_prefers_old": 4}, "STATE_HIGH_GAIN": {"n": 8, "median_margin_new_minus_old": 2.12529, "median_wall_ms": 505.857, "mean_cut3_delta_l2": 2.75818, "current_prefers_new": 4, "historical_prefers_old": 4}}, "attention_mass_measured": true, "autonomous_routing_proven": false, "model_internal_closed_loop_proven": false, "interpretation": "Selected-layer QK softmax attention mass, causal SDPA logit bias and fixed-gain CUT3 perturbation. Oracle pair supplied. No learned routing or autonomous self-correction."}
+FILES /content/AKBASCORE_TEST771_20261024T153452_501752Z/TEST771_results.json /content/AKBASCORE_TEST771_20261024T153452_501752Z/TEST771.log /content/AKBASCORE_TEST771_20261024T153452_501752Z/TEST771_manifest.json
