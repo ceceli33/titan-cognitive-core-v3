@@ -1,0 +1,218 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_BLOB_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_BLOB_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_745.py 26075
+PASS GIT_BLOB_LOCK_745.py de9e137e981fd57812d9a5e40d3c72dc278d2133
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_BLOB_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS LOCKED_SYMBOLS_709.py []
+PASS LOCKED_SYMBOLS_730.py []
+PASS LOCKED_SYMBOLS_757.py []
+PASS LOCKED_SYMBOLS_745.py []
+PASS DEPENDENCIES_forge_native []
+PASS DEPENDENCIES_initialize_native []
+PASS DEPENDENCIES_native_append_direct []
+PASS DEPENDENCIES_build_fusion []
+PASS DEPENDENCIES_load_verified []
+PASS DEPENDENCIES_safe_load []
+PASS DEPENDENCIES_pdf_text []
+============================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST764 / CROSS-SEGMENT NATIVE SYNTHESIS
+============================================================================================================
+RUN_ROOT /content/AKBASCORE_TEST764_20261024T095809_348108Z GPU NVIDIA A100-SXM4-80GB PANEL_SHA256 547d47084b0ea08b9cdcdd92c162555354ab5a44f268ccf71a4959f2231ac38c
+PASS PANEL_PRESEALED 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_PREFLIGHT_FREE_AT_START Restart Colab runtime before this one cell if the previous 72B model is still resident
+PASS HTTP_LIMIT 123518
+PASS AIN_HOST ain.hr
+PASS AIN_PRELIMINARY_LINK_FOUND 
+PASS AIN_PRELIMINARY_LINK_UNAMBIGUOUS [('preliminary report', 'https://ain.hr/wp-content/uploads/2025/12/343-08_25-02_10_Preliminary-Report.pdf')]
+PASS NO_FINAL_PDF_BEFORE_TEST 
+PASS HTTP_LIMIT 703925
+PASS AIN_HOST ain.hr
+PASS PRELIMINARY_PDF_SIGNATURE 
+PASS PRELIMINARY_TEXT_EXTRACTED {'pages': 4, 'characters': 9615}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 88.0kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 814kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 84.1MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 37.7MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 126MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.64MB/s]Download complete:   125GB, 1.38GB/s  Reconstruction complete: 100%  145GB /  145GB,  536MB/s  Fetching 37 files: 100% 37/37 [06:39<00:00,  9.34s/it]Loading weights: 100% 963/963 [06:22<00:00,  3.21it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.4kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS PRELIMINARY_ENOUGH_TOKENS {'tokens': 2283}
+PASS SOURCE_NONEMPTY_C01 761
+PASS SOURCE_WITHIN_BUDGET_C01 761
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01 
+PASS FRESH_CARTRIDGE_C01 
+PASS PHYSICAL_SHA_C01 
+PHYSICAL_COMMIT C01 1ed74a1b8caa187c7dcb549e0056b8cbb0c5fb452a0f4a0ee3e1707da3b60cae PARENTS []
+PASS SOURCE_NONEMPTY_C02 761
+PASS SOURCE_WITHIN_BUDGET_C02 761
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02 
+PASS FRESH_CARTRIDGE_C02 
+PASS PHYSICAL_SHA_C02 
+PHYSICAL_COMMIT C02 cefce7b5ff2aa15b28c88eb8886279dcd6124518a7b8e5757b3326fe47193cde PARENTS []
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP NATIVE_S01 C01 {'ssd_verify_ms': 162.196, 'h2d_ms': 23.307, 'fusion_ms': 1988.684, 'cid': 'C01', 'memory_tokens': 791}
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+NATIVE_FUSION_STEP NATIVE_S01 C02 {'ssd_verify_ms': 161.148, 'h2d_ms': 6.732, 'fusion_ms': 3825.457, 'cid': 'C02', 'memory_tokens': 1552}
+PASS ALL_PARENTS_ACTIVE ['C01', 'C02']
+PASS FUSED_LENGTH 1552
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS CPU_CARTRIDGE_S01 
+PASS FRESH_CARTRIDGE_S01 
+PASS PHYSICAL_SHA_S01 
+PHYSICAL_COMMIT S01 afdba3b80c706d4568a98519b4d3fc762c2c944b3f3cbc2c88532635cd90b071 PARENTS ['C01', 'C02']
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS VALID_REBUILD_BOUNDARY (30, 791, 1552)
+PASS ALIGNED_REBUILD_80 80
+TEST764_S01_NATIVE_PARITY 80 / 80
+PASS TEST764_S01_80_LAYER_GATE 80
+TEST764_QA R01 BASE 'Certainly! Below is the combined information for the aircraft registry and operator with the documented November 2025 flight route, clearly distinguishing between documented facts and unknowns:\n\n### Aircraft Information\n- **Registration**: N12345\n- **Operator**: Delta Air Lines\n\n### Flight Route Information (November 2025)\n- **Departure Airport**: John F. Kennedy International Airport (JFK), New York, USA\n- **Intended Destination**: Hartsfield-Jackson Atlanta International Airport (ATL), Atlanta, USA\n- **Diversion**: Unknown (No information provided about a diversion)\n\n### Summary\n- **Registration**: N12345\n- **Operator**: Delta Air Lines\n- **Departure Airport**: JFK, New York, USA\n- **Intended Destination**: ATL, Atlanta, USA\n- **Diversion**: Unknown\n\nIf there is any additional information or specific details you need,'
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+TEST764_QA R01 C01 "**Aircraft Registration:** OR 2025  \n**Aircraft Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye  \n**Departure Airport:** UNKNOWN  \n**Intended Destination:** UNKNOWN  \n**Diversion:** UNKNOWN  \n\nThe provided preliminary report does not specify the departure airport, intended destination, or any diversion for the flight that occurred on November 13, 2025, near the village of 'Krivi put', near the town of Senj, Croatia."
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+TEST764_QA R01 C02 '**Documented Facts:**\n\n- **Aircraft Type:** Air Tractor AT802A\n- **Operator:** UNKNOWN (The document does not specify the operator)\n- **Departure Airport:** Rijeka Airport (LDRI), Croatia\n- **Intended Destination:** Zagreb International Airport (LDZA), Croatia\n- **Diversion:** Rijeka Airport (LDRI), Croatia\n\n**Flight Route:**\n\n- **Date of Arrival in Croatia:** November 12, 2025\n- **Date of Departure from Rijeka:** November 13, 2025\n- **Time of Departure:** Approximately 15:37 local time\n- **Flight Type:** VFR (Visual Flight Rules)\n- **Flight Duration:** About 1 hour (if the flight had proceeded as planned)\n\n**Additional Information:**\n\n- The aircrafts arrived from Turkey on November 12'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS VALID_REBUILD_BOUNDARY (30, 791, 1552)
+PASS ALIGNED_REBUILD_80 80
+PASS READ_ONLY_S01 
+TEST764_QA R01 S01 '**Documented Facts:**\n\n- **Registration:** OR 2025\n- **Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye\n- **Departure Airport:** Rijeka Airport (LDRI), Croatia\n- **Intended Destination:** Zagreb Airport (LDZA), Croatia\n- **Diversion:** Rijeka Airport (LDRI), Croatia (due to unfavorable meteorological conditions)\n\n**Flight Route:**\n\n- On November 12, 2025, the aircraft arrived at Rijeka Airport (LDRI) from Turkiye.\n- The intended destination was Zagreb International Airport (LDZA), but due to unfavorable meteorological conditions, the aircraft was diverted back to Rijeka Airport (LDRI).\n- On November 13, 2025, at approximately 15:37 local time, the aircraft departed Rijeka Airport (LDRI) on a'
+TEST764_QA R02 BASE "To connect the incident identification (aircraft, registration, date, and location) to the reported flight sequence, we need to break down the information and identify which parts are observations and which causal links cannot be established from the preliminary evidence. Let's assume we have the following details for the incident:\n\n**Incident Identification:**\n- Aircraft: Boeing 737-800\n- Registration: N12345\n- Date: October 1, 2023\n- Location: John F. Kennedy International Airport (JFK), New York\n\n**Reported Flight Sequence:**\n1. The aircraft was preparing for takeoff on Runway 4L.\n2. During the takeoff roll, the crew noticed an unusual vibration.\n3. The crew decided to abort the takeoff at 120 knots.\n4. The aircraft came to a stop on the runway.\n5. The crew reported the issue to"
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+TEST764_QA R02 C01 "Based on the provided preliminary report, the incident identification and the reported flight sequence can be connected as follows:\n\n### Incident Identification:\n- **Aircraft Manufacturer:** Air Tractor\n- **Aircraft Type:** AT 802A\n- **State of Registry:** Republic of Turkiye\n- **Registration:** OR 2025\n- **Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye\n- **Date of Accident:** 13 November 2025\n- **Time of Accident:** 16:37 LT (15:37 UTC)\n- **Location of Accident:** The village of 'Krivi put', near the town of Senj, Croatia\n\n### Reported Flight Sequence:\n- **Type of Operation:** Premještanje (Ferry)\n- **Type of Operator:** Državni (Government Agency)\n\n### Observations:\n1. **Aircraft and Registration:"
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+TEST764_QA R02 C02 '### Incident Identification and Flight Sequence\n\n**Aircraft:**\n- Two Air Tractor AT802A aircrafts\n\n**Registration:**\n- Not specified in the provided information\n\n**Date:**\n- November 13, 2025\n\n**Location:**\n- Departure: Rijeka Airport (LDRI), Croatia\n- Planned Destination: Zagreb International Airport (LDZA), Croatia\n\n### Flight Sequence\n\n1. **Arrival in Croatia:**\n   - **Date:** November 12, 2025\n   - **Event:** Two Air Tractor AT802A aircrafts arrived from Turkey at Rijeka Airport (LDRI).\n   - **Purpose:** To perform certain works on the aircrafts at the Aviation Technical Center in Zagreb.\n\n2. **Initial Attempt to Land at Zagreb:**\n   - **Date:** November 12, 2025'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS VALID_REBUILD_BOUNDARY (30, 791, 1552)
+PASS ALIGNED_REBUILD_80 80
+PASS READ_ONLY_S01 
+TEST764_QA R02 S01 "### Incident Identification and Flight Sequence\n\n#### Incident Identification:\n- **Aircraft Manufacturer:** Air Tractor\n- **Aircraft Type:** AT 802A\n- **State of Registry:** Republic of Turkiye\n- **Registration:** OR 2025\n- **Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye\n- **Date of Accident:** 13 November 2025\n- **Time of Accident:** 16:37 LT (15:37 UTC)\n- **Location of Accident:** The village of 'Krivi put', near the town of Senj, Croatia\n\n#### Flight Sequence:\n1. **Arrival in Croatia:**\n   - **Date:** 12 November 2025\n   - **Location:** Rijeka Airport (LDRI), Croatia\n   - **Purpose:** To perform certain works on the aircrafts at the Aviation Technical"
+TEST764_QA R03 BASE '**Chronology of the Two-Aircraft Flight**\n\n1. **Pre-Flight Preparations:**\n   - **Aircraft 1 (N12345):** A Cessna 172, piloted by an experienced pilot, completed pre-flight checks and received clearance for a local flight.\n   - **Aircraft 2 (N67890):** A Piper PA-28, piloted by a student pilot with an instructor on board, also completed pre-flight checks and received clearance for a training flight.\n\n2. **Departure:**\n   - **Aircraft 1 (N12345):** Departed from Runway 27 at 10:00 AM, heading northwest.\n   - **Aircraft 2 (N67890):** Departed from Runway 27 at 10:05 AM, heading northwest,'
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+TEST764_QA R03 C01 "**Chronology of the Incident:**\n\n- **13 November 2025, 16:37 LT (15:37 UTC):** An Air Tractor AT 802A aircraft, registered OR 2025 and operated by the Ministry of Agriculture and Forestry of the Republic of Turkiye, was involved in an incident.\n- The aircraft was conducting a ferry flight in the area near the village of 'Krivi put', located close to the town of Senj, Croatia.\n- The specific details of the flight's history and the events leading up to the incident are not provided in the preliminary report.\n- The report does not specify the exact sequence of events or the conditions (such as proximity to other aircraft or meteorological conditions) that may have contributed to the incident."
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+TEST764_QA R03 C02 '**Chronology of Events:**\n\n- **November 12, 2025:**\n  - Two Air Tractor AT802A aircrafts arrived at Rijeka Airport (LDRI) from Turkey.\n  - The aircrafts were originally intended to land at Zagreb International Airport (LDZA) but were diverted to Rijeka due to unfavorable meteorological conditions.\n\n- **November 13, 2025:**\n  - **Approximately 15:37 local time:**\n    - Both aircraft departed Rijeka Airport (LDRI) on a VFR (Visual Flight Rules) flight to Zagreb.\n    - The aircrafts maintained a distance of about half a nautical mile from each other, with continuous visual and radio contact.\n  - **During the Flight:**\n    - The flight toward Zagreb was uneventful until the point of the accident.\n  - **Time'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS VALID_REBUILD_BOUNDARY (30, 791, 1552)
+PASS ALIGNED_REBUILD_80 80
+PASS READ_ONLY_S01 
+TEST764_QA R03 S01 '**Chronology of Events:**\n\n- **12 November 2025:**\n  - Two Air Tractor AT802A aircrafts, registered OR 2025, arrived from the Republic of Turkiye at Rijeka Airport (LDRI), Croatia.\n  - The aircrafts were operated by the Ministry of Agriculture and Forestry, Republic of Turkiye.\n  - The purpose of their arrival was to perform certain works on the aircrafts at the Aviation Technical Center in Zagreb.\n\n- **13 November 2025:**\n  - **15:37 LT (14:37 UTC):** Both aircraft departed Rijeka Airport (LDRI) on a VFR flight to Zagreb International Airport (LDZA).\n  - The aircrafts maintained a distance of about half a nautical mile from each other, with continuous visual and radio contact.\n  - The flight toward Zag'
+TEST764_QA R04 BASE "UNKNOWN\n\nThe preliminary report does not conclusively establish the root cause of the accident. The missing classes of evidence include:\n\n1. **Detailed Maintenance Records**: More comprehensive maintenance records and logs for the aircraft, particularly for the engine and fuel system, are needed to determine if there were any pre-existing issues or if maintenance procedures were followed correctly.\n\n2. **Pilot Interviews**: Statements or interviews with the pilots and crew members who were on board the aircraft can provide critical insights into the events leading up to the accident, their observations, and any actions taken.\n\n3. **Cockpit Voice Recorder (CVR) Data**: The CVR data would provide audio recordings of the cockpit conversations, which can help understand the pilots' actions and communications during the flight.\n\n4. **Flight Data Recorder (FDR) Data**: The FDR data would provide detailed information about the aircraft's performance, including engine parameters, fuel levels, and other system statuses, which are"
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+TEST764_QA R04 C01 'UNKNOWN\n\nThe preliminary report does not provide information on the root cause of the accident. The report only includes basic details such as the location, date, time, aircraft information, and type of operation. It does not contain any analysis or findings related to the cause of the accident. Missing classes of evidence include:\n\n- Detailed flight history\n- Weather conditions\n- Aircraft maintenance records\n- Pilot information and experience\n- Cockpit voice recorder (CVR) and flight data recorder (FDR) data\n- Witness statements\n- On-site investigation findings\n- Technical analysis of the aircraft systems and components\n- Human factors analysis'
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+TEST764_QA R04 C02 'UNKNOWN\n\nThe preliminary report does not provide a conclusive root cause of the accident. The report describes the sequence of events leading up to the flight and the initial conditions, but it does not include a detailed analysis or conclusion regarding the cause of the accident. The missing classes of evidence include:\n\n- Detailed investigation findings\n- Technical analysis of the aircraft systems\n- Pilot statements and interviews\n- Weather data and analysis\n- Flight data recorder (FDR) and cockpit voice recorder (CVR) information (if applicable)\n- Witness statements\n- Maintenance records and logs\n- Final report conclusions and recommendations'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS VALID_REBUILD_BOUNDARY (30, 791, 1552)
+PASS ALIGNED_REBUILD_80 80
+PASS READ_ONLY_S01 
+TEST764_QA R04 S01 'UNKNOWN\n\nThe preliminary report does not conclusively establish the root cause of the accident. The report provides details about the flight, the aircraft, and the circumstances leading up to the accident, but it does not provide a definitive cause. The missing classes of evidence include:\n\n1. **Detailed Analysis of the Accident Sequence**: The report does not provide a detailed sequence of events leading to the accident.\n2. **Technical Examination of the Aircraft**: There is no information about the technical condition of the aircraft or any mechanical failures.\n3. **Pilot Interviews and Statements**: The report does not include statements or interviews with the pilots or other crew members.\n4. **Weather Data and Analysis**: While the report mentions the weather conditions, it does not provide a detailed analysis of how these conditions may have contributed to the accident.\n5. **Flight Data Recorder (FDR) and Cockpit Voice Recorder (CVR) Data**: The report does not mention any data from flight'
+TEST764_QA R05 BASE "**UNKNOWN**\n\n**Explanation:**\n\nThe available preliminary evidence does not provide direct proof of the aircraft operator's intent to deliberately cause the accident. To establish that the operator deliberately caused the accident, there would need to be clear and direct evidence, such as a confession, a recorded statement, or other unambiguous indicators of intent. Preliminary evidence often includes technical data, witness statements, and initial findings, but these typically do not provide the level of detail necessary to determine intent. Without such direct evidence, it is not possible to conclusively state that the operator deliberately caused the accident. Therefore, the answer is UNKNOWN."
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+TEST764_QA R05 C01 'UNKNOWN\n\nThe preliminary report does not provide any evidence or information suggesting that the aircraft operator deliberately caused the accident. The report only contains basic details about the accident, such as the location, date, time, aircraft details, and type of operation. There is no information regarding the cause of the accident or any intent behind it.'
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+TEST764_QA R05 C02 'UNKNOWN\n\nThe provided preliminary report does not contain any information or evidence suggesting that the aircraft operator deliberately caused the accident. The report primarily focuses on the flight details, the weather conditions, and the outcome of the flight, but it does not provide any information about the intent or actions of the aircraft operator that would suggest a deliberate cause for the accident. Therefore, based on the available information, it is not possible to determine if the accident was deliberately caused by the operator.'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS VALID_REBUILD_BOUNDARY (30, 791, 1552)
+PASS ALIGNED_REBUILD_80 80
+PASS READ_ONLY_S01 
+TEST764_QA R05 S01 'UNKNOWN\n\nThe preliminary report does not provide any evidence or information suggesting that the aircraft operator deliberately caused the accident. The report primarily focuses on the factual details of the flight, the aircraft, and the circumstances leading up to the accident, but does not include any information about the intent or actions of the operator that would suggest a deliberate cause. Therefore, based on the available information, it is not possible to determine if the operator had any deliberate intent in causing the accident.'
+TEST764_QA R06 BASE 'Certainly! Below is a combined evidence ledger with separate entries for registration/operator, flight route/diversion, incident outcome, and unresolved causation. Unsupported entries are marked as UNKNOWN.\n\n| Incident ID | Registration/Operator | Flight Route/Diversion | Incident Outcome | Unresolved Causation |\n|-------------|------------------------|------------------------|------------------|----------------------|\n| 001         | N12345/ABC Airlines     | New York to Los Angeles | Safe landing      | UNKNOWN              |\n| 002         | N67890/XYZ Airlines     | Chicago to Miami        | Emergency landing | Engine failure       |\n| 003         | N54321/DEF Airlines     | San Francisco to Seattle| Diverted to Portland | Weather conditions  |\n| 004         | N23456/GHI Airlines     | Atlanta to Houston      | Safe landing'
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C01 
+TEST764_QA R06 C01 '**Combined Evidence Ledger**\n\n1. **Registration/Operator:**\n   - **Registration:** OR 2025\n   - **Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye\n\n2. **Flight Route/Diversion:**\n   - **Flight Route:** UNKNOWN\n   - **Diversion:** UNKNOWN\n\n3. **Incident Outcome:**\n   - **Outcome:** UNKNOWN\n\n4. **Unresolved Causation:**\n   - **Causation:** UNKNOWN\n\n**Note:** The provided document does not contain specific information about the flight route, any diversions, the outcome of the incident, or the causation. Therefore, these entries are marked as UNKNOWN.'
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS NATIVE_INIT_80_LAYERS 
+PASS READ_ONLY_C02 
+TEST764_QA R06 C02 '**Combined Evidence Ledger**\n\n1. **Registration/Operator:**\n   - **Evidence:** UNKNOWN\n   - **Note:** The document does not provide specific information about the registration or operator of the aircrafts.\n\n2. **Flight Route/Diversion:**\n   - **Evidence:** The two Air Tractor AT802A aircrafts arrived from Turkiye at Rijeka Airport (LDRI) on November 12, 2025. They were initially planning to land at Zagreb International Airport (LDZA) but were diverted to Rijeka due to unfavorable meteorological conditions. On November 13, 2025, at approximately 15:37 local time, both aircraft departed Rijeka Airport on a VFR flight to Zagreb.\n   - **Note:** The flight route and diversion are clearly documented.\n\n3. **Incident Outcome:**\n   - **Evidence:** One crew member'
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS VALID_REBUILD_BOUNDARY (30, 791, 1552)
+PASS ALIGNED_REBUILD_80 80
+PASS READ_ONLY_S01 
+TEST764_QA R06 S01 '**Combined Evidence Ledger**\n\n1. **Registration/Operator:**\n   - **Registration:** OR 2025\n   - **Operator:** Ministry of Agriculture and Forestry, Republic of Turkiye\n\n2. **Flight Route/Diversion:**\n   - **Last Departure Point:** Rijeka airport (LDRI), Croatia\n   - **Planned Destination:** Zagreb airport (LDZA), Croatia\n   - **Diversion:** Diverted to Rijeka airport (LDRI) due to unfavorable meteorological conditions\n\n3. **Incident Outcome:**\n   - **Damage to Aircraft:** Destroyed\n   - **Injuries:**\n     - **Fatal Injuries:** 1 (Crew)\n     - **Serious Injuries:** None\n     - **Minor Injuries:** None\n     - **None Injured:** None\n\n4. **Unresolved Causation:**\n   - **Caus'
+PASS ALL_QUESTION_ARMS_COMPLETE 
+PASS FILE_SHA_C01 
+PASS CARTRIDGE_ID_C01 
+PASS CARTRIDGE_TENSOR_SHA_C01 
+PASS FILE_SHA_C02 
+PASS CARTRIDGE_ID_C02 
+PASS CARTRIDGE_TENSOR_SHA_C02 
+PASS FILE_SHA_S01 
+PASS CARTRIDGE_ID_S01 
+PASS CARTRIDGE_TENSOR_SHA_S01 
+PASS MODEL_WEIGHTS_UNCHANGED 
+PASS NO_RESIDUAL_HOOKS 
+PASS PANEL_UNCHANGED 
+TEST764_COMPLETED {"physical_sources": 2, "fused_cartridges": 1, "native_s01_exact_80": true, "questions": 6, "arms": ["BASE", "C01", "C02", "S01"], "semantic_grade": "PENDING_BLIND_REVIEW", "causal_reasoning_proven": false, "autonomous_research": "NOT_TESTED", "sources_independent": false}
+FILES /content/AKBASCORE_TEST764_20261024T095809_348108Z/TEST764_results.json /content/AKBASCORE_TEST764_20261024T095809_348108Z/TEST764.log /content/AKBASCORE_TEST764_20261024T095809_348108Z/TEST764_manifest.json
