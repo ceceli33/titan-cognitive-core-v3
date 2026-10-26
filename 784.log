@@ -1,0 +1,390 @@
+ PASS TEST779_EXACT_GIT_BLOB fa7017a87f25ecef6ed2b2954a850599cb25fcd9
+PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+============================================================================================================
+AKBASCORE TEST784 — LOCKED TEST779 / PHASE A+B / NO AUTONOMOUS CONTROLLER
+PASS PANEL_SHA 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS A100_FREE_VRAM Restart runtime if model already loaded
+config.json: 100% 663/663 [00:00<00:00, 81.8kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 886kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 63.6MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 69.0MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 130MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.33MB/s]Download complete:   125GB, 1.53GB/s  Reconstruction complete: 100%  145GB /  145GB,  664MB/s  Fetching 37 files: 100% 37/37 [06:44<00:00, 10.27s/it]Loading weights: 100% 963/963 [06:30<00:00,  3.32it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.8kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_CARTRIDGES_20 20
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST784_C00 C00_B0 {'ssd_verify_ms': 18.527, 'h2d_ms': 19.671, 'fusion_ms': 289.747, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST784_C00 C00_B1 {'ssd_verify_ms': 18.508, 'h2d_ms': 1.052, 'fusion_ms': 820.042, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS PAIR_C00 ['C00_B0', 'C00_B1']
+PASS MEMORY_80_LAYERS_C00 80
+PASS SPAN_TOTAL_C00 {'actual': 97, 'expected': 97, 'prefix': 30, 'b0': 35, 'b1': 32}
+PASS FINITE_STATE_C00_CURRENT 
+PHASE_A {"family": "C00", "view": "CURRENT", "h3_l2": 4.7662082, "h3_mean": -4.41e-05, "attention_density": {"B0": 0.0013239276190476193, "B1": 0.0011388427083333333}, "attention_choice": "B0", "attention_confidence": 0.07515313492960408, "expected_source_OFFLINE": "B1"}
+PASS FINITE_MARGIN_C00_CURRENT_B0_-2.0 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B0", "dose": -2.0, "new_minus_old": 26.08325, "old_logp": -26.08344, "new_logp": -0.00019, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B0_-0.5 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B0", "dose": -0.5, "new_minus_old": 25.89325, "old_logp": -25.89344, "new_logp": -0.00019, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B0_0.0 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B0", "dose": 0.0, "new_minus_old": 26.01423, "old_logp": -26.01442, "new_logp": -0.00019, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B0_0.5 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B0", "dose": 0.5, "new_minus_old": 25.77072, "old_logp": -25.77089, "new_logp": -0.00017, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B0_2.0 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B0", "dose": 2.0, "new_minus_old": 25.7138, "old_logp": -25.71397, "new_logp": -0.00017, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B1_-2.0 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B1", "dose": -2.0, "new_minus_old": 25.89279, "old_logp": -25.89298, "new_logp": -0.00019, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B1_-0.5 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B1", "dose": -0.5, "new_minus_old": 25.70403, "old_logp": -25.7042, "new_logp": -0.00017, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B1_0.0 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B1", "dose": 0.0, "new_minus_old": 26.01423, "old_logp": -26.01442, "new_logp": -0.00019, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B1_0.5 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B1", "dose": 0.5, "new_minus_old": 25.89368, "old_logp": -25.89385, "new_logp": -0.00017, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_CURRENT_B1_2.0 
+PHASE_B {"family": "C00", "view": "CURRENT", "target": "B1", "dose": 2.0, "new_minus_old": 25.65362, "old_logp": -25.65379, "new_logp": -0.00017, "sdpa_calls": 8}
+PASS FINITE_STATE_C00_HISTORICAL 
+PHASE_A {"family": "C00", "view": "HISTORICAL", "h3_l2": 4.9117022, "h3_mean": -0.000197, "attention_density": {"B0": 0.001291002857142857, "B1": 0.0010908093750000001}, "attention_choice": "B0", "attention_confidence": 0.08405090856500799, "expected_source_OFFLINE": "B0"}
+PASS FINITE_MARGIN_C00_HISTORICAL_B0_-2.0 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B0", "dose": -2.0, "new_minus_old": -25.0, "old_logp": -0.00104, "new_logp": -25.00104, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B0_-0.5 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B0", "dose": -0.5, "new_minus_old": -25.5, "old_logp": -0.00117, "new_logp": -25.50117, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B0_0.0 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B0", "dose": 0.0, "new_minus_old": -25.3125, "old_logp": -0.00082, "new_logp": -25.31332, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B0_0.5 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B0", "dose": 0.5, "new_minus_old": -25.5, "old_logp": -0.00104, "new_logp": -25.50104, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B0_2.0 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B0", "dose": 2.0, "new_minus_old": -25.5625, "old_logp": -0.00104, "new_logp": -25.56354, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B1_-2.0 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B1", "dose": -2.0, "new_minus_old": -25.5, "old_logp": -0.00091, "new_logp": -25.50092, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B1_-0.5 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B1", "dose": -0.5, "new_minus_old": -25.5, "old_logp": -0.00116, "new_logp": -25.50116, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B1_0.0 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B1", "dose": 0.0, "new_minus_old": -25.3125, "old_logp": -0.00082, "new_logp": -25.31332, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B1_0.5 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B1", "dose": 0.5, "new_minus_old": -25.0625, "old_logp": -0.00116, "new_logp": -25.06366, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C00_HISTORICAL_B1_2.0 
+PHASE_B {"family": "C00", "view": "HISTORICAL", "target": "B1", "dose": 2.0, "new_minus_old": -25.0625, "old_logp": -0.00145, "new_logp": -25.06395, "sdpa_calls": 8}
+PASS RESIDENT_KV_UNCHANGED_C00 
+PASS PHYSICAL_SHA_UNCHANGED_C00_B0 
+PASS PHYSICAL_SHA_UNCHANGED_C00_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST784_C01 C01_B0 {'ssd_verify_ms': 18.656, 'h2d_ms': 1.126, 'fusion_ms': 286.236, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST784_C01 C01_B1 {'ssd_verify_ms': 18.135, 'h2d_ms': 1.138, 'fusion_ms': 687.084, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS PAIR_C01 ['C01_B0', 'C01_B1']
+PASS MEMORY_80_LAYERS_C01 80
+PASS SPAN_TOTAL_C01 {'actual': 97, 'expected': 97, 'prefix': 30, 'b0': 35, 'b1': 32}
+PASS FINITE_STATE_C01_CURRENT 
+PHASE_A {"family": "C01", "view": "CURRENT", "h3_l2": 4.8249059, "h3_mean": -0.000173, "attention_density": {"B0": 0.0013159980952380955, "B1": 0.0011330572916666665}, "attention_choice": "B0", "attention_confidence": 0.07469851623185976, "expected_source_OFFLINE": "B1"}
+PASS FINITE_MARGIN_C01_CURRENT_B0_-2.0 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B0", "dose": -2.0, "new_minus_old": 26.87546, "old_logp": -26.87554, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B0_-0.5 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B0", "dose": -0.5, "new_minus_old": 27.12544, "old_logp": -27.12553, "new_logp": -9e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B0_0.0 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B0", "dose": 0.0, "new_minus_old": 27.00039, "old_logp": -27.00047, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B0_0.5 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B0", "dose": 0.5, "new_minus_old": 26.87536, "old_logp": -26.87545, "new_logp": -9e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B0_2.0 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B0", "dose": 2.0, "new_minus_old": 26.93809, "old_logp": -26.93817, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B1_-2.0 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B1", "dose": -2.0, "new_minus_old": 26.93781, "old_logp": -26.9379, "new_logp": -9e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B1_-0.5 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B1", "dose": -0.5, "new_minus_old": 27.06288, "old_logp": -27.06297, "new_logp": -9e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B1_0.0 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B1", "dose": 0.0, "new_minus_old": 27.00039, "old_logp": -27.00047, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B1_0.5 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B1", "dose": 0.5, "new_minus_old": 27.06308, "old_logp": -27.06316, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_CURRENT_B1_2.0 
+PHASE_B {"family": "C01", "view": "CURRENT", "target": "B1", "dose": 2.0, "new_minus_old": 27.12598, "old_logp": -27.12604, "new_logp": -6e-05, "sdpa_calls": 8}
+PASS FINITE_STATE_C01_HISTORICAL 
+PHASE_A {"family": "C01", "view": "HISTORICAL", "h3_l2": 4.9203691, "h3_mean": -0.0002175, "attention_density": {"B0": 0.0012959790476190474, "B1": 0.0011120385416666667}, "attention_choice": "B0", "attention_confidence": 0.0763866953342906, "expected_source_OFFLINE": "B0"}
+PASS FINITE_MARGIN_C01_HISTORICAL_B0_-2.0 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B0", "dose": -2.0, "new_minus_old": -21.49985, "old_logp": -0.00178, "new_logp": -21.50163, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B0_-0.5 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B0", "dose": -0.5, "new_minus_old": -21.68742, "old_logp": -0.00217, "new_logp": -21.68959, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B0_0.0 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B0", "dose": 0.0, "new_minus_old": -21.93743, "old_logp": -0.00173, "new_logp": -21.93916, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B0_0.5 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B0", "dose": 0.5, "new_minus_old": -21.87489, "old_logp": -0.00196, "new_logp": -21.87685, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B0_2.0 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B0", "dose": 2.0, "new_minus_old": -22.31242, "old_logp": -0.00154, "new_logp": -22.31396, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B1_-2.0 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B1", "dose": -2.0, "new_minus_old": -22.12496, "old_logp": -0.00191, "new_logp": -22.12687, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B1_-0.5 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B1", "dose": -0.5, "new_minus_old": -21.74995, "old_logp": -0.00171, "new_logp": -21.75166, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B1_0.0 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B1", "dose": 0.0, "new_minus_old": -21.93743, "old_logp": -0.00173, "new_logp": -21.93916, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B1_0.5 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B1", "dose": 0.5, "new_minus_old": -21.74988, "old_logp": -0.0022, "new_logp": -21.75208, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C01_HISTORICAL_B1_2.0 
+PHASE_B {"family": "C01", "view": "HISTORICAL", "target": "B1", "dose": 2.0, "new_minus_old": -21.4374, "old_logp": -0.00244, "new_logp": -21.43984, "sdpa_calls": 8}
+PASS RESIDENT_KV_UNCHANGED_C01 
+PASS PHYSICAL_SHA_UNCHANGED_C01_B0 
+PASS PHYSICAL_SHA_UNCHANGED_C01_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST784_C02 C02_B0 {'ssd_verify_ms': 19.663, 'h2d_ms': 1.218, 'fusion_ms': 286.754, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST784_C02 C02_B1 {'ssd_verify_ms': 19.499, 'h2d_ms': 1.147, 'fusion_ms': 746.695, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS PAIR_C02 ['C02_B0', 'C02_B1']
+PASS MEMORY_80_LAYERS_C02 80
+PASS SPAN_TOTAL_C02 {'actual': 99, 'expected': 99, 'prefix': 30, 'b0': 36, 'b1': 33}
+PASS FINITE_STATE_C02_CURRENT 
+PHASE_A {"family": "C02", "view": "CURRENT", "h3_l2": 4.8503914, "h3_mean": -0.0001298, "attention_density": {"B0": 0.0012149175925925927, "B1": 0.001030949494949495}, "attention_choice": "B0", "attention_confidence": 0.08191406279720465, "expected_source_OFFLINE": "B1"}
+PASS FINITE_MARGIN_C02_CURRENT_B0_-2.0 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B0", "dose": -2.0, "new_minus_old": 26.75014, "old_logp": -26.7502, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B0_-0.5 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B0", "dose": -0.5, "new_minus_old": 26.87521, "old_logp": -26.87529, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B0_0.0 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B0", "dose": 0.0, "new_minus_old": 26.75015, "old_logp": -26.75022, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B0_0.5 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B0", "dose": 0.5, "new_minus_old": 26.62514, "old_logp": -26.62522, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B0_2.0 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B0", "dose": 2.0, "new_minus_old": 26.43761, "old_logp": -26.43768, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B1_-2.0 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B1", "dose": -2.0, "new_minus_old": 26.813, "old_logp": -26.81307, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B1_-0.5 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B1", "dose": -0.5, "new_minus_old": 26.56267, "old_logp": -26.56275, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B1_0.0 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B1", "dose": 0.0, "new_minus_old": 26.75015, "old_logp": -26.75022, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B1_0.5 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B1", "dose": 0.5, "new_minus_old": 26.5626, "old_logp": -26.56266, "new_logp": -6e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_CURRENT_B1_2.0 
+PHASE_B {"family": "C02", "view": "CURRENT", "target": "B1", "dose": 2.0, "new_minus_old": 26.50006, "old_logp": -26.50014, "new_logp": -8e-05, "sdpa_calls": 8}
+PASS FINITE_STATE_C02_HISTORICAL 
+PHASE_A {"family": "C02", "view": "HISTORICAL", "h3_l2": 4.8673997, "h3_mean": -0.0002374, "attention_density": {"B0": 0.0012254324074074073, "B1": 0.0010553323232323235}, "attention_choice": "B0", "attention_confidence": 0.07458028523940413, "expected_source_OFFLINE": "B0"}
+PASS FINITE_MARGIN_C02_HISTORICAL_B0_-2.0 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B0", "dose": -2.0, "new_minus_old": -23.625, "old_logp": -0.00048, "new_logp": -23.62549, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B0_-0.5 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B0", "dose": -0.5, "new_minus_old": -23.875, "old_logp": -0.00062, "new_logp": -23.87562, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B0_0.0 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B0", "dose": 0.0, "new_minus_old": -24.125, "old_logp": -0.00056, "new_logp": -24.12556, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B0_0.5 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B0", "dose": 0.5, "new_minus_old": -24.0, "old_logp": -0.00056, "new_logp": -24.00057, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B0_2.0 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B0", "dose": 2.0, "new_minus_old": -24.0625, "old_logp": -0.0004, "new_logp": -24.06291, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B1_-2.0 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B1", "dose": -2.0, "new_minus_old": -24.125, "old_logp": -0.0007, "new_logp": -24.12571, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B1_-0.5 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B1", "dose": -0.5, "new_minus_old": -24.0625, "old_logp": -0.00063, "new_logp": -24.06313, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B1_0.0 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B1", "dose": 0.0, "new_minus_old": -24.125, "old_logp": -0.00056, "new_logp": -24.12556, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B1_0.5 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B1", "dose": 0.5, "new_minus_old": -23.9375, "old_logp": -0.00056, "new_logp": -23.93807, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C02_HISTORICAL_B1_2.0 
+PHASE_B {"family": "C02", "view": "HISTORICAL", "target": "B1", "dose": 2.0, "new_minus_old": -23.68751, "old_logp": -0.00056, "new_logp": -23.68806, "sdpa_calls": 8}
+PASS RESIDENT_KV_UNCHANGED_C02 
+PASS PHYSICAL_SHA_UNCHANGED_C02_B0 
+PASS PHYSICAL_SHA_UNCHANGED_C02_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST784_C03 C03_B0 {'ssd_verify_ms': 19.018, 'h2d_ms': 1.11, 'fusion_ms': 286.45, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST784_C03 C03_B1 {'ssd_verify_ms': 19.179, 'h2d_ms': 1.042, 'fusion_ms': 736.649, 'cid': 'C03_B1', 'memory_tokens': 99}
+PASS PAIR_C03 ['C03_B0', 'C03_B1']
+PASS MEMORY_80_LAYERS_C03 80
+PASS SPAN_TOTAL_C03 {'actual': 99, 'expected': 99, 'prefix': 30, 'b0': 36, 'b1': 33}
+PASS FINITE_STATE_C03_CURRENT 
+PHASE_A {"family": "C03", "view": "CURRENT", "h3_l2": 4.7625341, "h3_mean": -0.0001259, "attention_density": {"B0": 0.001231577777777778, "B1": 0.0010797585858585857}, "attention_choice": "B0", "attention_confidence": 0.06568459455219193, "expected_source_OFFLINE": "B1"}
+PASS FINITE_MARGIN_C03_CURRENT_B0_-2.0 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B0", "dose": -2.0, "new_minus_old": 26.12565, "old_logp": -26.12571, "new_logp": -6e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B0_-0.5 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B0", "dose": -0.5, "new_minus_old": 26.00056, "old_logp": -26.00062, "new_logp": -5e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B0_0.0 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B0", "dose": 0.0, "new_minus_old": 26.00067, "old_logp": -26.00074, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B0_0.5 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B0", "dose": 0.5, "new_minus_old": 26.18804, "old_logp": -26.18811, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B0_2.0 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B0", "dose": 2.0, "new_minus_old": 25.62544, "old_logp": -25.6255, "new_logp": -6e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B1_-2.0 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B1", "dose": -2.0, "new_minus_old": 25.87537, "old_logp": -25.87543, "new_logp": -6e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B1_-0.5 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B1", "dose": -0.5, "new_minus_old": 26.06304, "old_logp": -26.06309, "new_logp": -5e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B1_0.0 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B1", "dose": 0.0, "new_minus_old": 26.00067, "old_logp": -26.00074, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B1_0.5 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B1", "dose": 0.5, "new_minus_old": 26.06305, "old_logp": -26.06312, "new_logp": -7e-05, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_CURRENT_B1_2.0 
+PHASE_B {"family": "C03", "view": "CURRENT", "target": "B1", "dose": 2.0, "new_minus_old": 26.12541, "old_logp": -26.12547, "new_logp": -5e-05, "sdpa_calls": 8}
+PASS FINITE_STATE_C03_HISTORICAL 
+PHASE_A {"family": "C03", "view": "HISTORICAL", "h3_l2": 4.8536816, "h3_mean": -0.00023, "attention_density": {"B0": 0.001234612037037037, "B1": 0.0010690121212121211}, "attention_choice": "B0", "attention_confidence": 0.07188669003661523, "expected_source_OFFLINE": "B0"}
+PASS FINITE_MARGIN_C03_HISTORICAL_B0_-2.0 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B0", "dose": -2.0, "new_minus_old": -22.62501, "old_logp": -0.00158, "new_logp": -22.62659, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B0_-0.5 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B0", "dose": -0.5, "new_minus_old": -22.56251, "old_logp": -0.0014, "new_logp": -22.56392, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B0_0.0 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B0", "dose": 0.0, "new_minus_old": -22.87501, "old_logp": -0.0011, "new_logp": -22.87611, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B0_0.5 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B0", "dose": 0.5, "new_minus_old": -23.00001, "old_logp": -0.00111, "new_logp": -23.00112, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B0_2.0 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B0", "dose": 2.0, "new_minus_old": -23.31251, "old_logp": -0.00099, "new_logp": -23.3135, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B1_-2.0 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B1", "dose": -2.0, "new_minus_old": -22.87501, "old_logp": -0.00098, "new_logp": -22.87599, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B1_-0.5 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B1", "dose": -0.5, "new_minus_old": -23.00002, "old_logp": -0.00125, "new_logp": -23.00126, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B1_0.0 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B1", "dose": 0.0, "new_minus_old": -22.87501, "old_logp": -0.0011, "new_logp": -22.87611, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B1_0.5 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B1", "dose": 0.5, "new_minus_old": -22.87501, "old_logp": -0.00124, "new_logp": -22.87625, "sdpa_calls": 8}
+PASS FINITE_MARGIN_C03_HISTORICAL_B1_2.0 
+PHASE_B {"family": "C03", "view": "HISTORICAL", "target": "B1", "dose": 2.0, "new_minus_old": -22.50001, "old_logp": -0.00109, "new_logp": -22.5011, "sdpa_calls": 8}
+PASS RESIDENT_KV_UNCHANGED_C03 
+PASS PHYSICAL_SHA_UNCHANGED_C03_B0 
+PASS PHYSICAL_SHA_UNCHANGED_C03_B1 
+PASS A_MATRIX 8
+PASS B_MATRIX 80
+PASS FROZEN_WEIGHTS 
+PASS NO_RESIDUAL_HOOKS 
+TEST784_COMPLETED {"phase_a_correct_attention_choice": 4, "phase_a_total": 8, "phase_b_total": 80, "phase_b_nonzero_effects": 60, "note": "Margin change is not proof of answer correctness or semantic self-evaluation."}
+FILES /content/AKBASCORE_TEST779_20261026T163905_051672Z/TEST784_results.json /content/AKBASCORE_TEST779_20261026T163905_051672Z/TEST784.log /content/AKBASCORE_TEST779_20261026T163905_051672Z/TEST784_manifest.json
