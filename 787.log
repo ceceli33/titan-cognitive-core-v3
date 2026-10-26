@@ -1,0 +1,772 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+==============================================================================================================
+AKBASCORE TEST787 — PHYSICAL COUNTERFACTUAL MEMORY / PAIR CONTRADICTION PROBE
+PASS EXACT_785_SHA256 
+PASS EXACT_779_GIT_BLOB 
+PASS SEALED_PANEL 
+PASS CONTROLLER_UNIT_0 {'action': 'KEEP_PAIR', 'reason': 'NO_CONCRETE_CHALLENGER'}
+PASS CONTROLLER_UNIT_1 {'action': 'ABSTAIN', 'reason': 'PAIR_MISSING_AND_NONUNIQUE'}
+PASS CONTROLLER_UNIT_2 {'action': 'SWITCH_B0', 'reason': 'PAIR_SELF_CONTRADICTION', 'candidate': 'TEAM-Y', 'gap': 4.9}
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM Fresh A100 runtime required
+Download complete:  70.5GB, 1.54GB/s  Reconstruction complete: 100% 82.5GB / 82.5GB,  451MB/s  Fetching 37 files: 100% 37/37 [03:52<00:00,  6.97s/it]Loading weights: 100% 963/963 [06:23<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.4kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS FAMILIES_AT_LEAST_4 4
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_ORIGINAL_C00_B0 C00_B0 {'ssd_verify_ms': 18.746, 'h2d_ms': 19.989, 'fusion_ms': 289.498, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C00_B0 ['C00_B0']
+PASS NATIVE_80_C00_ORIGINAL_B0 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_ORIGINAL_C00_B1 C00_B1 {'ssd_verify_ms': 17.42, 'h2d_ms': 1.072, 'fusion_ms': 243.668, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_ORIGINAL_B1 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C00_ORIGINAL C00_B0 {'ssd_verify_ms': 18.253, 'h2d_ms': 1.142, 'fusion_ms': 284.631, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST787_C00_ORIGINAL C00_B1 {'ssd_verify_ms': 18.411, 'h2d_ms': 1.108, 'fusion_ms': 842.06, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C00_ORIGINAL 
+PASS PAIR_ORDER_C00_ORIGINAL 
+TEST787_ROW {"family": "C00", "scenario": "ORIGINAL", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000431, "TEAM-VKHJBSFY": -11.650847}, "B1": {"UNKNOWN": -14.375235, "TEAM-VKHJBSFY": -3.9e-05}, "PAIR": {"UNKNOWN": -12.000188, "TEAM-VKHJBSFY": -3.1e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C00", "scenario": "ORIGINAL", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"B0": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-KMKURDTJ": -3.6e-05, "UNKNOWN": -11.625214}, "B1": {"TEAM-KMKURDTJ": -10.349467, "UNKNOWN": -0.000554}, "PAIR": {"TEAM-KMKURDTJ": -0.000137, "UNKNOWN": -7.25082}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C00_ORIGINAL_B0 
+PASS KV_UNCHANGED_C00_ORIGINAL_B1 
+PASS KV_UNCHANGED_C00_ORIGINAL_PAIR 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_REVERSED_C00_B1 C00_B1 {'ssd_verify_ms': 19.562, 'h2d_ms': 1.154, 'fusion_ms': 246.306, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_REVERSED_B0 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_REVERSED_C00_B0 C00_B0 {'ssd_verify_ms': 20.815, 'h2d_ms': 1.226, 'fusion_ms': 284.402, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C00_B0 ['C00_B0']
+PASS NATIVE_80_C00_REVERSED_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C00_REVERSED C00_B1 {'ssd_verify_ms': 17.808, 'h2d_ms': 1.166, 'fusion_ms': 244.18, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST787_C00_REVERSED C00_B0 {'ssd_verify_ms': 19.117, 'h2d_ms': 1.326, 'fusion_ms': 743.534, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C00_REVERSED 
+PASS PAIR_ORDER_C00_REVERSED 
+TEST787_ROW {"family": "C00", "scenario": "REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B1", "C00_B0"], "generated": {"B0": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-VKHJBSFY": -3.9e-05, "UNKNOWN": -14.375235}, "B1": {"TEAM-VKHJBSFY": -11.650847, "UNKNOWN": -0.000431}, "PAIR": {"TEAM-VKHJBSFY": -2.8e-05, "UNKNOWN": -12.875165}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C00", "scenario": "REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B1", "C00_B0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000554, "TEAM-KMKURDTJ": -10.349467}, "B1": {"UNKNOWN": -11.625214, "TEAM-KMKURDTJ": -3.6e-05}, "PAIR": {"UNKNOWN": -7.875522, "TEAM-KMKURDTJ": -8.7e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C00_REVERSED_B0 
+PASS KV_UNCHANGED_C00_REVERSED_B1 
+PASS KV_UNCHANGED_C00_REVERSED_PAIR 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_CROSS_B0_C00_B0 C00_B0 {'ssd_verify_ms': 19.13, 'h2d_ms': 1.211, 'fusion_ms': 285.974, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C00_B0 ['C00_B0']
+PASS NATIVE_80_C00_CROSS_B0_B0 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_CROSS_B0_C01_B1 C01_B1 {'ssd_verify_ms': 18.933, 'h2d_ms': 1.077, 'fusion_ms': 243.982, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C00_CROSS_B0_B1 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C00_CROSS_B0 C00_B0 {'ssd_verify_ms': 18.787, 'h2d_ms': 1.089, 'fusion_ms': 284.433, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST787_C00_CROSS_B0 C01_B1 {'ssd_verify_ms': 18.445, 'h2d_ms': 1.113, 'fusion_ms': 699.693, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C00_CROSS_B0 
+PASS PAIR_ORDER_C00_CROSS_B0 
+TEST787_ROW {"family": "C00", "scenario": "CROSS_B0", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B0", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000628}, "PAIR": {"UNKNOWN": -0.00018}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-VKHJBSFY", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C00", "scenario": "CROSS_B0", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B0", "C01_B1"], "generated": {"B0": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-KMKURDTJ": -3.6e-05, "UNKNOWN": -11.625214}, "B1": {"TEAM-KMKURDTJ": -11.189832, "UNKNOWN": -0.000432}, "PAIR": {"TEAM-KMKURDTJ": -3.1e-05, "UNKNOWN": -10.000186}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C00_CROSS_B0_B0 
+PASS KV_UNCHANGED_C00_CROSS_B0_B1 
+PASS KV_UNCHANGED_C00_CROSS_B0_PAIR 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_CROSS_B1_C01_B0 C01_B0 {'ssd_verify_ms': 19.959, 'h2d_ms': 1.081, 'fusion_ms': 286.151, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C01_B0 ['C01_B0']
+PASS NATIVE_80_C00_CROSS_B1_B0 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_CROSS_B1_C00_B1 C00_B1 {'ssd_verify_ms': 18.88, 'h2d_ms': 1.262, 'fusion_ms': 244.687, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_CROSS_B1_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C00_CROSS_B1 C01_B0 {'ssd_verify_ms': 19.714, 'h2d_ms': 1.111, 'fusion_ms': 284.838, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST787_C00_CROSS_B1 C00_B1 {'ssd_verify_ms': 19.05, 'h2d_ms': 1.125, 'fusion_ms': 698.907, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C00_CROSS_B1 
+PASS PAIR_ORDER_C00_CROSS_B1 
+TEST787_ROW {"family": "C00", "scenario": "CROSS_B1", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B0", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000431, "TEAM-VKHJBSFY": -11.509669}, "B1": {"UNKNOWN": -14.375235, "TEAM-VKHJBSFY": -3.9e-05}, "PAIR": {"UNKNOWN": -13.750182, "TEAM-VKHJBSFY": -3e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C00", "scenario": "CROSS_B1", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B0", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000554}, "B1": {"UNKNOWN": -0.000554}, "PAIR": {"UNKNOWN": -0.00034}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C00_CROSS_B1_B0 
+PASS KV_UNCHANGED_C00_CROSS_B1_B1 
+PASS KV_UNCHANGED_C00_CROSS_B1_PAIR 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_UNRELATED_C01_B0 C01_B0 {'ssd_verify_ms': 19.849, 'h2d_ms': 1.083, 'fusion_ms': 285.997, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C01_B0 ['C01_B0']
+PASS NATIVE_80_C00_UNRELATED_B0 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_UNRELATED_C01_B1 C01_B1 {'ssd_verify_ms': 18.46, 'h2d_ms': 1.071, 'fusion_ms': 244.51, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C00_UNRELATED_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C00_UNRELATED C01_B0 {'ssd_verify_ms': 19.047, 'h2d_ms': 1.069, 'fusion_ms': 284.699, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST787_C00_UNRELATED C01_B1 {'ssd_verify_ms': 18.521, 'h2d_ms': 1.078, 'fusion_ms': 698.598, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C00_UNRELATED 
+PASS PAIR_ORDER_C00_UNRELATED 
+TEST787_ROW {"family": "C00", "scenario": "UNRELATED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000628}, "PAIR": {"UNKNOWN": -0.000297}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-VKHJBSFY", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C00", "scenario": "UNRELATED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000554}, "B1": {"UNKNOWN": -0.000432}, "PAIR": {"UNKNOWN": -0.000432}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C00_UNRELATED_B0 
+PASS KV_UNCHANGED_C00_UNRELATED_B1 
+PASS KV_UNCHANGED_C00_UNRELATED_PAIR 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_ORIGINAL_C01_B0 C01_B0 {'ssd_verify_ms': 19.885, 'h2d_ms': 1.151, 'fusion_ms': 286.139, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C01_B0 ['C01_B0']
+PASS NATIVE_80_C01_ORIGINAL_B0 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_ORIGINAL_C01_B1 C01_B1 {'ssd_verify_ms': 19.362, 'h2d_ms': 1.047, 'fusion_ms': 244.542, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_ORIGINAL_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C01_ORIGINAL C01_B0 {'ssd_verify_ms': 18.77, 'h2d_ms': 1.061, 'fusion_ms': 284.717, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST787_C01_ORIGINAL C01_B1 {'ssd_verify_ms': 19.254, 'h2d_ms': 1.087, 'fusion_ms': 700.805, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C01_ORIGINAL 
+PASS PAIR_ORDER_C01_ORIGINAL 
+TEST787_ROW {"family": "C01", "scenario": "ORIGINAL", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000297, "TEAM-MEZQKYJD": -11.202635}, "B1": {"UNKNOWN": -16.250059, "TEAM-MEZQKYJD": -1.3e-05}, "PAIR": {"UNKNOWN": -13.125069, "TEAM-MEZQKYJD": -1.4e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C01", "scenario": "ORIGINAL", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"B0": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-RBVBMXNT": -2.8e-05, "UNKNOWN": -11.750083}, "B1": {"TEAM-RBVBMXNT": -10.166822, "UNKNOWN": -0.000431}, "PAIR": {"TEAM-RBVBMXNT": -0.000288, "UNKNOWN": -6.501589}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C01_ORIGINAL_B0 
+PASS KV_UNCHANGED_C01_ORIGINAL_B1 
+PASS KV_UNCHANGED_C01_ORIGINAL_PAIR 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_REVERSED_C01_B1 C01_B1 {'ssd_verify_ms': 19.935, 'h2d_ms': 1.143, 'fusion_ms': 246.69, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_REVERSED_B0 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_REVERSED_C01_B0 C01_B0 {'ssd_verify_ms': 20.083, 'h2d_ms': 1.2, 'fusion_ms': 284.976, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C01_B0 ['C01_B0']
+PASS NATIVE_80_C01_REVERSED_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C01_REVERSED C01_B1 {'ssd_verify_ms': 19.123, 'h2d_ms': 1.068, 'fusion_ms': 244.684, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+NATIVE_FUSION_STEP TEST787_C01_REVERSED C01_B0 {'ssd_verify_ms': 20.119, 'h2d_ms': 1.115, 'fusion_ms': 739.876, 'cid': 'C01_B0', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C01_REVERSED 
+PASS PAIR_ORDER_C01_REVERSED 
+TEST787_ROW {"family": "C01", "scenario": "REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B1", "C01_B0"], "generated": {"B0": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-MEZQKYJD": -1.3e-05, "UNKNOWN": -16.250059}, "B1": {"TEAM-MEZQKYJD": -11.202635, "UNKNOWN": -0.000297}, "PAIR": {"TEAM-MEZQKYJD": -1.1e-05, "UNKNOWN": -14.750059}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C01", "scenario": "REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B1", "C01_B0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000431, "TEAM-RBVBMXNT": -10.166822}, "B1": {"UNKNOWN": -11.750083, "TEAM-RBVBMXNT": -2.8e-05}, "PAIR": {"UNKNOWN": -7.25077, "TEAM-RBVBMXNT": -0.000129}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C01_REVERSED_B0 
+PASS KV_UNCHANGED_C01_REVERSED_B1 
+PASS KV_UNCHANGED_C01_REVERSED_PAIR 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_CROSS_B0_C01_B0 C01_B0 {'ssd_verify_ms': 21.437, 'h2d_ms': 1.194, 'fusion_ms': 286.642, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C01_B0 ['C01_B0']
+PASS NATIVE_80_C01_CROSS_B0_B0 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_CROSS_B0_C02_B1 C02_B1 {'ssd_verify_ms': 19.189, 'h2d_ms': 1.05, 'fusion_ms': 244.703, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C01_CROSS_B0_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C01_CROSS_B0 C01_B0 {'ssd_verify_ms': 19.602, 'h2d_ms': 1.137, 'fusion_ms': 284.788, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST787_C01_CROSS_B0 C02_B1 {'ssd_verify_ms': 20.229, 'h2d_ms': 1.114, 'fusion_ms': 742.647, 'cid': 'C02_B1', 'memory_tokens': 98}
+PASS NATIVE_PAIR_80_C01_CROSS_B0 
+PASS PAIR_ORDER_C01_CROSS_B0 
+TEST787_ROW {"family": "C01", "scenario": "CROSS_B0", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B0", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000297}, "B1": {"UNKNOWN": -0.000628}, "PAIR": {"UNKNOWN": -0.000159}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-MEZQKYJD", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C01", "scenario": "CROSS_B0", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B0", "C02_B1"], "generated": {"B0": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-RBVBMXNT": -2.8e-05, "UNKNOWN": -11.750083}, "B1": {"TEAM-RBVBMXNT": -10.299681, "UNKNOWN": -0.000489}, "PAIR": {"TEAM-RBVBMXNT": -0.000172, "UNKNOWN": -10.000121}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C01_CROSS_B0_B0 
+PASS KV_UNCHANGED_C01_CROSS_B0_B1 
+PASS KV_UNCHANGED_C01_CROSS_B0_PAIR 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_CROSS_B1_C02_B0 C02_B0 {'ssd_verify_ms': 21.312, 'h2d_ms': 1.152, 'fusion_ms': 286.529, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C02_B0 ['C02_B0']
+PASS NATIVE_80_C01_CROSS_B1_B0 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_CROSS_B1_C01_B1 C01_B1 {'ssd_verify_ms': 19.706, 'h2d_ms': 1.184, 'fusion_ms': 244.805, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_CROSS_B1_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C01_CROSS_B1 C02_B0 {'ssd_verify_ms': 20.101, 'h2d_ms': 1.087, 'fusion_ms': 285.13, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST787_C01_CROSS_B1 C01_B1 {'ssd_verify_ms': 19.412, 'h2d_ms': 1.065, 'fusion_ms': 698.578, 'cid': 'C01_B1', 'memory_tokens': 98}
+PASS NATIVE_PAIR_80_C01_CROSS_B1 
+PASS PAIR_ORDER_C01_CROSS_B1 
+TEST787_ROW {"family": "C01", "scenario": "CROSS_B1", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B0", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000489, "TEAM-MEZQKYJD": -11.14473}, "B1": {"UNKNOWN": -16.250059, "TEAM-MEZQKYJD": -1.3e-05}, "PAIR": {"UNKNOWN": -14.625047, "TEAM-MEZQKYJD": -9e-06}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C01", "scenario": "CROSS_B1", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B0", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000627}, "B1": {"UNKNOWN": -0.000431}, "PAIR": {"UNKNOWN": -0.000298}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C01_CROSS_B1_B0 
+PASS KV_UNCHANGED_C01_CROSS_B1_B1 
+PASS KV_UNCHANGED_C01_CROSS_B1_PAIR 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_UNRELATED_C02_B0 C02_B0 {'ssd_verify_ms': 21.974, 'h2d_ms': 1.186, 'fusion_ms': 286.39, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C02_B0 ['C02_B0']
+PASS NATIVE_80_C01_UNRELATED_B0 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_UNRELATED_C02_B1 C02_B1 {'ssd_verify_ms': 19.751, 'h2d_ms': 1.116, 'fusion_ms': 244.665, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C01_UNRELATED_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C01_UNRELATED C02_B0 {'ssd_verify_ms': 20.736, 'h2d_ms': 1.091, 'fusion_ms': 284.949, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST787_C01_UNRELATED C02_B1 {'ssd_verify_ms': 21.285, 'h2d_ms': 1.048, 'fusion_ms': 742.596, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C01_UNRELATED 
+PASS PAIR_ORDER_C01_UNRELATED 
+TEST787_ROW {"family": "C01", "scenario": "UNRELATED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000489}, "B1": {"UNKNOWN": -0.000628}, "PAIR": {"UNKNOWN": -0.000336}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-MEZQKYJD", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C01", "scenario": "UNRELATED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000627}, "B1": {"UNKNOWN": -0.000489}, "PAIR": {"UNKNOWN": -0.000554}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C01_UNRELATED_B0 
+PASS KV_UNCHANGED_C01_UNRELATED_B1 
+PASS KV_UNCHANGED_C01_UNRELATED_PAIR 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS SSD_SHA_UNCHANGED_C02_B0 
+PASS SSD_SHA_UNCHANGED_C02_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_ORIGINAL_C02_B0 C02_B0 {'ssd_verify_ms': 20.875, 'h2d_ms': 1.185, 'fusion_ms': 286.518, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C02_B0 ['C02_B0']
+PASS NATIVE_80_C02_ORIGINAL_B0 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_ORIGINAL_C02_B1 C02_B1 {'ssd_verify_ms': 19.884, 'h2d_ms': 1.054, 'fusion_ms': 244.687, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_ORIGINAL_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C02_ORIGINAL C02_B0 {'ssd_verify_ms': 20.431, 'h2d_ms': 1.151, 'fusion_ms': 285.109, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST787_C02_ORIGINAL C02_B1 {'ssd_verify_ms': 20.446, 'h2d_ms': 1.195, 'fusion_ms': 744.449, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C02_ORIGINAL 
+PASS PAIR_ORDER_C02_ORIGINAL 
+TEST787_ROW {"family": "C02", "scenario": "ORIGINAL", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000336, "TEAM-JRSBSZJH": -10.988619}, "B1": {"UNKNOWN": -16.875051, "TEAM-JRSBSZJH": -7e-06}, "PAIR": {"UNKNOWN": -16.500067, "TEAM-JRSBSZJH": -9e-06}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "expected_OFFLINE": "TEAM-JRSBSZJH", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C02", "scenario": "ORIGINAL", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"B0": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-DPRJHRVQ": -1e-05, "UNKNOWN": -11.875073}, "B1": {"TEAM-DPRJHRVQ": -8.140814, "UNKNOWN": -0.000381}, "PAIR": {"TEAM-DPRJHRVQ": -7.9e-05, "UNKNOWN": -7.625555}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-DPRJHRVQ", "expected_OFFLINE": "TEAM-DPRJHRVQ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C02_ORIGINAL_B0 
+PASS KV_UNCHANGED_C02_ORIGINAL_B1 
+PASS KV_UNCHANGED_C02_ORIGINAL_PAIR 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_REVERSED_C02_B1 C02_B1 {'ssd_verify_ms': 21.303, 'h2d_ms': 1.253, 'fusion_ms': 246.539, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_REVERSED_B0 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_REVERSED_C02_B0 C02_B0 {'ssd_verify_ms': 21.88, 'h2d_ms': 1.198, 'fusion_ms': 284.978, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C02_B0 ['C02_B0']
+PASS NATIVE_80_C02_REVERSED_B1 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C02_REVERSED C02_B1 {'ssd_verify_ms': 20.454, 'h2d_ms': 1.224, 'fusion_ms': 244.839, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+NATIVE_FUSION_STEP TEST787_C02_REVERSED C02_B0 {'ssd_verify_ms': 22.525, 'h2d_ms': 1.24, 'fusion_ms': 739.634, 'cid': 'C02_B0', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C02_REVERSED 
+PASS PAIR_ORDER_C02_REVERSED 
+TEST787_ROW {"family": "C02", "scenario": "REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B1", "C02_B0"], "generated": {"B0": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-JRSBSZJH": -7e-06, "UNKNOWN": -16.875051}, "B1": {"TEAM-JRSBSZJH": -10.988619, "UNKNOWN": -0.000336}, "PAIR": {"TEAM-JRSBSZJH": -8e-06, "UNKNOWN": -15.750059}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "expected_OFFLINE": "TEAM-JRSBSZJH", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C02", "scenario": "REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B1", "C02_B0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000381, "TEAM-DPRJHRVQ": -8.140814}, "B1": {"UNKNOWN": -11.875073, "TEAM-DPRJHRVQ": -1e-05}, "PAIR": {"UNKNOWN": -8.250337, "TEAM-DPRJHRVQ": -4.8e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-DPRJHRVQ", "expected_OFFLINE": "TEAM-DPRJHRVQ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C02_REVERSED_B0 
+PASS KV_UNCHANGED_C02_REVERSED_B1 
+PASS KV_UNCHANGED_C02_REVERSED_PAIR 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_CROSS_B0_C02_B0 C02_B0 {'ssd_verify_ms': 22.177, 'h2d_ms': 1.252, 'fusion_ms': 287.03, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C02_B0 ['C02_B0']
+PASS NATIVE_80_C02_CROSS_B0_B0 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_CROSS_B0_C03_B1 C03_B1 {'ssd_verify_ms': 19.81, 'h2d_ms': 1.073, 'fusion_ms': 244.78, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C02_CROSS_B0_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C02_CROSS_B0 C02_B0 {'ssd_verify_ms': 21.408, 'h2d_ms': 1.229, 'fusion_ms': 285.485, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST787_C02_CROSS_B0 C03_B1 {'ssd_verify_ms': 20.836, 'h2d_ms': 1.127, 'fusion_ms': 751.083, 'cid': 'C03_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C02_CROSS_B0 
+PASS PAIR_ORDER_C02_CROSS_B0 
+TEST787_ROW {"family": "C02", "scenario": "CROSS_B0", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B0", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000336}, "B1": {"UNKNOWN": -0.000628}, "PAIR": {"UNKNOWN": -0.000204}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-JRSBSZJH", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C02", "scenario": "CROSS_B0", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B0", "C03_B1"], "generated": {"B0": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-DPRJHRVQ": -1e-05, "UNKNOWN": -11.875073}, "B1": {"TEAM-DPRJHRVQ": -9.407119, "UNKNOWN": -0.000381}, "PAIR": {"TEAM-DPRJHRVQ": -1.6e-05, "UNKNOWN": -11.125112}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-DPRJHRVQ", "expected_OFFLINE": "TEAM-DPRJHRVQ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C02_CROSS_B0_B0 
+PASS KV_UNCHANGED_C02_CROSS_B0_B1 
+PASS KV_UNCHANGED_C02_CROSS_B0_PAIR 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_CROSS_B1_C03_B0 C03_B0 {'ssd_verify_ms': 24.136, 'h2d_ms': 1.277, 'fusion_ms': 286.919, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C03_B0 ['C03_B0']
+PASS NATIVE_80_C02_CROSS_B1_B0 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_CROSS_B1_C02_B1 C02_B1 {'ssd_verify_ms': 21.338, 'h2d_ms': 1.312, 'fusion_ms': 245.018, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_CROSS_B1_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C02_CROSS_B1 C03_B0 {'ssd_verify_ms': 20.983, 'h2d_ms': 1.099, 'fusion_ms': 284.933, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST787_C02_CROSS_B1 C02_B1 {'ssd_verify_ms': 21.321, 'h2d_ms': 1.063, 'fusion_ms': 747.44, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C02_CROSS_B1 
+PASS PAIR_ORDER_C02_CROSS_B1 
+TEST787_ROW {"family": "C02", "scenario": "CROSS_B1", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B0", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000297, "TEAM-JRSBSZJH": -10.569063}, "B1": {"UNKNOWN": -16.875051, "TEAM-JRSBSZJH": -7e-06}, "PAIR": {"UNKNOWN": -15.875067, "TEAM-JRSBSZJH": -1e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "expected_OFFLINE": "TEAM-JRSBSZJH", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C02", "scenario": "CROSS_B1", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B0", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000489}, "B1": {"UNKNOWN": -0.000381}, "PAIR": {"UNKNOWN": -0.000298}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-DPRJHRVQ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C02_CROSS_B1_B0 
+PASS KV_UNCHANGED_C02_CROSS_B1_B1 
+PASS KV_UNCHANGED_C02_CROSS_B1_PAIR 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_UNRELATED_C03_B0 C03_B0 {'ssd_verify_ms': 23.531, 'h2d_ms': 1.246, 'fusion_ms': 286.745, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C03_B0 ['C03_B0']
+PASS NATIVE_80_C02_UNRELATED_B0 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_UNRELATED_C03_B1 C03_B1 {'ssd_verify_ms': 20.349, 'h2d_ms': 1.048, 'fusion_ms': 244.89, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C02_UNRELATED_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C02_UNRELATED C03_B0 {'ssd_verify_ms': 20.979, 'h2d_ms': 1.134, 'fusion_ms': 284.906, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST787_C02_UNRELATED C03_B1 {'ssd_verify_ms': 20.986, 'h2d_ms': 1.057, 'fusion_ms': 747.668, 'cid': 'C03_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C02_UNRELATED 
+PASS PAIR_ORDER_C02_UNRELATED 
+TEST787_ROW {"family": "C02", "scenario": "UNRELATED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000297}, "B1": {"UNKNOWN": -0.000628}, "PAIR": {"UNKNOWN": -0.000297}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-JRSBSZJH", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C02", "scenario": "UNRELATED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000489}, "B1": {"UNKNOWN": -0.000381}, "PAIR": {"UNKNOWN": -0.000432}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-DPRJHRVQ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C02_UNRELATED_B0 
+PASS KV_UNCHANGED_C02_UNRELATED_B1 
+PASS KV_UNCHANGED_C02_UNRELATED_PAIR 
+PASS SSD_SHA_UNCHANGED_C02_B0 
+PASS SSD_SHA_UNCHANGED_C02_B1 
+PASS SSD_SHA_UNCHANGED_C03_B0 
+PASS SSD_SHA_UNCHANGED_C03_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_ORIGINAL_C03_B0 C03_B0 {'ssd_verify_ms': 23.069, 'h2d_ms': 1.16, 'fusion_ms': 286.434, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C03_B0 ['C03_B0']
+PASS NATIVE_80_C03_ORIGINAL_B0 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_ORIGINAL_C03_B1 C03_B1 {'ssd_verify_ms': 20.121, 'h2d_ms': 1.063, 'fusion_ms': 244.803, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_ORIGINAL_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C03_ORIGINAL C03_B0 {'ssd_verify_ms': 21.209, 'h2d_ms': 1.138, 'fusion_ms': 285.179, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST787_C03_ORIGINAL C03_B1 {'ssd_verify_ms': 21.246, 'h2d_ms': 1.099, 'fusion_ms': 745.349, 'cid': 'C03_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C03_ORIGINAL 
+PASS PAIR_ORDER_C03_ORIGINAL 
+TEST787_ROW {"family": "C03", "scenario": "ORIGINAL", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000381, "TEAM-GSNGGZZZ": -9.098456}, "B1": {"UNKNOWN": -16.000074, "TEAM-GSNGGZZZ": -1.1e-05}, "PAIR": {"UNKNOWN": -14.625067, "TEAM-GSNGGZZZ": -1e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "expected_OFFLINE": "TEAM-GSNGGZZZ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C03", "scenario": "ORIGINAL", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"B0": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-MYFFBTPZ": -1e-05, "UNKNOWN": -11.250072}, "B1": {"TEAM-MYFFBTPZ": -8.932269, "UNKNOWN": -0.000431}, "PAIR": {"TEAM-MYFFBTPZ": -0.000157, "UNKNOWN": -6.8761}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-MYFFBTPZ", "expected_OFFLINE": "TEAM-MYFFBTPZ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C03_ORIGINAL_B0 
+PASS KV_UNCHANGED_C03_ORIGINAL_B1 
+PASS KV_UNCHANGED_C03_ORIGINAL_PAIR 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_REVERSED_C03_B1 C03_B1 {'ssd_verify_ms': 23.757, 'h2d_ms': 1.187, 'fusion_ms': 247.216, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_REVERSED_B0 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_REVERSED_C03_B0 C03_B0 {'ssd_verify_ms': 22.526, 'h2d_ms': 1.214, 'fusion_ms': 285.39, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C03_B0 ['C03_B0']
+PASS NATIVE_80_C03_REVERSED_B1 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C03_REVERSED C03_B1 {'ssd_verify_ms': 21.554, 'h2d_ms': 1.223, 'fusion_ms': 244.946, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+NATIVE_FUSION_STEP TEST787_C03_REVERSED C03_B0 {'ssd_verify_ms': 22.868, 'h2d_ms': 1.19, 'fusion_ms': 735.81, 'cid': 'C03_B0', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C03_REVERSED 
+PASS PAIR_ORDER_C03_REVERSED 
+TEST787_ROW {"family": "C03", "scenario": "REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B1", "C03_B0"], "generated": {"B0": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-GSNGGZZZ": -1.1e-05, "UNKNOWN": -16.000074}, "B1": {"TEAM-GSNGGZZZ": -9.098456, "UNKNOWN": -0.000381}, "PAIR": {"TEAM-GSNGGZZZ": -1e-05, "UNKNOWN": -14.875067}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "expected_OFFLINE": "TEAM-GSNGGZZZ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C03", "scenario": "REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B1", "C03_B0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000431, "TEAM-MYFFBTPZ": -8.932269}, "B1": {"UNKNOWN": -11.250072, "TEAM-MYFFBTPZ": -1e-05}, "PAIR": {"UNKNOWN": -7.625574, "TEAM-MYFFBTPZ": -8.2e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-MYFFBTPZ", "expected_OFFLINE": "TEAM-MYFFBTPZ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C03_REVERSED_B0 
+PASS KV_UNCHANGED_C03_REVERSED_B1 
+PASS KV_UNCHANGED_C03_REVERSED_PAIR 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_CROSS_B0_C03_B0 C03_B0 {'ssd_verify_ms': 23.205, 'h2d_ms': 1.162, 'fusion_ms': 286.388, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C03_B0 ['C03_B0']
+PASS NATIVE_80_C03_CROSS_B0_B0 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_CROSS_B0_C00_B1 C00_B1 {'ssd_verify_ms': 21.499, 'h2d_ms': 1.211, 'fusion_ms': 244.777, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C03_CROSS_B0_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C03_CROSS_B0 C03_B0 {'ssd_verify_ms': 22.262, 'h2d_ms': 1.123, 'fusion_ms': 284.954, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST787_C03_CROSS_B0 C00_B1 {'ssd_verify_ms': 20.948, 'h2d_ms': 1.034, 'fusion_ms': 697.743, 'cid': 'C00_B1', 'memory_tokens': 98}
+PASS NATIVE_PAIR_80_C03_CROSS_B0 
+PASS PAIR_ORDER_C03_CROSS_B0 
+TEST787_ROW {"family": "C03", "scenario": "CROSS_B0", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B0", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000381}, "B1": {"UNKNOWN": -0.000711}, "PAIR": {"UNKNOWN": -0.00018}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-GSNGGZZZ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C03", "scenario": "CROSS_B0", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B0", "C00_B1"], "generated": {"B0": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-MYFFBTPZ": -1e-05, "UNKNOWN": -11.250072}, "B1": {"TEAM-MYFFBTPZ": -9.221012, "UNKNOWN": -0.000432}, "PAIR": {"TEAM-MYFFBTPZ": -1.3e-05, "UNKNOWN": -11.12509}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-MYFFBTPZ", "expected_OFFLINE": "TEAM-MYFFBTPZ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C03_CROSS_B0_B0 
+PASS KV_UNCHANGED_C03_CROSS_B0_B1 
+PASS KV_UNCHANGED_C03_CROSS_B0_PAIR 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_CROSS_B1_C00_B0 C00_B0 {'ssd_verify_ms': 23.616, 'h2d_ms': 1.116, 'fusion_ms': 286.583, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C00_B0 ['C00_B0']
+PASS NATIVE_80_C03_CROSS_B1_B0 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_CROSS_B1_C03_B1 C03_B1 {'ssd_verify_ms': 20.418, 'h2d_ms': 1.045, 'fusion_ms': 244.622, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_CROSS_B1_B1 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C03_CROSS_B1 C00_B0 {'ssd_verify_ms': 22.342, 'h2d_ms': 1.121, 'fusion_ms': 284.925, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST787_C03_CROSS_B1 C03_B1 {'ssd_verify_ms': 22.761, 'h2d_ms': 1.058, 'fusion_ms': 749.179, 'cid': 'C03_B1', 'memory_tokens': 98}
+PASS NATIVE_PAIR_80_C03_CROSS_B1 
+PASS PAIR_ORDER_C03_CROSS_B1 
+TEST787_ROW {"family": "C03", "scenario": "CROSS_B1", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B0", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000554, "TEAM-GSNGGZZZ": -10.202669}, "B1": {"UNKNOWN": -16.000074, "TEAM-GSNGGZZZ": -1.1e-05}, "PAIR": {"UNKNOWN": -13.875076, "TEAM-GSNGGZZZ": -1.3e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "expected_OFFLINE": "TEAM-GSNGGZZZ", "correct_OFFLINE": true, "pair_correct_OFFLINE": true, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C03", "scenario": "CROSS_B1", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B0", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000711}, "B1": {"UNKNOWN": -0.000431}, "PAIR": {"UNKNOWN": -0.0003}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-MYFFBTPZ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C03_CROSS_B1_B0 
+PASS KV_UNCHANGED_C03_CROSS_B1_B1 
+PASS KV_UNCHANGED_C03_CROSS_B1_PAIR 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_UNRELATED_C00_B0 C00_B0 {'ssd_verify_ms': 22.768, 'h2d_ms': 1.097, 'fusion_ms': 286.636, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C00_B0 ['C00_B0']
+PASS NATIVE_80_C03_UNRELATED_B0 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_UNRELATED_C00_B1 C00_B1 {'ssd_verify_ms': 21.183, 'h2d_ms': 1.107, 'fusion_ms': 244.655, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C03_UNRELATED_B1 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST787_C03_UNRELATED C00_B0 {'ssd_verify_ms': 21.912, 'h2d_ms': 1.191, 'fusion_ms': 285.08, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST787_C03_UNRELATED C00_B1 {'ssd_verify_ms': 24.657, 'h2d_ms': 1.337, 'fusion_ms': 702.939, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C03_UNRELATED 
+PASS PAIR_ORDER_C03_UNRELATED 
+TEST787_ROW {"family": "C03", "scenario": "UNRELATED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000554}, "B1": {"UNKNOWN": -0.000711}, "PAIR": {"UNKNOWN": -0.000336}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-GSNGGZZZ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+TEST787_ROW {"family": "C03", "scenario": "UNRELATED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000711}, "B1": {"UNKNOWN": -0.000432}, "PAIR": {"UNKNOWN": -0.000336}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "expected_OFFLINE": "TEAM-MYFFBTPZ", "correct_OFFLINE": false, "pair_correct_OFFLINE": false, "pair_nonunknown_wrong_OFFLINE": false, "correct_pair_damaged_OFFLINE": false, "wrong_pair_corrected_OFFLINE": false, "unjustified_answer_OFFLINE": false}
+PASS KV_UNCHANGED_C03_UNRELATED_B0 
+PASS KV_UNCHANGED_C03_UNRELATED_B1 
+PASS KV_UNCHANGED_C03_UNRELATED_PAIR 
+PASS SSD_SHA_UNCHANGED_C03_B0 
+PASS SSD_SHA_UNCHANGED_C03_B1 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS TOTAL_CASES 40
+PASS FROZEN_WEIGHTS 
+PASS NO_RESIDUAL_HOOKS 
+TEST787_COMPLETED {"n": 40, "correct": 24, "pair_correct": 24, "wrong_pair_cases": 0, "wrong_pair_corrected": 0, "correct_pair_damaged": 0, "unrelated_nonunknown": 0, "actions": {"SWITCH_B0": 0, "SWITCH_B1": 0, "KEEP_PAIR": 24, "ABSTAIN": 16}, "scenarios": {"ORIGINAL": {"n": 8, "correct": 8, "pair_correct": 8}, "REVERSED": {"n": 8, "correct": 8, "pair_correct": 8}, "CROSS_B0": {"n": 8, "correct": 4, "pair_correct": 4}, "CROSS_B1": {"n": 8, "correct": 4, "pair_correct": 4}, "UNRELATED": {"n": 8, "correct": 0, "pair_correct": 0}}, "note": "No correction success unless incorrect PAIR cases actually occur and are corrected."}
+FILES /content/AKBASCORE_TEST779_20261026T192909_492596Z/TEST787_results.json /content/AKBASCORE_TEST779_20261026T192909_492596Z/TEST787.log /content/AKBASCORE_TEST779_20261026T192909_492596Z/TEST787_manifest.json
