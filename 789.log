@@ -1,0 +1,878 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+==============================================================================================================
+AKBASCORE TEST789 — PHYSICAL ORDER-REVERSAL / BLIND CONSISTENCY GATE
+PASS EXACT_788_GIT_BLOB 
+PASS EXACT_779_GIT_BLOB 
+PASS SEALED_PANEL 
+PASS DECISION_UNIT_0 
+PASS DECISION_UNIT_1 
+PASS DECISION_UNIT_2 
+PASS DECISION_UNIT_3 
+PASS DECISION_UNIT_4 
+PASS PARSE_UNKNOWN_EXPLANATION 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM Fresh A100 runtime required
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 77.1kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 841kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 80.3MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 69.6MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 121MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.01MB/s]Download complete:   125GB, 1.49GB/s  Reconstruction complete: 100%  145GB /  145GB,  872MB/s  Fetching 37 files: 100% 37/37 [06:51<00:00, 10.43s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.28it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.4kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS FOUR_FAMILIES 4
+PASS CARD_NONEMPTY_C00_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X0 
+PASS FRESH_CARTRIDGE_C00_X0 
+PASS PHYSICAL_SHA_C00_X0 
+PHYSICAL_COMMIT C00_X0 0f41a2a23f0ab6b3b71a70b725a60e62e018f03d77c2f82df77946cfde88aa52 PARENTS []
+PASS CARD_NONEMPTY_C00_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X1 
+PASS FRESH_CARTRIDGE_C00_X1 
+PASS PHYSICAL_SHA_C00_X1 
+PHYSICAL_COMMIT C00_X1 9a24a9a9d3ffdf1c59b4ce40fe98a3cd1881d6f2abb5f4e73b82dff9ea883e21 PARENTS []
+PASS CARD_NONEMPTY_C00_X2 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X2 
+PASS FRESH_CARTRIDGE_C00_X2 
+PASS PHYSICAL_SHA_C00_X2 
+PHYSICAL_COMMIT C00_X2 2b310403cfff064d3bad74e7760f31f93d12916141cc7c7d109d8a93d494c00b PARENTS []
+PASS CARD_NONEMPTY_C01_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X0 
+PASS FRESH_CARTRIDGE_C01_X0 
+PASS PHYSICAL_SHA_C01_X0 
+PHYSICAL_COMMIT C01_X0 5a04687c2637b3561cf73a9bd451a7b5a9f3873a37e5e80f8d916f661a9819a7 PARENTS []
+PASS CARD_NONEMPTY_C01_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X1 
+PASS FRESH_CARTRIDGE_C01_X1 
+PASS PHYSICAL_SHA_C01_X1 
+PHYSICAL_COMMIT C01_X1 b25eb944772afcdddc675b9b94e52c7c283caad93f9dd8c0c45ead2001f1424a PARENTS []
+PASS CARD_NONEMPTY_C01_X2 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X2 
+PASS FRESH_CARTRIDGE_C01_X2 
+PASS PHYSICAL_SHA_C01_X2 
+PHYSICAL_COMMIT C01_X2 a71ddf57f9def85dbf5918edbe0a01e7f8b20b4c309b9e2cfc154772bf4bebc5 PARENTS []
+PASS CARD_NONEMPTY_C02_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X0 
+PASS FRESH_CARTRIDGE_C02_X0 
+PASS PHYSICAL_SHA_C02_X0 
+PHYSICAL_COMMIT C02_X0 e78d6f667e33704933a05878274435053152f85353f6cb72d4b33d772291a51b PARENTS []
+PASS CARD_NONEMPTY_C02_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X1 
+PASS FRESH_CARTRIDGE_C02_X1 
+PASS PHYSICAL_SHA_C02_X1 
+PHYSICAL_COMMIT C02_X1 aef1fcf68b6646c66c03fdc802853c668e214fdf3c74e87074c1ba4e7607597a PARENTS []
+PASS CARD_NONEMPTY_C02_X2 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X2 
+PASS FRESH_CARTRIDGE_C02_X2 
+PASS PHYSICAL_SHA_C02_X2 
+PHYSICAL_COMMIT C02_X2 82819186be716681f5529be9952a3b9df82188028968ba44ace7c9f84bb073fd PARENTS []
+PASS CARD_NONEMPTY_C03_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X0 
+PASS FRESH_CARTRIDGE_C03_X0 
+PASS PHYSICAL_SHA_C03_X0 
+PHYSICAL_COMMIT C03_X0 e5c719ae93cf8cd0557d0df88ee983764cc25886be943247dbe1f7bd0f150852 PARENTS []
+PASS CARD_NONEMPTY_C03_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X1 
+PASS FRESH_CARTRIDGE_C03_X1 
+PASS PHYSICAL_SHA_C03_X1 
+PHYSICAL_COMMIT C03_X1 0b530fb69deec7e5fcaa3490f51850f0c6bf63faa6b0607e353bcb7f9de9a200 PARENTS []
+PASS CARD_NONEMPTY_C03_X2 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X2 
+PASS FRESH_CARTRIDGE_C03_X2 
+PASS PHYSICAL_SHA_C03_X2 
+PHYSICAL_COMMIT C03_X2 280da1468fdd47e761cb9f62b23ee5f5b111a4d84f8e56d482c9478613a93bba PARENTS []
+PASS PHYSICAL_32_CARTRIDGES 32
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_BASELINE_FORWARD C00_B0 {'ssd_verify_ms': 20.445, 'h2d_ms': 16.86, 'fusion_ms': 289.195, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST789_C00_BASELINE_FORWARD C00_B1 {'ssd_verify_ms': 18.896, 'h2d_ms': 1.125, 'fusion_ms': 862.248, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_FORWARD 
+PASS PAIR_ORDER_C00_BASELINE_FORWARD 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_BASELINE_REVERSE C00_B1 {'ssd_verify_ms': 18.597, 'h2d_ms': 1.022, 'fusion_ms': 243.498, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST789_C00_BASELINE_REVERSE C00_B0 {'ssd_verify_ms': 19.761, 'h2d_ms': 1.205, 'fusion_ms': 750.672, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_REVERSE 
+PASS PAIR_ORDER_C00_BASELINE_REVERSE 
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"FORWARD": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-VKHJBSFY", "REVERSE": "TEAM-VKHJBSFY"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-VKHJBSFY"}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"FORWARD": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-KMKURDTJ", "REVERSE": "TEAM-KMKURDTJ"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-KMKURDTJ"}, "final": "TEAM-KMKURDTJ", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C00_BASELINE_FORWARD 
+PASS KV_UNCHANGED_C00_BASELINE_REVERSE 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_CONFLICT_FORWARD C00_B1 {'ssd_verify_ms': 19.691, 'h2d_ms': 1.116, 'fusion_ms': 246.703, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_CONFLICT_FORWARD C00_X1 {'ssd_verify_ms': 19.168, 'h2d_ms': 1.13, 'fusion_ms': 703.439, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_CONFLICT_REVERSE C00_X1 {'ssd_verify_ms': 17.815, 'h2d_ms': 1.055, 'fusion_ms': 244.615, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_CONFLICT_REVERSE C00_B1 {'ssd_verify_ms': 19.065, 'h2d_ms': 1.216, 'fusion_ms': 708.691, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_REVERSE 
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B1", "C00_X1"], "generated": {"FORWARD": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-MEZQKYJD", "REVERSE": "TEAM-VKHJBSFY"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": true, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B1", "C00_X1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_FORWARD 
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_REVERSE 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_REVERSED_FORWARD C00_X1 {'ssd_verify_ms': 19.375, 'h2d_ms': 1.096, 'fusion_ms': 246.893, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_REVERSED_FORWARD C00_B1 {'ssd_verify_ms': 18.79, 'h2d_ms': 1.177, 'fusion_ms': 710.246, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_REVERSED_FORWARD 
+PASS PAIR_ORDER_C00_SAME_REV_REVERSED_FORWARD 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_REVERSED_REVERSE C00_B1 {'ssd_verify_ms': 18.128, 'h2d_ms': 1.198, 'fusion_ms': 244.148, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST789_C00_SAME_REV_REVERSED_REVERSE C00_X1 {'ssd_verify_ms': 18.415, 'h2d_ms': 1.041, 'fusion_ms': 711.538, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_REVERSED_REVERSE 
+PASS PAIR_ORDER_C00_SAME_REV_REVERSED_REVERSE 
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_X1", "C00_B1"], "generated": {"FORWARD": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-VKHJBSFY", "REVERSE": "TEAM-MEZQKYJD"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": true}
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_X1", "C00_B1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C00_SAME_REV_REVERSED_FORWARD 
+PASS KV_UNCHANGED_C00_SAME_REV_REVERSED_REVERSE 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_OLDER_DECOY_FORWARD C00_B1 {'ssd_verify_ms': 18.743, 'h2d_ms': 1.034, 'fusion_ms': 245.937, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X0 
+PASS CARTRIDGE_ID_C00_X0 
+PASS CARTRIDGE_TENSOR_SHA_C00_X0 
+NATIVE_FUSION_STEP TEST789_C00_OLDER_DECOY_FORWARD C00_X0 {'ssd_verify_ms': 19.685, 'h2d_ms': 1.178, 'fusion_ms': 761.715, 'cid': 'C00_X0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_OLDER_DECOY_FORWARD 
+PASS PAIR_ORDER_C00_OLDER_DECOY_FORWARD 
+PASS FILE_SHA_C00_X0 
+PASS CARTRIDGE_ID_C00_X0 
+PASS CARTRIDGE_TENSOR_SHA_C00_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_OLDER_DECOY_REVERSE C00_X0 {'ssd_verify_ms': 19.53, 'h2d_ms': 1.345, 'fusion_ms': 283.995, 'cid': 'C00_X0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST789_C00_OLDER_DECOY_REVERSE C00_B1 {'ssd_verify_ms': 19.853, 'h2d_ms': 1.243, 'fusion_ms': 720.772, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_OLDER_DECOY_REVERSE 
+PASS PAIR_ORDER_C00_OLDER_DECOY_REVERSE 
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B1", "C00_X0"], "generated": {"FORWARD": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-VKHJBSFY", "REVERSE": "TEAM-VKHJBSFY"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-VKHJBSFY"}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B1", "C00_X0"], "generated": {"FORWARD": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-MEZQKYJD", "REVERSE": "TEAM-MEZQKYJD"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-MEZQKYJD"}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": true, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C00_OLDER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C00_OLDER_DECOY_REVERSE 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_NEWER_DECOY_FORWARD C00_B1 {'ssd_verify_ms': 19.277, 'h2d_ms': 1.105, 'fusion_ms': 246.296, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+NATIVE_FUSION_STEP TEST789_C00_NEWER_DECOY_FORWARD C00_X2 {'ssd_verify_ms': 19.318, 'h2d_ms': 1.076, 'fusion_ms': 702.771, 'cid': 'C00_X2', 'memory_tokens': 94}
+PASS NATIVE_80_C00_NEWER_DECOY_FORWARD 
+PASS PAIR_ORDER_C00_NEWER_DECOY_FORWARD 
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_NEWER_DECOY_REVERSE C00_X2 {'ssd_verify_ms': 18.008, 'h2d_ms': 0.991, 'fusion_ms': 244.103, 'cid': 'C00_X2', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST789_C00_NEWER_DECOY_REVERSE C00_B1 {'ssd_verify_ms': 18.975, 'h2d_ms': 1.098, 'fusion_ms': 697.62, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_NEWER_DECOY_REVERSE 
+PASS PAIR_ORDER_C00_NEWER_DECOY_REVERSE 
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B1", "C00_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-PDBKPJRA collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B1", "C00_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C00_NEWER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C00_NEWER_DECOY_REVERSE 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_DECOY_ONLY_FORWARD C00_X1 {'ssd_verify_ms': 19.995, 'h2d_ms': 1.052, 'fusion_ms': 246.168, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+NATIVE_FUSION_STEP TEST789_C00_DECOY_ONLY_FORWARD C00_X2 {'ssd_verify_ms': 19.101, 'h2d_ms': 1.086, 'fusion_ms': 698.436, 'cid': 'C00_X2', 'memory_tokens': 94}
+PASS NATIVE_80_C00_DECOY_ONLY_FORWARD 
+PASS PAIR_ORDER_C00_DECOY_ONLY_FORWARD 
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C00_DECOY_ONLY_REVERSE C00_X2 {'ssd_verify_ms': 19.187, 'h2d_ms': 1.145, 'fusion_ms': 244.407, 'cid': 'C00_X2', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST789_C00_DECOY_ONLY_REVERSE C00_X1 {'ssd_verify_ms': 19.537, 'h2d_ms': 1.188, 'fusion_ms': 702.714, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_DECOY_ONLY_REVERSE 
+PASS PAIR_ORDER_C00_DECOY_ONLY_REVERSE 
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_X1", "C00_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "TEAM-MEZQKYJD"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C00", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_X1", "C00_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C00_DECOY_ONLY_FORWARD 
+PASS KV_UNCHANGED_C00_DECOY_ONLY_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C00_X0 
+PASS SSD_SHA_UNCHANGED_C00_X1 
+PASS SSD_SHA_UNCHANGED_C00_X2 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_BASELINE_FORWARD C01_B0 {'ssd_verify_ms': 20.497, 'h2d_ms': 1.139, 'fusion_ms': 286.112, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST789_C01_BASELINE_FORWARD C01_B1 {'ssd_verify_ms': 18.842, 'h2d_ms': 1.071, 'fusion_ms': 704.281, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_FORWARD 
+PASS PAIR_ORDER_C01_BASELINE_FORWARD 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_BASELINE_REVERSE C01_B1 {'ssd_verify_ms': 18.342, 'h2d_ms': 1.002, 'fusion_ms': 243.85, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+NATIVE_FUSION_STEP TEST789_C01_BASELINE_REVERSE C01_B0 {'ssd_verify_ms': 19.948, 'h2d_ms': 1.097, 'fusion_ms': 745.772, 'cid': 'C01_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_REVERSE 
+PASS PAIR_ORDER_C01_BASELINE_REVERSE 
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"FORWARD": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-MEZQKYJD", "REVERSE": "TEAM-MEZQKYJD"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-MEZQKYJD"}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"FORWARD": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-RBVBMXNT", "REVERSE": "TEAM-RBVBMXNT"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-RBVBMXNT"}, "final": "TEAM-RBVBMXNT", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C01_BASELINE_FORWARD 
+PASS KV_UNCHANGED_C01_BASELINE_REVERSE 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_CONFLICT_FORWARD C01_B1 {'ssd_verify_ms': 20.55, 'h2d_ms': 1.206, 'fusion_ms': 246.443, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_CONFLICT_FORWARD C01_X1 {'ssd_verify_ms': 20.593, 'h2d_ms': 1.24, 'fusion_ms': 751.664, 'cid': 'C01_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_CONFLICT_REVERSE C01_X1 {'ssd_verify_ms': 19.61, 'h2d_ms': 1.069, 'fusion_ms': 244.709, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_CONFLICT_REVERSE C01_B1 {'ssd_verify_ms': 20.175, 'h2d_ms': 1.08, 'fusion_ms': 713.707, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_REVERSE 
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B1", "C01_X1"], "generated": {"FORWARD": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-JRSBSZJH", "REVERSE": "TEAM-MEZQKYJD"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": true, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B1", "C01_X1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_FORWARD 
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_REVERSE 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_REVERSED_FORWARD C01_X1 {'ssd_verify_ms': 20.418, 'h2d_ms': 1.073, 'fusion_ms': 246.464, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_REVERSED_FORWARD C01_B1 {'ssd_verify_ms': 20.606, 'h2d_ms': 1.064, 'fusion_ms': 701.26, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_REVERSED_FORWARD 
+PASS PAIR_ORDER_C01_SAME_REV_REVERSED_FORWARD 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_REVERSED_REVERSE C01_B1 {'ssd_verify_ms': 19.584, 'h2d_ms': 1.079, 'fusion_ms': 244.59, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST789_C01_SAME_REV_REVERSED_REVERSE C01_X1 {'ssd_verify_ms': 22.493, 'h2d_ms': 1.085, 'fusion_ms': 747.041, 'cid': 'C01_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_REVERSED_REVERSE 
+PASS PAIR_ORDER_C01_SAME_REV_REVERSED_REVERSE 
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_X1", "C01_B1"], "generated": {"FORWARD": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-MEZQKYJD", "REVERSE": "TEAM-JRSBSZJH"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": true}
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_X1", "C01_B1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C01_SAME_REV_REVERSED_FORWARD 
+PASS KV_UNCHANGED_C01_SAME_REV_REVERSED_REVERSE 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_OLDER_DECOY_FORWARD C01_B1 {'ssd_verify_ms': 20.665, 'h2d_ms': 1.21, 'fusion_ms': 246.776, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X0 
+PASS CARTRIDGE_ID_C01_X0 
+PASS CARTRIDGE_TENSOR_SHA_C01_X0 
+NATIVE_FUSION_STEP TEST789_C01_OLDER_DECOY_FORWARD C01_X0 {'ssd_verify_ms': 23.676, 'h2d_ms': 1.115, 'fusion_ms': 751.786, 'cid': 'C01_X0', 'memory_tokens': 98}
+PASS NATIVE_80_C01_OLDER_DECOY_FORWARD 
+PASS PAIR_ORDER_C01_OLDER_DECOY_FORWARD 
+PASS FILE_SHA_C01_X0 
+PASS CARTRIDGE_ID_C01_X0 
+PASS CARTRIDGE_TENSOR_SHA_C01_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_OLDER_DECOY_REVERSE C01_X0 {'ssd_verify_ms': 20.006, 'h2d_ms': 1.11, 'fusion_ms': 284.694, 'cid': 'C01_X0', 'memory_tokens': 66}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST789_C01_OLDER_DECOY_REVERSE C01_B1 {'ssd_verify_ms': 20.534, 'h2d_ms': 1.18, 'fusion_ms': 717.16, 'cid': 'C01_B1', 'memory_tokens': 98}
+PASS NATIVE_80_C01_OLDER_DECOY_REVERSE 
+PASS PAIR_ORDER_C01_OLDER_DECOY_REVERSE 
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B1", "C01_X0"], "generated": {"FORWARD": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-MEZQKYJD", "REVERSE": "TEAM-MEZQKYJD"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-MEZQKYJD"}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B1", "C01_X0"], "generated": {"FORWARD": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-JRSBSZJH", "REVERSE": "TEAM-JRSBSZJH"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-JRSBSZJH"}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": true, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C01_OLDER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C01_OLDER_DECOY_REVERSE 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_NEWER_DECOY_FORWARD C01_B1 {'ssd_verify_ms': 21.884, 'h2d_ms': 1.143, 'fusion_ms': 246.333, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+NATIVE_FUSION_STEP TEST789_C01_NEWER_DECOY_FORWARD C01_X2 {'ssd_verify_ms': 22.17, 'h2d_ms': 1.141, 'fusion_ms': 750.649, 'cid': 'C01_X2', 'memory_tokens': 95}
+PASS NATIVE_80_C01_NEWER_DECOY_FORWARD 
+PASS PAIR_ORDER_C01_NEWER_DECOY_FORWARD 
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_NEWER_DECOY_REVERSE C01_X2 {'ssd_verify_ms': 18.872, 'h2d_ms': 1.035, 'fusion_ms': 244.486, 'cid': 'C01_X2', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST789_C01_NEWER_DECOY_REVERSE C01_B1 {'ssd_verify_ms': 21.608, 'h2d_ms': 1.153, 'fusion_ms': 705.59, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_NEWER_DECOY_REVERSE 
+PASS PAIR_ORDER_C01_NEWER_DECOY_REVERSE 
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B1", "C01_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-NTCPPSFZ collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B1", "C01_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C01_NEWER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C01_NEWER_DECOY_REVERSE 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_DECOY_ONLY_FORWARD C01_X1 {'ssd_verify_ms': 21.227, 'h2d_ms': 1.11, 'fusion_ms': 246.482, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+NATIVE_FUSION_STEP TEST789_C01_DECOY_ONLY_FORWARD C01_X2 {'ssd_verify_ms': 22.622, 'h2d_ms': 1.05, 'fusion_ms': 747.363, 'cid': 'C01_X2', 'memory_tokens': 96}
+PASS NATIVE_80_C01_DECOY_ONLY_FORWARD 
+PASS PAIR_ORDER_C01_DECOY_ONLY_FORWARD 
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C01_DECOY_ONLY_REVERSE C01_X2 {'ssd_verify_ms': 19.612, 'h2d_ms': 1.083, 'fusion_ms': 244.554, 'cid': 'C01_X2', 'memory_tokens': 63}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST789_C01_DECOY_ONLY_REVERSE C01_X1 {'ssd_verify_ms': 20.525, 'h2d_ms': 1.076, 'fusion_ms': 751.159, 'cid': 'C01_X1', 'memory_tokens': 96}
+PASS NATIVE_80_C01_DECOY_ONLY_REVERSE 
+PASS PAIR_ORDER_C01_DECOY_ONLY_REVERSE 
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_X1", "C01_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "UNKNOWN\n\nThe provided information indicates that the latest authoritative revision is revision 2, not revision 1", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C01", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_X1", "C01_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C01_DECOY_ONLY_FORWARD 
+PASS KV_UNCHANGED_C01_DECOY_ONLY_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS SSD_SHA_UNCHANGED_C01_X0 
+PASS SSD_SHA_UNCHANGED_C01_X1 
+PASS SSD_SHA_UNCHANGED_C01_X2 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_BASELINE_FORWARD C02_B0 {'ssd_verify_ms': 21.054, 'h2d_ms': 1.32, 'fusion_ms': 287.276, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST789_C02_BASELINE_FORWARD C02_B1 {'ssd_verify_ms': 19.968, 'h2d_ms': 1.065, 'fusion_ms': 756.276, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS NATIVE_80_C02_BASELINE_FORWARD 
+PASS PAIR_ORDER_C02_BASELINE_FORWARD 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_BASELINE_REVERSE C02_B1 {'ssd_verify_ms': 21.147, 'h2d_ms': 1.109, 'fusion_ms': 244.872, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+NATIVE_FUSION_STEP TEST789_C02_BASELINE_REVERSE C02_B0 {'ssd_verify_ms': 21.913, 'h2d_ms': 1.299, 'fusion_ms': 758.083, 'cid': 'C02_B0', 'memory_tokens': 99}
+PASS NATIVE_80_C02_BASELINE_REVERSE 
+PASS PAIR_ORDER_C02_BASELINE_REVERSE 
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"FORWARD": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-JRSBSZJH", "REVERSE": "TEAM-JRSBSZJH"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-JRSBSZJH"}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"FORWARD": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-DPRJHRVQ", "REVERSE": "TEAM-DPRJHRVQ"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-DPRJHRVQ"}, "final": "TEAM-DPRJHRVQ", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C02_BASELINE_FORWARD 
+PASS KV_UNCHANGED_C02_BASELINE_REVERSE 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_CONFLICT_FORWARD C02_B1 {'ssd_verify_ms': 21.013, 'h2d_ms': 1.111, 'fusion_ms': 246.646, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_CONFLICT_FORWARD C02_X1 {'ssd_verify_ms': 22.357, 'h2d_ms': 1.15, 'fusion_ms': 748.518, 'cid': 'C02_X1', 'memory_tokens': 96}
+PASS NATIVE_80_C02_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C02_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_CONFLICT_REVERSE C02_X1 {'ssd_verify_ms': 19.358, 'h2d_ms': 1.019, 'fusion_ms': 244.605, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_CONFLICT_REVERSE C02_B1 {'ssd_verify_ms': 21.285, 'h2d_ms': 1.102, 'fusion_ms': 756.619, 'cid': 'C02_B1', 'memory_tokens': 96}
+PASS NATIVE_80_C02_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C02_SAME_REV_CONFLICT_REVERSE 
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B1", "C02_X1"], "generated": {"FORWARD": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-GSNGGZZZ", "REVERSE": "TEAM-JRSBSZJH"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": true, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B1", "C02_X1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C02_SAME_REV_CONFLICT_FORWARD 
+PASS KV_UNCHANGED_C02_SAME_REV_CONFLICT_REVERSE 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_REVERSED_FORWARD C02_X1 {'ssd_verify_ms': 21.33, 'h2d_ms': 1.129, 'fusion_ms': 246.482, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_REVERSED_FORWARD C02_B1 {'ssd_verify_ms': 21.593, 'h2d_ms': 1.228, 'fusion_ms': 749.502, 'cid': 'C02_B1', 'memory_tokens': 96}
+PASS NATIVE_80_C02_SAME_REV_REVERSED_FORWARD 
+PASS PAIR_ORDER_C02_SAME_REV_REVERSED_FORWARD 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_REVERSED_REVERSE C02_B1 {'ssd_verify_ms': 21.187, 'h2d_ms': 1.392, 'fusion_ms': 244.557, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+NATIVE_FUSION_STEP TEST789_C02_SAME_REV_REVERSED_REVERSE C02_X1 {'ssd_verify_ms': 23.578, 'h2d_ms': 1.134, 'fusion_ms': 755.026, 'cid': 'C02_X1', 'memory_tokens': 96}
+PASS NATIVE_80_C02_SAME_REV_REVERSED_REVERSE 
+PASS PAIR_ORDER_C02_SAME_REV_REVERSED_REVERSE 
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_X1", "C02_B1"], "generated": {"FORWARD": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-JRSBSZJH", "REVERSE": "TEAM-GSNGGZZZ"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": true}
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_X1", "C02_B1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C02_SAME_REV_REVERSED_FORWARD 
+PASS KV_UNCHANGED_C02_SAME_REV_REVERSED_REVERSE 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_OLDER_DECOY_FORWARD C02_B1 {'ssd_verify_ms': 24.049, 'h2d_ms': 1.215, 'fusion_ms': 246.554, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X0 
+PASS CARTRIDGE_ID_C02_X0 
+PASS CARTRIDGE_TENSOR_SHA_C02_X0 
+NATIVE_FUSION_STEP TEST789_C02_OLDER_DECOY_FORWARD C02_X0 {'ssd_verify_ms': 24.716, 'h2d_ms': 1.464, 'fusion_ms': 764.561, 'cid': 'C02_X0', 'memory_tokens': 99}
+PASS NATIVE_80_C02_OLDER_DECOY_FORWARD 
+PASS PAIR_ORDER_C02_OLDER_DECOY_FORWARD 
+PASS FILE_SHA_C02_X0 
+PASS CARTRIDGE_ID_C02_X0 
+PASS CARTRIDGE_TENSOR_SHA_C02_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_OLDER_DECOY_REVERSE C02_X0 {'ssd_verify_ms': 22.203, 'h2d_ms': 1.178, 'fusion_ms': 284.794, 'cid': 'C02_X0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST789_C02_OLDER_DECOY_REVERSE C02_B1 {'ssd_verify_ms': 21.355, 'h2d_ms': 1.345, 'fusion_ms': 768.296, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS NATIVE_80_C02_OLDER_DECOY_REVERSE 
+PASS PAIR_ORDER_C02_OLDER_DECOY_REVERSE 
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B1", "C02_X0"], "generated": {"FORWARD": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-JRSBSZJH", "REVERSE": "TEAM-JRSBSZJH"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-JRSBSZJH"}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B1", "C02_X0"], "generated": {"FORWARD": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-GSNGGZZZ", "REVERSE": "TEAM-GSNGGZZZ"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-GSNGGZZZ"}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": true, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C02_OLDER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C02_OLDER_DECOY_REVERSE 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_NEWER_DECOY_FORWARD C02_B1 {'ssd_verify_ms': 22.649, 'h2d_ms': 1.128, 'fusion_ms': 246.608, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+NATIVE_FUSION_STEP TEST789_C02_NEWER_DECOY_FORWARD C02_X2 {'ssd_verify_ms': 22.532, 'h2d_ms': 1.145, 'fusion_ms': 753.719, 'cid': 'C02_X2', 'memory_tokens': 96}
+PASS NATIVE_80_C02_NEWER_DECOY_FORWARD 
+PASS PAIR_ORDER_C02_NEWER_DECOY_FORWARD 
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_NEWER_DECOY_REVERSE C02_X2 {'ssd_verify_ms': 21.685, 'h2d_ms': 1.087, 'fusion_ms': 244.351, 'cid': 'C02_X2', 'memory_tokens': 63}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST789_C02_NEWER_DECOY_REVERSE C02_B1 {'ssd_verify_ms': 22.501, 'h2d_ms': 1.259, 'fusion_ms': 754.003, 'cid': 'C02_B1', 'memory_tokens': 96}
+PASS NATIVE_80_C02_NEWER_DECOY_REVERSE 
+PASS PAIR_ORDER_C02_NEWER_DECOY_REVERSE 
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B1", "C02_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, where WORK-WYTMR", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, which states that WORK-W", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B1", "C02_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C02_NEWER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C02_NEWER_DECOY_REVERSE 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_DECOY_ONLY_FORWARD C02_X1 {'ssd_verify_ms': 23.289, 'h2d_ms': 1.34, 'fusion_ms': 246.683, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+NATIVE_FUSION_STEP TEST789_C02_DECOY_ONLY_FORWARD C02_X2 {'ssd_verify_ms': 22.111, 'h2d_ms': 1.097, 'fusion_ms': 754.323, 'cid': 'C02_X2', 'memory_tokens': 96}
+PASS NATIVE_80_C02_DECOY_ONLY_FORWARD 
+PASS PAIR_ORDER_C02_DECOY_ONLY_FORWARD 
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C02_DECOY_ONLY_REVERSE C02_X2 {'ssd_verify_ms': 20.787, 'h2d_ms': 1.222, 'fusion_ms': 244.849, 'cid': 'C02_X2', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+NATIVE_FUSION_STEP TEST789_C02_DECOY_ONLY_REVERSE C02_X1 {'ssd_verify_ms': 22.165, 'h2d_ms': 1.057, 'fusion_ms': 753.539, 'cid': 'C02_X1', 'memory_tokens': 96}
+PASS NATIVE_80_C02_DECOY_ONLY_REVERSE 
+PASS PAIR_ORDER_C02_DECOY_ONLY_REVERSE 
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_X1", "C02_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "UNKNOWN\n\nThe provided information indicates that the latest authoritative revision is revision 2, not revision 1", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C02", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_X1", "C02_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C02_DECOY_ONLY_FORWARD 
+PASS KV_UNCHANGED_C02_DECOY_ONLY_REVERSE 
+PASS SSD_SHA_UNCHANGED_C02_B0 
+PASS SSD_SHA_UNCHANGED_C02_B1 
+PASS SSD_SHA_UNCHANGED_C02_X0 
+PASS SSD_SHA_UNCHANGED_C02_X1 
+PASS SSD_SHA_UNCHANGED_C02_X2 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_BASELINE_FORWARD C03_B0 {'ssd_verify_ms': 21.915, 'h2d_ms': 1.418, 'fusion_ms': 286.543, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST789_C03_BASELINE_FORWARD C03_B1 {'ssd_verify_ms': 21.288, 'h2d_ms': 1.166, 'fusion_ms': 757.063, 'cid': 'C03_B1', 'memory_tokens': 99}
+PASS NATIVE_80_C03_BASELINE_FORWARD 
+PASS PAIR_ORDER_C03_BASELINE_FORWARD 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_BASELINE_REVERSE C03_B1 {'ssd_verify_ms': 20.526, 'h2d_ms': 1.25, 'fusion_ms': 244.588, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+NATIVE_FUSION_STEP TEST789_C03_BASELINE_REVERSE C03_B0 {'ssd_verify_ms': 22.477, 'h2d_ms': 1.045, 'fusion_ms': 752.17, 'cid': 'C03_B0', 'memory_tokens': 99}
+PASS NATIVE_80_C03_BASELINE_REVERSE 
+PASS PAIR_ORDER_C03_BASELINE_REVERSE 
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"FORWARD": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-GSNGGZZZ", "REVERSE": "TEAM-GSNGGZZZ"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-GSNGGZZZ"}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"FORWARD": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-MYFFBTPZ", "REVERSE": "TEAM-MYFFBTPZ"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-MYFFBTPZ"}, "final": "TEAM-MYFFBTPZ", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C03_BASELINE_FORWARD 
+PASS KV_UNCHANGED_C03_BASELINE_REVERSE 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_CONFLICT_FORWARD C03_B1 {'ssd_verify_ms': 21.952, 'h2d_ms': 1.092, 'fusion_ms': 246.43, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_CONFLICT_FORWARD C03_X1 {'ssd_verify_ms': 21.45, 'h2d_ms': 1.113, 'fusion_ms': 707.465, 'cid': 'C03_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C03_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C03_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_CONFLICT_REVERSE C03_X1 {'ssd_verify_ms': 20.583, 'h2d_ms': 1.154, 'fusion_ms': 244.975, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_CONFLICT_REVERSE C03_B1 {'ssd_verify_ms': 21.652, 'h2d_ms': 1.122, 'fusion_ms': 751.35, 'cid': 'C03_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C03_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C03_SAME_REV_CONFLICT_REVERSE 
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B1", "C03_X1"], "generated": {"FORWARD": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-VKHJBSFY", "REVERSE": "TEAM-GSNGGZZZ"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": true, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B1", "C03_X1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C03_SAME_REV_CONFLICT_FORWARD 
+PASS KV_UNCHANGED_C03_SAME_REV_CONFLICT_REVERSE 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_REVERSED_FORWARD C03_X1 {'ssd_verify_ms': 22.78, 'h2d_ms': 1.102, 'fusion_ms': 246.464, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_REVERSED_FORWARD C03_B1 {'ssd_verify_ms': 23.537, 'h2d_ms': 1.085, 'fusion_ms': 751.675, 'cid': 'C03_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C03_SAME_REV_REVERSED_FORWARD 
+PASS PAIR_ORDER_C03_SAME_REV_REVERSED_FORWARD 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_REVERSED_REVERSE C03_B1 {'ssd_verify_ms': 20.762, 'h2d_ms': 1.111, 'fusion_ms': 244.621, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+NATIVE_FUSION_STEP TEST789_C03_SAME_REV_REVERSED_REVERSE C03_X1 {'ssd_verify_ms': 23.926, 'h2d_ms': 1.285, 'fusion_ms': 707.724, 'cid': 'C03_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C03_SAME_REV_REVERSED_REVERSE 
+PASS PAIR_ORDER_C03_SAME_REV_REVERSED_REVERSE 
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_X1", "C03_B1"], "generated": {"FORWARD": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-GSNGGZZZ", "REVERSE": "TEAM-VKHJBSFY"}, "decision": {"action": "ABSTAIN", "reason": "ORDER_SENSITIVE_CONFLICT"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": true, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": true}
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_X1", "C03_B1"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C03_SAME_REV_REVERSED_FORWARD 
+PASS KV_UNCHANGED_C03_SAME_REV_REVERSED_REVERSE 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_OLDER_DECOY_FORWARD C03_B1 {'ssd_verify_ms': 22.753, 'h2d_ms': 1.106, 'fusion_ms': 246.302, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_X0 
+PASS CARTRIDGE_ID_C03_X0 
+PASS CARTRIDGE_TENSOR_SHA_C03_X0 
+NATIVE_FUSION_STEP TEST789_C03_OLDER_DECOY_FORWARD C03_X0 {'ssd_verify_ms': 24.635, 'h2d_ms': 1.271, 'fusion_ms': 751.2, 'cid': 'C03_X0', 'memory_tokens': 98}
+PASS NATIVE_80_C03_OLDER_DECOY_FORWARD 
+PASS PAIR_ORDER_C03_OLDER_DECOY_FORWARD 
+PASS FILE_SHA_C03_X0 
+PASS CARTRIDGE_ID_C03_X0 
+PASS CARTRIDGE_TENSOR_SHA_C03_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_OLDER_DECOY_REVERSE C03_X0 {'ssd_verify_ms': 22.126, 'h2d_ms': 1.098, 'fusion_ms': 284.567, 'cid': 'C03_X0', 'memory_tokens': 65}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST789_C03_OLDER_DECOY_REVERSE C03_B1 {'ssd_verify_ms': 22.339, 'h2d_ms': 1.153, 'fusion_ms': 755.116, 'cid': 'C03_B1', 'memory_tokens': 98}
+PASS NATIVE_80_C03_OLDER_DECOY_REVERSE 
+PASS PAIR_ORDER_C03_OLDER_DECOY_REVERSE 
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B1", "C03_X0"], "generated": {"FORWARD": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "REVERSE": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "parsed": {"FORWARD": "TEAM-GSNGGZZZ", "REVERSE": "TEAM-GSNGGZZZ"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-GSNGGZZZ"}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": true, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": true, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": true, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B1", "C03_X0"], "generated": {"FORWARD": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "REVERSE": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "parsed": {"FORWARD": "TEAM-VKHJBSFY", "REVERSE": "TEAM-VKHJBSFY"}, "decision": {"action": "KEEP_PAIR", "reason": "ORDER_STABLE_AGREEMENT", "candidate": "TEAM-VKHJBSFY"}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": true, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": true, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": true, "final_unknown_OFFLINE": false, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C03_OLDER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C03_OLDER_DECOY_REVERSE 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_NEWER_DECOY_FORWARD C03_B1 {'ssd_verify_ms': 21.963, 'h2d_ms': 1.043, 'fusion_ms': 246.262, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+NATIVE_FUSION_STEP TEST789_C03_NEWER_DECOY_FORWARD C03_X2 {'ssd_verify_ms': 24.675, 'h2d_ms': 1.389, 'fusion_ms': 708.118, 'cid': 'C03_X2', 'memory_tokens': 95}
+PASS NATIVE_80_C03_NEWER_DECOY_FORWARD 
+PASS PAIR_ORDER_C03_NEWER_DECOY_FORWARD 
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_NEWER_DECOY_REVERSE C03_X2 {'ssd_verify_ms': 21.596, 'h2d_ms': 1.077, 'fusion_ms': 243.896, 'cid': 'C03_X2', 'memory_tokens': 62}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST789_C03_NEWER_DECOY_REVERSE C03_B1 {'ssd_verify_ms': 23.471, 'h2d_ms': 1.223, 'fusion_ms': 750.825, 'cid': 'C03_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C03_NEWER_DECOY_REVERSE 
+PASS PAIR_ORDER_C03_NEWER_DECOY_REVERSE 
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B1", "C03_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-ETCPKNKP collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B1", "C03_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C03_NEWER_DECOY_FORWARD 
+PASS KV_UNCHANGED_C03_NEWER_DECOY_REVERSE 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_DECOY_ONLY_FORWARD C03_X1 {'ssd_verify_ms': 24.726, 'h2d_ms': 1.15, 'fusion_ms': 245.923, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+NATIVE_FUSION_STEP TEST789_C03_DECOY_ONLY_FORWARD C03_X2 {'ssd_verify_ms': 22.786, 'h2d_ms': 1.121, 'fusion_ms': 705.537, 'cid': 'C03_X2', 'memory_tokens': 94}
+PASS NATIVE_80_C03_DECOY_ONLY_FORWARD 
+PASS PAIR_ORDER_C03_DECOY_ONLY_FORWARD 
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST789_C03_DECOY_ONLY_REVERSE C03_X2 {'ssd_verify_ms': 22.658, 'h2d_ms': 1.268, 'fusion_ms': 244.099, 'cid': 'C03_X2', 'memory_tokens': 62}
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+NATIVE_FUSION_STEP TEST789_C03_DECOY_ONLY_REVERSE C03_X1 {'ssd_verify_ms': 24.022, 'h2d_ms': 1.23, 'fusion_ms': 704.81, 'cid': 'C03_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C03_DECOY_ONLY_REVERSE 
+PASS PAIR_ORDER_C03_DECOY_ONLY_REVERSE 
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_X1", "C03_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "REVERSE": {"raw": "UNKNOWN\n\nThe provided information indicates that the latest authoritative revision is revision 2, not revision 1", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+TEST789_ROW {"family": "C03", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_X1", "C03_X2"], "generated": {"FORWARD": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "REVERSE": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "parsed": {"FORWARD": "UNKNOWN", "REVERSE": "UNKNOWN"}, "decision": {"action": "ABSTAIN", "reason": "MISSING_CONSENSUS"}, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "forward_baseline_OFFLINE": false, "forward_decoy_OFFLINE": false, "reverse_baseline_OFFLINE": false, "reverse_decoy_OFFLINE": false, "order_sensitive_OFFLINE": false, "final_baseline_OFFLINE": false, "final_decoy_OFFLINE": false, "final_unknown_OFFLINE": true, "wrong_forward_suppressed_OFFLINE": false, "correct_forward_damaged_OFFLINE": false}
+PASS KV_UNCHANGED_C03_DECOY_ONLY_FORWARD 
+PASS KV_UNCHANGED_C03_DECOY_ONLY_REVERSE 
+PASS SSD_SHA_UNCHANGED_C03_B0 
+PASS SSD_SHA_UNCHANGED_C03_B1 
+PASS SSD_SHA_UNCHANGED_C03_X0 
+PASS SSD_SHA_UNCHANGED_C03_X1 
+PASS SSD_SHA_UNCHANGED_C03_X2 
+PASS TOTAL_CASES 48
+PASS FROZEN_WEIGHTS 
+PASS NO_RESIDUAL_HOOKS 
+TEST789_COMPLETED {"n": 48, "order_sensitive": 9, "forward_baseline": 16, "forward_decoy": 8, "final_baseline": 12, "final_decoy": 4, "final_unknown": 32, "wrong_forward_suppressed": 4, "correct_forward_damaged": 4, "actions": {"KEEP_PAIR": 16, "ABSTAIN": 32}, "scenarios": {"BASELINE": {"n": 8, "order_sensitive": 0, "final_decoy": 0}, "SAME_REV_CONFLICT": {"n": 8, "order_sensitive": 4, "final_decoy": 0}, "SAME_REV_REVERSED": {"n": 8, "order_sensitive": 4, "final_decoy": 0}, "OLDER_DECOY": {"n": 8, "order_sensitive": 0, "final_decoy": 4}, "NEWER_DECOY": {"n": 8, "order_sensitive": 0, "final_decoy": 0}, "DECOY_ONLY": {"n": 8, "order_sensitive": 1, "final_decoy": 0}}, "interpretation": "Order consistency can trigger abstention; agreement is not proof of truth."}
+FILES /content/AKBASCORE_TEST779_20261027T005946_118990Z/TEST789_results.json /content/AKBASCORE_TEST779_20261027T005946_118990Z/TEST789.log /content/AKBASCORE_TEST779_20261027T005946_118990Z/TEST789_manifest.json
