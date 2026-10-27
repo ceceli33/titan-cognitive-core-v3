@@ -1,0 +1,515 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+================================================================================================================
+TEST791 — BLIND BIDIRECTIONAL ATTENTION DOSE RESPONSE / NATIVE PHYSICAL CUT3
+PASS TEST790_EXACT_BLOB 
+PASS TEST789_EXACT_BLOB 
+PASS TEST779_EXACT_BLOB 
+PASS SEALED_PANEL 
+PASS MANIFEST_CONTRACT 
+PASS MANIFEST_PREFLIGHT 
+PASS PROBE_SYMBOLS 
+PASS DOSE_SYMMETRY 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 78.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 860kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 63.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 71.1MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 128MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.40MB/s]Download complete:   125GB, 1.15GB/s  Reconstruction complete: 100%  145GB /  145GB,  545MB/s  Fetching 37 files: 100% 37/37 [06:42<00:00,  7.95s/it]Loading weights: 100% 963/963 [06:22<00:00,  3.29it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.5kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS CARD_NONEMPTY_C00_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X0 
+PASS FRESH_CARTRIDGE_C00_X0 
+PASS PHYSICAL_SHA_C00_X0 
+PHYSICAL_COMMIT C00_X0 0f41a2a23f0ab6b3b71a70b725a60e62e018f03d77c2f82df77946cfde88aa52 PARENTS []
+PASS CARD_NONEMPTY_C00_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X1 
+PASS FRESH_CARTRIDGE_C00_X1 
+PASS PHYSICAL_SHA_C00_X1 
+PHYSICAL_COMMIT C00_X1 9a24a9a9d3ffdf1c59b4ce40fe98a3cd1881d6f2abb5f4e73b82dff9ea883e21 PARENTS []
+PASS CARD_NONEMPTY_C01_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X0 
+PASS FRESH_CARTRIDGE_C01_X0 
+PASS PHYSICAL_SHA_C01_X0 
+PHYSICAL_COMMIT C01_X0 5a04687c2637b3561cf73a9bd451a7b5a9f3873a37e5e80f8d916f661a9819a7 PARENTS []
+PASS CARD_NONEMPTY_C01_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X1 
+PASS FRESH_CARTRIDGE_C01_X1 
+PASS PHYSICAL_SHA_C01_X1 
+PHYSICAL_COMMIT C01_X1 b25eb944772afcdddc675b9b94e52c7c283caad93f9dd8c0c45ead2001f1424a PARENTS []
+PASS CARD_NONEMPTY_C02_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X0 
+PASS FRESH_CARTRIDGE_C02_X0 
+PASS PHYSICAL_SHA_C02_X0 
+PHYSICAL_COMMIT C02_X0 e78d6f667e33704933a05878274435053152f85353f6cb72d4b33d772291a51b PARENTS []
+PASS CARD_NONEMPTY_C02_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X1 
+PASS FRESH_CARTRIDGE_C02_X1 
+PASS PHYSICAL_SHA_C02_X1 
+PHYSICAL_COMMIT C02_X1 aef1fcf68b6646c66c03fdc802853c668e214fdf3c74e87074c1ba4e7607597a PARENTS []
+PASS CARD_NONEMPTY_C03_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X0 
+PASS FRESH_CARTRIDGE_C03_X0 
+PASS PHYSICAL_SHA_C03_X0 
+PHYSICAL_COMMIT C03_X0 e5c719ae93cf8cd0557d0df88ee983764cc25886be943247dbe1f7bd0f150852 PARENTS []
+PASS CARD_NONEMPTY_C03_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X1 
+PASS FRESH_CARTRIDGE_C03_X1 
+PASS PHYSICAL_SHA_C03_X1 
+PHYSICAL_COMMIT C03_X1 0b530fb69deec7e5fcaa3490f51850f0c6bf63faa6b0607e353bcb7f9de9a200 PARENTS []
+PASS PHYSICAL_28_CARTRIDGES 28
+PASS MANIFEST_AFTER_28 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C00_BASELINE_FORWARD C00_B0 {'ssd_verify_ms': 18.813, 'h2d_ms': 20.823, 'fusion_ms': 289.164, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST791_C00_BASELINE_FORWARD C00_B1 {'ssd_verify_ms': 18.235, 'h2d_ms': 1.087, 'fusion_ms': 826.157, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_FORWARD 
+PASS PAIR_ORDER_C00_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C00_B0_C00_B1 {'actual': 97, 'expected': 97}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_BASELINE_FORWARD_CURRENT 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.766208171844482, "state_sha256": "1e573a89ba7618e97739392ca50bfe8d1d29984d8c861ff0e3ca9204de764660", "attention": {"4": {"calls": 1, "B0_mass": 0.0071764, "B1_mass": 0.0084432, "entropy": 0.455687}, "20": {"calls": 1, "B0_mass": 0.0119397, "B1_mass": 0.0075659, "entropy": 0.814562}, "40": {"calls": 1, "B0_mass": 0.0072901, "B1_mass": 0.0045519, "entropy": 0.902916}, "79": {"calls": 1, "B0_mass": 0.1197826, "B1_mass": 0.0972111, "entropy": 3.215243}}, "density": {"B0": 0.0013239276190476193, "B1": 0.0011388427083333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.766208171844482, "state_sha256": "1e573a89ba7618e97739392ca50bfe8d1d29984d8c861ff0e3ca9204de764660", "attention": {"4": {"calls": 1, "B0_mass": 0.0141644, "B1_mass": 0.0082654, "entropy": 0.499601}, "20": {"calls": 1, "B0_mass": 0.0229037, "B1_mass": 0.0072328, "entropy": 0.869037}, "40": {"calls": 1, "B0_mass": 0.0141565, "B1_mass": 0.0043938, "entropy": 0.938202}, "79": {"calls": 1, "B0_mass": 0.2030877, "B1_mass": 0.0831497, "entropy": 3.246041}}, "density": {"B0": 0.002287122857142857, "B1": 0.0009872531250000002}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": 0.0009631952380952378, "B1_density_delta": -0.00015158958333333318, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.766208171844482, "state_sha256": "1e573a89ba7618e97739392ca50bfe8d1d29984d8c861ff0e3ca9204de764660", "attention": {"4": {"calls": 1, "B0_mass": 0.0036019, "B1_mass": 0.008536, "entropy": 0.430841}, "20": {"calls": 1, "B0_mass": 0.006061, "B1_mass": 0.0076937, "entropy": 0.780784}, "40": {"calls": 1, "B0_mass": 0.0036225, "B1_mass": 0.0045439, "entropy": 0.879029}, "79": {"calls": 1, "B0_mass": 0.0657346, "B1_mass": 0.1066694, "entropy": 3.15678}}, "density": {"B0": 0.0007182676190476191, "B1": 0.0012386145833333333}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": -0.0006056600000000002, "B1_density_delta": 9.977187499999999e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.766208171844482, "state_sha256": "1e573a89ba7618e97739392ca50bfe8d1d29984d8c861ff0e3ca9204de764660", "attention": {"4": {"calls": 1, "B0_mass": 0.0070019, "B1_mass": 0.0164664, "entropy": 0.502024}, "20": {"calls": 1, "B0_mass": 0.0116635, "B1_mass": 0.0148416, "entropy": 0.850427}, "40": {"calls": 1, "B0_mass": 0.0071046, "B1_mass": 0.0088979, "entropy": 0.924661}, "79": {"calls": 1, "B0_mass": 0.1057528, "B1_mass": 0.1691945, "entropy": 3.252554}}, "density": {"B0": 0.0011859133333333332, "B1": 0.0020097291666666666}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": -0.0001380142857142861, "B1_density_delta": 0.0008708864583333333, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.766208171844482, "state_sha256": "1e573a89ba7618e97739392ca50bfe8d1d29984d8c861ff0e3ca9204de764660", "attention": {"4": {"calls": 1, "B0_mass": 0.0072702, "B1_mass": 0.0042665, "entropy": 0.428987}, "20": {"calls": 1, "B0_mass": 0.0119017, "B1_mass": 0.0037369, "entropy": 0.786095}, "40": {"calls": 1, "B0_mass": 0.007299, "B1_mass": 0.0022731, "entropy": 0.891519}, "79": {"calls": 1, "B0_mass": 0.1289324, "B1_mass": 0.0527086, "entropy": 3.163441}}, "density": {"B0": 0.0014107914285714288, "B1": 0.0006116520833333334}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": 8.686380952380949e-05, "B1_density_delta": -0.000527190625, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_BASELINE_FORWARD_HISTORICAL 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9117021560668945, "state_sha256": "58e995d8f6d6d44d4ce068f4a222c20e0df1dd3039603ed042141dfc707ba131", "attention": {"4": {"calls": 1, "B0_mass": 0.0065826, "B1_mass": 0.008041, "entropy": 0.421756}, "20": {"calls": 1, "B0_mass": 0.0120051, "B1_mass": 0.0074376, "entropy": 0.795787}, "40": {"calls": 1, "B0_mass": 0.0073257, "B1_mass": 0.0045376, "entropy": 0.872319}, "79": {"calls": 1, "B0_mass": 0.1162245, "B1_mass": 0.0927425, "entropy": 3.169102}}, "density": {"B0": 0.001291002857142857, "B1": 0.0010908093750000001}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9117021560668945, "state_sha256": "58e995d8f6d6d44d4ce068f4a222c20e0df1dd3039603ed042141dfc707ba131", "attention": {"4": {"calls": 1, "B0_mass": 0.0130159, "B1_mass": 0.0078903, "entropy": 0.463184}, "20": {"calls": 1, "B0_mass": 0.0233123, "B1_mass": 0.0072139, "entropy": 0.855592}, "40": {"calls": 1, "B0_mass": 0.0142951, "B1_mass": 0.0043867, "entropy": 0.908666}, "79": {"calls": 1, "B0_mass": 0.1980019, "B1_mass": 0.0800503, "entropy": 3.214554}}, "density": {"B0": 0.002243898095238095, "B1": 0.0009546968750000001}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": 0.000952895238095238, "B1_density_delta": -0.00013611250000000004, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9117021560668945, "state_sha256": "58e995d8f6d6d44d4ce068f4a222c20e0df1dd3039603ed042141dfc707ba131", "attention": {"4": {"calls": 1, "B0_mass": 0.0033008, "B1_mass": 0.0081195, "entropy": 0.398436}, "20": {"calls": 1, "B0_mass": 0.0061427, "B1_mass": 0.0076525, "entropy": 0.764475}, "40": {"calls": 1, "B0_mass": 0.003665, "B1_mass": 0.0045611, "entropy": 0.851661}, "79": {"calls": 1, "B0_mass": 0.0637603, "B1_mass": 0.1010459, "entropy": 3.108394}}, "density": {"B0": 0.0007006476190476191, "B1": 0.0011797864583333333}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": -0.0005903552380952378, "B1_density_delta": 8.897708333333314e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9117021560668945, "state_sha256": "58e995d8f6d6d44d4ce068f4a222c20e0df1dd3039603ed042141dfc707ba131", "attention": {"4": {"calls": 1, "B0_mass": 0.0064344, "B1_mass": 0.0157421, "entropy": 0.467556}, "20": {"calls": 1, "B0_mass": 0.0119095, "B1_mass": 0.0148697, "entropy": 0.838837}, "40": {"calls": 1, "B0_mass": 0.0072054, "B1_mass": 0.0089577, "entropy": 0.897544}, "79": {"calls": 1, "B0_mass": 0.1033674, "B1_mass": 0.1636185, "entropy": 3.223334}}, "density": {"B0": 0.0011664980952380952, "B1": 0.0019525614583333333}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": -0.00012450476190476183, "B1_density_delta": 0.0008617520833333332, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9117021560668945, "state_sha256": "58e995d8f6d6d44d4ce068f4a222c20e0df1dd3039603ed042141dfc707ba131", "attention": {"4": {"calls": 1, "B0_mass": 0.0066619, "B1_mass": 0.0040547, "entropy": 0.395537}, "20": {"calls": 1, "B0_mass": 0.0121147, "B1_mass": 0.003727, "entropy": 0.773422}, "40": {"calls": 1, "B0_mass": 0.0073762, "B1_mass": 0.002278, "entropy": 0.859828}, "79": {"calls": 1, "B0_mass": 0.1243464, "B1_mass": 0.0498872, "entropy": 3.117037}}, "density": {"B0": 0.0013698790476190477, "B1": 0.0005822104166666667}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": 7.887619047619067e-05, "B1_density_delta": -0.0005085989583333335, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C00_BASELINE_FORWARD 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C00_BASELINE_REVERSE C00_B1 {'ssd_verify_ms': 20.168, 'h2d_ms': 1.019, 'fusion_ms': 245.97, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST791_C00_BASELINE_REVERSE C00_B0 {'ssd_verify_ms': 19.343, 'h2d_ms': 1.063, 'fusion_ms': 708.689, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_REVERSE 
+PASS PAIR_ORDER_C00_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C00_B1_C00_B0 {'actual': 97, 'expected': 97}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_BASELINE_REVERSE_CURRENT 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.775333404541016, "state_sha256": "0ecf63a7ade33c27400e17bc04c9927aa205a2882c524b42da80a14ba142c4bc", "attention": {"4": {"calls": 1, "B0_mass": 0.0064237, "B1_mass": 0.0086945, "entropy": 0.447069}, "20": {"calls": 1, "B0_mass": 0.0106383, "B1_mass": 0.0081208, "entropy": 0.809326}, "40": {"calls": 1, "B0_mass": 0.0058151, "B1_mass": 0.0052452, "entropy": 0.904895}, "79": {"calls": 1, "B0_mass": 0.1180086, "B1_mass": 0.0929545, "entropy": 3.180068}}, "density": {"B0": 0.0014006458333333334, "B1": 0.0010125761904761904}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.775333404541016, "state_sha256": "0ecf63a7ade33c27400e17bc04c9927aa205a2882c524b42da80a14ba142c4bc", "attention": {"4": {"calls": 1, "B0_mass": 0.0126883, "B1_mass": 0.0085382, "entropy": 0.486276}, "20": {"calls": 1, "B0_mass": 0.0206369, "B1_mass": 0.0078388, "entropy": 0.861302}, "40": {"calls": 1, "B0_mass": 0.0117088, "B1_mass": 0.0052495, "entropy": 0.940443}, "79": {"calls": 1, "B0_mass": 0.1998539, "B1_mass": 0.0797021, "entropy": 3.202872}}, "density": {"B0": 0.0024187458333333333, "B1": 0.0008837180952380952}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0010180999999999999, "B1_density_delta": -0.00012885809523809522, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.775333404541016, "state_sha256": "0ecf63a7ade33c27400e17bc04c9927aa205a2882c524b42da80a14ba142c4bc", "attention": {"4": {"calls": 1, "B0_mass": 0.0032229, "B1_mass": 0.0087757, "entropy": 0.424906}, "20": {"calls": 1, "B0_mass": 0.0053526, "B1_mass": 0.0081987, "entropy": 0.776025}, "40": {"calls": 1, "B0_mass": 0.0029055, "B1_mass": 0.0052608, "entropy": 0.882461}, "79": {"calls": 1, "B0_mass": 0.0651251, "B1_mass": 0.1020786, "entropy": 3.126078}}, "density": {"B0": 0.0007644083333333334, "B1": 0.0011003628571428573}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0006362375, "B1_density_delta": 8.778666666666682e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.775333404541016, "state_sha256": "0ecf63a7ade33c27400e17bc04c9927aa205a2882c524b42da80a14ba142c4bc", "attention": {"4": {"calls": 1, "B0_mass": 0.0062697, "B1_mass": 0.0170323, "entropy": 0.497241}, "20": {"calls": 1, "B0_mass": 0.0104293, "B1_mass": 0.0159733, "entropy": 0.855282}, "40": {"calls": 1, "B0_mass": 0.0058024, "B1_mass": 0.0104692, "entropy": 0.935166}, "79": {"calls": 1, "B0_mass": 0.1043332, "B1_mass": 0.163585, "entropy": 3.223645}}, "density": {"B0": 0.001255884375, "B1": 0.0018097857142857143}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0001447614583333333, "B1_density_delta": 0.0007972095238095239, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.775333404541016, "state_sha256": "0ecf63a7ade33c27400e17bc04c9927aa205a2882c524b42da80a14ba142c4bc", "attention": {"4": {"calls": 1, "B0_mass": 0.0065056, "B1_mass": 0.0043822, "entropy": 0.418358}, "20": {"calls": 1, "B0_mass": 0.0107101, "B1_mass": 0.0040718, "entropy": 0.782356}, "40": {"calls": 1, "B0_mass": 0.0059772, "B1_mass": 0.0026789, "entropy": 0.892679}, "79": {"calls": 1, "B0_mass": 0.1267102, "B1_mass": 0.0500867, "entropy": 3.12293}}, "density": {"B0": 0.0014937239583333334, "B1": 0.0005413085714285715}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 9.307812500000006e-05, "B1_density_delta": -0.000471267619047619, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_BASELINE_REVERSE_HISTORICAL 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.912146091461182, "state_sha256": "84aea13a3924263dc45481ea75a4294d4912568ed778437e95540d97ae4a9945", "attention": {"4": {"calls": 1, "B0_mass": 0.006532, "B1_mass": 0.0089431, "entropy": 0.434864}, "20": {"calls": 1, "B0_mass": 0.0104466, "B1_mass": 0.0082601, "entropy": 0.791446}, "40": {"calls": 1, "B0_mass": 0.0054884, "B1_mass": 0.0054012, "entropy": 0.875219}, "79": {"calls": 1, "B0_mass": 0.1177921, "B1_mass": 0.0973862, "entropy": 3.168992}}, "density": {"B0": 0.0013929906249999999, "B1": 0.0010575952380952383}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.912146091461182, "state_sha256": "84aea13a3924263dc45481ea75a4294d4912568ed778437e95540d97ae4a9945", "attention": {"4": {"calls": 1, "B0_mass": 0.0129001, "B1_mass": 0.0087769, "entropy": 0.474212}, "20": {"calls": 1, "B0_mass": 0.0204221, "B1_mass": 0.0080627, "entropy": 0.846009}, "40": {"calls": 1, "B0_mass": 0.0109375, "B1_mass": 0.0053506, "entropy": 0.909847}, "79": {"calls": 1, "B0_mass": 0.1990879, "B1_mass": 0.0835416, "entropy": 3.197418}}, "density": {"B0": 0.002400494791666667, "B1": 0.00092338}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0010075041666666672, "B1_density_delta": -0.00013421523809523832, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.912146091461182, "state_sha256": "84aea13a3924263dc45481ea75a4294d4912568ed778437e95540d97ae4a9945", "attention": {"4": {"calls": 1, "B0_mass": 0.0032775, "B1_mass": 0.0090298, "entropy": 0.412598}, "20": {"calls": 1, "B0_mass": 0.0052671, "B1_mass": 0.0083858, "entropy": 0.761171}, "40": {"calls": 1, "B0_mass": 0.0027426, "B1_mass": 0.0054191, "entropy": 0.857683}, "79": {"calls": 1, "B0_mass": 0.0650746, "B1_mass": 0.1064727, "entropy": 3.125033}}, "density": {"B0": 0.0007612947916666666, "B1": 0.0011455009523809523}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0006316958333333333, "B1_density_delta": 8.790571428571401e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.912146091461182, "state_sha256": "84aea13a3924263dc45481ea75a4294d4912568ed778437e95540d97ae4a9945", "attention": {"4": {"calls": 1, "B0_mass": 0.0063686, "B1_mass": 0.0175031, "entropy": 0.48624}, "20": {"calls": 1, "B0_mass": 0.0102253, "B1_mass": 0.0162554, "entropy": 0.839133}, "40": {"calls": 1, "B0_mass": 0.0053728, "B1_mass": 0.0105407, "entropy": 0.900078}, "79": {"calls": 1, "B0_mass": 0.1040354, "B1_mass": 0.1712514, "entropy": 3.232993}}, "density": {"B0": 0.0012461822916666667, "B1": 0.0018861666666666669}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.00014680833333333317, "B1_density_delta": 0.0008285714285714285, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_B0", "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.912146091461182, "state_sha256": "84aea13a3924263dc45481ea75a4294d4912568ed778437e95540d97ae4a9945", "attention": {"4": {"calls": 1, "B0_mass": 0.0066195, "B1_mass": 0.00451, "entropy": 0.405449}, "20": {"calls": 1, "B0_mass": 0.0105912, "B1_mass": 0.004175, "entropy": 0.766714}, "40": {"calls": 1, "B0_mass": 0.0055368, "B1_mass": 0.0027066, "entropy": 0.859241}, "79": {"calls": 1, "B0_mass": 0.1269836, "B1_mass": 0.0523998, "entropy": 3.111542}}, "density": {"B0": 0.0014907458333333335, "B1": 0.000564584761904762}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 9.775520833333359e-05, "B1_density_delta": -0.0004930104761904764, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C00_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C00_SAME_REV_CONFLICT_FORWARD C00_B1 {'ssd_verify_ms': 19.041, 'h2d_ms': 1.06, 'fusion_ms': 246.071, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST791_C00_SAME_REV_CONFLICT_FORWARD C00_X1 {'ssd_verify_ms': 19.542, 'h2d_ms': 1.025, 'fusion_ms': 665.187, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C00_B1_C00_X1 {'actual': 94, 'expected': 94}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_FORWARD_CURRENT 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.801585674285889, "state_sha256": "b7853a731e05410fcce36bc8e2f2d3703c515c46bbf79b307a9e3182d4469d7e", "attention": {"4": {"calls": 1, "B0_mass": 0.0068081, "B1_mass": 0.0088907, "entropy": 0.446256}, "20": {"calls": 1, "B0_mass": 0.0106128, "B1_mass": 0.0085222, "entropy": 0.79646}, "40": {"calls": 1, "B0_mass": 0.0057023, "B1_mass": 0.006541, "entropy": 0.916272}, "79": {"calls": 1, "B0_mass": 0.1198865, "B1_mass": 0.0896723, "entropy": 3.195868}}, "density": {"B0": 0.0014187666666666664, "B1": 0.0010909947916666665}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": false}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.801585674285889, "state_sha256": "b7853a731e05410fcce36bc8e2f2d3703c515c46bbf79b307a9e3182d4469d7e", "attention": {"4": {"calls": 1, "B0_mass": 0.0134124, "B1_mass": 0.0086931, "entropy": 0.486401}, "20": {"calls": 1, "B0_mass": 0.0206898, "B1_mass": 0.0082715, "entropy": 0.849215}, "40": {"calls": 1, "B0_mass": 0.0113017, "B1_mass": 0.0064569, "entropy": 0.95035}, "79": {"calls": 1, "B0_mass": 0.2017813, "B1_mass": 0.0767033, "entropy": 3.219995}}, "density": {"B0": 0.0024351333333333335, "B1": 0.0009524135416666668}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.001016366666666667, "B1_density_delta": -0.0001385812499999998, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.801585674285889, "state_sha256": "b7853a731e05410fcce36bc8e2f2d3703c515c46bbf79b307a9e3182d4469d7e", "attention": {"4": {"calls": 1, "B0_mass": 0.0034205, "B1_mass": 0.0089944, "entropy": 0.423439}, "20": {"calls": 1, "B0_mass": 0.0053529, "B1_mass": 0.0086257, "entropy": 0.765997}, "40": {"calls": 1, "B0_mass": 0.0028449, "B1_mass": 0.0065861, "entropy": 0.900496}, "79": {"calls": 1, "B0_mass": 0.0659187, "B1_mass": 0.0980882, "entropy": 3.152007}}, "density": {"B0": 0.0007720468750000001, "B1": 0.0011802083333333332}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0006467197916666664, "B1_density_delta": 8.92135416666667e-05, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_X1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.801585674285889, "state_sha256": "b7853a731e05410fcce36bc8e2f2d3703c515c46bbf79b307a9e3182d4469d7e", "attention": {"4": {"calls": 1, "B0_mass": 0.0066152, "B1_mass": 0.017275, "entropy": 0.49396}, "20": {"calls": 1, "B0_mass": 0.0103622, "B1_mass": 0.0167028, "entropy": 0.840882}, "40": {"calls": 1, "B0_mass": 0.0056003, "B1_mass": 0.0129325, "entropy": 0.950825}, "79": {"calls": 1, "B0_mass": 0.10588, "B1_mass": 0.1582846, "entropy": 3.247395}}, "density": {"B0": 0.0012691927083333333, "B1": 0.0019574989583333335}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0001495739583333331, "B1_density_delta": 0.0008665041666666669, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_X1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.801585674285889, "state_sha256": "b7853a731e05410fcce36bc8e2f2d3703c515c46bbf79b307a9e3182d4469d7e", "attention": {"4": {"calls": 1, "B0_mass": 0.0069133, "B1_mass": 0.0045027, "entropy": 0.41866}, "20": {"calls": 1, "B0_mass": 0.010671, "B1_mass": 0.0042578, "entropy": 0.770377}, "40": {"calls": 1, "B0_mass": 0.0057198, "B1_mass": 0.0032658, "entropy": 0.898969}, "79": {"calls": 1, "B0_mass": 0.1277248, "B1_mass": 0.0477831, "entropy": 3.142894}}, "density": {"B0": 0.0015012041666666667, "B1": 0.0005761114583333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 8.243750000000026e-05, "B1_density_delta": -0.0005148833333333332, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.926366329193115, "state_sha256": "114d9cc937fd10b666d616855abcc7b842a339b4428357d9a5f73ea1670b0e42", "attention": {"4": {"calls": 1, "B0_mass": 0.0062, "B1_mass": 0.0083716, "entropy": 0.416862}, "20": {"calls": 1, "B0_mass": 0.0107862, "B1_mass": 0.0086223, "entropy": 0.799051}, "40": {"calls": 1, "B0_mass": 0.0056172, "B1_mass": 0.0065279, "entropy": 0.881571}, "79": {"calls": 1, "B0_mass": 0.1138871, "B1_mass": 0.095534, "entropy": 3.283149}}, "density": {"B0": 0.0013571927083333333, "B1": 0.0011529604166666666}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": false}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.926366329193115, "state_sha256": "114d9cc937fd10b666d616855abcc7b842a339b4428357d9a5f73ea1670b0e42", "attention": {"4": {"calls": 1, "B0_mass": 0.0122613, "B1_mass": 0.0082185, "entropy": 0.455194}, "20": {"calls": 1, "B0_mass": 0.0210046, "B1_mass": 0.0083707, "entropy": 0.85253}, "40": {"calls": 1, "B0_mass": 0.0111614, "B1_mass": 0.0064517, "entropy": 0.914953}, "79": {"calls": 1, "B0_mass": 0.1936416, "B1_mass": 0.0840358, "entropy": 3.318455}}, "density": {"B0": 0.0023521625, "B1": 0.0010297729166666666}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0009949697916666665, "B1_density_delta": -0.00012318750000000003, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.926366329193115, "state_sha256": "114d9cc937fd10b666d616855abcc7b842a339b4428357d9a5f73ea1670b0e42", "attention": {"4": {"calls": 1, "B0_mass": 0.0031087, "B1_mass": 0.0084513, "entropy": 0.395255}, "20": {"calls": 1, "B0_mass": 0.0054535, "B1_mass": 0.0087546, "entropy": 0.767465}, "40": {"calls": 1, "B0_mass": 0.0028155, "B1_mass": 0.0065604, "entropy": 0.865632}, "79": {"calls": 1, "B0_mass": 0.0631709, "B1_mass": 0.1032989, "entropy": 3.229988}}, "density": {"B0": 0.000744165625, "B1": 0.0012355614583333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0006130270833333333, "B1_density_delta": 8.260104166666672e-05, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.926366329193115, "state_sha256": "114d9cc937fd10b666d616855abcc7b842a339b4428357d9a5f73ea1670b0e42", "attention": {"4": {"calls": 1, "B0_mass": 0.00605, "B1_mass": 0.0163619, "entropy": 0.46405}, "20": {"calls": 1, "B0_mass": 0.0106808, "B1_mass": 0.0171686, "entropy": 0.848542}, "40": {"calls": 1, "B0_mass": 0.0055102, "B1_mass": 0.0129063, "entropy": 0.915437}, "79": {"calls": 1, "B0_mass": 0.1021875, "B1_mass": 0.1695172, "entropy": 3.345023}}, "density": {"B0": 0.001233109375, "B1": 0.002079084375}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.00012408333333333325, "B1_density_delta": 0.0009261239583333333, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.926366329193115, "state_sha256": "114d9cc937fd10b666d616855abcc7b842a339b4428357d9a5f73ea1670b0e42", "attention": {"4": {"calls": 1, "B0_mass": 0.0062806, "B1_mass": 0.0042254, "entropy": 0.389789}, "20": {"calls": 1, "B0_mass": 0.0108953, "B1_mass": 0.004326, "entropy": 0.773842}, "40": {"calls": 1, "B0_mass": 0.0056349, "B1_mass": 0.00326, "entropy": 0.865601}, "79": {"calls": 1, "B0_mass": 0.1213225, "B1_mass": 0.0508943, "entropy": 3.217578}}, "density": {"B0": 0.0014359656249999999, "B1": 0.0006091697916666667}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 7.877291666666657e-05, "B1_density_delta": -0.0005437906249999999, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C00_SAME_REV_CONFLICT_REVERSE C00_X1 {'ssd_verify_ms': 20.964, 'h2d_ms': 1.222, 'fusion_ms': 245.836, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST791_C00_SAME_REV_CONFLICT_REVERSE C00_B1 {'ssd_verify_ms': 21.06, 'h2d_ms': 1.318, 'fusion_ms': 659.752, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C00_X1_C00_B1 {'actual': 94, 'expected': 94}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_REVERSE_CURRENT 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.78184700012207, "state_sha256": "19d82cb469511d5c7e5aa82e8c1726149c299f542e040c269e6d992d24155db9", "attention": {"4": {"calls": 1, "B0_mass": 0.0067945, "B1_mass": 0.0085116, "entropy": 0.445202}, "20": {"calls": 1, "B0_mass": 0.0104964, "B1_mass": 0.0081193, "entropy": 0.789483}, "40": {"calls": 1, "B0_mass": 0.0056111, "B1_mass": 0.0066851, "entropy": 0.91592}, "79": {"calls": 1, "B0_mass": 0.1200665, "B1_mass": 0.0899837, "entropy": 3.195}}, "density": {"B0": 0.0014184791666666668, "B1": 0.0010915427083333332}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_X1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.78184700012207, "state_sha256": "19d82cb469511d5c7e5aa82e8c1726149c299f542e040c269e6d992d24155db9", "attention": {"4": {"calls": 1, "B0_mass": 0.0133993, "B1_mass": 0.008327, "entropy": 0.485834}, "20": {"calls": 1, "B0_mass": 0.0204483, "B1_mass": 0.0078745, "entropy": 0.841696}, "40": {"calls": 1, "B0_mass": 0.0111379, "B1_mass": 0.0066099, "entropy": 0.950625}, "79": {"calls": 1, "B0_mass": 0.2017845, "B1_mass": 0.0768547, "entropy": 3.210478}}, "density": {"B0": 0.0024309447916666667, "B1": 0.0009514489583333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0010124656249999998, "B1_density_delta": -0.00014009374999999992, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_X1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.78184700012207, "state_sha256": "19d82cb469511d5c7e5aa82e8c1726149c299f542e040c269e6d992d24155db9", "attention": {"4": {"calls": 1, "B0_mass": 0.0034118, "B1_mass": 0.0086084, "entropy": 0.42216}, "20": {"calls": 1, "B0_mass": 0.0052929, "B1_mass": 0.0082235, "entropy": 0.755847}, "40": {"calls": 1, "B0_mass": 0.0027927, "B1_mass": 0.0066959, "entropy": 0.895512}, "79": {"calls": 1, "B0_mass": 0.0664493, "B1_mass": 0.098235, "entropy": 3.149207}}, "density": {"B0": 0.0007764052083333333, "B1": 0.0011786916666666667}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0006420739583333335, "B1_density_delta": 8.714895833333348e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.78184700012207, "state_sha256": "19d82cb469511d5c7e5aa82e8c1726149c299f542e040c269e6d992d24155db9", "attention": {"4": {"calls": 1, "B0_mass": 0.0066138, "B1_mass": 0.0165654, "entropy": 0.491307}, "20": {"calls": 1, "B0_mass": 0.0103123, "B1_mass": 0.0160431, "entropy": 0.836489}, "40": {"calls": 1, "B0_mass": 0.0055367, "B1_mass": 0.0132344, "entropy": 0.947271}, "79": {"calls": 1, "B0_mass": 0.106442, "B1_mass": 0.1589152, "entropy": 3.239221}}, "density": {"B0": 0.0012738645833333332, "B1": 0.001960340625}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.00014461458333333362, "B1_density_delta": 0.000868797916666667, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.78184700012207, "state_sha256": "19d82cb469511d5c7e5aa82e8c1726149c299f542e040c269e6d992d24155db9", "attention": {"4": {"calls": 1, "B0_mass": 0.0068924, "B1_mass": 0.0043064, "entropy": 0.418576}, "20": {"calls": 1, "B0_mass": 0.0106024, "B1_mass": 0.0040796, "entropy": 0.765713}, "40": {"calls": 1, "B0_mass": 0.0057386, "B1_mass": 0.0033946, "entropy": 0.900339}, "79": {"calls": 1, "B0_mass": 0.1279846, "B1_mass": 0.0479314, "entropy": 3.13759}}, "density": {"B0": 0.0015033916666666667, "B1": 0.0005771416666666666}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 8.491249999999988e-05, "B1_density_delta": -0.0005144010416666666, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+TEST791_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.906541347503662, "state_sha256": "a0e53cd98b53bb1a17aed7df7df1e917c0213e37b248fbeb3b8e80a0baaf4062", "attention": {"4": {"calls": 1, "B0_mass": 0.0064015, "B1_mass": 0.008239, "entropy": 0.419541}, "20": {"calls": 1, "B0_mass": 0.0109432, "B1_mass": 0.0084128, "entropy": 0.799488}, "40": {"calls": 1, "B0_mass": 0.0055029, "B1_mass": 0.0066186, "entropy": 0.881443}, "79": {"calls": 1, "B0_mass": 0.1140744, "B1_mass": 0.0959247, "entropy": 3.277305}}, "density": {"B0": 0.0013595885416666667, "B1": 0.0011557927083333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": false}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C00_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.906541347503662, "state_sha256": "a0e53cd98b53bb1a17aed7df7df1e917c0213e37b248fbeb3b8e80a0baaf4062", "attention": {"4": {"calls": 1, "B0_mass": 0.012659, "B1_mass": 0.0080842, "entropy": 0.459214}, "20": {"calls": 1, "B0_mass": 0.0213899, "B1_mass": 0.0082211, "entropy": 0.856767}, "40": {"calls": 1, "B0_mass": 0.0111647, "B1_mass": 0.0066302, "entropy": 0.916909}, "79": {"calls": 1, "B0_mass": 0.1936333, "B1_mass": 0.0838192, "entropy": 3.323299}}, "density": {"B0": 0.002356123958333333, "B1": 0.0010278177083333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0009965354166666664, "B1_density_delta": -0.000127975, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C00_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.906541347503662, "state_sha256": "a0e53cd98b53bb1a17aed7df7df1e917c0213e37b248fbeb3b8e80a0baaf4062", "attention": {"4": {"calls": 1, "B0_mass": 0.0032099, "B1_mass": 0.0083196, "entropy": 0.397181}, "20": {"calls": 1, "B0_mass": 0.0055349, "B1_mass": 0.0085441, "entropy": 0.767283}, "40": {"calls": 1, "B0_mass": 0.0027712, "B1_mass": 0.0066907, "entropy": 0.865705}, "79": {"calls": 1, "B0_mass": 0.063242, "B1_mass": 0.1034685, "entropy": 3.228276}}, "density": {"B0": 0.0007452927083333333, "B1": 0.0012364927083333335}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0006142958333333334, "B1_density_delta": 8.070000000000017e-05, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C00_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.906541347503662, "state_sha256": "a0e53cd98b53bb1a17aed7df7df1e917c0213e37b248fbeb3b8e80a0baaf4062", "attention": {"4": {"calls": 1, "B0_mass": 0.0062497, "B1_mass": 0.0161023, "entropy": 0.465886}, "20": {"calls": 1, "B0_mass": 0.0107342, "B1_mass": 0.0166388, "entropy": 0.844651}, "40": {"calls": 1, "B0_mass": 0.0054557, "B1_mass": 0.0131415, "entropy": 0.914918}, "79": {"calls": 1, "B0_mass": 0.1018714, "B1_mass": 0.1690437, "entropy": 3.342409}}, "density": {"B0": 0.0012298052083333335, "B1": 0.002071083333333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.00012978333333333323, "B1_density_delta": 0.0009152906249999999, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C00_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.906541347503662, "state_sha256": "a0e53cd98b53bb1a17aed7df7df1e917c0213e37b248fbeb3b8e80a0baaf4062", "attention": {"4": {"calls": 1, "B0_mass": 0.006483, "B1_mass": 0.0041585, "entropy": 0.392946}, "20": {"calls": 1, "B0_mass": 0.0110188, "B1_mass": 0.0042124, "entropy": 0.774689}, "40": {"calls": 1, "B0_mass": 0.0056499, "B1_mass": 0.0033643, "entropy": 0.867895}, "79": {"calls": 1, "B0_mass": 0.1210194, "B1_mass": 0.0510537, "entropy": 3.211596}}, "density": {"B0": 0.0014342510416666667, "B1": 0.0006107333333333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 7.466250000000003e-05, "B1_density_delta": -0.000545059375, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C00_X1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C01_BASELINE_FORWARD C01_B0 {'ssd_verify_ms': 20.448, 'h2d_ms': 1.081, 'fusion_ms': 286.233, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST791_C01_BASELINE_FORWARD C01_B1 {'ssd_verify_ms': 20.241, 'h2d_ms': 1.099, 'fusion_ms': 665.586, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_FORWARD 
+PASS PAIR_ORDER_C01_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C01_B0_C01_B1 {'actual': 97, 'expected': 97}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_BASELINE_FORWARD_CURRENT 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.824905872344971, "state_sha256": "37a096105bd5f1b7674ec27f2aca8ddc953c951798e39ceca631ce507e662379", "attention": {"4": {"calls": 1, "B0_mass": 0.0071157, "B1_mass": 0.0085504, "entropy": 0.452825}, "20": {"calls": 1, "B0_mass": 0.0118604, "B1_mass": 0.0080451, "entropy": 0.814561}, "40": {"calls": 1, "B0_mass": 0.0069773, "B1_mass": 0.0043188, "entropy": 0.89232}, "79": {"calls": 1, "B0_mass": 0.1193421, "B1_mass": 0.0964096, "entropy": 3.224996}}, "density": {"B0": 0.0013159980952380955, "B1": 0.0011330572916666665}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.824905872344971, "state_sha256": "37a096105bd5f1b7674ec27f2aca8ddc953c951798e39ceca631ce507e662379", "attention": {"4": {"calls": 1, "B0_mass": 0.0140434, "B1_mass": 0.0083712, "entropy": 0.496214}, "20": {"calls": 1, "B0_mass": 0.0229587, "B1_mass": 0.0077662, "entropy": 0.874984}, "40": {"calls": 1, "B0_mass": 0.0136538, "B1_mass": 0.0041847, "entropy": 0.922431}, "79": {"calls": 1, "B0_mass": 0.2038714, "B1_mass": 0.0828003, "entropy": 3.266714}}, "density": {"B0": 0.002290322857142857, "B1": 0.0009869916666666665}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0009743247619047617, "B1_density_delta": -0.00014606562500000001, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.824905872344971, "state_sha256": "37a096105bd5f1b7674ec27f2aca8ddc953c951798e39ceca631ce507e662379", "attention": {"4": {"calls": 1, "B0_mass": 0.0035716, "B1_mass": 0.008644, "entropy": 0.428269}, "20": {"calls": 1, "B0_mass": 0.006034, "B1_mass": 0.0082152, "entropy": 0.779741}, "40": {"calls": 1, "B0_mass": 0.0035188, "B1_mass": 0.0043774, "entropy": 0.870808}, "79": {"calls": 1, "B0_mass": 0.0656892, "B1_mass": 0.1059007, "entropy": 3.161101}}, "density": {"B0": 0.0007165904761904763, "B1": 0.0012343052083333332}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0005994076190476192, "B1_density_delta": 0.00010124791666666667, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.824905872344971, "state_sha256": "37a096105bd5f1b7674ec27f2aca8ddc953c951798e39ceca631ce507e662379", "attention": {"4": {"calls": 1, "B0_mass": 0.00694, "B1_mass": 0.0166692, "entropy": 0.499858}, "20": {"calls": 1, "B0_mass": 0.0116222, "B1_mass": 0.0158402, "entropy": 0.854626}, "40": {"calls": 1, "B0_mass": 0.0068673, "B1_mass": 0.0085067, "entropy": 0.91307}, "79": {"calls": 1, "B0_mass": 0.1055842, "B1_mass": 0.1693477, "entropy": 3.268936}}, "density": {"B0": 0.0011816542857142856, "B1": 0.0020176520833333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.00013434380952380984, "B1_density_delta": 0.0008845947916666667, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.824905872344971, "state_sha256": "37a096105bd5f1b7674ec27f2aca8ddc953c951798e39ceca631ce507e662379", "attention": {"4": {"calls": 1, "B0_mass": 0.0072103, "B1_mass": 0.0043219, "entropy": 0.425737}, "20": {"calls": 1, "B0_mass": 0.0118931, "B1_mass": 0.0040113, "entropy": 0.785503}, "40": {"calls": 1, "B0_mass": 0.0069977, "B1_mass": 0.0021532, "entropy": 0.878664}, "79": {"calls": 1, "B0_mass": 0.1284181, "B1_mass": 0.0520894, "entropy": 3.170951}}, "density": {"B0": 0.0014029419047619047, "B1": 0.0006068114583333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 8.694380952380923e-05, "B1_density_delta": -0.0005262458333333333, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_BASELINE_FORWARD_HISTORICAL 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9203691482543945, "state_sha256": "58035a4a8aef993630d04c4ff105f0366c80d758dce79fe0c1b6d030ac397438", "attention": {"4": {"calls": 1, "B0_mass": 0.0064399, "B1_mass": 0.0080695, "entropy": 0.418503}, "20": {"calls": 1, "B0_mass": 0.0118877, "B1_mass": 0.0078205, "entropy": 0.796406}, "40": {"calls": 1, "B0_mass": 0.0070269, "B1_mass": 0.004335, "entropy": 0.86298}, "79": {"calls": 1, "B0_mass": 0.1171632, "B1_mass": 0.0946002, "entropy": 3.202408}}, "density": {"B0": 0.0012959790476190474, "B1": 0.0011120385416666667}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9203691482543945, "state_sha256": "58035a4a8aef993630d04c4ff105f0366c80d758dce79fe0c1b6d030ac397438", "attention": {"4": {"calls": 1, "B0_mass": 0.0127313, "B1_mass": 0.0079198, "entropy": 0.459026}, "20": {"calls": 1, "B0_mass": 0.0229776, "B1_mass": 0.0075547, "entropy": 0.85472}, "40": {"calls": 1, "B0_mass": 0.0136826, "B1_mass": 0.0041816, "entropy": 0.892206}, "79": {"calls": 1, "B0_mass": 0.1994379, "B1_mass": 0.0813735, "entropy": 3.24341}}, "density": {"B0": 0.002248553333333333, "B1": 0.00096989375}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0009525742857142856, "B1_density_delta": -0.00014214479166666666, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9203691482543945, "state_sha256": "58035a4a8aef993630d04c4ff105f0366c80d758dce79fe0c1b6d030ac397438", "attention": {"4": {"calls": 1, "B0_mass": 0.0032296, "B1_mass": 0.0081475, "entropy": 0.395691}, "20": {"calls": 1, "B0_mass": 0.0060603, "B1_mass": 0.0080001, "entropy": 0.76351}, "40": {"calls": 1, "B0_mass": 0.0035073, "B1_mass": 0.0043559, "entropy": 0.843873}, "79": {"calls": 1, "B0_mass": 0.0651584, "B1_mass": 0.1043248, "entropy": 3.148265}}, "density": {"B0": 0.0007116761904761904, "B1": 0.001215425}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.000584302857142857, "B1_density_delta": 0.00010338645833333333, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9203691482543945, "state_sha256": "58035a4a8aef993630d04c4ff105f0366c80d758dce79fe0c1b6d030ac397438", "attention": {"4": {"calls": 1, "B0_mass": 0.0062927, "B1_mass": 0.0157999, "entropy": 0.464735}, "20": {"calls": 1, "B0_mass": 0.0116946, "B1_mass": 0.0154627, "entropy": 0.839456}, "40": {"calls": 1, "B0_mass": 0.0068962, "B1_mass": 0.0085303, "entropy": 0.886502}, "79": {"calls": 1, "B0_mass": 0.103717, "B1_mass": 0.166182, "entropy": 3.250782}}, "density": {"B0": 0.0011648361904761904, "B1": 0.0019809895833333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.00013114285714285702, "B1_density_delta": 0.0008689510416666666, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9203691482543945, "state_sha256": "58035a4a8aef993630d04c4ff105f0366c80d758dce79fe0c1b6d030ac397438", "attention": {"4": {"calls": 1, "B0_mass": 0.0065187, "B1_mass": 0.0040687, "entropy": 0.392055}, "20": {"calls": 1, "B0_mass": 0.0119738, "B1_mass": 0.0039046, "entropy": 0.771367}, "40": {"calls": 1, "B0_mass": 0.0069819, "B1_mass": 0.0021379, "entropy": 0.844949}, "79": {"calls": 1, "B0_mass": 0.1262404, "B1_mass": 0.0507486, "entropy": 3.144192}}, "density": {"B0": 0.00138282, "B1": 0.0005915739583333333}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 8.684095238095267e-05, "B1_density_delta": -0.0005204645833333333, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C01_BASELINE_FORWARD 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C01_BASELINE_REVERSE C01_B1 {'ssd_verify_ms': 21.855, 'h2d_ms': 1.055, 'fusion_ms': 246.104, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+NATIVE_FUSION_STEP TEST791_C01_BASELINE_REVERSE C01_B0 {'ssd_verify_ms': 23.363, 'h2d_ms': 1.035, 'fusion_ms': 718.69, 'cid': 'C01_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_REVERSE 
+PASS PAIR_ORDER_C01_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C01_B1_C01_B0 {'actual': 97, 'expected': 97}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_BASELINE_REVERSE_CURRENT 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.807787895202637, "state_sha256": "3165151614415a8dcaf8d9428a0cc9dd1eb2f2cc2c08dd6deedb1f1eaeb70683", "attention": {"4": {"calls": 1, "B0_mass": 0.0063973, "B1_mass": 0.0085759, "entropy": 0.443483}, "20": {"calls": 1, "B0_mass": 0.0107036, "B1_mass": 0.0077599, "entropy": 0.803202}, "40": {"calls": 1, "B0_mass": 0.0055853, "B1_mass": 0.0049587, "entropy": 0.899372}, "79": {"calls": 1, "B0_mass": 0.1178336, "B1_mass": 0.0887695, "entropy": 3.193218}}, "density": {"B0": 0.0013971093750000001, "B1": 0.0009665533333333334}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.807787895202637, "state_sha256": "3165151614415a8dcaf8d9428a0cc9dd1eb2f2cc2c08dd6deedb1f1eaeb70683", "attention": {"4": {"calls": 1, "B0_mass": 0.0126438, "B1_mass": 0.0084215, "entropy": 0.482849}, "20": {"calls": 1, "B0_mass": 0.0208617, "B1_mass": 0.0075458, "entropy": 0.859301}, "40": {"calls": 1, "B0_mass": 0.0110666, "B1_mass": 0.0048769, "entropy": 0.930651}, "79": {"calls": 1, "B0_mass": 0.200658, "B1_mass": 0.0762554, "entropy": 3.222224}}, "density": {"B0": 0.0024227739583333333, "B1": 0.0008445533333333333}, "state_l2_delta": 0.0, "state_cosine": 1.0000001192092896, "B0_density_delta": 0.0010256645833333332, "B1_density_delta": -0.00012200000000000004, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.807787895202637, "state_sha256": "3165151614415a8dcaf8d9428a0cc9dd1eb2f2cc2c08dd6deedb1f1eaeb70683", "attention": {"4": {"calls": 1, "B0_mass": 0.0032086, "B1_mass": 0.0086561, "entropy": 0.421265}, "20": {"calls": 1, "B0_mass": 0.0054285, "B1_mass": 0.007898, "entropy": 0.771255}, "40": {"calls": 1, "B0_mass": 0.002769, "B1_mass": 0.004922, "entropy": 0.878885}, "79": {"calls": 1, "B0_mass": 0.0647276, "B1_mass": 0.0975965, "entropy": 3.143785}}, "density": {"B0": 0.0007596364583333333, "B1": 0.0010515857142857144}, "state_l2_delta": 0.0, "state_cosine": 1.0000001192092896, "B0_density_delta": -0.0006374729166666669, "B1_density_delta": 8.503238095238104e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.807787895202637, "state_sha256": "3165151614415a8dcaf8d9428a0cc9dd1eb2f2cc2c08dd6deedb1f1eaeb70683", "attention": {"4": {"calls": 1, "B0_mass": 0.0062454, "B1_mass": 0.0167914, "entropy": 0.492762}, "20": {"calls": 1, "B0_mass": 0.0105558, "B1_mass": 0.0153574, "entropy": 0.850052}, "40": {"calls": 1, "B0_mass": 0.0054335, "B1_mass": 0.0096667, "entropy": 0.920705}, "79": {"calls": 1, "B0_mass": 0.104333, "B1_mass": 0.1569439, "entropy": 3.250815}}, "density": {"B0": 0.0012533572916666666, "B1": 0.0017330285714285713}, "state_l2_delta": 0.0, "state_cosine": 1.0000001192092896, "B0_density_delta": -0.00014375208333333354, "B1_density_delta": 0.0007664752380952379, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.807787895202637, "state_sha256": "3165151614415a8dcaf8d9428a0cc9dd1eb2f2cc2c08dd6deedb1f1eaeb70683", "attention": {"4": {"calls": 1, "B0_mass": 0.0064783, "B1_mass": 0.0043237, "entropy": 0.415268}, "20": {"calls": 1, "B0_mass": 0.0109217, "B1_mass": 0.0039326, "entropy": 0.781315}, "40": {"calls": 1, "B0_mass": 0.0056756, "B1_mass": 0.0025119, "entropy": 0.886834}, "79": {"calls": 1, "B0_mass": 0.1259173, "B1_mass": 0.0474959, "entropy": 3.132026}}, "density": {"B0": 0.0014845270833333335, "B1": 0.0005137180952380953}, "state_l2_delta": 0.0, "state_cosine": 1.0000001192092896, "B0_density_delta": 8.74177083333334e-05, "B1_density_delta": -0.00045283523809523803, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_BASELINE_REVERSE_HISTORICAL 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.910492420196533, "state_sha256": "58372791b2a2810f9ea30213bd2e27617acf79e85d4cadb497cf315acba94eda", "attention": {"4": {"calls": 1, "B0_mass": 0.0064079, "B1_mass": 0.0085409, "entropy": 0.424568}, "20": {"calls": 1, "B0_mass": 0.0106561, "B1_mass": 0.0080171, "entropy": 0.79098}, "40": {"calls": 1, "B0_mass": 0.0051696, "B1_mass": 0.0050314, "entropy": 0.867995}, "79": {"calls": 1, "B0_mass": 0.1170378, "B1_mass": 0.0936018, "entropy": 3.185208}}, "density": {"B0": 0.0013839947916666666, "B1": 0.0010157171428571427}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.910492420196533, "state_sha256": "58372791b2a2810f9ea30213bd2e27617acf79e85d4cadb497cf315acba94eda", "attention": {"4": {"calls": 1, "B0_mass": 0.0126632, "B1_mass": 0.0083841, "entropy": 0.463654}, "20": {"calls": 1, "B0_mass": 0.0206361, "B1_mass": 0.0077652, "entropy": 0.843296}, "40": {"calls": 1, "B0_mass": 0.0101697, "B1_mass": 0.0049427, "entropy": 0.897456}, "79": {"calls": 1, "B0_mass": 0.1982371, "B1_mass": 0.0803704, "entropy": 3.215391}}, "density": {"B0": 0.0023858635416666666, "B1": 0.00088646}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.00100186875, "B1_density_delta": -0.0001292571428571427, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.910492420196533, "state_sha256": "58372791b2a2810f9ea30213bd2e27617acf79e85d4cadb497cf315acba94eda", "attention": {"4": {"calls": 1, "B0_mass": 0.0032142, "B1_mass": 0.0086228, "entropy": 0.402494}, "20": {"calls": 1, "B0_mass": 0.0053392, "B1_mass": 0.0080693, "entropy": 0.757909}, "40": {"calls": 1, "B0_mass": 0.0025529, "B1_mass": 0.0049854, "entropy": 0.848858}, "79": {"calls": 1, "B0_mass": 0.0643895, "B1_mass": 0.102341, "entropy": 3.135678}}, "density": {"B0": 0.0007529333333333334, "B1": 0.0010990066666666668}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.0006310614583333332, "B1_density_delta": 8.328952380952403e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.910492420196533, "state_sha256": "58372791b2a2810f9ea30213bd2e27617acf79e85d4cadb497cf315acba94eda", "attention": {"4": {"calls": 1, "B0_mass": 0.0062536, "B1_mass": 0.0167259, "entropy": 0.47401}, "20": {"calls": 1, "B0_mass": 0.0103096, "B1_mass": 0.015614, "entropy": 0.831113}, "40": {"calls": 1, "B0_mass": 0.00503, "B1_mass": 0.0097799, "entropy": 0.892005}, "79": {"calls": 1, "B0_mass": 0.1030045, "B1_mass": 0.1648178, "entropy": 3.246337}}, "density": {"B0": 0.0012327510416666667, "B1": 0.0018115400000000002}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": -0.00015124374999999995, "B1_density_delta": 0.0007958228571428574, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_B0", "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.910492420196533, "state_sha256": "58372791b2a2810f9ea30213bd2e27617acf79e85d4cadb497cf315acba94eda", "attention": {"4": {"calls": 1, "B0_mass": 0.0064905, "B1_mass": 0.0043058, "entropy": 0.396302}, "20": {"calls": 1, "B0_mass": 0.0107615, "B1_mass": 0.0040296, "entropy": 0.766273}, "40": {"calls": 1, "B0_mass": 0.0052043, "B1_mass": 0.0025195, "entropy": 0.851972}, "79": {"calls": 1, "B0_mass": 0.1257187, "B1_mass": 0.0501622, "entropy": 3.124897}}, "density": {"B0": 0.0014758802083333332, "B1": 0.000540107619047619}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 9.188541666666655e-05, "B1_density_delta": -0.00047560952380952374, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C01_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C01_SAME_REV_CONFLICT_FORWARD C01_B1 {'ssd_verify_ms': 20.941, 'h2d_ms': 1.037, 'fusion_ms': 247.464, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST791_C01_SAME_REV_CONFLICT_FORWARD C01_X1 {'ssd_verify_ms': 23.514, 'h2d_ms': 1.048, 'fusion_ms': 701.6, 'cid': 'C01_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C01_B1_C01_X1 {'actual': 95, 'expected': 95}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_FORWARD_CURRENT 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "baseline_prediction": "TEAM-JRSBSZJH", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.871880531311035, "state_sha256": "67ad86425d7991bcc691ac5434b308d989acba0db686cacc3ed315e6333ada67", "attention": {"4": {"calls": 1, "B0_mass": 0.006397, "B1_mass": 0.0081063, "entropy": 0.431589}, "20": {"calls": 1, "B0_mass": 0.0106243, "B1_mass": 0.0081144, "entropy": 0.79318}, "40": {"calls": 1, "B0_mass": 0.0054152, "B1_mass": 0.0068864, "entropy": 0.90679}, "79": {"calls": 1, "B0_mass": 0.1170693, "B1_mass": 0.0899594, "entropy": 3.17451}}, "density": {"B0": 0.00138655, "B1": 0.0010602040404040403}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": false}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.871880531311035, "state_sha256": "67ad86425d7991bcc691ac5434b308d989acba0db686cacc3ed315e6333ada67", "attention": {"4": {"calls": 1, "B0_mass": 0.0126343, "B1_mass": 0.0079425, "entropy": 0.470601}, "20": {"calls": 1, "B0_mass": 0.0206783, "B1_mass": 0.0078775, "entropy": 0.847575}, "40": {"calls": 1, "B0_mass": 0.0108724, "B1_mass": 0.0068528, "entropy": 0.942215}, "79": {"calls": 1, "B0_mass": 0.1978346, "B1_mass": 0.0768913, "entropy": 3.196661}}, "density": {"B0": 0.0023894302083333333, "B1": 0.0009254707070707071}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": 0.0010028802083333333, "B1_density_delta": -0.0001347333333333332, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.871880531311035, "state_sha256": "67ad86425d7991bcc691ac5434b308d989acba0db686cacc3ed315e6333ada67", "attention": {"4": {"calls": 1, "B0_mass": 0.0032097, "B1_mass": 0.0081919, "entropy": 0.409543}, "20": {"calls": 1, "B0_mass": 0.0053834, "B1_mass": 0.0082474, "entropy": 0.758052}, "40": {"calls": 1, "B0_mass": 0.002714, "B1_mass": 0.006934, "entropy": 0.887863}, "79": {"calls": 1, "B0_mass": 0.0644991, "B1_mass": 0.0984563, "entropy": 3.129183}}, "density": {"B0": 0.0007562135416666668, "B1": 0.0011478555555555555}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": -0.0006303364583333333, "B1_density_delta": 8.76515151515152e-05, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_X1", "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.871880531311035, "state_sha256": "67ad86425d7991bcc691ac5434b308d989acba0db686cacc3ed315e6333ada67", "attention": {"4": {"calls": 1, "B0_mass": 0.0062367, "B1_mass": 0.015805, "entropy": 0.476472}, "20": {"calls": 1, "B0_mass": 0.010406, "B1_mass": 0.0159589, "entropy": 0.833726}, "40": {"calls": 1, "B0_mass": 0.0052902, "B1_mass": 0.0135345, "entropy": 0.935685}, "79": {"calls": 1, "B0_mass": 0.1037531, "B1_mass": 0.1586582, "entropy": 3.226523}}, "density": {"B0": 0.0012442635416666668, "B1": 0.0019005212121212124}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": -0.00014228645833333324, "B1_density_delta": 0.0008403171717171721, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_X1", "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.871880531311035, "state_sha256": "67ad86425d7991bcc691ac5434b308d989acba0db686cacc3ed315e6333ada67", "attention": {"4": {"calls": 1, "B0_mass": 0.0064836, "B1_mass": 0.0040972, "entropy": 0.40577}, "20": {"calls": 1, "B0_mass": 0.0107756, "B1_mass": 0.0040878, "entropy": 0.767187}, "40": {"calls": 1, "B0_mass": 0.0055319, "B1_mass": 0.0034775, "entropy": 0.892758}, "79": {"calls": 1, "B0_mass": 0.125328, "B1_mass": 0.0483208, "entropy": 3.11733}}, "density": {"B0": 0.0014753697916666667, "B1": 0.0005645060606060606}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": 8.881979166666665e-05, "B1_density_delta": -0.0004956979797979796, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.932621955871582, "state_sha256": "a7bb17ad7ddd7e354b79c8365306cd59ad0a644f3b11e64bb69069bbeaf07668", "attention": {"4": {"calls": 1, "B0_mass": 0.0065713, "B1_mass": 0.0084504, "entropy": 0.424472}, "20": {"calls": 1, "B0_mass": 0.0109735, "B1_mass": 0.0084035, "entropy": 0.799523}, "40": {"calls": 1, "B0_mass": 0.0051922, "B1_mass": 0.0068257, "entropy": 0.870918}, "79": {"calls": 1, "B0_mass": 0.1112746, "B1_mass": 0.0945106, "entropy": 3.271152}}, "density": {"B0": 0.001327503125, "B1": 0.0011084828282828282}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": false}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.932621955871582, "state_sha256": "a7bb17ad7ddd7e354b79c8365306cd59ad0a644f3b11e64bb69069bbeaf07668", "attention": {"4": {"calls": 1, "B0_mass": 0.0129884, "B1_mass": 0.0082855, "entropy": 0.46467}, "20": {"calls": 1, "B0_mass": 0.0213294, "B1_mass": 0.0081409, "entropy": 0.854467}, "40": {"calls": 1, "B0_mass": 0.0102581, "B1_mass": 0.0067608, "entropy": 0.899266}, "79": {"calls": 1, "B0_mass": 0.1899452, "B1_mass": 0.0831539, "entropy": 3.322483}}, "density": {"B0": 0.0023076322916666665, "B1": 0.000990460606060606}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": 0.0009801291666666665, "B1_density_delta": -0.00011802222222222214, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.932621955871582, "state_sha256": "a7bb17ad7ddd7e354b79c8365306cd59ad0a644f3b11e64bb69069bbeaf07668", "attention": {"4": {"calls": 1, "B0_mass": 0.0032959, "B1_mass": 0.0085365, "entropy": 0.401777}, "20": {"calls": 1, "B0_mass": 0.0055367, "B1_mass": 0.0085198, "entropy": 0.766096}, "40": {"calls": 1, "B0_mass": 0.0026077, "B1_mass": 0.0068316, "entropy": 0.851667}, "79": {"calls": 1, "B0_mass": 0.0615288, "B1_mass": 0.1018822, "entropy": 3.223196}}, "density": {"B0": 0.0007257625000000001, "B1": 0.001184177777777778}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": -0.0006017406249999999, "B1_density_delta": 7.569494949494974e-05, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.932621955871582, "state_sha256": "a7bb17ad7ddd7e354b79c8365306cd59ad0a644f3b11e64bb69069bbeaf07668", "attention": {"4": {"calls": 1, "B0_mass": 0.0064099, "B1_mass": 0.0164876, "entropy": 0.471435}, "20": {"calls": 1, "B0_mass": 0.0107648, "B1_mass": 0.0165734, "entropy": 0.844353}, "40": {"calls": 1, "B0_mass": 0.00498, "B1_mass": 0.0131912, "entropy": 0.896262}, "79": {"calls": 1, "B0_mass": 0.0996672, "B1_mass": 0.1654911, "entropy": 3.333364}}, "density": {"B0": 0.0012022083333333333, "B1": 0.0019722797979797977}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": -0.00012529479166666665, "B1_density_delta": 0.0008637969696969694, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.932621955871582, "state_sha256": "a7bb17ad7ddd7e354b79c8365306cd59ad0a644f3b11e64bb69069bbeaf07668", "attention": {"4": {"calls": 1, "B0_mass": 0.0066584, "B1_mass": 0.0042695, "entropy": 0.397466}, "20": {"calls": 1, "B0_mass": 0.0109949, "B1_mass": 0.0041785, "entropy": 0.770734}, "40": {"calls": 1, "B0_mass": 0.0052018, "B1_mass": 0.0033913, "entropy": 0.850518}, "79": {"calls": 1, "B0_mass": 0.1184504, "B1_mass": 0.0507323, "entropy": 3.212365}}, "density": {"B0": 0.0014025739583333333, "B1": 0.000588910101010101}, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "B0_density_delta": 7.507083333333333e-05, "B1_density_delta": -0.0005195727272727272, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST791_C01_SAME_REV_CONFLICT_REVERSE C01_X1 {'ssd_verify_ms': 23.237, 'h2d_ms': 1.055, 'fusion_ms': 246.007, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST791_C01_SAME_REV_CONFLICT_REVERSE C01_B1 {'ssd_verify_ms': 24.088, 'h2d_ms': 1.09, 'fusion_ms': 663.262, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C01_X1_C01_B1 {'actual': 95, 'expected': 95}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_REVERSE_CURRENT 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.866088390350342, "state_sha256": "705c9820be8f5e84448d92477d20fac366eeb219d6cc80e5202098c2b160f14b", "attention": {"4": {"calls": 1, "B0_mass": 0.006555, "B1_mass": 0.0086794, "entropy": 0.443846}, "20": {"calls": 1, "B0_mass": 0.0105503, "B1_mass": 0.0081966, "entropy": 0.793852}, "40": {"calls": 1, "B0_mass": 0.0053054, "B1_mass": 0.0064836, "entropy": 0.908524}, "79": {"calls": 1, "B0_mass": 0.1193507, "B1_mass": 0.0895648, "entropy": 3.217275}}, "density": {"B0": 0.0013657212121212122, "B1": 0.0010858854166666666}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": true}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_X1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.866088390350342, "state_sha256": "705c9820be8f5e84448d92477d20fac366eeb219d6cc80e5202098c2b160f14b", "attention": {"4": {"calls": 1, "B0_mass": 0.0129275, "B1_mass": 0.0084954, "entropy": 0.483167}, "20": {"calls": 1, "B0_mass": 0.0205493, "B1_mass": 0.0079613, "entropy": 0.848989}, "40": {"calls": 1, "B0_mass": 0.0104145, "B1_mass": 0.0063138, "entropy": 0.933702}, "79": {"calls": 1, "B0_mass": 0.202705, "B1_mass": 0.0771389, "entropy": 3.253602}}, "density": {"B0": 0.002360290909090909, "B1": 0.0009522291666666667}, "state_l2_delta": 0.0, "state_cosine": 1.000000238418579, "B0_density_delta": 0.0009945696969696969, "B1_density_delta": -0.00013365624999999999, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_X1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.866088390350342, "state_sha256": "705c9820be8f5e84448d92477d20fac366eeb219d6cc80e5202098c2b160f14b", "attention": {"4": {"calls": 1, "B0_mass": 0.0032915, "B1_mass": 0.0087759, "entropy": 0.421559}, "20": {"calls": 1, "B0_mass": 0.0053134, "B1_mass": 0.0082866, "entropy": 0.759835}, "40": {"calls": 1, "B0_mass": 0.0026241, "B1_mass": 0.006435, "entropy": 0.888239}, "79": {"calls": 1, "B0_mass": 0.0659643, "B1_mass": 0.0982712, "entropy": 3.164738}}, "density": {"B0": 0.0007464828282828283, "B1": 0.0011770083333333334}, "state_l2_delta": 0.0, "state_cosine": 1.000000238418579, "B0_density_delta": -0.0006192383838383839, "B1_density_delta": 9.112291666666674e-05, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.866088390350342, "state_sha256": "705c9820be8f5e84448d92477d20fac366eeb219d6cc80e5202098c2b160f14b", "attention": {"4": {"calls": 1, "B0_mass": 0.0063754, "B1_mass": 0.0168742, "entropy": 0.490746}, "20": {"calls": 1, "B0_mass": 0.0103238, "B1_mass": 0.0161499, "entropy": 0.838664}, "40": {"calls": 1, "B0_mass": 0.0051728, "B1_mass": 0.0127596, "entropy": 0.936888}, "79": {"calls": 1, "B0_mass": 0.1058611, "B1_mass": 0.1585241, "entropy": 3.267416}}, "density": {"B0": 0.0012258353535353535, "B1": 0.0019524333333333333}, "state_l2_delta": 0.0, "state_cosine": 1.000000238418579, "B0_density_delta": -0.00013988585858585863, "B1_density_delta": 0.0008665479166666667, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.866088390350342, "state_sha256": "705c9820be8f5e84448d92477d20fac366eeb219d6cc80e5202098c2b160f14b", "attention": {"4": {"calls": 1, "B0_mass": 0.0066528, "B1_mass": 0.0043944, "entropy": 0.416753}, "20": {"calls": 1, "B0_mass": 0.0105652, "B1_mass": 0.004073, "entropy": 0.764814}, "40": {"calls": 1, "B0_mass": 0.0053127, "B1_mass": 0.0032297, "entropy": 0.890397}, "79": {"calls": 1, "B0_mass": 0.1275555, "B1_mass": 0.0479294, "entropy": 3.161034}}, "density": {"B0": 0.0014488222222222222, "B1": 0.000575334375}, "state_l2_delta": 0.0, "state_cosine": 1.000000238418579, "B0_density_delta": 8.310101010101001e-05, "B1_density_delta": -0.0005105510416666667, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS ACTIVE_STATE_PROBE 4
+PASS STATE_DIM_FINITE 8192
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+TEST791_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "physical_slot": null, "dose": 0.0, "physical_cartridge": null, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.930327892303467, "state_sha256": "a443a8204b862919a76e2ae8d22b9e580111d4d37d98be38a62a5cacb607b10b", "attention": {"4": {"calls": 1, "B0_mass": 0.0061976, "B1_mass": 0.0082141, "entropy": 0.415497}, "20": {"calls": 1, "B0_mass": 0.0108556, "B1_mass": 0.0082978, "entropy": 0.797329}, "40": {"calls": 1, "B0_mass": 0.0052473, "B1_mass": 0.0064838, "entropy": 0.873475}, "79": {"calls": 1, "B0_mass": 0.1102277, "B1_mass": 0.0930712, "entropy": 3.278304}}, "density": {"B0": 0.0012760666666666667, "B1": 0.0011234666666666666}, "state_l2_delta": 0.0, "state_cosine": 1.0, "B0_density_delta": 0.0, "B1_density_delta": 0.0, "correct_OFFLINE": false}, {"arm": "B0_PLUS", "physical_slot": "B0", "dose": 0.7, "physical_cartridge": "C01_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.930327892303467, "state_sha256": "a443a8204b862919a76e2ae8d22b9e580111d4d37d98be38a62a5cacb607b10b", "attention": {"4": {"calls": 1, "B0_mass": 0.0122556, "B1_mass": 0.0080632, "entropy": 0.453907}, "20": {"calls": 1, "B0_mass": 0.0210988, "B1_mass": 0.0080651, "entropy": 0.851151}, "40": {"calls": 1, "B0_mass": 0.010359, "B1_mass": 0.0063687, "entropy": 0.901443}, "79": {"calls": 1, "B0_mass": 0.1871312, "B1_mass": 0.081427, "entropy": 3.320314}}, "density": {"B0": 0.002207969696969697, "B1": 0.00099855}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": 0.0009319030303030303, "B1_density_delta": -0.00012491666666666662, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B0_MINUS", "physical_slot": "B0", "dose": -0.7, "physical_cartridge": "C01_X1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.930327892303467, "state_sha256": "a443a8204b862919a76e2ae8d22b9e580111d4d37d98be38a62a5cacb607b10b", "attention": {"4": {"calls": 1, "B0_mass": 0.0031077, "B1_mass": 0.0082927, "entropy": 0.393851}, "20": {"calls": 1, "B0_mass": 0.0054671, "B1_mass": 0.0084129, "entropy": 0.76222}, "40": {"calls": 1, "B0_mass": 0.0026216, "B1_mass": 0.00651, "entropy": 0.85562}, "79": {"calls": 1, "B0_mass": 0.0609941, "B1_mass": 0.1000616, "entropy": 3.229409}}, "density": {"B0": 0.0006978060606060606, "B1": 0.0011977552083333334}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": -0.0005782606060606061, "B1_density_delta": 7.428854166666686e-05, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_PLUS", "physical_slot": "B1", "dose": 0.7, "physical_cartridge": "C01_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.930327892303467, "state_sha256": "a443a8204b862919a76e2ae8d22b9e580111d4d37d98be38a62a5cacb607b10b", "attention": {"4": {"calls": 1, "B0_mass": 0.0060497, "B1_mass": 0.0160624, "entropy": 0.462134}, "20": {"calls": 1, "B0_mass": 0.0106714, "B1_mass": 0.0164483, "entropy": 0.84056}, "40": {"calls": 1, "B0_mass": 0.0051467, "B1_mass": 0.012791, "entropy": 0.903504}, "79": {"calls": 1, "B0_mass": 0.0992773, "B1_mass": 0.1649442, "entropy": 3.343741}}, "density": {"B0": 0.0011625797979797979, "B1": 0.0020227447916666666}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": -0.00011348686868686885, "B1_density_delta": 0.000899278125, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "B1_MINUS", "physical_slot": "B1", "dose": -0.7, "physical_cartridge": "C01_B1", "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.930327892303467, "state_sha256": "a443a8204b862919a76e2ae8d22b9e580111d4d37d98be38a62a5cacb607b10b", "attention": {"4": {"calls": 1, "B0_mass": 0.0062771, "B1_mass": 0.0041447, "entropy": 0.388772}, "20": {"calls": 1, "B0_mass": 0.010887, "B1_mass": 0.0041429, "entropy": 0.766642}, "40": {"calls": 1, "B0_mass": 0.0052369, "B1_mass": 0.0032135, "entropy": 0.854468}, "79": {"calls": 1, "B0_mass": 0.1169126, "B1_mass": 0.0496009, "entropy": 3.20637}}, "density": {"B0": 0.0013438030303030305, "B1": 0.0005933052083333334}, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "B0_density_delta": 6.773636363636374e-05, "B1_density_delta": -0.0005301614583333332, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS SSD_SHA_UNCHANGED_C01_X1 
+PASS TOTAL_CASES 16
+PASS TOTAL_INTERVENTIONS 
+PASS FROZEN_WEIGHTS 
+PASS FINAL_MANIFEST 
+PASS NO_RESIDUAL_HOOKS 
+TEST791_COMPLETED {"cases": 16, "generation_runs": 80, "changed_outputs": 0, "nonzero_state_effects": 0, "offline_improvements": 0, "offline_damages": 0, "baseline_correct": 10, "interpretation": "Causal dose-response audit only; no autonomous controller or correctness oracle."}
+FILES /content/AKBASCORE_TEST779_20261027T033334_520297Z/TEST791_results.json /content/AKBASCORE_TEST779_20261027T033334_520297Z/TEST791.log /content/AKBASCORE_TEST779_20261027T033334_520297Z/TEST791_manifest.json
