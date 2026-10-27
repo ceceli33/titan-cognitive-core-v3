@@ -1,0 +1,1187 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+================================================================================================================
+TEST796 — STRICT DISJOINT MASK / BLIND DOSE / NATIVE PHYSICAL MEMORY
+PASS TEST790_EXACT_BLOB 
+PASS TEST789_EXACT_BLOB 
+PASS TEST779_EXACT_BLOB 
+PASS SEALED_PANEL 
+PASS MANIFEST_CONTRACT 
+PASS MANIFEST_PREFLIGHT 
+PASS PROBE_SYMBOLS 
+PASS PRESSURE_SYMMETRY 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 79.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 796kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 89.5MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 70.6MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 119MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.85MB/s]Download complete:   125GB, 1.27GB/s  Reconstruction complete: 100%  145GB /  145GB,  787MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00, 10.40s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.31it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.0kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS CARD_NONEMPTY_C00_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X0 
+PASS FRESH_CARTRIDGE_C00_X0 
+PASS PHYSICAL_SHA_C00_X0 
+PHYSICAL_COMMIT C00_X0 0f41a2a23f0ab6b3b71a70b725a60e62e018f03d77c2f82df77946cfde88aa52 PARENTS []
+PASS CARD_NONEMPTY_C00_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X1 
+PASS FRESH_CARTRIDGE_C00_X1 
+PASS PHYSICAL_SHA_C00_X1 
+PHYSICAL_COMMIT C00_X1 9a24a9a9d3ffdf1c59b4ce40fe98a3cd1881d6f2abb5f4e73b82dff9ea883e21 PARENTS []
+PASS CARD_NONEMPTY_C01_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X0 
+PASS FRESH_CARTRIDGE_C01_X0 
+PASS PHYSICAL_SHA_C01_X0 
+PHYSICAL_COMMIT C01_X0 5a04687c2637b3561cf73a9bd451a7b5a9f3873a37e5e80f8d916f661a9819a7 PARENTS []
+PASS CARD_NONEMPTY_C01_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X1 
+PASS FRESH_CARTRIDGE_C01_X1 
+PASS PHYSICAL_SHA_C01_X1 
+PHYSICAL_COMMIT C01_X1 b25eb944772afcdddc675b9b94e52c7c283caad93f9dd8c0c45ead2001f1424a PARENTS []
+PASS CARD_NONEMPTY_C02_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X0 
+PASS FRESH_CARTRIDGE_C02_X0 
+PASS PHYSICAL_SHA_C02_X0 
+PHYSICAL_COMMIT C02_X0 e78d6f667e33704933a05878274435053152f85353f6cb72d4b33d772291a51b PARENTS []
+PASS CARD_NONEMPTY_C02_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X1 
+PASS FRESH_CARTRIDGE_C02_X1 
+PASS PHYSICAL_SHA_C02_X1 
+PHYSICAL_COMMIT C02_X1 aef1fcf68b6646c66c03fdc802853c668e214fdf3c74e87074c1ba4e7607597a PARENTS []
+PASS CARD_NONEMPTY_C03_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X0 
+PASS FRESH_CARTRIDGE_C03_X0 
+PASS PHYSICAL_SHA_C03_X0 
+PHYSICAL_COMMIT C03_X0 e5c719ae93cf8cd0557d0df88ee983764cc25886be943247dbe1f7bd0f150852 PARENTS []
+PASS CARD_NONEMPTY_C03_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X1 
+PASS FRESH_CARTRIDGE_C03_X1 
+PASS PHYSICAL_SHA_C03_X1 
+PHYSICAL_COMMIT C03_X1 0b530fb69deec7e5fcaa3490f51850f0c6bf63faa6b0607e353bcb7f9de9a200 PARENTS []
+PASS PHYSICAL_28_CARTRIDGES 28
+PASS MANIFEST_AFTER_28 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C00_BASELINE_FORWARD C00_B0 {'ssd_verify_ms': 18.225, 'h2d_ms': 16.429, 'fusion_ms': 287.579, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST796_C00_BASELINE_FORWARD C00_B1 {'ssd_verify_ms': 17.308, 'h2d_ms': 0.959, 'fusion_ms': 801.08, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_FORWARD 
+PASS PAIR_ORDER_C00_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C00_B0_C00_B1 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_FORWARD_CURRENT 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.383461594581604, "full_vs_masked_state_l2": 1.9987032413482666, "full_vs_sham_state_l2": 1.9666396379470825, "mask_vs_sham_state_l2": 0.383461594581604, "full_vs_masked_logit_l2": 2201.160888671875, "full_vs_sham_logit_l2": 1941.5142822265625, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.01319349929690361}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.383461594581604, "full_vs_masked_state_l2": 1.9666396379470825, "full_vs_sham_state_l2": 1.9987032413482666, "mask_vs_sham_state_l2": 0.383461594581604, "full_vs_masked_logit_l2": 1941.5142822265625, "full_vs_sham_logit_l2": 2201.160888671875, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.17887334525585175}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 8.625, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 108.77711486816406}, {"gain": -0.5, "baseline_margin": 8.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 41.15879821777344}, {"gain": -0.25, "baseline_margin": 8.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 17.559982299804688}, {"gain": 0.25, "baseline_margin": 8.625, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.640838623046875}, {"gain": 0.5, "baseline_margin": 8.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 28.420597076416016}, {"gain": 1.0, "baseline_margin": 8.625, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 110.08229064941406}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 8.625, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 110.08229064941406}, {"gain": -0.5, "baseline_margin": 8.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 28.420597076416016}, {"gain": -0.25, "baseline_margin": 8.625, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.640838623046875}, {"gain": 0.25, "baseline_margin": 8.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 17.559982299804688}, {"gain": 0.5, "baseline_margin": 8.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 41.15879821777344}, {"gain": 1.0, "baseline_margin": 8.625, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 108.77711486816406}]}, "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.766208171844482, "state_sha256": "1e573a89ba7618e97739392ca50bfe8d1d29984d8c861ff0e3ca9204de764660", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.625, "same_pair_margin_after": 8.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.625, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.614078044891357, "state_sha256": "a67edaea7f70f4aeb48ef3bb040b5faecd36f4ad11d9492c4559e5fa257f65cf", "cut3_delta_l2": 18.993000030517578, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.625, "same_pair_margin_after": 8.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.384033679962158, "state_cosine": 0.907228410243988, "logit_l2_delta": 28.420597076416016, "first_token_kl": 1.0142861128770164e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.030511856079102, "state_sha256": "76b5811d4c8cdbeb99708b92736729995015e56a869dbfc165abdf85134d2323", "cut3_delta_l2": 18.993000030517578, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.625, "same_pair_margin_after": 8.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.383272647857666, "state_cosine": 0.8830075860023499, "logit_l2_delta": 41.15879821777344, "first_token_kl": -2.2298252133623464e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.030511856079102, "state_sha256": "76b5811d4c8cdbeb99708b92736729995015e56a869dbfc165abdf85134d2323", "cut3_delta_l2": 18.993000030517578, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.625, "same_pair_margin_after": 8.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.383272647857666, "state_cosine": 0.8830075860023499, "logit_l2_delta": 41.15879821777344, "first_token_kl": -2.2298252133623464e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.614078044891357, "state_sha256": "a67edaea7f70f4aeb48ef3bb040b5faecd36f4ad11d9492c4559e5fa257f65cf", "cut3_delta_l2": 18.993000030517578, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.625, "same_pair_margin_after": 8.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.384033679962158, "state_cosine": 0.907228410243988, "logit_l2_delta": 28.420597076416016, "first_token_kl": 1.0142861128770164e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_FORWARD_HISTORICAL 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37917497754096985, "full_vs_masked_state_l2": 2.2131104469299316, "full_vs_sham_state_l2": 2.194587230682373, "mask_vs_sham_state_l2": 0.37917497754096985, "full_vs_masked_logit_l2": 1780.843017578125, "full_vs_sham_logit_l2": 1737.1607666015625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.03733137249946594}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37917497754096985, "full_vs_masked_state_l2": 2.194587230682373, "full_vs_sham_state_l2": 2.2131104469299316, "mask_vs_sham_state_l2": 0.37917497754096985, "full_vs_masked_logit_l2": 1737.1607666015625, "full_vs_sham_logit_l2": 1780.843017578125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.13431233167648315}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 1.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 148.77798461914062}, {"gain": -0.5, "baseline_margin": 7.25, "same_pair_margin_delta": 0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 48.220252990722656}, {"gain": -0.25, "baseline_margin": 7.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.4195613861084}, {"gain": 0.25, "baseline_margin": 7.25, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.087434768676758}, {"gain": 0.5, "baseline_margin": 7.25, "same_pair_margin_delta": -0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 37.179805755615234}, {"gain": 1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.14700317382812}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.14700317382812}, {"gain": -0.5, "baseline_margin": 7.25, "same_pair_margin_delta": -0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 37.179805755615234}, {"gain": -0.25, "baseline_margin": 7.25, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.087434768676758}, {"gain": 0.25, "baseline_margin": 7.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.4195613861084}, {"gain": 0.5, "baseline_margin": 7.25, "same_pair_margin_delta": 0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 48.220252990722656}, {"gain": 1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 1.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 148.77798461914062}]}, "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9117021560668945, "state_sha256": "58e995d8f6d6d44d4ce068f4a222c20e0df1dd3039603ed042141dfc707ba131", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.25, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 7.25, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.810442924499512, "state_sha256": "63cef01f74f1cafc9d04c3dbb10d284a34aad73d484ac21af01e9f2b6b9266b7", "cut3_delta_l2": 18.231067657470703, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 6.5, "same_pair_margin_delta": -0.75, "actual_top1_margin_after": 6.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4538931846618652, "state_cosine": 0.9086544513702393, "logit_l2_delta": 37.179805755615234, "first_token_kl": 0.0002610827796161175, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.148874282836914, "state_sha256": "33a80861f0f41fb3c19cf01578515d2ab4d5e759e8bf4a538d7245f512d25e0d", "cut3_delta_l2": 18.231067657470703, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.75, "same_pair_margin_delta": 0.5, "actual_top1_margin_after": 7.75, "baseline_top1_rank_after": 1, "state_l2_delta": 2.455280303955078, "state_cosine": 0.8819253444671631, "logit_l2_delta": 48.220252990722656, "first_token_kl": 7.563599501736462e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.148874282836914, "state_sha256": "33a80861f0f41fb3c19cf01578515d2ab4d5e759e8bf4a538d7245f512d25e0d", "cut3_delta_l2": 18.231067657470703, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.75, "same_pair_margin_delta": 0.5, "actual_top1_margin_after": 7.75, "baseline_top1_rank_after": 1, "state_l2_delta": 2.455280303955078, "state_cosine": 0.8819253444671631, "logit_l2_delta": 48.220252990722656, "first_token_kl": 7.563599501736462e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.810442924499512, "state_sha256": "63cef01f74f1cafc9d04c3dbb10d284a34aad73d484ac21af01e9f2b6b9266b7", "cut3_delta_l2": 18.231067657470703, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 6.5, "same_pair_margin_delta": -0.75, "actual_top1_margin_after": 6.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4538931846618652, "state_cosine": 0.9086544513702393, "logit_l2_delta": 37.179805755615234, "first_token_kl": 0.0002610827796161175, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C00_BASELINE_FORWARD 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C00_BASELINE_REVERSE C00_B1 {'ssd_verify_ms': 21.402, 'h2d_ms': 1.058, 'fusion_ms': 245.759, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST796_C00_BASELINE_REVERSE C00_B0 {'ssd_verify_ms': 19.537, 'h2d_ms': 1.067, 'fusion_ms': 708.886, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_REVERSE 
+PASS PAIR_ORDER_C00_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C00_B1_C00_B0 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_REVERSE_CURRENT 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37543144822120667, "full_vs_masked_state_l2": 2.041349411010742, "full_vs_sham_state_l2": 2.025088310241699, "mask_vs_sham_state_l2": 0.37543144822120667, "full_vs_masked_logit_l2": 2276.021484375, "full_vs_sham_logit_l2": 1228.827880859375, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.04920732229948044}, "SOURCE1_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37543144822120667, "full_vs_masked_state_l2": 2.025088310241699, "full_vs_sham_state_l2": 2.041349411010742, "mask_vs_sham_state_l2": 0.37543144822120667, "full_vs_masked_logit_l2": 1228.827880859375, "full_vs_sham_logit_l2": 2276.021484375, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.13509804010391235}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 8.75, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 165.2764434814453}, {"gain": -0.5, "baseline_margin": 8.75, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 38.5718879699707}, {"gain": -0.25, "baseline_margin": 8.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 16.564756393432617}, {"gain": 0.25, "baseline_margin": 8.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.592491149902344}, {"gain": 0.5, "baseline_margin": 8.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 38.53379821777344}, {"gain": 1.0, "baseline_margin": 8.75, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 140.8715362548828}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 8.75, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 140.8715362548828}, {"gain": -0.5, "baseline_margin": 8.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 38.53379821777344}, {"gain": -0.25, "baseline_margin": 8.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.592491149902344}, {"gain": 0.25, "baseline_margin": 8.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 16.564756393432617}, {"gain": 0.5, "baseline_margin": 8.75, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 38.5718879699707}, {"gain": 1.0, "baseline_margin": 8.75, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 165.2764434814453}]}, "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.775333404541016, "state_sha256": "0ecf63a7ade33c27400e17bc04c9927aa205a2882c524b42da80a14ba142c4bc", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.75, "same_pair_margin_after": 8.75, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.75, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.548342704772949, "state_sha256": "468b94b397782a241909e283e71edd35e04ccc5722844c0d33d3c4859860d092", "cut3_delta_l2": 19.050182342529297, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.75, "same_pair_margin_after": 8.75, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.75, "baseline_top1_rank_after": 1, "state_l2_delta": 2.387383222579956, "state_cosine": 0.9037173986434937, "logit_l2_delta": 38.53379821777344, "first_token_kl": 3.2668489780007803e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.121763706207275, "state_sha256": "f1fd90c8af0aeccdab9194660a8540b707337ca37956a98bdaef2ac64d21e306", "cut3_delta_l2": 19.050182342529297, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.75, "same_pair_margin_after": 8.875, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 8.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.387631893157959, "state_cosine": 0.885911762714386, "logit_l2_delta": 38.5718879699707, "first_token_kl": 1.2334410257608397e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.121763706207275, "state_sha256": "f1fd90c8af0aeccdab9194660a8540b707337ca37956a98bdaef2ac64d21e306", "cut3_delta_l2": 19.050182342529297, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.75, "same_pair_margin_after": 8.875, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 8.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.387631893157959, "state_cosine": 0.885911762714386, "logit_l2_delta": 38.5718879699707, "first_token_kl": 1.2334410257608397e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.548342704772949, "state_sha256": "468b94b397782a241909e283e71edd35e04ccc5722844c0d33d3c4859860d092", "cut3_delta_l2": 19.050182342529297, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 8.75, "same_pair_margin_after": 8.75, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.75, "baseline_top1_rank_after": 1, "state_l2_delta": 2.387383222579956, "state_cosine": 0.9037173986434937, "logit_l2_delta": 38.53379821777344, "first_token_kl": 3.2668489780007803e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_REVERSE_HISTORICAL 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3660324215888977, "full_vs_masked_state_l2": 2.245126247406006, "full_vs_sham_state_l2": 2.2378947734832764, "mask_vs_sham_state_l2": 0.3660324215888977, "full_vs_masked_logit_l2": 1226.0701904296875, "full_vs_sham_logit_l2": 1780.9019775390625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.061992254108190536}, "SOURCE1_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3660324215888977, "full_vs_masked_state_l2": 2.2378947734832764, "full_vs_sham_state_l2": 2.245126247406006, "mask_vs_sham_state_l2": 0.3660324215888977, "full_vs_masked_logit_l2": 1780.9019775390625, "full_vs_sham_logit_l2": 1226.0701904296875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.10124165564775467}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 7.875, "same_pair_margin_delta": 1.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 141.31527709960938}, {"gain": -0.5, "baseline_margin": 7.875, "same_pair_margin_delta": 0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 56.256919860839844}, {"gain": -0.25, "baseline_margin": 7.875, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 41.385589599609375}, {"gain": 0.25, "baseline_margin": 7.875, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.3960018157959}, {"gain": 0.5, "baseline_margin": 7.875, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 35.582401275634766}, {"gain": 1.0, "baseline_margin": 7.875, "same_pair_margin_delta": 2.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 157.64913940429688}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 7.875, "same_pair_margin_delta": 2.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 157.64913940429688}, {"gain": -0.5, "baseline_margin": 7.875, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 35.582401275634766}, {"gain": -0.25, "baseline_margin": 7.875, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.3960018157959}, {"gain": 0.25, "baseline_margin": 7.875, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 41.385589599609375}, {"gain": 0.5, "baseline_margin": 7.875, "same_pair_margin_delta": 0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 56.256919860839844}, {"gain": 1.0, "baseline_margin": 7.875, "same_pair_margin_delta": 1.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 141.31527709960938}]}, "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.912146091461182, "state_sha256": "84aea13a3924263dc45481ea75a4294d4912568ed778437e95540d97ae4a9945", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.875, "same_pair_margin_after": 7.875, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 7.875, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.738781929016113, "state_sha256": "3769af87885e8bbc4c70bc164f60f02c3e042889c5ffe0fbb9c1df2d20a06d1d", "cut3_delta_l2": 18.35088348388672, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.875, "same_pair_margin_after": 8.25, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4556355476379395, "state_cosine": 0.9051637053489685, "logit_l2_delta": 35.582401275634766, "first_token_kl": 2.3841450456529856e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.230770111083984, "state_sha256": "77c3a46f19136f9e768e942fce8ae3dd62fcdd681404f397c91da3be6485f6a2", "cut3_delta_l2": 18.35088348388672, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.875, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.5, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.456249952316284, "state_cosine": 0.8845728635787964, "logit_l2_delta": 56.256919860839844, "first_token_kl": 4.068916314281523e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.230770111083984, "state_sha256": "77c3a46f19136f9e768e942fce8ae3dd62fcdd681404f397c91da3be6485f6a2", "cut3_delta_l2": 18.35088348388672, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.875, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.5, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.456249952316284, "state_cosine": 0.8845728635787964, "logit_l2_delta": 56.256919860839844, "first_token_kl": 4.068916314281523e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.738781929016113, "state_sha256": "3769af87885e8bbc4c70bc164f60f02c3e042889c5ffe0fbb9c1df2d20a06d1d", "cut3_delta_l2": 18.35088348388672, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.875, "same_pair_margin_after": 8.25, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4556355476379395, "state_cosine": 0.9051637053489685, "logit_l2_delta": 35.582401275634766, "first_token_kl": 2.3841450456529856e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C00_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C00_SAME_REV_CONFLICT_FORWARD C00_B1 {'ssd_verify_ms': 18.892, 'h2d_ms': 1.004, 'fusion_ms': 246.416, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST796_C00_SAME_REV_CONFLICT_FORWARD C00_X1 {'ssd_verify_ms': 19.857, 'h2d_ms': 0.979, 'fusion_ms': 653.645, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C00_B1_C00_X1 {'actual': 94, 'expected': 94}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_FORWARD_CURRENT 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.4016950726509094, "full_vs_masked_state_l2": 2.0924596786499023, "full_vs_sham_state_l2": 2.042233943939209, "mask_vs_sham_state_l2": 0.4016950726509094, "full_vs_masked_logit_l2": 1781.615234375, "full_vs_sham_logit_l2": 1430.335205078125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": 0.02822476252913475}, "SOURCE1_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.4016950726509094, "full_vs_masked_state_l2": 2.042233943939209, "full_vs_sham_state_l2": 2.0924596786499023, "mask_vs_sham_state_l2": 0.4016950726509094, "full_vs_masked_logit_l2": 1430.335205078125, "full_vs_sham_logit_l2": 1781.615234375, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.2195199728012085}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 6.25, "same_pair_margin_delta": 4.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 216.54275512695312}, {"gain": -0.5, "baseline_margin": 6.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 31.816448211669922}, {"gain": -0.25, "baseline_margin": 6.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.472719192504883}, {"gain": 0.25, "baseline_margin": 6.25, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 25.59227180480957}, {"gain": 0.5, "baseline_margin": 6.25, "same_pair_margin_delta": 1.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 70.01703643798828}, {"gain": 1.0, "baseline_margin": 6.25, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 125.80366516113281}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 6.25, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 125.80366516113281}, {"gain": -0.5, "baseline_margin": 6.25, "same_pair_margin_delta": 1.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 70.01703643798828}, {"gain": -0.25, "baseline_margin": 6.25, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 25.59227180480957}, {"gain": 0.25, "baseline_margin": 6.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.472719192504883}, {"gain": 0.5, "baseline_margin": 6.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 31.816448211669922}, {"gain": 1.0, "baseline_margin": 6.25, "same_pair_margin_delta": 4.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 216.54275512695312}]}, "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.801585674285889, "state_sha256": "b7853a731e05410fcce36bc8e2f2d3703c515c46bbf79b307a9e3182d4469d7e", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.25, "same_pair_margin_after": 6.25, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 6.25, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.704124450683594, "state_sha256": "445f9fd5dbc129e4b1639a44a49d066d1a1e6c09b32736807aac240e94ca9284", "cut3_delta_l2": 19.045848846435547, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.25, "same_pair_margin_after": 7.5, "same_pair_margin_delta": 1.25, "actual_top1_margin_after": 7.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.3994922637939453, "state_cosine": 0.9097627401351929, "logit_l2_delta": 70.01703643798828, "first_token_kl": 0.0010468860855326056, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.008702278137207, "state_sha256": "8cc7a2976fb7aec0b660370991bb6eaacc4de8a8b4f120862043f12d7e44f3b4", "cut3_delta_l2": 19.045848846435547, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.25, "same_pair_margin_after": 6.125, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 6.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.3995673656463623, "state_cosine": 0.8811830878257751, "logit_l2_delta": 31.816448211669922, "first_token_kl": 1.6808451618999243e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.008702278137207, "state_sha256": "8cc7a2976fb7aec0b660370991bb6eaacc4de8a8b4f120862043f12d7e44f3b4", "cut3_delta_l2": 19.045848846435547, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.25, "same_pair_margin_after": 6.125, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 6.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.3995673656463623, "state_cosine": 0.8811830878257751, "logit_l2_delta": 31.816448211669922, "first_token_kl": 1.6808451618999243e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.704124450683594, "state_sha256": "445f9fd5dbc129e4b1639a44a49d066d1a1e6c09b32736807aac240e94ca9284", "cut3_delta_l2": 19.045848846435547, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.25, "same_pair_margin_after": 7.5, "same_pair_margin_delta": 1.25, "actual_top1_margin_after": 7.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.3994922637939453, "state_cosine": 0.9097627401351929, "logit_l2_delta": 70.01703643798828, "first_token_kl": 0.0010468860855326056, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.360886812210083, "full_vs_masked_state_l2": 2.2872402667999268, "full_vs_sham_state_l2": 2.279202461242676, "mask_vs_sham_state_l2": 0.360886812210083, "full_vs_masked_logit_l2": 2099.843017578125, "full_vs_sham_logit_l2": 1168.633056640625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.05685795843601227}, "SOURCE1_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.360886812210083, "full_vs_masked_state_l2": 2.279202461242676, "full_vs_sham_state_l2": 2.2872402667999268, "mask_vs_sham_state_l2": 0.360886812210083, "full_vs_masked_logit_l2": 1168.633056640625, "full_vs_sham_logit_l2": 2099.843017578125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.10112450271844864}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 8.125, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 239.73182678222656}, {"gain": -0.5, "baseline_margin": 8.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 56.724334716796875}, {"gain": -0.25, "baseline_margin": 8.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 24.729278564453125}, {"gain": 0.25, "baseline_margin": 8.125, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 27.249361038208008}, {"gain": 0.5, "baseline_margin": 8.125, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 39.4337272644043}, {"gain": 1.0, "baseline_margin": 8.125, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 206.11990356445312}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 8.125, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 206.11990356445312}, {"gain": -0.5, "baseline_margin": 8.125, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 39.4337272644043}, {"gain": -0.25, "baseline_margin": 8.125, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 27.249361038208008}, {"gain": 0.25, "baseline_margin": 8.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 24.729278564453125}, {"gain": 0.5, "baseline_margin": 8.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 56.724334716796875}, {"gain": 1.0, "baseline_margin": 8.125, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 239.73182678222656}]}, "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.926366329193115, "state_sha256": "114d9cc937fd10b666d616855abcc7b842a339b4428357d9a5f73ea1670b0e42", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.125, "same_pair_margin_after": 8.125, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.125, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.713308811187744, "state_sha256": "3e55ad8d953d21d865f7e3293735e4689f5cbad9fb91f6572f4366dd792b317b", "cut3_delta_l2": 18.232940673828125, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.125, "same_pair_margin_after": 8.25, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4632208347320557, "state_cosine": 0.9032152891159058, "logit_l2_delta": 39.4337272644043, "first_token_kl": 2.1680104964616476e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.294504165649414, "state_sha256": "312f28020d7bdd2167dce1735654e24b08260a10003b287022f69715f9ae1388", "cut3_delta_l2": 18.232940673828125, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.125, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.25, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.463275194168091, "state_cosine": 0.8862807750701904, "logit_l2_delta": 56.724334716796875, "first_token_kl": 8.320599590661004e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.294504165649414, "state_sha256": "312f28020d7bdd2167dce1735654e24b08260a10003b287022f69715f9ae1388", "cut3_delta_l2": 18.232940673828125, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.125, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.25, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.463275194168091, "state_cosine": 0.8862807750701904, "logit_l2_delta": 56.724334716796875, "first_token_kl": 8.320599590661004e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.713308811187744, "state_sha256": "3e55ad8d953d21d865f7e3293735e4689f5cbad9fb91f6572f4366dd792b317b", "cut3_delta_l2": 18.232940673828125, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.125, "same_pair_margin_after": 8.25, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4632208347320557, "state_cosine": 0.9032152891159058, "logit_l2_delta": 39.4337272644043, "first_token_kl": 2.1680104964616476e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C00_SAME_REV_CONFLICT_REVERSE C00_X1 {'ssd_verify_ms': 23.003, 'h2d_ms': 1.234, 'fusion_ms': 246.811, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST796_C00_SAME_REV_CONFLICT_REVERSE C00_B1 {'ssd_verify_ms': 21.466, 'h2d_ms': 1.088, 'fusion_ms': 656.602, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C00_X1_C00_B1 {'actual': 94, 'expected': 94}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_REVERSE_CURRENT 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3977155089378357, "full_vs_masked_state_l2": 2.045055866241455, "full_vs_sham_state_l2": 1.98883855342865, "mask_vs_sham_state_l2": 0.3977155089378357, "full_vs_masked_logit_l2": 1957.164794921875, "full_vs_sham_logit_l2": 1418.2364501953125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": 0.04336145147681236}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3977155089378357, "full_vs_masked_state_l2": 1.98883855342865, "full_vs_sham_state_l2": 2.045055866241455, "mask_vs_sham_state_l2": 0.3977155089378357, "full_vs_masked_logit_l2": 1418.2364501953125, "full_vs_sham_logit_l2": 1957.164794921875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.23664605617523193}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 6.125, "same_pair_margin_delta": 4.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 217.86203002929688}, {"gain": -0.5, "baseline_margin": 6.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 39.25100326538086}, {"gain": -0.25, "baseline_margin": 6.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.974876403808594}, {"gain": 0.25, "baseline_margin": 6.125, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 15.674973487854004}, {"gain": 0.5, "baseline_margin": 6.125, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 37.8885612487793}, {"gain": 1.0, "baseline_margin": 6.125, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 122.30482482910156}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 6.125, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 122.30482482910156}, {"gain": -0.5, "baseline_margin": 6.125, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 37.8885612487793}, {"gain": -0.25, "baseline_margin": 6.125, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 15.674973487854004}, {"gain": 0.25, "baseline_margin": 6.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.974876403808594}, {"gain": 0.5, "baseline_margin": 6.125, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 39.25100326538086}, {"gain": 1.0, "baseline_margin": 6.125, "same_pair_margin_delta": 4.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 217.86203002929688}]}, "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.78184700012207, "state_sha256": "19d82cb469511d5c7e5aa82e8c1726149c299f542e040c269e6d992d24155db9", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.125, "same_pair_margin_after": 6.125, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 6.125, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.746304035186768, "state_sha256": "4d3579f5d2ea38e497558e0af4899acec3e283764617f0277a80265b8411f233", "cut3_delta_l2": 18.996217727661133, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.125, "same_pair_margin_after": 6.5, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 6.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.388073682785034, "state_cosine": 0.9131536483764648, "logit_l2_delta": 37.8885612487793, "first_token_kl": 0.00014247128274291754, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.908608913421631, "state_sha256": "da5f25d2e3e97aba816272d012f7dd10888153a03c08bef4fe752f6c83d9fa48", "cut3_delta_l2": 18.996217727661133, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.125, "same_pair_margin_after": 6.375, "same_pair_margin_delta": 0.25, "actual_top1_margin_after": 6.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.38893985748291, "state_cosine": 0.8787722587585449, "logit_l2_delta": 39.25100326538086, "first_token_kl": 6.42492959741503e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.908608913421631, "state_sha256": "da5f25d2e3e97aba816272d012f7dd10888153a03c08bef4fe752f6c83d9fa48", "cut3_delta_l2": 18.996217727661133, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.125, "same_pair_margin_after": 6.375, "same_pair_margin_delta": 0.25, "actual_top1_margin_after": 6.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.38893985748291, "state_cosine": 0.8787722587585449, "logit_l2_delta": 39.25100326538086, "first_token_kl": 6.42492959741503e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.746304035186768, "state_sha256": "4d3579f5d2ea38e497558e0af4899acec3e283764617f0277a80265b8411f233", "cut3_delta_l2": 18.996217727661133, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.125, "same_pair_margin_after": 6.5, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 6.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.388073682785034, "state_cosine": 0.9131536483764648, "logit_l2_delta": 37.8885612487793, "first_token_kl": 0.00014247128274291754, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+TEST796_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.356746107339859, "full_vs_masked_state_l2": 2.251880168914795, "full_vs_sham_state_l2": 2.2345268726348877, "mask_vs_sham_state_l2": 0.356746107339859, "full_vs_masked_logit_l2": 1880.9471435546875, "full_vs_sham_logit_l2": 1360.3043212890625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.030993830412626266}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.356746107339859, "full_vs_masked_state_l2": 2.2345268726348877, "full_vs_sham_state_l2": 2.251880168914795, "mask_vs_sham_state_l2": 0.356746107339859, "full_vs_masked_logit_l2": 1360.3043212890625, "full_vs_sham_logit_l2": 1880.9471435546875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.12766645848751068}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 8.25, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 240.56983947753906}, {"gain": -0.5, "baseline_margin": 8.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 45.53997039794922}, {"gain": -0.25, "baseline_margin": 8.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 30.978801727294922}, {"gain": 0.25, "baseline_margin": 8.25, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.80040740966797}, {"gain": 0.5, "baseline_margin": 8.25, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 36.953399658203125}, {"gain": 1.0, "baseline_margin": 8.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 224.42893981933594}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 8.25, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 224.42893981933594}, {"gain": -0.5, "baseline_margin": 8.25, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 36.953399658203125}, {"gain": -0.25, "baseline_margin": 8.25, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.80040740966797}, {"gain": 0.25, "baseline_margin": 8.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 30.978801727294922}, {"gain": 0.5, "baseline_margin": 8.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 45.53997039794922}, {"gain": 1.0, "baseline_margin": 8.25, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 240.56983947753906}]}, "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.906541347503662, "state_sha256": "a0e53cd98b53bb1a17aed7df7df1e917c0213e37b248fbeb3b8e80a0baaf4062", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.25, "same_pair_margin_after": 8.25, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.745655059814453, "state_sha256": "7898e2ef50f0e89e86fabdf5a153dbf80d7b72b37224677f7281e9c152b72455", "cut3_delta_l2": 18.227861404418945, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.25, "same_pair_margin_after": 8.25, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.453129768371582, "state_cosine": 0.9057557582855225, "logit_l2_delta": 36.953399658203125, "first_token_kl": 5.254312185343224e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.20969295501709, "state_sha256": "b3eaa8b7f0c87b19f9f8ed87f7581804048fb1fc74a45c3e356b084eb0da13af", "cut3_delta_l2": 18.227861404418945, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.25, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4538002014160156, "state_cosine": 0.8840205669403076, "logit_l2_delta": 45.53997039794922, "first_token_kl": 1.9697547486430267e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.20969295501709, "state_sha256": "b3eaa8b7f0c87b19f9f8ed87f7581804048fb1fc74a45c3e356b084eb0da13af", "cut3_delta_l2": 18.227861404418945, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.25, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4538002014160156, "state_cosine": 0.8840205669403076, "logit_l2_delta": 45.53997039794922, "first_token_kl": 1.9697547486430267e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.745655059814453, "state_sha256": "7898e2ef50f0e89e86fabdf5a153dbf80d7b72b37224677f7281e9c152b72455", "cut3_delta_l2": 18.227861404418945, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.25, "same_pair_margin_after": 8.25, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.453129768371582, "state_cosine": 0.9057557582855225, "logit_l2_delta": 36.953399658203125, "first_token_kl": 5.254312185343224e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C00_X1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C01_BASELINE_FORWARD C01_B0 {'ssd_verify_ms': 23.038, 'h2d_ms': 1.186, 'fusion_ms': 287.399, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST796_C01_BASELINE_FORWARD C01_B1 {'ssd_verify_ms': 22.806, 'h2d_ms': 1.145, 'fusion_ms': 667.47, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_FORWARD 
+PASS PAIR_ORDER_C01_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C01_B0_C01_B1 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_FORWARD_CURRENT 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3981083035469055, "full_vs_masked_state_l2": 2.077908754348755, "full_vs_sham_state_l2": 2.040703535079956, "mask_vs_sham_state_l2": 0.3981083035469055, "full_vs_masked_logit_l2": 2235.720703125, "full_vs_sham_logit_l2": 1660.326904296875, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.0032348029781132936}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3981083035469055, "full_vs_masked_state_l2": 2.040703535079956, "full_vs_sham_state_l2": 2.077908754348755, "mask_vs_sham_state_l2": 0.3981083035469055, "full_vs_masked_logit_l2": 1660.326904296875, "full_vs_sham_logit_l2": 2235.720703125, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.18841397762298584}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 9.625, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 182.18695068359375}, {"gain": -0.5, "baseline_margin": 9.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 42.16480255126953}, {"gain": -0.25, "baseline_margin": 9.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.792930603027344}, {"gain": 0.25, "baseline_margin": 9.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 16.44263458251953}, {"gain": 0.5, "baseline_margin": 9.625, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 25.7869930267334}, {"gain": 1.0, "baseline_margin": 9.625, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 95.56586456298828}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 9.625, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 95.56586456298828}, {"gain": -0.5, "baseline_margin": 9.625, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 25.7869930267334}, {"gain": -0.25, "baseline_margin": 9.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 16.44263458251953}, {"gain": 0.25, "baseline_margin": 9.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.792930603027344}, {"gain": 0.5, "baseline_margin": 9.625, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 42.16480255126953}, {"gain": 1.0, "baseline_margin": 9.625, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 182.18695068359375}]}, "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.824905872344971, "state_sha256": "37a096105bd5f1b7674ec27f2aca8ddc953c951798e39ceca631ce507e662379", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.625, "same_pair_margin_after": 9.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 9.625, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.653554916381836, "state_sha256": "3ab79469f8dbeb4805f60540ce7a75fe6c857a7e0c879f65050cef803097444f", "cut3_delta_l2": 19.052024841308594, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.625, "same_pair_margin_after": 9.5, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 9.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4118101596832275, "state_cosine": 0.9059646725654602, "logit_l2_delta": 25.7869930267334, "first_token_kl": 6.242992753868748e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.121617317199707, "state_sha256": "54eb38bc421e8cfb47599a569c89c3c4e317bb03a653683f006201871bcdcc94", "cut3_delta_l2": 19.052024841308594, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.625, "same_pair_margin_after": 9.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 9.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.411665439605713, "state_cosine": 0.8840998411178589, "logit_l2_delta": 42.16480255126953, "first_token_kl": -1.61620619110181e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.121617317199707, "state_sha256": "54eb38bc421e8cfb47599a569c89c3c4e317bb03a653683f006201871bcdcc94", "cut3_delta_l2": 19.052024841308594, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.625, "same_pair_margin_after": 9.625, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 9.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.411665439605713, "state_cosine": 0.8840998411178589, "logit_l2_delta": 42.16480255126953, "first_token_kl": -1.61620619110181e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.653554916381836, "state_sha256": "3ab79469f8dbeb4805f60540ce7a75fe6c857a7e0c879f65050cef803097444f", "cut3_delta_l2": 19.052024841308594, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.625, "same_pair_margin_after": 9.5, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 9.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4118101596832275, "state_cosine": 0.9059646725654602, "logit_l2_delta": 25.7869930267334, "first_token_kl": 6.242992753868748e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_FORWARD_HISTORICAL 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3623175621032715, "full_vs_masked_state_l2": 2.2397525310516357, "full_vs_sham_state_l2": 2.223684072494507, "mask_vs_sham_state_l2": 0.3623175621032715, "full_vs_masked_logit_l2": 2066.27490234375, "full_vs_sham_logit_l2": 1685.35107421875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.03695891052484512}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3623175621032715, "full_vs_masked_state_l2": 2.223684072494507, "full_vs_sham_state_l2": 2.2397525310516357, "mask_vs_sham_state_l2": 0.3623175621032715, "full_vs_masked_logit_l2": 1685.35107421875, "full_vs_sham_logit_l2": 2066.27490234375, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.12507303059101105}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 6.5, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 180.6921844482422}, {"gain": -0.5, "baseline_margin": 6.5, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 36.645320892333984}, {"gain": -0.25, "baseline_margin": 6.5, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 17.958675384521484}, {"gain": 0.25, "baseline_margin": 6.5, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 55.416259765625}, {"gain": 0.5, "baseline_margin": 6.5, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 54.422176361083984}, {"gain": 1.0, "baseline_margin": 6.5, "same_pair_margin_delta": 1.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 126.64549255371094}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 6.5, "same_pair_margin_delta": 1.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 126.64549255371094}, {"gain": -0.5, "baseline_margin": 6.5, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 54.422176361083984}, {"gain": -0.25, "baseline_margin": 6.5, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 55.416259765625}, {"gain": 0.25, "baseline_margin": 6.5, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 17.958675384521484}, {"gain": 0.5, "baseline_margin": 6.5, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 36.645320892333984}, {"gain": 1.0, "baseline_margin": 6.5, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 180.6921844482422}]}, "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9203691482543945, "state_sha256": "58035a4a8aef993630d04c4ff105f0366c80d758dce79fe0c1b6d030ac397438", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.5, "same_pair_margin_after": 6.5, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 6.5, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.796779155731201, "state_sha256": "a5d05a9459c96b084ee0cf6fabbd5f22f1edff8a3f06a4c5a39af140afb03eb5", "cut3_delta_l2": 18.271703720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.5, "same_pair_margin_after": 6.125, "same_pair_margin_delta": -0.375, "actual_top1_margin_after": 6.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.461089849472046, "state_cosine": 0.907285213470459, "logit_l2_delta": 54.422176361083984, "first_token_kl": 0.00012050906661897898, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.194960117340088, "state_sha256": "63bd030c994880dd0ef47c6a4eac5b60668e81735d90039ec2c9ec0eb90a81c4", "cut3_delta_l2": 18.271703720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.5, "same_pair_margin_after": 6.875, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 6.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.459627151489258, "state_cosine": 0.8831356167793274, "logit_l2_delta": 36.645320892333984, "first_token_kl": 9.330824832431972e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.194960117340088, "state_sha256": "63bd030c994880dd0ef47c6a4eac5b60668e81735d90039ec2c9ec0eb90a81c4", "cut3_delta_l2": 18.271703720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.5, "same_pair_margin_after": 6.875, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 6.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.459627151489258, "state_cosine": 0.8831356167793274, "logit_l2_delta": 36.645320892333984, "first_token_kl": 9.330824832431972e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.796779155731201, "state_sha256": "a5d05a9459c96b084ee0cf6fabbd5f22f1edff8a3f06a4c5a39af140afb03eb5", "cut3_delta_l2": 18.271703720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 6.5, "same_pair_margin_after": 6.125, "same_pair_margin_delta": -0.375, "actual_top1_margin_after": 6.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.461089849472046, "state_cosine": 0.907285213470459, "logit_l2_delta": 54.422176361083984, "first_token_kl": 0.00012050906661897898, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C01_BASELINE_FORWARD 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C01_BASELINE_REVERSE C01_B1 {'ssd_verify_ms': 24.729, 'h2d_ms': 1.203, 'fusion_ms': 246.557, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+NATIVE_FUSION_STEP TEST796_C01_BASELINE_REVERSE C01_B0 {'ssd_verify_ms': 25.765, 'h2d_ms': 1.074, 'fusion_ms': 715.783, 'cid': 'C01_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_REVERSE 
+PASS PAIR_ORDER_C01_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C01_B1_C01_B0 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_REVERSE_CURRENT 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3693852126598358, "full_vs_masked_state_l2": 2.0656955242156982, "full_vs_sham_state_l2": 2.0393574237823486, "mask_vs_sham_state_l2": 0.3693852126598358, "full_vs_masked_logit_l2": 2045.4564208984375, "full_vs_sham_logit_l2": 1450.45751953125, "masked_first_token": 97052, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.01880042254924774}, "SOURCE1_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3693852126598358, "full_vs_masked_state_l2": 2.0393574237823486, "full_vs_sham_state_l2": 2.0656955242156982, "mask_vs_sham_state_l2": 0.3693852126598358, "full_vs_masked_logit_l2": 1450.45751953125, "full_vs_sham_logit_l2": 2045.4564208984375, "masked_first_token": 97052, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.16025806963443756}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 9.75, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 163.3311767578125}, {"gain": -0.5, "baseline_margin": 9.75, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.345243453979492}, {"gain": -0.25, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.488574981689453}, {"gain": 0.25, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 18.670194625854492}, {"gain": 0.5, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.236736297607422}, {"gain": 1.0, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 107.52884674072266}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 107.52884674072266}, {"gain": -0.5, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.236736297607422}, {"gain": -0.25, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 18.670194625854492}, {"gain": 0.25, "baseline_margin": 9.75, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.488574981689453}, {"gain": 0.5, "baseline_margin": 9.75, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.345243453979492}, {"gain": 1.0, "baseline_margin": 9.75, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 163.3311767578125}]}, "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.807787895202637, "state_sha256": "3165151614415a8dcaf8d9428a0cc9dd1eb2f2cc2c08dd6deedb1f1eaeb70683", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.75, "same_pair_margin_after": 9.75, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 9.75, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0000001192092896, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.5879082679748535, "state_sha256": "e116d9c426423940ae1d1c7900fbc4de854a9ad2a82ec4f809698a4295025841", "cut3_delta_l2": 19.084203720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.75, "same_pair_margin_after": 9.75, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 9.75, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4037840366363525, "state_cosine": 0.9037874937057495, "logit_l2_delta": 22.236736297607422, "first_token_kl": 3.9425692932582024e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.153919696807861, "state_sha256": "40c6cfe29e931f2c0bee36879b1416dc61fa5009962e9e367de41f301e4a2c83", "cut3_delta_l2": 19.084203720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.75, "same_pair_margin_after": 9.875, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 9.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.404036045074463, "state_cosine": 0.8857986330986023, "logit_l2_delta": 29.345243453979492, "first_token_kl": 5.239270990387013e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.153919696807861, "state_sha256": "40c6cfe29e931f2c0bee36879b1416dc61fa5009962e9e367de41f301e4a2c83", "cut3_delta_l2": 19.084203720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.75, "same_pair_margin_after": 9.875, "same_pair_margin_delta": 0.125, "actual_top1_margin_after": 9.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.404036045074463, "state_cosine": 0.8857986330986023, "logit_l2_delta": 29.345243453979492, "first_token_kl": 5.239270990387013e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.5879082679748535, "state_sha256": "e116d9c426423940ae1d1c7900fbc4de854a9ad2a82ec4f809698a4295025841", "cut3_delta_l2": 19.084203720092773, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 58103, "baseline_margin": 9.75, "same_pair_margin_after": 9.75, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 9.75, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4037840366363525, "state_cosine": 0.9037874937057495, "logit_l2_delta": 22.236736297607422, "first_token_kl": 3.9425692932582024e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_REVERSE_HISTORICAL 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3515981137752533, "full_vs_masked_state_l2": 2.2518203258514404, "full_vs_sham_state_l2": 2.241595983505249, "mask_vs_sham_state_l2": 0.3515981137752533, "full_vs_masked_logit_l2": 1715.5548095703125, "full_vs_sham_logit_l2": 1784.626953125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.04927964508533478}, "SOURCE1_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3515981137752533, "full_vs_masked_state_l2": 2.241595983505249, "full_vs_sham_state_l2": 2.2518203258514404, "mask_vs_sham_state_l2": 0.3515981137752533, "full_vs_masked_logit_l2": 1784.626953125, "full_vs_sham_logit_l2": 1715.5548095703125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.10708361864089966}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 1.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 139.05447387695312}, {"gain": -0.5, "baseline_margin": 7.25, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 52.125850677490234}, {"gain": -0.25, "baseline_margin": 7.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 27.905502319335938}, {"gain": 0.25, "baseline_margin": 7.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 19.006568908691406}, {"gain": 0.5, "baseline_margin": 7.25, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.586700439453125}, {"gain": 1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 139.92222595214844}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 139.92222595214844}, {"gain": -0.5, "baseline_margin": 7.25, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.586700439453125}, {"gain": -0.25, "baseline_margin": 7.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 19.006568908691406}, {"gain": 0.25, "baseline_margin": 7.25, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 27.905502319335938}, {"gain": 0.5, "baseline_margin": 7.25, "same_pair_margin_delta": 0.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 52.125850677490234}, {"gain": 1.0, "baseline_margin": 7.25, "same_pair_margin_delta": 1.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 139.05447387695312}]}, "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.910492420196533, "state_sha256": "58372791b2a2810f9ea30213bd2e27617acf79e85d4cadb497cf315acba94eda", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.25, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 7.25, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.613081455230713, "state_sha256": "09d3e0633e281536b61fc1bb08b9fae97ea768374c3750d2d46d0d63972a2f41", "cut3_delta_l2": 18.343990325927734, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.625, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 7.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4552500247955322, "state_cosine": 0.8996005058288574, "logit_l2_delta": 29.586700439453125, "first_token_kl": 4.43189637735486e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.36399507522583, "state_sha256": "7c9a622ec1ab904866390204229788ed2a364312ee1b3092cbf286dd6d3c22d3", "cut3_delta_l2": 18.343990325927734, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.5, "same_pair_margin_delta": 0.25, "actual_top1_margin_after": 7.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4553229808807373, "state_cosine": 0.8894651532173157, "logit_l2_delta": 52.125850677490234, "first_token_kl": 2.0999344997107983e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.36399507522583, "state_sha256": "7c9a622ec1ab904866390204229788ed2a364312ee1b3092cbf286dd6d3c22d3", "cut3_delta_l2": 18.343990325927734, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.5, "same_pair_margin_delta": 0.25, "actual_top1_margin_after": 7.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4553229808807373, "state_cosine": 0.8894651532173157, "logit_l2_delta": 52.125850677490234, "first_token_kl": 2.0999344997107983e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.613081455230713, "state_sha256": "09d3e0633e281536b61fc1bb08b9fae97ea768374c3750d2d46d0d63972a2f41", "cut3_delta_l2": 18.343990325927734, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 7.25, "same_pair_margin_after": 7.625, "same_pair_margin_delta": 0.375, "actual_top1_margin_after": 7.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4552500247955322, "state_cosine": 0.8996005058288574, "logit_l2_delta": 29.586700439453125, "first_token_kl": 4.43189637735486e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C01_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C01_SAME_REV_CONFLICT_FORWARD C01_B1 {'ssd_verify_ms': 23.996, 'h2d_ms': 1.108, 'fusion_ms': 246.022, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST796_C01_SAME_REV_CONFLICT_FORWARD C01_X1 {'ssd_verify_ms': 25.857, 'h2d_ms': 0.995, 'fusion_ms': 704.292, 'cid': 'C01_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C01_B1_C01_X1 {'actual': 95, 'expected': 95}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_FORWARD_CURRENT 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.36635851860046387, "full_vs_masked_state_l2": 2.195762872695923, "full_vs_sham_state_l2": 2.1589980125427246, "mask_vs_sham_state_l2": 0.36635851860046387, "full_vs_masked_logit_l2": 1688.4935302734375, "full_vs_sham_logit_l2": 1536.35595703125, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": 0.016362152993679047}, "SOURCE1_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.36635851860046387, "full_vs_masked_state_l2": 2.1589980125427246, "full_vs_sham_state_l2": 2.195762872695923, "mask_vs_sham_state_l2": 0.36635851860046387, "full_vs_masked_logit_l2": 1536.35595703125, "full_vs_sham_logit_l2": 1688.4935302734375, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.1829361617565155}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 2.375, "same_pair_margin_delta": 3.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 197.57638549804688}, {"gain": -0.5, "baseline_margin": 2.375, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 35.329978942871094}, {"gain": -0.25, "baseline_margin": 2.375, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.327238082885742}, {"gain": 0.25, "baseline_margin": 2.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 23.660478591918945}, {"gain": 0.5, "baseline_margin": 2.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 34.18511962890625}, {"gain": 1.0, "baseline_margin": 2.375, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.76315307617188}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 2.375, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.76315307617188}, {"gain": -0.5, "baseline_margin": 2.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 34.18511962890625}, {"gain": -0.25, "baseline_margin": 2.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 23.660478591918945}, {"gain": 0.25, "baseline_margin": 2.375, "same_pair_margin_delta": 0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.327238082885742}, {"gain": 0.5, "baseline_margin": 2.375, "same_pair_margin_delta": 0.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 35.329978942871094}, {"gain": 1.0, "baseline_margin": 2.375, "same_pair_margin_delta": 3.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 197.57638549804688}]}, "baseline_prediction": "TEAM-JRSBSZJH", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.871880531311035, "state_sha256": "67ad86425d7991bcc691ac5434b308d989acba0db686cacc3ed315e6333ada67", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.375, "same_pair_margin_after": 2.375, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 2.375, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 5.859204292297363, "state_sha256": "92ce56efa72722ad926076d58f422f4b19f06b8d643fc30913f14491dedc4b4c", "cut3_delta_l2": 19.033653259277344, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.375, "same_pair_margin_after": 1.875, "same_pair_margin_delta": -0.5, "actual_top1_margin_after": 1.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.435969114303589, "state_cosine": 0.9131358861923218, "logit_l2_delta": 34.18511962890625, "first_token_kl": 0.011195674538612366, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.9990458488464355, "state_sha256": "cdc404cb35aac15dc949934b9617cb9f50196ffa54668380e9d3c0b403984466", "cut3_delta_l2": 19.033653259277344, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.375, "same_pair_margin_after": 3.125, "same_pair_margin_delta": 0.75, "actual_top1_margin_after": 3.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.436516523361206, "state_cosine": 0.8784539699554443, "logit_l2_delta": 35.329978942871094, "first_token_kl": 0.017901286482810974, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.9990458488464355, "state_sha256": "cdc404cb35aac15dc949934b9617cb9f50196ffa54668380e9d3c0b403984466", "cut3_delta_l2": 19.033653259277344, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.375, "same_pair_margin_after": 3.125, "same_pair_margin_delta": 0.75, "actual_top1_margin_after": 3.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.436516523361206, "state_cosine": 0.8784539699554443, "logit_l2_delta": 35.329978942871094, "first_token_kl": 0.017901286482810974, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 5.859204292297363, "state_sha256": "92ce56efa72722ad926076d58f422f4b19f06b8d643fc30913f14491dedc4b4c", "cut3_delta_l2": 19.033653259277344, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.375, "same_pair_margin_after": 1.875, "same_pair_margin_delta": -0.5, "actual_top1_margin_after": 1.875, "baseline_top1_rank_after": 1, "state_l2_delta": 2.435969114303589, "state_cosine": 0.9131358861923218, "logit_l2_delta": 34.18511962890625, "first_token_kl": 0.011195674538612366, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3650000989437103, "full_vs_masked_state_l2": 2.2164719104766846, "full_vs_sham_state_l2": 2.2061047554016113, "mask_vs_sham_state_l2": 0.3650000989437103, "full_vs_masked_logit_l2": 2012.6226806640625, "full_vs_sham_logit_l2": 1718.8182373046875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.0542554035782814}, "SOURCE1_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3650000989437103, "full_vs_masked_state_l2": 2.2061047554016113, "full_vs_sham_state_l2": 2.2164719104766846, "mask_vs_sham_state_l2": 0.3650000989437103, "full_vs_masked_logit_l2": 1718.8182373046875, "full_vs_sham_logit_l2": 2012.6226806640625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.11067452281713486}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 8.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 376.851318359375}, {"gain": -0.5, "baseline_margin": 8.375, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 61.50302505493164}, {"gain": -0.25, "baseline_margin": 8.375, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.215200424194336}, {"gain": 0.25, "baseline_margin": 8.375, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 20.586284637451172}, {"gain": 0.5, "baseline_margin": 8.375, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.60723876953125}, {"gain": 1.0, "baseline_margin": 8.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 192.03988647460938}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 8.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 192.03988647460938}, {"gain": -0.5, "baseline_margin": 8.375, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.60723876953125}, {"gain": -0.25, "baseline_margin": 8.375, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 20.586284637451172}, {"gain": 0.25, "baseline_margin": 8.375, "same_pair_margin_delta": 0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.215200424194336}, {"gain": 0.5, "baseline_margin": 8.375, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 61.50302505493164}, {"gain": 1.0, "baseline_margin": 8.375, "same_pair_margin_delta": -0.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 376.851318359375}]}, "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.932621955871582, "state_sha256": "a7bb17ad7ddd7e354b79c8365306cd59ad0a644f3b11e64bb69069bbeaf07668", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.375, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.708760738372803, "state_sha256": "302ca05223ee06213a09af96a168591aa6e3e4b33335ac4d9713f473b6930097", "cut3_delta_l2": 18.27599334716797, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.375, "same_pair_margin_after": 8.25, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4658520221710205, "state_cosine": 0.9027308225631714, "logit_l2_delta": 29.60723876953125, "first_token_kl": 1.9170745417795843e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.3140788078308105, "state_sha256": "a0dae9b55861a368177189a280975800f37a6683eb1da2a0c67ca273387d97f7", "cut3_delta_l2": 18.27599334716797, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.375, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.465951442718506, "state_cosine": 0.886782169342041, "logit_l2_delta": 61.50302505493164, "first_token_kl": -7.061755180615137e-09, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.3140788078308105, "state_sha256": "a0dae9b55861a368177189a280975800f37a6683eb1da2a0c67ca273387d97f7", "cut3_delta_l2": 18.27599334716797, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.375, "same_pair_margin_after": 8.375, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.465951442718506, "state_cosine": 0.886782169342041, "logit_l2_delta": 61.50302505493164, "first_token_kl": -7.061755180615137e-09, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.708760738372803, "state_sha256": "302ca05223ee06213a09af96a168591aa6e3e4b33335ac4d9713f473b6930097", "cut3_delta_l2": 18.27599334716797, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.375, "same_pair_margin_after": 8.25, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 8.25, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4658520221710205, "state_cosine": 0.9027308225631714, "logit_l2_delta": 29.60723876953125, "first_token_kl": 1.9170745417795843e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST796_C01_SAME_REV_CONFLICT_REVERSE C01_X1 {'ssd_verify_ms': 26.51, 'h2d_ms': 1.066, 'fusion_ms': 246.887, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST796_C01_SAME_REV_CONFLICT_REVERSE C01_B1 {'ssd_verify_ms': 26.554, 'h2d_ms': 1.146, 'fusion_ms': 659.179, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C01_X1_C01_B1 {'actual': 95, 'expected': 95}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_REVERSE_CURRENT 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.39062511920928955, "full_vs_masked_state_l2": 2.1659443378448486, "full_vs_sham_state_l2": 2.1240575313568115, "mask_vs_sham_state_l2": 0.39062511920928955, "full_vs_masked_logit_l2": 1634.581298828125, "full_vs_sham_logit_l2": 838.3167114257812, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": 0.016335241496562958}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.39062511920928955, "full_vs_masked_state_l2": 2.1240575313568115, "full_vs_sham_state_l2": 2.1659443378448486, "mask_vs_sham_state_l2": 0.39062511920928955, "full_vs_masked_logit_l2": 838.3167114257812, "full_vs_sham_logit_l2": 1634.581298828125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.19636796414852142}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 2.75, "same_pair_margin_delta": 3.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 236.6809844970703}, {"gain": -0.5, "baseline_margin": 2.75, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 31.188121795654297}, {"gain": -0.25, "baseline_margin": 2.75, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 19.439786911010742}, {"gain": 0.25, "baseline_margin": 2.75, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 33.66938781738281}, {"gain": 0.5, "baseline_margin": 2.75, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 26.904159545898438}, {"gain": 1.0, "baseline_margin": 2.75, "same_pair_margin_delta": 0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.7324447631836}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 2.75, "same_pair_margin_delta": 0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.7324447631836}, {"gain": -0.5, "baseline_margin": 2.75, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 26.904159545898438}, {"gain": -0.25, "baseline_margin": 2.75, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 33.66938781738281}, {"gain": 0.25, "baseline_margin": 2.75, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 19.439786911010742}, {"gain": 0.5, "baseline_margin": 2.75, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 31.188121795654297}, {"gain": 1.0, "baseline_margin": 2.75, "same_pair_margin_delta": 3.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 236.6809844970703}]}, "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.866088390350342, "state_sha256": "705c9820be8f5e84448d92477d20fac366eeb219d6cc80e5202098c2b160f14b", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.75, "same_pair_margin_after": 2.75, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 2.75, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 1.000000238418579, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.7080464363098145, "state_sha256": "70cf848646c9b915c6368ac34dafe6618a483e036a629520dd016be3c5fbd3ba", "cut3_delta_l2": 19.069807052612305, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.75, "same_pair_margin_after": 2.625, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 2.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4326119422912598, "state_cosine": 0.9062367677688599, "logit_l2_delta": 26.904159545898438, "first_token_kl": 0.00045822886750102043, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.156007289886475, "state_sha256": "ec2411c79cdbf239e263e19de9f3de92c85c5177751135d43a67d501a1f2e91e", "cut3_delta_l2": 19.069807052612305, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.75, "same_pair_margin_after": 2.375, "same_pair_margin_delta": -0.375, "actual_top1_margin_after": 2.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4330904483795166, "state_cosine": 0.8836992383003235, "logit_l2_delta": 31.188121795654297, "first_token_kl": 0.004466840997338295, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.156007289886475, "state_sha256": "ec2411c79cdbf239e263e19de9f3de92c85c5177751135d43a67d501a1f2e91e", "cut3_delta_l2": 19.069807052612305, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.75, "same_pair_margin_after": 2.375, "same_pair_margin_delta": -0.375, "actual_top1_margin_after": 2.375, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4330904483795166, "state_cosine": 0.8836992383003235, "logit_l2_delta": 31.188121795654297, "first_token_kl": 0.004466840997338295, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.7080464363098145, "state_sha256": "70cf848646c9b915c6368ac34dafe6618a483e036a629520dd016be3c5fbd3ba", "cut3_delta_l2": 19.069807052612305, "cut3_steps": 1, "first_token_id": 97052, "baseline_top1_token": 97052, "baseline_top2_token": 51378, "baseline_margin": 2.75, "same_pair_margin_after": 2.625, "same_pair_margin_delta": -0.125, "actual_top1_margin_after": 2.625, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4326119422912598, "state_cosine": 0.9062367677688599, "logit_l2_delta": 26.904159545898438, "first_token_kl": 0.00045822886750102043, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+TEST796_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "length_matched_mask_probes": {"SOURCE0_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3347867429256439, "full_vs_masked_state_l2": 2.2628188133239746, "full_vs_sham_state_l2": 2.2520694732666016, "mask_vs_sham_state_l2": 0.3347867429256439, "full_vs_masked_logit_l2": 2097.75390625, "full_vs_sham_logit_l2": 1599.93505859375, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.04214470461010933}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3347867429256439, "full_vs_masked_state_l2": 2.2520694732666016, "full_vs_sham_state_l2": 2.2628188133239746, "mask_vs_sham_state_l2": 0.3347867429256439, "full_vs_masked_logit_l2": 1599.93505859375, "full_vs_sham_logit_l2": 2097.75390625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.1060066819190979}}, "blind_dose_scan": {"SOURCE0_MASK": [{"gain": -1.0, "baseline_margin": 8.5, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 365.1616516113281}, {"gain": -0.5, "baseline_margin": 8.5, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 41.22507858276367}, {"gain": -0.25, "baseline_margin": 8.5, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 27.118213653564453}, {"gain": 0.25, "baseline_margin": 8.5, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 22.314756393432617}, {"gain": 0.5, "baseline_margin": 8.5, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 42.9182243347168}, {"gain": 1.0, "baseline_margin": 8.5, "same_pair_margin_delta": -0.875, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 220.83749389648438}], "SOURCE1_MASK": [{"gain": -1.0, "baseline_margin": 8.5, "same_pair_margin_delta": -0.875, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 220.83749389648438}, {"gain": -0.5, "baseline_margin": 8.5, "same_pair_margin_delta": -0.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 42.9182243347168}, {"gain": -0.25, "baseline_margin": 8.5, "same_pair_margin_delta": -0.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 22.314756393432617}, {"gain": 0.25, "baseline_margin": 8.5, "same_pair_margin_delta": -0.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 27.118213653564453}, {"gain": 0.5, "baseline_margin": 8.5, "same_pair_margin_delta": 0.0, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 41.22507858276367}, {"gain": 1.0, "baseline_margin": 8.5, "same_pair_margin_delta": -0.625, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 365.1616516113281}]}, "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.930327892303467, "state_sha256": "a443a8204b862919a76e2ae8d22b9e580111d4d37d98be38a62a5cacb607b10b", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.5, "same_pair_margin_after": 8.5, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.5, "baseline_top1_rank_after": 1, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_PLUS", "direction": "SOURCE0_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.742142200469971, "state_sha256": "895633ce6fd969512c6514c002c4a03f7624e96d6c75c4e84de9741d410e88ee", "cut3_delta_l2": 18.297025680541992, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.5, "same_pair_margin_after": 8.125, "same_pair_margin_delta": -0.375, "actual_top1_margin_after": 8.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4658384323120117, "state_cosine": 0.9042530059814453, "logit_l2_delta": 42.9182243347168, "first_token_kl": 1.6441264961031266e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE0_MINUS", "direction": "SOURCE0_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.272527694702148, "state_sha256": "3ada7a4d6801190989a5caa559d164844e4750430fdab68d064a9a902b7a85c5", "cut3_delta_l2": 18.297025680541992, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.5, "same_pair_margin_after": 8.5, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.465982675552368, "state_cosine": 0.8852874636650085, "logit_l2_delta": 41.22507858276367, "first_token_kl": 9.465029648936252e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_PLUS", "direction": "SOURCE1_MASK", "gain": 0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.272527694702148, "state_sha256": "3ada7a4d6801190989a5caa559d164844e4750430fdab68d064a9a902b7a85c5", "cut3_delta_l2": 18.297025680541992, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.5, "same_pair_margin_after": 8.5, "same_pair_margin_delta": 0.0, "actual_top1_margin_after": 8.5, "baseline_top1_rank_after": 1, "state_l2_delta": 2.465982675552368, "state_cosine": 0.8852874636650085, "logit_l2_delta": 41.22507858276367, "first_token_kl": 9.465029648936252e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SOURCE1_MINUS", "direction": "SOURCE1_MASK", "gain": -0.5, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.742142200469971, "state_sha256": "895633ce6fd969512c6514c002c4a03f7624e96d6c75c4e84de9741d410e88ee", "cut3_delta_l2": 18.297025680541992, "cut3_steps": 1, "first_token_id": 51378, "baseline_top1_token": 51378, "baseline_top2_token": 61395, "baseline_margin": 8.5, "same_pair_margin_after": 8.125, "same_pair_margin_delta": -0.375, "actual_top1_margin_after": 8.125, "baseline_top1_rank_after": 1, "state_l2_delta": 2.4658384323120117, "state_cosine": 0.9042530059814453, "logit_l2_delta": 42.9182243347168, "first_token_kl": 1.6441264961031266e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS SSD_SHA_UNCHANGED_C01_X1 
+PASS TOTAL_CASES 16
+PASS TOTAL_INTERVENTIONS 
+PASS FROZEN_WEIGHTS 
+PASS FINAL_MANIFEST 
+PASS NO_RESIDUAL_HOOKS 
+TEST796_COMPLETED {"cases": 16, "generation_runs": 80, "changed_outputs": 0, "nonzero_cut3_state_effects": 64, "nonzero_logit_effects": 64, "first_token_argmax_changes": 0, "offline_improvements": 0, "offline_damages": 0, "baseline_correct": 10, "interpretation": "Strictly disjoint equal-size partial KV masks; blinded signed dose-vs-margin audit, no correctness oracle, no autonomous controller."}
+FILES /content/AKBASCORE_TEST779_20261027T075111_114681Z/TEST796_results.json /content/AKBASCORE_TEST779_20261027T075111_114681Z/TEST796.log /content/AKBASCORE_TEST779_20261027T075111_114681Z/TEST796_manifest.json
