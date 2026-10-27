@@ -1,0 +1,593 @@
+ 
+PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+================================================================================================================
+TEST793 — BLIND CUT3 HIDDEN-STATE PRESSURE / NATIVE PHYSICAL MEMORY
+PASS TEST790_EXACT_BLOB 
+PASS TEST789_EXACT_BLOB 
+PASS TEST779_EXACT_BLOB 
+PASS SEALED_PANEL 
+PASS MANIFEST_CONTRACT 
+PASS MANIFEST_PREFLIGHT 
+PASS PROBE_SYMBOLS 
+PASS PRESSURE_SYMMETRY 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM 
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+config.json: 100%
+
+ 663/663 [00:00<00:00, 72.5kB/s]
+tokenizer_config.json: 100%
+
+ 7.30k/7.30k [00:00<00:00, 744kB/s]
+vocab.json: 100%
+
+ 2.78M/2.78M [00:00<00:00, 63.0MB/s]
+merges.txt: 100%
+
+ 1.67M/1.67M [00:00<00:00, 67.4MB/s]
+tokenizer.json: 100%
+
+ 7.03M/7.03M [00:00<00:00, 115MB/s]
+model.safetensors.index.json: 100%
+
+ 79.0k/79.0k [00:00<00:00, 8.58MB/s]
+Download complete: 
+
+  125GB, 1.43GB/s  
+Reconstruction complete: 100%
+
+  145GB /  145GB,  720MB/s  
+Fetching 37 files: 100%
+
+ 37/37 [06:46<00:00, 10.29s/it]
+Loading weights: 100%
+
+ 963/963 [06:32<00:00,  3.09it/s]
+generation_config.json: 100%
+
+ 242/242 [00:00<00:00, 30.1kB/s]
+PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS CARD_NONEMPTY_C00_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X0 
+PASS FRESH_CARTRIDGE_C00_X0 
+PASS PHYSICAL_SHA_C00_X0 
+PHYSICAL_COMMIT C00_X0 0f41a2a23f0ab6b3b71a70b725a60e62e018f03d77c2f82df77946cfde88aa52 PARENTS []
+PASS CARD_NONEMPTY_C00_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X1 
+PASS FRESH_CARTRIDGE_C00_X1 
+PASS PHYSICAL_SHA_C00_X1 
+PHYSICAL_COMMIT C00_X1 9a24a9a9d3ffdf1c59b4ce40fe98a3cd1881d6f2abb5f4e73b82dff9ea883e21 PARENTS []
+PASS CARD_NONEMPTY_C01_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X0 
+PASS FRESH_CARTRIDGE_C01_X0 
+PASS PHYSICAL_SHA_C01_X0 
+PHYSICAL_COMMIT C01_X0 5a04687c2637b3561cf73a9bd451a7b5a9f3873a37e5e80f8d916f661a9819a7 PARENTS []
+PASS CARD_NONEMPTY_C01_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X1 
+PASS FRESH_CARTRIDGE_C01_X1 
+PASS PHYSICAL_SHA_C01_X1 
+PHYSICAL_COMMIT C01_X1 b25eb944772afcdddc675b9b94e52c7c283caad93f9dd8c0c45ead2001f1424a PARENTS []
+PASS CARD_NONEMPTY_C02_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X0 
+PASS FRESH_CARTRIDGE_C02_X0 
+PASS PHYSICAL_SHA_C02_X0 
+PHYSICAL_COMMIT C02_X0 e78d6f667e33704933a05878274435053152f85353f6cb72d4b33d772291a51b PARENTS []
+PASS CARD_NONEMPTY_C02_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X1 
+PASS FRESH_CARTRIDGE_C02_X1 
+PASS PHYSICAL_SHA_C02_X1 
+PHYSICAL_COMMIT C02_X1 aef1fcf68b6646c66c03fdc802853c668e214fdf3c74e87074c1ba4e7607597a PARENTS []
+PASS CARD_NONEMPTY_C03_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X0 
+PASS FRESH_CARTRIDGE_C03_X0 
+PASS PHYSICAL_SHA_C03_X0 
+PHYSICAL_COMMIT C03_X0 e5c719ae93cf8cd0557d0df88ee983764cc25886be943247dbe1f7bd0f150852 PARENTS []
+PASS CARD_NONEMPTY_C03_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X1 
+PASS FRESH_CARTRIDGE_C03_X1 
+PASS PHYSICAL_SHA_C03_X1 
+PHYSICAL_COMMIT C03_X1 0b530fb69deec7e5fcaa3490f51850f0c6bf63faa6b0607e353bcb7f9de9a200 PARENTS []
+PASS PHYSICAL_28_CARTRIDGES 28
+PASS MANIFEST_AFTER_28 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C00_BASELINE_FORWARD C00_B0 {'ssd_verify_ms': 20.172, 'h2d_ms': 20.33, 'fusion_ms': 288.278, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST793_C00_BASELINE_FORWARD C00_B1 {'ssd_verify_ms': 18.92, 'h2d_ms': 1.121, 'fusion_ms': 867.491, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_FORWARD 
+PASS PAIR_ORDER_C00_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C00_B0_C00_B1 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_FORWARD_CURRENT 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.766208171844482, "state_sha256": "1e573a89ba7618e97739392ca50bfe8d1d29984d8c861ff0e3ca9204de764660", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.959817886352539, "state_sha256": "243d046987be33c882c823fdf68884073e24d965d5e1774a1c7e73154a48056b", "cut3_delta_l2": 9.49678897857666, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1936328411102295, "state_cosine": 0.9999988675117493, "logit_l2_delta": 23.181400299072266, "first_token_kl": 1.4616655334975803e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.5734822750091553, "state_sha256": "cb1c5bf661d10f55f5fb5ec1bd8b949cfe85bc753ccca33a45f270830fd7dc45", "cut3_delta_l2": 9.49678897857666, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1927440166473389, "state_cosine": 0.9999986290931702, "logit_l2_delta": 27.95802116394043, "first_token_kl": 2.11811584449606e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.778655052185059, "state_sha256": "5bfbb0423a744a399610cd8ccd83e9d3734d854b87483932b2adde83eb497e0c", "cut3_delta_l2": 9.49649429321289, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1919317245483398, "state_cosine": 0.9688148498535156, "logit_l2_delta": 24.444799423217773, "first_token_kl": 1.7694785583444173e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.043551921844482, "state_sha256": "4c132f04dfa07dd56712604df37f3b94ed05cbfae44022a74d36e47b1787fffd", "cut3_delta_l2": 9.49649429321289, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1920623779296875, "state_cosine": 0.9720430374145508, "logit_l2_delta": 21.3648624420166, "first_token_kl": 1.4813525694989949e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_FORWARD_HISTORICAL 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9117021560668945, "state_sha256": "58e995d8f6d6d44d4ce068f4a222c20e0df1dd3039603ed042141dfc707ba131", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.142877578735352, "state_sha256": "e6a8bf7fd2e8333a01faa72ba17646d6ebcac8592e5b5187d774d4fd0e4fe355", "cut3_delta_l2": 9.116118431091309, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2312301397323608, "state_cosine": 0.9999978542327881, "logit_l2_delta": 44.88278579711914, "first_token_kl": 0.0005090557970106602, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.6868343353271484, "state_sha256": "0f79bb63564f8c65a539a7e8f6fc9f3ac99b827302d9a5c1e36a2267f55343c0", "cut3_delta_l2": 9.116118431091309, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2248966693878174, "state_cosine": 0.9999979734420776, "logit_l2_delta": 46.96784973144531, "first_token_kl": 0.00017330102855339646, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.370858192443848, "state_sha256": "cb4ae9f90ec278f1990d061084db6758c28d01132a4fffb2d0a4168d3a43281b", "cut3_delta_l2": 9.115467071533203, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2275242805480957, "state_cosine": 0.9754361510276794, "logit_l2_delta": 23.102842330932617, "first_token_kl": 5.81685162615031e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.734697341918945, "state_sha256": "16945d4206cb3d2fe0f11ea82391f48d842465afe905df62c86905afa52dd25c", "cut3_delta_l2": 9.115467071533203, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2276678085327148, "state_cosine": 0.9682689309120178, "logit_l2_delta": 24.051742553710938, "first_token_kl": 0.00017331299022771418, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C00_BASELINE_FORWARD 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C00_BASELINE_REVERSE C00_B1 {'ssd_verify_ms': 20.764, 'h2d_ms': 1.161, 'fusion_ms': 246.512, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST793_C00_BASELINE_REVERSE C00_B0 {'ssd_verify_ms': 21.047, 'h2d_ms': 1.306, 'fusion_ms': 759.587, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_REVERSE 
+PASS PAIR_ORDER_C00_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C00_B1_C00_B0 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_REVERSE_CURRENT 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.775333404541016, "state_sha256": "0ecf63a7ade33c27400e17bc04c9927aa205a2882c524b42da80a14ba142c4bc", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.972839832305908, "state_sha256": "c86fce0c7566a6242f84faa10150d1f0fd7620210b00c15b6156e244f0ae16e0", "cut3_delta_l2": 9.524681091308594, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1975281238555908, "state_cosine": 0.9999989867210388, "logit_l2_delta": 22.087860107421875, "first_token_kl": 1.3796109215036267e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.577709436416626, "state_sha256": "4649e1bf47ac9062d1f24258e994d7d51a585dc1f3ef773dd483b623bbfb53f7", "cut3_delta_l2": 9.524681091308594, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1976466178894043, "state_cosine": 0.9999984502792358, "logit_l2_delta": 31.11210060119629, "first_token_kl": 1.328104275444275e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.7748308181762695, "state_sha256": "f6a69027b1b8701338f41653684cd74f2b67832ef64ead182e183786c79b9854", "cut3_delta_l2": 9.525053024291992, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.193985104560852, "state_cosine": 0.9687387943267822, "logit_l2_delta": 24.240966796875, "first_token_kl": 1.2314499144849833e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.065469264984131, "state_sha256": "a8d37d60e2c93508c9c2a7a6634265a7e5e5b484289165523e193a5773c129e9", "cut3_delta_l2": 9.525053024291992, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1939326524734497, "state_cosine": 0.9722749590873718, "logit_l2_delta": 20.43332862854004, "first_token_kl": 9.008044798974879e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_BASELINE_REVERSE_HISTORICAL 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.912146091461182, "state_sha256": "84aea13a3924263dc45481ea75a4294d4912568ed778437e95540d97ae4a9945", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.141975402832031, "state_sha256": "50c57898d91c5a72bcf8f91426d1f0b14636eac28c3c494711fcc67b7d1413ba", "cut3_delta_l2": 9.175312995910645, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2298518419265747, "state_cosine": 0.9999989867210388, "logit_l2_delta": 25.857851028442383, "first_token_kl": 1.1772997368098004e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.6821625232696533, "state_sha256": "f320e5721b2cea96d8de064d9b215650675842f832ea83b42f8647fbd0f36228", "cut3_delta_l2": 9.175312995910645, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2300087213516235, "state_cosine": 0.9999983310699463, "logit_l2_delta": 26.065948486328125, "first_token_kl": 1.4105935406405479e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.369851589202881, "state_sha256": "817ad059c53fcf32f7d2a487358cf0d447710703eb4a6177d08b7456c62be4a1", "cut3_delta_l2": 9.176050186157227, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2281163930892944, "state_cosine": 0.9753809571266174, "logit_l2_delta": 17.548513412475586, "first_token_kl": 1.1971616231676308e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-KMKURDTJ", "raw": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.737744331359863, "state_sha256": "f4951abd60aa5df1dbda9b29c083d37753e96b11b2ae4fb7519f3a8d1eb5d180", "cut3_delta_l2": 9.176050186157227, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.227842926979065, "state_cosine": 0.9682633280754089, "logit_l2_delta": 15.736746788024902, "first_token_kl": 1.1120644103357336e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C00_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C00_SAME_REV_CONFLICT_FORWARD C00_B1 {'ssd_verify_ms': 20.286, 'h2d_ms': 1.186, 'fusion_ms': 247.146, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST793_C00_SAME_REV_CONFLICT_FORWARD C00_X1 {'ssd_verify_ms': 22.242, 'h2d_ms': 1.173, 'fusion_ms': 719.284, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C00_B1_C00_X1 {'actual': 94, 'expected': 94}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_FORWARD_CURRENT 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.801585674285889, "state_sha256": "b7853a731e05410fcce36bc8e2f2d3703c515c46bbf79b307a9e3182d4469d7e", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.003387928009033, "state_sha256": "f9e8d1395ebfc947c3bd8959545ae919014c0c48252cfaf7a923c318bad7f2d9", "cut3_delta_l2": 9.524482727050781, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2018334865570068, "state_cosine": 0.9999985694885254, "logit_l2_delta": 20.992795944213867, "first_token_kl": 1.5190918929874897e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.599721908569336, "state_sha256": "1a3f3882d44e5a84224f453cf30c4ba6be336a931e7f9f77ebf6a2da725141ac", "cut3_delta_l2": 9.524482727050781, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2019062042236328, "state_cosine": 0.999997079372406, "logit_l2_delta": 35.55512237548828, "first_token_kl": 0.0003091330290772021, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.843614101409912, "state_sha256": "94a89c6fa5320becab743e9c636be59ae41149fcbc43c8797cb7b864cbd61dc6", "cut3_delta_l2": 9.523344039916992, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2009550333023071, "state_cosine": 0.9690303206443787, "logit_l2_delta": 28.155500411987305, "first_token_kl": 0.00015505350893363357, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.053101062774658, "state_sha256": "0977fad5f82fe07b4c6c2e98273f26f8fa2afd3232d987f6bcf2097ca75dd709", "cut3_delta_l2": 9.523344039916992, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2008376121520996, "state_cosine": 0.9715873003005981, "logit_l2_delta": 28.591201782226562, "first_token_kl": 1.5353260096162558e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.926366329193115, "state_sha256": "114d9cc937fd10b666d616855abcc7b842a339b4428357d9a5f73ea1670b0e42", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 6.1576762199401855, "state_sha256": "885a863dbc7f6f8a82f33e56d869b3918c18e0e5bab91850a634d84a86fc379b", "cut3_delta_l2": 9.116517066955566, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.231370210647583, "state_cosine": 0.999997615814209, "logit_l2_delta": 25.624465942382812, "first_token_kl": 8.423705367022194e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 3.694849967956543, "state_sha256": "ce8afe5b70880897a5622e5ec67e2d7c26e34c905e52dd7d83ec6950756b7756", "cut3_delta_l2": 9.116517066955566, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2315386533737183, "state_cosine": 0.9999985694885254, "logit_l2_delta": 32.44072341918945, "first_token_kl": 2.0798768218810437e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.354083061218262, "state_sha256": "4c96b666162dec1b4d12946b29ceabd4ae414053e7488b1f1081f01f99b4682d", "cut3_delta_l2": 9.117074012756348, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2316216230392456, "state_cosine": 0.9747129678726196, "logit_l2_delta": 18.828481674194336, "first_token_kl": 8.482801604259294e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.785433769226074, "state_sha256": "c343ae3c36b16da1583c8aecd517d53fcc5921c33b8168cde6ab9909d30d4afd", "cut3_delta_l2": 9.117074012756348, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2318569421768188, "state_cosine": 0.968237042427063, "logit_l2_delta": 22.032209396362305, "first_token_kl": -8.730415856916807e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C00_SAME_REV_CONFLICT_REVERSE C00_X1 {'ssd_verify_ms': 21.439, 'h2d_ms': 1.342, 'fusion_ms': 246.174, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST793_C00_SAME_REV_CONFLICT_REVERSE C00_B1 {'ssd_verify_ms': 21.792, 'h2d_ms': 1.232, 'fusion_ms': 719.163, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C00_X1_C00_B1 {'actual': 94, 'expected': 94}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_REVERSE_CURRENT 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.78184700012207, "state_sha256": "19d82cb469511d5c7e5aa82e8c1726149c299f542e040c269e6d992d24155db9", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.976198196411133, "state_sha256": "11926058f212c0852af79d1f5f5b2e6d46c9a173684b1741d14ecdc976aee208", "cut3_delta_l2": 9.498382568359375, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1943821907043457, "state_cosine": 0.9999986886978149, "logit_l2_delta": 30.00023078918457, "first_token_kl": 0.00013670593034476042, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.5845112800598145, "state_sha256": "2c3245d6622a24c3c5056f6c4118ff33b393de3b1e42ab12df1a4c8f570bd505", "cut3_delta_l2": 9.498382568359375, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.19735586643219, "state_cosine": 0.9999985694885254, "logit_l2_delta": 30.661108016967773, "first_token_kl": 1.2035602594551165e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.838181972503662, "state_sha256": "61b3508fa88deceb46e891c8a03e5fd328a1d8e594c5e4f8e672c1b9c7e93a34", "cut3_delta_l2": 9.498177528381348, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.196009635925293, "state_cosine": 0.9691540598869324, "logit_l2_delta": 27.257034301757812, "first_token_kl": 7.953413296490908e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-VKHJBSFY", "raw": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.018712520599365, "state_sha256": "2b071599657443d31b9d0a98211da7bd92eb8f60b5b45e58729673fe4d9e183a", "cut3_delta_l2": 9.498177528381348, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.1958527565002441, "state_cosine": 0.9713742733001709, "logit_l2_delta": 21.010116577148438, "first_token_kl": 2.101488644257188e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C00_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+TEST793_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.906541347503662, "state_sha256": "a0e53cd98b53bb1a17aed7df7df1e917c0213e37b248fbeb3b8e80a0baaf4062", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 6.139270782470703, "state_sha256": "8ca25dd033d76e737b527bd3fd800f5b7c97cb40b22421bf9e7ac133d87e4a10", "cut3_delta_l2": 9.11358642578125, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2327721118927002, "state_cosine": 0.9999982714653015, "logit_l2_delta": 24.557096481323242, "first_token_kl": 2.09139147955284e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 3.6774768829345703, "state_sha256": "9f699e0af76ad9051041157dd935b71de97bd8aba9aa4b47757f0981af6fee43", "cut3_delta_l2": 9.11358642578125, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2290960550308228, "state_cosine": 0.9999978542327881, "logit_l2_delta": 33.67223358154297, "first_token_kl": 1.947050577655318e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.3312835693359375, "state_sha256": "7062c7fa7b6a94671ae17a24a596d7217099a5c16497c2daaea02803139904d3", "cut3_delta_l2": 9.11397933959961, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2264246940612793, "state_cosine": 0.9746979475021362, "logit_l2_delta": 22.118045806884766, "first_token_kl": 2.1655425825883867e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.767237663269043, "state_sha256": "ad65889d31c23d8c73e466d057f4fabb325a29498417de99fa3250d8d37c025b", "cut3_delta_l2": 9.11397933959961, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2267673015594482, "state_cosine": 0.9682446718215942, "logit_l2_delta": 43.970947265625, "first_token_kl": -3.147505367451231e-09, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C00_X1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C01_BASELINE_FORWARD C01_B0 {'ssd_verify_ms': 21.014, 'h2d_ms': 1.152, 'fusion_ms': 285.806, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST793_C01_BASELINE_FORWARD C01_B1 {'ssd_verify_ms': 22.016, 'h2d_ms': 1.147, 'fusion_ms': 721.54, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_FORWARD 
+PASS PAIR_ORDER_C01_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C01_B0_C01_B1 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_FORWARD_CURRENT 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.824905872344971, "state_sha256": "37a096105bd5f1b7674ec27f2aca8ddc953c951798e39ceca631ce507e662379", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.025296211242676, "state_sha256": "325d042eac46d6a318b7160b5467f37f365415b2d1626aa53d74e21723524064", "cut3_delta_l2": 9.527311325073242, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2004156112670898, "state_cosine": 0.999998927116394, "logit_l2_delta": 31.130449295043945, "first_token_kl": 2.7505464572641358e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.623729944229126, "state_sha256": "53abe2fbb3eaec3eb243270b3ab3c729cf5826451a70f0a5abc3839841c3a248", "cut3_delta_l2": 9.527311325073242, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2012048959732056, "state_cosine": 0.9999980926513672, "logit_l2_delta": 27.546579360961914, "first_token_kl": 5.784283416687686e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.8965277671813965, "state_sha256": "6a3cbe28012f89b59d18839224d566293c00bbc743e4bd60590189ba27e1c2bb", "cut3_delta_l2": 9.526375770568848, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.205824851989746, "state_cosine": 0.9693361520767212, "logit_l2_delta": 22.42917251586914, "first_token_kl": 5.946944838797208e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.048023700714111, "state_sha256": "a0e66d987c3491c1548bf37a1f286a5bd5dd80b7a5dbb46277a7941f52bbddd0", "cut3_delta_l2": 9.526375770568848, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.20543372631073, "state_cosine": 0.9711924195289612, "logit_l2_delta": 20.58613395690918, "first_token_kl": 1.1330541838106001e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_FORWARD_HISTORICAL 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9203691482543945, "state_sha256": "58035a4a8aef993630d04c4ff105f0366c80d758dce79fe0c1b6d030ac397438", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.15522575378418, "state_sha256": "3c702840f8fd317e6f6b51c13926951767bfbdb374531c9473e4735b1cd3a20b", "cut3_delta_l2": 9.135674476623535, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2348964214324951, "state_cosine": 0.9999983310699463, "logit_l2_delta": 38.36117172241211, "first_token_kl": 6.934978955541737e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.689795732498169, "state_sha256": "c82ae7d363ede9a72d436bcae6d4a24a993ec952d3349f99f0fcd3fdb263edd0", "cut3_delta_l2": 9.135674476623535, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.230599045753479, "state_cosine": 0.9999982714653015, "logit_l2_delta": 60.50178909301758, "first_token_kl": 0.0003651680308394134, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.314748764038086, "state_sha256": "05095bd9b43d5371841e33fb488937e7d210f575db82e4471b67f0cf281a67b4", "cut3_delta_l2": 9.136024475097656, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2305439710617065, "state_cosine": 0.9740215539932251, "logit_l2_delta": 31.388429641723633, "first_token_kl": 1.1835087207145989e-05, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.817560195922852, "state_sha256": "2603bb28ee950efcc43f82485faea9dda0e6025b5ba03acc107da192e4be614d", "cut3_delta_l2": 9.136024475097656, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2301926612854004, "state_cosine": 0.9683008790016174, "logit_l2_delta": 30.65802001953125, "first_token_kl": 6.939661716387491e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C01_BASELINE_FORWARD 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C01_BASELINE_REVERSE C01_B1 {'ssd_verify_ms': 21.493, 'h2d_ms': 1.194, 'fusion_ms': 246.453, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+NATIVE_FUSION_STEP TEST793_C01_BASELINE_REVERSE C01_B0 {'ssd_verify_ms': 22.53, 'h2d_ms': 1.258, 'fusion_ms': 758.36, 'cid': 'C01_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_REVERSE 
+PASS PAIR_ORDER_C01_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C01_B1_C01_B0 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_REVERSE_CURRENT 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.807787895202637, "state_sha256": "3165151614415a8dcaf8d9428a0cc9dd1eb2f2cc2c08dd6deedb1f1eaeb70683", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0000001192092896, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.011528491973877, "state_sha256": "31879d17cbd97d1beb6370b94c30cf6d9c86d727d31952f7d44600a8c344223c", "cut3_delta_l2": 9.540416717529297, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2037700414657593, "state_cosine": 0.9999988675117493, "logit_l2_delta": 27.767000198364258, "first_token_kl": 1.775529199221637e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.6073455810546875, "state_sha256": "96ee71273657cf4c535a1ac75caf0462b1c8c7b599753e26cae63ffaf54c35c8", "cut3_delta_l2": 9.540416717529297, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2004579305648804, "state_cosine": 0.9999989867210388, "logit_l2_delta": 27.348630905151367, "first_token_kl": 5.788905355075258e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.86345911026001, "state_sha256": "d8478263ae6d3dd3f296f072419f52b1106c8a1e26e93f5280c34593fcdf1f4a", "cut3_delta_l2": 9.542268753051758, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2027643918991089, "state_cosine": 0.9691320061683655, "logit_l2_delta": 32.61262893676758, "first_token_kl": 8.50331787205505e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.046915054321289, "state_sha256": "7f37cc0410761f4d891fb7ae9ad90c2947f91d938f642e5f95020f3d67a87204", "cut3_delta_l2": 9.542268753051758, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2026978731155396, "state_cosine": 0.9713718295097351, "logit_l2_delta": 22.078290939331055, "first_token_kl": 4.974569947080454e-07, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_BASELINE_REVERSE_HISTORICAL 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.910492420196533, "state_sha256": "58372791b2a2810f9ea30213bd2e27617acf79e85d4cadb497cf315acba94eda", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.0, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.1421051025390625, "state_sha256": "9dda603aa108d17854bba3c3a37243a4b0efbb197b8cf9f943ebb9381c7beb57", "cut3_delta_l2": 9.171459197998047, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2316702604293823, "state_cosine": 0.9999976754188538, "logit_l2_delta": 28.2376651763916, "first_token_kl": 5.321220669429749e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.679847478866577, "state_sha256": "97aeac27b8ad0422b4f6a971f5ce1f0c8819f64e34e27d516bd34df00bd6b64d", "cut3_delta_l2": 9.171459197998047, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2306764125823975, "state_cosine": 0.9999977946281433, "logit_l2_delta": 30.427928924560547, "first_token_kl": 5.950569175183773e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.313055992126465, "state_sha256": "4a387e0ad55c7ae9e9540b222b1ee1e5fd40af9ac9b836fecbae54233baff9e5", "cut3_delta_l2": 9.172439575195312, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.227973222732544, "state_cosine": 0.9742070436477661, "logit_l2_delta": 28.944589614868164, "first_token_kl": 5.970468919258565e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-RBVBMXNT", "raw": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.797789096832275, "state_sha256": "0dd62e481c16200fd63b74ac396e3a04f5341d3acc13c892e81485f6b45a8668", "cut3_delta_l2": 9.172439575195312, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.227738618850708, "state_cosine": 0.9682794213294983, "logit_l2_delta": 33.21923828125, "first_token_kl": 6.398287951014936e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS KV_UNCHANGED_C01_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C01_SAME_REV_CONFLICT_FORWARD C01_B1 {'ssd_verify_ms': 21.627, 'h2d_ms': 1.275, 'fusion_ms': 246.586, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST793_C01_SAME_REV_CONFLICT_FORWARD C01_X1 {'ssd_verify_ms': 24.352, 'h2d_ms': 1.289, 'fusion_ms': 761.456, 'cid': 'C01_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C01_B1_C01_X1 {'actual': 95, 'expected': 95}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_FORWARD_CURRENT 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "baseline_prediction": "TEAM-JRSBSZJH", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.871880531311035, "state_sha256": "67ad86425d7991bcc691ac5434b308d989acba0db686cacc3ed315e6333ada67", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 6.0952935218811035, "state_sha256": "aceba99582ce85f6ab86884c65c317a50d895db17a2ef50e9dedafdee3b208b1", "cut3_delta_l2": 9.516151428222656, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2234569787979126, "state_cosine": 0.9999982714653015, "logit_l2_delta": 21.120147705078125, "first_token_kl": 0.004942096769809723, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 3.65058970451355, "state_sha256": "49a4a9976ba820d3e5c8c13c12f192f50bfe9899528f8bf01afbcfa61a363620", "cut3_delta_l2": 9.516151428222656, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2213181257247925, "state_cosine": 0.999998152256012, "logit_l2_delta": 38.54623794555664, "first_token_kl": 0.026985246688127518, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 4.984232425689697, "state_sha256": "74f406a5cd1ff86f3e4e5edf216225aa969d7022cf39e4d40f8c3c0492d42c0f", "cut3_delta_l2": 9.516892433166504, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.218390941619873, "state_cosine": 0.9696931838989258, "logit_l2_delta": 19.56053352355957, "first_token_kl": 0.011186912655830383, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-JRSBSZJH", "raw": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32, "state_norm": 5.0595479011535645, "state_sha256": "32d655dec2d9dbb378d0ef9bec458a0391caadca7cb1e58a000f27d20ec9a1a3", "cut3_delta_l2": 9.516892433166504, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2183444499969482, "state_cosine": 0.9706050157546997, "logit_l2_delta": 26.8709659576416, "first_token_kl": 0.017891164869070053, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.932621955871582, "state_sha256": "a7bb17ad7ddd7e354b79c8365306cd59ad0a644f3b11e64bb69069bbeaf07668", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 0.0, "state_cosine": 0.9999998807907104, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 6.1651225090026855, "state_sha256": "86ac9ccb27affdfdce3a9a8b44f0346637f05ba4803487895175e21c795be2d4", "cut3_delta_l2": 9.138325691223145, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.232537031173706, "state_cosine": 0.9999985694885254, "logit_l2_delta": 35.25786590576172, "first_token_kl": 1.9019914532236726e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 3.7008423805236816, "state_sha256": "c1bfb738adb5f431049cee93ff66b8b86dd8a8900b8d521f8b2aeb50aa86206c", "cut3_delta_l2": 9.138325691223145, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2318150997161865, "state_cosine": 0.9999974966049194, "logit_l2_delta": 47.002044677734375, "first_token_kl": -1.696356299873969e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.274270057678223, "state_sha256": "423e1bbda3f412f6424220b88b6a1a2f63add131a99e9ba9b5f554e9334947dc", "cut3_delta_l2": 9.138083457946777, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2335857152938843, "state_cosine": 0.9729971885681152, "logit_l2_delta": 31.16741943359375, "first_token_kl": 4.376581319576189e-09, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.8878021240234375, "state_sha256": "515aa8185c28683e89f2fc374b8dd3556b71ee9069c25b26655c5f12eaf65aee", "cut3_delta_l2": 9.138083457946777, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2334120273590088, "state_cosine": 0.9684920310974121, "logit_l2_delta": 25.391765594482422, "first_token_kl": 3.062707421008781e-08, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST793_C01_SAME_REV_CONFLICT_REVERSE C01_X1 {'ssd_verify_ms': 22.384, 'h2d_ms': 1.138, 'fusion_ms': 246.47, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST793_C01_SAME_REV_CONFLICT_REVERSE C01_B1 {'ssd_verify_ms': 21.506, 'h2d_ms': 1.274, 'fusion_ms': 714.975, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C01_X1_C01_B1 {'actual': 95, 'expected': 95}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS TWO_BASELINES 
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_REVERSE_CURRENT 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.866088390350342, "state_sha256": "705c9820be8f5e84448d92477d20fac366eeb219d6cc80e5202098c2b160f14b", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 0.0, "state_cosine": 1.000000238418579, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 6.080472469329834, "state_sha256": "5a0e2d2ed456a6958374bcf1c1bbe2bec84efd6e0741970b169b3f77ee4970c0", "cut3_delta_l2": 9.535293579101562, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.214409351348877, "state_cosine": 0.9999990463256836, "logit_l2_delta": 27.82744789123535, "first_token_kl": 0.0035737287253141403, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 3.6508214473724365, "state_sha256": "458cddc47f2332227df16c1b8878e0092bc63260b9ada4744c936e5330b697da", "cut3_delta_l2": 9.535293579101562, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.2152894735336304, "state_cosine": 0.9999985694885254, "logit_l2_delta": 49.43637466430664, "first_token_kl": 0.02813972532749176, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 4.9849090576171875, "state_sha256": "558ba134a1bb64c0966d50ba03e75edec292d867f9dd33ab2978105521140760", "cut3_delta_l2": 9.535399436950684, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.216380000114441, "state_cosine": 0.9697930812835693, "logit_l2_delta": 41.21490478515625, "first_token_kl": 0.02814624458551407, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "TEAM-MEZQKYJD", "raw": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28, "state_norm": 5.046263694763184, "state_sha256": "6eef17ea2652b769d77024f5ef9944e47efb77537e56c6494fd7b124654621bf", "cut3_delta_l2": 9.535399436950684, "cut3_steps": 1, "first_token_id": 97052, "state_l2_delta": 1.216486930847168, "state_cosine": 0.9705286026000977, "logit_l2_delta": 16.951906204223633, "first_token_kl": 0.00043322890996932983, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": true}]}
+PASS SEED_NONZERO_SELF 
+PASS SEED_NONZERO_VIEW_CONTRAST 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS FIVE_ARMS_C01_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+TEST793_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "arms": [{"arm": "OFF", "direction": "NONE", "gain": 0.0, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.930327892303467, "state_sha256": "a443a8204b862919a76e2ae8d22b9e580111d4d37d98be38a62a5cacb607b10b", "cut3_delta_l2": 0.0, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 0.0, "state_cosine": 0.9999999403953552, "logit_l2_delta": 0.0, "first_token_kl": 0.0, "first_token_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_PLUS", "direction": "SELF", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 6.16989803314209, "state_sha256": "b7f448696200725b974e25013f8ba8e37a6f08056f0ce9cdcab3c4f3536f9811", "cut3_delta_l2": 9.149242401123047, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2396050691604614, "state_cosine": 0.9999985694885254, "logit_l2_delta": 41.25304412841797, "first_token_kl": 7.0258270170597825e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "SELF_MINUS", "direction": "SELF", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 3.6946563720703125, "state_sha256": "49e2c4335cf20067cf4ed06d9606528fe628f97981e62224a09ba582266a1a96", "cut3_delta_l2": 9.149242401123047, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.235711932182312, "state_cosine": 0.9999971985816956, "logit_l2_delta": 42.05661392211914, "first_token_kl": 7.040354830678552e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_PLUS", "direction": "VIEW_CONTRAST", "gain": 0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 5.270321369171143, "state_sha256": "5e56546aa6a72176c941ccb598cd997015015ddb509fb7cab6357ac6da0ebbac", "cut3_delta_l2": 9.148521423339844, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2324721813201904, "state_cosine": 0.9729955196380615, "logit_l2_delta": 23.624338150024414, "first_token_kl": 1.762794681781088e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}, {"arm": "CONTRAST_MINUS", "direction": "VIEW_CONTRAST", "gain": -0.25, "prediction": "UNKNOWN", "raw": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8, "state_norm": 4.886496543884277, "state_sha256": "5fe0dbb1ccce10067fe25f50b467b633f21674c543cf435862095de622448571", "cut3_delta_l2": 9.148521423339844, "cut3_steps": 1, "first_token_id": 51378, "state_l2_delta": 1.2323843240737915, "state_cosine": 0.9685196876525879, "logit_l2_delta": 22.97161865234375, "first_token_kl": 7.100571110640885e-06, "first_token_changed": false, "prediction_changed": false, "correct_OFFLINE": false}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS SSD_SHA_UNCHANGED_C01_X1 
+PASS TOTAL_CASES 16
+PASS TOTAL_INTERVENTIONS 
+PASS FROZEN_WEIGHTS 
+PASS FINAL_MANIFEST 
+PASS NO_RESIDUAL_HOOKS 
+TEST793_COMPLETED {"cases": 16, "generation_runs": 80, "changed_outputs": 0, "nonzero_cut3_state_effects": 64, "nonzero_logit_effects": 64, "first_token_argmax_changes": 0, "offline_improvements": 0, "offline_damages": 0, "baseline_correct": 10, "interpretation": "Compare baseline-self versus question-view contrast directions on native CUT3; no autonomous controller or source-isolated direction."}
+
+
+FILES /content/AKBASCORE_TEST779_20261027T051922_573788Z/TEST793_results.json /content/AKBASCORE_TEST779_20261027T051922_573788Z/TEST793.log /content/AKBASCORE_TEST779_20261027T051922_573788Z/TEST793_manifest.json
