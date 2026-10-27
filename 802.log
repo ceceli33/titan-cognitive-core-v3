@@ -1,0 +1,422 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+================================================================================================================
+TEST802 — NATIVE SOURCE REMOVAL VS ZERO-MASK / SINGLETON COUNTERFACTUAL AUDIT
+PASS TEST790_EXACT_BLOB 
+PASS TEST789_EXACT_BLOB 
+PASS TEST779_EXACT_BLOB 
+PASS SEALED_PANEL 
+PASS MANIFEST_CONTRACT 
+PASS MANIFEST_PREFLIGHT 
+PASS PROBE_SYMBOLS 
+PASS FIXED_INTERVENTIONS 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM 
+config.json: 100% 663/663 [00:00<00:00, 81.8kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 856kB/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+vocab.json: 100% 2.78M/2.78M [00:00<00:00, 80.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 70.2MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 129MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.96MB/s]Download complete:   125GB, 1.17GB/s  Reconstruction complete: 100%  145GB /  145GB,  574MB/s  Fetching 37 files: 100% 37/37 [06:48<00:00, 10.39s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 29.3kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS CARD_NONEMPTY_C00_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X0 
+PASS FRESH_CARTRIDGE_C00_X0 
+PASS PHYSICAL_SHA_C00_X0 
+PHYSICAL_COMMIT C00_X0 0f41a2a23f0ab6b3b71a70b725a60e62e018f03d77c2f82df77946cfde88aa52 PARENTS []
+PASS CARD_NONEMPTY_C00_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X1 
+PASS FRESH_CARTRIDGE_C00_X1 
+PASS PHYSICAL_SHA_C00_X1 
+PHYSICAL_COMMIT C00_X1 9a24a9a9d3ffdf1c59b4ce40fe98a3cd1881d6f2abb5f4e73b82dff9ea883e21 PARENTS []
+PASS CARD_NONEMPTY_C01_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X0 
+PASS FRESH_CARTRIDGE_C01_X0 
+PASS PHYSICAL_SHA_C01_X0 
+PHYSICAL_COMMIT C01_X0 5a04687c2637b3561cf73a9bd451a7b5a9f3873a37e5e80f8d916f661a9819a7 PARENTS []
+PASS CARD_NONEMPTY_C01_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X1 
+PASS FRESH_CARTRIDGE_C01_X1 
+PASS PHYSICAL_SHA_C01_X1 
+PHYSICAL_COMMIT C01_X1 b25eb944772afcdddc675b9b94e52c7c283caad93f9dd8c0c45ead2001f1424a PARENTS []
+PASS CARD_NONEMPTY_C02_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X0 
+PASS FRESH_CARTRIDGE_C02_X0 
+PASS PHYSICAL_SHA_C02_X0 
+PHYSICAL_COMMIT C02_X0 e78d6f667e33704933a05878274435053152f85353f6cb72d4b33d772291a51b PARENTS []
+PASS CARD_NONEMPTY_C02_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X1 
+PASS FRESH_CARTRIDGE_C02_X1 
+PASS PHYSICAL_SHA_C02_X1 
+PHYSICAL_COMMIT C02_X1 aef1fcf68b6646c66c03fdc802853c668e214fdf3c74e87074c1ba4e7607597a PARENTS []
+PASS CARD_NONEMPTY_C03_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X0 
+PASS FRESH_CARTRIDGE_C03_X0 
+PASS PHYSICAL_SHA_C03_X0 
+PHYSICAL_COMMIT C03_X0 e5c719ae93cf8cd0557d0df88ee983764cc25886be943247dbe1f7bd0f150852 PARENTS []
+PASS CARD_NONEMPTY_C03_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X1 
+PASS FRESH_CARTRIDGE_C03_X1 
+PASS PHYSICAL_SHA_C03_X1 
+PHYSICAL_COMMIT C03_X1 0b530fb69deec7e5fcaa3490f51850f0c6bf63faa6b0607e353bcb7f9de9a200 PARENTS []
+PASS PHYSICAL_28_CARTRIDGES 28
+PASS MANIFEST_AFTER_28 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST802_C00_C00_B1_0 C00_B1 {'ssd_verify_ms': 18.339, 'h2d_ms': 16.389, 'fusion_ms': 248.633, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST802_C00_C00_B1_0 C00_B0 {'ssd_verify_ms': 18.271, 'h2d_ms': 0.972, 'fusion_ms': 818.472, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_C00_B1_0 
+PASS PAIR_ORDER_C00_C00_B1_0 
+PASS SPAN_TOTAL_C00_B1_C00_B0 {'actual': 97, 'expected': 97}
+PASS DISJOINT_SOURCE_SPANS 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST802_SINGLE_C00_B0 C00_B0 {'ssd_verify_ms': 20.521, 'h2d_ms': 1.048, 'fusion_ms': 284.352, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS SINGLETON_NATIVE_C00_B0 
+PASS SINGLETON_PREFIX_C00_B0 {'actual': 65, 'expected': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST802_SINGLE_C00_B1 C00_B1 {'ssd_verify_ms': 18.935, 'h2d_ms': 1.145, 'fusion_ms': 246.517, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS SINGLETON_NATIVE_C00_B1 
+PASS SINGLETON_PREFIX_C00_B1 {'actual': 62, 'expected': 62}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_B1", "anchor_id": "C00_B0", "candidate_slot": 0, "order": ["C00_B1", "C00_B0"], "view_OFFLINE": "CURRENT", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 2.041349411010742, "anchor_mask_state_l2": 2.0456976890563965, "candidate_mask_logit_l2": 2276.021484375, "anchor_mask_logit_l2": 1878.4957275390625, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": true, "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": true, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-VKHJBSFY", "correct_OFFLINE": true}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "UNKNOWN", "correct_OFFLINE": false}], "remove_candidate_prediction": "UNKNOWN", "remove_anchor_prediction": "TEAM-VKHJBSFY", "remove_candidate_correct_OFFLINE": false, "remove_anchor_correct_OFFLINE": true, "remove_candidate_first_token_changed": true, "remove_anchor_first_token_changed": false, "remove_candidate_vs_mask_candidate_state_l2": 2.0288782119750977, "remove_anchor_vs_mask_anchor_state_l2": 2.0424914360046387, "remove_candidate_vs_mask_candidate_logit_l2": 2057.930908203125, "remove_anchor_vs_mask_anchor_logit_l2": 1894.4398193359375, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": true}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_B1", "anchor_id": "C00_B0", "candidate_slot": 0, "order": ["C00_B1", "C00_B0"], "view_OFFLINE": "HISTORICAL", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 2.245126247406006, "anchor_mask_state_l2": 2.2267088890075684, "candidate_mask_logit_l2": 1226.0701904296875, "anchor_mask_logit_l2": 1961.47314453125, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": true, "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": true, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-KMKURDTJ", "correct_OFFLINE": true}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "UNKNOWN", "correct_OFFLINE": false}], "remove_candidate_prediction": "TEAM-KMKURDTJ", "remove_anchor_prediction": "UNKNOWN", "remove_candidate_correct_OFFLINE": true, "remove_anchor_correct_OFFLINE": false, "remove_candidate_first_token_changed": false, "remove_anchor_first_token_changed": true, "remove_candidate_vs_mask_candidate_state_l2": 2.156589984893799, "remove_anchor_vs_mask_anchor_state_l2": 2.148958444595337, "remove_candidate_vs_mask_candidate_logit_l2": 1293.6505126953125, "remove_anchor_vs_mask_anchor_logit_l2": 1909.902587890625, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": true}
+PASS KV_UNCHANGED_C00_C00_B1_0 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST802_C00_C00_B1_1 C00_B0 {'ssd_verify_ms': 21.004, 'h2d_ms': 1.051, 'fusion_ms': 285.223, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST802_C00_C00_B1_1 C00_B1 {'ssd_verify_ms': 18.53, 'h2d_ms': 1.004, 'fusion_ms': 693.839, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_C00_B1_1 
+PASS PAIR_ORDER_C00_C00_B1_1 
+PASS SPAN_TOTAL_C00_B0_C00_B1 {'actual': 97, 'expected': 97}
+PASS DISJOINT_SOURCE_SPANS 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_B1", "anchor_id": "C00_B0", "candidate_slot": 1, "order": ["C00_B0", "C00_B1"], "view_OFFLINE": "CURRENT", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 1.9666396379470825, "anchor_mask_state_l2": 2.0204784870147705, "candidate_mask_logit_l2": 1941.5142822265625, "anchor_mask_logit_l2": 2088.21240234375, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": false, "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": true, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-VKHJBSFY", "correct_OFFLINE": true}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "TEAM-VKHJBSFY", "correct_OFFLINE": true}], "remove_candidate_prediction": "UNKNOWN", "remove_anchor_prediction": "TEAM-VKHJBSFY", "remove_candidate_correct_OFFLINE": false, "remove_anchor_correct_OFFLINE": true, "remove_candidate_first_token_changed": true, "remove_anchor_first_token_changed": false, "remove_candidate_vs_mask_candidate_state_l2": 2.012087821960449, "remove_anchor_vs_mask_anchor_state_l2": 2.0559628009796143, "remove_candidate_vs_mask_candidate_logit_l2": 1682.0205078125, "remove_anchor_vs_mask_anchor_logit_l2": 2059.69873046875, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": false}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_B1", "anchor_id": "C00_B0", "candidate_slot": 1, "order": ["C00_B0", "C00_B1"], "view_OFFLINE": "HISTORICAL", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 2.194587230682373, "anchor_mask_state_l2": 2.2245850563049316, "candidate_mask_logit_l2": 1737.1607666015625, "anchor_mask_logit_l2": 1769.5263671875, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": false, "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": true, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-KMKURDTJ", "correct_OFFLINE": true}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "TEAM-VKHJBSFY", "correct_OFFLINE": false}], "remove_candidate_prediction": "TEAM-KMKURDTJ", "remove_anchor_prediction": "UNKNOWN", "remove_candidate_correct_OFFLINE": true, "remove_anchor_correct_OFFLINE": false, "remove_candidate_first_token_changed": false, "remove_anchor_first_token_changed": true, "remove_candidate_vs_mask_candidate_state_l2": 2.1293070316314697, "remove_anchor_vs_mask_anchor_state_l2": 2.147261619567871, "remove_candidate_vs_mask_candidate_logit_l2": 1975.2440185546875, "remove_anchor_vs_mask_anchor_logit_l2": 1923.07763671875, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": true}
+PASS KV_UNCHANGED_C00_C00_B1_1 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST802_C00_C00_X1_0 C00_X1 {'ssd_verify_ms': 19.748, 'h2d_ms': 1.077, 'fusion_ms': 245.6, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST802_C00_C00_X1_0 C00_B0 {'ssd_verify_ms': 19.193, 'h2d_ms': 1.037, 'fusion_ms': 693.738, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_C00_X1_0 
+PASS PAIR_ORDER_C00_C00_X1_0 
+PASS SPAN_TOTAL_C00_X1_C00_B0 {'actual': 97, 'expected': 97}
+PASS DISJOINT_SOURCE_SPANS 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST802_SINGLE_C00_X1 C00_X1 {'ssd_verify_ms': 18.333, 'h2d_ms': 0.971, 'fusion_ms': 244.063, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS SINGLETON_NATIVE_C00_X1 
+PASS SINGLETON_PREFIX_C00_X1 {'actual': 62, 'expected': 62}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_X1", "anchor_id": "C00_B0", "candidate_slot": 0, "order": ["C00_X1", "C00_B0"], "view_OFFLINE": "CURRENT", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 2.041992664337158, "anchor_mask_state_l2": 2.0428709983825684, "candidate_mask_logit_l2": 2183.298583984375, "anchor_mask_logit_l2": 1688.540771484375, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": false, "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": false, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": false}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": false}], "remove_candidate_prediction": "UNKNOWN", "remove_anchor_prediction": "TEAM-MEZQKYJD", "remove_candidate_correct_OFFLINE": false, "remove_anchor_correct_OFFLINE": false, "remove_candidate_first_token_changed": true, "remove_anchor_first_token_changed": false, "remove_candidate_vs_mask_candidate_state_l2": 2.0288782119750977, "remove_anchor_vs_mask_anchor_state_l2": 2.0605690479278564, "remove_candidate_vs_mask_candidate_logit_l2": 2073.260009765625, "remove_anchor_vs_mask_anchor_logit_l2": 1678.072998046875, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": false}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_X1", "anchor_id": "C00_B0", "candidate_slot": 0, "order": ["C00_X1", "C00_B0"], "view_OFFLINE": "HISTORICAL", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 2.271829843521118, "anchor_mask_state_l2": 2.2509260177612305, "candidate_mask_logit_l2": 963.3228149414062, "anchor_mask_logit_l2": 1635.7147216796875, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": true, "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": true, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-KMKURDTJ", "correct_OFFLINE": true}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "UNKNOWN", "correct_OFFLINE": false}], "remove_candidate_prediction": "TEAM-KMKURDTJ", "remove_anchor_prediction": "UNKNOWN", "remove_candidate_correct_OFFLINE": true, "remove_anchor_correct_OFFLINE": false, "remove_candidate_first_token_changed": false, "remove_anchor_first_token_changed": true, "remove_candidate_vs_mask_candidate_state_l2": 2.156589984893799, "remove_anchor_vs_mask_anchor_state_l2": 2.172107696533203, "remove_candidate_vs_mask_candidate_logit_l2": 1030.4859619140625, "remove_anchor_vs_mask_anchor_logit_l2": 1579.351806640625, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": true}
+PASS KV_UNCHANGED_C00_C00_X1_0 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST802_C00_C00_X1_1 C00_B0 {'ssd_verify_ms': 20.294, 'h2d_ms': 1.098, 'fusion_ms': 285.55, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST802_C00_C00_X1_1 C00_X1 {'ssd_verify_ms': 19.395, 'h2d_ms': 0.967, 'fusion_ms': 658.639, 'cid': 'C00_X1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_C00_X1_1 
+PASS PAIR_ORDER_C00_C00_X1_1 
+PASS SPAN_TOTAL_C00_B0_C00_X1 {'actual': 97, 'expected': 97}
+PASS DISJOINT_SOURCE_SPANS 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_X1", "anchor_id": "C00_B0", "candidate_slot": 1, "order": ["C00_B0", "C00_X1"], "view_OFFLINE": "CURRENT", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 1.9987555742263794, "anchor_mask_state_l2": 2.054142713546753, "candidate_mask_logit_l2": 1854.3380126953125, "anchor_mask_logit_l2": 2136.517578125, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": false, "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": false, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": false}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": false}], "remove_candidate_prediction": "UNKNOWN", "remove_anchor_prediction": "TEAM-MEZQKYJD", "remove_candidate_correct_OFFLINE": false, "remove_anchor_correct_OFFLINE": false, "remove_candidate_first_token_changed": true, "remove_anchor_first_token_changed": false, "remove_candidate_vs_mask_candidate_state_l2": 2.012087821960449, "remove_anchor_vs_mask_anchor_state_l2": 2.0824601650238037, "remove_candidate_vs_mask_candidate_logit_l2": 1682.0205078125, "remove_anchor_vs_mask_anchor_logit_l2": 2062.16796875, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": false}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST802_ROW {"family": "C00", "candidate_id": "C00_X1", "anchor_id": "C00_B0", "candidate_slot": 1, "order": ["C00_B0", "C00_X1"], "view_OFFLINE": "HISTORICAL", "candidate_tokens": 32, "anchor_tokens": 35, "candidate_mask_state_l2": 2.232856035232544, "anchor_mask_state_l2": 2.260732889175415, "candidate_mask_logit_l2": 1746.44970703125, "anchor_mask_logit_l2": 1796.57177734375, "candidate_mask_first_token_changed": true, "anchor_mask_first_token_changed": true, "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": true, "controller_action": "ABSTAIN_NO_VALIDATED_CAUSAL_SELECTOR", "arms": [{"arm": "OFF", "prediction": "TEAM-KMKURDTJ", "correct_OFFLINE": true}, {"arm": "MASK_CANDIDATE", "prediction": "UNKNOWN", "correct_OFFLINE": false}, {"arm": "MASK_ANCHOR", "prediction": "UNKNOWN", "correct_OFFLINE": false}], "remove_candidate_prediction": "TEAM-KMKURDTJ", "remove_anchor_prediction": "UNKNOWN", "remove_candidate_correct_OFFLINE": true, "remove_anchor_correct_OFFLINE": false, "remove_candidate_first_token_changed": false, "remove_anchor_first_token_changed": true, "remove_candidate_vs_mask_candidate_state_l2": 2.1293070316314697, "remove_anchor_vs_mask_anchor_state_l2": 2.171464681625366, "remove_candidate_vs_mask_candidate_logit_l2": 1975.2440185546875, "remove_anchor_vs_mask_anchor_logit_l2": 1927.2022705078125, "remove_candidate_prefix_tokens": 65, "remove_anchor_prefix_tokens": 62, "full_prefix_tokens": 97, "causal_limit": "Singleton native rebuild removes source but changes prefix length and positional/context normalization.", "candidate_mask_changes_answer": true, "anchor_mask_changes_answer": true}
+PASS KV_UNCHANGED_C00_C00_X1_1 
+PASS SINGLETON_KV_UNCHANGED_C00_B0 
+PASS SINGLETON_KV_UNCHANGED_C00_B1 
+PASS SINGLETON_KV_UNCHANGED_C00_X1 
+TEST802_FACTORIAL {"family": "C00", "view": "CURRENT", "candidate_ids": ["C00_B1", "C00_X1"], "candidate_token_counts": {"C00_B1": [32, 32], "C00_X1": [32, 32]}, "length_matched_content_contrast": true, "content_at_slot0_l2": 0.07531075179576874, "content_at_slot1_l2": 0.40887051820755005, "position_for_B1_l2": 0.49096885323524475, "position_for_X1_l2": 0.447856068611145, "content_direction_cosine_across_slots": 0.1799032037116188, "content_position_interaction_l2": 0.4022033214569092, "candidate_mask_effect_content_delta_slot0_l2": 0.07531075179576874, "candidate_mask_effect_content_delta_slot1_l2": 0.40887051820755005, "content_first_token_changes": [false, false], "position_first_token_changes": [false, false], "causal_scope": "LENGTH_MATCHED_FIXED_SLOT_CONTENT_COMPARISON", "interpretation_limit": "Native KV content swap via cartridge substitution; source position and context are not independently held fixed across slot swaps."}
+TEST802_FACTORIAL {"family": "C00", "view": "HISTORICAL", "candidate_ids": ["C00_B1", "C00_X1"], "candidate_token_counts": {"C00_B1": [32, 32], "C00_X1": [32, 32]}, "length_matched_content_contrast": true, "content_at_slot0_l2": 0.08733232319355011, "content_at_slot1_l2": 0.08885683864355087, "position_for_B1_l2": 0.2922661304473877, "position_for_X1_l2": 0.29149147868156433, "content_direction_cosine_across_slots": 0.32619045457465057, "content_position_interaction_l2": 0.10227388143539429, "candidate_mask_effect_content_delta_slot0_l2": 0.08733232319355011, "candidate_mask_effect_content_delta_slot1_l2": 0.08885683864355087, "content_first_token_changes": [false, false], "position_first_token_changes": [false, false], "causal_scope": "LENGTH_MATCHED_FIXED_SLOT_CONTENT_COMPARISON", "interpretation_limit": "Native KV content swap via cartridge substitution; source position and context are not independently held fixed across slot swaps."}
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C00_X1 
+PASS TOTAL_CASES 8
+PASS SINGLETON_CACHE_COUNT 3
+PASS FACTORIAL_COMPARISONS 2
+PASS ALL_LENGTH_MATCHED 
+PASS CLEAN_LENGTH_MATCHED_AVAILABLE 
+PASS READOUT_GENERATIONS 40
+PASS ALL_ABSTAIN 
+PASS FIVE_ARM_CONTRACT 
+PASS FROZEN_WEIGHTS 
+PASS FINAL_MANIFEST 
+PASS NO_RESIDUAL_HOOKS 
+TEST802_COMPLETED {"cases": 8, "generation_runs": 40, "factorial_comparisons": 2, "clean_length_matched_comparisons": 2, "confounded_length_comparisons": 0, "baseline_correct": 6, "remove_candidate_correct": 4, "remove_anchor_correct": 2, "mask_vs_removal_answer_disagreement_candidate": 4, "mask_vs_removal_answer_disagreement_anchor": 2, "candidate_mask_correct": 0, "anchor_mask_correct": 1, "candidate_mask_answer_changes": 8, "anchor_mask_answer_changes": 5, "abstentions": 8, "interpretation": "Length-matched C00 physical cartridge content-by-slot crossover; 40 OFF/masked/native-singleton readouts scored only offline. Native singleton rebuild is source removal but also changes sequence length; position/order/context remain entangled. No autonomous selector."}
+FILES /content/AKBASCORE_TEST779_20261027T120616_443198Z/TEST802_results.json /content/AKBASCORE_TEST779_20261027T120616_443198Z/TEST802.log /content/AKBASCORE_TEST779_20261027T120616_443198Z/TEST802_manifest.json
