@@ -1,0 +1,868 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+================================================================================================================
+TEST797 — SOURCE DIRECTION RANK / ORTHOGONAL RESIDUAL / ABSTENTION
+PASS TEST790_EXACT_BLOB 
+PASS TEST789_EXACT_BLOB 
+PASS TEST779_EXACT_BLOB 
+PASS SEALED_PANEL 
+PASS MANIFEST_CONTRACT 
+PASS MANIFEST_PREFLIGHT 
+PASS PROBE_SYMBOLS 
+PASS BASELINE_ONLY 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 81.7kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 801kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 85.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 72.8MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 129MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.11MB/s]Download complete:   125GB, 1.66GB/s  Reconstruction complete: 100%  145GB /  145GB,  692MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00, 10.41s/it]Loading weights: 100% 963/963 [06:24<00:00,  3.24it/s]generation_config.json: 100% 242/242 [00:00<00:00, 32.6kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS CARD_NONEMPTY_C00_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X0 
+PASS FRESH_CARTRIDGE_C00_X0 
+PASS PHYSICAL_SHA_C00_X0 
+PHYSICAL_COMMIT C00_X0 0f41a2a23f0ab6b3b71a70b725a60e62e018f03d77c2f82df77946cfde88aa52 PARENTS []
+PASS CARD_NONEMPTY_C00_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X1 
+PASS FRESH_CARTRIDGE_C00_X1 
+PASS PHYSICAL_SHA_C00_X1 
+PHYSICAL_COMMIT C00_X1 9a24a9a9d3ffdf1c59b4ce40fe98a3cd1881d6f2abb5f4e73b82dff9ea883e21 PARENTS []
+PASS CARD_NONEMPTY_C01_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X0 
+PASS FRESH_CARTRIDGE_C01_X0 
+PASS PHYSICAL_SHA_C01_X0 
+PHYSICAL_COMMIT C01_X0 5a04687c2637b3561cf73a9bd451a7b5a9f3873a37e5e80f8d916f661a9819a7 PARENTS []
+PASS CARD_NONEMPTY_C01_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X1 
+PASS FRESH_CARTRIDGE_C01_X1 
+PASS PHYSICAL_SHA_C01_X1 
+PHYSICAL_COMMIT C01_X1 b25eb944772afcdddc675b9b94e52c7c283caad93f9dd8c0c45ead2001f1424a PARENTS []
+PASS CARD_NONEMPTY_C02_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X0 
+PASS FRESH_CARTRIDGE_C02_X0 
+PASS PHYSICAL_SHA_C02_X0 
+PHYSICAL_COMMIT C02_X0 e78d6f667e33704933a05878274435053152f85353f6cb72d4b33d772291a51b PARENTS []
+PASS CARD_NONEMPTY_C02_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X1 
+PASS FRESH_CARTRIDGE_C02_X1 
+PASS PHYSICAL_SHA_C02_X1 
+PHYSICAL_COMMIT C02_X1 aef1fcf68b6646c66c03fdc802853c668e214fdf3c74e87074c1ba4e7607597a PARENTS []
+PASS CARD_NONEMPTY_C03_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X0 
+PASS FRESH_CARTRIDGE_C03_X0 
+PASS PHYSICAL_SHA_C03_X0 
+PHYSICAL_COMMIT C03_X0 e5c719ae93cf8cd0557d0df88ee983764cc25886be943247dbe1f7bd0f150852 PARENTS []
+PASS CARD_NONEMPTY_C03_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X1 
+PASS FRESH_CARTRIDGE_C03_X1 
+PASS PHYSICAL_SHA_C03_X1 
+PHYSICAL_COMMIT C03_X1 0b530fb69deec7e5fcaa3490f51850f0c6bf63faa6b0607e353bcb7f9de9a200 PARENTS []
+PASS PHYSICAL_28_CARTRIDGES 28
+PASS MANIFEST_AFTER_28 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C00_BASELINE_FORWARD C00_B0 {'ssd_verify_ms': 19.039, 'h2d_ms': 15.709, 'fusion_ms': 287.156, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST797_C00_BASELINE_FORWARD C00_B1 {'ssd_verify_ms': 17.276, 'h2d_ms': 1.002, 'fusion_ms': 798.599, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_FORWARD 
+PASS PAIR_ORDER_C00_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C00_B0_C00_B1 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_BASELINE_FORWARD_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.383461594581604, "full_vs_masked_state_l2": 1.9987032413482666, "full_vs_sham_state_l2": 1.9666396379470825, "mask_vs_sham_state_l2": 0.383461594581604, "full_vs_masked_logit_l2": 2201.160888671875, "full_vs_sham_logit_l2": 1941.5142822265625, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.01319349929690361}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.383461594581604, "full_vs_masked_state_l2": 1.9666396379470825, "full_vs_sham_state_l2": 1.9987032413482666, "mask_vs_sham_state_l2": 0.383461594581604, "full_vs_masked_logit_l2": 1941.5142822265625, "full_vs_sham_logit_l2": 2201.160888671875, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.17887334525585175}}, "source_direction_cosine": -1.0, "orthogonal_residual_norm": 0.0, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.5, "baseline_margin": 8.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 108.77711486816406}, {"gain": -0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 8.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 41.15879821777344}, {"gain": -0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 8.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 17.559982299804688}, {"gain": 0.25, "same_pair_margin_delta": -0.125, "baseline_margin": 8.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.640838623046875}, {"gain": 0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 8.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 28.420597076416016}, {"gain": 1.0, "same_pair_margin_delta": -0.25, "baseline_margin": 8.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 110.08229064941406}], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-VKHJBSFY", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_BASELINE_FORWARD_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B0", "C00_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37917497754096985, "full_vs_masked_state_l2": 2.2131104469299316, "full_vs_sham_state_l2": 2.194587230682373, "mask_vs_sham_state_l2": 0.37917497754096985, "full_vs_masked_logit_l2": 1780.843017578125, "full_vs_sham_logit_l2": 1737.1607666015625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.03733137249946594}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37917497754096985, "full_vs_masked_state_l2": 2.194587230682373, "full_vs_sham_state_l2": 2.2131104469299316, "mask_vs_sham_state_l2": 0.37917497754096985, "full_vs_masked_logit_l2": 1737.1607666015625, "full_vs_sham_logit_l2": 1780.843017578125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.13431233167648315}}, "source_direction_cosine": -1.0, "orthogonal_residual_norm": 0.0, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 1.0, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 148.77798461914062}, {"gain": -0.5, "same_pair_margin_delta": 0.5, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 48.220252990722656}, {"gain": -0.25, "same_pair_margin_delta": -0.125, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.4195613861084}, {"gain": 0.25, "same_pair_margin_delta": -0.375, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.087434768676758}, {"gain": 0.5, "same_pair_margin_delta": -0.75, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 37.179805755615234}, {"gain": 1.0, "same_pair_margin_delta": 0.5, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.14700317382812}], "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-KMKURDTJ", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS KV_UNCHANGED_C00_BASELINE_FORWARD 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C00_BASELINE_REVERSE C00_B1 {'ssd_verify_ms': 19.903, 'h2d_ms': 1.058, 'fusion_ms': 245.148, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+NATIVE_FUSION_STEP TEST797_C00_BASELINE_REVERSE C00_B0 {'ssd_verify_ms': 21.811, 'h2d_ms': 1.049, 'fusion_ms': 726.013, 'cid': 'C00_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C00_BASELINE_REVERSE 
+PASS PAIR_ORDER_C00_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C00_B1_C00_B0 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_BASELINE_REVERSE_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37543144822120667, "full_vs_masked_state_l2": 2.041349411010742, "full_vs_sham_state_l2": 2.025088310241699, "mask_vs_sham_state_l2": 0.37543144822120667, "full_vs_masked_logit_l2": 2276.021484375, "full_vs_sham_logit_l2": 1228.827880859375, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.04920732229948044}, "SOURCE1_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.37543144822120667, "full_vs_masked_state_l2": 2.025088310241699, "full_vs_sham_state_l2": 2.041349411010742, "mask_vs_sham_state_l2": 0.37543144822120667, "full_vs_masked_logit_l2": 1228.827880859375, "full_vs_sham_logit_l2": 2276.021484375, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.13509804010391235}}, "source_direction_cosine": -1.0000001192092896, "orthogonal_residual_norm": 1.1638707775318835e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.625, "baseline_margin": 8.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 165.2764434814453}, {"gain": -0.5, "same_pair_margin_delta": 0.125, "baseline_margin": 8.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 38.5718879699707}, {"gain": -0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 8.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 16.564756393432617}, {"gain": 0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 8.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.592491149902344}, {"gain": 0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 8.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 38.53379821777344}, {"gain": 1.0, "same_pair_margin_delta": -0.375, "baseline_margin": 8.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 140.8715362548828}], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-VKHJBSFY", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_BASELINE_REVERSE_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_B1", "C00_B0"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3660324215888977, "full_vs_masked_state_l2": 2.245126247406006, "full_vs_sham_state_l2": 2.2378947734832764, "mask_vs_sham_state_l2": 0.3660324215888977, "full_vs_masked_logit_l2": 1226.0701904296875, "full_vs_sham_logit_l2": 1780.9019775390625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.061992254108190536}, "SOURCE1_MASK": {"masked_physical_source": "C00_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3660324215888977, "full_vs_masked_state_l2": 2.2378947734832764, "full_vs_sham_state_l2": 2.245126247406006, "mask_vs_sham_state_l2": 0.3660324215888977, "full_vs_masked_logit_l2": 1780.9019775390625, "full_vs_sham_logit_l2": 1226.0701904296875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.10124165564775467}}, "source_direction_cosine": -1.0000001192092896, "orthogonal_residual_norm": 1.1631777141474231e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 1.875, "baseline_margin": 7.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 141.31527709960938}, {"gain": -0.5, "same_pair_margin_delta": 0.5, "baseline_margin": 7.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 56.256919860839844}, {"gain": -0.25, "same_pair_margin_delta": 0.25, "baseline_margin": 7.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 41.385589599609375}, {"gain": 0.25, "same_pair_margin_delta": -0.125, "baseline_margin": 7.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.3960018157959}, {"gain": 0.5, "same_pair_margin_delta": 0.375, "baseline_margin": 7.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 35.582401275634766}, {"gain": 1.0, "same_pair_margin_delta": 2.25, "baseline_margin": 7.875, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 157.64913940429688}], "baseline_prediction": "TEAM-KMKURDTJ", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-KMKURDTJ", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS KV_UNCHANGED_C00_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C00_SAME_REV_CONFLICT_FORWARD C00_B1 {'ssd_verify_ms': 18.351, 'h2d_ms': 1.07, 'fusion_ms': 245.833, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST797_C00_SAME_REV_CONFLICT_FORWARD C00_X1 {'ssd_verify_ms': 18.632, 'h2d_ms': 0.993, 'fusion_ms': 658.099, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C00_B1_C00_X1 {'actual': 94, 'expected': 94}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_SAME_REV_CONFLICT_FORWARD_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.4016950726509094, "full_vs_masked_state_l2": 2.0924596786499023, "full_vs_sham_state_l2": 2.042233943939209, "mask_vs_sham_state_l2": 0.4016950726509094, "full_vs_masked_logit_l2": 1781.615234375, "full_vs_sham_logit_l2": 1430.335205078125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": 0.02822476252913475}, "SOURCE1_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.4016950726509094, "full_vs_masked_state_l2": 2.042233943939209, "full_vs_sham_state_l2": 2.0924596786499023, "mask_vs_sham_state_l2": 0.4016950726509094, "full_vs_masked_logit_l2": 1430.335205078125, "full_vs_sham_logit_l2": 1781.615234375, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.2195199728012085}}, "source_direction_cosine": -1.0, "orthogonal_residual_norm": 0.0, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 4.0, "baseline_margin": 6.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 216.54275512695312}, {"gain": -0.5, "same_pair_margin_delta": -0.125, "baseline_margin": 6.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 31.816448211669922}, {"gain": -0.25, "same_pair_margin_delta": -0.125, "baseline_margin": 6.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 21.472719192504883}, {"gain": 0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 6.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 25.59227180480957}, {"gain": 0.5, "same_pair_margin_delta": 1.25, "baseline_margin": 6.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 70.01703643798828}, {"gain": 1.0, "same_pair_margin_delta": -0.5, "baseline_margin": 6.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 125.80366516113281}], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": false, "arms": [{"arm": "OFF", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": false, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C00_B1", "C00_X1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.360886812210083, "full_vs_masked_state_l2": 2.2872402667999268, "full_vs_sham_state_l2": 2.279202461242676, "mask_vs_sham_state_l2": 0.360886812210083, "full_vs_masked_logit_l2": 2099.843017578125, "full_vs_sham_logit_l2": 1168.633056640625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.05685795843601227}, "SOURCE1_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.360886812210083, "full_vs_masked_state_l2": 2.279202461242676, "full_vs_sham_state_l2": 2.2872402667999268, "mask_vs_sham_state_l2": 0.360886812210083, "full_vs_masked_logit_l2": 1168.633056640625, "full_vs_sham_logit_l2": 2099.843017578125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.10112450271844864}}, "source_direction_cosine": -1.000000238418579, "orthogonal_residual_norm": 2.3699885787209496e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.25, "baseline_margin": 8.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 239.73182678222656}, {"gain": -0.5, "same_pair_margin_delta": 0.25, "baseline_margin": 8.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 56.724334716796875}, {"gain": -0.25, "same_pair_margin_delta": 0.25, "baseline_margin": 8.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 24.729278564453125}, {"gain": 0.25, "same_pair_margin_delta": 0.125, "baseline_margin": 8.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 27.249361038208008}, {"gain": 0.5, "same_pair_margin_delta": 0.125, "baseline_margin": 8.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 39.4337272644043}, {"gain": 1.0, "same_pair_margin_delta": 0.0, "baseline_margin": 8.125, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 206.11990356445312}], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": false, "arms": [{"arm": "OFF", "prediction": "UNKNOWN", "correct_OFFLINE": false, "first_token_id": 51378}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C00_SAME_REV_CONFLICT_REVERSE C00_X1 {'ssd_verify_ms': 20.056, 'h2d_ms': 1.063, 'fusion_ms': 245.664, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST797_C00_SAME_REV_CONFLICT_REVERSE C00_B1 {'ssd_verify_ms': 19.339, 'h2d_ms': 1.018, 'fusion_ms': 667.617, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C00_X1_C00_B1 {'actual': 94, 'expected': 94}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_SAME_REV_CONFLICT_REVERSE_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3977155089378357, "full_vs_masked_state_l2": 2.045055866241455, "full_vs_sham_state_l2": 1.98883855342865, "mask_vs_sham_state_l2": 0.3977155089378357, "full_vs_masked_logit_l2": 1957.164794921875, "full_vs_sham_logit_l2": 1418.2364501953125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": 0.04336145147681236}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3977155089378357, "full_vs_masked_state_l2": 1.98883855342865, "full_vs_sham_state_l2": 2.045055866241455, "mask_vs_sham_state_l2": 0.3977155089378357, "full_vs_masked_logit_l2": 1418.2364501953125, "full_vs_sham_logit_l2": 1957.164794921875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.23664605617523193}}, "source_direction_cosine": -1.0, "orthogonal_residual_norm": 0.0, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 4.125, "baseline_margin": 6.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 217.86203002929688}, {"gain": -0.5, "same_pair_margin_delta": 0.25, "baseline_margin": 6.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 39.25100326538086}, {"gain": -0.25, "same_pair_margin_delta": 0.25, "baseline_margin": 6.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.974876403808594}, {"gain": 0.25, "same_pair_margin_delta": 0.125, "baseline_margin": 6.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 15.674973487854004}, {"gain": 0.5, "same_pair_margin_delta": 0.375, "baseline_margin": 6.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 37.8885612487793}, {"gain": 1.0, "same_pair_margin_delta": 0.75, "baseline_margin": 6.125, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 122.30482482910156}], "baseline_prediction": "TEAM-VKHJBSFY", "expected_OFFLINE": "TEAM-VKHJBSFY", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-VKHJBSFY", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C00_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C00_X1", "C00_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C00_X1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.356746107339859, "full_vs_masked_state_l2": 2.251880168914795, "full_vs_sham_state_l2": 2.2345268726348877, "mask_vs_sham_state_l2": 0.356746107339859, "full_vs_masked_logit_l2": 1880.9471435546875, "full_vs_sham_logit_l2": 1360.3043212890625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.030993830412626266}, "SOURCE1_MASK": {"masked_physical_source": "C00_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.356746107339859, "full_vs_masked_state_l2": 2.2345268726348877, "full_vs_sham_state_l2": 2.251880168914795, "mask_vs_sham_state_l2": 0.356746107339859, "full_vs_masked_logit_l2": 1360.3043212890625, "full_vs_sham_logit_l2": 1880.9471435546875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.12766645848751068}}, "source_direction_cosine": -1.0, "orthogonal_residual_norm": 0.0, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.5, "baseline_margin": 8.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 240.56983947753906}, {"gain": -0.5, "same_pair_margin_delta": 0.125, "baseline_margin": 8.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 45.53997039794922}, {"gain": -0.25, "same_pair_margin_delta": 0.125, "baseline_margin": 8.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 30.978801727294922}, {"gain": 0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 8.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.80040740966797}, {"gain": 0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 8.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 36.953399658203125}, {"gain": 1.0, "same_pair_margin_delta": -0.125, "baseline_margin": 8.25, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 224.42893981933594}], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-KMKURDTJ", "baseline_correct_OFFLINE": false, "arms": [{"arm": "OFF", "prediction": "UNKNOWN", "correct_OFFLINE": false, "first_token_id": 51378}]}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C00_X1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C01_BASELINE_FORWARD C01_B0 {'ssd_verify_ms': 20.014, 'h2d_ms': 1.096, 'fusion_ms': 285.43, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST797_C01_BASELINE_FORWARD C01_B1 {'ssd_verify_ms': 20.549, 'h2d_ms': 0.985, 'fusion_ms': 683.941, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_FORWARD 
+PASS PAIR_ORDER_C01_BASELINE_FORWARD 
+PASS SPAN_TOTAL_C01_B0_C01_B1 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_BASELINE_FORWARD_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3981083035469055, "full_vs_masked_state_l2": 2.077908754348755, "full_vs_sham_state_l2": 2.040703535079956, "mask_vs_sham_state_l2": 0.3981083035469055, "full_vs_masked_logit_l2": 2235.720703125, "full_vs_sham_logit_l2": 1660.326904296875, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.0032348029781132936}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3981083035469055, "full_vs_masked_state_l2": 2.040703535079956, "full_vs_sham_state_l2": 2.077908754348755, "mask_vs_sham_state_l2": 0.3981083035469055, "full_vs_masked_logit_l2": 1660.326904296875, "full_vs_sham_logit_l2": 2235.720703125, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.18841397762298584}}, "source_direction_cosine": -1.0000001192092896, "orthogonal_residual_norm": 1.1689873247178184e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.625, "baseline_margin": 9.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 182.18695068359375}, {"gain": -0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 9.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 42.16480255126953}, {"gain": -0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 9.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 20.792930603027344}, {"gain": 0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 9.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 16.44263458251953}, {"gain": 0.5, "same_pair_margin_delta": -0.125, "baseline_margin": 9.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 25.7869930267334}, {"gain": 1.0, "same_pair_margin_delta": 0.125, "baseline_margin": 9.625, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 95.56586456298828}], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_BASELINE_FORWARD_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B0", "C01_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3623175621032715, "full_vs_masked_state_l2": 2.2397525310516357, "full_vs_sham_state_l2": 2.223684072494507, "mask_vs_sham_state_l2": 0.3623175621032715, "full_vs_masked_logit_l2": 2066.27490234375, "full_vs_sham_logit_l2": 1685.35107421875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.03695891052484512}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3623175621032715, "full_vs_masked_state_l2": 2.223684072494507, "full_vs_sham_state_l2": 2.2397525310516357, "mask_vs_sham_state_l2": 0.3623175621032715, "full_vs_masked_logit_l2": 1685.35107421875, "full_vs_sham_logit_l2": 2066.27490234375, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.12507303059101105}}, "source_direction_cosine": -1.0000001192092896, "orthogonal_residual_norm": 1.1680287315130045e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 0.75, "baseline_margin": 6.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 180.6921844482422}, {"gain": -0.5, "same_pair_margin_delta": 0.375, "baseline_margin": 6.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 36.645320892333984}, {"gain": -0.25, "same_pair_margin_delta": 0.125, "baseline_margin": 6.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 17.958675384521484}, {"gain": 0.25, "same_pair_margin_delta": -0.25, "baseline_margin": 6.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 55.416259765625}, {"gain": 0.5, "same_pair_margin_delta": -0.375, "baseline_margin": 6.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 54.422176361083984}, {"gain": 1.0, "same_pair_margin_delta": 1.25, "baseline_margin": 6.5, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 126.64549255371094}], "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-RBVBMXNT", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS KV_UNCHANGED_C01_BASELINE_FORWARD 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C01_BASELINE_REVERSE C01_B1 {'ssd_verify_ms': 20.416, 'h2d_ms': 1.127, 'fusion_ms': 245.279, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+NATIVE_FUSION_STEP TEST797_C01_BASELINE_REVERSE C01_B0 {'ssd_verify_ms': 21.101, 'h2d_ms': 1.042, 'fusion_ms': 697.7, 'cid': 'C01_B0', 'memory_tokens': 97}
+PASS NATIVE_80_C01_BASELINE_REVERSE 
+PASS PAIR_ORDER_C01_BASELINE_REVERSE 
+PASS SPAN_TOTAL_C01_B1_C01_B0 {'actual': 97, 'expected': 97}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_BASELINE_REVERSE_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3693852126598358, "full_vs_masked_state_l2": 2.0656955242156982, "full_vs_sham_state_l2": 2.0393574237823486, "mask_vs_sham_state_l2": 0.3693852126598358, "full_vs_masked_logit_l2": 2045.4564208984375, "full_vs_sham_logit_l2": 1450.45751953125, "masked_first_token": 97052, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.01880042254924774}, "SOURCE1_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3693852126598358, "full_vs_masked_state_l2": 2.0393574237823486, "full_vs_sham_state_l2": 2.0656955242156982, "mask_vs_sham_state_l2": 0.3693852126598358, "full_vs_masked_logit_l2": 1450.45751953125, "full_vs_sham_logit_l2": 2045.4564208984375, "masked_first_token": 97052, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": -0.16025806963443756}}, "source_direction_cosine": -0.9999998807907104, "orthogonal_residual_norm": 1.180961319846574e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.5, "baseline_margin": 9.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 163.3311767578125}, {"gain": -0.5, "same_pair_margin_delta": 0.125, "baseline_margin": 9.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.345243453979492}, {"gain": -0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 9.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.488574981689453}, {"gain": 0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 9.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 18.670194625854492}, {"gain": 0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 9.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.236736297607422}, {"gain": 1.0, "same_pair_margin_delta": 0.0, "baseline_margin": 9.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 107.52884674072266}], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_BASELINE_REVERSE_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_B1", "C01_B0"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3515981137752533, "full_vs_masked_state_l2": 2.2518203258514404, "full_vs_sham_state_l2": 2.241595983505249, "mask_vs_sham_state_l2": 0.3515981137752533, "full_vs_masked_logit_l2": 1715.5548095703125, "full_vs_sham_logit_l2": 1784.626953125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.04927964508533478}, "SOURCE1_MASK": {"masked_physical_source": "C01_B0", "source_total_tokens": 35, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3515981137752533, "full_vs_masked_state_l2": 2.241595983505249, "full_vs_sham_state_l2": 2.2518203258514404, "mask_vs_sham_state_l2": 0.3515981137752533, "full_vs_masked_logit_l2": 1784.626953125, "full_vs_sham_logit_l2": 1715.5548095703125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.10708361864089966}}, "source_direction_cosine": -1.0000001192092896, "orthogonal_residual_norm": 1.172002086491375e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 1.875, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 139.05447387695312}, {"gain": -0.5, "same_pair_margin_delta": 0.25, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 52.125850677490234}, {"gain": -0.25, "same_pair_margin_delta": 0.125, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 27.905502319335938}, {"gain": 0.25, "same_pair_margin_delta": 0.125, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 19.006568908691406}, {"gain": 0.5, "same_pair_margin_delta": 0.375, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 29.586700439453125}, {"gain": 1.0, "same_pair_margin_delta": 2.375, "baseline_margin": 7.25, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 139.92222595214844}], "baseline_prediction": "TEAM-RBVBMXNT", "expected_OFFLINE": "TEAM-RBVBMXNT", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-RBVBMXNT", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS KV_UNCHANGED_C01_BASELINE_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C01_SAME_REV_CONFLICT_FORWARD C01_B1 {'ssd_verify_ms': 20.229, 'h2d_ms': 1.016, 'fusion_ms': 245.917, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST797_C01_SAME_REV_CONFLICT_FORWARD C01_X1 {'ssd_verify_ms': 20.433, 'h2d_ms': 0.945, 'fusion_ms': 701.179, 'cid': 'C01_X1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_FORWARD 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_FORWARD 
+PASS SPAN_TOTAL_C01_B1_C01_X1 {'actual': 95, 'expected': 95}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_SAME_REV_CONFLICT_FORWARD_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.36635851860046387, "full_vs_masked_state_l2": 2.195762872695923, "full_vs_sham_state_l2": 2.1589980125427246, "mask_vs_sham_state_l2": 0.36635851860046387, "full_vs_masked_logit_l2": 1688.4935302734375, "full_vs_sham_logit_l2": 1536.35595703125, "masked_first_token": 51378, "sham_first_token": 97052, "full_first_token": 97052, "mask_sham_direction_cosine": 0.016362152993679047}, "SOURCE1_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.36635851860046387, "full_vs_masked_state_l2": 2.1589980125427246, "full_vs_sham_state_l2": 2.195762872695923, "mask_vs_sham_state_l2": 0.36635851860046387, "full_vs_masked_logit_l2": 1536.35595703125, "full_vs_sham_logit_l2": 1688.4935302734375, "masked_first_token": 97052, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.1829361617565155}}, "source_direction_cosine": -1.0000001192092896, "orthogonal_residual_norm": 1.1606177707790266e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 3.875, "baseline_margin": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 197.57638549804688}, {"gain": -0.5, "same_pair_margin_delta": 0.75, "baseline_margin": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 35.329978942871094}, {"gain": -0.25, "same_pair_margin_delta": 0.375, "baseline_margin": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 22.327238082885742}, {"gain": 0.25, "same_pair_margin_delta": -0.5, "baseline_margin": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 23.660478591918945}, {"gain": 0.5, "same_pair_margin_delta": -0.5, "baseline_margin": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 34.18511962890625}, {"gain": 1.0, "same_pair_margin_delta": 0.75, "baseline_margin": 2.375, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.76315307617188}], "baseline_prediction": "TEAM-JRSBSZJH", "expected_OFFLINE": "TEAM-MEZQKYJD", "baseline_correct_OFFLINE": false, "arms": [{"arm": "OFF", "prediction": "TEAM-JRSBSZJH", "correct_OFFLINE": false, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_SAME_REV_CONFLICT_FORWARD_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "FORWARD", "cartridges": ["C01_B1", "C01_X1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3650000989437103, "full_vs_masked_state_l2": 2.2164719104766846, "full_vs_sham_state_l2": 2.2061047554016113, "mask_vs_sham_state_l2": 0.3650000989437103, "full_vs_masked_logit_l2": 2012.6226806640625, "full_vs_sham_logit_l2": 1718.8182373046875, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.0542554035782814}, "SOURCE1_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3650000989437103, "full_vs_masked_state_l2": 2.2061047554016113, "full_vs_sham_state_l2": 2.2164719104766846, "mask_vs_sham_state_l2": 0.3650000989437103, "full_vs_masked_logit_l2": 1718.8182373046875, "full_vs_sham_logit_l2": 2012.6226806640625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.11067452281713486}}, "source_direction_cosine": -0.9999998807907104, "orthogonal_residual_norm": 1.1531310661894167e-07, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.5, "baseline_margin": 8.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 376.851318359375}, {"gain": -0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 8.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 61.50302505493164}, {"gain": -0.25, "same_pair_margin_delta": 0.125, "baseline_margin": 8.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.215200424194336}, {"gain": 0.25, "same_pair_margin_delta": 0.0, "baseline_margin": 8.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 20.586284637451172}, {"gain": 0.5, "same_pair_margin_delta": -0.125, "baseline_margin": 8.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 29.60723876953125}, {"gain": 1.0, "same_pair_margin_delta": -0.5, "baseline_margin": 8.375, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 192.03988647460938}], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "baseline_correct_OFFLINE": false, "arms": [{"arm": "OFF", "prediction": "UNKNOWN", "correct_OFFLINE": false, "first_token_id": 51378}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_FORWARD 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST797_C01_SAME_REV_CONFLICT_REVERSE C01_X1 {'ssd_verify_ms': 22.417, 'h2d_ms': 1.148, 'fusion_ms': 245.841, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST797_C01_SAME_REV_CONFLICT_REVERSE C01_B1 {'ssd_verify_ms': 22.91, 'h2d_ms': 1.053, 'fusion_ms': 662.288, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_REVERSE 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SPAN_TOTAL_C01_X1_C01_B1 {'actual': 95, 'expected': 95}
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_0 
+PASS SHAM_DISJOINT_0 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS EQUAL_MASK_COUNT_1 
+PASS SHAM_DISJOINT_1 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS MASK_POSITIONS_VALID 
+PASS MASK_LENGTH_INVARIANT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_SAME_REV_CONFLICT_REVERSE_CURRENT 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.39062511920928955, "full_vs_masked_state_l2": 2.1659443378448486, "full_vs_sham_state_l2": 2.1240575313568115, "mask_vs_sham_state_l2": 0.39062511920928955, "full_vs_masked_logit_l2": 1634.581298828125, "full_vs_sham_logit_l2": 838.3167114257812, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": 0.016335241496562958}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.39062511920928955, "full_vs_masked_state_l2": 2.1240575313568115, "full_vs_sham_state_l2": 2.1659443378448486, "mask_vs_sham_state_l2": 0.39062511920928955, "full_vs_masked_logit_l2": 838.3167114257812, "full_vs_sham_logit_l2": 1634.581298828125, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 97052, "mask_sham_direction_cosine": -0.19636796414852142}}, "source_direction_cosine": -0.9999999403953552, "orthogonal_residual_norm": 8.669241680081541e-08, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": 3.25, "baseline_margin": 2.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 236.6809844970703}, {"gain": -0.5, "same_pair_margin_delta": -0.375, "baseline_margin": 2.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 31.188121795654297}, {"gain": -0.25, "same_pair_margin_delta": -0.125, "baseline_margin": 2.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 19.439786911010742}, {"gain": 0.25, "same_pair_margin_delta": -0.625, "baseline_margin": 2.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 33.66938781738281}, {"gain": 0.5, "same_pair_margin_delta": -0.125, "baseline_margin": 2.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 26.904159545898438}, {"gain": 1.0, "same_pair_margin_delta": 0.625, "baseline_margin": 2.75, "first_token_changed": false, "first_token_id": 97052, "logit_l2_delta": 111.7324447631836}], "baseline_prediction": "TEAM-MEZQKYJD", "expected_OFFLINE": "TEAM-MEZQKYJD", "baseline_correct_OFFLINE": true, "arms": [{"arm": "OFF", "prediction": "TEAM-MEZQKYJD", "correct_OFFLINE": true, "first_token_id": 97052}]}
+PASS SEED_NONZERO_SOURCE0_MASK 
+PASS STRICT_DISJOINT_0 
+PASS SEED_NONZERO_SOURCE1_MASK 
+PASS STRICT_DISJOINT_1 
+PASS NO_FALSE_INDEPENDENCE_C01_SAME_REV_CONFLICT_REVERSE_HISTORICAL 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+PASS CUT3_STATE_DIM 8192
+PASS LOGITS_FINITE 
+TEST797_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "order": "REVERSE", "cartridges": ["C01_X1", "C01_B1"], "mask_controls": {"SOURCE0_MASK": {"masked_physical_source": "C01_X1", "source_total_tokens": 33, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3347867429256439, "full_vs_masked_state_l2": 2.2628188133239746, "full_vs_sham_state_l2": 2.2520694732666016, "mask_vs_sham_state_l2": 0.3347867429256439, "full_vs_masked_logit_l2": 2097.75390625, "full_vs_sham_logit_l2": 1599.93505859375, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.04214470461010933}, "SOURCE1_MASK": {"masked_physical_source": "C01_B1", "source_total_tokens": 32, "mask_tokens": 32, "sham_tokens": 32, "sham_overlap_tokens": 0, "mask_vs_sham_direction_l2": 0.3347867429256439, "full_vs_masked_state_l2": 2.2520694732666016, "full_vs_sham_state_l2": 2.2628188133239746, "mask_vs_sham_state_l2": 0.3347867429256439, "full_vs_masked_logit_l2": 1599.93505859375, "full_vs_sham_logit_l2": 2097.75390625, "masked_first_token": 51378, "sham_first_token": 51378, "full_first_token": 51378, "mask_sham_direction_cosine": -0.1060066819190979}}, "source_direction_cosine": -1.0, "orthogonal_residual_norm": 0.0, "relative_antisymmetry_error": 0.0, "measured_direction_rank": 1, "independent_control_available": false, "controller_action": "ABSTAIN_NO_INDEPENDENT_SOURCE_DIRECTION", "blind_dose_scan_single_axis": [{"gain": -1.0, "same_pair_margin_delta": -0.625, "baseline_margin": 8.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 365.1616516113281}, {"gain": -0.5, "same_pair_margin_delta": 0.0, "baseline_margin": 8.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 41.22507858276367}, {"gain": -0.25, "same_pair_margin_delta": -0.125, "baseline_margin": 8.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 27.118213653564453}, {"gain": 0.25, "same_pair_margin_delta": -0.25, "baseline_margin": 8.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 22.314756393432617}, {"gain": 0.5, "same_pair_margin_delta": -0.375, "baseline_margin": 8.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 42.9182243347168}, {"gain": 1.0, "same_pair_margin_delta": -0.875, "baseline_margin": 8.5, "first_token_changed": false, "first_token_id": 51378, "logit_l2_delta": 220.83749389648438}], "baseline_prediction": "UNKNOWN", "expected_OFFLINE": "TEAM-RBVBMXNT", "baseline_correct_OFFLINE": false, "arms": [{"arm": "OFF", "prediction": "UNKNOWN", "correct_OFFLINE": false, "first_token_id": 51378}]}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_REVERSE 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS SSD_SHA_UNCHANGED_C01_X1 
+PASS TOTAL_CASES 16
+PASS BASELINE_GENERATIONS 
+PASS ALL_ABSTAIN 
+PASS FROZEN_WEIGHTS 
+PASS FINAL_MANIFEST 
+PASS NO_RESIDUAL_HOOKS 
+TEST797_COMPLETED {"cases": 16, "generation_runs": 16, "source_direction_cosines": [-1.0, -1.0, -1.0000001192092896, -1.0000001192092896, -1.0, -1.000000238418579, -1.0, -1.0, -1.0000001192092896, -1.0000001192092896, -0.9999998807907104, -1.0000001192092896, -1.0000001192092896, -0.9999998807907104, -0.9999999403953552, -1.0], "direction_rank_counts": {"rank1": 16, "rank2": 0}, "abstentions": 16, "baseline_correct": 10, "interpretation": "Independent source directions are not identifiable from complementary two-mask contrasts; abstention is a safety decision, not autonomous reasoning."}
+FILES /content/AKBASCORE_TEST779_20261027T082338_959310Z/TEST797_results.json /content/AKBASCORE_TEST779_20261027T082338_959310Z/TEST797.log /content/AKBASCORE_TEST779_20261027T082338_959310Z/TEST797_manifest.json
