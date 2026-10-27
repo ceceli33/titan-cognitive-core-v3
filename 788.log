@@ -1,0 +1,972 @@
+ PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+================================================================================================================
+AKBASCORE TEST788 / PHYSICAL CONTRADICTORY SAME-ENTITY REVISION-1 RECORDS
+PASS EXACT_787_GIT_BLOB 
+PASS EXACT_779_GIT_BLOB 
+PASS SEALED_PANEL 
+PASS CONTROLLER_UNIT_0 {'action': 'KEEP_PAIR', 'reason': 'NO_CONCRETE_CHALLENGER'}
+PASS CONTROLLER_UNIT_1 {'action': 'ABSTAIN', 'reason': 'PAIR_MISSING_AND_NONUNIQUE'}
+PASS CONTROLLER_UNIT_2 {'action': 'SWITCH_B0', 'reason': 'PAIR_SELF_CONTRADICTION', 'candidate': 'TEAM-Y', 'gap': 4.9}
+PASS CONFLICT_NO_GOLD_IN_CONTROLLER 
+GPU_PREFLIGHT_FREE_GIB 78.83
+PASS GPU_VRAM Fresh A100 runtime required
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 81.4kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 930kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 65.6MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.3MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 130MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.59MB/s]Download complete:   125GB, 1.55GB/s  Reconstruction complete: 100%  145GB /  145GB,  831MB/s  Fetching 37 files: 100% 37/37 [06:45<00:00, 10.41s/it]Loading weights: 100% 963/963 [06:25<00:00,  3.29it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.3kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS PHYSICAL_20_CARTRIDGES 20
+PASS FOUR_FAMILIES 4
+PASS CARD_NONEMPTY_C00_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X0 
+PASS FRESH_CARTRIDGE_C00_X0 
+PASS PHYSICAL_SHA_C00_X0 
+PHYSICAL_COMMIT C00_X0 0f41a2a23f0ab6b3b71a70b725a60e62e018f03d77c2f82df77946cfde88aa52 PARENTS []
+PASS CARD_NONEMPTY_C00_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X1 
+PASS FRESH_CARTRIDGE_C00_X1 
+PASS PHYSICAL_SHA_C00_X1 
+PHYSICAL_COMMIT C00_X1 9a24a9a9d3ffdf1c59b4ce40fe98a3cd1881d6f2abb5f4e73b82dff9ea883e21 PARENTS []
+PASS CARD_NONEMPTY_C00_X2 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_X2 
+PASS FRESH_CARTRIDGE_C00_X2 
+PASS PHYSICAL_SHA_C00_X2 
+PHYSICAL_COMMIT C00_X2 2b310403cfff064d3bad74e7760f31f93d12916141cc7c7d109d8a93d494c00b PARENTS []
+PASS CARD_NONEMPTY_C01_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X0 
+PASS FRESH_CARTRIDGE_C01_X0 
+PASS PHYSICAL_SHA_C01_X0 
+PHYSICAL_COMMIT C01_X0 5a04687c2637b3561cf73a9bd451a7b5a9f3873a37e5e80f8d916f661a9819a7 PARENTS []
+PASS CARD_NONEMPTY_C01_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X1 
+PASS FRESH_CARTRIDGE_C01_X1 
+PASS PHYSICAL_SHA_C01_X1 
+PHYSICAL_COMMIT C01_X1 b25eb944772afcdddc675b9b94e52c7c283caad93f9dd8c0c45ead2001f1424a PARENTS []
+PASS CARD_NONEMPTY_C01_X2 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_X2 
+PASS FRESH_CARTRIDGE_C01_X2 
+PASS PHYSICAL_SHA_C01_X2 
+PHYSICAL_COMMIT C01_X2 a71ddf57f9def85dbf5918edbe0a01e7f8b20b4c309b9e2cfc154772bf4bebc5 PARENTS []
+PASS CARD_NONEMPTY_C02_X0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X0 
+PASS FRESH_CARTRIDGE_C02_X0 
+PASS PHYSICAL_SHA_C02_X0 
+PHYSICAL_COMMIT C02_X0 e78d6f667e33704933a05878274435053152f85353f6cb72d4b33d772291a51b PARENTS []
+PASS CARD_NONEMPTY_C02_X1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X1 
+PASS FRESH_CARTRIDGE_C02_X1 
+PASS PHYSICAL_SHA_C02_X1 
+PHYSICAL_COMMIT C02_X1 aef1fcf68b6646c66c03fdc802853c668e214fdf3c74e87074c1ba4e7607597a PARENTS []
+PASS CARD_NONEMPTY_C02_X2 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_X2 
+PASS FRESH_CARTRIDGE_C02_X2 
+PASS PHYSICAL_SHA_C02_X2 
+PHYSICAL_COMMIT C02_X2 82819186be716681f5529be9952a3b9df82188028968ba44ace7c9f84bb073fd PARENTS []
+PASS CARD_NONEMPTY_C03_X0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X0 
+PASS FRESH_CARTRIDGE_C03_X0 
+PASS PHYSICAL_SHA_C03_X0 
+PHYSICAL_COMMIT C03_X0 e5c719ae93cf8cd0557d0df88ee983764cc25886be943247dbe1f7bd0f150852 PARENTS []
+PASS CARD_NONEMPTY_C03_X1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X1 
+PASS FRESH_CARTRIDGE_C03_X1 
+PASS PHYSICAL_SHA_C03_X1 
+PHYSICAL_COMMIT C03_X1 0b530fb69deec7e5fcaa3490f51850f0c6bf63faa6b0607e353bcb7f9de9a200 PARENTS []
+PASS CARD_NONEMPTY_C03_X2 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_X2 
+PASS FRESH_CARTRIDGE_C03_X2 
+PASS PHYSICAL_SHA_C03_X2 
+PHYSICAL_COMMIT C03_X2 280da1468fdd47e761cb9f62b23ee5f5b111a4d84f8e56d482c9478613a93bba PARENTS []
+PASS PHYSICAL_32_CARTRIDGES 32
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_BASELINE_C00_B0 C00_B0 {'ssd_verify_ms': 19.079, 'h2d_ms': 19.045, 'fusion_ms': 289.054, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C00_B0 ['C00_B0']
+PASS NATIVE_80_C00_BASELINE_B0 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_BASELINE_C00_B1 C00_B1 {'ssd_verify_ms': 17.383, 'h2d_ms': 1.079, 'fusion_ms': 244.223, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_BASELINE_B1 
+PASS FILE_SHA_C00_B0 
+PASS CARTRIDGE_ID_C00_B0 
+PASS CARTRIDGE_TENSOR_SHA_C00_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C00_BASELINE C00_B0 {'ssd_verify_ms': 17.851, 'h2d_ms': 1.081, 'fusion_ms': 285.068, 'cid': 'C00_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST788_C00_BASELINE C00_B1 {'ssd_verify_ms': 18.259, 'h2d_ms': 1.085, 'fusion_ms': 836.902, 'cid': 'C00_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C00_BASELINE 
+PASS PAIR_ORDER_C00_BASELINE 
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000431, "TEAM-VKHJBSFY": -11.650847}, "B1": {"UNKNOWN": -14.375235, "TEAM-VKHJBSFY": -3.9e-05}, "PAIR": {"UNKNOWN": -12.000188, "TEAM-VKHJBSFY": -3.1e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B0", "C00_B1"], "generated": {"B0": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-KMKURDTJ": -3.6e-05, "UNKNOWN": -11.625214}, "B1": {"TEAM-KMKURDTJ": -10.349467, "UNKNOWN": -0.000554}, "PAIR": {"TEAM-KMKURDTJ": -0.000137, "UNKNOWN": -7.25082}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-KMKURDTJ", "prediction": "TEAM-KMKURDTJ", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-KMKURDTJ", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C00_BASELINE_B0 
+PASS KV_UNCHANGED_C00_BASELINE_B1 
+PASS KV_UNCHANGED_C00_BASELINE_PAIR 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_SAME_REV_CONFLICT_C00_B1 C00_B1 {'ssd_verify_ms': 19.357, 'h2d_ms': 1.019, 'fusion_ms': 248.216, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_B0 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_SAME_REV_CONFLICT_C00_X1 C00_X1 {'ssd_verify_ms': 17.48, 'h2d_ms': 0.975, 'fusion_ms': 244.159, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_X1 ['C00_X1']
+PASS NATIVE_80_C00_SAME_REV_CONFLICT_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C00_SAME_REV_CONFLICT C00_B1 {'ssd_verify_ms': 18.187, 'h2d_ms': 1.12, 'fusion_ms': 244.662, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+NATIVE_FUSION_STEP TEST788_C00_SAME_REV_CONFLICT C00_X1 {'ssd_verify_ms': 18.862, 'h2d_ms': 1.137, 'fusion_ms': 685.7, 'cid': 'C00_X1', 'memory_tokens': 94}
+PASS NATIVE_PAIR_80_C00_SAME_REV_CONFLICT 
+PASS PAIR_ORDER_C00_SAME_REV_CONFLICT 
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B1", "C00_X1"], "generated": {"B0": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-VKHJBSFY": -3.9e-05, "TEAM-MEZQKYJD": -9.828986, "UNKNOWN": -14.375235}, "B1": {"TEAM-VKHJBSFY": -11.575602, "TEAM-MEZQKYJD": -1.6e-05, "UNKNOWN": -16.375086}, "PAIR": {"TEAM-VKHJBSFY": -3.67743, "TEAM-MEZQKYJD": -0.000349, "UNKNOWN": -6.252076}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-VKHJBSFY", "gap": -3.6770810000000003}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B1", "C00_X1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000554}, "B1": {"UNKNOWN": -0.000489}, "PAIR": {"UNKNOWN": -0.000297}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_B0 
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_B1 
+PASS KV_UNCHANGED_C00_SAME_REV_CONFLICT_PAIR 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_SAME_REV_REVERSED_C00_X1 C00_X1 {'ssd_verify_ms': 19.072, 'h2d_ms': 1.114, 'fusion_ms': 247.166, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_X1 ['C00_X1']
+PASS NATIVE_80_C00_SAME_REV_REVERSED_B0 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_SAME_REV_REVERSED_C00_B1 C00_B1 {'ssd_verify_ms': 17.858, 'h2d_ms': 1.033, 'fusion_ms': 244.696, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_SAME_REV_REVERSED_B1 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C00_SAME_REV_REVERSED C00_X1 {'ssd_verify_ms': 18.365, 'h2d_ms': 1.147, 'fusion_ms': 245.729, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+NATIVE_FUSION_STEP TEST788_C00_SAME_REV_REVERSED C00_B1 {'ssd_verify_ms': 18.169, 'h2d_ms': 1.011, 'fusion_ms': 696.072, 'cid': 'C00_B1', 'memory_tokens': 94}
+PASS NATIVE_PAIR_80_C00_SAME_REV_REVERSED 
+PASS PAIR_ORDER_C00_SAME_REV_REVERSED 
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_X1", "C00_B1"], "generated": {"B0": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-MEZQKYJD": -1.6e-05, "TEAM-VKHJBSFY": -11.575602, "UNKNOWN": -16.375086}, "B1": {"TEAM-MEZQKYJD": -9.828986, "TEAM-VKHJBSFY": -3.9e-05, "UNKNOWN": -14.375235}, "PAIR": {"TEAM-MEZQKYJD": -2.979574, "TEAM-VKHJBSFY": -0.000405, "UNKNOWN": -6.127431}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-MEZQKYJD", "gap": -2.9791689999999997}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_X1", "C00_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000489}, "B1": {"UNKNOWN": -0.000554}, "PAIR": {"UNKNOWN": -0.000262}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C00_SAME_REV_REVERSED_B0 
+PASS KV_UNCHANGED_C00_SAME_REV_REVERSED_B1 
+PASS KV_UNCHANGED_C00_SAME_REV_REVERSED_PAIR 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_OLDER_DECOY_C00_B1 C00_B1 {'ssd_verify_ms': 18.971, 'h2d_ms': 1.035, 'fusion_ms': 246.956, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_OLDER_DECOY_B0 
+PASS FILE_SHA_C00_X0 
+PASS CARTRIDGE_ID_C00_X0 
+PASS CARTRIDGE_TENSOR_SHA_C00_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_OLDER_DECOY_C00_X0 C00_X0 {'ssd_verify_ms': 18.832, 'h2d_ms': 1.144, 'fusion_ms': 284.945, 'cid': 'C00_X0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C00_X0 ['C00_X0']
+PASS NATIVE_80_C00_OLDER_DECOY_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C00_OLDER_DECOY C00_B1 {'ssd_verify_ms': 18.162, 'h2d_ms': 1.136, 'fusion_ms': 244.799, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X0 
+PASS CARTRIDGE_ID_C00_X0 
+PASS CARTRIDGE_TENSOR_SHA_C00_X0 
+NATIVE_FUSION_STEP TEST788_C00_OLDER_DECOY C00_X0 {'ssd_verify_ms': 18.928, 'h2d_ms': 1.153, 'fusion_ms': 734.802, 'cid': 'C00_X0', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C00_OLDER_DECOY 
+PASS PAIR_ORDER_C00_OLDER_DECOY 
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B1", "C00_X0"], "generated": {"B0": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-VKHJBSFY": -3.9e-05, "UNKNOWN": -14.375235}, "B1": {"TEAM-VKHJBSFY": -11.094098, "UNKNOWN": -0.000381}, "PAIR": {"TEAM-VKHJBSFY": -2.4e-05, "UNKNOWN": -13.125146}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B1", "C00_X0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000554, "TEAM-MEZQKYJD": -10.693085}, "B1": {"UNKNOWN": -11.750084, "TEAM-MEZQKYJD": -1.6e-05}, "PAIR": {"UNKNOWN": -8.250308, "TEAM-MEZQKYJD": -5.4e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C00_OLDER_DECOY_B0 
+PASS KV_UNCHANGED_C00_OLDER_DECOY_B1 
+PASS KV_UNCHANGED_C00_OLDER_DECOY_PAIR 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_NEWER_DECOY_C00_B1 C00_B1 {'ssd_verify_ms': 19.204, 'h2d_ms': 1.113, 'fusion_ms': 246.698, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_B1 ['C00_B1']
+PASS NATIVE_80_C00_NEWER_DECOY_B0 
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_NEWER_DECOY_C00_X2 C00_X2 {'ssd_verify_ms': 18.249, 'h2d_ms': 1.05, 'fusion_ms': 244.748, 'cid': 'C00_X2', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_X2 ['C00_X2']
+PASS NATIVE_80_C00_NEWER_DECOY_B1 
+PASS FILE_SHA_C00_B1 
+PASS CARTRIDGE_ID_C00_B1 
+PASS CARTRIDGE_TENSOR_SHA_C00_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C00_NEWER_DECOY C00_B1 {'ssd_verify_ms': 18.61, 'h2d_ms': 1.089, 'fusion_ms': 244.837, 'cid': 'C00_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+NATIVE_FUSION_STEP TEST788_C00_NEWER_DECOY C00_X2 {'ssd_verify_ms': 19.086, 'h2d_ms': 1.015, 'fusion_ms': 685.246, 'cid': 'C00_X2', 'memory_tokens': 94}
+PASS NATIVE_PAIR_80_C00_NEWER_DECOY 
+PASS PAIR_ORDER_C00_NEWER_DECOY 
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_B1", "C00_X2"], "generated": {"B0": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-PDBKPJRA collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-VKHJBSFY": -3.9e-05, "UNKNOWN": -14.375235, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-PDBKPJRA collaborates": -3.764265}, "B1": {"TEAM-VKHJBSFY": -11.413286, "UNKNOWN": -0.000577, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-PDBKPJRA collaborates": -0.624328}, "PAIR": {"TEAM-VKHJBSFY": -3.541932, "UNKNOWN": -0.00159, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-PDBKPJRA collaborates": -0.110964}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-VKHJBSFY", "gap": -3.430968}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-PDBKPJRA collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-PDBKPJRA collaborates", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_B1", "C00_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000554}, "B1": {"UNKNOWN": -0.000262}, "PAIR": {"UNKNOWN": -0.000231}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C00_NEWER_DECOY_B0 
+PASS KV_UNCHANGED_C00_NEWER_DECOY_B1 
+PASS KV_UNCHANGED_C00_NEWER_DECOY_PAIR 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_DECOY_ONLY_C00_X1 C00_X1 {'ssd_verify_ms': 19.712, 'h2d_ms': 1.086, 'fusion_ms': 246.694, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_X1 ['C00_X1']
+PASS NATIVE_80_C00_DECOY_ONLY_B0 
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C00_DECOY_ONLY_C00_X2 C00_X2 {'ssd_verify_ms': 18.967, 'h2d_ms': 1.069, 'fusion_ms': 245.103, 'cid': 'C00_X2', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C00_X2 ['C00_X2']
+PASS NATIVE_80_C00_DECOY_ONLY_B1 
+PASS FILE_SHA_C00_X1 
+PASS CARTRIDGE_ID_C00_X1 
+PASS CARTRIDGE_TENSOR_SHA_C00_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C00_DECOY_ONLY C00_X1 {'ssd_verify_ms': 18.813, 'h2d_ms': 1.009, 'fusion_ms': 244.987, 'cid': 'C00_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C00_X2 
+PASS CARTRIDGE_ID_C00_X2 
+PASS CARTRIDGE_TENSOR_SHA_C00_X2 
+NATIVE_FUSION_STEP TEST788_C00_DECOY_ONLY C00_X2 {'ssd_verify_ms': 18.565, 'h2d_ms': 1.098, 'fusion_ms': 683.596, 'cid': 'C00_X2', 'memory_tokens': 94}
+PASS NATIVE_PAIR_80_C00_DECOY_ONLY 
+PASS PAIR_ORDER_C00_DECOY_ONLY 
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C00_X1", "C00_X2"], "generated": {"B0": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-MEZQKYJD": -1.6e-05, "UNKNOWN": -16.375086, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -3.153321}, "B1": {"TEAM-MEZQKYJD": -1.958432, "UNKNOWN": -0.000577, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.436237}, "PAIR": {"TEAM-MEZQKYJD": -0.39174, "UNKNOWN": -0.100436, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.098437}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-MEZQKYJD", "gap": -0.293303}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "baseline_expected_OFFLINE": "TEAM-VKHJBSFY", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C00", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C00_X1", "C00_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000489}, "B1": {"UNKNOWN": -0.000262}, "PAIR": {"UNKNOWN": -0.000262}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-KMKURDTJ", "decoy_OFFLINE": "TEAM-MEZQKYJD", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C00_DECOY_ONLY_B0 
+PASS KV_UNCHANGED_C00_DECOY_ONLY_B1 
+PASS KV_UNCHANGED_C00_DECOY_ONLY_PAIR 
+PASS SSD_SHA_UNCHANGED_C00_B0 
+PASS SSD_SHA_UNCHANGED_C00_B1 
+PASS SSD_SHA_UNCHANGED_C00_X0 
+PASS SSD_SHA_UNCHANGED_C00_X1 
+PASS SSD_SHA_UNCHANGED_C00_X2 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_BASELINE_C01_B0 C01_B0 {'ssd_verify_ms': 19.621, 'h2d_ms': 1.096, 'fusion_ms': 287.338, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C01_B0 ['C01_B0']
+PASS NATIVE_80_C01_BASELINE_B0 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_BASELINE_C01_B1 C01_B1 {'ssd_verify_ms': 19.736, 'h2d_ms': 1.131, 'fusion_ms': 244.98, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_BASELINE_B1 
+PASS FILE_SHA_C01_B0 
+PASS CARTRIDGE_ID_C01_B0 
+PASS CARTRIDGE_TENSOR_SHA_C01_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C01_BASELINE C01_B0 {'ssd_verify_ms': 19.965, 'h2d_ms': 1.044, 'fusion_ms': 285.104, 'cid': 'C01_B0', 'memory_tokens': 65}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST788_C01_BASELINE C01_B1 {'ssd_verify_ms': 19.779, 'h2d_ms': 1.173, 'fusion_ms': 702.637, 'cid': 'C01_B1', 'memory_tokens': 97}
+PASS NATIVE_PAIR_80_C01_BASELINE 
+PASS PAIR_ORDER_C01_BASELINE 
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000297, "TEAM-MEZQKYJD": -11.202635}, "B1": {"UNKNOWN": -16.250059, "TEAM-MEZQKYJD": -1.3e-05}, "PAIR": {"UNKNOWN": -13.125069, "TEAM-MEZQKYJD": -1.4e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B0", "C01_B1"], "generated": {"B0": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-RBVBMXNT": -2.8e-05, "UNKNOWN": -11.750083}, "B1": {"TEAM-RBVBMXNT": -10.166822, "UNKNOWN": -0.000431}, "PAIR": {"TEAM-RBVBMXNT": -0.000288, "UNKNOWN": -6.501589}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-RBVBMXNT", "prediction": "TEAM-RBVBMXNT", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-RBVBMXNT", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C01_BASELINE_B0 
+PASS KV_UNCHANGED_C01_BASELINE_B1 
+PASS KV_UNCHANGED_C01_BASELINE_PAIR 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_SAME_REV_CONFLICT_C01_B1 C01_B1 {'ssd_verify_ms': 20.068, 'h2d_ms': 1.073, 'fusion_ms': 247.095, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_B0 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_SAME_REV_CONFLICT_C01_X1 C01_X1 {'ssd_verify_ms': 19.465, 'h2d_ms': 1.031, 'fusion_ms': 245.114, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C01_X1 ['C01_X1']
+PASS NATIVE_80_C01_SAME_REV_CONFLICT_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C01_SAME_REV_CONFLICT C01_B1 {'ssd_verify_ms': 19.529, 'h2d_ms': 1.148, 'fusion_ms': 244.955, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+NATIVE_FUSION_STEP TEST788_C01_SAME_REV_CONFLICT C01_X1 {'ssd_verify_ms': 19.813, 'h2d_ms': 0.958, 'fusion_ms': 740.25, 'cid': 'C01_X1', 'memory_tokens': 95}
+PASS NATIVE_PAIR_80_C01_SAME_REV_CONFLICT 
+PASS PAIR_ORDER_C01_SAME_REV_CONFLICT 
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B1", "C01_X1"], "generated": {"B0": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-MEZQKYJD": -1.3e-05, "TEAM-JRSBSZJH": -10.036546, "UNKNOWN": -16.250059}, "B1": {"TEAM-MEZQKYJD": -9.527743, "TEAM-JRSBSZJH": -7e-06, "UNKNOWN": -16.625046}, "PAIR": {"TEAM-MEZQKYJD": -2.306529, "TEAM-JRSBSZJH": -0.012739, "UNKNOWN": -2.464172}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-MEZQKYJD", "gap": -2.29379}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B1", "C01_X1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000381}, "PAIR": {"UNKNOWN": -0.000231}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_B0 
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_B1 
+PASS KV_UNCHANGED_C01_SAME_REV_CONFLICT_PAIR 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_SAME_REV_REVERSED_C01_X1 C01_X1 {'ssd_verify_ms': 20.2, 'h2d_ms': 1.148, 'fusion_ms': 247.477, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C01_X1 ['C01_X1']
+PASS NATIVE_80_C01_SAME_REV_REVERSED_B0 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_SAME_REV_REVERSED_C01_B1 C01_B1 {'ssd_verify_ms': 20.879, 'h2d_ms': 1.17, 'fusion_ms': 245.228, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_SAME_REV_REVERSED_B1 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C01_SAME_REV_REVERSED C01_X1 {'ssd_verify_ms': 19.653, 'h2d_ms': 1.118, 'fusion_ms': 245.212, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+NATIVE_FUSION_STEP TEST788_C01_SAME_REV_REVERSED C01_B1 {'ssd_verify_ms': 19.917, 'h2d_ms': 1.122, 'fusion_ms': 695.545, 'cid': 'C01_B1', 'memory_tokens': 95}
+PASS NATIVE_PAIR_80_C01_SAME_REV_REVERSED 
+PASS PAIR_ORDER_C01_SAME_REV_REVERSED 
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_X1", "C01_B1"], "generated": {"B0": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-JRSBSZJH": -7e-06, "TEAM-MEZQKYJD": -9.527743, "UNKNOWN": -16.625046}, "B1": {"TEAM-JRSBSZJH": -10.036546, "TEAM-MEZQKYJD": -1.3e-05, "UNKNOWN": -16.250059}, "PAIR": {"TEAM-JRSBSZJH": -2.866037, "TEAM-MEZQKYJD": -0.010372, "UNKNOWN": -2.812219}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-JRSBSZJH", "gap": -2.855665}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_X1", "C01_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000381}, "B1": {"UNKNOWN": -0.000431}, "PAIR": {"UNKNOWN": -0.000204}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C01_SAME_REV_REVERSED_B0 
+PASS KV_UNCHANGED_C01_SAME_REV_REVERSED_B1 
+PASS KV_UNCHANGED_C01_SAME_REV_REVERSED_PAIR 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_OLDER_DECOY_C01_B1 C01_B1 {'ssd_verify_ms': 20.003, 'h2d_ms': 1.073, 'fusion_ms': 246.767, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_OLDER_DECOY_B0 
+PASS FILE_SHA_C01_X0 
+PASS CARTRIDGE_ID_C01_X0 
+PASS CARTRIDGE_TENSOR_SHA_C01_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_OLDER_DECOY_C01_X0 C01_X0 {'ssd_verify_ms': 20.012, 'h2d_ms': 1.245, 'fusion_ms': 285.338, 'cid': 'C01_X0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C01_X0 ['C01_X0']
+PASS NATIVE_80_C01_OLDER_DECOY_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C01_OLDER_DECOY C01_B1 {'ssd_verify_ms': 19.129, 'h2d_ms': 1.075, 'fusion_ms': 244.96, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X0 
+PASS CARTRIDGE_ID_C01_X0 
+PASS CARTRIDGE_TENSOR_SHA_C01_X0 
+NATIVE_FUSION_STEP TEST788_C01_OLDER_DECOY C01_X0 {'ssd_verify_ms': 20.465, 'h2d_ms': 1.103, 'fusion_ms': 738.132, 'cid': 'C01_X0', 'memory_tokens': 98}
+PASS NATIVE_PAIR_80_C01_OLDER_DECOY 
+PASS PAIR_ORDER_C01_OLDER_DECOY 
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B1", "C01_X0"], "generated": {"B0": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-MEZQKYJD": -1.3e-05, "UNKNOWN": -16.250059}, "B1": {"TEAM-MEZQKYJD": -11.138184, "UNKNOWN": -0.000297}, "PAIR": {"TEAM-MEZQKYJD": -1.1e-05, "UNKNOWN": -15.000059}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-MEZQKYJD", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B1", "C01_X0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000431, "TEAM-JRSBSZJH": -9.54725}, "B1": {"UNKNOWN": -12.375063, "TEAM-JRSBSZJH": -9e-06}, "PAIR": {"UNKNOWN": -8.125355, "TEAM-JRSBSZJH": -5.1e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C01_OLDER_DECOY_B0 
+PASS KV_UNCHANGED_C01_OLDER_DECOY_B1 
+PASS KV_UNCHANGED_C01_OLDER_DECOY_PAIR 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_NEWER_DECOY_C01_B1 C01_B1 {'ssd_verify_ms': 21.039, 'h2d_ms': 1.334, 'fusion_ms': 247.181, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C01_B1 ['C01_B1']
+PASS NATIVE_80_C01_NEWER_DECOY_B0 
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_NEWER_DECOY_C01_X2 C01_X2 {'ssd_verify_ms': 20.996, 'h2d_ms': 1.087, 'fusion_ms': 245.297, 'cid': 'C01_X2', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C01_X2 ['C01_X2']
+PASS NATIVE_80_C01_NEWER_DECOY_B1 
+PASS FILE_SHA_C01_B1 
+PASS CARTRIDGE_ID_C01_B1 
+PASS CARTRIDGE_TENSOR_SHA_C01_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C01_NEWER_DECOY C01_B1 {'ssd_verify_ms': 20.146, 'h2d_ms': 1.025, 'fusion_ms': 244.962, 'cid': 'C01_B1', 'memory_tokens': 62}
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+NATIVE_FUSION_STEP TEST788_C01_NEWER_DECOY C01_X2 {'ssd_verify_ms': 20.662, 'h2d_ms': 1.294, 'fusion_ms': 735.285, 'cid': 'C01_X2', 'memory_tokens': 95}
+PASS NATIVE_PAIR_80_C01_NEWER_DECOY 
+PASS PAIR_ORDER_C01_NEWER_DECOY 
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_B1", "C01_X2"], "generated": {"B0": {"raw": "TEAM-MEZQKYJD", "prediction": "TEAM-MEZQKYJD", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-NTCPPSFZ collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-MEZQKYJD": -1.3e-05, "UNKNOWN": -16.250059, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-NTCPPSFZ collaborates": -3.768896}, "B1": {"TEAM-MEZQKYJD": -10.410663, "UNKNOWN": -0.000346, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-NTCPPSFZ collaborates": -0.66412}, "PAIR": {"TEAM-MEZQKYJD": -2.562713, "UNKNOWN": -0.001011, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-NTCPPSFZ collaborates": -0.117957}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-MEZQKYJD", "gap": -2.444756}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-NTCPPSFZ collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-NTCPPSFZ collaborates", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_B1", "C01_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000262}, "PAIR": {"UNKNOWN": -0.000231}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C01_NEWER_DECOY_B0 
+PASS KV_UNCHANGED_C01_NEWER_DECOY_B1 
+PASS KV_UNCHANGED_C01_NEWER_DECOY_PAIR 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_DECOY_ONLY_C01_X1 C01_X1 {'ssd_verify_ms': 21.637, 'h2d_ms': 1.093, 'fusion_ms': 247.295, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C01_X1 ['C01_X1']
+PASS NATIVE_80_C01_DECOY_ONLY_B0 
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C01_DECOY_ONLY_C01_X2 C01_X2 {'ssd_verify_ms': 21.015, 'h2d_ms': 1.108, 'fusion_ms': 245.338, 'cid': 'C01_X2', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C01_X2 ['C01_X2']
+PASS NATIVE_80_C01_DECOY_ONLY_B1 
+PASS FILE_SHA_C01_X1 
+PASS CARTRIDGE_ID_C01_X1 
+PASS CARTRIDGE_TENSOR_SHA_C01_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C01_DECOY_ONLY C01_X1 {'ssd_verify_ms': 20.212, 'h2d_ms': 1.036, 'fusion_ms': 245.332, 'cid': 'C01_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C01_X2 
+PASS CARTRIDGE_ID_C01_X2 
+PASS CARTRIDGE_TENSOR_SHA_C01_X2 
+NATIVE_FUSION_STEP TEST788_C01_DECOY_ONLY C01_X2 {'ssd_verify_ms': 20.58, 'h2d_ms': 0.997, 'fusion_ms': 739.225, 'cid': 'C01_X2', 'memory_tokens': 96}
+PASS NATIVE_PAIR_80_C01_DECOY_ONLY 
+PASS PAIR_ORDER_C01_DECOY_ONLY 
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C01_X1", "C01_X2"], "generated": {"B0": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-JRSBSZJH": -7e-06, "UNKNOWN": -16.625046, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -3.28404}, "B1": {"TEAM-JRSBSZJH": -1.87505, "UNKNOWN": -0.000346, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.382131}, "PAIR": {"TEAM-JRSBSZJH": -0.385021, "UNKNOWN": -0.070148, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.110133}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-JRSBSZJH", "gap": -0.274888}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "baseline_expected_OFFLINE": "TEAM-MEZQKYJD", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C01", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C01_X1", "C01_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000381}, "B1": {"UNKNOWN": -0.000262}, "PAIR": {"UNKNOWN": -0.000262}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-RBVBMXNT", "decoy_OFFLINE": "TEAM-JRSBSZJH", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C01_DECOY_ONLY_B0 
+PASS KV_UNCHANGED_C01_DECOY_ONLY_B1 
+PASS KV_UNCHANGED_C01_DECOY_ONLY_PAIR 
+PASS SSD_SHA_UNCHANGED_C01_B0 
+PASS SSD_SHA_UNCHANGED_C01_B1 
+PASS SSD_SHA_UNCHANGED_C01_X0 
+PASS SSD_SHA_UNCHANGED_C01_X1 
+PASS SSD_SHA_UNCHANGED_C01_X2 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_BASELINE_C02_B0 C02_B0 {'ssd_verify_ms': 21.603, 'h2d_ms': 1.092, 'fusion_ms': 286.721, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C02_B0 ['C02_B0']
+PASS NATIVE_80_C02_BASELINE_B0 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_BASELINE_C02_B1 C02_B1 {'ssd_verify_ms': 19.43, 'h2d_ms': 0.976, 'fusion_ms': 244.961, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_BASELINE_B1 
+PASS FILE_SHA_C02_B0 
+PASS CARTRIDGE_ID_C02_B0 
+PASS CARTRIDGE_TENSOR_SHA_C02_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C02_BASELINE C02_B0 {'ssd_verify_ms': 22.746, 'h2d_ms': 1.307, 'fusion_ms': 285.591, 'cid': 'C02_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST788_C02_BASELINE C02_B1 {'ssd_verify_ms': 22.138, 'h2d_ms': 1.181, 'fusion_ms': 739.416, 'cid': 'C02_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C02_BASELINE 
+PASS PAIR_ORDER_C02_BASELINE 
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000336, "TEAM-JRSBSZJH": -10.988619}, "B1": {"UNKNOWN": -16.875051, "TEAM-JRSBSZJH": -7e-06}, "PAIR": {"UNKNOWN": -16.500067, "TEAM-JRSBSZJH": -9e-06}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B0", "C02_B1"], "generated": {"B0": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-DPRJHRVQ": -1e-05, "UNKNOWN": -11.875073}, "B1": {"TEAM-DPRJHRVQ": -8.140814, "UNKNOWN": -0.000381}, "PAIR": {"TEAM-DPRJHRVQ": -7.9e-05, "UNKNOWN": -7.625555}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-DPRJHRVQ", "prediction": "TEAM-DPRJHRVQ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-DPRJHRVQ", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C02_BASELINE_B0 
+PASS KV_UNCHANGED_C02_BASELINE_B1 
+PASS KV_UNCHANGED_C02_BASELINE_PAIR 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_SAME_REV_CONFLICT_C02_B1 C02_B1 {'ssd_verify_ms': 21.281, 'h2d_ms': 1.073, 'fusion_ms': 247.195, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_SAME_REV_CONFLICT_B0 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_SAME_REV_CONFLICT_C02_X1 C02_X1 {'ssd_verify_ms': 20.868, 'h2d_ms': 1.065, 'fusion_ms': 245.19, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_X1 ['C02_X1']
+PASS NATIVE_80_C02_SAME_REV_CONFLICT_B1 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C02_SAME_REV_CONFLICT C02_B1 {'ssd_verify_ms': 19.978, 'h2d_ms': 1.033, 'fusion_ms': 245.171, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+NATIVE_FUSION_STEP TEST788_C02_SAME_REV_CONFLICT C02_X1 {'ssd_verify_ms': 20.923, 'h2d_ms': 1.049, 'fusion_ms': 732.317, 'cid': 'C02_X1', 'memory_tokens': 96}
+PASS NATIVE_PAIR_80_C02_SAME_REV_CONFLICT 
+PASS PAIR_ORDER_C02_SAME_REV_CONFLICT 
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B1", "C02_X1"], "generated": {"B0": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-JRSBSZJH": -7e-06, "TEAM-GSNGGZZZ": -9.632132, "UNKNOWN": -16.875051}, "B1": {"TEAM-JRSBSZJH": -10.586666, "TEAM-GSNGGZZZ": -8e-06, "UNKNOWN": -16.875051}, "PAIR": {"TEAM-JRSBSZJH": -1.618046, "TEAM-GSNGGZZZ": -0.082338, "UNKNOWN": -0.826301}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-JRSBSZJH", "gap": -1.535708}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B1", "C02_X1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000381}, "B1": {"UNKNOWN": -0.000381}, "PAIR": {"UNKNOWN": -0.000204}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C02_SAME_REV_CONFLICT_B0 
+PASS KV_UNCHANGED_C02_SAME_REV_CONFLICT_B1 
+PASS KV_UNCHANGED_C02_SAME_REV_CONFLICT_PAIR 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_SAME_REV_REVERSED_C02_X1 C02_X1 {'ssd_verify_ms': 21.696, 'h2d_ms': 1.095, 'fusion_ms': 247.311, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_X1 ['C02_X1']
+PASS NATIVE_80_C02_SAME_REV_REVERSED_B0 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_SAME_REV_REVERSED_C02_B1 C02_B1 {'ssd_verify_ms': 21.638, 'h2d_ms': 1.124, 'fusion_ms': 245.353, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_SAME_REV_REVERSED_B1 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C02_SAME_REV_REVERSED C02_X1 {'ssd_verify_ms': 20.609, 'h2d_ms': 1.082, 'fusion_ms': 245.285, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+NATIVE_FUSION_STEP TEST788_C02_SAME_REV_REVERSED C02_B1 {'ssd_verify_ms': 22.27, 'h2d_ms': 1.054, 'fusion_ms': 736.159, 'cid': 'C02_B1', 'memory_tokens': 96}
+PASS NATIVE_PAIR_80_C02_SAME_REV_REVERSED 
+PASS PAIR_ORDER_C02_SAME_REV_REVERSED 
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_X1", "C02_B1"], "generated": {"B0": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-GSNGGZZZ": -8e-06, "TEAM-JRSBSZJH": -10.586666, "UNKNOWN": -16.875051}, "B1": {"TEAM-GSNGGZZZ": -9.632132, "TEAM-JRSBSZJH": -7e-06, "UNKNOWN": -16.875051}, "PAIR": {"TEAM-GSNGGZZZ": -1.558669, "TEAM-JRSBSZJH": -0.022949, "UNKNOWN": -1.91062}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-GSNGGZZZ", "gap": -1.53572}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_X1", "C02_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000381}, "B1": {"UNKNOWN": -0.000381}, "PAIR": {"UNKNOWN": -0.000204}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C02_SAME_REV_REVERSED_B0 
+PASS KV_UNCHANGED_C02_SAME_REV_REVERSED_B1 
+PASS KV_UNCHANGED_C02_SAME_REV_REVERSED_PAIR 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_OLDER_DECOY_C02_B1 C02_B1 {'ssd_verify_ms': 21.789, 'h2d_ms': 1.042, 'fusion_ms': 247.145, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_OLDER_DECOY_B0 
+PASS FILE_SHA_C02_X0 
+PASS CARTRIDGE_ID_C02_X0 
+PASS CARTRIDGE_TENSOR_SHA_C02_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_OLDER_DECOY_C02_X0 C02_X0 {'ssd_verify_ms': 21.204, 'h2d_ms': 1.109, 'fusion_ms': 285.428, 'cid': 'C02_X0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C02_X0 ['C02_X0']
+PASS NATIVE_80_C02_OLDER_DECOY_B1 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C02_OLDER_DECOY C02_B1 {'ssd_verify_ms': 20.463, 'h2d_ms': 1.133, 'fusion_ms': 245.34, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X0 
+PASS CARTRIDGE_ID_C02_X0 
+PASS CARTRIDGE_TENSOR_SHA_C02_X0 
+NATIVE_FUSION_STEP TEST788_C02_OLDER_DECOY C02_X0 {'ssd_verify_ms': 23.467, 'h2d_ms': 1.12, 'fusion_ms': 728.951, 'cid': 'C02_X0', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C02_OLDER_DECOY 
+PASS PAIR_ORDER_C02_OLDER_DECOY 
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B1", "C02_X0"], "generated": {"B0": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-JRSBSZJH": -7e-06, "UNKNOWN": -16.875051}, "B1": {"TEAM-JRSBSZJH": -12.041591, "UNKNOWN": -0.000336}, "PAIR": {"TEAM-JRSBSZJH": -7e-06, "UNKNOWN": -15.875052}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-JRSBSZJH", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B1", "C02_X0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000381, "TEAM-GSNGGZZZ": -7.871634}, "B1": {"UNKNOWN": -11.375078, "TEAM-GSNGGZZZ": -1.1e-05}, "PAIR": {"UNKNOWN": -8.125372, "TEAM-GSNGGZZZ": -5.4e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C02_OLDER_DECOY_B0 
+PASS KV_UNCHANGED_C02_OLDER_DECOY_B1 
+PASS KV_UNCHANGED_C02_OLDER_DECOY_PAIR 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_NEWER_DECOY_C02_B1 C02_B1 {'ssd_verify_ms': 24.398, 'h2d_ms': 1.385, 'fusion_ms': 247.531, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_B1 ['C02_B1']
+PASS NATIVE_80_C02_NEWER_DECOY_B0 
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_NEWER_DECOY_C02_X2 C02_X2 {'ssd_verify_ms': 21.863, 'h2d_ms': 1.172, 'fusion_ms': 244.988, 'cid': 'C02_X2', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_X2 ['C02_X2']
+PASS NATIVE_80_C02_NEWER_DECOY_B1 
+PASS FILE_SHA_C02_B1 
+PASS CARTRIDGE_ID_C02_B1 
+PASS CARTRIDGE_TENSOR_SHA_C02_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C02_NEWER_DECOY C02_B1 {'ssd_verify_ms': 23.969, 'h2d_ms': 1.392, 'fusion_ms': 246.035, 'cid': 'C02_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+NATIVE_FUSION_STEP TEST788_C02_NEWER_DECOY C02_X2 {'ssd_verify_ms': 22.24, 'h2d_ms': 1.302, 'fusion_ms': 727.201, 'cid': 'C02_X2', 'memory_tokens': 96}
+PASS NATIVE_PAIR_80_C02_NEWER_DECOY 
+PASS PAIR_ORDER_C02_NEWER_DECOY 
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_B1", "C02_X2"], "generated": {"B0": {"raw": "TEAM-JRSBSZJH", "prediction": "TEAM-JRSBSZJH", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, where WORK-WYTMR", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-JRSBSZJH": -7e-06, "UNKNOWN": -16.875051, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, where WORK-WYTMR": -3.406602}, "B1": {"TEAM-JRSBSZJH": -11.642409, "UNKNOWN": -0.000254, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, where WORK-WYTMR": -0.41555}, "PAIR": {"TEAM-JRSBSZJH": -2.678722, "UNKNOWN": -0.001044, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, where WORK-WYTMR": -0.120315}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-JRSBSZJH", "gap": -2.558407}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, where WORK-WYTMR", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, where WORK-WYTMR", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_B1", "C02_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000381}, "B1": {"UNKNOWN": -0.000231}, "PAIR": {"UNKNOWN": -0.000204}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C02_NEWER_DECOY_B0 
+PASS KV_UNCHANGED_C02_NEWER_DECOY_B1 
+PASS KV_UNCHANGED_C02_NEWER_DECOY_PAIR 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_DECOY_ONLY_C02_X1 C02_X1 {'ssd_verify_ms': 23.821, 'h2d_ms': 1.356, 'fusion_ms': 247.522, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_X1 ['C02_X1']
+PASS NATIVE_80_C02_DECOY_ONLY_B0 
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C02_DECOY_ONLY_C02_X2 C02_X2 {'ssd_verify_ms': 23.063, 'h2d_ms': 1.258, 'fusion_ms': 245.125, 'cid': 'C02_X2', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C02_X2 ['C02_X2']
+PASS NATIVE_80_C02_DECOY_ONLY_B1 
+PASS FILE_SHA_C02_X1 
+PASS CARTRIDGE_ID_C02_X1 
+PASS CARTRIDGE_TENSOR_SHA_C02_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C02_DECOY_ONLY C02_X1 {'ssd_verify_ms': 21.732, 'h2d_ms': 1.354, 'fusion_ms': 245.313, 'cid': 'C02_X1', 'memory_tokens': 63}
+PASS FILE_SHA_C02_X2 
+PASS CARTRIDGE_ID_C02_X2 
+PASS CARTRIDGE_TENSOR_SHA_C02_X2 
+NATIVE_FUSION_STEP TEST788_C02_DECOY_ONLY C02_X2 {'ssd_verify_ms': 22.911, 'h2d_ms': 1.23, 'fusion_ms': 734.524, 'cid': 'C02_X2', 'memory_tokens': 96}
+PASS NATIVE_PAIR_80_C02_DECOY_ONLY 
+PASS PAIR_ORDER_C02_DECOY_ONLY 
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C02_X1", "C02_X2"], "generated": {"B0": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-GSNGGZZZ": -8e-06, "UNKNOWN": -16.875051, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -3.340134}, "B1": {"TEAM-GSNGGZZZ": -1.60718, "UNKNOWN": -0.000254, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.403874}, "PAIR": {"TEAM-GSNGGZZZ": -0.31973, "UNKNOWN": -0.113081, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.092347}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-GSNGGZZZ", "gap": -0.227383}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "baseline_expected_OFFLINE": "TEAM-JRSBSZJH", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C02", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C02_X1", "C02_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000381}, "B1": {"UNKNOWN": -0.000231}, "PAIR": {"UNKNOWN": -0.000204}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-DPRJHRVQ", "decoy_OFFLINE": "TEAM-GSNGGZZZ", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C02_DECOY_ONLY_B0 
+PASS KV_UNCHANGED_C02_DECOY_ONLY_B1 
+PASS KV_UNCHANGED_C02_DECOY_ONLY_PAIR 
+PASS SSD_SHA_UNCHANGED_C02_B0 
+PASS SSD_SHA_UNCHANGED_C02_B1 
+PASS SSD_SHA_UNCHANGED_C02_X0 
+PASS SSD_SHA_UNCHANGED_C02_X1 
+PASS SSD_SHA_UNCHANGED_C02_X2 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_BASELINE_C03_B0 C03_B0 {'ssd_verify_ms': 21.409, 'h2d_ms': 1.155, 'fusion_ms': 286.93, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS ISOLATED_SOURCE_C03_B0 ['C03_B0']
+PASS NATIVE_80_C03_BASELINE_B0 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_BASELINE_C03_B1 C03_B1 {'ssd_verify_ms': 21.117, 'h2d_ms': 1.035, 'fusion_ms': 245.006, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_BASELINE_B1 
+PASS FILE_SHA_C03_B0 
+PASS CARTRIDGE_ID_C03_B0 
+PASS CARTRIDGE_TENSOR_SHA_C03_B0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C03_BASELINE C03_B0 {'ssd_verify_ms': 22.785, 'h2d_ms': 1.109, 'fusion_ms': 285.472, 'cid': 'C03_B0', 'memory_tokens': 66}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST788_C03_BASELINE C03_B1 {'ssd_verify_ms': 22.517, 'h2d_ms': 1.048, 'fusion_ms': 747.43, 'cid': 'C03_B1', 'memory_tokens': 99}
+PASS NATIVE_PAIR_80_C03_BASELINE 
+PASS PAIR_ORDER_C03_BASELINE 
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"UNKNOWN": -0.000381, "TEAM-GSNGGZZZ": -9.098456}, "B1": {"UNKNOWN": -16.000074, "TEAM-GSNGGZZZ": -1.1e-05}, "PAIR": {"UNKNOWN": -14.625067, "TEAM-GSNGGZZZ": -1e-05}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "BASELINE", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B0", "C03_B1"], "generated": {"B0": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-MYFFBTPZ": -1e-05, "UNKNOWN": -11.250072}, "B1": {"TEAM-MYFFBTPZ": -8.932269, "UNKNOWN": -0.000431}, "PAIR": {"TEAM-MYFFBTPZ": -0.000157, "UNKNOWN": -6.8761}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-MYFFBTPZ", "prediction": "TEAM-MYFFBTPZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-MYFFBTPZ", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C03_BASELINE_B0 
+PASS KV_UNCHANGED_C03_BASELINE_B1 
+PASS KV_UNCHANGED_C03_BASELINE_PAIR 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_SAME_REV_CONFLICT_C03_B1 C03_B1 {'ssd_verify_ms': 22.786, 'h2d_ms': 1.058, 'fusion_ms': 247.017, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_SAME_REV_CONFLICT_B0 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_SAME_REV_CONFLICT_C03_X1 C03_X1 {'ssd_verify_ms': 22.026, 'h2d_ms': 1.04, 'fusion_ms': 244.902, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C03_X1 ['C03_X1']
+PASS NATIVE_80_C03_SAME_REV_CONFLICT_B1 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C03_SAME_REV_CONFLICT C03_B1 {'ssd_verify_ms': 21.8, 'h2d_ms': 0.996, 'fusion_ms': 245.114, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+NATIVE_FUSION_STEP TEST788_C03_SAME_REV_CONFLICT C03_X1 {'ssd_verify_ms': 22.007, 'h2d_ms': 1.058, 'fusion_ms': 695.073, 'cid': 'C03_X1', 'memory_tokens': 95}
+PASS NATIVE_PAIR_80_C03_SAME_REV_CONFLICT 
+PASS PAIR_ORDER_C03_SAME_REV_CONFLICT 
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B1", "C03_X1"], "generated": {"B0": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"TEAM-GSNGGZZZ": -1.1e-05, "TEAM-VKHJBSFY": -11.359179, "UNKNOWN": -16.000074}, "B1": {"TEAM-GSNGGZZZ": -8.218907, "TEAM-VKHJBSFY": -2.1e-05, "UNKNOWN": -14.250125}, "PAIR": {"TEAM-GSNGGZZZ": -1.950215, "TEAM-VKHJBSFY": -0.004414, "UNKNOWN": -3.65148}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-GSNGGZZZ", "gap": -1.9458010000000001}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_CONFLICT", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B1", "C03_X1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000431}, "PAIR": {"UNKNOWN": -0.000204}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C03_SAME_REV_CONFLICT_B0 
+PASS KV_UNCHANGED_C03_SAME_REV_CONFLICT_B1 
+PASS KV_UNCHANGED_C03_SAME_REV_CONFLICT_PAIR 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_SAME_REV_REVERSED_C03_X1 C03_X1 {'ssd_verify_ms': 24.444, 'h2d_ms': 1.256, 'fusion_ms': 248.512, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C03_X1 ['C03_X1']
+PASS NATIVE_80_C03_SAME_REV_REVERSED_B0 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_SAME_REV_REVERSED_C03_B1 C03_B1 {'ssd_verify_ms': 24.675, 'h2d_ms': 1.092, 'fusion_ms': 245.378, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_SAME_REV_REVERSED_B1 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C03_SAME_REV_REVERSED C03_X1 {'ssd_verify_ms': 22.848, 'h2d_ms': 1.027, 'fusion_ms': 245.283, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+NATIVE_FUSION_STEP TEST788_C03_SAME_REV_REVERSED C03_B1 {'ssd_verify_ms': 22.885, 'h2d_ms': 1.032, 'fusion_ms': 729.794, 'cid': 'C03_B1', 'memory_tokens': 95}
+PASS NATIVE_PAIR_80_C03_SAME_REV_REVERSED 
+PASS PAIR_ORDER_C03_SAME_REV_REVERSED 
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_X1", "C03_B1"], "generated": {"B0": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-VKHJBSFY": -2.1e-05, "TEAM-GSNGGZZZ": -8.218907, "UNKNOWN": -14.250125}, "B1": {"TEAM-VKHJBSFY": -11.359179, "TEAM-GSNGGZZZ": -1.1e-05, "UNKNOWN": -16.000074}, "PAIR": {"TEAM-VKHJBSFY": -2.104782, "TEAM-GSNGGZZZ": -0.000531, "UNKNOWN": -5.628685}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-VKHJBSFY", "gap": -2.104251}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "SAME_REV_REVERSED", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_X1", "C03_B1"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000431}, "PAIR": {"UNKNOWN": -0.000231}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C03_SAME_REV_REVERSED_B0 
+PASS KV_UNCHANGED_C03_SAME_REV_REVERSED_B1 
+PASS KV_UNCHANGED_C03_SAME_REV_REVERSED_PAIR 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_OLDER_DECOY_C03_B1 C03_B1 {'ssd_verify_ms': 23.168, 'h2d_ms': 1.116, 'fusion_ms': 247.578, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_OLDER_DECOY_B0 
+PASS FILE_SHA_C03_X0 
+PASS CARTRIDGE_ID_C03_X0 
+PASS CARTRIDGE_TENSOR_SHA_C03_X0 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_OLDER_DECOY_C03_X0 C03_X0 {'ssd_verify_ms': 23.826, 'h2d_ms': 1.198, 'fusion_ms': 285.336, 'cid': 'C03_X0', 'memory_tokens': 65}
+PASS ISOLATED_SOURCE_C03_X0 ['C03_X0']
+PASS NATIVE_80_C03_OLDER_DECOY_B1 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C03_OLDER_DECOY C03_B1 {'ssd_verify_ms': 23.789, 'h2d_ms': 1.139, 'fusion_ms': 245.351, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_X0 
+PASS CARTRIDGE_ID_C03_X0 
+PASS CARTRIDGE_TENSOR_SHA_C03_X0 
+NATIVE_FUSION_STEP TEST788_C03_OLDER_DECOY C03_X0 {'ssd_verify_ms': 23.478, 'h2d_ms': 1.196, 'fusion_ms': 728.422, 'cid': 'C03_X0', 'memory_tokens': 98}
+PASS NATIVE_PAIR_80_C03_OLDER_DECOY 
+PASS PAIR_ORDER_C03_OLDER_DECOY 
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B1", "C03_X0"], "generated": {"B0": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}}, "scores": {"B0": {"TEAM-GSNGGZZZ": -1.1e-05, "UNKNOWN": -16.000074}, "B1": {"TEAM-GSNGGZZZ": -9.604198, "UNKNOWN": -0.000297}, "PAIR": {"TEAM-GSNGGZZZ": -9e-06, "UNKNOWN": -14.875059}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "final": "TEAM-GSNGGZZZ", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": true, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": true, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "OLDER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B1", "C03_X0"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "PAIR": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}}, "scores": {"B0": {"UNKNOWN": -0.000431, "TEAM-VKHJBSFY": -11.127632}, "B1": {"UNKNOWN": -9.12522, "TEAM-VKHJBSFY": -3.7e-05}, "PAIR": {"UNKNOWN": -6.626453, "TEAM-VKHJBSFY": -0.000242}}, "decision": {"action": "KEEP_PAIR", "reason": "NO_CONCRETE_CHALLENGER"}, "selected": "PAIR", "readout": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "final": "TEAM-VKHJBSFY", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": true, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": true, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C03_OLDER_DECOY_B0 
+PASS KV_UNCHANGED_C03_OLDER_DECOY_B1 
+PASS KV_UNCHANGED_C03_OLDER_DECOY_PAIR 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_NEWER_DECOY_C03_B1 C03_B1 {'ssd_verify_ms': 24.241, 'h2d_ms': 1.05, 'fusion_ms': 247.212, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS ISOLATED_SOURCE_C03_B1 ['C03_B1']
+PASS NATIVE_80_C03_NEWER_DECOY_B0 
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_NEWER_DECOY_C03_X2 C03_X2 {'ssd_verify_ms': 22.436, 'h2d_ms': 0.995, 'fusion_ms': 244.803, 'cid': 'C03_X2', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C03_X2 ['C03_X2']
+PASS NATIVE_80_C03_NEWER_DECOY_B1 
+PASS FILE_SHA_C03_B1 
+PASS CARTRIDGE_ID_C03_B1 
+PASS CARTRIDGE_TENSOR_SHA_C03_B1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C03_NEWER_DECOY C03_B1 {'ssd_verify_ms': 21.889, 'h2d_ms': 1.015, 'fusion_ms': 245.132, 'cid': 'C03_B1', 'memory_tokens': 63}
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+NATIVE_FUSION_STEP TEST788_C03_NEWER_DECOY C03_X2 {'ssd_verify_ms': 23.463, 'h2d_ms': 1.185, 'fusion_ms': 700.836, 'cid': 'C03_X2', 'memory_tokens': 95}
+PASS NATIVE_PAIR_80_C03_NEWER_DECOY 
+PASS PAIR_ORDER_C03_NEWER_DECOY 
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_B1", "C03_X2"], "generated": {"B0": {"raw": "TEAM-GSNGGZZZ", "prediction": "TEAM-GSNGGZZZ", "generated_tokens": 8, "sdpa_calls": 32}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-ETCPKNKP collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-GSNGGZZZ": -1.1e-05, "UNKNOWN": -16.000074, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-ETCPKNKP collaborates": -3.918407}, "B1": {"TEAM-GSNGGZZZ": -9.55654, "UNKNOWN": -0.00039, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-ETCPKNKP collaborates": -0.684081}, "PAIR": {"TEAM-GSNGGZZZ": -2.321548, "UNKNOWN": -0.000618, "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-ETCPKNKP collaborates": -0.1358}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-GSNGGZZZ", "gap": -2.185748}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-ETCPKNKP collaborates", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision is revision 2, where WORK-ETCPKNKP collaborates", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "NEWER_DECOY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_B1", "C03_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000231}, "PAIR": {"UNKNOWN": -0.000159}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C03_NEWER_DECOY_B0 
+PASS KV_UNCHANGED_C03_NEWER_DECOY_B1 
+PASS KV_UNCHANGED_C03_NEWER_DECOY_PAIR 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_DECOY_ONLY_C03_X1 C03_X1 {'ssd_verify_ms': 24.905, 'h2d_ms': 1.252, 'fusion_ms': 247.452, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C03_X1 ['C03_X1']
+PASS NATIVE_80_C03_DECOY_ONLY_B0 
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP ISOLATED_C03_DECOY_ONLY_C03_X2 C03_X2 {'ssd_verify_ms': 22.092, 'h2d_ms': 0.991, 'fusion_ms': 244.804, 'cid': 'C03_X2', 'memory_tokens': 62}
+PASS ISOLATED_SOURCE_C03_X2 ['C03_X2']
+PASS NATIVE_80_C03_DECOY_ONLY_B1 
+PASS FILE_SHA_C03_X1 
+PASS CARTRIDGE_ID_C03_X1 
+PASS CARTRIDGE_TENSOR_SHA_C03_X1 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST788_C03_DECOY_ONLY C03_X1 {'ssd_verify_ms': 23.035, 'h2d_ms': 1.056, 'fusion_ms': 245.059, 'cid': 'C03_X1', 'memory_tokens': 62}
+PASS FILE_SHA_C03_X2 
+PASS CARTRIDGE_ID_C03_X2 
+PASS CARTRIDGE_TENSOR_SHA_C03_X2 
+NATIVE_FUSION_STEP TEST788_C03_DECOY_ONLY C03_X2 {'ssd_verify_ms': 23.964, 'h2d_ms': 1.192, 'fusion_ms': 679.783, 'cid': 'C03_X2', 'memory_tokens': 94}
+PASS NATIVE_PAIR_80_C03_DECOY_ONLY 
+PASS PAIR_ORDER_C03_DECOY_ONLY 
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "CURRENT", "cartridges_OFFLINE": ["C03_X1", "C03_X2"], "generated": {"B0": {"raw": "TEAM-VKHJBSFY", "prediction": "TEAM-VKHJBSFY", "generated_tokens": 7, "sdpa_calls": 28}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}}, "scores": {"B0": {"TEAM-VKHJBSFY": -2.1e-05, "UNKNOWN": -14.250125, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -3.125573}, "B1": {"TEAM-VKHJBSFY": -2.250066, "UNKNOWN": -0.00039, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.468957}, "PAIR": {"TEAM-VKHJBSFY": -0.548039, "UNKNOWN": -0.03823, "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.": -0.113777}}, "decision": {"action": "KEEP_PAIR", "reason": "PAIR_SUPPORTS_OWN_ANSWER", "strongest_challenge": "TEAM-VKHJBSFY", "gap": -0.43426200000000004}, "selected": "PAIR", "readout": {"raw": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "prediction": "UNKNOWN", "generated_tokens": 20, "sdpa_calls": 80}, "final": "UNKNOWN\n\nThe latest authoritative revision mentioned in the document is revision 2, not revision 1.", "baseline_expected_OFFLINE": "TEAM-GSNGGZZZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": false, "final_unknown_OFFLINE": false, "changed_pair_OFFLINE": false}
+TEST788_ROW {"family": "C03", "scenario_OFFLINE": "DECOY_ONLY", "view_OFFLINE": "HISTORICAL", "cartridges_OFFLINE": ["C03_X1", "C03_X2"], "generated": {"B0": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "B1": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}, "PAIR": {"raw": "UNKNOWN", "prediction": "UNKNOWN", "generated_tokens": 2, "sdpa_calls": 8}}, "scores": {"B0": {"UNKNOWN": -0.000431}, "B1": {"UNKNOWN": -0.000231}, "PAIR": {"UNKNOWN": -0.000262}}, "decision": {"action": "ABSTAIN", "reason": "PAIR_MISSING_AND_NONUNIQUE"}, "selected": null, "readout": null, "final": "UNKNOWN", "baseline_expected_OFFLINE": "TEAM-MYFFBTPZ", "decoy_OFFLINE": "TEAM-VKHJBSFY", "pair_is_baseline_OFFLINE": false, "pair_is_decoy_OFFLINE": false, "final_is_baseline_OFFLINE": false, "final_is_decoy_OFFLINE": false, "pair_unknown_OFFLINE": true, "final_unknown_OFFLINE": true, "changed_pair_OFFLINE": false}
+PASS KV_UNCHANGED_C03_DECOY_ONLY_B0 
+PASS KV_UNCHANGED_C03_DECOY_ONLY_B1 
+PASS KV_UNCHANGED_C03_DECOY_ONLY_PAIR 
+PASS SSD_SHA_UNCHANGED_C03_B0 
+PASS SSD_SHA_UNCHANGED_C03_B1 
+PASS SSD_SHA_UNCHANGED_C03_X0 
+PASS SSD_SHA_UNCHANGED_C03_X1 
+PASS SSD_SHA_UNCHANGED_C03_X2 
+PASS TOTAL_CASES 48
+PASS FROZEN_WEIGHTS 
+PASS NO_RESIDUAL_HOOKS 
+TEST788_COMPLETED {"n": 48, "pair_baseline": 16, "pair_decoy": 8, "pair_unknown": 16, "final_baseline": 16, "final_decoy": 8, "final_unknown": 16, "changed_pair": 0, "actions": {"SWITCH_B0": 0, "SWITCH_B1": 0, "KEEP_PAIR": 32, "ABSTAIN": 16}, "scenarios": {"BASELINE": {"n": 8, "pair_baseline": 8, "pair_decoy": 0, "pair_unknown": 0}, "SAME_REV_CONFLICT": {"n": 8, "pair_baseline": 0, "pair_decoy": 4, "pair_unknown": 4}, "SAME_REV_REVERSED": {"n": 8, "pair_baseline": 4, "pair_decoy": 0, "pair_unknown": 4}, "OLDER_DECOY": {"n": 8, "pair_baseline": 4, "pair_decoy": 4, "pair_unknown": 0}, "NEWER_DECOY": {"n": 8, "pair_baseline": 0, "pair_decoy": 0, "pair_unknown": 4}, "DECOY_ONLY": {"n": 8, "pair_baseline": 0, "pair_decoy": 0, "pair_unknown": 4}}, "interpretation": "Contradiction sensitivity, not an autonomous truth detector."}
+FILES /content/AKBASCORE_TEST779_20261027T001118_307424Z/TEST788_results.json /content/AKBASCORE_TEST779_20261027T001118_307424Z/TEST788.log /content/AKBASCORE_TEST779_20261027T001118_307424Z/TEST788_manifest.json
