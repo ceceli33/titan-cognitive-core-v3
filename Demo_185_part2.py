@@ -3,7 +3,7 @@
 # PART 2 / 4 — the records of THIS run (engine files first, the live engine output as fallback), the independent
 #              read-only verification, descriptive host statistics of the sealed cartridges, and the figure toolkit
 #              (JPEG 300 dpi, layout QC). Nothing here routes, reads, decides or writes memory — that is the engine's work.
-# THIS PART  28,101 characters · its last line is  # ===== END OF PART 2/4 =====
+# THIS PART  30,350 characters · its last line is  # ===== END OF PART 2/4 =====
 # =====================================================================================================================
 if not {1}<=globals().get("_AKB815_PARTS",set()):raise RuntimeError("PART "+str(sorted({1}-globals().get("_AKB815_PARTS",set())))+" of the program is missing above this part in the cell — paste PART 1, 2, 3 and 4 one below the other, each completely (every part ends with an END OF PART line)")
 _AKB815_PARTS=globals().setdefault("_AKB815_PARTS",set())
@@ -169,8 +169,30 @@ def stage_verify():
     R["acceptance_equals_live_line"]=(json.dumps(jsafe(res.get("demo_acceptance")),sort_keys=True)==json.dumps(jsafe(EV["records"].get("acceptance")),sort_keys=True)) if EV["records"].get("acceptance") else None
     R["engine_log_present"]=(root/"TEST815.log").is_file()
     if R["engine_log_present"]:
-        el=[l.rstrip() for l in (tload(root/"TEST815.log") or "").splitlines() if l.startswith(("PASS ","FAIL "))];ll=[l.rstrip() for _,_,l in LINES if l.startswith(("PASS ","FAIL "))]
-        R["engine_log_gates_equal_live"]=(el==ll);R["engine_log_gates"]=len(el)
+        # 815.py runs its locked prelude first (it prints the 709/730/757/721/764 lock checks), then opens its own log with
+        # LOG.write_text('') — so TEST815.log starts at the engine's first log line and never holds the prelude gates. The
+        # comparison is therefore anchored at that first line: from there on, every gate of the live stdout must equal the
+        # engine's file one to one, in order; before it, only the prelude's lock gates are allowed. Nothing else is accepted.
+        G_=("PASS ","FAIL ");PRE=("PASS SOURCE_SIZE_","PASS GIT_LOCK_","PASS SYMBOLS_","PASS ENGINE_DEPENDENCIES")
+        elines=[l.rstrip() for l in (tload(root/"TEST815.log") or "").splitlines() if l.strip()];el=[l for l in elines if l.startswith(G_)]
+        live=[l.rstrip() for _,st_,l in LINES if st_=="stdout"];ll=[l for l in live if l.startswith(G_)]
+        first=elines[0] if elines else None;b=live.index(first) if first in live else None
+        pre=[l for l in live[:b] if l.startswith(G_)] if b is not None else [];post=[l for l in live[b:] if l.startswith(G_)] if b is not None else ll
+        import difflib
+        miss,extra,diff=[],[],[]
+        for op,i1,i2,j1,j2 in difflib.SequenceMatcher(None,post,el,autojunk=False).get_opcodes():
+            if op=="delete":miss+=post[i1:i2]
+            elif op=="insert":extra+=el[j1:j2]
+            elif op=="replace":diff+=[dict(live=a,engine_log=c) for a,c in zip(post[i1:i2],el[j1:j2])];miss+=post[i1+(j2-j1):i2];extra+=el[j1+(i2-i1):j2]
+        bad_pre=[l for l in pre if not l.startswith(PRE)]
+        R["engine_log_gates"]=len(el);R["live_gates"]=len(ll)
+        R["engine_log_comparison"]=dict(engine_log_first_line=first,anchor_found_in_live_output=b is not None,live_gates_before_anchor=len(pre),
+            live_gates_before_anchor_are_prelude_lock_gates=not bad_pre,live_gates_from_anchor=len(post),engine_log_gates=len(el),
+            missing_in_engine_log=miss[:50],extra_in_engine_log=extra[:50],different=diff[:50],unexpected_before_anchor=bad_pre[:50],
+            counts=dict(missing=len(miss),extra=len(extra),different=len(diff),unexpected_before_anchor=len(bad_pre)),
+            prelude_gates_before_anchor=pre[:50])
+        R["engine_log_gates_equal_live"]=bool(el) and b is not None and post==el and not bad_pre and len(pre)+len(post)==len(ll)
+        if not R["engine_log_gates_equal_live"]:slog("ENGINE_LOG_DIFF","TEST815.log vs live engine output",**R["engine_log_comparison"]["counts"],anchor=first,anchor_found=b is not None)
     for k in ("review_csv_ok","public_audit_ok","summary_equals_live_line","acceptance_equals_live_line","engine_log_gates_equal_live"):
         if R.get(k) is False:probs.append("RECORD "+k)
     # consistency of the counts the figures use
