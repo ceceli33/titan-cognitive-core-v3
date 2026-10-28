@@ -1,33 +1,33 @@
 ════════════════════════════════════════════════════════════════════════════════════════════════════
-AKBASCORE SILICON HIPPOCAMPUS · TEST815 · start-up 2026-10-28T12:03:00+00:00 · session SH815-20261028-120300
+AKBASCORE SILICON HIPPOCAMPUS · TEST815 · start-up 2026-10-28T13:28:04+00:00 · session SH815-20261028-132804
 ════════════════════════════════════════════════════════════════════════════════════════════════════
-12:03:00 [-] LOCKED_SOURCE    815.py {"git_blob": "77774f87428c0243c9a86ea6a041364acd9c1b03", "bytes": 49783, "obtained": "GitHub https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/815.py (blob verified)"}
-12:03:01 [-] LOCKED_SOURCE    LICENSE {"git_blob": "9aad4724d1072f9e56486650a9527380c867a53b", "bytes": 4525, "obtained": "GitHub https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/LICENSE (blob verified)"}
-12:03:01 [-] ENGINE_READY     815.py locked; it runs unchanged as one OS process when RUN is pressed {"git_blob": "77774f87428c0243c9a86ea6a041364acd9c1b03"}
+13:28:04 [-] LOCKED_SOURCE    815.py {"git_blob": "77774f87428c0243c9a86ea6a041364acd9c1b03", "bytes": 49783, "obtained": "GitHub https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/815.py (blob verified)"}
+13:28:04 [-] LOCKED_SOURCE    LICENSE {"git_blob": "9aad4724d1072f9e56486650a9527380c867a53b", "bytes": 4525, "obtained": "GitHub https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/LICENSE (blob verified)"}
+13:28:04 [-] ENGINE_READY     815.py locked; it runs unchanged as one OS process when RUN is pressed {"git_blob": "77774f87428c0243c9a86ea6a041364acd9c1b03"}
 Colab notebook detected. To show errors in colab notebook, set debug=True in launch()
 
 Could not create share link. Please check your internet connection or our status page: https://status.gradio.app.
 Warning: This function may stop working due to changes in browser security.
 Try `serve_kernel_port_as_iframe` instead. 
-2026/10/28 12:03:03 [W] [service.go:132] login to server failed: dial tcp 44.237.78.176:7000: connect: connection refused
-####################################################################################################
+2026/10/28 13:28:06 [W] [service.go:132] login to server failed: dial tcp 44.237.78.176:7000: connect: connection refused
+▶ Open the AKBASCORE TEST815 interface (Colab window)####################################################################################################
 INTERFACE OPEN · local only: http://127.0.0.1:7860/
   public link : — (tunnel not available; use the Colab window link above)
   local       : http://127.0.0.1:7860/
   Press RUN in the interface — everything else runs automatically. If the link stops working: run  launch_interface()  in a new cell.
 ####################################################################################################
-12:03:03 [-] LAUNCH           interface open {"share_url": null, "local_url": "http://127.0.0.1:7860/", "colab_window": "Colab port window, port 7860"}
+13:28:06 [-] LAUNCH           interface open {"share_url": null, "local_url": "http://127.0.0.1:7860/", "colab_window": "Colab port window, port 7860"}
 ####################################################################################################
 THE CELL STAYS RUNNING — the interface is live. Press RUN in the interface; the engine output is printed here and shown in the interface.
   A full RUN takes about 40–60 minutes on an A100. Stop this cell (■) only when you have finished; the files stay in /content/AKBASCORE_TEST815_DEMO
 ####################################################################################################
 ════════════════════════════════════════════════════════════════════════════════════════════════════
-RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 engine as one process (about 40–60 minutes on an A100, model download included)
+RUN SH815-20261028-132804 · 2026-10-28T13:31:20+00:00 · the locked TEST815 engine as one process (about 40–60 minutes on an A100, model download included)
 ════════════════════════════════════════════════════════════════════════════════════════════════════
 ── [1/13] Pre-flight — one A100 80 GB, empty GPU, disk, locked engine 815.py (git blob), fresh session folder
-12:03:38 [PRECHECK] STAGE_DONE       PRECHECK {"note": "NVIDIA A100-SXM4-80GB · used 0 MiB of 81920 MiB · disk free 193.1 GiB · model cache 0.0 GiB · 815.py git blob 77774f87428c… (GitHub https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/815.py (blob verified)) · network: {'github': 'HTTP 206', 'europe_pmc': 'HTTP 200', 'h
+13:31:23 [PRECHECK] STAGE_DONE       PRECHECK {"note": "NVIDIA A100-SXM4-80GB · used 0 MiB of 81920 MiB · disk free 193.1 GiB · model cache 0.0 GiB · 815.py git blob 77774f87428c… (GitHub https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/815.py (blob verified)) · network: {'github': 'HTTP 206', 'europe_pmc': 'HTTP 200', 'h
 ── [2/13] Engine start — locked TEST790 / 789 / 779 / 709 / 730 / 757 / 721 / 764 definitions verified by git blob inside the engine
-12:03:38 [LOCKS] ENGINE_START     TEST815 · /usr/bin/python3 -u /content/AKBASCORE_TEST815_DEMO/locked_sources/815.py {"cwd": "/content"}
+13:31:23 [LOCKS] ENGINE_START     TEST815 · /usr/bin/python3 -u /content/AKBASCORE_TEST815_DEMO/locked_sources/815.py {"cwd": "/content"}
   TEST815 | TEST815_GPU_PREFLIGHT {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
   TEST815 | TEST815_GPU_FREE_GIB 78.83
   TEST815 | PASS SOURCE_SIZE_709.py 20954
@@ -80,35 +80,36 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS QUESTION_NO_BODY_REPLAY
 ── [4/13] Frozen Qwen2.5-72B-Instruct loaded (NF4, BF16 compute) — weight sentinel taken
   TEST815 | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-12:05:38 [MODEL] ENGINE_STATUS    TEST815 · 2 min since start · stage MODEL · working · 1 min 29 s in this stage · downloading the model weights (≈145 GB) · 31.6 GB written to disk so far · last engine line 88 s ago
+13:33:23 [MODEL] ENGINE_STATUS    TEST815 · 2 min since start · stage MODEL · working · 1 min 31 s in this stage · downloading the model weights (≈145 GB) · 31.6 GB written to disk so far · last engine line 90 s ago
 ⟳ TEST815 · Fetching 37 files: 0%| | 0/37 [00:00<?, ?it/s]
-12:06:38 [MODEL] ENGINE_STATUS    TEST815 · 3 min since start · stage MODEL · working · 2 min 29 s in this stage · downloading the model weights (≈145 GB) · 53.4 GB written to disk so far · Fetching 37 files: 0%| | 0/37 [00:00<?, ?it/s] · last engine line 148 s ago
-⟳ TEST815 · Fetching 37 files: 3%|▎ | 1/37 [01:28<53:03, 88.43s/it]
-12:07:38 [MODEL] ENGINE_STATUS    TEST815 · 4 min since start · stage MODEL · working · 3 min 29 s in this stage · downloading the model weights (≈145 GB) · 74.0 GB written to disk so far · Fetching 37 files: 3%|▎ | 1/37 [01:28<53:03, 88.43s/it] · last engine line 209 s ago
-⟳ TEST815 · Fetching 37 files: 24%|██▍ | 9/37 [02:57<08:04, 17.30s/it]
-12:08:38 [MODEL] ENGINE_STATUS    TEST815 · 5 min since start · stage MODEL · working · 4 min 29 s in this stage · downloading the model weights (≈145 GB) · 94.8 GB written to disk so far · Fetching 37 files: 46%|████▌ | 17/37 [04:21<04:29, 13.45s/it] · last engine line 269 s ago
-12:09:39 [MODEL] ENGINE_STATUS    TEST815 · 6 min since start · stage MODEL · working · 5 min 29 s in this stage · downloading the model weights (≈145 GB) · 119.2 GB written to disk so far · Fetching 37 files: 54%|█████▍ | 20/37 [04:22<02:57, 10.42s/it] · last engine line 329 s ago
-⟳ TEST815 · Fetching 37 files: 57%|█████▋ | 21/37 [04:25<02:35, 9.71s/it]
-12:10:39 [MODEL] ENGINE_STATUS    TEST815 · 7 min since start · stage MODEL · working · 6 min 29 s in this stage · downloading the model weights (≈145 GB) · 140.2 GB written to disk so far · Fetching 37 files: 57%|█████▋ | 21/37 [04:25<02:35, 9.71s/it] · last engine line 389 s ago
-⟳ TEST815 · Fetching 37 files: 68%|██████▊ | 25/37 [05:50<02:46, 13.86s/it]
-⟳ TEST815 · Loading weights: 5%|▌ | 52/963 [00:28<04:54, 3.09it/s]
-12:11:39 [MODEL] ENGINE_STATUS    TEST815 · 8 min since start · stage MODEL · working · 7 min 30 s in this stage · loading the frozen 72B weights onto the GPU · GPU 37.8 GiB · Loading weights: 7%|▋ | 64/963 [00:33<04:52, 3.08it/s] · last engine line 449 s ago
-⟳ TEST815 · Loading weights: 14%|█▎ | 132/963 [01:00<04:18, 3.22it/s]
-⟳ TEST815 · Loading weights: 22%|██▏ | 209/963 [01:31<05:53, 2.13it/s]
-12:12:39 [MODEL] ENGINE_STATUS    TEST815 · 9 min since start · stage MODEL · working · 8 min 30 s in this stage · loading the frozen 72B weights onto the GPU · GPU 37.9 GiB · Loading weights: 22%|██▏ | 216/963 [01:34<04:01, 3.09it/s] · last engine line 509 s ago
-⟳ TEST815 · Loading weights: 30%|██▉ | 288/963 [02:03<03:36, 3.12it/s]
-⟳ TEST815 · Loading weights: 38%|███▊ | 364/963 [02:33<03:15, 3.07it/s]
-12:13:39 [MODEL] ENGINE_STATUS    TEST815 · 10 min since start · stage MODEL · working · 9 min 30 s in this stage · loading the frozen 72B weights onto the GPU · GPU 37.9 GiB · Loading weights: 38%|███▊ | 365/963 [02:35<04:32, 2.20it/s] · last engine line 569 s ago
-⟳ TEST815 · Loading weights: 46%|████▌ | 444/963 [03:05<02:46, 3.11it/s]
-12:14:39 [MODEL] ENGINE_STATUS    TEST815 · 11 min since start · stage MODEL · working · 10 min 30 s in this stage · loading the frozen 72B weights onto the GPU · GPU 37.9 GiB · Loading weights: 54%|█████▎ | 516/963 [03:34<02:19, 3.21it/s] · last engine line 629 s ago
-⟳ TEST815 · Loading weights: 54%|█████▍ | 520/963 [03:36<02:22, 3.10it/s]
-⟳ TEST815 · Loading weights: 62%|██████▏ | 600/963 [04:07<01:52, 3.22it/s]
-12:15:39 [MODEL] ENGINE_STATUS    TEST815 · 12 min since start · stage MODEL · working · 11 min 30 s in this stage · loading the frozen 72B weights onto the GPU · GPU 38.0 GiB · Loading weights: 70%|██████▉ | 670/963 [04:36<01:44, 2.82it/s] · last engine line 690 s ago
-⟳ TEST815 · Loading weights: 70%|███████ | 676/963 [04:37<01:34, 3.05it/s]
-⟳ TEST815 · Loading weights: 78%|███████▊ | 749/963 [05:07<01:38, 2.17it/s]
-12:16:40 [MODEL] ENGINE_STATUS    TEST815 · 13 min since start · stage MODEL · working · 12 min 30 s in this stage · loading the frozen 72B weights onto the GPU · GPU 38.0 GiB · Loading weights: 85%|████████▌ | 820/963 [05:35<00:46, 3.08it/s] · last engine line 750 s ago
-⟳ TEST815 · Loading weights: 86%|████████▌ | 828/963 [05:38<00:42, 3.17it/s]
-⟳ TEST815 · Loading weights: 94%|█████████▍| 904/963 [06:09<00:19, 3.00it/s]
+13:34:23 [MODEL] ENGINE_STATUS    TEST815 · 3 min since start · stage MODEL · working · 2 min 31 s in this stage · downloading the model weights (≈145 GB) · 54.1 GB written to disk so far · Fetching 37 files: 0%| | 0/37 [00:00<?, ?it/s] · last engine line 151 s ago
+⟳ TEST815 · Fetching 37 files: 3%|▎ | 1/37 [01:27<52:42, 87.86s/it]
+13:35:23 [MODEL] ENGINE_STATUS    TEST815 · 4 min since start · stage MODEL · working · 3 min 31 s in this stage · downloading the model weights (≈145 GB) · 76.9 GB written to disk so far · Fetching 37 files: 24%|██▍ | 9/37 [02:52<07:49, 16.75s/it] · last engine line 211 s ago
+⟳ TEST815 · Fetching 37 files: 32%|███▏ | 12/37 [02:56<04:52, 11.71s/it]
+13:36:23 [MODEL] ENGINE_STATUS    TEST815 · 5 min since start · stage MODEL · working · 4 min 31 s in this stage · downloading the model weights (≈145 GB) · 99.7 GB written to disk so far · Fetching 37 files: 32%|███▏ | 12/37 [02:56<04:52, 11.71s/it] · last engine line 271 s ago
+⟳ TEST815 · Fetching 37 files: 46%|████▌ | 17/37 [04:13<04:26, 13.30s/it]
+13:37:24 [MODEL] ENGINE_STATUS    TEST815 · 6 min since start · stage MODEL · working · 5 min 32 s in this stage · downloading the model weights (≈145 GB) · 122.4 GB written to disk so far · Fetching 37 files: 46%|████▌ | 17/37 [04:13<04:26, 13.30s/it] · last engine line 331 s ago
+⟳ TEST815 · Fetching 37 files: 54%|█████▍ | 20/37 [04:44<03:32, 12.49s/it]
+13:38:24 [MODEL] ENGINE_STATUS    TEST815 · 7 min since start · stage MODEL · working · 6 min 32 s in this stage · downloading the model weights (≈145 GB) · 143.4 GB written to disk so far · Fetching 37 files: 54%|█████▍ | 20/37 [04:44<03:32, 12.49s/it] · last engine line 391 s ago
+⟳ TEST815 · Fetching 37 files: 68%|██████▊ | 25/37 [05:44<02:28, 12.34s/it]
+⟳ TEST815 · Loading weights: 5%|▌ | 52/963 [00:28<04:49, 3.14it/s]
+13:39:24 [MODEL] ENGINE_STATUS    TEST815 · 8 min since start · stage MODEL · working · 7 min 32 s in this stage · loading the frozen 72B weights onto the GPU · GPU 37.9 GiB · Loading weights: 9%|▉ | 88/963 [00:42<04:37, 3.15it/s] · last engine line 451 s ago
+⟳ TEST815 · Loading weights: 14%|█▎ | 132/963 [00:59<04:14, 3.27it/s]
+⟳ TEST815 · Loading weights: 22%|██▏ | 209/963 [01:29<05:36, 2.24it/s]
+13:40:24 [MODEL] ENGINE_STATUS    TEST815 · 9 min since start · stage MODEL · working · 8 min 32 s in this stage · loading the frozen 72B weights onto the GPU · GPU 37.9 GiB · Loading weights: 25%|██▌ | 244/963 [01:42<03:51, 3.11it/s] · last engine line 511 s ago
+⟳ TEST815 · Loading weights: 30%|██▉ | 288/963 [02:00<03:33, 3.16it/s]
+⟳ TEST815 · Loading weights: 38%|███▊ | 365/963 [02:30<04:23, 2.27it/s]
+13:41:24 [MODEL] ENGINE_STATUS    TEST815 · 10 min since start · stage MODEL · working · 9 min 32 s in this stage · loading the frozen 72B weights onto the GPU · GPU 37.9 GiB · Loading weights: 42%|████▏ | 400/963 [02:43<02:56, 3.19it/s] · last engine line 572 s ago
+⟳ TEST815 · Loading weights: 46%|████▌ | 444/963 [03:00<02:46, 3.12it/s]
+⟳ TEST815 · Loading weights: 54%|█████▍ | 521/963 [03:31<03:17, 2.24it/s]
+13:42:24 [MODEL] ENGINE_STATUS    TEST815 · 11 min since start · stage MODEL · working · 10 min 32 s in this stage · loading the frozen 72B weights onto the GPU · GPU 38.0 GiB · Loading weights: 57%|█████▋ | 552/963 [03:43<02:09, 3.17it/s] · last engine line 632 s ago
+⟳ TEST815 · Loading weights: 62%|██████▏ | 600/963 [04:01<01:51, 3.26it/s]
+⟳ TEST815 · Loading weights: 70%|███████ | 677/963 [04:32<02:06, 2.26it/s]
+13:43:24 [MODEL] ENGINE_STATUS    TEST815 · 12 min since start · stage MODEL · working · 11 min 32 s in this stage · loading the frozen 72B weights onto the GPU · GPU 38.0 GiB · Loading weights: 73%|███████▎ | 706/963 [04:43<01:31, 2.82it/s] · last engine line 692 s ago
+⟳ TEST815 · Loading weights: 79%|███████▊ | 756/963 [05:03<01:05, 3.18it/s]
+⟳ TEST815 · Loading weights: 87%|████████▋ | 833/963 [05:33<00:56, 2.31it/s]
+13:44:25 [MODEL] ENGINE_STATUS    TEST815 · 13 min since start · stage MODEL · working · 12 min 32 s in this stage · loading the frozen 72B weights onto the GPU · GPU 38.0 GiB · Loading weights: 90%|████████▉ | 862/963 [05:44<00:36, 2.80it/s] · last engine line 752 s ago
+⟳ TEST815 · Loading weights: 95%|█████████▍| 912/963 [06:03<00:15, 3.27it/s]
   TEST815 | PASS MODEL_ARCH (80, 8192, 64, 8, 128)
   TEST815 | PASS FROZEN
 ── [5/13] 22 physical CUT3 cartridges forged and sealed on the SSD — 20 synthetic decoys + 2 real articles
@@ -375,7 +376,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 206.146, 'h2d_ms': 26.71, 'fusion_ms': 2404.241, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 204.641, 'h2d_ms': 27.304, 'fusion_ms': 2404.4, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q1_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q1_ADAPTIVE_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q1_ADAPTIVE_INITIAL
@@ -383,11 +384,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 219.443, 'h2d_ms': 8.818, 'fusion_ms': 2433.513, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 217.663, 'h2d_ms': 8.838, 'fusion_ms': 2434.334, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 201.569, 'h2d_ms': 8.954, 'fusion_ms': 4844.755, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 202.418, 'h2d_ms': 8.919, 'fusion_ms': 4846.802, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q1_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q1_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q1_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -396,7 +397,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 207.396, 'h2d_ms': 8.98, 'fusion_ms': 2405.194, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 209.289, 'h2d_ms': 9.005, 'fusion_ms': 2406.76, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q1_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q1_FIXED_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q1_FIXED_INITIAL
@@ -404,7 +405,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 203.304, 'h2d_ms': 9.218, 'fusion_ms': 2421.232, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 201.882, 'h2d_ms': 8.935, 'fusion_ms': 2432.006, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q1_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q1_FIXED_SECOND {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q1_FIXED_SECOND
@@ -412,11 +413,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 201.32, 'h2d_ms': 8.844, 'fusion_ms': 2426.421, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 201.945, 'h2d_ms': 8.965, 'fusion_ms': 2429.587, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 201.696, 'h2d_ms': 8.955, 'fusion_ms': 4831.474, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 202.996, 'h2d_ms': 8.825, 'fusion_ms': 4855.035, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q1_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q1_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q1_FIXED_PAIR
@@ -424,11 +425,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 202.294, 'h2d_ms': 8.842, 'fusion_ms': 2441.448, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 201.87, 'h2d_ms': 8.979, 'fusion_ms': 2429.54, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 201.677, 'h2d_ms': 8.869, 'fusion_ms': 4847.314, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 200.642, 'h2d_ms': 8.744, 'fusion_ms': 4846.01, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q1_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q1_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q1_FIXED_REVERSE
@@ -438,7 +439,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 202.123, 'h2d_ms': 8.959, 'fusion_ms': 2404.351, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 203.663, 'h2d_ms': 9.097, 'fusion_ms': 2405.321, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q2_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q2_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q2_ADAPTIVE_INITIAL
@@ -446,11 +447,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 202.095, 'h2d_ms': 8.831, 'fusion_ms': 2434.13, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 203.277, 'h2d_ms': 8.937, 'fusion_ms': 2428.418, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 206.225, 'h2d_ms': 9.018, 'fusion_ms': 4854.357, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 201.997, 'h2d_ms': 8.864, 'fusion_ms': 4849.342, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q2_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q2_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q2_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -459,7 +460,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 203.005, 'h2d_ms': 8.997, 'fusion_ms': 2404.505, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 205.737, 'h2d_ms': 9.185, 'fusion_ms': 2406.226, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q2_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q2_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q2_FIXED_INITIAL
@@ -467,7 +468,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 201.741, 'h2d_ms': 8.81, 'fusion_ms': 2424.063, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 201.934, 'h2d_ms': 9.035, 'fusion_ms': 2424.937, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q2_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q2_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q2_FIXED_SECOND
@@ -475,11 +476,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 202.364, 'h2d_ms': 8.863, 'fusion_ms': 2426.103, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 204.938, 'h2d_ms': 8.777, 'fusion_ms': 2425.993, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 201.328, 'h2d_ms': 8.768, 'fusion_ms': 4857.561, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 201.64, 'h2d_ms': 8.884, 'fusion_ms': 4855.046, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q2_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q2_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q2_FIXED_PAIR
@@ -487,11 +488,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 201.51, 'h2d_ms': 8.829, 'fusion_ms': 2425.028, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 202.418, 'h2d_ms': 8.753, 'fusion_ms': 2444.193, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 201.865, 'h2d_ms': 8.856, 'fusion_ms': 4840.545, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 203.756, 'h2d_ms': 8.887, 'fusion_ms': 4857.704, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q2_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q2_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q2_FIXED_REVERSE
@@ -501,7 +502,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 218.86, 'h2d_ms': 9.116, 'fusion_ms': 2405.257, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 213.296, 'h2d_ms': 8.907, 'fusion_ms': 2405.391, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q3_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q3_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q3_ADAPTIVE_INITIAL
@@ -509,11 +510,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 202.271, 'h2d_ms': 8.863, 'fusion_ms': 2444.255, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 203.16, 'h2d_ms': 8.806, 'fusion_ms': 2435.472, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 202.483, 'h2d_ms': 8.784, 'fusion_ms': 4865.633, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 202.9, 'h2d_ms': 9.029, 'fusion_ms': 4869.704, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q3_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q3_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q3_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -522,7 +523,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 202.096, 'h2d_ms': 8.777, 'fusion_ms': 2404.599, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 204.143, 'h2d_ms': 8.936, 'fusion_ms': 2405.207, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q3_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q3_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q3_FIXED_INITIAL
@@ -530,7 +531,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 202.2, 'h2d_ms': 9.181, 'fusion_ms': 2435.447, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 202.838, 'h2d_ms': 9.132, 'fusion_ms': 2434.226, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q3_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q3_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q3_FIXED_SECOND
@@ -538,11 +539,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 202.638, 'h2d_ms': 8.893, 'fusion_ms': 2431.897, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 202.734, 'h2d_ms': 8.881, 'fusion_ms': 2436.173, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 205.101, 'h2d_ms': 9.028, 'fusion_ms': 4849.29, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 201.884, 'h2d_ms': 8.834, 'fusion_ms': 4857.13, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q3_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q3_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q3_FIXED_PAIR
@@ -550,11 +551,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 202.866, 'h2d_ms': 8.94, 'fusion_ms': 2431.032, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 202.738, 'h2d_ms': 8.889, 'fusion_ms': 2435.065, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 202.667, 'h2d_ms': 8.717, 'fusion_ms': 4860.044, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 202.075, 'h2d_ms': 8.773, 'fusion_ms': 4846.307, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q3_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q3_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q3_FIXED_REVERSE
@@ -564,7 +565,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 203.005, 'h2d_ms': 8.886, 'fusion_ms': 2405.451, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 220.57, 'h2d_ms': 9.009, 'fusion_ms': 2407.158, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q4_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q4_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q4_ADAPTIVE_INITIAL
@@ -572,11 +573,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 202.864, 'h2d_ms': 8.76, 'fusion_ms': 2419.596, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 203.831, 'h2d_ms': 8.825, 'fusion_ms': 2435.737, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 203.526, 'h2d_ms': 8.69, 'fusion_ms': 4843.985, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 203.56, 'h2d_ms': 8.852, 'fusion_ms': 4852.709, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q4_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q4_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q4_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -585,7 +586,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 204.873, 'h2d_ms': 9.059, 'fusion_ms': 2405.438, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 204.936, 'h2d_ms': 8.994, 'fusion_ms': 2407.648, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q4_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q4_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q4_FIXED_INITIAL
@@ -593,7 +594,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 202.563, 'h2d_ms': 8.966, 'fusion_ms': 2420.619, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 204.14, 'h2d_ms': 8.951, 'fusion_ms': 2427.65, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q4_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q4_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q4_FIXED_SECOND
@@ -601,11 +602,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 202.819, 'h2d_ms': 8.998, 'fusion_ms': 2419.207, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 203.388, 'h2d_ms': 8.977, 'fusion_ms': 2435.836, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 203.709, 'h2d_ms': 8.808, 'fusion_ms': 4854.198, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 202.692, 'h2d_ms': 8.772, 'fusion_ms': 4849.06, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q4_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q4_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q4_FIXED_PAIR
@@ -613,11 +614,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 202.602, 'h2d_ms': 8.839, 'fusion_ms': 2442.691, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 209.189, 'h2d_ms': 9.031, 'fusion_ms': 2441.477, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 209.549, 'h2d_ms': 9.508, 'fusion_ms': 4879.116, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 205.017, 'h2d_ms': 9.004, 'fusion_ms': 4861.652, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q4_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q4_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q4_FIXED_REVERSE
@@ -627,7 +628,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 204.998, 'h2d_ms': 9.31, 'fusion_ms': 2405.933, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 204.949, 'h2d_ms': 9.05, 'fusion_ms': 2407.422, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q5_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q5_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q5_ADAPTIVE_INITIAL
@@ -635,11 +636,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 203.429, 'h2d_ms': 8.99, 'fusion_ms': 2434.288, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 204.78, 'h2d_ms': 9.137, 'fusion_ms': 2436.344, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 202.872, 'h2d_ms': 8.877, 'fusion_ms': 4849.983, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 204.765, 'h2d_ms': 9.488, 'fusion_ms': 4868.592, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q5_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q5_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q5_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -648,7 +649,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 203.421, 'h2d_ms': 8.995, 'fusion_ms': 2405.906, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 207.081, 'h2d_ms': 9.552, 'fusion_ms': 2411.197, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q5_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q5_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q5_FIXED_INITIAL
@@ -656,7 +657,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 203.919, 'h2d_ms': 9.33, 'fusion_ms': 2429.457, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 205.274, 'h2d_ms': 9.0, 'fusion_ms': 2444.665, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q5_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q5_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q5_FIXED_SECOND
@@ -664,11 +665,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 203.51, 'h2d_ms': 9.333, 'fusion_ms': 2431.91, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 203.898, 'h2d_ms': 8.772, 'fusion_ms': 2425.739, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 202.735, 'h2d_ms': 8.845, 'fusion_ms': 4839.76, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 203.169, 'h2d_ms': 8.751, 'fusion_ms': 4848.739, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q5_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q5_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q5_FIXED_PAIR
@@ -676,11 +677,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 205.665, 'h2d_ms': 9.218, 'fusion_ms': 2427.541, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 204.102, 'h2d_ms': 9.116, 'fusion_ms': 2432.435, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 203.0, 'h2d_ms': 8.91, 'fusion_ms': 4851.579, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 205.518, 'h2d_ms': 9.06, 'fusion_ms': 4852.831, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q5_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q5_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q5_FIXED_REVERSE
@@ -690,7 +691,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 204.871, 'h2d_ms': 8.905, 'fusion_ms': 2404.433, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 209.003, 'h2d_ms': 8.978, 'fusion_ms': 2404.708, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q6_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q6_ADAPTIVE_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q6_ADAPTIVE_INITIAL
@@ -698,7 +699,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN PMC9401135 {'ssd_verify_ms': 203.598, 'h2d_ms': 8.783, 'fusion_ms': 2428.675, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN PMC9401135 {'ssd_verify_ms': 206.276, 'h2d_ms': 8.9, 'fusion_ms': 2423.18, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q6_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN
   TEST815 | PASS NATIVE_LENGTH_Q6_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q6_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN
@@ -706,11 +707,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9401135 {'ssd_verify_ms': 204.751, 'h2d_ms': 8.952, 'fusion_ms': 2434.825, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9401135 {'ssd_verify_ms': 204.597, 'h2d_ms': 8.815, 'fusion_ms': 2425.775, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9521804 {'ssd_verify_ms': 202.968, 'h2d_ms': 8.852, 'fusion_ms': 4876.147, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9521804 {'ssd_verify_ms': 203.408, 'h2d_ms': 8.791, 'fusion_ms': 4860.57, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q6_ADAPTIVE_FUSE_ALTERNATE_FIRST
   TEST815 | PASS NATIVE_LENGTH_Q6_ADAPTIVE_FUSE_ALTERNATE_FIRST {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q6_ADAPTIVE_FUSE_ALTERNATE_FIRST
@@ -719,7 +720,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 211.459, 'h2d_ms': 9.0, 'fusion_ms': 2403.451, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 205.426, 'h2d_ms': 8.881, 'fusion_ms': 2404.471, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q6_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q6_FIXED_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q6_FIXED_INITIAL
@@ -727,7 +728,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 204.292, 'h2d_ms': 8.905, 'fusion_ms': 2442.964, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 206.328, 'h2d_ms': 8.942, 'fusion_ms': 2436.07, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q6_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q6_FIXED_SECOND {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q6_FIXED_SECOND
@@ -735,11 +736,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 203.668, 'h2d_ms': 8.866, 'fusion_ms': 2425.55, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 204.665, 'h2d_ms': 8.89, 'fusion_ms': 2433.285, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 203.924, 'h2d_ms': 8.721, 'fusion_ms': 4851.645, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 205.742, 'h2d_ms': 8.942, 'fusion_ms': 4854.221, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q6_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q6_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q6_FIXED_PAIR
@@ -747,11 +748,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 204.145, 'h2d_ms': 8.766, 'fusion_ms': 2420.765, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 205.375, 'h2d_ms': 8.937, 'fusion_ms': 2423.187, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 203.639, 'h2d_ms': 8.862, 'fusion_ms': 4840.958, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 203.065, 'h2d_ms': 8.714, 'fusion_ms': 4852.016, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q6_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q6_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q6_FIXED_REVERSE
@@ -761,7 +762,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 225.715, 'h2d_ms': 9.18, 'fusion_ms': 2406.018, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 204.769, 'h2d_ms': 8.822, 'fusion_ms': 2406.203, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q7_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q7_ADAPTIVE_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q7_ADAPTIVE_INITIAL
@@ -769,11 +770,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 204.111, 'h2d_ms': 8.97, 'fusion_ms': 2441.837, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 205.164, 'h2d_ms': 8.694, 'fusion_ms': 2423.045, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 205.248, 'h2d_ms': 9.129, 'fusion_ms': 4843.418, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.204, 'h2d_ms': 8.774, 'fusion_ms': 4852.037, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q7_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q7_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q7_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -782,7 +783,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 206.418, 'h2d_ms': 9.185, 'fusion_ms': 2405.426, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 203.703, 'h2d_ms': 8.938, 'fusion_ms': 2406.645, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q7_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q7_FIXED_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q7_FIXED_INITIAL
@@ -790,7 +791,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 205.893, 'h2d_ms': 8.947, 'fusion_ms': 2428.597, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 204.41, 'h2d_ms': 8.792, 'fusion_ms': 2435.317, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q7_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q7_FIXED_SECOND {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q7_FIXED_SECOND
@@ -798,11 +799,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 204.306, 'h2d_ms': 8.84, 'fusion_ms': 2444.544, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 204.086, 'h2d_ms': 8.692, 'fusion_ms': 2422.17, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 204.522, 'h2d_ms': 8.79, 'fusion_ms': 4843.057, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 204.396, 'h2d_ms': 8.718, 'fusion_ms': 4847.352, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q7_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q7_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q7_FIXED_PAIR
@@ -810,11 +811,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 205.642, 'h2d_ms': 8.891, 'fusion_ms': 2437.734, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 204.603, 'h2d_ms': 8.811, 'fusion_ms': 2424.801, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 204.995, 'h2d_ms': 8.831, 'fusion_ms': 4856.098, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 203.728, 'h2d_ms': 8.887, 'fusion_ms': 4853.326, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q7_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q7_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q7_FIXED_REVERSE
@@ -824,7 +825,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 205.564, 'h2d_ms': 9.026, 'fusion_ms': 2404.74, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 207.097, 'h2d_ms': 8.963, 'fusion_ms': 2406.003, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q8_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q8_ADAPTIVE_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q8_ADAPTIVE_INITIAL
@@ -832,7 +833,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN PMC9401135 {'ssd_verify_ms': 205.003, 'h2d_ms': 8.854, 'fusion_ms': 2425.325, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN PMC9401135 {'ssd_verify_ms': 204.924, 'h2d_ms': 8.977, 'fusion_ms': 2435.925, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q8_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN
   TEST815 | PASS NATIVE_LENGTH_Q8_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q8_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN
@@ -840,11 +841,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9401135 {'ssd_verify_ms': 205.366, 'h2d_ms': 8.816, 'fusion_ms': 2419.658, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9401135 {'ssd_verify_ms': 205.771, 'h2d_ms': 9.224, 'fusion_ms': 2423.696, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9521804 {'ssd_verify_ms': 204.449, 'h2d_ms': 8.891, 'fusion_ms': 4877.242, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9521804 {'ssd_verify_ms': 205.848, 'h2d_ms': 9.087, 'fusion_ms': 4869.527, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q8_ADAPTIVE_FUSE_ALTERNATE_FIRST
   TEST815 | PASS NATIVE_LENGTH_Q8_ADAPTIVE_FUSE_ALTERNATE_FIRST {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q8_ADAPTIVE_FUSE_ALTERNATE_FIRST
@@ -853,7 +854,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 208.568, 'h2d_ms': 8.94, 'fusion_ms': 2404.963, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 207.272, 'h2d_ms': 9.068, 'fusion_ms': 2407.157, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q8_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q8_FIXED_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q8_FIXED_INITIAL
@@ -861,7 +862,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 205.395, 'h2d_ms': 8.984, 'fusion_ms': 2434.094, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 208.027, 'h2d_ms': 8.803, 'fusion_ms': 2433.759, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q8_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q8_FIXED_SECOND {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q8_FIXED_SECOND
@@ -869,11 +870,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 205.002, 'h2d_ms': 8.96, 'fusion_ms': 2426.508, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 207.045, 'h2d_ms': 8.875, 'fusion_ms': 2422.446, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 206.506, 'h2d_ms': 9.098, 'fusion_ms': 4848.742, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 205.329, 'h2d_ms': 8.774, 'fusion_ms': 4872.36, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q8_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q8_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q8_FIXED_PAIR
@@ -881,11 +882,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 205.221, 'h2d_ms': 8.801, 'fusion_ms': 2433.883, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 211.861, 'h2d_ms': 8.823, 'fusion_ms': 2432.638, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 204.972, 'h2d_ms': 8.975, 'fusion_ms': 4860.847, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 205.695, 'h2d_ms': 9.132, 'fusion_ms': 4865.941, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q8_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q8_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q8_FIXED_REVERSE
@@ -895,7 +896,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 208.786, 'h2d_ms': 9.002, 'fusion_ms': 2405.985, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 217.086, 'h2d_ms': 8.908, 'fusion_ms': 2407.422, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q1_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q1_PARA_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q1_PARA_ADAPTIVE_INITIAL
@@ -903,7 +904,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN PMC9521804 {'ssd_verify_ms': 207.254, 'h2d_ms': 8.819, 'fusion_ms': 2440.119, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN PMC9521804 {'ssd_verify_ms': 206.939, 'h2d_ms': 8.997, 'fusion_ms': 2422.771, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q1_PARA_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN
   TEST815 | PASS NATIVE_LENGTH_Q1_PARA_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q1_PARA_ADAPTIVE_ALTERNATE_AFTER_UNKNOWN
@@ -911,11 +912,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9521804 {'ssd_verify_ms': 205.208, 'h2d_ms': 8.999, 'fusion_ms': 2434.119, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9521804 {'ssd_verify_ms': 205.453, 'h2d_ms': 8.818, 'fusion_ms': 2423.258, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9401135 {'ssd_verify_ms': 207.293, 'h2d_ms': 8.91, 'fusion_ms': 4846.294, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_ADAPTIVE_FUSE_ALTERNATE_FIRST PMC9401135 {'ssd_verify_ms': 206.337, 'h2d_ms': 8.826, 'fusion_ms': 4836.607, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q1_PARA_ADAPTIVE_FUSE_ALTERNATE_FIRST
   TEST815 | PASS NATIVE_LENGTH_Q1_PARA_ADAPTIVE_FUSE_ALTERNATE_FIRST {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q1_PARA_ADAPTIVE_FUSE_ALTERNATE_FIRST
@@ -924,7 +925,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 218.468, 'h2d_ms': 8.931, 'fusion_ms': 2405.011, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 208.297, 'h2d_ms': 9.227, 'fusion_ms': 2407.029, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q1_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q1_PARA_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q1_PARA_FIXED_INITIAL
@@ -932,7 +933,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 206.008, 'h2d_ms': 9.012, 'fusion_ms': 2428.888, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 206.597, 'h2d_ms': 8.987, 'fusion_ms': 2442.255, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q1_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q1_PARA_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q1_PARA_FIXED_SECOND
@@ -940,11 +941,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 204.888, 'h2d_ms': 8.787, 'fusion_ms': 2422.404, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 205.742, 'h2d_ms': 8.927, 'fusion_ms': 2435.589, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 204.444, 'h2d_ms': 9.04, 'fusion_ms': 4866.695, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 206.997, 'h2d_ms': 8.898, 'fusion_ms': 4859.238, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q1_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q1_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q1_PARA_FIXED_PAIR
@@ -952,11 +953,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 205.841, 'h2d_ms': 8.899, 'fusion_ms': 2429.898, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 205.901, 'h2d_ms': 8.869, 'fusion_ms': 2437.015, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 206.921, 'h2d_ms': 9.316, 'fusion_ms': 4867.817, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 206.243, 'h2d_ms': 8.639, 'fusion_ms': 4851.719, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q1_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q1_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q1_PARA_FIXED_REVERSE
@@ -966,7 +967,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 206.411, 'h2d_ms': 8.815, 'fusion_ms': 2404.036, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 231.393, 'h2d_ms': 9.155, 'fusion_ms': 2404.801, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q2_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q2_PARA_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q2_PARA_ADAPTIVE_INITIAL
@@ -974,11 +975,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 205.927, 'h2d_ms': 8.922, 'fusion_ms': 2431.981, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 208.02, 'h2d_ms': 9.038, 'fusion_ms': 2435.149, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 205.389, 'h2d_ms': 9.114, 'fusion_ms': 4847.806, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 206.245, 'h2d_ms': 8.965, 'fusion_ms': 4859.47, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q2_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q2_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q2_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -987,7 +988,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 206.313, 'h2d_ms': 8.967, 'fusion_ms': 2404.732, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 209.781, 'h2d_ms': 9.568, 'fusion_ms': 2405.58, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q2_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q2_PARA_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q2_PARA_FIXED_INITIAL
@@ -995,7 +996,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 205.915, 'h2d_ms': 9.04, 'fusion_ms': 2421.622, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 209.86, 'h2d_ms': 9.016, 'fusion_ms': 2430.089, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q2_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q2_PARA_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q2_PARA_FIXED_SECOND
@@ -1003,11 +1004,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 207.192, 'h2d_ms': 9.102, 'fusion_ms': 2424.474, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 206.36, 'h2d_ms': 8.9, 'fusion_ms': 2422.641, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 205.938, 'h2d_ms': 9.076, 'fusion_ms': 4843.8, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 205.29, 'h2d_ms': 8.768, 'fusion_ms': 4845.61, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q2_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q2_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q2_PARA_FIXED_PAIR
@@ -1015,11 +1016,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 207.987, 'h2d_ms': 9.109, 'fusion_ms': 2426.484, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 206.728, 'h2d_ms': 8.952, 'fusion_ms': 2436.138, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 205.466, 'h2d_ms': 8.927, 'fusion_ms': 4844.219, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 205.924, 'h2d_ms': 8.806, 'fusion_ms': 4851.972, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q2_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q2_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q2_PARA_FIXED_REVERSE
@@ -1029,7 +1030,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 206.835, 'h2d_ms': 8.937, 'fusion_ms': 2404.322, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 210.961, 'h2d_ms': 8.994, 'fusion_ms': 2406.253, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q3_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q3_PARA_ADAPTIVE_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q3_PARA_ADAPTIVE_INITIAL
@@ -1037,11 +1038,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 205.216, 'h2d_ms': 8.752, 'fusion_ms': 2428.746, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 206.424, 'h2d_ms': 8.737, 'fusion_ms': 2435.23, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.372, 'h2d_ms': 8.926, 'fusion_ms': 4855.26, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 206.611, 'h2d_ms': 8.741, 'fusion_ms': 4842.832, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q3_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q3_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q3_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -1049,11 +1050,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_REVERSE_EVIDENCE_CHECK PMC9401135 {'ssd_verify_ms': 206.171, 'h2d_ms': 8.899, 'fusion_ms': 2438.352, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_REVERSE_EVIDENCE_CHECK PMC9401135 {'ssd_verify_ms': 206.484, 'h2d_ms': 8.877, 'fusion_ms': 2439.605, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_REVERSE_EVIDENCE_CHECK PMC9521804 {'ssd_verify_ms': 206.514, 'h2d_ms': 8.97, 'fusion_ms': 4863.944, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_ADAPTIVE_REVERSE_EVIDENCE_CHECK PMC9521804 {'ssd_verify_ms': 207.541, 'h2d_ms': 9.336, 'fusion_ms': 4864.725, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q3_PARA_ADAPTIVE_REVERSE_EVIDENCE_CHECK
   TEST815 | PASS NATIVE_LENGTH_Q3_PARA_ADAPTIVE_REVERSE_EVIDENCE_CHECK {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q3_PARA_ADAPTIVE_REVERSE_EVIDENCE_CHECK
@@ -1062,7 +1063,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 208.414, 'h2d_ms': 9.347, 'fusion_ms': 2405.3, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 206.841, 'h2d_ms': 9.108, 'fusion_ms': 2406.942, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q3_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q3_PARA_FIXED_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q3_PARA_FIXED_INITIAL
@@ -1070,7 +1071,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 209.97, 'h2d_ms': 9.003, 'fusion_ms': 2425.628, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 206.447, 'h2d_ms': 8.906, 'fusion_ms': 2435.603, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q3_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q3_PARA_FIXED_SECOND {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q3_PARA_FIXED_SECOND
@@ -1078,11 +1079,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 206.904, 'h2d_ms': 8.823, 'fusion_ms': 2433.414, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 205.998, 'h2d_ms': 8.898, 'fusion_ms': 2420.18, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 206.448, 'h2d_ms': 8.875, 'fusion_ms': 4867.814, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 206.664, 'h2d_ms': 8.819, 'fusion_ms': 4846.396, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q3_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q3_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q3_PARA_FIXED_PAIR
@@ -1090,11 +1091,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 207.492, 'h2d_ms': 8.872, 'fusion_ms': 2425.198, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 209.339, 'h2d_ms': 8.978, 'fusion_ms': 2446.1, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 206.345, 'h2d_ms': 8.79, 'fusion_ms': 4861.324, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 205.552, 'h2d_ms': 8.798, 'fusion_ms': 4840.035, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q3_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q3_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q3_PARA_FIXED_REVERSE
@@ -1104,7 +1105,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 219.225, 'h2d_ms': 9.025, 'fusion_ms': 2404.86, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 206.627, 'h2d_ms': 9.028, 'fusion_ms': 2405.232, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q4_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q4_PARA_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q4_PARA_ADAPTIVE_INITIAL
@@ -1112,11 +1113,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 208.215, 'h2d_ms': 9.026, 'fusion_ms': 2432.171, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 211.014, 'h2d_ms': 9.178, 'fusion_ms': 2434.053, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 205.989, 'h2d_ms': 8.94, 'fusion_ms': 4867.71, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 206.506, 'h2d_ms': 9.045, 'fusion_ms': 4865.993, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q4_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q4_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q4_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -1125,7 +1126,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 236.035, 'h2d_ms': 9.084, 'fusion_ms': 2405.064, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 210.943, 'h2d_ms': 9.199, 'fusion_ms': 2405.081, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q4_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q4_PARA_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q4_PARA_FIXED_INITIAL
@@ -1133,7 +1134,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 209.318, 'h2d_ms': 9.072, 'fusion_ms': 2423.267, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 207.081, 'h2d_ms': 8.92, 'fusion_ms': 2435.31, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q4_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q4_PARA_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q4_PARA_FIXED_SECOND
@@ -1141,11 +1142,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 207.504, 'h2d_ms': 9.013, 'fusion_ms': 2419.293, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 207.207, 'h2d_ms': 9.018, 'fusion_ms': 2436.378, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 213.31, 'h2d_ms': 9.088, 'fusion_ms': 4854.973, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 206.698, 'h2d_ms': 9.026, 'fusion_ms': 4838.98, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q4_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q4_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q4_PARA_FIXED_PAIR
@@ -1153,11 +1154,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 211.233, 'h2d_ms': 9.996, 'fusion_ms': 2438.364, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 207.146, 'h2d_ms': 8.932, 'fusion_ms': 2430.741, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 207.465, 'h2d_ms': 9.022, 'fusion_ms': 4852.475, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 210.129, 'h2d_ms': 9.314, 'fusion_ms': 4853.679, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q4_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q4_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q4_PARA_FIXED_REVERSE
@@ -1167,7 +1168,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 214.164, 'h2d_ms': 8.763, 'fusion_ms': 2406.005, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 208.519, 'h2d_ms': 9.059, 'fusion_ms': 2407.194, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q5_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q5_PARA_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q5_PARA_ADAPTIVE_INITIAL
@@ -1175,11 +1176,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.796, 'h2d_ms': 8.766, 'fusion_ms': 2443.352, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.118, 'h2d_ms': 8.992, 'fusion_ms': 2431.82, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 207.141, 'h2d_ms': 8.759, 'fusion_ms': 4839.73, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 209.201, 'h2d_ms': 9.623, 'fusion_ms': 4839.995, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q5_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q5_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q5_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -1188,7 +1189,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 211.004, 'h2d_ms': 8.736, 'fusion_ms': 2405.788, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 208.913, 'h2d_ms': 9.038, 'fusion_ms': 2407.355, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q5_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q5_PARA_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q5_PARA_FIXED_INITIAL
@@ -1196,7 +1197,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 207.012, 'h2d_ms': 8.66, 'fusion_ms': 2429.845, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 205.751, 'h2d_ms': 8.917, 'fusion_ms': 2432.422, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q5_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q5_PARA_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q5_PARA_FIXED_SECOND
@@ -1204,11 +1205,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 207.354, 'h2d_ms': 8.795, 'fusion_ms': 2430.368, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 208.034, 'h2d_ms': 8.81, 'fusion_ms': 2434.343, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 207.326, 'h2d_ms': 8.779, 'fusion_ms': 4849.473, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 206.854, 'h2d_ms': 8.884, 'fusion_ms': 4846.662, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q5_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q5_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q5_PARA_FIXED_PAIR
@@ -1216,11 +1217,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 208.889, 'h2d_ms': 8.751, 'fusion_ms': 2436.979, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 206.519, 'h2d_ms': 9.124, 'fusion_ms': 2434.348, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 210.005, 'h2d_ms': 9.059, 'fusion_ms': 4869.115, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 208.444, 'h2d_ms': 9.194, 'fusion_ms': 4857.438, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q5_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q5_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q5_PARA_FIXED_REVERSE
@@ -1230,7 +1231,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 207.135, 'h2d_ms': 8.98, 'fusion_ms': 2404.375, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 208.163, 'h2d_ms': 9.065, 'fusion_ms': 2405.566, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q6_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q6_PARA_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q6_PARA_ADAPTIVE_INITIAL
@@ -1238,11 +1239,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 209.529, 'h2d_ms': 8.904, 'fusion_ms': 2434.057, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.01, 'h2d_ms': 8.835, 'fusion_ms': 2428.624, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 208.008, 'h2d_ms': 8.92, 'fusion_ms': 4845.174, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 206.542, 'h2d_ms': 8.812, 'fusion_ms': 4844.262, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q6_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q6_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q6_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -1251,7 +1252,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 235.097, 'h2d_ms': 8.988, 'fusion_ms': 2404.57, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 213.439, 'h2d_ms': 9.196, 'fusion_ms': 2405.982, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q6_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q6_PARA_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q6_PARA_FIXED_INITIAL
@@ -1259,7 +1260,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 207.334, 'h2d_ms': 8.862, 'fusion_ms': 2426.788, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 207.225, 'h2d_ms': 8.844, 'fusion_ms': 2434.718, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q6_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q6_PARA_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q6_PARA_FIXED_SECOND
@@ -1267,11 +1268,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 207.781, 'h2d_ms': 8.857, 'fusion_ms': 2427.683, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 208.034, 'h2d_ms': 9.065, 'fusion_ms': 2434.08, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 211.932, 'h2d_ms': 9.163, 'fusion_ms': 4894.652, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 208.021, 'h2d_ms': 8.972, 'fusion_ms': 4846.952, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q6_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q6_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q6_PARA_FIXED_PAIR
@@ -1279,11 +1280,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 207.936, 'h2d_ms': 8.883, 'fusion_ms': 2444.457, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 207.874, 'h2d_ms': 8.878, 'fusion_ms': 2441.084, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 207.796, 'h2d_ms': 9.101, 'fusion_ms': 4861.282, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 208.485, 'h2d_ms': 9.012, 'fusion_ms': 4886.209, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q6_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q6_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q6_PARA_FIXED_REVERSE
@@ -1293,7 +1294,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 210.195, 'h2d_ms': 9.165, 'fusion_ms': 2405.257, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_ADAPTIVE_INITIAL PMC9521804 {'ssd_verify_ms': 208.63, 'h2d_ms': 9.125, 'fusion_ms': 2406.53, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q7_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q7_PARA_ADAPTIVE_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q7_PARA_ADAPTIVE_INITIAL
@@ -1301,11 +1302,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 208.049, 'h2d_ms': 8.917, 'fusion_ms': 2433.499, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 212.521, 'h2d_ms': 9.094, 'fusion_ms': 2424.617, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.835, 'h2d_ms': 8.886, 'fusion_ms': 4845.712, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.191, 'h2d_ms': 8.859, 'fusion_ms': 4842.773, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q7_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q7_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q7_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -1314,7 +1315,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 208.006, 'h2d_ms': 8.858, 'fusion_ms': 2405.14, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_INITIAL PMC9521804 {'ssd_verify_ms': 216.347, 'h2d_ms': 9.076, 'fusion_ms': 2406.408, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q7_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q7_PARA_FIXED_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q7_PARA_FIXED_INITIAL
@@ -1322,7 +1323,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 208.065, 'h2d_ms': 8.864, 'fusion_ms': 2426.922, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_SECOND PMC9401135 {'ssd_verify_ms': 208.034, 'h2d_ms': 9.023, 'fusion_ms': 2429.814, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q7_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q7_PARA_FIXED_SECOND {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q7_PARA_FIXED_SECOND
@@ -1330,11 +1331,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 209.207, 'h2d_ms': 8.949, 'fusion_ms': 2421.081, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 209.337, 'h2d_ms': 9.017, 'fusion_ms': 2428.268, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 208.721, 'h2d_ms': 8.927, 'fusion_ms': 4856.885, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 209.277, 'h2d_ms': 9.015, 'fusion_ms': 4839.63, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q7_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q7_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q7_PARA_FIXED_PAIR
@@ -1342,11 +1343,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 208.927, 'h2d_ms': 8.859, 'fusion_ms': 2419.998, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 208.552, 'h2d_ms': 9.059, 'fusion_ms': 2443.688, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 207.164, 'h2d_ms': 8.749, 'fusion_ms': 4870.043, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 208.197, 'h2d_ms': 8.976, 'fusion_ms': 4844.569, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q7_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q7_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q7_PARA_FIXED_REVERSE
@@ -1356,7 +1357,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 208.002, 'h2d_ms': 8.845, 'fusion_ms': 2405.971, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_ADAPTIVE_INITIAL PMC9401135 {'ssd_verify_ms': 213.187, 'h2d_ms': 9.2, 'fusion_ms': 2407.22, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q8_PARA_ADAPTIVE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q8_PARA_ADAPTIVE_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q8_PARA_ADAPTIVE_INITIAL
@@ -1364,11 +1365,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 207.883, 'h2d_ms': 9.113, 'fusion_ms': 2429.169, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9401135 {'ssd_verify_ms': 210.133, 'h2d_ms': 8.994, 'fusion_ms': 2444.993, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 207.287, 'h2d_ms': 8.853, 'fusion_ms': 4844.192, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL PMC9521804 {'ssd_verify_ms': 211.859, 'h2d_ms': 9.176, 'fusion_ms': 4858.776, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q8_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q8_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q8_PARA_ADAPTIVE_FUSE_TO_CHALLENGE_INITIAL
@@ -1377,7 +1378,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 208.519, 'h2d_ms': 8.824, 'fusion_ms': 2405.891, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_INITIAL PMC9401135 {'ssd_verify_ms': 233.9, 'h2d_ms': 9.26, 'fusion_ms': 2407.537, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q8_PARA_FIXED_INITIAL
   TEST815 | PASS NATIVE_LENGTH_Q8_PARA_FIXED_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q8_PARA_FIXED_INITIAL
@@ -1385,7 +1386,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 208.375, 'h2d_ms': 8.995, 'fusion_ms': 2433.865, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_SECOND PMC9521804 {'ssd_verify_ms': 209.191, 'h2d_ms': 9.114, 'fusion_ms': 2429.616, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q8_PARA_FIXED_SECOND
   TEST815 | PASS NATIVE_LENGTH_Q8_PARA_FIXED_SECOND {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q8_PARA_FIXED_SECOND
@@ -1393,11 +1394,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 208.781, 'h2d_ms': 8.799, 'fusion_ms': 2434.356, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_PAIR PMC9401135 {'ssd_verify_ms': 210.896, 'h2d_ms': 9.444, 'fusion_ms': 2430.127, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS FILE_SHA_PMC9521804
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 207.528, 'h2d_ms': 8.783, 'fusion_ms': 4850.094, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_PAIR PMC9521804 {'ssd_verify_ms': 215.985, 'h2d_ms': 9.123, 'fusion_ms': 4849.063, 'cid': 'PMC9521804', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q8_PARA_FIXED_PAIR
   TEST815 | PASS NATIVE_LENGTH_Q8_PARA_FIXED_PAIR {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q8_PARA_FIXED_PAIR
@@ -1405,11 +1406,11 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 208.917, 'h2d_ms': 8.863, 'fusion_ms': 2423.505, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_REVERSE PMC9521804 {'ssd_verify_ms': 209.76, 'h2d_ms': 9.218, 'fusion_ms': 2433.146, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 209.048, 'h2d_ms': 8.761, 'fusion_ms': 4842.471, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_PARA_FIXED_REVERSE PMC9401135 {'ssd_verify_ms': 209.068, 'h2d_ms': 8.983, 'fusion_ms': 4851.071, 'cid': 'PMC9401135', 'memory_tokens': 1962}
   TEST815 | PASS NATIVE80_Q8_PARA_FIXED_REVERSE
   TEST815 | PASS NATIVE_LENGTH_Q8_PARA_FIXED_REVERSE {'n': 1962, 'expected': 1962}
   TEST815 | PASS KV_SEAL_Q8_PARA_FIXED_REVERSE
@@ -1420,7 +1421,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 213.154, 'h2d_ms': 9.034, 'fusion_ms': 2405.26, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 215.489, 'h2d_ms': 9.374, 'fusion_ms': 2407.496, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q1_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q1_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q1_DROP_PMC9521804_TOP1
@@ -1430,7 +1431,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 213.065, 'h2d_ms': 9.114, 'fusion_ms': 2405.163, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q1_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 212.117, 'h2d_ms': 9.17, 'fusion_ms': 2406.187, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q1_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q1_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q1_DROP_PMC9401135_TOP1
@@ -1440,7 +1441,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 238.697, 'h2d_ms': 9.039, 'fusion_ms': 2405.389, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 213.237, 'h2d_ms': 9.331, 'fusion_ms': 2405.663, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q2_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q2_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q2_DROP_PMC9521804_TOP1
@@ -1450,7 +1451,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 209.203, 'h2d_ms': 9.007, 'fusion_ms': 2403.044, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q2_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 236.107, 'h2d_ms': 9.085, 'fusion_ms': 2405.103, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q2_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q2_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q2_DROP_PMC9401135_TOP1
@@ -1460,7 +1461,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 211.142, 'h2d_ms': 9.136, 'fusion_ms': 2404.395, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 215.945, 'h2d_ms': 9.329, 'fusion_ms': 2405.702, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q3_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q3_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q3_DROP_PMC9521804_TOP1
@@ -1470,7 +1471,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 231.43, 'h2d_ms': 8.767, 'fusion_ms': 2402.531, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q3_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 213.321, 'h2d_ms': 9.008, 'fusion_ms': 2405.223, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q3_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q3_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q3_DROP_PMC9401135_TOP1
@@ -1480,7 +1481,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 211.692, 'h2d_ms': 8.869, 'fusion_ms': 2405.256, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 215.578, 'h2d_ms': 9.447, 'fusion_ms': 2407.729, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q4_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q4_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q4_DROP_PMC9521804_TOP1
@@ -1490,7 +1491,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 214.799, 'h2d_ms': 9.088, 'fusion_ms': 2404.526, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q4_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 226.202, 'h2d_ms': 9.128, 'fusion_ms': 2406.122, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q4_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q4_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q4_DROP_PMC9401135_TOP1
@@ -1500,7 +1501,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 214.336, 'h2d_ms': 9.038, 'fusion_ms': 2405.902, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 209.569, 'h2d_ms': 9.29, 'fusion_ms': 2407.044, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q5_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q5_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q5_DROP_PMC9521804_TOP1
@@ -1510,17 +1511,17 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 212.539, 'h2d_ms': 8.848, 'fusion_ms': 2404.372, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q5_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 215.569, 'h2d_ms': 9.109, 'fusion_ms': 2406.643, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q5_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q5_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q5_DROP_PMC9401135_TOP1
-  TEST815 | TEST815_ABLATION {"case_id": "Q5", "removed": "PMC9401135", "top1": "PMC9521804", "baseline_top1": "PMC9401135", "baseline_action": "ANSWER", "native_action": "ABSTAIN", "native_answer": "UNKNOWN", "native_tokens": 2, "native_elapsed_seconds": 5.069, "top1_relevant_offline": false, "removed_relevant
+  TEST815 | TEST815_ABLATION {"case_id": "Q5", "removed": "PMC9401135", "top1": "PMC9521804", "baseline_top1": "PMC9401135", "baseline_action": "ANSWER", "native_action": "ABSTAIN", "native_answer": "UNKNOWN", "native_tokens": 2, "native_elapsed_seconds": 5.074, "top1_relevant_offline": false, "removed_relevant
   TEST815 | PASS ABLATION_RANK_21_Q6_PMC9521804
   TEST815 | PASS FILE_SHA_PMC9401135
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 214.387, 'h2d_ms': 8.894, 'fusion_ms': 2404.2, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 209.204, 'h2d_ms': 8.997, 'fusion_ms': 2405.135, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q6_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q6_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q6_DROP_PMC9521804_TOP1
@@ -1530,7 +1531,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 209.827, 'h2d_ms': 8.892, 'fusion_ms': 2402.777, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q6_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 210.321, 'h2d_ms': 8.99, 'fusion_ms': 2405.459, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q6_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q6_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q6_DROP_PMC9401135_TOP1
@@ -1540,7 +1541,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 210.121, 'h2d_ms': 8.951, 'fusion_ms': 2405.207, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 210.481, 'h2d_ms': 8.983, 'fusion_ms': 2407.285, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q7_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q7_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q7_DROP_PMC9521804_TOP1
@@ -1550,7 +1551,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 209.896, 'h2d_ms': 9.054, 'fusion_ms': 2404.543, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q7_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 212.916, 'h2d_ms': 9.045, 'fusion_ms': 2406.046, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q7_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q7_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q7_DROP_PMC9401135_TOP1
@@ -1560,7 +1561,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 221.947, 'h2d_ms': 8.999, 'fusion_ms': 2406.018, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_DROP_PMC9521804_TOP1 PMC9401135 {'ssd_verify_ms': 237.986, 'h2d_ms': 8.856, 'fusion_ms': 2406.724, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_Q8_DROP_PMC9521804_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q8_DROP_PMC9521804_TOP1 {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_Q8_DROP_PMC9521804_TOP1
@@ -1570,14 +1571,14 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 209.252, 'h2d_ms': 9.033, 'fusion_ms': 2404.458, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_Q8_DROP_PMC9401135_TOP1 PMC9521804 {'ssd_verify_ms': 212.316, 'h2d_ms': 8.983, 'fusion_ms': 2405.788, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_Q8_DROP_PMC9401135_TOP1
   TEST815 | PASS NATIVE_LENGTH_Q8_DROP_PMC9401135_TOP1 {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_Q8_DROP_PMC9401135_TOP1
-  TEST815 | TEST815_ABLATION {"case_id": "Q8", "removed": "PMC9401135", "top1": "PMC9521804", "baseline_top1": "PMC9521804", "baseline_action": "ANSWER", "native_action": "ABSTAIN", "native_answer": "UNKNOWN", "native_tokens": 2, "native_elapsed_seconds": 5.064, "top1_relevant_offline": false, "removed_relevant
+  TEST815 | TEST815_ABLATION {"case_id": "Q8", "removed": "PMC9401135", "top1": "PMC9521804", "baseline_top1": "PMC9521804", "baseline_action": "ANSWER", "native_action": "ABSTAIN", "native_answer": "UNKNOWN", "native_tokens": 2, "native_elapsed_seconds": 5.066, "top1_relevant_offline": false, "removed_relevant
   TEST815 | PASS SOURCE_REMOVAL_16
 ── [9/13] Same-run replay — ranking and first answer recomputed from the same physical memory (8 cases)
-  TEST815 | TEST815_COST_MATRIX {"adaptive": {"native_reads": 36, "read_wall_seconds_sum": 482.908, "mean_read_seconds": 13.414, "answers": 16, "abstentions": 0, "revisions": 10, "relation_audit_pass": 4, "relation_audit_total": 4}, "fixed": {"native_reads": 64, "read_wall_seconds_sum": 837.311, "mean_read_seco
+  TEST815 | TEST815_COST_MATRIX {"adaptive": {"native_reads": 36, "read_wall_seconds_sum": 483.59, "mean_read_seconds": 13.433, "answers": 16, "abstentions": 0, "revisions": 10, "relation_audit_pass": 4, "relation_audit_total": 4}, "fixed": {"native_reads": 64, "read_wall_seconds_sum": 840.016, "mean_read_secon
   TEST815 | TEST815_ABLATION_SUMMARY {"source_removal_reads": 16, "relevant_source_removed": 10, "synthetic_selected": 0, "top1_relevant": 10}
   TEST815 | PASS THIRTY_TWO_POLICY_CASES
   TEST815 | PASS ADAPTIVE_BOUNDED
@@ -1590,7 +1591,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q1_INITIAL PMC9521804 {'ssd_verify_ms': 209.302, 'h2d_ms': 9.084, 'fusion_ms': 2404.68, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q1_INITIAL PMC9521804 {'ssd_verify_ms': 212.752, 'h2d_ms': 9.041, 'fusion_ms': 2406.322, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_REPLAY_Q1_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q1_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_REPLAY_Q1_INITIAL
@@ -1601,7 +1602,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q2_INITIAL PMC9401135 {'ssd_verify_ms': 210.783, 'h2d_ms': 9.116, 'fusion_ms': 2403.88, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q2_INITIAL PMC9401135 {'ssd_verify_ms': 211.964, 'h2d_ms': 9.294, 'fusion_ms': 2404.626, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_REPLAY_Q2_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q2_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_REPLAY_Q2_INITIAL
@@ -1612,7 +1613,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q5_INITIAL PMC9401135 {'ssd_verify_ms': 212.564, 'h2d_ms': 9.115, 'fusion_ms': 2405.254, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q5_INITIAL PMC9401135 {'ssd_verify_ms': 225.779, 'h2d_ms': 8.926, 'fusion_ms': 2408.538, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_REPLAY_Q5_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q5_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_REPLAY_Q5_INITIAL
@@ -1623,7 +1624,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9521804
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9521804
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q8_INITIAL PMC9521804 {'ssd_verify_ms': 210.137, 'h2d_ms': 8.803, 'fusion_ms': 2404.095, 'cid': 'PMC9521804', 'memory_tokens': 995}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q8_INITIAL PMC9521804 {'ssd_verify_ms': 214.483, 'h2d_ms': 9.152, 'fusion_ms': 2405.87, 'cid': 'PMC9521804', 'memory_tokens': 995}
   TEST815 | PASS NATIVE80_REPLAY_Q8_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q8_INITIAL {'n': 995, 'expected': 995}
   TEST815 | PASS KV_SEAL_REPLAY_Q8_INITIAL
@@ -1634,7 +1635,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q1_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 214.856, 'h2d_ms': 9.154, 'fusion_ms': 2405.75, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q1_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 212.237, 'h2d_ms': 9.18, 'fusion_ms': 2406.907, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_REPLAY_Q1_PARA_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q1_PARA_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_REPLAY_Q1_PARA_INITIAL
@@ -1645,7 +1646,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q2_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 210.05, 'h2d_ms': 8.743, 'fusion_ms': 2403.862, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q2_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 213.913, 'h2d_ms': 9.056, 'fusion_ms': 2404.622, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_REPLAY_Q2_PARA_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q2_PARA_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_REPLAY_Q2_PARA_INITIAL
@@ -1656,7 +1657,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q5_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 217.552, 'h2d_ms': 9.106, 'fusion_ms': 2405.982, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q5_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 210.449, 'h2d_ms': 9.111, 'fusion_ms': 2406.892, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_REPLAY_Q5_PARA_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q5_PARA_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_REPLAY_Q5_PARA_INITIAL
@@ -1667,7 +1668,7 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS CARTRIDGE_ID_PMC9401135
   TEST815 | PASS CARTRIDGE_TENSOR_SHA_PMC9401135
   TEST815 | PASS NATIVE_INIT_80_LAYERS
-  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q8_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 216.412, 'h2d_ms': 9.011, 'fusion_ms': 2404.892, 'cid': 'PMC9401135', 'memory_tokens': 997}
+  TEST815 | NATIVE_FUSION_STEP TEST815_REPLAY_Q8_PARA_INITIAL PMC9401135 {'ssd_verify_ms': 213.255, 'h2d_ms': 9.143, 'fusion_ms': 2406.688, 'cid': 'PMC9401135', 'memory_tokens': 997}
   TEST815 | PASS NATIVE80_REPLAY_Q8_PARA_INITIAL
   TEST815 | PASS NATIVE_LENGTH_REPLAY_Q8_PARA_INITIAL {'n': 997, 'expected': 997}
   TEST815 | PASS KV_SEAL_REPLAY_Q8_PARA_INITIAL
@@ -1679,62 +1680,63 @@ RUN SH815-20261028-120300 · 2026-10-28T12:03:36+00:00 · the locked TEST815 eng
   TEST815 | PASS FINAL_MANIFEST
   TEST815 | PASS NO_RESIDUAL_HOOKS
   TEST815 | TEST815_DEMO_ACCEPTANCE {"frozen_weights": true, "no_residual_hooks": true, "physical_cartridges": true, "real_sources": 2, "synthetic_controls": 20, "questions": 16, "replay_exact_initial_answers": 8, "replay_cases": 8, "top2_relevant": 16, "native_adaptive_reads": 36, "native_fixed_reads": 64, "re
-  TEST815 | TEST815_REVIEW_EXPORT /content/AKBASCORE_TEST779_20261028T120402_127710Z/TEST815_independent_review.csv 422f51a23b63ac02b1038b45512184ff142159860d063279e6e5a00f0805f8b9
+  TEST815 | TEST815_REVIEW_EXPORT /content/AKBASCORE_TEST779_20261028T133146_636244Z/TEST815_independent_review.csv 422f51a23b63ac02b1038b45512184ff142159860d063279e6e5a00f0805f8b9
   TEST815 | PASS DEMO_MECHANICAL_ACCEPTANCE
-  TEST815 | TEST815_PUBLIC_AUDIT {"path": "/content/AKBASCORE_TEST779_20261028T120402_127710Z/TEST815_public_audit.json", "sha256": "4864596dc596c18700a56723a43dbf1ef42ed32ef3c2375bc6bbb78471e40993"}
+  TEST815 | TEST815_PUBLIC_AUDIT {"path": "/content/AKBASCORE_TEST779_20261028T133146_636244Z/TEST815_public_audit.json", "sha256": "20073005207b0ce2f27d2742b0f8eaeb2ef86959e0f1e53181565c394290efe2"}
   TEST815 | TEST815_COMPLETED {"cases": 16, "source_count": 22, "adaptive_native_reads": 36, "fixed_native_reads": 64, "adaptive_answers": 16, "fixed_answers": 16, "changed_decisions": 0, "different_read_counts": 16, "routing_top1_relevant": 13, "routing_top2_relevant": 16, "decoy_selected_cases": 0, "scientifi
-12:44:56 [ACCEPT] ENGINE_COMPLETED TEST815 completed {"verdict": "MECHANICAL_DEMO_READY_SCIENTIFIC_REVIEW_PENDING"}
-  TEST815 | FILES /content/AKBASCORE_TEST779_20261028T120402_127710Z/TEST815_results.json /content/AKBASCORE_TEST779_20261028T120402_127710Z/TEST815.log /content/AKBASCORE_TEST779_20261028T120402_127710Z/TEST815_manifest.json /content/AKBASCORE_TEST779_20261028T120402_127710Z/TEST815_independent_review.csv /con
-12:45:01 [ACCEPT] ENGINE_EXIT      TEST815 exit code 0 · 2483 s {"root": "/content/AKBASCORE_TEST779_20261028T120402_127710Z", "gpu_after_mib": 0}
-12:45:01 [ACCEPT] ENGINE_DONE      TEST815 completed — every engine stage passed
+14:12:27 [ACCEPT] ENGINE_COMPLETED TEST815 completed {"verdict": "MECHANICAL_DEMO_READY_SCIENTIFIC_REVIEW_PENDING"}
+  TEST815 | FILES /content/AKBASCORE_TEST779_20261028T133146_636244Z/TEST815_results.json /content/AKBASCORE_TEST779_20261028T133146_636244Z/TEST815.log /content/AKBASCORE_TEST779_20261028T133146_636244Z/TEST815_manifest.json /content/AKBASCORE_TEST779_20261028T133146_636244Z/TEST815_independent_review.csv /con
+14:12:31 [ACCEPT] ENGINE_EXIT      TEST815 exit code 0 · 2469 s {"root": "/content/AKBASCORE_TEST779_20261028T133146_636244Z", "gpu_after_mib": 0}
+14:12:31 [ACCEPT] ENGINE_DONE      TEST815 completed — every engine stage passed
 ── [11/13] Independent re-verification by this program (read-only) — cartridge files, records, consistency with the live log
-12:45:04 [VERIFY] VERIFIED         22/22 cartridge files re-hashed (SHA-256 = manifest = commit line) and re-opened · review CSV ✓ · public audit ✓ · summary = live line ✓ · reads adaptive 36 / fixed 64 consistent ✓ · engine gates 1360 PASS / 0 FAIL · GPU after exit 0 MiB
-12:45:04 [VERIFY] STAGE_FAILED     VERIFY {"error": "RuntimeError: 22/22 cartridge files re-hashed (SHA-256 = manifest = commit line) and re-opened · review CSV ✓ · public audit ✓ · summary = live line ✓ · reads adaptive 36 / fixed 64 consistent ✓ · engine gates 1360 PASS / 0 FAIL · GPU after exit 0 MiB · PROBLEMS: RECORD engine_log_gates_e
+14:12:34 [VERIFY] VERIFIED         22/22 cartridge files re-hashed (SHA-256 = manifest = commit line) and re-opened · review CSV ✓ · public audit ✓ · summary = live line ✓ · reads adaptive 36 / fixed 64 consistent ✓ · engine gates 1360 PASS / 0 FAIL · GPU after exit 0 MiB
+14:12:34 [VERIFY] STAGE_DONE       VERIFY {"note": "22/22 cartridge files re-hashed (SHA-256 = manifest = commit line) and re-opened · review CSV ✓ · public audit ✓ · summary = live line ✓ · reads adaptive 36 / fixed 64 consistent ✓ · engine gates 1360 PASS / 0 FAIL · GPU after exit 0 MiB"}
 ── [12/13] Twelve scientific figures (JPEG 300 dpi, layout QC) — heat maps, closed-loop maps, controls, claims
-12:45:05 [FIGURES] FIGURE_WRITTEN   Figure 1 TEST815_FIG01_ARCHITECTURE_AND_RESULTS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "4456ba95bf594b409e59e62bdef0c7821ff64dedef6f98bb4c3c4e57cc2ed287", "badge": "ENGINE RECORD"}
+14:12:36 [FIGURES] FIGURE_WRITTEN   Figure 1 TEST815_FIG01_ARCHITECTURE_AND_RESULTS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "7e736fa2f9040744a5e5182c004304c2ea500d442befe215366a9a0856858e84", "badge": "ENGINE RECORD"}
   figure 1 · ENGINE RECORD · 3999×2250 · layout QC pass · 1.3 s
-12:45:07 [FIGURES] FIGURE_WRITTEN   Figure 2 TEST815_FIG02_CARTRIDGE_BANK.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "a6af56a3b330e8d3e40a690236d0a0f50316319afd6e5df84f03886fdfc42186", "badge": "SEALED MEMORY"}
+14:12:37 [FIGURES] FIGURE_WRITTEN   Figure 2 TEST815_FIG02_CARTRIDGE_BANK.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "861bc107d3ac0dfe2a7c10687c4aaac753985a6e43da66c4c8b575363551b6ab", "badge": "SEALED MEMORY"}
   figure 2 · SEALED MEMORY · 3999×2250 · layout QC pass · 1.7 s
-12:45:09 [FIGURES] FIGURE_WRITTEN   Figure 3 TEST815_FIG03_H3_ROUTING_HEATMAP.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "25b3431e88a2c34cf88086981ce659dd5b1a2e61c50198b61a3b16eb69324f92", "badge": "LIVE MEASUREMENT"}
-  figure 3 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.6 s
-12:45:10 [FIGURES] FIGURE_WRITTEN   Figure 4 TEST815_FIG04_PARAPHRASE_ROBUSTNESS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "7fda08e875581396d03cebcca2b54533b3a5d46bda88b5e2b90897f08a2b3077", "badge": "LIVE MEASUREMENT"}
+14:12:39 [FIGURES] FIGURE_WRITTEN   Figure 3 TEST815_FIG03_H3_ROUTING_HEATMAP.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "ea1b6197fa54a881e026d56c00f981f7ebfcce139a2001ba6871e850c3fbc42a", "badge": "LIVE MEASUREMENT"}
+  figure 3 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.5 s
+14:12:40 [FIGURES] FIGURE_WRITTEN   Figure 4 TEST815_FIG04_PARAPHRASE_ROBUSTNESS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "64a53af3e80bfb96f939712e6400bccebfe269490ee35c67b9e2315bc6696710", "badge": "LIVE MEASUREMENT"}
   figure 4 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.3 s
-12:45:11 [FIGURES] FIGURE_WRITTEN   Figure 5 TEST815_FIG05_CLOSED_LOOP_DECISION_MAP.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "30285f5ade1e6e8014fe09c0df9c11e0679c3f33db3f107be1dea39e28c975b3", "badge": "ENGINE RECORD"}
+14:12:42 [FIGURES] FIGURE_WRITTEN   Figure 5 TEST815_FIG05_CLOSED_LOOP_DECISION_MAP.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "f3666e73e93cdb382edd476fb6dd5d433b0c3384e9c973b7002a70cab4f97c54", "badge": "ENGINE RECORD"}
   figure 5 · ENGINE RECORD · 3999×2250 · layout QC pass · 1.4 s
-12:45:13 [FIGURES] FIGURE_WRITTEN   Figure 6 TEST815_FIG06_ADAPTIVE_VS_FIXED_COST.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "dcfc1926a655b38084fe36fe253f7624838931ec42618bc1e57c795843cc56fe", "badge": "LIVE MEASUREMENT"}
+14:12:43 [FIGURES] FIGURE_WRITTEN   Figure 6 TEST815_FIG06_ADAPTIVE_VS_FIXED_COST.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "76aae26daf04df7199ce9c611de73568eb230c829d861200545a09b42f1845e2", "badge": "LIVE MEASUREMENT"}
   figure 6 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.3 s
-12:45:14 [FIGURES] FIGURE_WRITTEN   Figure 7 TEST815_FIG07_HYPOTHESIS_EVOLUTION.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "c4fff7ce3055f6e2689958b1c646d0d874170df435c968b5ba60357181f95477", "badge": "ENGINE RECORD"}
-  figure 7 · ENGINE RECORD · 3999×2250 · layout QC pass · 1.2 s
-12:45:15 [FIGURES] FIGURE_WRITTEN   Figure 8 TEST815_FIG08_EVIDENCE_REMOVAL.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "be93dc23e1a011e50f3ff4c0c5ec62f051d1ef75076fac557f3a4cf844b0c06e", "badge": "LIVE MEASUREMENT"}
+14:12:44 [FIGURES] FIGURE_WRITTEN   Figure 7 TEST815_FIG07_HYPOTHESIS_EVOLUTION.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "1a08a1bb81b44745e4b761f4512f5a17ad9d1e448995ccb5acdbd6bdbcaa5b06", "badge": "ENGINE RECORD"}
+  figure 7 · ENGINE RECORD · 3999×2250 · layout QC pass · 1.3 s
+14:12:46 [FIGURES] FIGURE_WRITTEN   Figure 8 TEST815_FIG08_EVIDENCE_REMOVAL.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "7c4017a1d555641fe9efb9a87a5303adace3868c01a9e6110d8c0ffc46d7b774", "badge": "LIVE MEASUREMENT"}
   figure 8 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.3 s
-12:45:16 [FIGURES] FIGURE_WRITTEN   Figure 9 TEST815_FIG09_FACT_RELATION_AUDIT.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "87736130d7c515d7211def3cc8e4241cb303ddc730af6f615a476cf735e6a2a4", "badge": "ENGINE RECORD"}
+14:12:47 [FIGURES] FIGURE_WRITTEN   Figure 9 TEST815_FIG09_FACT_RELATION_AUDIT.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "498648447af5ec72c224181f7e4adb7519ef7dc57627eea1b3543b09940aea53", "badge": "ENGINE RECORD"}
   figure 9 · ENGINE RECORD · 3999×2250 · layout QC pass · 1.2 s
-12:45:18 [FIGURES] FIGURE_WRITTEN   Figure 10 TEST815_FIG10_SAME_RUN_REPLAY.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "699ee1ab25f89a6242ee3de75672c123e79146487be0ca474850481000d4894f", "badge": "LIVE MEASUREMENT"}
+14:12:48 [FIGURES] FIGURE_WRITTEN   Figure 10 TEST815_FIG10_SAME_RUN_REPLAY.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "0cf34bfde524cc5328eae9144e12fc3335ef98cb29ccee0e8a685cde1f41d0e0", "badge": "LIVE MEASUREMENT"}
   figure 10 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.2 s
-12:45:19 [FIGURES] FIGURE_WRITTEN   Figure 11 TEST815_FIG11_TIMING_GPU_GATES.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "f5541619a7e05aecd0f6e29b73b4d5f72751afcb9a0ffccb4954ac3d7d0cd772", "badge": "LIVE MEASUREMENT"}
+14:12:49 [FIGURES] FIGURE_WRITTEN   Figure 11 TEST815_FIG11_TIMING_GPU_GATES.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "9d926d29d60cf13c198725674ed11d26b8248c446dd9a113dfba457b4e2019d0", "badge": "LIVE MEASUREMENT"}
   figure 11 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.4 s
-12:45:20 [FIGURES] FIGURE_WRITTEN   Figure 12 TEST815_FIG12_CLAIMS_LEDGER.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "3ce469448b2d9108857e8a5ab63a20b6c15745e52ea9ba0d97a11f226b10d3a7", "badge": "VERIFICATION RECORD"}
+14:12:50 [FIGURES] FIGURE_WRITTEN   Figure 12 TEST815_FIG12_CLAIMS_LEDGER.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "b5ca97a1af400cc3cbf4f94db4a61978950770428a5e4beb052029195e7e71e9", "badge": "VERIFICATION RECORD"}
   figure 12 · VERIFICATION RECORD · 3999×2250 · layout QC pass · 1.1 s
-12:45:20 [FIGURES] STAGE_DONE       FIGURES {"note": "12/12 JPEG figures written (300 dpi) · layout QC and JPEG QC passed for every figure"}
+14:12:50 [FIGURES] STAGE_DONE       FIGURES {"note": "12/12 JPEG figures written (300 dpi) · layout QC and JPEG QC passed for every figure"}
 ── [13/13] Records — real-time engine output, results, manifests, review CSV (direct downloads, no ZIP)
-12:45:21 [RECORDS] STAGE_DONE       RECORDS {"note": "12 JPEG figures + 20 records, each downloadable directly · SHA-256 manifest of 31 session files + 39 engine files (no ZIP)"}
+14:12:51 [RECORDS] STAGE_DONE       RECORDS {"note": "12 JPEG figures + 20 records, each downloadable directly · SHA-256 manifest of 31 session files + 39 engine files (no ZIP)"}
 ════════════════════════════════════════════════════════════════════════════════════════════════════
-RUN VERDICT: INCOMPLETE — not a completed live experiment: VERIFY FAIL
-RUN SH815-20261028-120300 finished 2026-10-28T12:45:21+00:00 · PRECHECK:done · LOCKS:done · SOURCES:done · MODEL:done · CARTRIDGES:done · ROUTING:done · LOOP:done · ABLATION:done · REPLAY:done · ACCEPT:done · VERIFY:fail · FIGURES:done · RECORDS:done
+RUN VERDICT: COMPLETE — every stage ran and passed
+RUN SH815-20261028-132804 finished 2026-10-28T14:12:51+00:00 · PRECHECK:done · LOCKS:done · SOURCES:done · MODEL:done · CARTRIDGES:done · ROUTING:done · LOOP:done · ABLATION:done · REPLAY:done · ACCEPT:done · VERIFY:done · FIGURES:done · RECORDS:done
 ════════════════════════════════════════════════════════════════════════════════════════════════════
 ####################################################################################################
-FIGURES OF THIS RUN (SH815-20261028-120300) — 12 JPEG file(s) — shown below in the cell, each also downloaded by the browser
-  folder: /content/AKBASCORE_TEST815_DEMO/sessions/SH815-20261028-120300/figures
+FIGURES OF THIS RUN (SH815-20261028-132804) — 12 JPEG file(s) — shown below in the cell, each also downloaded by the browser
+  folder: /content/AKBASCORE_TEST815_DEMO/sessions/SH815-20261028-132804/figures
 ####################################################################################################
-Figure 1 — Cognitive Cartridges + Closed Loop — This Run at a Glance · ENGINE RECORD · TEST815_FIG01_ARCHITECTURE_AND_RESULTS.jpg · SHA-256 4456ba95bf594b40…Figure 2 — The Memory Bank — 22 Physical Cartridges on the SSD · SEALED MEMORY · TEST815_FIG02_CARTRIDGE_BANK.jpg · SHA-256 a6af56a3b330e8d3…Figure 3 — Native H3 Routing — 16 Questions × 22 Cartridges · LIVE MEASUREMENT · TEST815_FIG03_H3_ROUTING_HEATMAP.jpg · SHA-256 25b3431e88a2c34c…Figure 4 — Paraphrase Robustness — Same Meaning, Different Words · LIVE MEASUREMENT · TEST815_FIG04_PARAPHRASE_ROBUSTNESS.jpg · SHA-256 7fda08e875581396…Figure 5 — The Closed Loop — Every Read of Every Question · ENGINE RECORD · TEST815_FIG05_CLOSED_LOOP_DECISION_MAP.jpg · SHA-256 30285f5ade1e6e80…Figure 6 — Efficiency — Adaptive Control vs a Fixed Four-Read Policy · LIVE MEASUREMENT · TEST815_FIG06_ADAPTIVE_VS_FIXED_COST.jpg · SHA-256 dcfc1926a655b380…Figure 7 — Hypothesis Evolution — First Reading → Final Answer (verbatim) · ENGINE RECORD · TEST815_FIG07_HYPOTHESIS_EVOLUTION.jpg · SHA-256 c4fff7ce3055f6e2…Figure 8 — Causal Evidence Removal — Take the Source Away · LIVE MEASUREMENT · TEST815_FIG08_EVIDENCE_REMOVAL.jpg · SHA-256 be93dc23e1a011e5…Figure 9 — Numeric Fact and Relation Audit — Q2 · Q8 (verbatim) · ENGINE RECORD · TEST815_FIG09_FACT_RELATION_AUDIT.jpg · SHA-256 87736130d7c515d7…Figure 10 — Same-Run Replay — Ranking and First Answer Recomputed · LIVE MEASUREMENT · TEST815_FIG10_SAME_RUN_REPLAY.jpg · SHA-256 699ee1ab25f89a62…Figure 11 — Native Fusion Timing, GPU Memory and Engine Gates · LIVE MEASUREMENT · TEST815_FIG11_TIMING_GPU_GATES.jpg · SHA-256 f5541619a7e05aec…Figure 12 — What This Run Demonstrates — Claims Ledger · VERIFICATION RECORD · TEST815_FIG12_CLAIMS_LEDGER.jpg · SHA-256 3ce469448b2d9108…12:45:23 [-] CELL_DOWNLOAD    TEST815_FIG01_ARCHITECTURE_AND_RESULTS.jpg
-12:45:24 [-] CELL_DOWNLOAD    TEST815_FIG02_CARTRIDGE_BANK.jpg
-12:45:25 [-] CELL_DOWNLOAD    TEST815_FIG03_H3_ROUTING_HEATMAP.jpg
-12:45:26 [-] CELL_DOWNLOAD    TEST815_FIG04_PARAPHRASE_ROBUSTNESS.jpg
-12:45:27 [-] CELL_DOWNLOAD    TEST815_FIG05_CLOSED_LOOP_DECISION_MAP.jpg
-12:45:28 [-] CELL_DOWNLOAD    TEST815_FIG06_ADAPTIVE_VS_FIXED_COST.jpg
-12:45:29 [-] CELL_DOWNLOAD    TEST815_FIG07_HYPOTHESIS_EVOLUTION.jpg
-12:45:30 [-] CELL_DOWNLOAD    TEST815_FIG08_EVIDENCE_REMOVAL.jpg
-12:45:31 [-] CELL_DOWNLOAD    TEST815_FIG09_FACT_RELATION_AUDIT.jpg
-12:45:32 [-] CELL_DOWNLOAD    TEST815_FIG10_SAME_RUN_REPLAY.jpg
-12:45:33 [-] CELL_DOWNLOAD    TEST815_FIG11_TIMING_GPU_GATES.jpg
-12:45:34 [-] CELL_DOWNLOAD    TEST815_FIG12_CLAIMS_LEDGER.jpg
+Figure 1 — Cognitive Cartridges + Closed Loop — This Run at a Glance · ENGINE RECORD · TEST815_FIG01_ARCHITECTURE_AND_RESULTS.jpg · SHA-256 7e736fa2f9040744…Figure 2 — The Memory Bank — 22 Physical Cartridges on the SSD · SEALED MEMORY · TEST815_FIG02_CARTRIDGE_BANK.jpg · SHA-256 861bc107d3ac0dfe…Figure 3 — Native H3 Routing — 16 Questions × 22 Cartridges · LIVE MEASUREMENT · TEST815_FIG03_H3_ROUTING_HEATMAP.jpg · SHA-256 ea1b6197fa54a881…Figure 4 — Paraphrase Robustness — Same Meaning, Different Words · LIVE MEASUREMENT · TEST815_FIG04_PARAPHRASE_ROBUSTNESS.jpg · SHA-256 64a53af3e80bfb96…Figure 5 — The Closed Loop — Every Read of Every Question · ENGINE RECORD · TEST815_FIG05_CLOSED_LOOP_DECISION_MAP.jpg · SHA-256 f3666e73e93cdb38…Figure 6 — Efficiency — Adaptive Control vs a Fixed Four-Read Policy · LIVE MEASUREMENT · TEST815_FIG06_ADAPTIVE_VS_FIXED_COST.jpg · SHA-256 76aae26daf04df71…Figure 7 — Hypothesis Evolution — First Reading → Final Answer (verbatim) · ENGINE RECORD · TEST815_FIG07_HYPOTHESIS_EVOLUTION.jpg · SHA-256 1a08a1bb81b44745…Figure 8 — Causal Evidence Removal — Take the Source Away · LIVE MEASUREMENT · TEST815_FIG08_EVIDENCE_REMOVAL.jpg · SHA-256 7c4017a1d555641f…Figure 9 — Numeric Fact and Relation Audit — Q2 · Q8 (verbatim) · ENGINE RECORD · TEST815_FIG09_FACT_RELATION_AUDIT.jpg · SHA-256 498648447af5ec72…Figure 10 — Same-Run Replay — Ranking and First Answer Recomputed · LIVE MEASUREMENT · TEST815_FIG10_SAME_RUN_REPLAY.jpg · SHA-256 0cf34bfde524cc53…Figure 11 — Native Fusion Timing, GPU Memory and Engine Gates · LIVE MEASUREMENT · TEST815_FIG11_TIMING_GPU_GATES.jpg · SHA-256 9d926d29d60cf13c…Figure 12 — What This Run Demonstrates — Claims Ledger · VERIFICATION RECORD · TEST815_FIG12_CLAIMS_LEDGER.jpg · SHA-256 b5ca97a1af400cc3…14:12:52 [-] CELL_DOWNLOAD    TEST815_FIG01_ARCHITECTURE_AND_RESULTS.jpg
+14:12:53 [-] CELL_DOWNLOAD    TEST815_FIG02_CARTRIDGE_BANK.jpg
+14:12:54 [-] CELL_DOWNLOAD    TEST815_FIG03_H3_ROUTING_HEATMAP.jpg
+14:12:55 [-] CELL_DOWNLOAD    TEST815_FIG04_PARAPHRASE_ROBUSTNESS.jpg
+14:12:56 [-] CELL_DOWNLOAD    TEST815_FIG05_CLOSED_LOOP_DECISION_MAP.jpg
+14:12:57 [-] CELL_DOWNLOAD    TEST815_FIG06_ADAPTIVE_VS_FIXED_COST.jpg
+14:12:58 [-] CELL_DOWNLOAD    TEST815_FIG07_HYPOTHESIS_EVOLUTION.jpg
+14:12:59 [-] CELL_DOWNLOAD    TEST815_FIG08_EVIDENCE_REMOVAL.jpg
+14:13:00 [-] CELL_DOWNLOAD    TEST815_FIG09_FACT_RELATION_AUDIT.jpg
+14:13:01 [-] CELL_DOWNLOAD    TEST815_FIG10_SAME_RUN_REPLAY.jpg
+14:13:02 [-] CELL_DOWNLOAD    TEST815_FIG11_TIMING_GPU_GATES.jpg
+14:13:03 [-] CELL_DOWNLOAD    TEST815_FIG12_CLAIMS_LEDGER.jpg
+Downloading "TEST815_FIG01_ARCHITECTURE_AND_RESULTS.jpg": Downloading "TEST815_FIG02_CARTRIDGE_BANK.jpg": Downloading "TEST815_FIG03_H3_ROUTING_HEATMAP.jpg": Downloading "TEST815_FIG04_PARAPHRASE_ROBUSTNESS.jpg": Downloading "TEST815_FIG05_CLOSED_LOOP_DECISION_MAP.jpg": Downloading "TEST815_FIG06_ADAPTIVE_VS_FIXED_COST.jpg": Downloading "TEST815_FIG07_HYPOTHESIS_EVOLUTION.jpg": Downloading "TEST815_FIG08_EVIDENCE_REMOVAL.jpg": Downloading "TEST815_FIG09_FACT_RELATION_AUDIT.jpg": Downloading "TEST815_FIG10_SAME_RUN_REPLAY.jpg": Downloading "TEST815_FIG11_TIMING_GPU_GATES.jpg": Downloading "TEST815_FIG12_CLAIMS_LEDGER.jpg":
