@@ -1,0 +1,516 @@
+ TEST807_GPU_PREFLIGHT {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+TEST807_GPU_FREE_GIB 78.83
+PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+==============================================================================================================
+TEST807 — REAL ARTICLES / COMPLETION AUDIT / NATIVE CUT3
+PASS TEST790_EXACT_BLOB 
+PASS TEST789_EXACT_BLOB 
+PASS TEST779_EXACT_BLOB 
+PASS SEALED_PANEL 
+PASS PROVEN_NATIVE_SYMBOLS 
+PASS API_HOST 
+PASS API_FINAL_HOST https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9521804/fullTextXML
+PASS API_SIZE 96050
+PASS JATS_ARTICLE_PMC9521804 
+PASS ARTICLE_META_PMC9521804 
+PASS PMCID_IF_PRESENT_PMC9521804 ['PMC9521804']
+PASS EXACT_DOI_LOCK_PMC9521804 {'xml_doi': '10.1371/journal.pcbi.1010476', 'expected': '10.1371/journal.pcbi.1010476'}
+PASS EXACT_TITLE_LOCK_PMC9521804 {'xml_title': 'Ten simple rules for getting and giving credit for data', 'expected': 'ten simple rules for getting and giving credit for data'}
+PASS SCIENTIFIC_BODY_PMC9521804 26367
+PASS EXCERPT_PMC9521804 
+TEST807_SOURCE_LOADED PMC9521804 10.1371/journal.pcbi.1010476 Ten simple rules for getting and giving credit for data
+PASS API_HOST 
+PASS API_FINAL_HOST https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9401135/fullTextXML
+PASS API_SIZE 89276
+PASS JATS_ARTICLE_PMC9401135 
+PASS ARTICLE_META_PMC9401135 
+PASS PMCID_IF_PRESENT_PMC9401135 ['PMC9401135']
+PASS EXACT_DOI_LOCK_PMC9401135 {'xml_doi': '10.1371/journal.pone.0272845', 'expected': '10.1371/journal.pone.0272845'}
+PASS EXACT_TITLE_LOCK_PMC9401135 {'xml_title': 'Long-term availability of data associated with articles in PLOS ONE', 'expected': 'long-term availability of data associated with articles in plos one'}
+PASS SCIENTIFIC_BODY_PMC9401135 35111
+PASS EXCERPT_PMC9401135 
+TEST807_SOURCE_LOADED PMC9401135 10.1371/journal.pone.0272845 Long-term availability of data associated with articles in PLOS ONE
+PASS TWO_LOCKED_ARTICLES 
+PASS QUESTION_NO_BODY_REPLAY 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 71.7kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 837kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 84.5MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 71.7MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 121MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.67MB/s]Download complete:   125GB, 1.59GB/s  Reconstruction complete: 100%  145GB /  145GB,  377MB/s  Fetching 37 files: 100% 37/37 [06:50<00:00,  9.09s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.34it/s]generation_config.json: 100% 242/242 [00:00<00:00, 29.4kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS CARD_NONEMPTY_C00_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_A 
+PASS FRESH_CARTRIDGE_C00_A 
+PASS PHYSICAL_SHA_C00_A 
+PHYSICAL_COMMIT C00_A b25e3b755372d55f5178e6c77ada100db59091860ecb6d506fae25b9e1e20249 PARENTS []
+PASS CARD_NONEMPTY_C00_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B0 
+PASS FRESH_CARTRIDGE_C00_B0 
+PASS PHYSICAL_SHA_C00_B0 
+PHYSICAL_COMMIT C00_B0 1bbf3c2f63b5e7a33049d888f053ff69de5675e194d4c4522f399244225a8d7c PARENTS []
+PASS CARD_NONEMPTY_C00_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_B1 
+PASS FRESH_CARTRIDGE_C00_B1 
+PASS PHYSICAL_SHA_C00_B1 
+PHYSICAL_COMMIT C00_B1 fe594c7179586ffb191ceee97feb98e29990cd7f726296c57481a5da6b12ef07 PARENTS []
+PASS CARD_NONEMPTY_C00_C0 16
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C0 
+PASS FRESH_CARTRIDGE_C00_C0 
+PASS PHYSICAL_SHA_C00_C0 
+PHYSICAL_COMMIT C00_C0 75e4fa340152515eb89a06b0cc59f5ad475ec8501b451a199c052b36cd754966 PARENTS []
+PASS CARD_NONEMPTY_C00_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C00_C1 
+PASS FRESH_CARTRIDGE_C00_C1 
+PASS PHYSICAL_SHA_C00_C1 
+PHYSICAL_COMMIT C00_C1 61d9243d2981164b4ffe589400eb8eb472b94eaf9b8e8401c16aa7ba0e89b706 PARENTS []
+PASS CARD_NONEMPTY_C01_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_A 
+PASS FRESH_CARTRIDGE_C01_A 
+PASS PHYSICAL_SHA_C01_A 
+PHYSICAL_COMMIT C01_A bfd433a9886dba875219ef8a41134c1a827da94501106f1ec226f96316220560 PARENTS []
+PASS CARD_NONEMPTY_C01_B0 35
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B0 
+PASS FRESH_CARTRIDGE_C01_B0 
+PASS PHYSICAL_SHA_C01_B0 
+PHYSICAL_COMMIT C01_B0 69c7a8f490e88374732853f200454becd19796c29d24d511660164e58cf1a812 PARENTS []
+PASS CARD_NONEMPTY_C01_B1 32
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_B1 
+PASS FRESH_CARTRIDGE_C01_B1 
+PASS PHYSICAL_SHA_C01_B1 
+PHYSICAL_COMMIT C01_B1 d741703932b0e015d0e5717899438dbae2f5a364a0bf5869c730125660382b18 PARENTS []
+PASS CARD_NONEMPTY_C01_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C0 
+PASS FRESH_CARTRIDGE_C01_C0 
+PASS PHYSICAL_SHA_C01_C0 
+PHYSICAL_COMMIT C01_C0 0438a5fa6b3e22729843eda4f5e29fedd947dfd0ac15bff175312a4fc74c4ce9 PARENTS []
+PASS CARD_NONEMPTY_C01_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C01_C1 
+PASS FRESH_CARTRIDGE_C01_C1 
+PASS PHYSICAL_SHA_C01_C1 
+PHYSICAL_COMMIT C01_C1 3844b0cbd072eec021c3b06653c7a217e7c0e3c048ac6f3c06729ef5ad75b243 PARENTS []
+PASS CARD_NONEMPTY_C02_A 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_A 
+PASS FRESH_CARTRIDGE_C02_A 
+PASS PHYSICAL_SHA_C02_A 
+PHYSICAL_COMMIT C02_A d5b839b4f01335013edc5498b2945bc642bce21af3322a17bb6e78f2820858e0 PARENTS []
+PASS CARD_NONEMPTY_C02_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B0 
+PASS FRESH_CARTRIDGE_C02_B0 
+PASS PHYSICAL_SHA_C02_B0 
+PHYSICAL_COMMIT C02_B0 21c274fadf593874a12e7877999d70e46ace0d7b49c1474af612cc8806ec0bb1 PARENTS []
+PASS CARD_NONEMPTY_C02_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_B1 
+PASS FRESH_CARTRIDGE_C02_B1 
+PASS PHYSICAL_SHA_C02_B1 
+PHYSICAL_COMMIT C02_B1 1c031532fb1edbf296c44f767b90d52fdbaa793d69f6e641ae10515d66ef7b9e PARENTS []
+PASS CARD_NONEMPTY_C02_C0 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C0 
+PASS FRESH_CARTRIDGE_C02_C0 
+PASS PHYSICAL_SHA_C02_C0 
+PHYSICAL_COMMIT C02_C0 5efbc4c3ca6dfe737294f934381233d18b09f6b5d5613b7f754654605e01dba7 PARENTS []
+PASS CARD_NONEMPTY_C02_C1 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C02_C1 
+PASS FRESH_CARTRIDGE_C02_C1 
+PASS PHYSICAL_SHA_C02_C1 
+PHYSICAL_COMMIT C02_C1 239478a155233e7a0be998c97c728da71214a381067c9c724c1e3ffc7e5a652d PARENTS []
+PASS CARD_NONEMPTY_C03_A 15
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_A 
+PASS FRESH_CARTRIDGE_C03_A 
+PASS PHYSICAL_SHA_C03_A 
+PHYSICAL_COMMIT C03_A 481f73763cb2054bd0b0ac664348dba2aff770f4cce3d121aef7d48d68aaf1b9 PARENTS []
+PASS CARD_NONEMPTY_C03_B0 36
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B0 
+PASS FRESH_CARTRIDGE_C03_B0 
+PASS PHYSICAL_SHA_C03_B0 
+PHYSICAL_COMMIT C03_B0 a512cfe1bf116ff0c014cb325bd0b1784786361dd987fe6f4e9c3f802d7dc351 PARENTS []
+PASS CARD_NONEMPTY_C03_B1 33
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_B1 
+PASS FRESH_CARTRIDGE_C03_B1 
+PASS PHYSICAL_SHA_C03_B1 
+PHYSICAL_COMMIT C03_B1 7a449102d17075da3998f22948eab0019645530d39c24dc153d09a68dd4ee9bf PARENTS []
+PASS CARD_NONEMPTY_C03_C0 18
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C0 
+PASS FRESH_CARTRIDGE_C03_C0 
+PASS PHYSICAL_SHA_C03_C0 
+PHYSICAL_COMMIT C03_C0 9ff11babb3b93553ec296d2176c2db39c1c17f2be0c86a0b0886a43e79e8ace1 PARENTS []
+PASS CARD_NONEMPTY_C03_C1 17
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_C03_C1 
+PASS FRESH_CARTRIDGE_C03_C1 
+PASS PHYSICAL_SHA_C03_C1 
+PHYSICAL_COMMIT C03_C1 906b6530868b96481b08a3df33d66eb0448d4937b5f232ded6cd926e093b34d3 PARENTS []
+PASS BASE_20_CARTRIDGES 20
+PASS TRIMMED_TEXT_NONEMPTY_PMC9521804 
+PASS TOKEN_BUDGET_PMC9521804 965
+PASS CARD_NONEMPTY_PMC9521804 965
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_PMC9521804 
+PASS FRESH_CARTRIDGE_PMC9521804 
+PASS PHYSICAL_SHA_PMC9521804 
+PHYSICAL_COMMIT PMC9521804 d0e1eb185b3190eb129824865800b6b4f7ebef0d75e0dd614811c6db71297876 PARENTS []
+PASS TRIMMED_TEXT_NONEMPTY_PMC9401135 
+PASS TOKEN_BUDGET_PMC9401135 967
+PASS CARD_NONEMPTY_PMC9401135 967
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_PMC9401135 
+PASS FRESH_CARTRIDGE_PMC9401135 
+PASS PHYSICAL_SHA_PMC9401135 
+PHYSICAL_COMMIT PMC9401135 e6abb0ab2299050b21bffa29ba10f5b137f99a5f976b85f4ab5f8cb18ce4c824 PARENTS []
+PASS PHYSICAL_22_CARTRIDGES 22
+PASS BOTH_REAL_ARTICLES_COMMITTED 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NONEMPTY_H3_PMC9521804 (965, 8192)
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NONEMPTY_H3_PMC9401135 (967, 8192)
+PASS NUMERICAL_H3_BANK 
+PASS PARAPHRASE_PANEL_LOCK 
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q1", "original_top1": "PMC9521804", "paraphrase_top1": "PMC9401135", "same_top1": false, "original_top1_relevant": true, "paraphrase_top1_relevant": false, "original_scores": {"PMC9521804": 0.615227, "PMC9401135": 0.601151}, "paraphrase_scores": {"PMC9401135": 0.592118, "PMC9521804": 0.586767}}
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q2", "original_top1": "PMC9401135", "paraphrase_top1": "PMC9401135", "same_top1": true, "original_top1_relevant": true, "paraphrase_top1_relevant": true, "original_scores": {"PMC9401135": 0.635212, "PMC9521804": 0.614631}, "paraphrase_scores": {"PMC9401135": 0.632457, "PMC9521804": 0.617257}}
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q3", "original_top1": "PMC9401135", "paraphrase_top1": "PMC9521804", "same_top1": false, "original_top1_relevant": true, "paraphrase_top1_relevant": true, "original_scores": {"PMC9401135": 0.613742, "PMC9521804": 0.604927}, "paraphrase_scores": {"PMC9521804": 0.610444, "PMC9401135": 0.607262}}
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q4", "original_top1": "PMC9401135", "paraphrase_top1": "PMC9401135", "same_top1": true, "original_top1_relevant": true, "paraphrase_top1_relevant": true, "original_scores": {"PMC9401135": 0.61954, "PMC9521804": 0.618016}, "paraphrase_scores": {"PMC9401135": 0.614824, "PMC9521804": 0.614722}}
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q5", "original_top1": "PMC9401135", "paraphrase_top1": "PMC9401135", "same_top1": true, "original_top1_relevant": true, "paraphrase_top1_relevant": true, "original_scores": {"PMC9401135": 0.5961, "PMC9521804": 0.590195}, "paraphrase_scores": {"PMC9401135": 0.599036, "PMC9521804": 0.597628}}
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q6", "original_top1": "PMC9521804", "paraphrase_top1": "PMC9401135", "same_top1": false, "original_top1_relevant": false, "paraphrase_top1_relevant": true, "original_scores": {"PMC9521804": 0.613963, "PMC9401135": 0.612107}, "paraphrase_scores": {"PMC9401135": 0.624546, "PMC9521804": 0.621137}}
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q7", "original_top1": "PMC9521804", "paraphrase_top1": "PMC9521804", "same_top1": true, "original_top1_relevant": true, "paraphrase_top1_relevant": true, "original_scores": {"PMC9521804": 0.612948, "PMC9401135": 0.593492}, "paraphrase_scores": {"PMC9521804": 0.616794, "PMC9401135": 0.602048}}
+PASS H3_RANK_TWO 
+PASS H3_RANK_TWO 
+TEST807_ROUTE_PARAPHRASE {"case_id": "Q8", "original_top1": "PMC9521804", "paraphrase_top1": "PMC9401135", "same_top1": false, "original_top1_relevant": false, "paraphrase_top1_relevant": true, "original_scores": {"PMC9521804": 0.597258, "PMC9401135": 0.589412}, "paraphrase_scores": {"PMC9401135": 0.600147, "PMC9521804": 0.59296}}
+PASS PARAPHRASE_EIGHT 
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q1_PAIR PMC9521804 {'ssd_verify_ms': 219.979, 'h2d_ms': 21.81, 'fusion_ms': 2396.664, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q1_PAIR PMC9401135 {'ssd_verify_ms': 207.823, 'h2d_ms': 9.379, 'fusion_ms': 4940.734, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q1_PAIR 
+PASS NATIVE_LENGTH_Q1_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q1_PAIR 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q1_SINGLE PMC9521804 {'ssd_verify_ms': 220.405, 'h2d_ms': 9.777, 'fusion_ms': 2435.433, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS NATIVE80_Q1_SINGLE 
+PASS NATIVE_LENGTH_Q1_SINGLE {'n': 995, 'expected': 995}
+PASS KV_SEAL_Q1_SINGLE 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q1_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 210.942, 'h2d_ms': 9.596, 'fusion_ms': 2426.817, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q1_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 204.683, 'h2d_ms': 8.969, 'fusion_ms': 4936.158, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q1_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q1_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q1_REVERSE_PAIR 
+TEST807_ROW {"case_id": "Q1", "question": "What role do persistent identifiers play in giving researchers credit for shared scientific data?", "controller": {"action": "ANSWER", "answer": "Persistent identifiers (PIDs), such as DOIs, enable researchers to receive credit for shared data by providing a unique, machine-readable reference that remains constant even if the data location changes. This supports discoverability and attribution.", "selected": ["PMC9521804", "PMC9401135"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9521804", "score": 0.61523}, {"id": "PMC9401135", "score": 0.60115}], "steps": [{"operation": "PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "Persistent identifiers (PIDs), such as DOIs, enable researchers to receive credit for shared data by providing a unique, machine-readable reference that remains constant even if the data location changes. This supports discoverability and attribution.", "tokens": 45, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 180, "elapsed_seconds": 18.54}, {"operation": "SINGLE", "ids": ["PMC9521804"], "raw": "Persistent identifiers (PIDs), such as DOIs, uniquely identify and make data discoverable, allowing researchers to receive credit for their contributions. PIDs are universal, globally unique, and machine-readable, facilitating automated attribution.", "tokens": 45, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 180, "elapsed_seconds": 11.126}, {"operation": "REVERSE_PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "Persistent identifiers (PIDs), such as DOIs, uniquely identify and make data findable, allowing for proper attribution and credit to researchers. They are machine-readable and can be versioned, facilitating automated tracking and citation of data.", "tokens": 47, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 188, "elapsed_seconds": 18.637}], "retry": false, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": true, "lexical_agreement": {"pair_single": 0.37142857142857144, "pair_reverse": 0.2972972972972973, "pair_alternate": null}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9521804"], "top1_relevant": true, "top2_recall": 1.0}}
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q2_PAIR PMC9401135 {'ssd_verify_ms': 231.356, 'h2d_ms': 9.172, 'fusion_ms': 2397.25, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q2_PAIR PMC9521804 {'ssd_verify_ms': 205.426, 'h2d_ms': 9.089, 'fusion_ms': 4929.498, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q2_PAIR 
+PASS NATIVE_LENGTH_Q2_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q2_PAIR 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q2_SINGLE PMC9401135 {'ssd_verify_ms': 204.932, 'h2d_ms': 9.717, 'fusion_ms': 2423.719, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS NATIVE80_Q2_SINGLE 
+PASS NATIVE_LENGTH_Q2_SINGLE {'n': 997, 'expected': 997}
+PASS KV_SEAL_Q2_SINGLE 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q2_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 202.779, 'h2d_ms': 9.616, 'fusion_ms': 2432.054, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q2_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 204.882, 'h2d_ms': 9.374, 'fusion_ms': 4921.353, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q2_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q2_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q2_REVERSE_PAIR 
+TEST807_ROW {"case_id": "Q2", "question": "In the empirical study of data availability, how did DOI-linked and URL-linked resources compare?", "controller": {"action": "ANSWER", "answer": "In the study, 98% of DOI-linked resources were successfully retrieved, compared to 78% of URL-linked resources. This indicates DOIs are more reliable for long-term data access.", "selected": ["PMC9401135", "PMC9521804"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9401135", "score": 0.63521}, {"id": "PMC9521804", "score": 0.61463}], "steps": [{"operation": "PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "In the study, 98% of DOI-linked resources were successfully retrieved, compared to 78% of URL-linked resources. This indicates DOIs are more reliable for long-term data access.", "tokens": 41, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 164, "elapsed_seconds": 17.716}, {"operation": "SINGLE", "ids": ["PMC9401135"], "raw": "In the study, 98% of DOI-linked resources were successfully retrieved manually, compared to 78% of URL-linked resources. This indicates DOIs are more reliable for long-term data access.", "tokens": 42, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 168, "elapsed_seconds": 10.708}, {"operation": "REVERSE_PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "In the study, 98% of DOI-linked resources were successfully retrieved, compared to 78% of URL-linked resources, indicating DOIs are more reliable for long-term data access.", "tokens": 40, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 160, "elapsed_seconds": 17.567}], "retry": false, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": true, "lexical_agreement": {"pair_single": 0.9411764705882353, "pair_reverse": 0.8823529411764706, "pair_alternate": null}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9401135"], "top1_relevant": true, "top2_recall": 1.0}}
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q3_PAIR PMC9401135 {'ssd_verify_ms': 244.974, 'h2d_ms': 9.047, 'fusion_ms': 2397.202, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q3_PAIR PMC9521804 {'ssd_verify_ms': 203.247, 'h2d_ms': 9.096, 'fusion_ms': 4916.181, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q3_PAIR 
+PASS NATIVE_LENGTH_Q3_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q3_PAIR 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q3_SINGLE PMC9401135 {'ssd_verify_ms': 204.436, 'h2d_ms': 9.683, 'fusion_ms': 2416.785, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS NATIVE80_Q3_SINGLE 
+PASS NATIVE_LENGTH_Q3_SINGLE {'n': 997, 'expected': 997}
+PASS KV_SEAL_Q3_SINGLE 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q3_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 204.035, 'h2d_ms': 9.508, 'fusion_ms': 2436.392, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q3_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 204.279, 'h2d_ms': 8.965, 'fusion_ms': 4916.373, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q3_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q3_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q3_REVERSE_PAIR 
+TEST807_ROW {"case_id": "Q3", "question": "Distinguish recommended practices for making data findable from measured evidence of link availability.", "controller": {"action": "ANSWER", "answer": "Recommended practices for making data findable include using persistent identifiers like DOIs and ensuring they are registered and indexable. Measured evidence shows that 80% of resources could be retrieved automatically, with 78% of URLs and 98% of DOIs successfully retrieved manually.", "selected": ["PMC9401135", "PMC9521804"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9401135", "score": 0.61374}, {"id": "PMC9521804", "score": 0.60493}], "steps": [{"operation": "PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "Recommended practices for making data findable include using persistent identifiers like DOIs and ensuring they are registered and indexable. Measured evidence shows that 80% of resources could be retrieved automatically, with 78% of URLs and 98% of DOIs successfully retrieved manually.", "tokens": 59, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 236, "elapsed_seconds": 20.209}, {"operation": "SINGLE", "ids": ["PMC9401135"], "raw": "Recommended practices for making data findable include using repositories and including URLs and DOIs in Data Availability Statements. Measured evidence shows 80% of resources could be retrieved automatically, with 78% and 98% success rates for URLs and DOIs, respectively, when manually tested.", "tokens": 61, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 244, "elapsed_seconds": 13.406}, {"operation": "REVERSE_PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "Recommended practices for making data findable include using persistent identifiers (PIDs) like DOIs and ensuring they are registered and indexable. Measured evidence shows that 80% of resources could be retrieved automatically, with 98% of DOIs successfully retrieved manually.", "tokens": 56, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 224, "elapsed_seconds": 19.833}], "retry": false, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": true, "lexical_agreement": {"pair_single": 0.48484848484848486, "pair_reverse": 0.92, "pair_alternate": null}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9521804", "PMC9401135"], "top1_relevant": true, "top2_recall": 1.0}}
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q4_PAIR PMC9401135 {'ssd_verify_ms': 221.071, 'h2d_ms': 8.918, 'fusion_ms': 2397.625, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q4_PAIR PMC9521804 {'ssd_verify_ms': 203.428, 'h2d_ms': 9.019, 'fusion_ms': 4925.234, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q4_PAIR 
+PASS NATIVE_LENGTH_Q4_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q4_PAIR 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q4_SINGLE PMC9401135 {'ssd_verify_ms': 205.351, 'h2d_ms': 10.277, 'fusion_ms': 2429.413, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS NATIVE80_Q4_SINGLE 
+PASS NATIVE_LENGTH_Q4_SINGLE {'n': 997, 'expected': 997}
+PASS KV_SEAL_Q4_SINGLE 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q4_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 208.041, 'h2d_ms': 9.883, 'fusion_ms': 2424.943, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q4_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 207.641, 'h2d_ms': 9.001, 'fusion_ms': 4962.068, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q4_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q4_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q4_REVERSE_PAIR 
+TEST807_ROW {"case_id": "Q4", "question": "Does assigning a DOI guarantee that scientific data will remain accessible forever?", "controller": {"action": "ANSWER", "answer": "While assigning a DOI increases the likelihood of long-term data accessibility, it does not guarantee perpetual availability due to potential issues like link rot and content drift.", "selected": ["PMC9401135", "PMC9521804"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9401135", "score": 0.61954}, {"id": "PMC9521804", "score": 0.61802}], "steps": [{"operation": "PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "While assigning a DOI increases the likelihood of long-term data accessibility, it does not guarantee perpetual availability due to potential issues like link rot and content drift.", "tokens": 31, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 124, "elapsed_seconds": 16.285}, {"operation": "SINGLE", "ids": ["PMC9401135"], "raw": "While assigning a DOI increases the likelihood of data availability, it does not guarantee permanent accessibility due to potential issues like link rot and content drift.", "tokens": 29, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 116, "elapsed_seconds": 8.953}, {"operation": "REVERSE_PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "While assigning a DOI increases the likelihood of long-term data availability, it does not guarantee perpetual accessibility due to potential issues like link rot and content drift.", "tokens": 31, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 124, "elapsed_seconds": 16.422}], "retry": false, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": true, "lexical_agreement": {"pair_single": 0.8181818181818182, "pair_reverse": 1.0, "pair_alternate": null}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9401135", "PMC9521804"], "top1_relevant": true, "top2_recall": 1.0}}
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q5_PAIR PMC9401135 {'ssd_verify_ms': 211.265, 'h2d_ms': 9.355, 'fusion_ms': 2398.421, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q5_PAIR PMC9521804 {'ssd_verify_ms': 206.674, 'h2d_ms': 8.993, 'fusion_ms': 4965.746, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q5_PAIR 
+PASS NATIVE_LENGTH_Q5_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q5_PAIR 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q5_SINGLE PMC9401135 {'ssd_verify_ms': 205.599, 'h2d_ms': 9.882, 'fusion_ms': 2431.751, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS NATIVE80_Q5_SINGLE 
+PASS NATIVE_LENGTH_Q5_SINGLE {'n': 997, 'expected': 997}
+PASS KV_SEAL_Q5_SINGLE 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q5_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 203.826, 'h2d_ms': 9.363, 'fusion_ms': 2415.234, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q5_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 206.471, 'h2d_ms': 9.03, 'fusion_ms': 4933.469, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q5_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q5_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q5_REVERSE_PAIR 
+TEST807_ROW {"case_id": "Q5", "question": "What limitations affect long-term availability of published research data?", "controller": {"action": "ANSWER", "answer": "Link rot and content drift can cause URLs and DOIs to become invalid over time, reducing the long-term availability of published research data. However, the study found that URLs and DOIs remain effective for accessing data over time.", "selected": ["PMC9401135", "PMC9521804"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9401135", "score": 0.5961}, {"id": "PMC9521804", "score": 0.5902}], "steps": [{"operation": "PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "Link rot and content drift can cause URLs and DOIs to become invalid over time, reducing the long-term availability of published research data. However, the study found that URLs and DOIs remain effective for accessing data over time.", "tokens": 46, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 184, "elapsed_seconds": 18.553}, {"operation": "SINGLE", "ids": ["PMC9401135"], "raw": "Link rot and content drift can cause URLs and DOIs to become invalid or not point to the correct resource, impacting long-term data availability.", "tokens": 29, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 116, "elapsed_seconds": 8.872}, {"operation": "REVERSE_PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "Long-term availability of published research data can be limited by link rot and content drift, even when a Data Availability Statement is provided. However, using DOIs and repositories positively correlates with better data availability over time.", "tokens": 43, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 172, "elapsed_seconds": 18.034}], "retry": false, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": true, "lexical_agreement": {"pair_single": 0.5, "pair_reverse": 0.42424242424242425, "pair_alternate": null}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9401135"], "top1_relevant": true, "top2_recall": 1.0}}
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q6_PAIR PMC9521804 {'ssd_verify_ms': 219.864, 'h2d_ms': 9.043, 'fusion_ms': 2396.83, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q6_PAIR PMC9401135 {'ssd_verify_ms': 206.048, 'h2d_ms': 9.34, 'fusion_ms': 4945.497, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q6_PAIR 
+PASS NATIVE_LENGTH_Q6_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q6_PAIR 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q6_SINGLE PMC9521804 {'ssd_verify_ms': 203.945, 'h2d_ms': 9.813, 'fusion_ms': 2433.584, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS NATIVE80_Q6_SINGLE 
+PASS NATIVE_LENGTH_Q6_SINGLE {'n': 995, 'expected': 995}
+PASS KV_SEAL_Q6_SINGLE 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q6_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 204.848, 'h2d_ms': 9.626, 'fusion_ms': 2412.596, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q6_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 204.932, 'h2d_ms': 8.961, 'fusion_ms': 4942.67, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q6_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q6_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q6_REVERSE_PAIR 
+TEST807_ROW {"case_id": "Q6", "question": "What is content drift when a research-data link still resolves, and why is it problematic?", "controller": {"action": "ANSWER", "answer": "Content drift occurs when a research-data link still resolves but the content at the end of the link has changed, leading to the wrong or outdated data being accessed. This is problematic because it undermines the reliability and reproducibility of the research.", "selected": ["PMC9521804", "PMC9401135"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9521804", "score": 0.61396}, {"id": "PMC9401135", "score": 0.61211}], "steps": [{"operation": "PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "Content drift occurs when a research-data link still resolves but the content at the end of the link has changed, leading to the wrong or outdated data being accessed. This is problematic because it undermines the reliability and reproducibility of the research.", "tokens": 49, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 196, "elapsed_seconds": 18.898}, {"operation": "SINGLE", "ids": ["PMC9521804"], "raw": "UNKNOWN. The provided text does not mention content drift or its implications when a research-data link still resolves.", "tokens": 22, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 88, "elapsed_seconds": 7.917}, {"operation": "REVERSE_PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "Content drift occurs when a link to research data remains active but the content at that location changes, leading to the original data becoming unavailable or altered, which undermines the integrity and reproducibility of the research.", "tokens": 42, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 168, "elapsed_seconds": 17.934}], "retry": false, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": true, "lexical_agreement": {"pair_single": 0.2413793103448276, "pair_reverse": 0.3225806451612903, "pair_alternate": null}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9401135"], "top1_relevant": false, "top2_recall": 1.0}}
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q7_PAIR PMC9521804 {'ssd_verify_ms': 209.511, 'h2d_ms': 9.147, 'fusion_ms': 2397.888, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q7_PAIR PMC9401135 {'ssd_verify_ms': 210.501, 'h2d_ms': 9.079, 'fusion_ms': 4980.293, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q7_PAIR 
+PASS NATIVE_LENGTH_Q7_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q7_PAIR 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q7_SINGLE PMC9521804 {'ssd_verify_ms': 207.553, 'h2d_ms': 10.277, 'fusion_ms': 2415.781, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS NATIVE80_Q7_SINGLE 
+PASS NATIVE_LENGTH_Q7_SINGLE {'n': 995, 'expected': 995}
+PASS KV_SEAL_Q7_SINGLE 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q7_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 206.921, 'h2d_ms': 9.716, 'fusion_ms': 2429.972, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q7_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 207.84, 'h2d_ms': 9.918, 'fusion_ms': 4984.611, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q7_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q7_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q7_REVERSE_PAIR 
+TEST807_ROW {"case_id": "Q7", "question": "How do persistent identifiers support attribution and responsible data reuse?", "controller": {"action": "ANSWER", "answer": "Persistent identifiers (PIDs), such as DOIs, support attribution by providing a unique, machine-readable reference to data, enabling automated citation. They also ensure that data can be reliably accessed and reused over time, even if the original URL changes.", "selected": ["PMC9521804", "PMC9401135"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9521804", "score": 0.61295}, {"id": "PMC9401135", "score": 0.59349}], "steps": [{"operation": "PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "Persistent identifiers (PIDs), such as DOIs, support attribution by providing a unique, machine-readable reference to data, enabling automated citation. They also ensure that data can be reliably accessed and reused over time, even if the original URL changes.", "tokens": 50, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 200, "elapsed_seconds": 19.007}, {"operation": "SINGLE", "ids": ["PMC9521804"], "raw": "Persistent identifiers (PIDs), such as DOIs, support attribution by providing a unique, machine-readable reference to data, enabling it to be consistently cited. This ensures that data contributors receive credit and facilitates responsible reuse by maintaining data integrity and discoverability.", "tokens": 51, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 204, "elapsed_seconds": 12.043}, {"operation": "REVERSE_PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "Persistent identifiers (PIDs) like DOIs make data uniquely identifiable and machine-readable, enabling automated attribution and ensuring that data can be referenced even if URLs change. This supports responsible data reuse by facilitating discovery and proper citation.", "tokens": 45, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 180, "elapsed_seconds": 18.445}], "retry": false, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": true, "lexical_agreement": {"pair_single": 0.34146341463414637, "pair_reverse": 0.3023255813953488, "pair_alternate": null}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9521804"], "top1_relevant": true, "top2_recall": 1.0}}
+PASS H3_RANK_TWO 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q8_PAIR PMC9521804 {'ssd_verify_ms': 222.671, 'h2d_ms': 9.605, 'fusion_ms': 2397.536, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+NATIVE_FUSION_STEP TEST807_Q8_PAIR PMC9401135 {'ssd_verify_ms': 208.1, 'h2d_ms': 9.834, 'fusion_ms': 4988.295, 'cid': 'PMC9401135', 'memory_tokens': 1962}
+PASS NATIVE80_Q8_PAIR 
+PASS NATIVE_LENGTH_Q8_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q8_PAIR 
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q8_SINGLE PMC9521804 {'ssd_verify_ms': 206.545, 'h2d_ms': 9.728, 'fusion_ms': 2435.788, 'cid': 'PMC9521804', 'memory_tokens': 995}
+PASS NATIVE80_Q8_SINGLE 
+PASS NATIVE_LENGTH_Q8_SINGLE {'n': 995, 'expected': 995}
+PASS KV_SEAL_Q8_SINGLE 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q8_REVERSE_PAIR PMC9401135 {'ssd_verify_ms': 209.889, 'h2d_ms': 10.995, 'fusion_ms': 2428.714, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS FILE_SHA_PMC9521804 
+PASS CARTRIDGE_ID_PMC9521804 
+PASS CARTRIDGE_TENSOR_SHA_PMC9521804 
+NATIVE_FUSION_STEP TEST807_Q8_REVERSE_PAIR PMC9521804 {'ssd_verify_ms': 206.585, 'h2d_ms': 9.029, 'fusion_ms': 4973.442, 'cid': 'PMC9521804', 'memory_tokens': 1962}
+PASS NATIVE80_Q8_REVERSE_PAIR 
+PASS NATIVE_LENGTH_Q8_REVERSE_PAIR {'n': 1962, 'expected': 1962}
+PASS KV_SEAL_Q8_REVERSE_PAIR 
+PASS FILE_SHA_PMC9401135 
+PASS CARTRIDGE_ID_PMC9401135 
+PASS CARTRIDGE_TENSOR_SHA_PMC9401135 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST807_Q8_ALTERNATE_SINGLE PMC9401135 {'ssd_verify_ms': 208.485, 'h2d_ms': 10.403, 'fusion_ms': 2414.087, 'cid': 'PMC9401135', 'memory_tokens': 997}
+PASS NATIVE80_Q8_ALTERNATE_SINGLE 
+PASS NATIVE_LENGTH_Q8_ALTERNATE_SINGLE {'n': 997, 'expected': 997}
+PASS KV_SEAL_Q8_ALTERNATE_SINGLE 
+TEST807_ROW {"case_id": "Q8", "question": "What does the empirical study report about manual versus automated retrieval of linked data?", "controller": {"action": "ABSTAIN", "answer": "UNKNOWN", "selected": ["PMC9521804", "PMC9401135"], "route_method": "NATIVE_CUT3_H3_NUMERICAL_RANK_TEST757_TWO_SOURCES", "scores": [{"id": "PMC9521804", "score": 0.59726}, {"id": "PMC9401135", "score": 0.58941}], "steps": [{"operation": "PAIR", "ids": ["PMC9521804", "PMC9401135"], "raw": "The study reports that 78% of resources were successfully retrieved manually from a subset of 350 URLs, compared to 98% from 350 DOIs. Automated retrieval had an overall success rate of 80%.", "tokens": 51, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 204, "elapsed_seconds": 19.263}, {"operation": "SINGLE", "ids": ["PMC9521804"], "raw": "UNKNOWN", "tokens": 2, "max_new": 128, "possible_truncation": false, "sentence_end": false, "sdpa_calls": 8, "elapsed_seconds": 5.138}, {"operation": "REVERSE_PAIR", "ids": ["PMC9401135", "PMC9521804"], "raw": "The study reports that 80% of resources could be retrieved automatically, while 78% of a manually tested subset of URLs and 98% of DOIs were successfully retrieved.", "tokens": 40, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 160, "elapsed_seconds": 17.658}, {"operation": "ALTERNATE_SINGLE", "ids": ["PMC9401135"], "raw": "The study reports that 80% of resources could be retrieved automatically, while 78% of URLs and 98% of DOIs were successfully retrieved manually from a subset tested.", "tokens": 40, "max_new": 128, "possible_truncation": false, "sentence_end": true, "sdpa_calls": 160, "elapsed_seconds": 10.55}], "retry": true, "complete_under_budget": true, "pair_sentence_end": true, "all_sentence_end": false, "lexical_agreement": {"pair_single": 0.0, "pair_reverse": 0.45, "pair_alternate": 0.45}, "warning": "Lexical agreement and sentence ending do not prove scientific accuracy."}, "offline_routing_eval": {"relevant_sources": ["PMC9401135"], "top1_relevant": false, "top2_recall": 1.0}}
+PASS EIGHT_CASES 
+PASS BOUNDED_STEPS 
+PASS RETRY_CONDITIONAL 
+PASS FROZEN_WEIGHTS 
+PASS FINAL_MANIFEST 
+PASS NO_RESIDUAL_HOOKS 
+TEST807_COMPLETED {"cases": 8, "source_count": 2, "native_reads": 25, "answers": 7, "abstentions": 1, "retries": 1, "possible_truncated_pair_answers": 0, "complete_under_budget": 8, "pair_sentence_end": 8, "routing_top1_relevant": 6, "routing_top1_total": 8, "paraphrase_top1_agreement": 4, "paraphrase_top1_relevant": 7, "routing_top2_recall_mean": 1.0, "scientific_accuracy": "UNSCORED_REQUIRES_INDEPENDENT_REVIEW", "autonomous_recursive_reasoning_proven": false}
+FILES /content/AKBASCORE_TEST779_20261028T022520_022566Z/TEST807_results.json /content/AKBASCORE_TEST779_20261028T022520_022566Z/TEST807.log /content/AKBASCORE_TEST779_20261028T022520_022566Z/TEST807_manifest.json
