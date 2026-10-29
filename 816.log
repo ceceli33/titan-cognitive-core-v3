@@ -1,0 +1,298 @@
+ TEST815_GPU_PREFLIGHT {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+TEST815_GPU_FREE_GIB 78.83
+PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+PASS LOCKED_NATIVE_SYMBOLS 
+PASS FRESH_MEMORY_BANK 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 80.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 805kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 83.3MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 66.0MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 128MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.59MB/s]Download complete:   125GB, 1.14GB/s  Reconstruction complete: 100%  145GB /  145GB,  575MB/s  Fetching 37 files: 100% 37/37 [06:49<00:00,  9.85s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.32it/s]generation_config.json: 100% 242/242 [00:00<00:00, 32.7kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS SOURCE_TOKEN_BUDGET_E816_A 93
+PASS CARD_NONEMPTY_E816_A 93
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E816_A 
+PASS FRESH_CARTRIDGE_E816_A 
+PASS PHYSICAL_SHA_E816_A 
+PHYSICAL_COMMIT E816_A d62e7a03f78dcb7280811eb85e41a64c4056938c84ab177b3a66d2f2447fa3ae PARENTS []
+PASS SOURCE_TOKEN_BUDGET_E816_B 93
+PASS CARD_NONEMPTY_E816_B 93
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E816_B 
+PASS FRESH_CARTRIDGE_E816_B 
+PASS PHYSICAL_SHA_E816_B 
+PHYSICAL_COMMIT E816_B f32b40d0918d04ae028fa3f99575280170385d41bda10a9752e4095ca60ec246 PARENTS []
+PASS SOURCE_TOKEN_BUDGET_E816_AB 186
+PASS CARD_NONEMPTY_E816_AB 186
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E816_AB 
+PASS FRESH_CARTRIDGE_E816_AB 
+PASS PHYSICAL_SHA_E816_AB 
+PHYSICAL_COMMIT E816_AB f9a3bbfda81887b1004268870e48d1bd36cfe55eb67d4e6d001f956e3e183ddc PARENTS []
+PASS SOURCE_TOKEN_BUDGET_E816_BA 186
+PASS CARD_NONEMPTY_E816_BA 186
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E816_BA 
+PASS FRESH_CARTRIDGE_E816_BA 
+PASS PHYSICAL_SHA_E816_BA 
+PHYSICAL_COMMIT E816_BA 71b9edd7aedb19434cb25852a221cf5155eee583bc91fe0d6302f2c0b4a18a7c PARENTS []
+PASS FOUR_SEALED_CARTRIDGES 
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS SEALED_RELOAD_E816_A 
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS SEALED_RELOAD_E816_B 
+PASS FILE_SHA_E816_AB 
+PASS CARTRIDGE_ID_E816_AB 
+PASS CARTRIDGE_TENSOR_SHA_E816_AB 
+PASS SEALED_RELOAD_E816_AB 
+PASS FILE_SHA_E816_BA 
+PASS CARTRIDGE_ID_E816_BA 
+PASS CARTRIDGE_TENSOR_SHA_E816_BA 
+PASS SEALED_RELOAD_E816_BA 
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_A E816_A {'ssd_verify_ms': 29.089, 'h2d_ms': 13.861, 'fusion_ms': 296.847, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS NATIVE_80_ATTRIBUTION_E816_A 
+PASS KV_SEAL_ATTRIBUTION_E816_A 
+TEST816_READ A_ONLY ATTRIBUTION 'Expert A: Replace vibration sensor every 30 days. Expert B: UNKNOWN. They do not agree.'
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_A E816_A {'ssd_verify_ms': 32.762, 'h2d_ms': 2.323, 'fusion_ms': 296.13, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS NATIVE_80_DISAGREEMENT_E816_A 
+PASS KV_SEAL_DISAGREEMENT_E816_A 
+TEST816_READ A_ONLY DISAGREEMENT 'UNKNOWN\n\nThe provided information only includes a statement from Expert A. There is no information from Expert B to identify a point of disagreement.'
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_A E816_A {'ssd_verify_ms': 29.96, 'h2d_ms': 2.103, 'fusion_ms': 295.906, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS NATIVE_80_DECISION_E816_A 
+PASS KV_SEAL_DECISION_E816_A 
+TEST816_READ A_ONLY DECISION "UNKNOWN. The provided information only includes Expert A's recommendation for the replacement interval of the vibration sensor on the Harbor Bridge. There is no information from Expert B or any other source to compare or resolve any conflicting recommendations. To resolve the conflict, we would need the specific recommendations and reasoning from Expert B regarding the replacement interval of the vibration sensor under the same operating conditions."
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_A E816_A {'ssd_verify_ms': 29.956, 'h2d_ms': 2.119, 'fusion_ms': 295.781, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS NATIVE_80_USER_QUESTION_E816_A 
+PASS KV_SEAL_USER_QUESTION_E816_A 
+TEST816_READ A_ONLY USER_QUESTION "For the Harbor Bridge sensor deployment, Expert A recommends replacing the vibration sensor every 30 days. Expert B's recommendation is not provided in the available document memory, so it is UNKNOWN. \n\nThe conflicting claims between Expert A and any other expert cannot be resolved from the supplied evidence alone, as only Expert A's recommendation is available."
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_B E816_B {'ssd_verify_ms': 29.581, 'h2d_ms': 2.066, 'fusion_ms': 296.06, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS NATIVE_80_ATTRIBUTION_E816_B 
+PASS KV_SEAL_ATTRIBUTION_E816_B 
+TEST816_READ B_ONLY ATTRIBUTION 'UNKNOWN. Position of Expert A not provided. Expert B recommends 90-day replacement.'
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_B E816_B {'ssd_verify_ms': 29.97, 'h2d_ms': 2.118, 'fusion_ms': 295.816, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS NATIVE_80_DISAGREEMENT_E816_B 
+PASS KV_SEAL_DISAGREEMENT_E816_B 
+TEST816_READ B_ONLY DISAGREEMENT 'UNKNOWN\n\nThe provided information from Expert B does not contain any direct contradiction or point of disagreement with Expert A, as the document from Expert A is not provided. Therefore, there is insufficient evidence to identify a precise point of disagreement.'
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_B E816_B {'ssd_verify_ms': 29.717, 'h2d_ms': 2.147, 'fusion_ms': 295.887, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS NATIVE_80_DECISION_E816_B 
+PASS KV_SEAL_DECISION_E816_B 
+TEST816_READ B_ONLY DECISION 'UNKNOWN. The documents from Expert A and Expert B provide conflicting recommendations for the replacement interval of the vibration sensor on the Harbor Bridge. Expert A recommends a 30-day replacement interval, while Expert B recommends a 90-day interval. To resolve this conflict, further evidence would be required, such as:\n\n1. **Test Data or Field Studies**: Comparative data from actual field tests or studies that evaluate the performance and longevity of the sensors under high-salinity conditions.\n2. **Manufacturer Specifications**: Detailed specifications from the sensor manufacturer regarding the expected lifespan and performance under different environmental conditions.\n3. **Industry Standards or Guidelines**: Industry standards or guidelines that provide recommendations for sensor replacement intervals in similar environments.\n4. **Expert Consultation**: Additional input from other experts or a panel of experts to provide'
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_B E816_B {'ssd_verify_ms': 30.469, 'h2d_ms': 2.3, 'fusion_ms': 296.084, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS NATIVE_80_USER_QUESTION_E816_B 
+PASS KV_SEAL_USER_QUESTION_E816_B 
+TEST816_READ B_ONLY USER_QUESTION "For the Harbor Bridge sensor deployment, the replacement intervals recommended by each expert are as follows:\n\n- **Expert B** recommends replacing the vibration sensor every **90 days**. According to Expert B, a 30-day replacement interval is unnecessary under the stated high-salinity operating conditions.\n\n- **Expert A**'s recommendation is not provided in the available document memory, so it is **UNKNOWN**.\n\nGiven the available evidence, the conflicting claims between the experts cannot be resolved. Only Expert B's recommendation is known, and there is no information from Expert A to compare or reconcile."
+PASS FILE_SHA_E816_AB 
+PASS CARTRIDGE_ID_E816_AB 
+PASS CARTRIDGE_TENSOR_SHA_E816_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_AB E816_AB {'ssd_verify_ms': 50.648, 'h2d_ms': 3.048, 'fusion_ms': 583.847, 'cid': 'E816_AB', 'memory_tokens': 216}
+PASS NATIVE_80_ATTRIBUTION_E816_AB 
+PASS KV_SEAL_ATTRIBUTION_E816_AB 
+TEST816_READ ONE_CARTRIDGE_AB ATTRIBUTION 'Expert A: Replace every 30 days. Expert B: Replace every 90 days. They disagree.'
+PASS FILE_SHA_E816_AB 
+PASS CARTRIDGE_ID_E816_AB 
+PASS CARTRIDGE_TENSOR_SHA_E816_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_AB E816_AB {'ssd_verify_ms': 49.37, 'h2d_ms': 3.207, 'fusion_ms': 584.02, 'cid': 'E816_AB', 'memory_tokens': 216}
+PASS NATIVE_80_DISAGREEMENT_E816_AB 
+PASS KV_SEAL_DISAGREEMENT_E816_AB 
+TEST816_READ ONE_CARTRIDGE_AB DISAGREEMENT 'The precise point on which the two experts disagree is the recommended replacement interval for the vibration sensor under the stated high-salinity operating conditions. \n\n- Expert A recommends replacing the vibration sensor every 30 days.\n- Expert B recommends replacing the vibration sensor every 90 days.'
+PASS FILE_SHA_E816_AB 
+PASS CARTRIDGE_ID_E816_AB 
+PASS CARTRIDGE_TENSOR_SHA_E816_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_AB E816_AB {'ssd_verify_ms': 49.439, 'h2d_ms': 3.207, 'fusion_ms': 583.779, 'cid': 'E816_AB', 'memory_tokens': 216}
+PASS NATIVE_80_DECISION_E816_AB 
+PASS KV_SEAL_DECISION_E816_AB 
+TEST816_READ ONE_CARTRIDGE_AB DECISION 'The conflicting recommendations between Expert A and Expert B cannot be resolved from these documents alone. \n\n**Further evidence required:**\n1. **Empirical Data:** Test results or field data from the Harbor Bridge or similar environments that show the performance and longevity of the vibration sensors under high-salinity conditions.\n2. **Technical Specifications:** Detailed technical specifications of the vibration sensors, including their tolerance to high-salinity environments and expected lifespan.\n3. **Industry Standards:** Industry standards or guidelines for sensor replacement intervals in high-salinity conditions.\n4. **Expert Consensus:** A review or consensus from a panel of experts in the field to provide a more comprehensive and balanced recommendation.'
+PASS FILE_SHA_E816_AB 
+PASS CARTRIDGE_ID_E816_AB 
+PASS CARTRIDGE_TENSOR_SHA_E816_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_AB E816_AB {'ssd_verify_ms': 48.008, 'h2d_ms': 3.067, 'fusion_ms': 583.939, 'cid': 'E816_AB', 'memory_tokens': 216}
+PASS NATIVE_80_USER_QUESTION_E816_AB 
+PASS KV_SEAL_USER_QUESTION_E816_AB 
+TEST816_READ ONE_CARTRIDGE_AB USER_QUESTION 'For the Harbor Bridge sensor deployment, the replacement interval recommendations from the experts are as follows:\n\n- **Expert A** recommends replacing the vibration sensor every **30 days**. Expert A states that a 90-day replacement interval is unsafe under the stated high-salinity operating conditions.\n- **Expert B** recommends replacing the vibration sensor every **90 days**. Expert B states that a 30-day replacement interval is unnecessary under the stated high-salinity operating conditions.\n\n**Resolution**: The supplied evidence does not provide a way to resolve the conflict between the two experts. The recommendations are directly contradictory, and without additional information or a third-party evaluation, it is not possible to determine which interval is the correct one to adopt. Therefore, the answer is **UNKNOWN**.'
+PASS FILE_SHA_E816_BA 
+PASS CARTRIDGE_ID_E816_BA 
+PASS CARTRIDGE_TENSOR_SHA_E816_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_BA E816_BA {'ssd_verify_ms': 48.713, 'h2d_ms': 3.127, 'fusion_ms': 583.888, 'cid': 'E816_BA', 'memory_tokens': 216}
+PASS NATIVE_80_ATTRIBUTION_E816_BA 
+PASS KV_SEAL_ATTRIBUTION_E816_BA 
+TEST816_READ ONE_CARTRIDGE_BA ATTRIBUTION 'Expert A: 30-day replacement. Expert B: 90-day replacement. They do not agree.'
+PASS FILE_SHA_E816_BA 
+PASS CARTRIDGE_ID_E816_BA 
+PASS CARTRIDGE_TENSOR_SHA_E816_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_BA E816_BA {'ssd_verify_ms': 48.167, 'h2d_ms': 3.287, 'fusion_ms': 583.763, 'cid': 'E816_BA', 'memory_tokens': 216}
+PASS NATIVE_80_DISAGREEMENT_E816_BA 
+PASS KV_SEAL_DISAGREEMENT_E816_BA 
+TEST816_READ ONE_CARTRIDGE_BA DISAGREEMENT 'The precise point on which the two experts disagree is the recommended replacement interval for the vibration sensor under the stated high-salinity operating conditions. \n\n- Expert A recommends replacing the vibration sensor every 30 days, stating that a 90-day interval is unsafe.\n- Expert B recommends replacing the vibration sensor every 90 days, stating that a 30-day interval is unnecessary.'
+PASS FILE_SHA_E816_BA 
+PASS CARTRIDGE_ID_E816_BA 
+PASS CARTRIDGE_TENSOR_SHA_E816_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_BA E816_BA {'ssd_verify_ms': 48.423, 'h2d_ms': 3.162, 'fusion_ms': 583.588, 'cid': 'E816_BA', 'memory_tokens': 216}
+PASS NATIVE_80_DECISION_E816_BA 
+PASS KV_SEAL_DECISION_E816_BA 
+TEST816_READ ONE_CARTRIDGE_BA DECISION 'The conflicting recommendations between Expert A and Expert B cannot be resolved from these documents alone. \n\nExpert A recommends replacing the vibration sensor every 30 days, stating that a 90-day interval is unsafe under the high-salinity operating conditions. \n\nExpert B recommends replacing the vibration sensor every 90 days, stating that a 30-day interval is unnecessary under the same conditions.\n\nTo resolve this conflict, further evidence would be required, such as:\n\n1. **Empirical Data:** Test results or field data from similar high-salinity environments that show the actual performance and failure rates of the vibration sensors at different replacement intervals.\n2. **Technical Specifications:** Detailed technical specifications of the vibration sensor, including its tolerance to high-salinity conditions and expected lifespan.\n3. **Industry'
+PASS FILE_SHA_E816_BA 
+PASS CARTRIDGE_ID_E816_BA 
+PASS CARTRIDGE_TENSOR_SHA_E816_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_BA E816_BA {'ssd_verify_ms': 49.182, 'h2d_ms': 3.356, 'fusion_ms': 583.586, 'cid': 'E816_BA', 'memory_tokens': 216}
+PASS NATIVE_80_USER_QUESTION_E816_BA 
+PASS KV_SEAL_USER_QUESTION_E816_BA 
+TEST816_READ ONE_CARTRIDGE_BA USER_QUESTION 'For the Harbor Bridge sensor deployment, the replacement interval recommendations from the experts are as follows:\n\n- **Expert A** recommends replacing the vibration sensor every **30 days**, stating that a 90-day replacement interval is unsafe under the stated high-salinity operating conditions.\n- **Expert B** recommends replacing the vibration sensor every **90 days**, stating that a 30-day replacement interval is unnecessary under the stated high-salinity operating conditions.\n\n**Resolution of Conflicting Claims:**\nThe supplied evidence does not provide a basis for resolving the conflict between the two experts. The recommendations are directly contradictory, and without additional information or a third-party evaluation, it is not possible to determine which interval is the correct one to adopt. Therefore, the answer to the question of what replacement interval the'
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_A_E816_B E816_A {'ssd_verify_ms': 30.586, 'h2d_ms': 2.107, 'fusion_ms': 295.987, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_A_E816_B E816_B {'ssd_verify_ms': 29.62, 'h2d_ms': 1.734, 'fusion_ms': 942.767, 'cid': 'E816_B', 'memory_tokens': 216}
+PASS NATIVE_80_ATTRIBUTION_E816_A_E816_B 
+PASS KV_SEAL_ATTRIBUTION_E816_A_E816_B 
+TEST816_READ TWO_CARTRIDGE_AB ATTRIBUTION 'Expert A: Replace every 30 days. Expert B: Replace every 90 days. They disagree.'
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_A_E816_B E816_A {'ssd_verify_ms': 33.383, 'h2d_ms': 2.489, 'fusion_ms': 296.015, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_A_E816_B E816_B {'ssd_verify_ms': 30.18, 'h2d_ms': 1.677, 'fusion_ms': 937.546, 'cid': 'E816_B', 'memory_tokens': 216}
+PASS NATIVE_80_DISAGREEMENT_E816_A_E816_B 
+PASS KV_SEAL_DISAGREEMENT_E816_A_E816_B 
+TEST816_READ TWO_CARTRIDGE_AB DISAGREEMENT 'The precise point on which the two experts disagree is the recommended replacement interval for the vibration sensor under the stated high-salinity operating conditions. \n\n- Expert A recommends replacing the vibration sensor every 30 days.\n- Expert B recommends replacing the vibration sensor every 90 days.'
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_A_E816_B E816_A {'ssd_verify_ms': 29.671, 'h2d_ms': 2.038, 'fusion_ms': 295.784, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_A_E816_B E816_B {'ssd_verify_ms': 29.829, 'h2d_ms': 1.703, 'fusion_ms': 974.696, 'cid': 'E816_B', 'memory_tokens': 216}
+PASS NATIVE_80_DECISION_E816_A_E816_B 
+PASS KV_SEAL_DECISION_E816_A_E816_B 
+TEST816_READ TWO_CARTRIDGE_AB DECISION 'The conflicting recommendations between Expert A and Expert B cannot be resolved from these documents alone. \n\nExpert A recommends replacing the vibration sensor every 30 days, citing that a 90-day interval is unsafe under high-salinity conditions. Expert B, on the other hand, recommends a 90-day replacement interval, stating that a 30-day interval is unnecessary under the same conditions.\n\nTo resolve this conflict, further evidence would be required, such as:\n\n1. **Empirical Data**: Test results or field data from the Harbor Bridge or similar environments that show the actual performance and failure rates of the vibration sensors under high-salinity conditions.\n2. **Technical Specifications**: Detailed technical specifications of the vibration sensors, including their durability and expected lifespan under high-salinity conditions.\n3'
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_A_E816_B E816_A {'ssd_verify_ms': 30.862, 'h2d_ms': 2.216, 'fusion_ms': 295.905, 'cid': 'E816_A', 'memory_tokens': 123}
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_A_E816_B E816_B {'ssd_verify_ms': 30.866, 'h2d_ms': 1.706, 'fusion_ms': 941.115, 'cid': 'E816_B', 'memory_tokens': 216}
+PASS NATIVE_80_USER_QUESTION_E816_A_E816_B 
+PASS KV_SEAL_USER_QUESTION_E816_A_E816_B 
+TEST816_READ TWO_CARTRIDGE_AB USER_QUESTION "For the Harbor Bridge sensor deployment, the replacement interval recommendations from the experts are as follows:\n\n- **Expert A** recommends replacing the vibration sensor every **30 days**. According to Expert A, a 90-day replacement interval is unsafe under the stated high-salinity operating conditions.\n- **Expert B** recommends replacing the vibration sensor every **90 days**. According to Expert B, a 30-day replacement interval is unnecessary under the stated high-salinity operating conditions.\n\n**Can these conflicting claims be resolved from the supplied evidence alone?**  \n**UNKNOWN**. The provided evidence does not offer additional context or data to resolve the conflict between the two experts' recommendations."
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_B_E816_A E816_B {'ssd_verify_ms': 30.63, 'h2d_ms': 2.177, 'fusion_ms': 296.002, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+NATIVE_FUSION_STEP TEST816_ATTRIBUTION_E816_B_E816_A E816_A {'ssd_verify_ms': 31.221, 'h2d_ms': 1.7, 'fusion_ms': 938.97, 'cid': 'E816_A', 'memory_tokens': 216}
+PASS NATIVE_80_ATTRIBUTION_E816_B_E816_A 
+PASS KV_SEAL_ATTRIBUTION_E816_B_E816_A 
+TEST816_READ TWO_CARTRIDGE_BA ATTRIBUTION 'Expert A: 30-day replacement. Expert B: 90-day replacement. They do not agree.'
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_B_E816_A E816_B {'ssd_verify_ms': 30.61, 'h2d_ms': 2.169, 'fusion_ms': 295.846, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+NATIVE_FUSION_STEP TEST816_DISAGREEMENT_E816_B_E816_A E816_A {'ssd_verify_ms': 29.306, 'h2d_ms': 1.52, 'fusion_ms': 945.104, 'cid': 'E816_A', 'memory_tokens': 216}
+PASS NATIVE_80_DISAGREEMENT_E816_B_E816_A 
+PASS KV_SEAL_DISAGREEMENT_E816_B_E816_A 
+TEST816_READ TWO_CARTRIDGE_BA DISAGREEMENT 'The precise point on which the two experts disagree is the recommended replacement interval for the vibration sensor under the stated high-salinity operating conditions. \n\n- Expert A recommends replacing the vibration sensor every 30 days, stating that a 90-day interval is unsafe.\n- Expert B recommends replacing the vibration sensor every 90 days, stating that a 30-day interval is unnecessary.'
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_B_E816_A E816_B {'ssd_verify_ms': 30.119, 'h2d_ms': 2.326, 'fusion_ms': 296.066, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+NATIVE_FUSION_STEP TEST816_DECISION_E816_B_E816_A E816_A {'ssd_verify_ms': 30.144, 'h2d_ms': 1.655, 'fusion_ms': 926.759, 'cid': 'E816_A', 'memory_tokens': 216}
+PASS NATIVE_80_DECISION_E816_B_E816_A 
+PASS KV_SEAL_DECISION_E816_B_E816_A 
+TEST816_READ TWO_CARTRIDGE_BA DECISION 'The conflicting recommendations between Expert A and Expert B cannot be resolved from these documents alone. \n\nExpert A recommends replacing the vibration sensor every 30 days, stating that a 90-day interval is unsafe under the high-salinity operating conditions. \n\nExpert B recommends replacing the vibration sensor every 90 days, stating that a 30-day interval is unnecessary under the same conditions.\n\nTo resolve this conflict, further evidence would be required, such as:\n1. Test data or empirical evidence showing the performance and reliability of the vibration sensor under high-salinity conditions at both 30-day and 90-day intervals.\n2. Industry standards or guidelines for sensor replacement in similar environmental conditions.\n3. Historical data from similar bridges or structures that have used the same or similar sensors.'
+PASS FILE_SHA_E816_B 
+PASS CARTRIDGE_ID_E816_B 
+PASS CARTRIDGE_TENSOR_SHA_E816_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_B_E816_A E816_B {'ssd_verify_ms': 31.287, 'h2d_ms': 2.307, 'fusion_ms': 296.416, 'cid': 'E816_B', 'memory_tokens': 123}
+PASS FILE_SHA_E816_A 
+PASS CARTRIDGE_ID_E816_A 
+PASS CARTRIDGE_TENSOR_SHA_E816_A 
+NATIVE_FUSION_STEP TEST816_USER_QUESTION_E816_B_E816_A E816_A {'ssd_verify_ms': 30.059, 'h2d_ms': 1.668, 'fusion_ms': 931.575, 'cid': 'E816_A', 'memory_tokens': 216}
+PASS NATIVE_80_USER_QUESTION_E816_B_E816_A 
+PASS KV_SEAL_USER_QUESTION_E816_B_E816_A 
+TEST816_READ TWO_CARTRIDGE_BA USER_QUESTION "For the Harbor Bridge sensor deployment, the replacement interval recommendations from the experts are as follows:\n\n- **Expert A** recommends replacing the vibration sensor every **30 days**, stating that a 90-day replacement interval is unsafe under the stated high-salinity operating conditions.\n- **Expert B** recommends replacing the vibration sensor every **90 days**, stating that a 30-day replacement interval is unnecessary under the stated high-salinity operating conditions.\n\n**Can these conflicting claims be resolved from the supplied evidence alone?**  \n**UNKNOWN**. The provided evidence does not offer additional context or data to resolve the conflict between the two experts' recommendations."
+PASS READ_MATRIX_24 
+PASS FROZEN_WEIGHT_SENTINEL 
+PASS NO_RESIDUAL_HOOKS 
+TEST816_COMPLETED /content/TEST816_20261029T061224Z/TEST816_results.json
