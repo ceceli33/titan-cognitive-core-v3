@@ -1,0 +1,704 @@
+ ======================== TEST818 STAGE LOCKED_SOURCE ========================
+PASS LOCKED_815_SOURCE 77774f87428c0243c9a86ea6a041364acd9c1b03
+PASS TEST815_AST_BOUNDARY [52]
+PASS VERBATIM_PARSE_HELPERS ['first_text815', 'localname815', 'text_from815']
+======================== TEST818 STAGE SOURCES ========================
+SOURCE_EVENT PMC8552225 METADATA_PMCID HTTP_OK {"attempt": 1, "status": 200, "bytes": 6921, "content_type": "application/json;charset=UTF-8", "sha256": "2dd44831cf276751985fcd3dc304dc885beb6ad7cea5382469bf007bd90a2e36"}
+SOURCE_EVENT PMC8552225 METADATA_PMCID RESULTS {"hitCount": 1, "returned": 1, "exact_pmcid_and_doi": 1, "indexed_as": [{"id": "34746923", "source": "MED", "pmid": "34746923", "pmcid": "PMC8552225", "doi": "10.1002/emp2.12582"}]}
+PASS META_PMCID_PMC8552225 PMC8552225
+PASS META_DOI_PMC8552225 10.1002/emp2.12582
+PASS META_TITLE_PMC8552225 N95 respirator and surgical mask effectiveness against respiratory viral illnesses in the healthcare setting: A systematic review and meta-analysis.
+PASS META_PMID_PRESENT_PMC8552225 {'pmid': '34746923', 'source': 'MED', 'id': '34746923'}
+SOURCE_EVENT PMC8552225 JATS HTTP_OK {"attempt": 1, "status": 200, "bytes": 124155, "content_type": "application/xml", "sha256": "bd19b2d9db9f1c3ec0a1d109e3e4b0478ce8f17feb47304d1f8b180c3cb8b094"}
+PASS JATS_SCHEMA_PMC8552225 {'root': 'article', 'bytes': 124155}
+PASS JATS_PMCID_IF_PRESENT_PMC8552225 ['PMC8552225']
+PASS JATS_UNIQUE_DOI_PMC8552225 {'raw_values': ['10.1002/emp2.12582', '10.1002/emp2.12582', '10.1002/emp2.12582'], 'unique_values': ['10.1002/emp2.12582']}
+PASS JATS_TITLE_PMC8552225 N95 respirator and surgical mask effectiveness against respiratory viral illnesses in the healthcare setting: A systematic review and meta‐analysis
+PASS JATS_PMID_CONSISTENT_PMC8552225 {'jats': ['34746923'], 'metadata': '34746923'}
+SOURCE_EVENT PMC8552225 VERSION_COMPARE JATS_IS_SUPERSET_USE_JATS {"metadata_chars": 1311, "jats_chars": 1824, "metadata_words_in_jats": 1.0, "jats_words_in_metadata": 0.8207}
+PASS ABSTRACT_VERSIONS_RECONCILED_PMC8552225 {'decision': 'JATS_IS_SUPERSET_USE_JATS', 'metadata_words_in_jats': 1.0, 'jats_words_in_metadata': 0.8207}
+PASS ABSTRACT_PRESENT_PMC8552225 1824
+PASS ABSTRACT_TOPIC_N95_PMC8552225 {'chars': 1824}
+TEST818_VERIFIED_SOURCE A PMC8552225 PMID 34746923 10.1002/emp2.12582 | N95 respirator and surgical mask effectiveness against respiratory viral illnesses in the healthcare setting: A systematic review and meta-analysis. | Journal of the American College of Emergency Physicians open 2021 | abstract chars 1824 | JATS AVAILABLE
+SOURCE_EVENT PMC8094623 METADATA_PMCID HTTP_OK {"attempt": 1, "status": 200, "bytes": 18066, "content_type": "application/json;charset=UTF-8", "sha256": "abd0b667d6ed28367dc41c737445abc90bebf55ef2a57a9d29032570d784acf7"}
+SOURCE_EVENT PMC8094623 METADATA_PMCID RESULTS {"hitCount": 1, "returned": 1, "exact_pmcid_and_doi": 1, "indexed_as": [{"id": "33215698", "source": "MED", "pmid": "33215698", "pmcid": "PMC8094623", "doi": "10.1002/14651858.cd006207.pub5"}]}
+PASS META_PMCID_PMC8094623 PMC8094623
+PASS META_DOI_PMC8094623 10.1002/14651858.cd006207.pub5
+PASS META_TITLE_PMC8094623 Physical interventions to interrupt or reduce the spread of respiratory viruses.
+PASS META_PMID_PRESENT_PMC8094623 {'pmid': '33215698', 'source': 'MED', 'id': '33215698'}
+SOURCE_EVENT PMC8094623 JATS HTTP_ERROR {"attempt": 1, "status": 500, "body_head": ""}
+SOURCE_EVENT PMC8094623 JATS HTTP_ERROR {"attempt": 2, "status": 500, "body_head": ""}
+SOURCE_EVENT PMC8094623 JATS HTTP_ERROR {"attempt": 3, "status": 500, "body_head": ""}
+SOURCE_EVENT PMC8094623 JATS FULL_TEXT_NOT_SERVED {"error_class": "SOURCE_HTTP_5XX", "detail": {"last_status": 500}, "consequence": "not required by SOURCE_SCOPE; identity verified from the metadata record"}
+PASS ABSTRACT_PRESENT_PMC8094623 8271
+PASS ABSTRACT_TOPIC_N95_PMC8094623 {'chars': 8271}
+TEST818_VERIFIED_SOURCE B PMC8094623 PMID 33215698 10.1002/14651858.CD006207.pub5 | Physical interventions to interrupt or reduce the spread of respiratory viruses. | The Cochrane database of systematic reviews 2020 | abstract chars 8271 | JATS UNAVAILABLE
+PASS TWO_VERIFIED_SOURCES ['PMC8094623', 'PMC8552225']
+PASS DISTINCT_SOURCES 
+PASS PROMPT_HAS_NO_SOURCE_TEXT_POSITIONS {'prompt_sha256': '0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca', 'prompt_chars': 462}
+PASS PROMPT_HAS_NO_SOURCE_TEXT_OUTCOME_SPLIT {'prompt_sha256': '31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e', 'prompt_chars': 468}
+PASS PROMPT_HAS_NO_SOURCE_TEXT_APPARENT_CONFLICT {'prompt_sha256': '0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4', 'prompt_chars': 500}
+PASS PROMPT_HAS_NO_SOURCE_TEXT_EVIDENCE_LIMITS {'prompt_sha256': '08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958', 'prompt_chars': 431}
+PASS PROMPT_HAS_NO_SOURCE_TEXT_ABSENT_INFORMATION {'prompt_sha256': '045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452', 'prompt_chars': 360}
+PASS PROMPT_HAS_NO_SOURCE_TEXT_SYNTHESIS {'prompt_sha256': '92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb', 'prompt_chars': 502}
+PASS NULL_CONTROL_HAS_NO_SOURCE_TEXT 
+======================== TEST818 STAGE LOCKED_ENGINE ========================
+TEST815_GPU_PREFLIGHT {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+TEST815_GPU_FREE_GIB 78.83
+PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+PASS NATIVE_SYMBOLS 
+PASS FRESH_MEMORY_BANK 0
+======================== TEST818 STAGE TOKENIZER ========================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 81.9kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 915kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 71.8MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 74.3MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 123MB/s]PASS SOURCE_TOKENS_A {'tokens': 493, 'cap': 2400}
+PASS SOURCE_TOKENS_B {'tokens': 1938, 'cap': 2400}
+PASS CARTRIDGE_TOKENS_E818_A 594
+PASS CARTRIDGE_TOKENS_E818_B 2035
+PASS CARTRIDGE_TOKENS_E818_AB 2629
+PASS CARTRIDGE_TOKENS_E818_BA 2629
+PASS CARTRIDGE_TOKENS_E818_NULL 14
+PASS FUSION_BUDGET_TWO_CARTRIDGE {'A': 594, 'B': 2035, 'max': 3500}
+======================== TEST818 STAGE MODEL_LOAD ========================
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.66MB/s]Download complete:   125GB, 1.37GB/s  Reconstruction complete: 100%  145GB /  145GB,  638MB/s  Fetching 37 files: 100% 37/37 [06:47<00:00, 10.34s/it]Loading weights: 100% 963/963 [06:21<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 33.3kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS PREFIX_LENGTH 30
+======================== TEST818 STAGE CARTRIDGE_FORGE ========================
+PASS CARD_NONEMPTY_E818_A 594
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E818_A 
+PASS FRESH_CARTRIDGE_E818_A 
+PASS PHYSICAL_SHA_E818_A 
+PHYSICAL_COMMIT E818_A fb398c76f8aa46b363e4a8ee56386826bd6ca6c69c785092c8aa0bf56eca0063 PARENTS []
+PASS BODY_SHA_IN_MANIFEST_E818_A 
+PASS CARD_NONEMPTY_E818_B 2035
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E818_B 
+PASS FRESH_CARTRIDGE_E818_B 
+PASS PHYSICAL_SHA_E818_B 
+PHYSICAL_COMMIT E818_B 0897215418ed051e48e111e15a81d438d596e4b109bf31bd4c1de14830c4f69c PARENTS []
+PASS BODY_SHA_IN_MANIFEST_E818_B 
+PASS CARD_NONEMPTY_E818_AB 2629
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E818_AB 
+PASS FRESH_CARTRIDGE_E818_AB 
+PASS PHYSICAL_SHA_E818_AB 
+PHYSICAL_COMMIT E818_AB 1da73896f35108e6de2fc713634353c728472195c58ba3c15f01ff6f25c8d3a2 PARENTS []
+PASS BODY_SHA_IN_MANIFEST_E818_AB 
+PASS CARD_NONEMPTY_E818_BA 2629
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E818_BA 
+PASS FRESH_CARTRIDGE_E818_BA 
+PASS PHYSICAL_SHA_E818_BA 
+PHYSICAL_COMMIT E818_BA af60ea675374992a9484f7f0a0ee2d6be5f9ac48da60700fe7c939e0fb3cb5b2 PARENTS []
+PASS BODY_SHA_IN_MANIFEST_E818_BA 
+PASS CARD_NONEMPTY_E818_NULL 14
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E818_NULL 
+PASS FRESH_CARTRIDGE_E818_NULL 
+PASS PHYSICAL_SHA_E818_NULL 
+PHYSICAL_COMMIT E818_NULL e2ca28c52a14e418aaf03f9c5a3b70b6e2d9e128ce426359e185110cbf59d933 PARENTS []
+PASS BODY_SHA_IN_MANIFEST_E818_NULL 
+PASS FIVE_PHYSICAL_CARTRIDGES ['E818_A', 'E818_AB', 'E818_B', 'E818_BA', 'E818_NULL']
+======================== TEST818 STAGE CARTRIDGE_VERIFY ========================
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS SEALED_RELOAD_LAYOUT_E818_A {'n': 624, 'h': [1, 624, 8192], 'h_dtype': 'torch.bfloat16', 'lower_layers': 4, 'k0': [1, 8, 624, 128]}
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS SEALED_RELOAD_LAYOUT_E818_B {'n': 2065, 'h': [1, 2065, 8192], 'h_dtype': 'torch.bfloat16', 'lower_layers': 4, 'k0': [1, 8, 2065, 128]}
+PASS FILE_SHA_E818_AB 
+PASS CARTRIDGE_ID_E818_AB 
+PASS CARTRIDGE_TENSOR_SHA_E818_AB 
+PASS SEALED_RELOAD_LAYOUT_E818_AB {'n': 2659, 'h': [1, 2659, 8192], 'h_dtype': 'torch.bfloat16', 'lower_layers': 4, 'k0': [1, 8, 2659, 128]}
+PASS FILE_SHA_E818_BA 
+PASS CARTRIDGE_ID_E818_BA 
+PASS CARTRIDGE_TENSOR_SHA_E818_BA 
+PASS SEALED_RELOAD_LAYOUT_E818_BA {'n': 2659, 'h': [1, 2659, 8192], 'h_dtype': 'torch.bfloat16', 'lower_layers': 4, 'k0': [1, 8, 2659, 128]}
+PASS FILE_SHA_E818_NULL 
+PASS CARTRIDGE_ID_E818_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E818_NULL 
+PASS SEALED_RELOAD_LAYOUT_E818_NULL {'n': 44, 'h': [1, 44, 8192], 'h_dtype': 'torch.bfloat16', 'lower_layers': 4, 'k0': [1, 8, 44, 128]}
+======================== TEST818 STAGE NATIVE_READ ========================
+PASS PROMPT_IS_PRECHECKED_A_ONLY_POSITIONS 0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_A_ONLY_POSITIONS E818_A {'ssd_verify_ms': 130.356, 'h2d_ms': 18.346, 'fusion_ms': 1512.743, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS NATIVE80_A_ONLY_POSITIONS 
+PASS NATIVE_LENGTH_A_ONLY_POSITIONS {'observed': 624, 'expected': 624}
+PASS MEMORY_ON_GPU_A_ONLY_POSITIONS 
+PASS KV_SEAL_A_ONLY_POSITIONS 
+PASS SDPA_RESTORED_A_ONLY_POSITIONS 
+TEST818_READ A_ONLY POSITIONS tokens 256 seconds 37.676 | numbers A-only ['0.05', '0.06', '0.17', '0.49', '0.52', '0.62', '0.65', '0.68', '0.73', '0.74', '0.75', '0.81', '0.94', '2'] B-only [] both ['0.66', '0.82', '0.84', '1'] neither ['0'] | '**Source A:**\n\n- **Conclusion:** N95 respirator use was associated with fewer viral infectious episodes for healthcare workers compared with surgical masks.\n- **Outcome Measured:** \n  - Influenza-like illness (RR = 0.81, 95% CI = 0.68–0.94, P < 0.05)\n  - Non-influenza respiratory viral infection (RR = 0.62, 95% CI = 0.52–0.74, P < 0.05)\n  - Respiratory viral infection (RR = 0.73, 95% CI = 0.65–0.82, P < 0.05)\n  - Severe acute respiratory syndrome coronavirus (SARS-CoV) 1 and 2 virus infection (RR = 0.17, 95% CI = 0.06–0.49, P < 0.05)\n  - Laboratory-confirmed respiratory viral infection (RR = 0.75, 95% CI = 0.66–0.84, P < 0'
+PASS PROMPT_IS_PRECHECKED_A_ONLY_OUTCOME_SPLIT 31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_A_ONLY_OUTCOME_SPLIT E818_A {'ssd_verify_ms': 138.908, 'h2d_ms': 6.096, 'fusion_ms': 1491.584, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS NATIVE80_A_ONLY_OUTCOME_SPLIT 
+PASS NATIVE_LENGTH_A_ONLY_OUTCOME_SPLIT {'observed': 624, 'expected': 624}
+PASS MEMORY_ON_GPU_A_ONLY_OUTCOME_SPLIT 
+PASS KV_SEAL_A_ONLY_OUTCOME_SPLIT 
+PASS SDPA_RESTORED_A_ONLY_OUTCOME_SPLIT 
+TEST818_READ A_ONLY OUTCOME_SPLIT tokens 256 seconds 37.46 | numbers A-only ['0.05', '0.62', '0.68', '0.74', '0.81', '0.87', '0.94'] B-only [] both ['1.03'] neither [] | '**Source A** distinguishes between influenza-like illness (ILI) and laboratory-confirmed influenza, as well as other confirmed infections. Here are the reported findings for each outcome:\n\n1. **Influenza-like Illness (ILI):**\n   - **Finding:** N95 respirator use was associated with a statistically significant reduction in the risk of ILI compared to surgical masks (Risk Ratio [RR] = 0.81, 95% Confidence Interval [CI] = 0.68–0.94, P < 0.05).\n\n2. **Laboratory-Confirmed Influenza:**\n   - **Finding:** N95 respirator use did not show a statistically significant reduction in the risk of laboratory-confirmed influenza compared to surgical masks (RR = 0.87, CI = 0.74–1.03, P > 0.05).\n\n3. **Non-Influenza Respiratory Viral Infection:**\n   - **Finding:** N95 respirator use was associated with a statistically significant reduction in the risk of non-influenza respiratory viral infection compared to surgical masks (RR = 0.62, 95% CI'
+PASS PROMPT_IS_PRECHECKED_A_ONLY_APPARENT_CONFLICT 0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_A_ONLY_APPARENT_CONFLICT E818_A {'ssd_verify_ms': 128.456, 'h2d_ms': 5.856, 'fusion_ms': 1491.445, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS NATIVE80_A_ONLY_APPARENT_CONFLICT 
+PASS NATIVE_LENGTH_A_ONLY_APPARENT_CONFLICT {'observed': 624, 'expected': 624}
+PASS MEMORY_ON_GPU_A_ONLY_APPARENT_CONFLICT 
+PASS KV_SEAL_A_ONLY_APPARENT_CONFLICT 
+PASS SDPA_RESTORED_A_ONLY_APPARENT_CONFLICT 
+TEST818_READ A_ONLY APPARENT_CONFLICT tokens 98 seconds 16.228 | numbers A-only [] B-only [] both [] neither [] | 'The question cannot be fully answered as there is only one source (Source A) provided in the information. To determine if the two sources contradict each other, we would need to have a second source (Source B) with specific claims, observations, and uncertainties to compare against the findings from Source A. Without a second source, it is impossible to establish whether there are contradictions or if differences in methods or included evidence could explain any apparent differences in conclusions. Therefore, the answer is UNKNOWN.'
+PASS PROMPT_IS_PRECHECKED_A_ONLY_EVIDENCE_LIMITS 08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_A_ONLY_EVIDENCE_LIMITS E818_A {'ssd_verify_ms': 127.905, 'h2d_ms': 5.747, 'fusion_ms': 1492.929, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS NATIVE80_A_ONLY_EVIDENCE_LIMITS 
+PASS NATIVE_LENGTH_A_ONLY_EVIDENCE_LIMITS {'observed': 624, 'expected': 624}
+PASS MEMORY_ON_GPU_A_ONLY_EVIDENCE_LIMITS 
+PASS KV_SEAL_A_ONLY_EVIDENCE_LIMITS 
+PASS SDPA_RESTORED_A_ONLY_EVIDENCE_LIMITS 
+TEST818_READ A_ONLY EVIDENCE_LIMITS tokens 256 seconds 37.47 | numbers A-only ['0.05', '0.74', '0.87'] B-only [] both ['1.03'] neither [] | 'Based on the provided information from Source A, the limitations and missing information that would be needed to reconcile the sources are as follows:\n\n1. **Methodologic Quality and Risk of Biases**:\n   - **Claim (Source A)**: The methodologic quality and risk of biases in the studies included in the meta-analysis indicate the necessity for further research.\n   - **Observation (Source A)**: The meta-analysis included only eight studies, which is a small number, and this may limit the generalizability of the findings.\n\n2. **Sample Size**:\n   - **Claim (Source A)**: The small number of original studies (eight) included in the meta-analysis is a limitation.\n   - **Observation (Source A)**: A larger number of studies would provide more robust and reliable data.\n\n3. **Statistical Significance for Laboratory-Confirmed Influenza**:\n   - **Claim (Source A)**: The meta-analysis did not indicate statistically significant results against laboratory-confirmed influenza (RR = 0.87, CI = 0.74–1.03, P > 0.05).\n   - **Observation (Source A)**: The lack of statistical significance does not prove equivalence; it only'
+PASS PROMPT_IS_PRECHECKED_A_ONLY_ABSENT_INFORMATION 045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_A_ONLY_ABSENT_INFORMATION E818_A {'ssd_verify_ms': 129.09, 'h2d_ms': 6.181, 'fusion_ms': 1492.539, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS NATIVE80_A_ONLY_ABSENT_INFORMATION 
+PASS NATIVE_LENGTH_A_ONLY_ABSENT_INFORMATION {'observed': 624, 'expected': 624}
+PASS MEMORY_ON_GPU_A_ONLY_ABSENT_INFORMATION 
+PASS KV_SEAL_A_ONLY_ABSENT_INFORMATION 
+PASS SDPA_RESTORED_A_ONLY_ABSENT_INFORMATION 
+TEST818_READ A_ONLY ABSENT_INFORMATION tokens 52 seconds 10.069 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided scientific article (Source A) does not report any unit price or cost per wearer for N95 respirators compared with surgical masks. The study focuses on the effectiveness of these masks in preventing viral respiratory illnesses, not on their cost.'
+PASS PROMPT_IS_PRECHECKED_A_ONLY_SYNTHESIS 92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_A_ONLY_SYNTHESIS E818_A {'ssd_verify_ms': 128.387, 'h2d_ms': 5.701, 'fusion_ms': 1492.792, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS NATIVE80_A_ONLY_SYNTHESIS 
+PASS NATIVE_LENGTH_A_ONLY_SYNTHESIS {'observed': 624, 'expected': 624}
+PASS MEMORY_ON_GPU_A_ONLY_SYNTHESIS 
+PASS KV_SEAL_A_ONLY_SYNTHESIS 
+PASS SDPA_RESTORED_A_ONLY_SYNTHESIS 
+TEST818_READ A_ONLY SYNTHESIS tokens 256 seconds 37.499 | numbers A-only ['0.05', '0.52', '0.62', '0.68', '0.74', '0.81', '0.94'] B-only [] both [] neither [] | '**Synthesis of Evidence on N95 Respirators vs. Surgical Masks for Preventing Respiratory Viral Infection:**\n\n1. **Effectiveness in Preventing Influenza-like Illness:**\n   - **Source A:** N95 respirators were more effective than surgical masks in preventing influenza-like illness (Risk Ratio [RR] = 0.81, 95% CI = 0.68–0.94, P < 0.05). This indicates a statistically significant reduction in the risk of influenza-like illness when using N95 respirators compared to surgical masks.\n\n2. **Effectiveness in Preventing Non-Influenza Respiratory Viral Infections:**\n   - **Source A:** N95 respirators were more effective than surgical masks in preventing non-influenza respiratory viral infections (RR = 0.62, 95% CI = 0.52–0.74, P < 0.05). This suggests a statistically significant reduction in the risk of non-influenza respiratory viral infections when using N95 respirators.\n\n3. **Effectiveness in Preventing Respiratory Viral Infections:**\n   - **Source'
+PASS PROMPT_IS_PRECHECKED_B_ONLY_POSITIONS 0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_B_ONLY_POSITIONS E818_B {'ssd_verify_ms': 442.467, 'h2d_ms': 17.576, 'fusion_ms': 5149.025, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS NATIVE80_B_ONLY_POSITIONS 
+PASS NATIVE_LENGTH_B_ONLY_POSITIONS {'observed': 2065, 'expected': 2065}
+PASS MEMORY_ON_GPU_B_ONLY_POSITIONS 
+PASS KV_SEAL_B_ONLY_POSITIONS 
+PASS SDPA_RESTORED_B_ONLY_POSITIONS 
+TEST818_READ B_ONLY POSITIONS tokens 256 seconds 44.39 | numbers A-only [] B-only ['0.45', '0.7', '1.1', '3', '5', '7779', '8407'] both ['0.66', '0.82', '1.03'] neither [] | '**Source B:**\n\n- **Outcome Measured:** Clinical respiratory illness (CRI)\n  - **Conclusion:** There is uncertainty over the effects of N95/P2 respirators when compared with medical/surgical masks on the outcome of clinical respiratory illness (RR 0.70, 95% CI 0.45 to 1.10; very low-certainty evidence; 3 trials; 7779 participants).\n  - **Population/Setting:** Heterogeneous settings, including healthcare settings and a household setting.\n\n- **Outcome Measured:** Influenza-like illness (ILI)\n  - **Conclusion:** There is low-certainty evidence that N95/P2 respirators compared with medical/surgical masks made little or no difference to the outcome of influenza-like illness (RR 0.82, 95% CI 0.66 to 1.03; 5 trials; 8407 participants).\n  - **Population/Setting:** Heterogeneous settings, including healthcare settings and a household setting.\n\n- **Outcome Measured:** Laboratory-confirmed influenza infection\n  - **Conclusion:** The use of a N95/P2 respirator compared to a medical/surgical mask'
+PASS PROMPT_IS_PRECHECKED_B_ONLY_OUTCOME_SPLIT 31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_B_ONLY_OUTCOME_SPLIT E818_B {'ssd_verify_ms': 442.289, 'h2d_ms': 18.321, 'fusion_ms': 5136.067, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS NATIVE80_B_ONLY_OUTCOME_SPLIT 
+PASS NATIVE_LENGTH_B_ONLY_OUTCOME_SPLIT {'observed': 2065, 'expected': 2065}
+PASS MEMORY_ON_GPU_B_ONLY_OUTCOME_SPLIT 
+PASS KV_SEAL_B_ONLY_OUTCOME_SPLIT 
+PASS SDPA_RESTORED_B_ONLY_OUTCOME_SPLIT 
+TEST818_READ B_ONLY OUTCOME_SPLIT tokens 256 seconds 44.459 | numbers A-only [] B-only ['0.99', '1.18', '3005', '3507', '8407'] both ['0.66', '0.82', '1.03'] neither [] | '**Source B** distinguishes between influenza-like illness (ILI) and laboratory-confirmed influenza or other confirmed infection. Here are the reported findings for each outcome:\n\n1. **Influenza-like Illness (ILI):**\n   - **Medical/Surgical Masks vs. No Masks:**\n     - There is low certainty evidence from nine trials (3507 participants) that wearing a mask may make little or no difference to the outcome of ILI compared to not wearing a mask (Risk Ratio (RR) 0.99, 95% CI 0.82 to 1.18).\n   - **N95/P2 Respirators vs. Medical/Surgical Masks:**\n     - There is low-certainty evidence from five trials (8407 participants) that N95/P2 respirators compared to medical/surgical masks may make little or no difference to the outcome of ILI (RR 0.82, 95% CI 0.66 to 1.03).\n\n2. **Laboratory-Confirmed Influenza:**\n   - **Medical/Surgical Masks vs. No Masks:**\n     - There is moderate certainty evidence from six trials (3005 participants'
+PASS PROMPT_IS_PRECHECKED_B_ONLY_APPARENT_CONFLICT 0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_B_ONLY_APPARENT_CONFLICT E818_B {'ssd_verify_ms': 440.479, 'h2d_ms': 18.894, 'fusion_ms': 5147.543, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS NATIVE80_B_ONLY_APPARENT_CONFLICT 
+PASS NATIVE_LENGTH_B_ONLY_APPARENT_CONFLICT {'observed': 2065, 'expected': 2065}
+PASS MEMORY_ON_GPU_B_ONLY_APPARENT_CONFLICT 
+PASS KV_SEAL_B_ONLY_APPARENT_CONFLICT 
+PASS SDPA_RESTORED_B_ONLY_APPARENT_CONFLICT 
+TEST818_READ B_ONLY APPARENT_CONFLICT tokens 256 seconds 44.453 | numbers A-only [] B-only ['0.91', '0.99', '1.18', '1.26'] both ['0.66', '0.82'] neither [] | 'The provided documents (Source A and Source B) do not explicitly contradict each other on the same outcome, population, and study design. However, differences in methods or included evidence can explain any apparently different conclusions. Here’s a detailed breakdown:\n\n1. **Face Masks**:\n   - **Source B** states that there is low certainty evidence that wearing a medical/surgical mask may make little or no difference to the outcome of influenza-like illness (ILI) compared to not wearing a mask (RR 0.99, 95% CI 0.82 to 1.18). There is moderate certainty evidence that wearing a mask probably makes little or no difference to the outcome of laboratory-confirmed influenza (RR 0.91, 95% CI 0.66 to 1.26).\n   - **Source A** is not provided, so we cannot directly compare its findings. However, if Source A had different inclusion criteria, study designs, or populations, this could explain any apparent differences in conclusions.\n\n2. **N95/P2 Respirators vs. Medical/Surgical Masks**:\n   - **Source B** indicates uncertainty over the effects of N95/P2 respirators compared to medical/surgical masks'
+PASS PROMPT_IS_PRECHECKED_B_ONLY_EVIDENCE_LIMITS 08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_B_ONLY_EVIDENCE_LIMITS E818_B {'ssd_verify_ms': 440.7, 'h2d_ms': 18.466, 'fusion_ms': 5128.844, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS NATIVE80_B_ONLY_EVIDENCE_LIMITS 
+PASS NATIVE_LENGTH_B_ONLY_EVIDENCE_LIMITS {'observed': 2065, 'expected': 2065}
+PASS MEMORY_ON_GPU_B_ONLY_EVIDENCE_LIMITS 
+PASS KV_SEAL_B_ONLY_EVIDENCE_LIMITS 
+PASS SDPA_RESTORED_B_ONLY_EVIDENCE_LIMITS 
+TEST818_READ B_ONLY EVIDENCE_LIMITS tokens 256 seconds 44.43 | numbers A-only [] B-only [] both [] neither [] | '**Limitations and Missing Information:**\n\n1. **High Risk of Bias and Variation in Outcome Measurement:**\n   - **Source B** notes that the high risk of bias in the trials, variation in outcome measurement, and relatively low compliance with the interventions during the studies hamper drawing firm conclusions and generalizing the findings to the current COVID-19 pandemic.\n\n2. **Compliance with Interventions:**\n   - **Source B** mentions that compliance with interventions was low in many studies, which could affect the reliability of the results.\n\n3. **Heterogeneity in Study Settings:**\n   - **Source B** indicates that the included studies were conducted in heterogeneous settings, ranging from suburban schools to hospital wards in high-income countries; crowded inner city settings in low-income countries; and an immigrant neighborhood in a high-income country. This heterogeneity makes it difficult to generalize the findings.\n\n4. **Limited Evidence on Face Masks:**\n   - **Source B** states that there is low to moderate certainty evidence regarding the effectiveness of medical/surgical masks in reducing the spread of respiratory viruses. The pooled results of randomised trials did not show a clear reduction in respiratory viral infection with the use of medical/surgical masks during seasonal influenza.\n\n5. **Uncertainty About'
+PASS PROMPT_IS_PRECHECKED_B_ONLY_ABSENT_INFORMATION 045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_B_ONLY_ABSENT_INFORMATION E818_B {'ssd_verify_ms': 439.646, 'h2d_ms': 18.584, 'fusion_ms': 5145.343, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS NATIVE80_B_ONLY_ABSENT_INFORMATION 
+PASS NATIVE_LENGTH_B_ONLY_ABSENT_INFORMATION {'observed': 2065, 'expected': 2065}
+PASS MEMORY_ON_GPU_B_ONLY_ABSENT_INFORMATION 
+PASS KV_SEAL_B_ONLY_ABSENT_INFORMATION 
+PASS SDPA_RESTORED_B_ONLY_ABSENT_INFORMATION 
+TEST818_READ B_ONLY ABSENT_INFORMATION tokens 46 seconds 16.225 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided scientific evidence does not report any unit price or cost per wearer for N95 respirators compared with surgical masks. This information is not included in the abstract of the Cochrane review (Source B).'
+PASS PROMPT_IS_PRECHECKED_B_ONLY_SYNTHESIS 92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_B_ONLY_SYNTHESIS E818_B {'ssd_verify_ms': 438.029, 'h2d_ms': 18.362, 'fusion_ms': 5149.138, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS NATIVE80_B_ONLY_SYNTHESIS 
+PASS NATIVE_LENGTH_B_ONLY_SYNTHESIS {'observed': 2065, 'expected': 2065}
+PASS MEMORY_ON_GPU_B_ONLY_SYNTHESIS 
+PASS KV_SEAL_B_ONLY_SYNTHESIS 
+PASS SDPA_RESTORED_B_ONLY_SYNTHESIS 
+TEST818_READ B_ONLY SYNTHESIS tokens 256 seconds 44.54 | numbers A-only [] B-only ['0.45', '0.7', '0.9', '1.1', '1.34', '3', '5', '7779', '8', '8407'] both ['0.66', '0.82', '1.03'] neither [] | '**Synthesis of Evidence on N95 Respirators vs. Surgical or Medical Masks for Preventing Respiratory Viral Infection:**\n\n1. **Effectiveness in Healthcare Settings:**\n   - **Source B:** There is uncertainty over the effects of N95/P2 respirators when compared with medical/surgical masks on the outcomes of clinical respiratory illness (RR 0.70, 95% CI 0.45 to 1.10; very low-certainty evidence; 3 trials; 7779 participants) and influenza-like illness (ILI) (RR 0.82, 95% CI 0.66 to 1.03; low-certainty evidence; 5 trials; 8407 participants). The evidence is limited by imprecision and heterogeneity for these subjective outcomes.\n   - **Source B:** The use of a N95/P2 respirator compared to a medical/surgical mask probably makes little or no difference for the objective and more precise outcome of laboratory-confirmed influenza infection (RR 1.10, 95% CI 0.90 to 1.34; moderate-certainty evidence; 5 trials; 8'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_AB_POSITIONS 0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca
+PASS FILE_SHA_E818_AB 
+PASS CARTRIDGE_ID_E818_AB 
+PASS CARTRIDGE_TENSOR_SHA_E818_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_AB_POSITIONS E818_AB {'ssd_verify_ms': 570.115, 'h2d_ms': 22.545, 'fusion_ms': 6562.151, 'cid': 'E818_AB', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_AB_POSITIONS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_POSITIONS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_AB_POSITIONS 
+PASS KV_SEAL_ONE_CARTRIDGE_AB_POSITIONS 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_AB_POSITIONS 
+TEST818_READ ONE_CARTRIDGE_AB POSITIONS tokens 210 seconds 41.069 | numbers A-only ['2'] B-only [] both [] neither [] | '**Source A:**\n- **Conclusion:** N95 respirator use was associated with fewer viral infectious episodes for healthcare workers compared with surgical masks.\n- **Outcome Measured:** Influenza-like illness, non-influenza respiratory viral infection, respiratory viral infection, SARS-CoV 1 and 2 virus infection, and laboratory-confirmed respiratory viral infection.\n- **Population/Setting:** Healthcare workers in a hospital setting.\n\n**Source B:**\n- **Conclusion:** There is uncertainty over the effects of N95/P2 respirators when compared with medical/surgical masks on the outcomes of clinical respiratory illness and influenza-like illness. The use of a N95/P2 respirator compared to a medical/surgical mask probably makes little or no difference for the objective and more precise outcome of laboratory-confirmed influenza infection.\n- **Outcome Measured:** Clinical respiratory illness, influenza-like illness, and laboratory-confirmed influenza infection.\n- **Population/Setting:** Heterogeneous settings, including healthcare settings and a household setting.'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_AB_OUTCOME_SPLIT 31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e
+PASS FILE_SHA_E818_AB 
+PASS CARTRIDGE_ID_E818_AB 
+PASS CARTRIDGE_TENSOR_SHA_E818_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_AB_OUTCOME_SPLIT E818_AB {'ssd_verify_ms': 561.984, 'h2d_ms': 22.459, 'fusion_ms': 6546.748, 'cid': 'E818_AB', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_AB_OUTCOME_SPLIT 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_OUTCOME_SPLIT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_AB_OUTCOME_SPLIT 
+PASS KV_SEAL_ONE_CARTRIDGE_AB_OUTCOME_SPLIT 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_AB_OUTCOME_SPLIT 
+TEST818_READ ONE_CARTRIDGE_AB OUTCOME_SPLIT tokens 256 seconds 47.289 | numbers A-only ['0.05', '0.68', '0.74', '0.81', '0.87', '0.94'] B-only ['0.99', '1.18'] both ['0.82', '1.03'] neither [] | '**Source A:**\n- **Influenza-like illness (ILI):** The meta-analysis found a statistically significant difference in the prevention of influenza-like illness (ILI) when comparing N95 respirators to surgical masks (Risk Ratio [RR] = 0.81, 95% CI = 0.68–0.94, P < 0.05).\n- **Laboratory-confirmed influenza:** The meta-analysis did not find a statistically significant difference in the prevention of laboratory-confirmed influenza (RR = 0.87, CI = 0.74–1.03, P > 0.05).\n\n**Source B:**\n- **Influenza-like illness (ILI):** There is low certainty evidence that wearing a medical/surgical mask may make little or no difference in the outcome of influenza-like illness (ILI) compared to not wearing a mask (RR 0.99, 95% CI 0.82 to 1.18).\n- **Laboratory-confirmed influenza:** There is moderate certainty evidence that wearing a medical/surgical mask probably makes little or no difference in the outcome of laboratory-confirmed influenza compared to not wearing a mask ('
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_AB_APPARENT_CONFLICT 0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4
+PASS FILE_SHA_E818_AB 
+PASS CARTRIDGE_ID_E818_AB 
+PASS CARTRIDGE_TENSOR_SHA_E818_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_AB_APPARENT_CONFLICT E818_AB {'ssd_verify_ms': 562.593, 'h2d_ms': 23.073, 'fusion_ms': 6548.907, 'cid': 'E818_AB', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_AB_APPARENT_CONFLICT 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_APPARENT_CONFLICT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_AB_APPARENT_CONFLICT 
+PASS KV_SEAL_ONE_CARTRIDGE_AB_APPARENT_CONFLICT 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_AB_APPARENT_CONFLICT 
+TEST818_READ ONE_CARTRIDGE_AB APPARENT_CONFLICT tokens 256 seconds 47.152 | numbers A-only ['2', '9164'] B-only ['67', '8'] both [] neither [] | 'The two sources do not truly contradict each other on the same outcome, population, and study design. Differences in methods or included evidence can explain the apparently different conclusions. Here are the key points:\n\n1. **Population and Setting**:\n   - **Source A**: Focuses on healthcare settings and includes studies with healthcare workers.\n   - **Source B**: Includes a broader range of settings, including community, schools, and healthcare settings.\n\n2. **Outcome Measures**:\n   - **Source A**: Reports on influenza-like illness (ILI), non-influenza respiratory viral infection, respiratory viral infection, SARS-CoV 1 and 2 virus infection, and laboratory-confirmed respiratory viral infection.\n   - **Source B**: Reports on ILI, laboratory-confirmed influenza, and other respiratory illnesses, but with a focus on the community and broader settings.\n\n3. **Study Design**:\n   - **Source A**: Conducts a meta-analysis of 8 studies with 9164 participants.\n   - **Source B**: Includes 67 RCTs and cluster-RCTs, with a focus on a broader range of physical interventions and settings.\n\n4. **Key Findings**:\n   - **Source A**: Finds that N95 respirators'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_AB_EVIDENCE_LIMITS 08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958
+PASS FILE_SHA_E818_AB 
+PASS CARTRIDGE_ID_E818_AB 
+PASS CARTRIDGE_TENSOR_SHA_E818_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_AB_EVIDENCE_LIMITS E818_AB {'ssd_verify_ms': 562.756, 'h2d_ms': 22.893, 'fusion_ms': 6548.38, 'cid': 'E818_AB', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_AB_EVIDENCE_LIMITS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_EVIDENCE_LIMITS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_AB_EVIDENCE_LIMITS 
+PASS KV_SEAL_ONE_CARTRIDGE_AB_EVIDENCE_LIMITS 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_AB_EVIDENCE_LIMITS 
+TEST818_READ ONE_CARTRIDGE_AB EVIDENCE_LIMITS tokens 256 seconds 47.175 | numbers A-only [] B-only [] both [] neither [] | 'The limitations and missing information that would be needed to reconcile the sources are as follows:\n\n1. **Methodological Quality and Risk of Bias**:\n   - **Source A**: The methodologic quality, risk of biases, and the small number of original studies indicate the necessity for further research, especially in front-line healthcare delivery settings.\n   - **Source B**: The risk of bias for the RCTs and cluster-RCTs was mostly high or unclear, which affects the reliability of the findings.\n\n2. **Heterogeneity in Study Settings**:\n   - **Source A**: The studies included in the meta-analysis were conducted in various settings, which may affect the generalizability of the findings.\n   - **Source B**: The included studies were conducted in heterogeneous settings, ranging from suburban schools to hospital wards in high-income countries; crowded inner city settings in low-income countries; and an immigrant neighborhood in a high-income country. This heterogeneity makes it difficult to draw consistent conclusions.\n\n3. **Compliance with Interventions**:\n   - **Source B**: Compliance with interventions was low in many studies, which can significantly affect the outcomes and the reliability of the results.\n\n4. **Certainty of Evidence**:\n   - **Source A**: The evidence is strong'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_AB_ABSENT_INFORMATION 045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452
+PASS FILE_SHA_E818_AB 
+PASS CARTRIDGE_ID_E818_AB 
+PASS CARTRIDGE_TENSOR_SHA_E818_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_AB_ABSENT_INFORMATION E818_AB {'ssd_verify_ms': 565.633, 'h2d_ms': 23.281, 'fusion_ms': 6549.071, 'cid': 'E818_AB', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_AB_ABSENT_INFORMATION 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_ABSENT_INFORMATION {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_AB_ABSENT_INFORMATION 
+PASS KV_SEAL_ONE_CARTRIDGE_AB_ABSENT_INFORMATION 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_AB_ABSENT_INFORMATION 
+TEST818_READ ONE_CARTRIDGE_AB ABSENT_INFORMATION tokens 30 seconds 16.852 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nNeither Source A nor Source B provides information on the unit price or cost per wearer for N95 respirators compared with surgical masks.'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_AB_SYNTHESIS 92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb
+PASS FILE_SHA_E818_AB 
+PASS CARTRIDGE_ID_E818_AB 
+PASS CARTRIDGE_TENSOR_SHA_E818_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_AB_SYNTHESIS E818_AB {'ssd_verify_ms': 567.45, 'h2d_ms': 22.551, 'fusion_ms': 6563.195, 'cid': 'E818_AB', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_AB_SYNTHESIS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_SYNTHESIS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_AB_SYNTHESIS 
+PASS KV_SEAL_ONE_CARTRIDGE_AB_SYNTHESIS 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_AB_SYNTHESIS 
+TEST818_READ ONE_CARTRIDGE_AB SYNTHESIS tokens 256 seconds 47.378 | numbers A-only ['0.05', '0.17', '0.52', '0.62', '0.65', '0.68', '0.73', '0.74', '0.81', '0.94', '2'] B-only [] both ['0.82'] neither ['0'] | 'The evidence from the mounted scientific articles provides a nuanced view of the effectiveness of N95 respirators versus surgical or medical masks in preventing respiratory viral infections. Here is a synthesis of the findings, with each statement labeled by its source and the overall certainty of the evidence:\n\n1. **N95 Respirators vs. Surgical Masks in Healthcare Settings:**\n   - **Source A:** N95 respirators were associated with fewer viral infectious episodes for healthcare workers compared to surgical masks. Specifically, N95 respirators were more effective in reducing the risk of influenza-like illness (RR = 0.81, 95% CI = 0.68–0.94, P < 0.05), non-influenza respiratory viral infection (RR = 0.62, 95% CI = 0.52–0.74, P < 0.05), respiratory viral infection (RR = 0.73, 95% CI = 0.65–0.82, P < 0.05), SARS-CoV 1 and 2 virus infection (RR = 0.17, 95% CI = 0'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_BA_POSITIONS 0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca
+PASS FILE_SHA_E818_BA 
+PASS CARTRIDGE_ID_E818_BA 
+PASS CARTRIDGE_TENSOR_SHA_E818_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_BA_POSITIONS E818_BA {'ssd_verify_ms': 564.247, 'h2d_ms': 22.786, 'fusion_ms': 6574.262, 'cid': 'E818_BA', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_BA_POSITIONS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_POSITIONS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_BA_POSITIONS 
+PASS KV_SEAL_ONE_CARTRIDGE_BA_POSITIONS 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_BA_POSITIONS 
+TEST818_READ ONE_CARTRIDGE_BA POSITIONS tokens 203 seconds 40.176 | numbers A-only ['2'] B-only [] both [] neither [] | '**Source A:**\n- **Conclusion:** N95 respirator use was associated with fewer viral infectious episodes for healthcare workers compared with surgical masks.\n- **Outcome Measured:** Influenza-like illness, non-influenza respiratory viral infection, respiratory viral infection, SARS-CoV 1 and 2 virus infection, and laboratory-confirmed respiratory viral infection.\n- **Population or Setting:** Healthcare workers in hospital settings.\n\n**Source B:**\n- **Conclusion:** There is uncertainty over the effects of N95/P2 respirators when compared with medical/surgical masks on the outcomes of clinical respiratory illness and influenza-like illness. The use of a N95/P2 respirator compared to a medical/surgical mask probably makes little or no difference for the objective and more precise outcome of laboratory-confirmed influenza infection.\n- **Outcome Measured:** Clinical respiratory illness, influenza-like illness, and laboratory-confirmed influenza infection.\n- **Population or Setting:** Healthcare settings and a household setting.'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_BA_OUTCOME_SPLIT 31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e
+PASS FILE_SHA_E818_BA 
+PASS CARTRIDGE_ID_E818_BA 
+PASS CARTRIDGE_TENSOR_SHA_E818_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_BA_OUTCOME_SPLIT E818_BA {'ssd_verify_ms': 563.531, 'h2d_ms': 22.461, 'fusion_ms': 6558.642, 'cid': 'E818_BA', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_BA_OUTCOME_SPLIT 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_OUTCOME_SPLIT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_BA_OUTCOME_SPLIT 
+PASS KV_SEAL_ONE_CARTRIDGE_BA_OUTCOME_SPLIT 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_BA_OUTCOME_SPLIT 
+TEST818_READ ONE_CARTRIDGE_BA OUTCOME_SPLIT tokens 256 seconds 47.446 | numbers A-only ['0.05', '0.52', '0.62', '0.65', '0.68', '0.73', '0.74', '0.81', '0.87', '0.94'] B-only ['0.8'] both ['1.03'] neither [] | '**Source A:**\n- **Influenza-like illness (ILI):** N95 respirators were associated with a statistically significant reduction in ILI compared to surgical masks (RR = 0.81, 95% CI = 0.68–0.94, P < 0.05).\n- **Laboratory-confirmed influenza:** There was no statistically significant difference in the reduction of laboratory-confirmed influenza between N95 respirators and surgical masks (RR = 0.87, CI = 0.74–1.03, P > 0.05).\n- **Non-influenza respiratory viral infection:** N95 respirators were associated with a statistically significant reduction in non-influenza respiratory viral infections compared to surgical masks (RR = 0.62, 95% CI = 0.52–0.74, P < 0.05).\n- **Respiratory viral infection (general):** N95 respirators were associated with a statistically significant reduction in respiratory viral infections compared to surgical masks (RR = 0.73, 95% CI = 0.65–0.8'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_BA_APPARENT_CONFLICT 0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4
+PASS FILE_SHA_E818_BA 
+PASS CARTRIDGE_ID_E818_BA 
+PASS CARTRIDGE_TENSOR_SHA_E818_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_BA_APPARENT_CONFLICT E818_BA {'ssd_verify_ms': 563.326, 'h2d_ms': 22.848, 'fusion_ms': 6545.923, 'cid': 'E818_BA', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_BA_APPARENT_CONFLICT 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_APPARENT_CONFLICT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_BA_APPARENT_CONFLICT 
+PASS KV_SEAL_ONE_CARTRIDGE_BA_APPARENT_CONFLICT 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_BA_APPARENT_CONFLICT 
+TEST818_READ ONE_CARTRIDGE_BA APPARENT_CONFLICT tokens 256 seconds 47.241 | numbers A-only ['0.05', '0.68', '0.75', '0.81', '0.94'] B-only ['0.91', '0.99', '1.18', '1.26'] both ['0.66', '0.82'] neither ['95'] | 'The two sources, Source A and Source B, present different conclusions regarding the effectiveness of N95 respirators compared to surgical masks, but these differences can be attributed to variations in the methods, included evidence, and the specific outcomes and populations studied. Here is a detailed breakdown:\n\n1. **Outcome of Influenza-Like Illness (ILI) and Laboratory-Confirmed Influenza:**\n   - **Source B:** Reports low certainty evidence that wearing a mask (medical/surgical) may make little or no difference to the outcome of ILI (RR 0.99, 95% CI 0.82 to 1.18) and moderate certainty evidence that it probably makes little or no difference to the outcome of laboratory-confirmed influenza (RR 0.91, 95% CI 0.66 to 1.26).\n   - **Source A:** Reports statistically significant differences in favor of N95 respirators for preventing ILI (RR 0.81, 95% CI 0.68–0.94, P < 0.05) and laboratory-confirmed respiratory viral infection (RR 0.75, 95%'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_BA_EVIDENCE_LIMITS 08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958
+PASS FILE_SHA_E818_BA 
+PASS CARTRIDGE_ID_E818_BA 
+PASS CARTRIDGE_TENSOR_SHA_E818_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_BA_EVIDENCE_LIMITS E818_BA {'ssd_verify_ms': 566.951, 'h2d_ms': 23.47, 'fusion_ms': 6561.982, 'cid': 'E818_BA', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_BA_EVIDENCE_LIMITS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_EVIDENCE_LIMITS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_BA_EVIDENCE_LIMITS 
+PASS KV_SEAL_ONE_CARTRIDGE_BA_EVIDENCE_LIMITS 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_BA_EVIDENCE_LIMITS 
+TEST818_READ ONE_CARTRIDGE_BA EVIDENCE_LIMITS tokens 256 seconds 47.345 | numbers A-only [] B-only [] both [] neither [] | 'The limitations and missing information that would be needed to reconcile the sources are as follows:\n\n1. **High Risk of Bias and Uncertainty in Evidence (Source B):**\n   - **Claim:** The high risk of bias in the trials, variation in outcome measurement, and relatively low compliance with the interventions during the studies hamper drawing firm conclusions and generalizing the findings to the current COVID-19 pandemic.\n   - **Observation:** The evidence for the effectiveness of face masks, particularly medical/surgical masks, is of low to moderate certainty, and the true effect may be different from the observed estimates.\n   - **Uncertainty:** The studies included in Source B were conducted in heterogeneous settings and during periods of lower respiratory viral circulation and transmission compared to COVID-19, which may affect the generalizability of the findings.\n\n2. **Statistical Significance and Methodologic Quality (Source A):**\n   - **Claim:** N95 respirator use was associated with fewer viral infectious episodes for healthcare workers compared with surgical masks.\n   - **Observation:** The meta-analysis in Source A found statistically significant differences in favor of N95 respirators for preventing influenza-like illness, non-influenza respiratory viral infection, respiratory viral infection, and SARS-Co'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_BA_ABSENT_INFORMATION 045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452
+PASS FILE_SHA_E818_BA 
+PASS CARTRIDGE_ID_E818_BA 
+PASS CARTRIDGE_TENSOR_SHA_E818_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_BA_ABSENT_INFORMATION E818_BA {'ssd_verify_ms': 565.22, 'h2d_ms': 22.538, 'fusion_ms': 6566.251, 'cid': 'E818_BA', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_BA_ABSENT_INFORMATION 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_ABSENT_INFORMATION {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_BA_ABSENT_INFORMATION 
+PASS KV_SEAL_ONE_CARTRIDGE_BA_ABSENT_INFORMATION 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_BA_ABSENT_INFORMATION 
+TEST818_READ ONE_CARTRIDGE_BA ABSENT_INFORMATION tokens 30 seconds 16.891 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nNeither Source A nor Source B provides information about the unit price or cost per wearer for N95 respirators compared with surgical masks.'
+PASS PROMPT_IS_PRECHECKED_ONE_CARTRIDGE_BA_SYNTHESIS 92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb
+PASS FILE_SHA_E818_BA 
+PASS CARTRIDGE_ID_E818_BA 
+PASS CARTRIDGE_TENSOR_SHA_E818_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_ONE_CARTRIDGE_BA_SYNTHESIS E818_BA {'ssd_verify_ms': 566.388, 'h2d_ms': 23.082, 'fusion_ms': 6544.503, 'cid': 'E818_BA', 'memory_tokens': 2659}
+PASS NATIVE80_ONE_CARTRIDGE_BA_SYNTHESIS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_SYNTHESIS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_ONE_CARTRIDGE_BA_SYNTHESIS 
+PASS KV_SEAL_ONE_CARTRIDGE_BA_SYNTHESIS 
+PASS SDPA_RESTORED_ONE_CARTRIDGE_BA_SYNTHESIS 
+TEST818_READ ONE_CARTRIDGE_BA SYNTHESIS tokens 256 seconds 47.452 | numbers A-only ['0.05', '0.06', '0.17', '0.52', '0.62', '0.65', '0.73', '0.74', '0.75', '2'] B-only [] both ['0.66', '0.82', '0.84'] neither [] | 'The evidence from the mounted scientific articles provides a nuanced view of the effectiveness of N95 respirators compared to surgical or medical masks in preventing respiratory viral infections. Here is a synthesis of the findings:\n\n1. **Effectiveness in Reducing Respiratory Viral Infections:**\n   - **Source A:** N95 respirators were associated with fewer viral infectious episodes for healthcare workers compared to surgical masks. Specifically, N95 respirators were more effective in reducing the risk of non-influenza respiratory viral infections (RR = 0.62, 95% CI = 0.52–0.74, P < 0.05), respiratory viral infections (RR = 0.73, 95% CI = 0.65–0.82, P < 0.05), and laboratory-confirmed respiratory viral infections (RR = 0.75, 95% CI = 0.66–0.84, P < 0.05). The N95 respirator was particularly effective against SARS-CoV 1 and 2 (RR = 0.17, 95% CI = 0.06'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_AB_POSITIONS 0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_POSITIONS E818_A {'ssd_verify_ms': 130.976, 'h2d_ms': 6.286, 'fusion_ms': 1499.88, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_POSITIONS E818_B {'ssd_verify_ms': 440.881, 'h2d_ms': 16.789, 'fusion_ms': 6773.815, 'cid': 'E818_B', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_AB_POSITIONS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_POSITIONS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_AB_POSITIONS 
+PASS KV_SEAL_TWO_CARTRIDGE_AB_POSITIONS 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_AB_POSITIONS 
+TEST818_READ TWO_CARTRIDGE_AB POSITIONS tokens 210 seconds 42.986 | numbers A-only ['2'] B-only [] both [] neither [] | '**Source A:**\n- **Conclusion:** N95 respirator use was associated with fewer viral infectious episodes for healthcare workers compared with surgical masks.\n- **Outcome Measured:** Influenza-like illness, non-influenza respiratory viral infection, respiratory viral infection, SARS-CoV 1 and 2 virus infection, and laboratory-confirmed respiratory viral infection.\n- **Population/Setting:** Healthcare workers in a hospital setting.\n\n**Source B:**\n- **Conclusion:** There is uncertainty over the effects of N95/P2 respirators when compared with medical/surgical masks on the outcomes of clinical respiratory illness and influenza-like illness. The use of a N95/P2 respirator compared to a medical/surgical mask probably makes little or no difference for the objective and more precise outcome of laboratory-confirmed influenza infection.\n- **Outcome Measured:** Clinical respiratory illness, influenza-like illness, and laboratory-confirmed influenza infection.\n- **Population/Setting:** Heterogeneous settings, including healthcare settings and a household setting.'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_AB_OUTCOME_SPLIT 31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_OUTCOME_SPLIT E818_A {'ssd_verify_ms': 130.274, 'h2d_ms': 6.052, 'fusion_ms': 1514.359, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_OUTCOME_SPLIT E818_B {'ssd_verify_ms': 446.479, 'h2d_ms': 17.126, 'fusion_ms': 6753.843, 'cid': 'E818_B', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_AB_OUTCOME_SPLIT 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_OUTCOME_SPLIT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_AB_OUTCOME_SPLIT 
+PASS KV_SEAL_TWO_CARTRIDGE_AB_OUTCOME_SPLIT 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_AB_OUTCOME_SPLIT 
+TEST818_READ TWO_CARTRIDGE_AB OUTCOME_SPLIT tokens 256 seconds 49.079 | numbers A-only ['0.05', '0.68', '0.74', '0.81', '0.87', '0.94'] B-only ['0.91', '0.99', '1.18'] both ['0.82', '1.03'] neither [] | '**Source A:**\n- **Influenza-like illness (ILI):** The meta-analysis found a statistically significant difference in the prevention of influenza-like illness (ILI) when comparing N95 respirators to surgical masks (Risk Ratio [RR] = 0.81, 95% CI = 0.68–0.94, P < 0.05).\n- **Laboratory-confirmed influenza:** The meta-analysis did not find a statistically significant difference in the prevention of laboratory-confirmed influenza (RR = 0.87, CI = 0.74–1.03, P > 0.05).\n\n**Source B:**\n- **Influenza-like illness (ILI):** There is low certainty evidence that wearing a medical/surgical mask may make little or no difference in the prevention of influenza-like illness (ILI) compared to not wearing a mask (RR 0.99, 95% CI 0.82 to 1.18).\n- **Laboratory-confirmed influenza:** There is moderate certainty evidence that wearing a medical/surgical mask probably makes little or no difference in the prevention of laboratory-confirmed influenza (RR 0.91'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_AB_APPARENT_CONFLICT 0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_APPARENT_CONFLICT E818_A {'ssd_verify_ms': 130.685, 'h2d_ms': 6.005, 'fusion_ms': 1505.785, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_APPARENT_CONFLICT E818_B {'ssd_verify_ms': 441.989, 'h2d_ms': 16.978, 'fusion_ms': 6753.58, 'cid': 'E818_B', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_AB_APPARENT_CONFLICT 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_APPARENT_CONFLICT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_AB_APPARENT_CONFLICT 
+PASS KV_SEAL_TWO_CARTRIDGE_AB_APPARENT_CONFLICT 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_AB_APPARENT_CONFLICT 
+TEST818_READ TWO_CARTRIDGE_AB APPARENT_CONFLICT tokens 256 seconds 48.938 | numbers A-only ['2', '9164'] B-only ['67', '8'] both [] neither [] | 'The two sources do not truly contradict each other on the same outcome, population, and study design. Differences in methods or included evidence can explain the apparently different conclusions. Here are the key points:\n\n1. **Population and Setting**:\n   - **Source A**: Focuses on healthcare settings, specifically healthcare workers.\n   - **Source B**: Includes a broader range of settings, including healthcare, community, schools, and offices.\n\n2. **Outcome Measures**:\n   - **Source A**: Reports on influenza-like illness (ILI), non-influenza respiratory viral infection, respiratory viral infection, SARS-CoV 1 and 2 virus infection, and laboratory-confirmed respiratory viral infection.\n   - **Source B**: Reports on ILI, laboratory-confirmed influenza, and other respiratory illnesses, with a focus on the effectiveness of various physical interventions.\n\n3. **Study Design**:\n   - **Source A**: Conducted a meta-analysis of 8 studies (9164 participants) with a focus on N95 respirators versus surgical masks.\n   - **Source B**: Included 67 RCTs and cluster-RCTs, with a broader focus on various physical interventions, including masks, hand hygiene, and physical distancing.\n\n4. **Key'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS 08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS E818_A {'ssd_verify_ms': 129.278, 'h2d_ms': 6.047, 'fusion_ms': 1506.676, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS E818_B {'ssd_verify_ms': 441.638, 'h2d_ms': 17.064, 'fusion_ms': 6741.598, 'cid': 'E818_B', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS 
+PASS KV_SEAL_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_AB_EVIDENCE_LIMITS 
+TEST818_READ TWO_CARTRIDGE_AB EVIDENCE_LIMITS tokens 256 seconds 48.892 | numbers A-only ['2'] B-only [] both [] neither [] | 'The limitations and missing information that would be needed to reconcile the sources are as follows:\n\n1. **High Risk of Bias and Uncertainty in Evidence**:\n   - **Source B** indicates that the risk of bias in the trials is mostly high or unclear, and the certainty of the evidence for the effectiveness of masks is low to moderate. This suggests that the true effect of masks might differ from the observed estimates.\n   - **Source A** also notes methodologic quality, risk of biases, and the small number of original studies, indicating the need for further research.\n\n2. **Heterogeneity in Study Settings and Compliance**:\n   - **Source B** mentions that the included studies were conducted in heterogeneous settings, ranging from suburban schools to hospital wards in high-income countries, and compliance with interventions was low in many studies.\n   - **Source A** does not provide detailed information on the settings and compliance, but it does mention the necessity for further research, especially in front-line healthcare delivery settings.\n\n3. **Different Outcomes and Measures**:\n   - **Source A** reports statistically significant differences in the effectiveness of N95 respirators compared to surgical masks for various respiratory viral infections, including SARS-CoV 1 and 2.\n   - **Source B'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_AB_ABSENT_INFORMATION 045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_ABSENT_INFORMATION E818_A {'ssd_verify_ms': 132.181, 'h2d_ms': 5.97, 'fusion_ms': 1510.203, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_ABSENT_INFORMATION E818_B {'ssd_verify_ms': 441.707, 'h2d_ms': 16.915, 'fusion_ms': 6745.257, 'cid': 'E818_B', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_AB_ABSENT_INFORMATION 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_ABSENT_INFORMATION {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_AB_ABSENT_INFORMATION 
+PASS KV_SEAL_TWO_CARTRIDGE_AB_ABSENT_INFORMATION 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_AB_ABSENT_INFORMATION 
+TEST818_READ TWO_CARTRIDGE_AB ABSENT_INFORMATION tokens 30 seconds 18.545 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nNeither Source A nor Source B provides information on the unit price or cost per wearer for N95 respirators compared with surgical masks.'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_AB_SYNTHESIS 92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_SYNTHESIS E818_A {'ssd_verify_ms': 128.579, 'h2d_ms': 5.916, 'fusion_ms': 1495.692, 'cid': 'E818_A', 'memory_tokens': 624}
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_AB_SYNTHESIS E818_B {'ssd_verify_ms': 440.773, 'h2d_ms': 17.272, 'fusion_ms': 6729.503, 'cid': 'E818_B', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_AB_SYNTHESIS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_SYNTHESIS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_AB_SYNTHESIS 
+PASS KV_SEAL_TWO_CARTRIDGE_AB_SYNTHESIS 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_AB_SYNTHESIS 
+TEST818_READ TWO_CARTRIDGE_AB SYNTHESIS tokens 256 seconds 48.939 | numbers A-only ['0.05', '0.52', '0.62', '0.65', '0.68', '0.73', '0.74', '0.75', '0.81', '0.94'] B-only [] both ['0.66', '0.82', '0.84'] neither [] | 'The evidence from the mounted scientific articles provides a nuanced view of the effectiveness of N95 respirators versus surgical or medical masks in preventing respiratory viral infections. Here is a synthesis of the findings:\n\n1. **Effectiveness in Healthcare Settings (Source A)**:\n   - **N95 Respirators vs. Surgical Masks**: N95 respirators were found to be more effective in preventing various respiratory viral infections in healthcare settings. Specifically, N95 respirators were associated with a statistically significant reduction in the risk of influenza-like illness (RR = 0.81, 95% CI = 0.68–0.94, P < 0.05), non-influenza respiratory viral infection (RR = 0.62, 95% CI = 0.52–0.74, P < 0.05), respiratory viral infection (RR = 0.73, 95% CI = 0.65–0.82, P < 0.05), and laboratory-confirmed respiratory viral infection (RR = 0.75, 95% CI = 0.66–0.84, P <'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_BA_POSITIONS 0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_POSITIONS E818_B {'ssd_verify_ms': 443.414, 'h2d_ms': 18.166, 'fusion_ms': 5125.528, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_POSITIONS E818_A {'ssd_verify_ms': 129.483, 'h2d_ms': 6.062, 'fusion_ms': 6253.156, 'cid': 'E818_A', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_BA_POSITIONS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_POSITIONS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_BA_POSITIONS 
+PASS KV_SEAL_TWO_CARTRIDGE_BA_POSITIONS 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_BA_POSITIONS 
+TEST818_READ TWO_CARTRIDGE_BA POSITIONS tokens 208 seconds 45.97 | numbers A-only ['2'] B-only [] both [] neither [] | '**Source A:**\n- **Conclusion:** N95 respirator use was associated with fewer viral infectious episodes for healthcare workers compared with surgical masks.\n- **Outcome Measured:** Influenza-like illness, non-influenza respiratory viral infection, respiratory viral infection, SARS-CoV 1 and 2 virus infection, and laboratory-confirmed respiratory viral infection.\n- **Population/Setting:** Healthcare workers in hospital settings.\n\n**Source B:**\n- **Conclusion:** There is uncertainty over the effects of N95/P2 respirators when compared with medical/surgical masks on the outcomes of clinical respiratory illness and influenza-like illness. The use of a N95/P2 respirator compared to a medical/surgical mask probably makes little or no difference for the objective and more precise outcome of laboratory-confirmed influenza infection.\n- **Outcome Measured:** Clinical respiratory illness, influenza-like illness, and laboratory-confirmed influenza infection.\n- **Population/Setting:** Heterogeneous settings, including healthcare settings and household settings.'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_BA_OUTCOME_SPLIT 31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_OUTCOME_SPLIT E818_B {'ssd_verify_ms': 444.765, 'h2d_ms': 18.756, 'fusion_ms': 5137.713, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_OUTCOME_SPLIT E818_A {'ssd_verify_ms': 130.182, 'h2d_ms': 6.276, 'fusion_ms': 6252.627, 'cid': 'E818_A', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_BA_OUTCOME_SPLIT 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_OUTCOME_SPLIT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_BA_OUTCOME_SPLIT 
+PASS KV_SEAL_TWO_CARTRIDGE_BA_OUTCOME_SPLIT 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_BA_OUTCOME_SPLIT 
+TEST818_READ TWO_CARTRIDGE_BA OUTCOME_SPLIT tokens 256 seconds 52.327 | numbers A-only ['0.05', '0.52', '0.62', '0.65', '0.68', '0.73', '0.74', '0.81', '0.87', '0.94'] B-only [] both ['0.82', '1.03'] neither [] | '**Source A:**\n- **Influenza-like illness (ILI):** N95 respirators were associated with a statistically significant reduction in ILI compared to surgical masks (RR = 0.81, 95% CI = 0.68–0.94, P < 0.05).\n- **Laboratory-confirmed influenza:** There was no statistically significant difference between N95 respirators and surgical masks in preventing laboratory-confirmed influenza (RR = 0.87, CI = 0.74–1.03, P > 0.05).\n- **Non-influenza respiratory viral infection:** N95 respirators were associated with a statistically significant reduction in non-influenza respiratory viral infections compared to surgical masks (RR = 0.62, 95% CI = 0.52–0.74, P < 0.05).\n- **Respiratory viral infection (general):** N95 respirators were associated with a statistically significant reduction in respiratory viral infections compared to surgical masks (RR = 0.73, 95% CI = 0.65–0.82,'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_BA_APPARENT_CONFLICT 0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_APPARENT_CONFLICT E818_B {'ssd_verify_ms': 443.784, 'h2d_ms': 18.604, 'fusion_ms': 5121.374, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_APPARENT_CONFLICT E818_A {'ssd_verify_ms': 134.523, 'h2d_ms': 6.085, 'fusion_ms': 6263.664, 'cid': 'E818_A', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_BA_APPARENT_CONFLICT 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_APPARENT_CONFLICT {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_BA_APPARENT_CONFLICT 
+PASS KV_SEAL_TWO_CARTRIDGE_BA_APPARENT_CONFLICT 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_BA_APPARENT_CONFLICT 
+TEST818_READ TWO_CARTRIDGE_BA APPARENT_CONFLICT tokens 256 seconds 52.101 | numbers A-only ['0.05', '0.68', '0.75', '0.81', '0.94'] B-only ['0.91', '0.99', '1.18', '1.26'] both ['0.66', '0.82'] neither ['95'] | 'The two sources, Source A and Source B, present different conclusions regarding the effectiveness of N95 respirators compared to surgical masks, but these differences can be attributed to variations in the methods, included evidence, and the specific outcomes and populations studied. Here is a detailed breakdown:\n\n1. **Outcome of Influenza-Like Illness (ILI) and Laboratory-Confirmed Influenza:**\n   - **Source B:** Reports low certainty evidence that wearing a mask (medical/surgical) may make little or no difference to the outcome of ILI (RR 0.99, 95% CI 0.82 to 1.18) and moderate certainty evidence that it probably makes little or no difference to the outcome of laboratory-confirmed influenza (RR 0.91, 95% CI 0.66 to 1.26).\n   - **Source A:** Reports statistically significant differences in favor of N95 respirators for preventing ILI (RR 0.81, 95% CI 0.68–0.94, P < 0.05) and laboratory-confirmed respiratory viral infection (RR 0.75, 95%'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS 08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS E818_B {'ssd_verify_ms': 440.649, 'h2d_ms': 18.223, 'fusion_ms': 5144.305, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS E818_A {'ssd_verify_ms': 129.718, 'h2d_ms': 6.11, 'fusion_ms': 6211.527, 'cid': 'E818_A', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS 
+PASS KV_SEAL_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_BA_EVIDENCE_LIMITS 
+TEST818_READ TWO_CARTRIDGE_BA EVIDENCE_LIMITS tokens 256 seconds 51.997 | numbers A-only [] B-only [] both [] neither [] | 'The limitations and missing information that would be needed to reconcile the sources are as follows:\n\n1. **High Risk of Bias and Uncertainty in Evidence (Source B):**\n   - **Observation:** The high risk of bias in the trials, variation in outcome measurement, and relatively low compliance with the interventions during the studies hamper drawing firm conclusions and generalizing the findings to the current COVID-19 pandemic.\n   - **Uncertainty:** The evidence for the effectiveness of face masks, particularly medical/surgical masks, is of low to moderate certainty, meaning the true effect may be different from the observed estimate.\n\n2. **Methodologic Quality and Risk of Biases (Source A):**\n   - **Observation:** The methodologic quality and risk of biases in the studies included in the meta-analysis indicate the necessity for further research, especially in front-line healthcare delivery settings.\n   - **Uncertainty:** The small number of original studies and the potential for bias limit the confidence in the findings.\n\n3. **Heterogeneity in Study Settings and Populations (Source B):**\n   - **Observation:** The included studies were conducted in heterogeneous settings, ranging from suburban schools to hospital wards in high-income countries; crowded inner city settings in low-income countries; and an immigrant'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_BA_ABSENT_INFORMATION 045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_ABSENT_INFORMATION E818_B {'ssd_verify_ms': 442.741, 'h2d_ms': 18.29, 'fusion_ms': 5140.157, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_ABSENT_INFORMATION E818_A {'ssd_verify_ms': 130.416, 'h2d_ms': 6.199, 'fusion_ms': 6223.726, 'cid': 'E818_A', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_BA_ABSENT_INFORMATION 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_ABSENT_INFORMATION {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_BA_ABSENT_INFORMATION 
+PASS KV_SEAL_TWO_CARTRIDGE_BA_ABSENT_INFORMATION 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_BA_ABSENT_INFORMATION 
+TEST818_READ TWO_CARTRIDGE_BA ABSENT_INFORMATION tokens 30 seconds 21.661 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nNeither Source A nor Source B provides information on the unit price or cost per wearer for N95 respirators compared with surgical masks.'
+PASS PROMPT_IS_PRECHECKED_TWO_CARTRIDGE_BA_SYNTHESIS 92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb
+PASS FILE_SHA_E818_B 
+PASS CARTRIDGE_ID_E818_B 
+PASS CARTRIDGE_TENSOR_SHA_E818_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_SYNTHESIS E818_B {'ssd_verify_ms': 443.986, 'h2d_ms': 18.63, 'fusion_ms': 5138.274, 'cid': 'E818_B', 'memory_tokens': 2065}
+PASS FILE_SHA_E818_A 
+PASS CARTRIDGE_ID_E818_A 
+PASS CARTRIDGE_TENSOR_SHA_E818_A 
+NATIVE_FUSION_STEP TEST818_TWO_CARTRIDGE_BA_SYNTHESIS E818_A {'ssd_verify_ms': 130.036, 'h2d_ms': 6.214, 'fusion_ms': 6222.856, 'cid': 'E818_A', 'memory_tokens': 2659}
+PASS NATIVE80_TWO_CARTRIDGE_BA_SYNTHESIS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_SYNTHESIS {'observed': 2659, 'expected': 2659}
+PASS MEMORY_ON_GPU_TWO_CARTRIDGE_BA_SYNTHESIS 
+PASS KV_SEAL_TWO_CARTRIDGE_BA_SYNTHESIS 
+PASS SDPA_RESTORED_TWO_CARTRIDGE_BA_SYNTHESIS 
+TEST818_READ TWO_CARTRIDGE_BA SYNTHESIS tokens 256 seconds 52.088 | numbers A-only ['0.05', '0.68', '0.81', '0.94'] B-only [] both ['0.66', '0.82', '1.03'] neither ['0'] | 'The evidence from the mounted scientific articles provides a nuanced view of the effectiveness of N95 respirators compared to surgical or medical masks in preventing respiratory viral infections. Here is a synthesis of the findings:\n\n1. **Effectiveness in Preventing Influenza-like Illness (ILI):**\n   - **Source A:** N95 respirators were associated with a statistically significant reduction in ILI compared to surgical masks (RR = 0.81, 95% CI = 0.68–0.94, P < 0.05). This suggests that N95 respirators are more effective in preventing ILI.\n   - **Source B:** There is uncertainty over the effects of N95/P2 respirators compared to medical/surgical masks on ILI (RR 0.82, 95% CI 0.66 to 1.03; low-certainty evidence). The evidence is limited by imprecision and heterogeneity.\n\n2. **Effectiveness in Preventing Laboratory-Confirmed Influenza:**\n   - **Source A:** There was no statistically significant difference in the prevention of laboratory-confirmed influenza between N95 respirators and surgical masks (RR = 0.'
+PASS PROMPT_IS_PRECHECKED_NULL_MEMORY_POSITIONS 0a42933b98f81831e5b2ef83116a5a63eed1b0e716812788f9c135f203566bca
+PASS FILE_SHA_E818_NULL 
+PASS CARTRIDGE_ID_E818_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E818_NULL 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_NULL_MEMORY_POSITIONS E818_NULL {'ssd_verify_ms': 15.581, 'h2d_ms': 9.993, 'fusion_ms': 254.62, 'cid': 'E818_NULL', 'memory_tokens': 44}
+PASS NATIVE80_NULL_MEMORY_POSITIONS 
+PASS NATIVE_LENGTH_NULL_MEMORY_POSITIONS {'observed': 44, 'expected': 44}
+PASS MEMORY_ON_GPU_NULL_MEMORY_POSITIONS 
+PASS KV_SEAL_NULL_MEMORY_POSITIONS 
+PASS SDPA_RESTORED_NULL_MEMORY_POSITIONS 
+TEST818_READ NULL_MEMORY POSITIONS tokens 49 seconds 7.173 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided memory record does not contain any scientific documents or specific information about N95 respirators compared with surgical or medical masks. Therefore, it is not possible to describe the conclusions of Source A or Source B regarding this topic.'
+PASS PROMPT_IS_PRECHECKED_NULL_MEMORY_OUTCOME_SPLIT 31e42e57786969b3417ce6666e0f01a3ee4423d0b773248cf7dd81e64b49144e
+PASS FILE_SHA_E818_NULL 
+PASS CARTRIDGE_ID_E818_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E818_NULL 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_NULL_MEMORY_OUTCOME_SPLIT E818_NULL {'ssd_verify_ms': 13.804, 'h2d_ms': 1.438, 'fusion_ms': 239.827, 'cid': 'E818_NULL', 'memory_tokens': 44}
+PASS NATIVE80_NULL_MEMORY_OUTCOME_SPLIT 
+PASS NATIVE_LENGTH_NULL_MEMORY_OUTCOME_SPLIT {'observed': 44, 'expected': 44}
+PASS MEMORY_ON_GPU_NULL_MEMORY_OUTCOME_SPLIT 
+PASS KV_SEAL_NULL_MEMORY_OUTCOME_SPLIT 
+PASS SDPA_RESTORED_NULL_MEMORY_OUTCOME_SPLIT 
+TEST818_READ NULL_MEMORY OUTCOME_SPLIT tokens 39 seconds 5.763 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided memory record does not contain any scientific documents, and thus there is no information to determine if the sources distinguish influenza-like illness from laboratory-confirmed influenza or other confirmed infections.'
+PASS PROMPT_IS_PRECHECKED_NULL_MEMORY_APPARENT_CONFLICT 0c50734a0650bfef300ab28e6823c6103ad0ad064b2131dd03fd51c34c5f25e4
+PASS FILE_SHA_E818_NULL 
+PASS CARTRIDGE_ID_E818_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E818_NULL 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_NULL_MEMORY_APPARENT_CONFLICT E818_NULL {'ssd_verify_ms': 14.303, 'h2d_ms': 1.375, 'fusion_ms': 239.832, 'cid': 'E818_NULL', 'memory_tokens': 44}
+PASS NATIVE80_NULL_MEMORY_APPARENT_CONFLICT 
+PASS NATIVE_LENGTH_NULL_MEMORY_APPARENT_CONFLICT {'observed': 44, 'expected': 44}
+PASS MEMORY_ON_GPU_NULL_MEMORY_APPARENT_CONFLICT 
+PASS KV_SEAL_NULL_MEMORY_APPARENT_CONFLICT 
+PASS SDPA_RESTORED_NULL_MEMORY_APPARENT_CONFLICT 
+TEST818_READ NULL_MEMORY APPARENT_CONFLICT tokens 61 seconds 8.705 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided memory record does not contain any scientific documents or evidence to compare the claims, observations, and uncertainties from Source A and Source B. Therefore, it is not possible to determine whether the two sources contradict each other or if differences in methods or included evidence explain any apparent differences in conclusions.'
+PASS PROMPT_IS_PRECHECKED_NULL_MEMORY_EVIDENCE_LIMITS 08ce00270e9cfe7bf4c2fd09bf79563f8961c1de038fa8ea8b46b7d160d31958
+PASS FILE_SHA_E818_NULL 
+PASS CARTRIDGE_ID_E818_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E818_NULL 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_NULL_MEMORY_EVIDENCE_LIMITS E818_NULL {'ssd_verify_ms': 14.521, 'h2d_ms': 1.399, 'fusion_ms': 239.951, 'cid': 'E818_NULL', 'memory_tokens': 44}
+PASS NATIVE80_NULL_MEMORY_EVIDENCE_LIMITS 
+PASS NATIVE_LENGTH_NULL_MEMORY_EVIDENCE_LIMITS {'observed': 44, 'expected': 44}
+PASS MEMORY_ON_GPU_NULL_MEMORY_EVIDENCE_LIMITS 
+PASS KV_SEAL_NULL_MEMORY_EVIDENCE_LIMITS 
+PASS SDPA_RESTORED_NULL_MEMORY_EVIDENCE_LIMITS 
+TEST818_READ NULL_MEMORY EVIDENCE_LIMITS tokens 36 seconds 5.41 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided memory record does not contain any scientific documents or information to address the question. Therefore, it is not possible to identify limitations or missing information to reconcile sources.'
+PASS PROMPT_IS_PRECHECKED_NULL_MEMORY_ABSENT_INFORMATION 045b51babbb4e01d77562770d4328610953f49c9d17c59828463e1cb5f8aa452
+PASS FILE_SHA_E818_NULL 
+PASS CARTRIDGE_ID_E818_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E818_NULL 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_NULL_MEMORY_ABSENT_INFORMATION E818_NULL {'ssd_verify_ms': 14.107, 'h2d_ms': 1.364, 'fusion_ms': 239.748, 'cid': 'E818_NULL', 'memory_tokens': 44}
+PASS NATIVE80_NULL_MEMORY_ABSENT_INFORMATION 
+PASS NATIVE_LENGTH_NULL_MEMORY_ABSENT_INFORMATION {'observed': 44, 'expected': 44}
+PASS MEMORY_ON_GPU_NULL_MEMORY_ABSENT_INFORMATION 
+PASS KV_SEAL_NULL_MEMORY_ABSENT_INFORMATION 
+PASS SDPA_RESTORED_NULL_MEMORY_ABSENT_INFORMATION 
+TEST818_READ NULL_MEMORY ABSENT_INFORMATION tokens 45 seconds 6.621 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided memory record does not contain any scientific documents or information about the unit price or cost per wearer for N95 respirators compared with surgical masks. Therefore, there is no evidence to support a conclusion.'
+PASS PROMPT_IS_PRECHECKED_NULL_MEMORY_SYNTHESIS 92aa9e3de50d4ebc1e8b3fc460d6fa44cf549c87b7911ad496bf3315b22c4aeb
+PASS FILE_SHA_E818_NULL 
+PASS CARTRIDGE_ID_E818_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E818_NULL 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST818_NULL_MEMORY_SYNTHESIS E818_NULL {'ssd_verify_ms': 15.064, 'h2d_ms': 1.339, 'fusion_ms': 239.811, 'cid': 'E818_NULL', 'memory_tokens': 44}
+PASS NATIVE80_NULL_MEMORY_SYNTHESIS 
+PASS NATIVE_LENGTH_NULL_MEMORY_SYNTHESIS {'observed': 44, 'expected': 44}
+PASS MEMORY_ON_GPU_NULL_MEMORY_SYNTHESIS 
+PASS KV_SEAL_NULL_MEMORY_SYNTHESIS 
+PASS SDPA_RESTORED_NULL_MEMORY_SYNTHESIS 
+TEST818_READ NULL_MEMORY SYNTHESIS tokens 61 seconds 8.688 | numbers A-only [] B-only [] both [] neither [] | 'UNKNOWN\n\nThe provided memory record does not contain any scientific documents or evidence related to N95 respirators versus surgical or medical masks for preventing respiratory viral infection. Therefore, it is not possible to synthesize any information or make any claims, observations, or statements of uncertainty based on the mounted evidence.'
+PASS READ_MATRIX_42 42
+======================== TEST818 STAGE EVALUATION ========================
+PASS FROZEN_WEIGHT_SENTINEL 
+PASS NO_RESIDUAL_HOOKS 
+PASS PANEL_UNCHANGED 
+PASS FINAL_FILE_SHA_E818_A 
+PASS FINAL_FILE_SHA_E818_B 
+PASS FINAL_FILE_SHA_E818_AB 
+PASS FINAL_FILE_SHA_E818_BA 
+PASS FINAL_FILE_SHA_E818_NULL 
+TEST818_DIAGNOSTICS {"A_ONLY": {"reads": 6, "truncated": 4, "answers_starting_UNKNOWN": 1, "numbers_total": 38, "numbers_only_in_A": 31, "numbers_only_in_B": 0, "numbers_in_both": 6, "numbers_in_neither_source": 1}, "B_ONLY": {"reads": 6, "truncated": 5, "answers_starting_UNKNOWN": 1, "numbers_total": 37, "numbers_only_in_A": 0, "numbers_only_in_B": 26, "numbers_in_both": 11, "numbers_in_neither_source": 0}, "ONE_CARTRIDGE_AB": {"reads": 6, "truncated": 4, "answers_starting_UNKNOWN": 1, "numbers_total": 28, "numbers_only_in_A": 20, "numbers_only_in_B": 4, "numbers_in_both": 3, "numbers_in_neither_source": 1}, "ONE_CARTRIDGE_BA": {"reads": 6, "truncated": 4, "answers_starting_UNKNOWN": 1, "numbers_total": 38, "numbers_only_in_A": 26, "numbers_only_in_B": 5, "numbers_in_both": 6, "numbers_in_neither_source": 1}, "TWO_CARTRIDGE_AB": {"reads": 6, "truncated": 4, "answers_starting_UNKNOWN": 1, "numbers_total": 30, "numbers_only_in_A": 20, "numbers_only_in_B": 5, "numbers_in_both": 5, "numbers_in_neither_source": 0}, "TWO_CARTRIDGE_BA": {"reads": 6, "truncated": 4, "answers_starting_UNKNOWN": 1, "numbers_total": 33, "numbers_only_in_A": 20, "numbers_only_in_B": 4, "numbers_in_both": 7, "numbers_in_neither_source": 2}, "NULL_MEMORY": {"reads": 6, "truncated": 0, "answers_starting_UNKNOWN": 6, "numbers_total": 0, "numbers_only_in_A": 0, "numbers_only_in_B": 0, "numbers_in_both": 0, "numbers_in_neither_source": 0}, "interpretation": "Numbers found only in B while only A is mounted (and vice versa), or any source number under NULL_MEMORY, indicate content not supplied by the mounted memory (e.g. parametric recall). Numbers in neither source are unsupported by both abstracts. These are diagnostics for the human reviewer, not correctness scores."}
+TEST818_COMPLETED {"sources_verified": 2, "physical_cartridges": 5, "native_reads": 42, "gates_passed": 312, "gates_failed": 0} /content/TEST818_20261029T101533Z/TEST818_results.json /content/TEST818_20261029T101533Z/TEST818_independent_review.csv /content/TEST818_20261029T101533Z/TEST818_source_comparability_review.csv
