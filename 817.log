@@ -1,0 +1,350 @@
+ TEST815_GPU_PREFLIGHT {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+TEST815_GPU_FREE_GIB 78.83
+PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+PASS LOCKED_815_SOURCE 
+PASS NATIVE_SYMBOLS 
+PASS FRESH_MEMORY_BANK 0
+PASS API_HOST 
+PASS API_FINAL_HOST https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9521804/fullTextXML
+PASS API_SIZE 96050
+PASS JATS_ARTICLE_PMC9521804 
+PASS ARTICLE_META_PMC9521804 
+PASS PMCID_IF_PRESENT_PMC9521804 ['PMC9521804']
+PASS EXACT_DOI_LOCK_PMC9521804 {'xml_doi': '10.1371/journal.pcbi.1010476', 'expected': '10.1371/journal.pcbi.1010476'}
+PASS EXACT_TITLE_LOCK_PMC9521804 {'xml_title': 'Ten simple rules for getting and giving credit for data', 'expected': 'ten simple rules for getting and giving credit for data'}
+PASS SCIENTIFIC_BODY_PMC9521804 26367
+PASS EXCERPT_PMC9521804 
+PASS REAL_SOURCE_METADATA_PMC9521804 
+TEST817_VERIFIED_SOURCE PMC9521804 10.1371/journal.pcbi.1010476 Ten simple rules for getting and giving credit for data 2203960e8b474ad2957014676609fe850fed8678a7928199b572d199bd715eb6
+PASS API_HOST 
+PASS API_FINAL_HOST https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9401135/fullTextXML
+PASS API_SIZE 89276
+PASS JATS_ARTICLE_PMC9401135 
+PASS ARTICLE_META_PMC9401135 
+PASS PMCID_IF_PRESENT_PMC9401135 ['PMC9401135']
+PASS EXACT_DOI_LOCK_PMC9401135 {'xml_doi': '10.1371/journal.pone.0272845', 'expected': '10.1371/journal.pone.0272845'}
+PASS EXACT_TITLE_LOCK_PMC9401135 {'xml_title': 'Long-term availability of data associated with articles in PLOS ONE', 'expected': 'long-term availability of data associated with articles in plos one'}
+PASS SCIENTIFIC_BODY_PMC9401135 35111
+PASS EXCERPT_PMC9401135 
+PASS REAL_SOURCE_METADATA_PMC9401135 
+TEST817_VERIFIED_SOURCE PMC9401135 10.1371/journal.pone.0272845 Long-term availability of data associated with articles in PLOS ONE 1d27ebc29f67de6044c0985f5d47c5cfbc138cdc3bfd9278c370a3ea73231027
+PASS TWO_REAL_DOCUMENTS 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 83.2kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 866kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 64.2MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 64.0MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 125MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.76MB/s]Download complete:   125GB, 1.31GB/s  Reconstruction complete: 100%  145GB /  145GB,  432MB/s  Fetching 37 files: 100% 37/37 [06:43<00:00,  8.34s/it]Loading weights: 100% 963/963 [06:25<00:00,  3.22it/s]generation_config.json: 100% 242/242 [00:00<00:00, 28.5kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS REAL_EXCERPT_A {'source_tokens': 1266, 'kept_tokens': 380}
+PASS REAL_EXCERPT_B {'source_tokens': 1250, 'kept_tokens': 380}
+PASS CARTRIDGE_TOKEN_BUDGET_E817_A 442
+PASS CARD_NONEMPTY_E817_A 442
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E817_A 
+PASS FRESH_CARTRIDGE_E817_A 
+PASS PHYSICAL_SHA_E817_A 
+PHYSICAL_COMMIT E817_A 071b6fc0f94faac6dff488c60440960290c2478e5004cd8f7ddc6ce8a0b675fc PARENTS []
+PASS CARTRIDGE_TOKEN_BUDGET_E817_B 443
+PASS CARD_NONEMPTY_E817_B 443
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E817_B 
+PASS FRESH_CARTRIDGE_E817_B 
+PASS PHYSICAL_SHA_E817_B 
+PHYSICAL_COMMIT E817_B 1dcdfbc6652038243e44465e8abae68c31ae7af65a5e02d3a1b61fd3dd439f1c PARENTS []
+PASS CARTRIDGE_TOKEN_BUDGET_E817_AB 885
+PASS CARD_NONEMPTY_E817_AB 885
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E817_AB 
+PASS FRESH_CARTRIDGE_E817_AB 
+PASS PHYSICAL_SHA_E817_AB 
+PHYSICAL_COMMIT E817_AB 13b715e4c0243dbf72040ed0bd3525a4f87613ffa3b1ab10615be99ca204b038 PARENTS []
+PASS CARTRIDGE_TOKEN_BUDGET_E817_BA 885
+PASS CARD_NONEMPTY_E817_BA 885
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E817_BA 
+PASS FRESH_CARTRIDGE_E817_BA 
+PASS PHYSICAL_SHA_E817_BA 
+PHYSICAL_COMMIT E817_BA 397993829e3c3012123934f5679b48a5364744cb1c432a57abbdeeea235e89c4 PARENTS []
+PASS FOUR_PHYSICAL_CARTRIDGES 
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS SEALED_RELOAD_E817_A 
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS SEALED_RELOAD_E817_B 
+PASS FILE_SHA_E817_AB 
+PASS CARTRIDGE_ID_E817_AB 
+PASS CARTRIDGE_TENSOR_SHA_E817_AB 
+PASS SEALED_RELOAD_E817_AB 
+PASS FILE_SHA_E817_BA 
+PASS CARTRIDGE_ID_E817_BA 
+PASS CARTRIDGE_TENSOR_SHA_E817_BA 
+PASS SEALED_RELOAD_E817_BA 
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_A_ONLY_POSITIONS E817_A {'ssd_verify_ms': 99.565, 'h2d_ms': 17.931, 'fusion_ms': 1183.294, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS NATIVE80_A_ONLY_POSITIONS 
+PASS NATIVE_LENGTH_A_ONLY_POSITIONS {'observed': 472, 'expected': 472}
+PASS KV_SEAL_A_ONLY_POSITIONS 
+TEST817_READ A_ONLY POSITIONS '**Source A:**\n\n- **Persistent Identifiers:** Source A does not explicitly mention persistent identifiers.\n- **Research Data Credit:** Source A emphasizes the importance of giving and receiving credit for data. It highlights that data, unlike scientific publications, often receives minimal credit or recognition. The article suggests that effective data sharing, which includes ensuring that data contributors are appropriately credited, can accelerate scientific discovery and improve the reproducibility and comparability of research.\n- **Long-term Availability:** Source A does not explicitly discuss the long-term availability of data. However, it implies that data sharing should be done in a way that ensures data is findable, accessible, interoperable, and reusable (FAIR), which can contribute to long-term availability.\n\n**Source B:**\n- **UNKNOWN** (Source B is'
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_A_ONLY_CONTRADICTION E817_A {'ssd_verify_ms': 106.9, 'h2d_ms': 5.864, 'fusion_ms': 1182.752, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS NATIVE80_A_ONLY_CONTRADICTION 
+PASS NATIVE_LENGTH_A_ONLY_CONTRADICTION {'observed': 472, 'expected': 472}
+PASS KV_SEAL_A_ONLY_CONTRADICTION 
+TEST817_READ A_ONLY CONTRADICTION 'A direct contradiction is not established. The provided excerpt does not contain any directly incompatible claims about the same proposition under the same conditions. The text discusses the benefits and challenges of data sharing in scientific research, but does not present any conflicting statements.'
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_A_ONLY_IDENTIFIER E817_A {'ssd_verify_ms': 99.911, 'h2d_ms': 5.914, 'fusion_ms': 1182.649, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS NATIVE80_A_ONLY_IDENTIFIER 
+PASS NATIVE_LENGTH_A_ONLY_IDENTIFIER {'observed': 472, 'expected': 472}
+PASS KV_SEAL_A_ONLY_IDENTIFIER 
+TEST817_READ A_ONLY IDENTIFIER 'UNKNOWN. The provided excerpt does not contain information about whether assigning a DOI guarantees the perpetual retrievability of research data. The document discusses the importance of data sharing and the benefits of assigning DOIs to data, but it does not make a claim or provide evidence regarding the permanence of data retrievability based on DOI assignment alone.'
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_A_ONLY_EVIDENCE_GAP E817_A {'ssd_verify_ms': 99.211, 'h2d_ms': 5.959, 'fusion_ms': 1182.763, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS NATIVE80_A_ONLY_EVIDENCE_GAP 
+PASS NATIVE_LENGTH_A_ONLY_EVIDENCE_GAP {'observed': 472, 'expected': 472}
+PASS KV_SEAL_A_ONLY_EVIDENCE_GAP 
+TEST817_READ A_ONLY EVIDENCE_GAP 'The provided excerpt does not contain any direct disagreements or conflicting claims. The text is a coherent discussion about the importance of data sharing in scientific research, the benefits of preprints, and the role of data papers and data centers in facilitating data sharing. It emphasizes the need for recognizing and crediting data contributors and the potential benefits of sharing data in a FAIR manner.\n\nTo adjudicate any potential disagreement, additional evidence would be needed to address the following points:\n\n1. **Effectiveness of Data Sharing**: Evidence showing the specific impacts of data sharing on the speed and quality of scientific discovery, such as case studies or empirical data on how data sharing has accelerated research in various fields.\n\n2. **Credit and Recognition for Data Contributors**: Studies or surveys that evaluate the current mechanisms for crediting data contributors and their'
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_B_ONLY_POSITIONS E817_B {'ssd_verify_ms': 99.423, 'h2d_ms': 6.163, 'fusion_ms': 1184.102, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS NATIVE80_B_ONLY_POSITIONS 
+PASS NATIVE_LENGTH_B_ONLY_POSITIONS {'observed': 473, 'expected': 473}
+PASS KV_SEAL_B_ONLY_POSITIONS 
+TEST817_READ B_ONLY POSITIONS '**Source B:**\n\n- **Persistent Identifiers (DOIs and URLs):**\n  - **Observation:** The study found that 80% of the resources (data, code, and other digital research objects) could be retrieved automatically using the extracted URLs and DOIs.\n  - **Observation:** When a subset of 350 URLs and 350 DOIs were manually tested, 78% of the resources linked by URLs and 98% of the resources linked by DOIs were successfully retrieved.\n  - **Claim:** Having a DOI and being shared in a repository were both positively associated with the availability of the resources.\n  - **Observation:** Resources associated with older papers were slightly less likely to be available, but this difference was not statistically significant'
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_B_ONLY_CONTRADICTION E817_B {'ssd_verify_ms': 100.009, 'h2d_ms': 5.924, 'fusion_ms': 1183.792, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS NATIVE80_B_ONLY_CONTRADICTION 
+PASS NATIVE_LENGTH_B_ONLY_CONTRADICTION {'observed': 473, 'expected': 473}
+PASS KV_SEAL_B_ONLY_CONTRADICTION 
+TEST817_READ B_ONLY CONTRADICTION 'A direct contradiction is not established. The provided excerpt does not contain directly incompatible claims about the same proposition under the same conditions. The document discusses the long-term availability of data associated with articles in PLOS ONE, the effectiveness of URLs and DOIs in accessing data, and the positive association of DOIs and repository sharing with data availability. There are no conflicting statements within the provided information.'
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_B_ONLY_IDENTIFIER E817_B {'ssd_verify_ms': 100.783, 'h2d_ms': 6.007, 'fusion_ms': 1183.955, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS NATIVE80_B_ONLY_IDENTIFIER 
+PASS NATIVE_LENGTH_B_ONLY_IDENTIFIER {'observed': 473, 'expected': 473}
+PASS KV_SEAL_B_ONLY_IDENTIFIER 
+TEST817_READ B_ONLY IDENTIFIER 'The scientific article does not claim that assigning a DOI by itself guarantees that research data will remain retrievable forever. However, the study provides evidence that having a DOI is positively associated with the availability of research data over time.\n\n**Observations:**\n- The study found that 98% of resources could be successfully retrieved when using DOIs, compared to 78% when using URLs.\n- Having a DOI and being shared in a repository were both positively associated with the availability of resources.\n- The difference in availability between older and newer papers was not statistically significant, suggesting that DOIs may be an effective means for accessing data over time.\n\n**Conclusion:**\nWhile the study indicates that DOIs are a reliable method for ensuring long-term access to research data, it does not guarantee that data will'
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_B_ONLY_EVIDENCE_GAP E817_B {'ssd_verify_ms': 99.945, 'h2d_ms': 6.146, 'fusion_ms': 1183.754, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS NATIVE80_B_ONLY_EVIDENCE_GAP 
+PASS NATIVE_LENGTH_B_ONLY_EVIDENCE_GAP {'observed': 473, 'expected': 473}
+PASS KV_SEAL_B_ONLY_EVIDENCE_GAP 
+TEST817_READ B_ONLY EVIDENCE_GAP 'In the provided scientific article, there is no direct disagreement or conflict presented. The study focuses on the long-term availability of data associated with articles in PLOS ONE, and it provides specific observations and conclusions based on the data collected and analyzed. The key points include:\n\n1. **Observations:**\n   - 80% of the resources could be retrieved automatically.\n   - 78% of a subset of 350 URLs and 98% of a subset of 350 DOIs were successfully retrieved manually.\n   - Having a DOI and being shared in a repository were positively associated with availability.\n   - Resources associated with older papers were slightly less likely to be available, but this difference was not statistically significant.\n\n2. **Claims:**\n   - The adoption of'
+PASS FILE_SHA_E817_AB 
+PASS CARTRIDGE_ID_E817_AB 
+PASS CARTRIDGE_TENSOR_SHA_E817_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_AB_POSITIONS E817_AB {'ssd_verify_ms': 196.818, 'h2d_ms': 8.968, 'fusion_ms': 2298.846, 'cid': 'E817_AB', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_AB_POSITIONS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_POSITIONS {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_AB_POSITIONS 
+TEST817_READ ONE_CARTRIDGE_AB POSITIONS '**Source A** establishes the importance of sharing data in a findable, accessible, interoperable, and reusable (FAIR) manner, emphasizing the need for data to be credited and recognized. It highlights the role of preprints in accelerating scientific knowledge transfer and ensuring individual contributions are respected. The article also mentions the rise of data papers and the support of various publishers and data centers in facilitating data sharing. However, it does not provide specific evidence or observations about the long-term availability of data or the effectiveness of persistent identifiers like DOIs.\n\n**Source B** provides empirical evidence on the long-term availability of research data associated with articles in PLOS ONE. It reports that 80% of resources could be retrieved automatically using URLs and DOIs, and 78% and 98%'
+PASS FILE_SHA_E817_AB 
+PASS CARTRIDGE_ID_E817_AB 
+PASS CARTRIDGE_TENSOR_SHA_E817_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_AB_CONTRADICTION E817_AB {'ssd_verify_ms': 186.723, 'h2d_ms': 8.76, 'fusion_ms': 2324.495, 'cid': 'E817_AB', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_AB_CONTRADICTION 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_CONTRADICTION {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_AB_CONTRADICTION 
+TEST817_READ ONE_CARTRIDGE_AB CONTRADICTION 'A direct contradiction is not established between the two documents. The documents focus on different aspects of data sharing and availability. SOURCE A discusses the benefits and challenges of sharing data, emphasizing the importance of crediting data contributors and the role of preprints and data papers in accelerating scientific knowledge transfer. SOURCE B, on the other hand, examines the long-term availability of data associated with articles in PLOS ONE, focusing on the effectiveness of URLs and DOIs in ensuring data access over time. There are no directly incompatible claims between the two documents.'
+PASS FILE_SHA_E817_AB 
+PASS CARTRIDGE_ID_E817_AB 
+PASS CARTRIDGE_TENSOR_SHA_E817_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_AB_IDENTIFIER E817_AB {'ssd_verify_ms': 188.137, 'h2d_ms': 8.653, 'fusion_ms': 2315.558, 'cid': 'E817_AB', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_AB_IDENTIFIER 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_IDENTIFIER {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_AB_IDENTIFIER 
+TEST817_READ ONE_CARTRIDGE_AB IDENTIFIER 'The evidence from SOURCE B indicates that assigning a DOI is positively associated with the availability of research data over time, but it does not guarantee that the data will remain retrievable forever. Specifically, the study found that 98% of resources identified by DOIs were successfully retrieved when manually tested, compared to 78% of resources identified by URLs. However, the study also notes that even with DOIs, some resources may still become unavailable due to issues like link rot and content drift. Therefore, while DOIs are a valuable tool for ensuring long-term access to data, they do not provide an absolute guarantee of perpetual retrievability.'
+PASS FILE_SHA_E817_AB 
+PASS CARTRIDGE_ID_E817_AB 
+PASS CARTRIDGE_TENSOR_SHA_E817_AB 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_AB_EVIDENCE_GAP E817_AB {'ssd_verify_ms': 188.488, 'h2d_ms': 8.78, 'fusion_ms': 2325.91, 'cid': 'E817_AB', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_AB_EVIDENCE_GAP 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_AB_EVIDENCE_GAP {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_AB_EVIDENCE_GAP 
+TEST817_READ ONE_CARTRIDGE_AB EVIDENCE_GAP 'There is no direct disagreement between the two sources provided. SOURCE A discusses the importance of data sharing, the challenges associated with it, and the benefits of sharing data in a FAIR manner, including the rise of preprints and data papers. SOURCE B, on the other hand, focuses on the long-term availability of data associated with articles, specifically in PLOS ONE, and the effectiveness of using URLs and DOIs to ensure data availability.\n\nTo adjudicate any potential indirect disagreement or to further align the claims made in both sources, the following additional evidence would be needed:\n\n1. **Long-term Impact of Data Sharing Practices**: Evidence on the long-term impact of data sharing practices, such as preprints and data papers, on the availability and usability of data. This would help to see if the practices'
+PASS FILE_SHA_E817_BA 
+PASS CARTRIDGE_ID_E817_BA 
+PASS CARTRIDGE_TENSOR_SHA_E817_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_BA_POSITIONS E817_BA {'ssd_verify_ms': 187.143, 'h2d_ms': 8.722, 'fusion_ms': 2325.448, 'cid': 'E817_BA', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_BA_POSITIONS 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_POSITIONS {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_BA_POSITIONS 
+TEST817_READ ONE_CARTRIDGE_BA POSITIONS '**Source A** establishes the importance of giving and receiving credit for research data, emphasizing the challenges and benefits of data sharing. It highlights the need for data to be shared in a FAIR (Findable, Accessible, Interoperable, and Reusable) manner to enhance scientific discovery and reproducibility. The article suggests that data sharing can accelerate knowledge transfer and reduce the fear of being scooped. It also mentions the rise of preprints and data papers as mechanisms to share data and ensure credit for data contributors. However, it does not specifically discuss the role of persistent identifiers like DOIs in ensuring long-term data availability.\n\n**Source B** focuses on the long-term availability of research data and the effectiveness of persistent identifiers, such as URLs and DOIs, in ensuring that data remains accessible'
+PASS FILE_SHA_E817_BA 
+PASS CARTRIDGE_ID_E817_BA 
+PASS CARTRIDGE_TENSOR_SHA_E817_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_BA_CONTRADICTION E817_BA {'ssd_verify_ms': 187.18, 'h2d_ms': 8.769, 'fusion_ms': 2338.795, 'cid': 'E817_BA', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_BA_CONTRADICTION 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_CONTRADICTION {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_BA_CONTRADICTION 
+TEST817_READ ONE_CARTRIDGE_BA CONTRADICTION 'A direct contradiction is not established between the two documents. The documents focus on different aspects of data sharing and availability in scientific research. SOURCE B discusses the long-term availability of data associated with articles in PLOS ONE, emphasizing the effectiveness of URLs and DOIs in ensuring data access. SOURCE A, on the other hand, focuses on the importance of crediting data contributors and the benefits of sharing data in a FAIR manner, including the use of preprints and data papers. The documents do not make directly incompatible claims about the same proposition under the same conditions.'
+PASS FILE_SHA_E817_BA 
+PASS CARTRIDGE_ID_E817_BA 
+PASS CARTRIDGE_TENSOR_SHA_E817_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_BA_IDENTIFIER E817_BA {'ssd_verify_ms': 186.668, 'h2d_ms': 8.751, 'fusion_ms': 2326.591, 'cid': 'E817_BA', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_BA_IDENTIFIER 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_IDENTIFIER {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_BA_IDENTIFIER 
+TEST817_READ ONE_CARTRIDGE_BA IDENTIFIER 'The scientific evidence from the provided documents does not support the claim that assigning a DOI by itself guarantees that research data will remain retrievable forever. Here is the evidence:\n\n- **SOURCE B** (Long-term availability of data associated with articles in PLOS ONE):\n  - **Observation**: The study found that 98% of resources with DOIs were successfully retrieved when manually tested, compared to 78% of resources with URLs.\n  - **Conclusion**: Having a DOI and being shared in a repository were both positively associated with availability. However, the study also notes that even with DOIs, there is a possibility of data becoming unavailable due to link rot and content drift.\n  - **Uncertainty**: The study does not claim that DOIs guarantee permanent availability, but rather that they'
+PASS FILE_SHA_E817_BA 
+PASS CARTRIDGE_ID_E817_BA 
+PASS CARTRIDGE_TENSOR_SHA_E817_BA 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_ONE_CARTRIDGE_BA_EVIDENCE_GAP E817_BA {'ssd_verify_ms': 187.627, 'h2d_ms': 8.805, 'fusion_ms': 2339.542, 'cid': 'E817_BA', 'memory_tokens': 915}
+PASS NATIVE80_ONE_CARTRIDGE_BA_EVIDENCE_GAP 
+PASS NATIVE_LENGTH_ONE_CARTRIDGE_BA_EVIDENCE_GAP {'observed': 915, 'expected': 915}
+PASS KV_SEAL_ONE_CARTRIDGE_BA_EVIDENCE_GAP 
+TEST817_READ ONE_CARTRIDGE_BA EVIDENCE_GAP 'The provided documents do not present any direct disagreement. They both address the importance of data availability and the challenges associated with ensuring that data remains accessible over time. However, they focus on different aspects of the issue:\n\n1. **SOURCE B** focuses on the long-term availability of data associated with articles in PLOS ONE, specifically examining the effectiveness of URLs and DOIs in ensuring data retrieval. The study found that 80% of resources could be retrieved automatically, and 78% and 98% of resources were successfully retrieved through manual testing of URLs and DOIs, respectively. The study also notes that having a DOI and sharing data in a repository are positively associated with data availability.\n\n2. **SOURCE A** emphasizes the importance of giving and receiving credit for data sharing, advocating for'
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_POSITIONS E817_A {'ssd_verify_ms': 98.226, 'h2d_ms': 5.9, 'fusion_ms': 1211.489, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_POSITIONS E817_B {'ssd_verify_ms': 100.702, 'h2d_ms': 4.855, 'fusion_ms': 2513.268, 'cid': 'E817_B', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_AB_POSITIONS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_POSITIONS {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_AB_POSITIONS 
+TEST817_READ TWO_CARTRIDGE_AB POSITIONS '**Source A** establishes the importance of sharing data in a findable, accessible, interoperable, and reusable (FAIR) manner, emphasizing the need for data contributors to receive appropriate credit. The article highlights the rise of preprints and data papers as mechanisms to share data before formal publication, which can accelerate scientific knowledge transfer and ensure that contributors are recognized. It also mentions the role of data centers and federal agencies in facilitating data sharing and the importance of data sharing in career evaluations.\n\n**Source B** focuses on the long-term availability of research data associated with articles in PLOS ONE. The study found that 80% of resources (including data, code, and other digital research objects) could be retrieved automatically using URLs and DOIs extracted from Data Availability Statements. When manually tested,'
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_CONTRADICTION E817_A {'ssd_verify_ms': 99.522, 'h2d_ms': 6.01, 'fusion_ms': 1199.789, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_CONTRADICTION E817_B {'ssd_verify_ms': 100.006, 'h2d_ms': 4.805, 'fusion_ms': 2525.318, 'cid': 'E817_B', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_AB_CONTRADICTION 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_CONTRADICTION {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_AB_CONTRADICTION 
+TEST817_READ TWO_CARTRIDGE_AB CONTRADICTION 'A direct contradiction is not established between the two documents. The documents focus on different aspects of data sharing and availability. SOURCE A discusses the benefits and challenges of sharing data, emphasizing the importance of crediting data contributors and the role of preprints and data papers in accelerating scientific knowledge transfer. SOURCE B, on the other hand, examines the long-term availability of data associated with articles, specifically focusing on the effectiveness of URLs and DOIs in ensuring data access over time. There are no directly incompatible claims between the two documents.'
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_IDENTIFIER E817_A {'ssd_verify_ms': 99.941, 'h2d_ms': 6.177, 'fusion_ms': 1212.314, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_IDENTIFIER E817_B {'ssd_verify_ms': 98.621, 'h2d_ms': 4.652, 'fusion_ms': 2512.127, 'cid': 'E817_B', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_AB_IDENTIFIER 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_IDENTIFIER {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_AB_IDENTIFIER 
+TEST817_READ TWO_CARTRIDGE_AB IDENTIFIER 'The assignment of a DOI by itself does not guarantee that research data will remain retrievable forever. This conclusion is based on the following evidence from the provided documents:\n\n**Observations:**\n- **SOURCE B** reports that 80% of the resources (including data, code, and other digital research objects) could be retrieved automatically using URLs and DOIs from Data Availability Statements in PLOS ONE papers published between 2014 and 2016.\n- When a subset of 350 DOIs was manually tested, 98% of the resources were successfully retrieved, indicating a higher success rate for DOIs compared to URLs.\n\n**Claims:**\n- **SOURCE B** suggests that having a DOI and being shared in a repository are positively associated with the availability of'
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_EVIDENCE_GAP E817_A {'ssd_verify_ms': 99.765, 'h2d_ms': 5.982, 'fusion_ms': 1205.802, 'cid': 'E817_A', 'memory_tokens': 472}
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_AB_EVIDENCE_GAP E817_B {'ssd_verify_ms': 100.42, 'h2d_ms': 5.045, 'fusion_ms': 2512.183, 'cid': 'E817_B', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_AB_EVIDENCE_GAP 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_AB_EVIDENCE_GAP {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_AB_EVIDENCE_GAP 
+TEST817_READ TWO_CARTRIDGE_AB EVIDENCE_GAP 'There is no direct disagreement between the two sources provided. SOURCE A discusses the importance of data sharing, the challenges associated with it, and the benefits of sharing data in a FAIR manner, including the rise of preprints and data papers. SOURCE B, on the other hand, focuses on the long-term availability of data associated with articles, specifically examining the effectiveness of URLs and DOIs in ensuring data accessibility over time.\n\nTo adjudicate any potential indirect disagreements or to further align the claims made in both sources, the following additional evidence would be needed:\n\n1. **Long-term Impact of Data Sharing Practices**: Evidence on the long-term impact of data sharing practices, such as preprints and data papers, on the availability and usability of data. This would help to see if the benefits of data sharing ('
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_POSITIONS E817_B {'ssd_verify_ms': 100.172, 'h2d_ms': 6.808, 'fusion_ms': 1184.315, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_POSITIONS E817_A {'ssd_verify_ms': 100.855, 'h2d_ms': 4.98, 'fusion_ms': 2513.566, 'cid': 'E817_A', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_BA_POSITIONS 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_POSITIONS {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_BA_POSITIONS 
+TEST817_READ TWO_CARTRIDGE_BA POSITIONS '**Source A** establishes the importance of giving and receiving credit for research data, emphasizing that data should be shared in a findable, accessible, interoperable, and reusable (FAIR) manner. The article highlights the challenges of data sharing, such as the lack of credit and recognition for data contributors, and suggests that effective data sharing can accelerate scientific discovery and knowledge transfer. It also mentions the rise of preprints and data papers as mechanisms to share data and ensure credit for contributors.\n\n**Source B** focuses on the long-term availability of research data associated with articles in PLOS ONE. The study found that including persistent identifiers like URLs and DOIs in Data Availability Statements can significantly improve the retrievability of research data. Specifically, 80% of resources could be retrieved automatically, and'
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_CONTRADICTION E817_B {'ssd_verify_ms': 102.659, 'h2d_ms': 6.203, 'fusion_ms': 1200.758, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_CONTRADICTION E817_A {'ssd_verify_ms': 101.167, 'h2d_ms': 4.988, 'fusion_ms': 2514.675, 'cid': 'E817_A', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_BA_CONTRADICTION 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_CONTRADICTION {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_BA_CONTRADICTION 
+TEST817_READ TWO_CARTRIDGE_BA CONTRADICTION 'A direct contradiction is not established between the two documents. The documents focus on different aspects of data sharing and availability in scientific research. SOURCE B discusses the long-term availability of data associated with articles in PLOS ONE, emphasizing the effectiveness of URLs and DOIs in ensuring data access. SOURCE A, on the other hand, focuses on the importance of crediting data contributors and the benefits of sharing data in a FAIR manner, including the use of preprints and data papers. The documents do not make directly incompatible claims about the same proposition under the same conditions.'
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_IDENTIFIER E817_B {'ssd_verify_ms': 100.081, 'h2d_ms': 5.914, 'fusion_ms': 1212.968, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_IDENTIFIER E817_A {'ssd_verify_ms': 99.696, 'h2d_ms': 5.119, 'fusion_ms': 2512.514, 'cid': 'E817_A', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_BA_IDENTIFIER 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_IDENTIFIER {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_BA_IDENTIFIER 
+TEST817_READ TWO_CARTRIDGE_BA IDENTIFIER 'The scientific evidence from the provided documents does not support the claim that assigning a DOI by itself guarantees that research data will remain retrievable forever. Here is the evidence:\n\n**Observations:**\n- In the study from SOURCE B, 98% of resources with DOIs were successfully retrieved when manually tested, indicating a high success rate but not a guarantee of perpetual availability.\n- The study also found that having a DOI and being shared in a repository were positively associated with availability, suggesting that DOIs contribute to better data retention but do not ensure it indefinitely.\n\n**Claims:**\n- The study suggests that URLs and DOIs may be an effective means for accessing data over time, but it does not claim that they guarantee perpetual availability.\n\n**Uncertainty:**\n- The study notes that resources associated with'
+PASS FILE_SHA_E817_B 
+PASS CARTRIDGE_ID_E817_B 
+PASS CARTRIDGE_TENSOR_SHA_E817_B 
+PASS NATIVE_INIT_80_LAYERS 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_EVIDENCE_GAP E817_B {'ssd_verify_ms': 99.248, 'h2d_ms': 6.072, 'fusion_ms': 1209.753, 'cid': 'E817_B', 'memory_tokens': 473}
+PASS FILE_SHA_E817_A 
+PASS CARTRIDGE_ID_E817_A 
+PASS CARTRIDGE_TENSOR_SHA_E817_A 
+NATIVE_FUSION_STEP TEST817_TWO_CARTRIDGE_BA_EVIDENCE_GAP E817_A {'ssd_verify_ms': 99.115, 'h2d_ms': 4.811, 'fusion_ms': 2514.488, 'cid': 'E817_A', 'memory_tokens': 915}
+PASS NATIVE80_TWO_CARTRIDGE_BA_EVIDENCE_GAP 
+PASS NATIVE_LENGTH_TWO_CARTRIDGE_BA_EVIDENCE_GAP {'observed': 915, 'expected': 915}
+PASS KV_SEAL_TWO_CARTRIDGE_BA_EVIDENCE_GAP 
+TEST817_READ TWO_CARTRIDGE_BA EVIDENCE_GAP 'There is no direct disagreement between the two sources provided. SOURCE B focuses on the long-term availability of data associated with research articles, particularly through the use of URLs and DOIs, and the effectiveness of Data Availability Statements in ensuring data accessibility. SOURCE A, on the other hand, discusses the importance of data sharing, the challenges associated with it, and the benefits of sharing data in a FAIR manner, including the role of preprints and data papers in accelerating scientific knowledge transfer.\n\nTo adjudicate any potential indirect disagreements or to further align the findings of these two sources, the following additional evidence would be needed:\n\n1. **Long-term Availability of Data in Preprints and Data Papers**: Evidence on the long-term availability and accessibility of data shared through preprints and data papers, similar to the study in'
+PASS READ_MATRIX_24 
+PASS FROZEN_WEIGHT_SENTINEL 
+PASS NO_RESIDUAL_HOOKS 
+TEST817_COMPLETED /content/TEST817_20261029T082916Z/TEST817_results.json /content/TEST817_20261029T082916Z/TEST817_independent_review.csv
