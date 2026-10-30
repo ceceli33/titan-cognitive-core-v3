@@ -1,0 +1,337 @@
+ TEST832_SOURCE_LOCK_VERIFIED a5a25460a3a6bbdf62a0571a9b5ff19e64159cf7
+TEST832_POLICY_BODY_SHA256 6c57e2a8217669d4d55a5b89b392b288e4c02673b376980d63595d08b8c75a7b
+TEST832_PATCHED_SOURCE_AST_PASS 84370 bf083301da0103e0123968e8f4827560e1aa641f129cb1a4eb8ee9155fd4b9b0
+TEST829_START TEST832_20261030T133459Z PANEL_SHA ea3ad97c059f73845454f687cdaae30ffff201ba19584107f867e487affb6818
+PASS LOCK_815.py 77774f87428c0243c9a86ea6a041364acd9c1b03
+PASS AST_BOUNDARY [52]
+TEST815_GPU_PREFLIGHT {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+TEST815_GPU_FREE_GIB 78.83
+PASS SOURCE_SIZE_709.py 20954
+PASS GIT_LOCK_709.py 6c9f8cbb1eeed848d45133d73f0d7676b68e9125
+PASS SOURCE_SIZE_730.py 28554
+PASS GIT_LOCK_730.py b1bad9eb3b111b44413f8ef05a3a140ab66a77dd
+PASS SOURCE_SIZE_757.py 21624
+PASS GIT_LOCK_757.py 3d88bf8638390995858f23391f1e043faa586835
+PASS SOURCE_SIZE_721.py 20893
+PASS GIT_LOCK_721.py 7c6575beddca87f02c344ee1a132f02b191dc00a
+PASS SOURCE_SIZE_764.py 34856
+PASS GIT_LOCK_764.py 99acb97cde2b11c0c23e14a3ed11cb6f5d7f3902
+PASS SYMBOLS_709.py []
+PASS SYMBOLS_730.py []
+PASS SYMBOLS_757.py []
+PASS SYMBOLS_721.py []
+PASS SYMBOLS_764.py []
+PASS ENGINE_DEPENDENCIES 
+PASS LOCKED_ENGINE_SYMBOLS 
+PASS FRESH_BANK 0
+PASS ENGINE_BINDING_PREFLIGHT_PAIRS {'type': 'function', 'name': 'pairs', 'file': '709.py'}
+PASS ENGINE_BINDING_PREFLIGHT_ALL_CALLABLE []
+PASS LOCK_827.py 567822d34781ce966e0d5030a101d950d66156e8
+PASS STOP827_FUNCTION 1
+PASS STOP827_NODE_UNIQUE 1
+PASS STOP827_STRUCTURE if len(changes) >= 2:
+                recent = np.asarray(changes[-2:], dtype=np.float64)
+                baseline = max(float(np.median(changes)), 1e-12)
+                if float(np.max(recent)) < 0.10 * baseline and float(np.linalg.norm(velocity)) < 0.10 * baseline:
+                    stop_reason = 'RELATIVE_TENSOR_STABILITY'
+                    break
+PASS STOP_RULE_IMPOSSIBILITY_VERIFIED {'fires_n2': 0, 'fires_n3': 0, 'checked_len_changes_with_MAX_STEPS_4': [2, 3]}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 78.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 866kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 65.8MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 66.8MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 120MB/s]PASS TOKEN_BUDGET {'max_body_tokens': 30, 'stage': 'TOKENIZER_PRE_MODEL'}
+model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.16MB/s]Download complete:   125GB, 1.32GB/s  Reconstruction complete: 100%  145GB /  145GB,  806MB/s  Fetching 37 files: 100% 37/37 [06:46<00:00, 10.30s/it]Loading weights: 100% 963/963 [06:32<00:00,  3.13it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.9kB/s]PASS MODEL_ARCH (80, 8192, 64, 8, 128)
+PASS FROZEN 
+PASS NF4 
+PASS FROZEN_PREFIX 30
+PASS FUSION_BUDGET {'max_body_tokens': 30, 'max_fused_tokens': 3500}
+PASS FUSION_BUDGET_FINAL_SET {'cartridges': 5}
+PASS CARD_NONEMPTY_E829_ATNPFXLVY 29
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_ATNPFXLVY 
+PASS FRESH_CARTRIDGE_E829_ATNPFXLVY 
+PASS PHYSICAL_SHA_E829_ATNPFXLVY 
+PHYSICAL_COMMIT E829_ATNPFXLVY 30dce4deadf841c1ba84b444762e76a5c76a91ea9d20fe9f82c9c5b55c43892e PARENTS []
+PASS CARD_NONEMPTY_E829_UMLTCKBPT 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_UMLTCKBPT 
+PASS FRESH_CARTRIDGE_E829_UMLTCKBPT 
+PASS PHYSICAL_SHA_E829_UMLTCKBPT 
+PHYSICAL_COMMIT E829_UMLTCKBPT 2bf08b96da08fe9853d602d3beccf230523220afcf2e6737ff6c9cf296e02df3 PARENTS []
+PASS CARD_NONEMPTY_E829_XQLLRMMCM 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_XQLLRMMCM 
+PASS FRESH_CARTRIDGE_E829_XQLLRMMCM 
+PASS PHYSICAL_SHA_E829_XQLLRMMCM 
+PHYSICAL_COMMIT E829_XQLLRMMCM 53fece53953af6d13bfe2da25a324d3f6ce8ef08777d0ae24883969dd43e952b PARENTS []
+PASS CARD_NONEMPTY_E829_PFPBLWSSB 29
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_PFPBLWSSB 
+PASS FRESH_CARTRIDGE_E829_PFPBLWSSB 
+PASS PHYSICAL_SHA_E829_PFPBLWSSB 
+PHYSICAL_COMMIT E829_PFPBLWSSB 015170a0de7a575e56407ad6e96980e08d48647b26319a8e031e1e5d47708454 PARENTS []
+PASS CARD_NONEMPTY_E829_XYWDGQEWF 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_XYWDGQEWF 
+PASS FRESH_CARTRIDGE_E829_XYWDGQEWF 
+PASS PHYSICAL_SHA_E829_XYWDGQEWF 
+PHYSICAL_COMMIT E829_XYWDGQEWF 805a182c04bfee82bba57ad4cc39d6b7cc4a9b3f35eca084e887352693b7c812 PARENTS []
+PASS CARD_NONEMPTY_E829_VJWTNXWZH 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_VJWTNXWZH 
+PASS FRESH_CARTRIDGE_E829_VJWTNXWZH 
+PASS PHYSICAL_SHA_E829_VJWTNXWZH 
+PHYSICAL_COMMIT E829_VJWTNXWZH 1acec4ab8c047451c42d229b9278918094b60c5f6360a54954472a56f9be1b53 PARENTS []
+PASS CARD_NONEMPTY_E829_UFRYJNYRC 27
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_UFRYJNYRC 
+PASS FRESH_CARTRIDGE_E829_UFRYJNYRC 
+PASS PHYSICAL_SHA_E829_UFRYJNYRC 
+PHYSICAL_COMMIT E829_UFRYJNYRC b033873e6d8da2c7cb910e96277fe1445a231710e38a924c4ef9b137adf93e32 PARENTS []
+PASS CARD_NONEMPTY_E829_GQRMLRQEZ 29
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_GQRMLRQEZ 
+PASS FRESH_CARTRIDGE_E829_GQRMLRQEZ 
+PASS PHYSICAL_SHA_E829_GQRMLRQEZ 
+PHYSICAL_COMMIT E829_GQRMLRQEZ 928f8844c092d122f6df4a77eabea2ace95aa9324581b74d25df4917219ba79a PARENTS []
+PASS CARD_NONEMPTY_E829_QUCPTTRTW 30
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_QUCPTTRTW 
+PASS FRESH_CARTRIDGE_E829_QUCPTTRTW 
+PASS PHYSICAL_SHA_E829_QUCPTTRTW 
+PHYSICAL_COMMIT E829_QUCPTTRTW d9e77b56cdaf0771f73f02f481323302356cef333ff10bbea8eba1d6a0009ece PARENTS []
+PASS CARD_NONEMPTY_E829_AWVRBSEFT 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_AWVRBSEFT 
+PASS FRESH_CARTRIDGE_E829_AWVRBSEFT 
+PASS PHYSICAL_SHA_E829_AWVRBSEFT 
+PHYSICAL_COMMIT E829_AWVRBSEFT 3cdc95fd29e91fc3a2abf2b130f39d6790efeea15c0f69801f7881ba45f4b37d PARENTS []
+PASS CARD_NONEMPTY_E829_TYPKRWRRX 29
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_TYPKRWRRX 
+PASS FRESH_CARTRIDGE_E829_TYPKRWRRX 
+PASS PHYSICAL_SHA_E829_TYPKRWRRX 
+PHYSICAL_COMMIT E829_TYPKRWRRX 0ad5d80638d64f53551d926364bed195cf0ebc02c67e184b739865956fc22587 PARENTS []
+PASS CARD_NONEMPTY_E829_WBANLTCSB 30
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_WBANLTCSB 
+PASS FRESH_CARTRIDGE_E829_WBANLTCSB 
+PASS PHYSICAL_SHA_E829_WBANLTCSB 
+PHYSICAL_COMMIT E829_WBANLTCSB c23a03a698f76b91466be03bb5e30270b75e9af2f7a6b5dec306c954d3af7f56 PARENTS []
+PASS CARD_NONEMPTY_E829_NULL 9
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_NULL 
+PASS FRESH_CARTRIDGE_E829_NULL 
+PASS PHYSICAL_SHA_E829_NULL 
+PHYSICAL_COMMIT E829_NULL 8393107a20d45142e0e64c8c865ff25881264d3243df401a2c41fe10400f9c11 PARENTS []
+PASS CARD_NONEMPTY_E832_NULLB 10
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E832_NULLB 
+PASS FRESH_CARTRIDGE_E832_NULLB 
+PASS PHYSICAL_SHA_E832_NULLB 
+PHYSICAL_COMMIT E832_NULLB 634f0844fcd00fba70bc2ba775e514e322e2203fe05230374d127ed4c322d19c PARENTS []
+PASS CARD_NONEMPTY_E829_USKTVLFZK 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_USKTVLFZK 
+PASS FRESH_CARTRIDGE_E829_USKTVLFZK 
+PASS PHYSICAL_SHA_E829_USKTVLFZK 
+PHYSICAL_COMMIT E829_USKTVLFZK 3780687e03dee730ea206d857cf4ce176865bb2099414d6e73aa63b7338217d6 PARENTS []
+PASS CARD_NONEMPTY_E829_NGZQDPVJB 29
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_NGZQDPVJB 
+PASS FRESH_CARTRIDGE_E829_NGZQDPVJB 
+PASS PHYSICAL_SHA_E829_NGZQDPVJB 
+PHYSICAL_COMMIT E829_NGZQDPVJB af9c9e0a329bcf24e1babd3dac54bdc18752f6b965f12b42903a96cbf6a672b0 PARENTS []
+PASS CARD_NONEMPTY_E829_WMCPGAVPP 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_WMCPGAVPP 
+PASS FRESH_CARTRIDGE_E829_WMCPGAVPP 
+PASS PHYSICAL_SHA_E829_WMCPGAVPP 
+PHYSICAL_COMMIT E829_WMCPGAVPP 9fbe4415a9d76ea2cdc1c2e6f8267c09b8f0eeb11d75c05851893c9b2258d877 PARENTS []
+PASS CARD_NONEMPTY_E829_TJWHXVDDL 29
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_TJWHXVDDL 
+PASS FRESH_CARTRIDGE_E829_TJWHXVDDL 
+PASS PHYSICAL_SHA_E829_TJWHXVDDL 
+PHYSICAL_COMMIT E829_TJWHXVDDL 1f0dcefc657ae82d9b1dc120b716bc73ab6481fe4d0b31c965f363721e53c041 PARENTS []
+PASS CARD_NONEMPTY_E829_NWKYHVMXL 28
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_NWKYHVMXL 
+PASS FRESH_CARTRIDGE_E829_NWKYHVMXL 
+PASS PHYSICAL_SHA_E829_NWKYHVMXL 
+PHYSICAL_COMMIT E829_NWKYHVMXL 30cd0bdc9b24cc9ea5cab3ea59bf7fe5f9c6b22a4c4f091ebafd98d64de4658f PARENTS []
+PASS CARD_NONEMPTY_E829_QRXEKFXQJ 30
+PASS NATIVE_FORGE_SHAPE 
+PASS CPU_CARTRIDGE_E829_QRXEKFXQJ 
+PASS FRESH_CARTRIDGE_E829_QRXEKFXQJ 
+PASS PHYSICAL_SHA_E829_QRXEKFXQJ 
+PHYSICAL_COMMIT E829_QRXEKFXQJ 6d0f42e1e86b53c6a5855af1709134a80a36b226322ea3fefcf5f562405f9bf1 PARENTS []
+PASS PHYSICAL_COUNT 20
+PASS FILE_SHA_E829_ATNPFXLVY 
+PASS CARTRIDGE_ID_E829_ATNPFXLVY 
+PASS CARTRIDGE_TENSOR_SHA_E829_ATNPFXLVY 
+PASS FILE_SHA_E829_UMLTCKBPT 
+PASS CARTRIDGE_ID_E829_UMLTCKBPT 
+PASS CARTRIDGE_TENSOR_SHA_E829_UMLTCKBPT 
+PASS FILE_SHA_E829_XQLLRMMCM 
+PASS CARTRIDGE_ID_E829_XQLLRMMCM 
+PASS CARTRIDGE_TENSOR_SHA_E829_XQLLRMMCM 
+PASS FILE_SHA_E829_PFPBLWSSB 
+PASS CARTRIDGE_ID_E829_PFPBLWSSB 
+PASS CARTRIDGE_TENSOR_SHA_E829_PFPBLWSSB 
+PASS FILE_SHA_E829_XYWDGQEWF 
+PASS CARTRIDGE_ID_E829_XYWDGQEWF 
+PASS CARTRIDGE_TENSOR_SHA_E829_XYWDGQEWF 
+PASS FILE_SHA_E829_VJWTNXWZH 
+PASS CARTRIDGE_ID_E829_VJWTNXWZH 
+PASS CARTRIDGE_TENSOR_SHA_E829_VJWTNXWZH 
+PASS FILE_SHA_E829_UFRYJNYRC 
+PASS CARTRIDGE_ID_E829_UFRYJNYRC 
+PASS CARTRIDGE_TENSOR_SHA_E829_UFRYJNYRC 
+PASS FILE_SHA_E829_GQRMLRQEZ 
+PASS CARTRIDGE_ID_E829_GQRMLRQEZ 
+PASS CARTRIDGE_TENSOR_SHA_E829_GQRMLRQEZ 
+PASS FILE_SHA_E829_QUCPTTRTW 
+PASS CARTRIDGE_ID_E829_QUCPTTRTW 
+PASS CARTRIDGE_TENSOR_SHA_E829_QUCPTTRTW 
+PASS FILE_SHA_E829_AWVRBSEFT 
+PASS CARTRIDGE_ID_E829_AWVRBSEFT 
+PASS CARTRIDGE_TENSOR_SHA_E829_AWVRBSEFT 
+PASS FILE_SHA_E829_TYPKRWRRX 
+PASS CARTRIDGE_ID_E829_TYPKRWRRX 
+PASS CARTRIDGE_TENSOR_SHA_E829_TYPKRWRRX 
+PASS FILE_SHA_E829_WBANLTCSB 
+PASS CARTRIDGE_ID_E829_WBANLTCSB 
+PASS CARTRIDGE_TENSOR_SHA_E829_WBANLTCSB 
+PASS FILE_SHA_E829_NULL 
+PASS CARTRIDGE_ID_E829_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E829_NULL 
+PASS FILE_SHA_E832_NULLB 
+PASS CARTRIDGE_ID_E832_NULLB 
+PASS CARTRIDGE_TENSOR_SHA_E832_NULLB 
+PASS FILE_SHA_E829_USKTVLFZK 
+PASS CARTRIDGE_ID_E829_USKTVLFZK 
+PASS CARTRIDGE_TENSOR_SHA_E829_USKTVLFZK 
+PASS FILE_SHA_E829_NGZQDPVJB 
+PASS CARTRIDGE_ID_E829_NGZQDPVJB 
+PASS CARTRIDGE_TENSOR_SHA_E829_NGZQDPVJB 
+PASS FILE_SHA_E829_WMCPGAVPP 
+PASS CARTRIDGE_ID_E829_WMCPGAVPP 
+PASS CARTRIDGE_TENSOR_SHA_E829_WMCPGAVPP 
+PASS FILE_SHA_E829_TJWHXVDDL 
+PASS CARTRIDGE_ID_E829_TJWHXVDDL 
+PASS CARTRIDGE_TENSOR_SHA_E829_TJWHXVDDL 
+PASS FILE_SHA_E829_NWKYHVMXL 
+PASS CARTRIDGE_ID_E829_NWKYHVMXL 
+PASS CARTRIDGE_TENSOR_SHA_E829_NWKYHVMXL 
+PASS FILE_SHA_E829_QRXEKFXQJ 
+PASS CARTRIDGE_ID_E829_QRXEKFXQJ 
+PASS CARTRIDGE_TENSOR_SHA_E829_QRXEKFXQJ 
+PASS FILE_SHA_E829_ATNPFXLVY 
+PASS CARTRIDGE_ID_E829_ATNPFXLVY 
+PASS CARTRIDGE_TENSOR_SHA_E829_ATNPFXLVY 
+PASS FILE_SHA_E829_AWVRBSEFT 
+PASS CARTRIDGE_ID_E829_AWVRBSEFT 
+PASS CARTRIDGE_TENSOR_SHA_E829_AWVRBSEFT 
+PASS FILE_SHA_E829_GQRMLRQEZ 
+PASS CARTRIDGE_ID_E829_GQRMLRQEZ 
+PASS CARTRIDGE_TENSOR_SHA_E829_GQRMLRQEZ 
+PASS FILE_SHA_E829_NGZQDPVJB 
+PASS CARTRIDGE_ID_E829_NGZQDPVJB 
+PASS CARTRIDGE_TENSOR_SHA_E829_NGZQDPVJB 
+PASS FILE_SHA_E829_NULL 
+PASS CARTRIDGE_ID_E829_NULL 
+PASS CARTRIDGE_TENSOR_SHA_E829_NULL 
+PASS FILE_SHA_E829_NWKYHVMXL 
+PASS CARTRIDGE_ID_E829_NWKYHVMXL 
+PASS CARTRIDGE_TENSOR_SHA_E829_NWKYHVMXL 
+PASS FILE_SHA_E829_PFPBLWSSB 
+PASS CARTRIDGE_ID_E829_PFPBLWSSB 
+PASS CARTRIDGE_TENSOR_SHA_E829_PFPBLWSSB 
+PASS FILE_SHA_E829_QRXEKFXQJ 
+PASS CARTRIDGE_ID_E829_QRXEKFXQJ 
+PASS CARTRIDGE_TENSOR_SHA_E829_QRXEKFXQJ 
+PASS FILE_SHA_E829_QUCPTTRTW 
+PASS CARTRIDGE_ID_E829_QUCPTTRTW 
+PASS CARTRIDGE_TENSOR_SHA_E829_QUCPTTRTW 
+PASS FILE_SHA_E829_TJWHXVDDL 
+PASS CARTRIDGE_ID_E829_TJWHXVDDL 
+PASS CARTRIDGE_TENSOR_SHA_E829_TJWHXVDDL 
+PASS FILE_SHA_E829_TYPKRWRRX 
+PASS CARTRIDGE_ID_E829_TYPKRWRRX 
+PASS CARTRIDGE_TENSOR_SHA_E829_TYPKRWRRX 
+PASS FILE_SHA_E829_UFRYJNYRC 
+PASS CARTRIDGE_ID_E829_UFRYJNYRC 
+PASS CARTRIDGE_TENSOR_SHA_E829_UFRYJNYRC 
+PASS FILE_SHA_E829_UMLTCKBPT 
+PASS CARTRIDGE_ID_E829_UMLTCKBPT 
+PASS CARTRIDGE_TENSOR_SHA_E829_UMLTCKBPT 
+PASS FILE_SHA_E829_USKTVLFZK 
+PASS CARTRIDGE_ID_E829_USKTVLFZK 
+PASS CARTRIDGE_TENSOR_SHA_E829_USKTVLFZK 
+PASS FILE_SHA_E829_VJWTNXWZH 
+PASS CARTRIDGE_ID_E829_VJWTNXWZH 
+PASS CARTRIDGE_TENSOR_SHA_E829_VJWTNXWZH 
+PASS FILE_SHA_E829_WBANLTCSB 
+PASS CARTRIDGE_ID_E829_WBANLTCSB 
+PASS CARTRIDGE_TENSOR_SHA_E829_WBANLTCSB 
+PASS FILE_SHA_E829_WMCPGAVPP 
+PASS CARTRIDGE_ID_E829_WMCPGAVPP 
+PASS CARTRIDGE_TENSOR_SHA_E829_WMCPGAVPP 
+PASS FILE_SHA_E829_XQLLRMMCM 
+PASS CARTRIDGE_ID_E829_XQLLRMMCM 
+PASS CARTRIDGE_TENSOR_SHA_E829_XQLLRMMCM 
+PASS FILE_SHA_E829_XYWDGQEWF 
+PASS CARTRIDGE_ID_E829_XYWDGQEWF 
+PASS CARTRIDGE_TENSOR_SHA_E829_XYWDGQEWF 
+PASS FILE_SHA_E832_NULLB 
+PASS CARTRIDGE_ID_E832_NULLB 
+PASS CARTRIDGE_TENSOR_SHA_E832_NULLB 
+PASS H3_BANK 20
+PASS NUMERICAL_PROBE_SYMBOL 
+PASS READOUT_HEAD_NO_HOOKS 
+PASS READOUT_HEAD_SHAPE [152064, 8192]
+TEST829_READOUT_SEMANTICS {"transformers_version": "5.20.2", "torch_version": "2.11.0+cu130", "model_class": "Qwen2ForCausalLM", "lm_head_class": "Linear", "lm_head_weight_dtype": "torch.bfloat16", "lm_head_weight_shape": [152064, 8192], "lm_head_has_bias": false, "lm_head_is_linear4bit": false, "config_vocab_size": 152064, "tokenizer_length": 151665, "padded_vocab_rows": 399, "tie_word_embeddings": false, "final_logit_softcapping": null, "forward_signature": "(self, input_ids: torch.LongTensor | None = None, attention_mask: torch.Tensor | None = None, position_ids: torch.LongTensor | None = None, past_key_values: transformers.cache_utils.Cache | None = None, inputs_embeds: torch.FloatTensor | None = None, labels: torch.LongTensor | None = None, use_cache: bool | None = None, logits_to_keep: int | torch.Tensor = 0, **kwargs: Unpack[transformers.utils.generic.TransformersKwargs]) -> transformers.modeling_outputs.CausalLMOutputWithPast", "forward_source_has_logits_to_keep": true, "forward_source_calls_lm_head": true, "forward_source_contains_float_call": false, "precision_mode": "FP64_RECOMPUTED_FROM_CAPTURED_FINAL_HIDDEN", "generation_interface": "free_generate takes argmax of out.logits[0,-1] of the SAME forward; no temperature, top-k/top-p, repetition penalty or logits processor is applied", "question_encoding": "prompt_ids(question): question text only, no instruction (same as observe_state)"}
+PASS SOURCE829_BLOB a5a25460a3a6bbdf62a0571a9b5ff19e64159cf7
+PASS PANEL_FRESH_SEED 8322026
+PASS NO_CONTROL_TEXT 
+PASS RUN_COUNT 12
+PASS BANK_CARTRIDGES_PHYSICAL 
+PASS BANK_EXCLUDES_NULL 
+PASS ONE_CHUNK_PER_CARD 1
+PASS FUSION_TOKENS_PAIR 
+PASS VRAM_HEADROOM 40.05
+PASS MEASUREMENT_CAP_TIME_BUDGET {'cap': 1000, 'minutes_at_1.9s': 31.7}
+TEST832_BUDGET {"bank_size_max": 16, "worst_case_measurements_without_reuse": 2270, "one_anchor_run_measurements_without_reuse": 46, "cap": 1000, "safety_anchors": 4, "note": "Reaching the cap ends the remaining runs as SAFETY_EXIT (reported as failure, not success)."}
+PASS NONINTERFERENCE_STATE_BITWISE_PLAIN_VS_WRAPPED True
+PASS NONINTERFERENCE_STATE_BITWISE_PLAIN_VS_AFTER True
+PASS NONINTERFERENCE_ATTENTION_EQUAL_PLAIN_VS_WRAPPED True
+PASS NONINTERFERENCE_ATTENTION_EQUAL_PLAIN_VS_AFTER True
+PASS NONINTERFERENCE_FIRST_GREEDY_TOKEN_EQUALS_CAPTURED_ARGMAX True
+PASS NONINTERFERENCE_HEAD_RESTORED True
+PASS NONINTERFERENCE_KV_SEALED True
+PASS NONINTERFERENCE_SDPA_RESTORED True
+TEST832_DETERMINISM {"logits_bf16_sha256": true, "final_hidden_sha256": true, "state_sha256": true, "reuse_enabled": true}
+TEST832_RUN R832_A5DCE8C037AF SUFFICIENT AUTONOMOUS anchors 1 new 56 reused 80 s 105.715
+TEST832_RUN R832_3ED5D2F43709 CONFLICT AUTONOMOUS anchors 2 new 23 reused 178 s 48.31
+TEST832_RUN R832_B0E042DD4A9D CONFLICT AUTONOMOUS anchors 2 new 80 reused 137 s 156.041
+TEST832_RUN R832_EEDCCB791EFE CONFLICT AUTONOMOUS anchors 2 new 17 reused 200 s 34.928
+TEST832_RUN R832_7B6F61902456 CONFLICT AUTONOMOUS anchors 2 new 11 reused 190 s 23.148
+TEST832_RUN R832_6BA6115798F8 SUFFICIENT AUTONOMOUS anchors 1 new 60 reused 86 s 113.625
+TEST832_RUN R832_241E55609B7F CONFLICT AUTONOMOUS anchors 2 new 2 reused 231 s 4.201
+TEST832_RUN R832_B65B7922D5A8 SUFFICIENT AUTONOMOUS anchors 1 new 0 reused 136 s 0.003
+TEST832_RUN R832_F67F35688F87 SUFFICIENT AUTONOMOUS anchors 1 new 16 reused 120 s 32.899
+TEST832_RUN R832_C0CCDF18B53D CONFLICT AUTONOMOUS anchors 1 new 2 reused 144 s 4.216
+TEST832_RUN R832_E7CD610E7CD7 SUFFICIENT AUTONOMOUS anchors 1 new 0 reused 126 s 0.002
+TEST832_RUN R832_1C477F0CF35A SUFFICIENT AUTONOMOUS anchors 1 new 0 reused 136 s 0.002
+PASS FROZEN_WEIGHT_SENTINEL 
+PASS NO_RESIDUAL_HOOKS 
+PASS LM_HEAD_UNWRAPPED 
+PASS PANEL_UNCHANGED 
+PASS COUNTED_EQUALS_LEDGER {'counted': 269, 'ledger': 269}
+TEST832_EVAL [{"world": 1, "condition": "FULL", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_SECOND"], "anchors_tried_roles": ["OWN_FIRST"], "correct": true}, {"world": 1, "condition": "MISSING_SECOND", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND", "OTHER_FORK"], "anchors_tried_roles": ["OWN_FIRST", "OWN_FORK"], "correct": false}, {"world": 2, "condition": "FULL", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_SECOND", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK", "OWN_FIRST"], "correct": false}, {"world": 2, "condition": "REPLACE_SECOND_BY_ALT", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_CHANGED", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK", "OWN_FIRST"], "correct": false}, {"world": 2, "condition": "MISSING_SECOND", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OTHER_SECOND", "OTHER_DECOY"], "anchors_tried_roles": ["OWN_FORK", "OWN_FIRST"], "correct": false}, {"world": 0, "condition": "CONFLICT_ALT_ADDED", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "correct": false}, {"world": 2, "condition": "CONFLICT_ALT_ADDED", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_CHANGED", "OWN_SECOND"], "anchors_tried_roles": ["OWN_FORK", "OWN_FIRST"], "correct": true}, {"world": 0, "condition": "REPLACE_SECOND_BY_ALT", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "correct": false}, {"world": 1, "condition": "REPLACE_SECOND_BY_ALT", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_CHANGED"], "anchors_tried_roles": ["OWN_FIRST"], "correct": true}, {"world": 1, "condition": "CONFLICT_ALT_ADDED", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_CHANGED", "OWN_SECOND"], "anchors_tried_roles": ["OWN_FIRST"], "correct": true}, {"world": 0, "condition": "MISSING_SECOND", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "correct": false}, {"world": 0, "condition": "FULL", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "correct": false}]
+TEST832_TRACE_ROLES [{"w": 1, "c": "FULL", "rows": [[["OWN_SECOND", 2.4855], ["OTHER_SECOND", 1.8527], ["OWN_MIRROR", 1.8315], ["OTHER_DECOY", 1.826], ["OTHER_FORK", 1.8255]]], "closure": [["OWN_SECOND", true, "OWN_FORK"]]}, {"w": 1, "c": "MISSING_SECOND", "rows": [[["OTHER_SECOND", 1.8527], ["OWN_MIRROR", 1.8315], ["OTHER_DECOY", 1.826], ["OTHER_FORK", 1.8255], ["OTHER_SECOND", 1.807]], [["OTHER_SECOND", 1.8996], ["OTHER_FORK", 1.8715], ["OTHER_DECOY", 1.8313], ["OTHER_SECOND", 1.8307], ["OTHER_FIRST", 1.8221]]], "closure": [["OTHER_SECOND", false, "OWN_FORK"], ["OTHER_SECOND", true, "OWN_FIRST"]]}, {"w": 2, "c": "FULL", "rows": [[["OTHER_FORK", 1.8832], ["OTHER_SECOND", 1.8329], ["OTHER_DECOY", 1.7512], ["OTHER_FIRST", 1.7506], ["OTHER_SECOND", 1.7352]], [["OWN_SECOND", 2.2748], ["OTHER_SECOND", 2.1029], ["OTHER_DECOY", 2.0625], ["OTHER_MIRROR", 2.0409], ["OTHER_FIRST", 2.0131]]], "closure": [["OTHER_FORK", false, "OWN_FIRST"], ["OWN_SECOND", true, "OWN_FORK"]]}, {"w": 2, "c": "REPLACE_SECOND_BY_ALT", "rows": [[["OTHER_FORK", 1.8832], ["OTHER_SECOND", 1.8329], ["OTHER_DECOY", 1.7512], ["OTHER_FIRST", 1.7506], ["OTHER_SECOND", 1.7352]], [["OWN_CHANGED", 2.5029], ["OTHER_SECOND", 2.1029], ["OTHER_DECOY", 2.0625], ["OTHER_MIRROR", 2.0409], ["OTHER_FIRST", 2.0131]]], "closure": [["OTHER_FORK", false, "OWN_FIRST"], ["OWN_CHANGED", true, "OWN_FORK"]]}, {"w": 2, "c": "MISSING_SECOND", "rows": [[["OTHER_FORK", 1.8832], ["OTHER_SECOND", 1.8329], ["OTHER_DECOY", 1.7512], ["OTHER_FIRST", 1.7506], ["OTHER_SECOND", 1.7352]], [["OTHER_SECOND", 2.1029], ["OTHER_DECOY", 2.0625], ["OTHER_MIRROR", 2.0409], ["OTHER_FIRST", 2.0131], ["OTHER_FORK", 1.9804]]], "closure": [["OTHER_FORK", false, "OWN_FIRST"], ["OTHER_SECOND", true, "OWN_FORK"]]}, {"w": 0, "c": "CONFLICT_ALT_ADDED", "rows": [[["OTHER_SECOND", 1.7758], ["OTHER_MIRROR", 1.7554], ["OTHER_FIRST", 1.7531], ["OTHER_DECOY", 1.7474], ["OTHER_MIRROR", 1.7229]]], "closure": [["OTHER_SECOND", true, "OWN_FIRST"]]}, {"w": 2, "c": "CONFLICT_ALT_ADDED", "rows": [[["OTHER_FORK", 1.8832], ["OTHER_SECOND", 1.8329], ["OTHER_DECOY", 1.7512], ["OTHER_FIRST", 1.7506], ["OTHER_SECOND", 1.7352]], [["OWN_CHANGED", 2.5029], ["OWN_SECOND", 2.2748], ["OTHER_SECOND", 2.1029], ["OTHER_DECOY", 2.0625], ["OTHER_MIRROR", 2.0409]]], "closure": [["OTHER_FORK", false, "OWN_FIRST"], ["OWN_CHANGED", true, "OWN_FORK"]]}, {"w": 0, "c": "REPLACE_SECOND_BY_ALT", "rows": [[["OTHER_SECOND", 1.7758], ["OTHER_MIRROR", 1.7554], ["OTHER_FIRST", 1.7531], ["OTHER_DECOY", 1.7474], ["OTHER_MIRROR", 1.7229]]], "closure": [["OTHER_SECOND", true, "OWN_FIRST"]]}, {"w": 1, "c": "REPLACE_SECOND_BY_ALT", "rows": [[["OWN_CHANGED", 2.5294], ["OTHER_SECOND", 1.8527], ["OWN_MIRROR", 1.8315], ["OTHER_DECOY", 1.826], ["OTHER_FORK", 1.8255]]], "closure": [["OWN_CHANGED", true, "OWN_FORK"]]}, {"w": 1, "c": "CONFLICT_ALT_ADDED", "rows": [[["OWN_CHANGED", 2.5294], ["OWN_SECOND", 2.4855], ["OTHER_SECOND", 1.8527], ["OWN_MIRROR", 1.8315], ["OTHER_DECOY", 1.826]]], "closure": [["OWN_CHANGED", true, "OWN_FORK"]]}, {"w": 0, "c": "MISSING_SECOND", "rows": [[["OTHER_SECOND", 1.7758], ["OTHER_MIRROR", 1.7554], ["OTHER_FIRST", 1.7531], ["OTHER_DECOY", 1.7474], ["OTHER_MIRROR", 1.7229]]], "closure": [["OTHER_SECOND", true, "OWN_FIRST"]]}, {"w": 0, "c": "FULL", "rows": [[["OTHER_SECOND", 1.7758], ["OTHER_MIRROR", 1.7554], ["OTHER_FIRST", 1.7531], ["OTHER_DECOY", 1.7474], ["OTHER_MIRROR", 1.7229]]], "closure": [["OTHER_SECOND", true, "OWN_FIRST"]]}]
+TEST832_REPORT {"first_evidence_independent_discovery": [6, 9], "second_evidence_independent_discovery": [6, 9], "relational_integrity_correct_pairs": [4, 9], "incomplete_evidence_recognised_abstain": [0, 3], "conflict_recognised": [2, 3], "alternative_chain_accepted": [1, 3], "self_correction_after_wrong_first_anchor": [1, 5], "recursive_steps_numerically_driven": {"runs_with_anchor_switch": 5, "total_anchor_attempts": 17}, "autonomous_stops": 12, "safety_exits": 0, "false_positives": {"wrongful_stops_on_missing": 3, "false_conflicts": 4, "sufficient_with_wrong_pair": 4}, "interventions": {"bank_condition_changes_decision_per_world": {"0": ["SUFFICIENT"], "1": ["CONFLICT", "SUFFICIENT"], "2": ["CONFLICT"]}, "same_full_bank_different_question_selects_own_world": [1, 3], "relabel_listing_invariant": [12, 12], "state_swap_decision_follows_states": [12, 12]}, "integrity": {"determinism_bitwise": true, "gates": "all passed (run reached evaluation)"}, "h3_routing_diagnostic_own_first_in_top2": [12, 12]}
+TEST832_REPLAYS [{"run": "R832_A5DCE8C037AF", "relabel_decision": "SUFFICIENT", "relabel_selected_mapped_back": ["E829_XYWDGQEWF", "E829_VJWTNXWZH"], "relabel_invariant": true, "swap_pair": ["E829_VJWTNXWZH", "E829_AWVRBSEFT"], "swap_decision": "SUFFICIENT", "swap_selected": ["E829_XYWDGQEWF", "E829_AWVRBSEFT"], "swap_follows_states": true}, {"run": "R832_3ED5D2F43709", "relabel_decision": "CONFLICT", "relabel_selected_mapped_back": ["E829_TJWHXVDDL", "E829_AWVRBSEFT", "E829_NGZQDPVJB"], "relabel_invariant": true, "swap_pair": ["E829_AWVRBSEFT", "E829_NGZQDPVJB"], "swap_decision": "CONFLICT", "swap_selected": ["E829_TJWHXVDDL", "E829_NGZQDPVJB", "E829_AWVRBSEFT"], "swap_follows_states": true}, {"run": "R832_B0E042DD4A9D", "relabel_decision": "CONFLICT", "relabel_selected_mapped_back": ["E829_QUCPTTRTW", "E829_AWVRBSEFT", "E829_UMLTCKBPT"], "relabel_invariant": true, "swap_pair": ["E829_AWVRBSEFT", "E829_UMLTCKBPT"], "swap_decision": "CONFLICT", "swap_selected": ["E829_QUCPTTRTW", "E829_UMLTCKBPT", "E829_AWVRBSEFT"], "swap_follows_states": true}, {"run": "R832_EEDCCB791EFE", "relabel_decision": "CONFLICT", "relabel_selected_mapped_back": ["E829_QUCPTTRTW", "E829_TYPKRWRRX", "E829_UMLTCKBPT"], "relabel_invariant": true, "swap_pair": ["E829_TYPKRWRRX", "E829_UMLTCKBPT"], "swap_decision": "CONFLICT", "swap_selected": ["E829_QUCPTTRTW", "E829_UMLTCKBPT", "E829_TYPKRWRRX"], "swap_follows_states": true}, {"run": "R832_7B6F61902456", "relabel_decision": "CONFLICT", "relabel_selected_mapped_back": ["E829_QUCPTTRTW", "E829_UMLTCKBPT", "E829_PFPBLWSSB"], "relabel_invariant": true, "swap_pair": ["E829_UMLTCKBPT", "E829_PFPBLWSSB"], "swap_decision": "CONFLICT", "swap_selected": ["E829_QUCPTTRTW", "E829_PFPBLWSSB", "E829_UMLTCKBPT"], "swap_follows_states": true}, {"run": "R832_6BA6115798F8", "relabel_decision": "SUFFICIENT", "relabel_selected_mapped_back": ["E829_NGZQDPVJB", "E829_AWVRBSEFT"], "relabel_invariant": true, "swap_pair": ["E829_AWVRBSEFT", "E829_WMCPGAVPP"], "swap_decision": "SUFFICIENT", "swap_selected": ["E829_NGZQDPVJB", "E829_WMCPGAVPP"], "swap_follows_states": true}, {"run": "R832_241E55609B7F", "relabel_decision": "CONFLICT", "relabel_selected_mapped_back": ["E829_QUCPTTRTW", "E829_TYPKRWRRX", "E829_AWVRBSEFT"], "relabel_invariant": true, "swap_pair": ["E829_TYPKRWRRX", "E829_AWVRBSEFT"], "swap_decision": "CONFLICT", "swap_selected": ["E829_QUCPTTRTW", "E829_AWVRBSEFT", "E829_TYPKRWRRX"], "swap_follows_states": true}, {"run": "R832_B65B7922D5A8", "relabel_decision": "SUFFICIENT", "relabel_selected_mapped_back": ["E829_NGZQDPVJB", "E829_AWVRBSEFT"], "relabel_invariant": true, "swap_pair": ["E829_AWVRBSEFT", "E829_WMCPGAVPP"], "swap_decision": "SUFFICIENT", "swap_selected": ["E829_NGZQDPVJB", "E829_WMCPGAVPP"], "swap_follows_states": true}, {"run": "R832_F67F35688F87", "relabel_decision": "SUFFICIENT", "relabel_selected_mapped_back": ["E829_XYWDGQEWF", "E829_UFRYJNYRC"], "relabel_invariant": true, "swap_pair": ["E829_UFRYJNYRC", "E829_AWVRBSEFT"], "swap_decision": "SUFFICIENT", "swap_selected": ["E829_XYWDGQEWF", "E829_AWVRBSEFT"], "swap_follows_states": true}, {"run": "R832_C0CCDF18B53D", "relabel_decision": "CONFLICT", "relabel_selected_mapped_back": ["E829_XYWDGQEWF", "E829_UFRYJNYRC", "E829_VJWTNXWZH"], "relabel_invariant": true, "swap_pair": ["E829_UFRYJNYRC", "E829_VJWTNXWZH"], "swap_decision": "CONFLICT", "swap_selected": ["E829_XYWDGQEWF", "E829_VJWTNXWZH", "E829_UFRYJNYRC"], "swap_follows_states": true}, {"run": "R832_E7CD610E7CD7", "relabel_decision": "SUFFICIENT", "relabel_selected_mapped_back": ["E829_NGZQDPVJB", "E829_AWVRBSEFT"], "relabel_invariant": true, "swap_pair": ["E829_AWVRBSEFT", "E829_WMCPGAVPP"], "swap_decision": "SUFFICIENT", "swap_selected": ["E829_NGZQDPVJB", "E829_WMCPGAVPP"], "swap_follows_states": true}, {"run": "R832_1C477F0CF35A", "relabel_decision": "SUFFICIENT", "relabel_selected_mapped_back": ["E829_NGZQDPVJB", "E829_AWVRBSEFT"], "relabel_invariant": true, "swap_pair": ["E829_AWVRBSEFT", "E829_WMCPGAVPP"], "swap_decision": "SUFFICIENT", "swap_selected": ["E829_NGZQDPVJB", "E829_WMCPGAVPP"], "swap_follows_states": true}]
+TEST832_COST {"unique_gpu_measurements": 269, "reused_measurements": 1764, "upper_bound": 2270, "policy_seconds": 523.162, "measurement": {"measurements": 269, "fusion_forwards": 487, "probe_forwards": 269, "seconds": 527.3180776570007, "peak_gpu_gib": 38.953168869018555}, "h3_diagnostic": {"seconds": 2.8075412170001073, "fusion_forwards": 0, "probe_forwards": 0, "generation_forwards": 0, "rank_forwards": 12, "cartridge_mounts": 0, "measurements": 0, "peak_gpu_gib": 38.949734687805176}, "offline_readouts": {"seconds": 38.99665983099976, "fusion_forwards": 30, "probe_forwards": 0, "generation_forwards": 73, "rank_forwards": 0, "cartridge_mounts": 30, "measurements": 0, "peak_gpu_gib": 38.982401847839355}, "noninterference": {"seconds": 2.4199649450000607, "fusion_forwards": 1, "probe_forwards": 3, "generation_forwards": 1, "rank_forwards": 0, "cartridge_mounts": 1, "measurements": 0, "peak_gpu_gib": 38.92204666137695}}
+TEST832_VERDICT {"question": "Can numerical states of a frozen model, produced from physical memory cartridges, govern the system's own evidence search and stopping without an answer key or textual control?", "H832": "FALSIFIED_IN_PILOT", "correct_runs": [4, 12], "failed_runs": [{"world": 1, "condition": "MISSING_SECOND", "expected": "ABSTAIN", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND", "OTHER_FORK"], "anchors_tried_roles": ["OWN_FIRST", "OWN_FORK"], "closure_competitor_roles": [["OTHER_SECOND", false, "OWN_FORK"], ["OTHER_SECOND", true, "OWN_FIRST"]]}, {"world": 2, "condition": "FULL", "expected": "SUFFICIENT", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_SECOND", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK", "OWN_FIRST"], "closure_competitor_roles": [["OTHER_FORK", false, "OWN_FIRST"], ["OWN_SECOND", true, "OWN_FORK"]]}, {"world": 2, "condition": "REPLACE_SECOND_BY_ALT", "expected": "SUFFICIENT", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OWN_CHANGED", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK", "OWN_FIRST"], "closure_competitor_roles": [["OTHER_FORK", false, "OWN_FIRST"], ["OWN_CHANGED", true, "OWN_FORK"]]}, {"world": 2, "condition": "MISSING_SECOND", "expected": "ABSTAIN", "decision": "CONFLICT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FIRST", "OTHER_SECOND", "OTHER_DECOY"], "anchors_tried_roles": ["OWN_FORK", "OWN_FIRST"], "closure_competitor_roles": [["OTHER_FORK", false, "OWN_FIRST"], ["OTHER_SECOND", true, "OWN_FORK"]]}, {"world": 0, "condition": "CONFLICT_ALT_ADDED", "expected": "CONFLICT", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "closure_competitor_roles": [["OTHER_SECOND", true, "OWN_FIRST"]]}, {"world": 0, "condition": "REPLACE_SECOND_BY_ALT", "expected": "SUFFICIENT", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "closure_competitor_roles": [["OTHER_SECOND", true, "OWN_FIRST"]]}, {"world": 0, "condition": "MISSING_SECOND", "expected": "ABSTAIN", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "closure_competitor_roles": [["OTHER_SECOND", true, "OWN_FIRST"]]}, {"world": 0, "condition": "FULL", "expected": "SUFFICIENT", "decision": "SUFFICIENT", "stop_kind": "AUTONOMOUS", "selected_roles": ["OWN_FORK", "OTHER_SECOND"], "anchors_tried_roles": ["OWN_FORK"], "closure_competitor_roles": [["OTHER_SECOND", true, "OWN_FIRST"]]}], "mechanism_statement": "Decisions are produced by a fixed external policy; their content is caused by the model states (see state-swap and bank/question interventions). This is not model-internal agency."}
+TEST832_COMPLETED /content/TEST832_20261030T133459Z/TEST832_results.json
