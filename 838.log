@@ -1,0 +1,113 @@
+==============================================================================
+AKBASCORE TEST838 — tek native forward ilişkisel sinyal testi; Qwen2.5-72B-Instruct (NF4, donmuş), tek A100-80GB
+Kaynak kilitleri: 829.py a5a25460a3a6bbdf62a0571a9b5ff19e64159cf7 | 834.py ab7b2046d7b7e7be18aed8c6ce5a1397e0c991d7 | 837.py 2049a98b19ddfc0517cf23e8cec2d20061f0ee84 | 837.log d64c63eeb0e57441f71e0e19a7adae07b4bc8f3d
+Kilitli yardımcılar (AST, 9 fonksiyon) SHA-256 880b27238972f7796ad8627019bfb2312a1b6023dec1bce8892083e12aa5c764
+BODY838 SHA-256 bd80f62295afec8ce14c874cb942c56daadae74ce8aa805490b57f5779927160 | yamalı kaynak AST geçti (117472 bayt, SHA-256 1b14e5228a689cc5b903b0d863face24e612537259c6568d440525d48194ec1c)
+Kapsam: kalibrasyon 8 dünya / kör değerlendirme 6 dünya (3 görülmemiş şablon) | 11 aday sinyal + 2 karıştırıcı kontrol + 1 betimsel | B2 çift taraması kalibrasyon kapısına bağlı
+Tam konsol kaydı: /content/TEST838_full_console_20261031T193110Z.txt
+==============================================================================
+Çalışma: TEST838_20261031T193110Z | panel SHA-256: 0eef01f6a6c3b287582e54ec37876a69fa4c5dd4b034b9b1cb897152d4a71cb4
+GPU: {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+GPU boş VRAM (yükleme öncesi): 78.83 GiB
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Maliyet üst sınırı (model yükleme hariç, %25 pay dahil): 172.3 dk | iş 294 (kalibrasyon 168, değerlendirme 126), mount 225 | B2 en kötü durum 612 çift mount | kartuş 85 | fusion<=1595 probe<=4266
+Model yükleniyor (Qwen2.5-72B-Instruct, NF4, tek yükleme)...
+Model yüklendi (801.762 s). Fiziksel kartuşlar üretiliyor ve SHA doğrulanıyor...
+Fiziksel kartuşlar: 85 (her biri SHA-256 + tensör SHA ile yeniden yüklendi)
+Sızıntı kapısı: çevrimdışı işaretinden önce değerlendirme etiketi kullanılmıyor (AST)
+Mimari (NL,H,QH,KVH,HD): (80, 8192, 64, 8, 128) | BF16 hesap, NF4, ağırlıklar donmuş
+UNKNOWN ilk-token kimlikleri (tüm mount'larda aynı): {'first_token_ids': [51378, 61395], 'pieces': ['UNKNOWN', ' UNKNOWN'], 'full_encodings': {'UNKNOWN': [51378], ' UNKNOWN': [61395]}}
+Boş VRAM (model sonrası): 40.05 GiB
+Eşdeğerlik kapıları geçti (CUT3/hidden bitwise, HeadProbe farkı 4.682426452129462e-08)
+Devam mekanizması: yeniden kullanılan iş 0 | None
+  CAL         43/129 (17.1 dk)
+  CAL         86/129 (18.7 dk)
+  CAL         129/129 (20.2 dk)
+Kalibrasyon mühürlendi (LOWO-CV): seçilen Q_HIDDEN_PROJ CV=0.938 | temsil Q_HIDDEN_PROJ CV=0.938 | B2 çalışacak: ['Q_HIDDEN_PROJ'] | SHA bc56183dfc38a338
+  EVAL        32/97 (21.4 dk)
+  EVAL        64/97 (22.6 dk)
+  EVAL        96/97 (23.7 dk)
+  EVAL        97/97 (23.8 dk)
+  B2          204/612 (32.3 dk)
+  B2          408/612 (40.8 dk)
+  B2          612/612 (49.4 dk)
+Ölçüm bitti; çevrimdışı değerlendirme (49.5 dk)
+  TEXT        42/97 (51.0 dk)
+  TEXT        84/97 (52.5 dk)
+  TEXT        97/97 (52.9 dk)
+==============================================================================
+TEST838 SONUÇ ÖZETİ (sinyal okuyucu B sınıfı Python; B2 çift taraması C sınıfı dış arama)
+==============================================================================
+Durum: COMPLETE_TEST838_EVALUATED | bütçe durdurması: False | devam: yeniden kullanılan iş 0
+Bütünlük: 3123 kapı, 0 başarısız | eşdeğerlik: cut3_state_bitwise=True, final_hidden_bitwise=True, headprobe_mass_max_abs_vs_locked_probe=4.682e-08 | determinizm: hidden_bitwise=True, cut3_bitwise=True
+------------------------------------------------------------------------------
+[P1] FİZİKSEL ÇİFTİN BİLGİ BAĞIMLILIĞI (kör değerlendirme, cevap metni; uç nokta ve UNKNOWN ayrı kategoriler)
+  TRUE_PAIR uç nokta 12/12 | FIRST_ONLY UNKNOWN 5/6 | SECOND_ONLY UNKNOWN 6/6 (SECOND_ONLY uç nokta 0/6) | NULL UNKNOWN 6/6
+  Doğru UNKNOWN (olumlu kontrol): FORK+SECOND 12/12 | FIRST+MIRROR 9/12 | DECOY+FIRST 4/12 | IRRELEVANT 12/12 | ALT_PAIR alternatif uç 11/12
+  İlk cevap tokeni (çevrimdışı; ort. log P(uç) - log P(UNKNOWN), argmax=UNKNOWN):
+    NULL               fark -32.41 | argmax UNKNOWN 6/6 | entropi 0.00
+    FIRST_ONLY         fark -24.03 | argmax UNKNOWN 5/6 | entropi 0.20
+    SECOND_ONLY        fark -24.41 | argmax UNKNOWN 6/6 | entropi 0.00
+    TRUE_PAIR          fark +15.20 | argmax UNKNOWN 0/12 | entropi 0.01
+    ALT_PAIR           fark -16.09 | argmax UNKNOWN 0/12 | entropi 0.02
+    FORK_PLUS_SECOND   fark -11.44 | argmax UNKNOWN 12/12 | entropi 0.20
+    FIRST_PLUS_MIRROR  fark -14.21 | argmax UNKNOWN 9/12 | entropi 0.37
+    DECOY_PLUS_FIRST   fark -21.39 | argmax UNKNOWN 4/12 | entropi 0.18
+    IRRELEVANT_PAIR    fark -33.03 | argmax UNKNOWN 12/12 | entropi 0.00
+  Token kontrolü: UNKNOWN ilk tokenini paylaşan varlık adı 0 | UNKNOWN 1 token, uç adı ort. 6.0 token
+[P2] TEK FORWARD SİNYALLERİ (kalibrasyonda LOWO-CV ile seçildi, değerlendirmede değiştirilmedi; 72 çift mount)
+  sinyal                   grup                 CV |    kör yeni-ş      p | yanlış pozitif (FORK/MIRROR/DECOY/IRR)
+  Q_HIDDEN_PROJ            REPRESENTATIONAL 0.9375 | 0.9375 0.9167 9.999e-05 | 0/0/0.1667/0 <SEÇİLEN
+  Q_HIDDEN_PROJ_ORTH_UNK   REPRESENTATIONAL 0.9375 | 0.9375 0.9167 9.999e-05 | 0/0/0.1667/0
+  Q_CUT3_PROJ              REPRESENTATIONAL 0.4297 | 0.4583 0.5417 0.8515 | 0.9167/0.75/0.75/0.5833
+  Q_ATTN_BALANCE           REPRESENTATIONAL 0.5625 | 0.5729 0.5833  0.184 | 0.25/0.75/0.75/0
+  A_HIDDEN_PROJ            BEHAVIOURAL      0.9375 | 0.9479 0.9375 9.999e-05 | 0/0/0.25/0
+  A_HIDDEN_PROJ_ORTH_UNK   BEHAVIOURAL      0.9375 | 0.9479 0.9375 9.999e-05 | 0/0/0.25/0
+  A_ENTROPY                BEHAVIOURAL      0.8203 | 0.9271 0.8958 9.999e-05 | 0/0/0.25/0
+  A_TOP1_PROB              BEHAVIOURAL      0.8359 | 0.9271 0.8958 9.999e-05 | 0/0/0.25/0
+  A_LOGP_UNKNOWN           UNKNOWN_WORD     0.9219 | 0.9375 0.9375 9.999e-05 | 0/0/0.5/0
+  A_UNK_GAP                UNKNOWN_WORD     0.9219 | 0.9375 0.9375 9.999e-05 | 0/0/0.5/0
+  Q_LOGP_UNKNOWN           UNKNOWN_WORD     0.9297 | 0.9167 0.9167 9.999e-05 | 0/0/0.5/0
+  CTRL_ATTN_CARD_MASS      CONTROL          0.6328 | 0.6875 0.7708  0.003 | 0.3333/0.25/0.75/0
+  CTRL_MOUNT_TOKENS        CONTROL           0.375 |    0.5    0.5      1 | 0/0/0/0
+  DESC_HIDDEN_NORM         DESCRIPTIVE      0.8125 | 0.8229 0.8542 9.999e-05 | 0.3333/0.3333/0.4167/0
+  seçilen Q_HIDDEN_PROJ: sıralar FORWARD=0.9583, REVERSE=0.9167 | marj 0.375 | dünya içi tam ayrım 6/6 | dünya başına [0.9375, 1, 0.9375, 0.875, 0.875, 1]
+  temsil Q_HIDDEN_PROJ: sıralar FORWARD=0.9583, REVERSE=0.9167 | marj 0.375 | dünya içi tam ayrım 6/6 | dünya başına [0.9375, 1, 0.9375, 0.875, 0.875, 1]
+  En iyi karıştırıcı kontrol (dikkat kütlesi / token sayısı): 0.6875 | D2 parçaları balanced_acc=True, fp_each_negative_class=True, unseen_template=True, each_order=True, beats_confound_controls=True, permutation=True | D2R parçaları balanced_acc=True, fp_each_negative_class=True, unseen_template=True, each_order=True, beats_confound_controls=True, permutation=True
+  Q_HIDDEN_PROJ pozitif oranı (tek kart dahil): OTHER_SECOND_ONLY=0, DECOY_ONLY=0, FIRST_PLUS_MIRROR=0, TRUE_PAIR=1, ALT_PAIR=0.8333, OTHER_FIRST_ONLY=0, IRRELEVANT_PAIR=0, MIRROR_ONLY=0, DECOY_PLUS_FIRST=0.1667, FORK_ONLY=0, NULL=0, FIRST_ONLY=0, SECOND_ONLY=0, CHANGED_ONLY=0, FORK_PLUS_SECOND=0
+  rho referansı (4 mount, C sınıfı): kör 0.7188 | yeni-ş 0.7292 | Spearman Q_HIDDEN_PROJ=0.4916
+[P3] İLK ANININ ADRESLENMESİ — A ve B ayrı sayılır
+  A (çift takılıyken tek forward geçerlilik): seçilen PASS | temsil PASS
+  B1 (tek kart, ilk vs fork; simetri nedeniyle şans bekleniyor): en iyi A_HIDDEN_PROJ kör 0.5833 | ilk>fork 3/6 | 8 tek kart içinde ilk top-1 3/6
+  B2 (C sınıfı, 306 sıralı çift/soru) Q_HIDDEN_PROJ: top-1 geçerli 6/6 | top-1 kendi ilk kartı içeriyor 6/6 | en iyi geçerli sıra medyanı 1 | PASS
+  Ölçek (ilk kart bilinmeden sıralı çift taraması, ~1.9 s/çift): N=18: 306 çift ~0.2 saat | N=100: 9900 çift ~5.2 saat | N=1000: 999000 çift ~527.2 saat | N=1000000: 999999000000 çift ~60207 yıl
+------------------------------------------------------------------------------
+ÖLÇÜTLER
+  D1_PHYSICAL_DEPENDENCE             PASS
+  D2_SINGLE_FORWARD_SIGNAL           PASS
+  D2R_REPRESENTATIONAL               PASS
+  D3_B1_SINGLE_CARD_ADDRESSING       REPORTED_ONLY
+  D3_B2_PAIR_SCAN_SELECTED           PASS
+  D3_B2_PAIR_SCAN_REPRESENTATIONAL   PASS
+  D4_NATIVE_CONTROL                  NOT_DEMONSTRATED
+NİHAİ AYRIM:
+  1_physical_pair_dependence                           PASS
+  2_generalisable_single_forward_relational_signal     YES_REPRESENTATIONAL
+  3_first_memory_addressing_without_known_first        YES_CLASS_C_PAIR_SCAN (single-card B1 reported separately)
+  4_model_native_control_without_python_search         NOT_DEMONSTRATED
+==============================================================================
+NİHAİ BİLİMSEL KARAR: DEVAM
+  Gerekçe: D1 PASS ve D2R PASS — fiziksel çift bağımlılığı ve görülmemiş dünyalara genellenen tek-forward temsil sinyali. Okuyucu Python (B), B2 C sınıfı; model-native kontrol (madde 4) gösterilmedi.
+Maliyet: sayılan fusion_forwards=1751, probe_forwards=2358, capture_forwards=0, rank_forwards=0, generation_forwards=445, mounts=938 | ölçüm 2037.908 s | toplam gövde 2254.68 s | B2 işi 1836 | tepe VRAM 39.00 GiB
+==============================================================================
+SONUÇ DOSYALARI (SHA-256)
+  /content/TEST838_20261031T193110Z/TEST829_base_offline_key.json  24925 B  a8077702ed0cc1a3d4a7b5d0aecd1dc5c426cd6f5978a4a0f5f06b746bc4e859
+  /content/TEST838_20261031T193110Z/TEST838.log  28529 B  62eaaab0189b1f1bece3ec6d1b43bcc26f2ff98da079cf6f56c4c13c19251d4d
+  /content/TEST838_20261031T193110Z/TEST838_calibration_directions.npz  657898 B  88a9c84cc38893e030bcd9c7720f726a75509aab9516b68b8337c6bdc7bbab7e
+  /content/TEST838_20261031T193110Z/TEST838_case_table.csv  104789 B  6516878e4a5fb5cf8ae018cda9d15ce5bfc24fd59bc04df6fea7f6bf1e73b342
+  /content/TEST838_20261031T193110Z/TEST838_full_console_20261031T193110Z.txt  71242 B  ccf10a78b8e22eb587a06dd9eef63cfb1f61e663f5b660addc8feb499a1c8497
+  /content/TEST838_20261031T193110Z/TEST838_offline_key.json  62163 B  6643037f9d55d6e58d84d17289a105798f7a0287119c1a30f72404384021e9c8
+  /content/TEST838_20261031T193110Z/TEST838_results.json  994088 B  f1e69e5bb07a2ef7c948f4a8063ef33c2559b663e95d97e22c6889e6b9f0fd35
+  /content/TEST838_20261031T193110Z/TEST838_vector_manifest.jsonl  322784 B  f8e446bbc8cb080d614c9c0071d175d2f6ff63c3bded9bf47c2f4c722c11a8da
+  /content/TEST838_20261031T193110Z/TEST838_vectors/  2058 vektör dosyası, 725.0 MB (her dosyanın SHA-256 değeri TEST838_vector_manifest.jsonl içinde)
+==============================================================================
