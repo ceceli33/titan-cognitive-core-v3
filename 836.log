@@ -1,0 +1,88 @@
+==============================================================================
+AKBASCORE TEST836 — aktarım denetimi; Qwen2.5-72B-Instruct (NF4, donmuş), tek A100-80GB, tek hücre
+Kaynak kilitleri: 829.py a5a25460a3a6bbdf62a0571a9b5ff19e64159cf7 | 834.py ab7b2046d7b7e7be18aed8c6ce5a1397e0c991d7 | 835.py 9327cebc651f173fd547362825679a1a790fcd6b | 831.log a24686a075237ff2311c7038b3e81394eead6426 | 835.log bfad088c81666674b766c3de95f08e0ab00f4817
+Kilitli yardımcılar (AST, 11 fonksiyon) SHA-256 5e620f6d0a5489e43d1e9c114a3a795f02568ae6b9706b7b0dfc4144069d812d
+BODY836 SHA-256 db78c56ce88fd5049b2fd0066ca3e53cf27fb2d9952a147b49a8999769daac1a | yamalı kaynak AST geçti (97958 bayt, SHA-256 8d1b91112b56d17dd7a629852416d588e2aa71dae25fefaecf215a661f6ef7dd)
+Kapsam: 6 dünya, 18 kartlık 2 banka | P1 izole rho, P2 banka rho, P3 native aktarım (5 durum), P4 TEST832 ayrıştırması
+Tam konsol kaydı: /content/TEST836_full_console_20261031T125314Z.txt
+==============================================================================
+Çalışma: TEST836_20261031T125314Z | panel SHA-256: 71b8cc259da0c2ebefbea7ab9a8d7e2c4966b0e58606dd5a2110498fa84a5000
+GPU: {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+GPU boş VRAM (yükleme öncesi): 78.83 GiB
+
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Maliyet üst sınırı (model yükleme hariç): 39.5 dk | iş 420, mount grubu 305, durum 6 | kartuş 37 (~68.1 MB), vektör dosyaları ~539.8 MB | fusion<=2875 probe<=498
+Model yükleniyor (Qwen2.5-72B-Instruct, NF4, tek yükleme)...
+Model yüklendi (800.833 s). Fiziksel kartuşlar üretiliyor ve SHA doğrulanıyor...
+Fiziksel kartuşlar: 37 (her biri SHA-256 + tensör SHA ile yeniden yüklendi)
+Mimari (NL,H,QH,KVH,HD): (80, 8192, 64, 8, 128) | BF16 hesap, NF4, ağırlıklar donmuş
+Boş VRAM (model sonrası): 40.05 GiB
+Eşdeğerlik kapıları geçti (CUT3/hidden bitwise, HeadProbe farkı 4.98594760894866e-08)
+Devam mekanizması: yeniden kullanılan iş 0, P3 0 | None
+  ölçüm (P1+P2) mount grubu 38/305 | iş 76 / 420 (20.3 dk)
+  ölçüm (P1+P2) mount grubu 76/305 | iş 144 / 420 (26.1 dk)
+  ölçüm (P1+P2) mount grubu 114/305 | iş 197 / 420 (30.9 dk)
+  ölçüm (P1+P2) mount grubu 152/305 | iş 248 / 420 (36.7 dk)
+  ölçüm (P1+P2) mount grubu 190/305 | iş 293 / 420 (45.3 dk)
+  ölçüm (P1+P2) mount grubu 228/305 | iş 340 / 420 (50.9 dk)
+  ölçüm (P1+P2) mount grubu 266/305 | iş 381 / 420 (57.9 dk)
+  ölçüm (P1+P2) mount grubu 304/305 | iş 419 / 420 (65.8 dk)
+  ölçüm (P1+P2) mount grubu 305/305 | iş 420 / 420 (66.1 dk)
+  aktarım (P3) 3/6 (67.6 dk)
+  aktarım (P3) 6/6 (69.0 dk)
+Ölçüm bitti; çevrimdışı değerlendirme (69.0 dk)
+==============================================================================
+TEST836 SONUÇ ÖZETİ (aktarım denetimi; kontrolcü yok)
+==============================================================================
+Durum: COMPLETE_TEST836_EVALUATED | bütçe durdurması: False | devam: iş 0, P3 0
+Bütünlük: 1224 kapı, 0 başarısız | eşdeğerlik: cut3_state_bitwise=True, final_hidden_bitwise=True, headprobe_mass_max_abs_vs_locked_probe=4.986e-08 | determinizm: hidden_bitwise=True, cut3_bitwise=True
+------------------------------------------------------------------------------
+[P1] POZİTİF KONTROL — izole çiftler, TEST831 rho (satır+sütun üstünlüğü, 12 hücre)
+  son-norm hidden  geçen 11/12 | ALT geçerli zincir 10/12 | iki sırada geçen dünya 5/6 | ort. TRUE 2.344, ort. en büyük satır 1.905
+  CUT3             geçen 0/12 | ALT geçerli zincir 1/12 | iki sırada geçen dünya 0/6 | ort. TRUE 1.079, ort. en büyük satır 1.136
+  log-olasılık     geçen 0/12 | ALT geçerli zincir 1/12 | iki sırada geçen dünya 0/6 | ort. TRUE 4.345, ort. en büyük satır 6.703
+[P2] BANKA BAĞLAMI — çift 18 kartlık bankanın içinde (TRUE > mirror/inbound/fork/banka-içi yanlış ikinci)
+  son-norm hidden  geçen 5/12 | iki sırada geçen dünya 1/6 | en büyük rho rolü: TRUE=4, ALT=4, MIRROR=0, INBOUND=0, FORK=0, MISMATCHED_IN_BANK=4
+  CUT3             geçen 3/12 | iki sırada geçen dünya 0/6 | en büyük rho rolü: TRUE=3, ALT=3, MIRROR=2, INBOUND=1, FORK=1, MISMATCHED_IN_BANK=2
+  log-olasılık     geçen 4/12 | iki sırada geçen dünya 0/6 | en büyük rho rolü: TRUE=2, ALT=3, MIRROR=2, INBOUND=0, FORK=0, MISMATCHED_IN_BANK=5
+[P3] NATIVE AKTARIM — aynı 5120 baş, aynı okuma; ikinci karta özgü kazanç gösteren baş sayısı (dünya başına)
+  FIRST          özgü baş [119, 180, 320, 173, 157, 158] | ikinci argmax baş [125, 138, 318, 321, 119, 101] | ort. kazanç ikinci 0.0007272 / zincir dışı 0.0001871 | hidden-tamamlanma cos 0.02572
+  FIRST_ROTATED  özgü baş [216, 174, 294, 187, 101, 82] | ikinci argmax baş [157, 125, 290, 259, 93, 72] | ort. kazanç ikinci 0.000622 / zincir dışı 0.0002443 | hidden-tamamlanma cos 0.349
+  FORK_FIRST     özgü baş [115, 172, 316, 166, 160, 149] | ikinci argmax baş [126, 135, 310, 318, 117, 101] | ort. kazanç ikinci 0.0007065 / zincir dışı 0.0001847 | hidden-tamamlanma cos 0.03342
+  IRRELEVANT     özgü baş [114, 178, 319, 167, 155, 147] | ikinci argmax baş [126, 135, 303, 316, 118, 98] | ort. kazanç ikinci 0.0006191 / zincir dışı 0.0001835 | hidden-tamamlanma cos 0.02307
+  COMPLETE_PAIR  özgü baş [125, 188, 300, 185, 154, 154] | ikinci argmax baş [123, 134, 292, 327, 121, 109] | ort. kazanç ikinci 0.0006755 / zincir dışı 0.0002216 | hidden-tamamlanma cos 0.06637
+  OFF ikinci argmax baş: [145, 117, 260, 326, 78, 98] | FIRST tüm kontrolleri geçen dünya: 3/6
+[P4] TEST832 ADIM AYRIŞTIRMASI (her adım önceki adımlar doğru verilerek)
+  1_first_top1_by_single_effect      5/6
+  2_cut_contains_first               6/6
+  2_cut_contains_second              0/6
+  3_closure_isolated_valid           11/12
+  3_closure_bank_valid               8/12
+  4_mutual_best                      12/12
+  5_conflict_detectable              10/12
+  kayıp adımı: 2_cut_contains_second
+------------------------------------------------------------------------------
+T1–T5
+  T1_POSITIVE_CONTROL    PASS         11/12
+  T2_BANK_CONTEXT        FAIL         5/12
+  T3_ORDER               FAIL         izole 5/6, banka 1/6
+  T4_ALT_VALID_CHAIN     PASS         10/12
+  T5_NATIVE_TRANSFER     FAIL         3/6
+==============================================================================
+NİHAİ BİLİMSEL KARAR: YETERSİZ KANIT
+  Gerekçe: kayıp yeri = CONTEXT, TRANSFER (CONTEXT: banka bağlamında kayboluyor; TRANSFER: native durum onu sonraki hesaplamaya taşımıyor)
+  Not: rho ve baş sayıları Python ile hesaplanan ölçümlerdir; model-native kontrol olarak sunulmaz.
+Maliyet: sayılan fusion_forwards=2869, probe_forwards=492, capture_forwards=0, rank_forwards=0, generation_forwards=1, mounts=339 | ölçüm 3071.649 s | toplam gövde 3256.72 s | tepe VRAM 39.54 GiB
+==============================================================================
+SONUÇ DOSYALARI (SHA-256)
+  /content/TEST836_20261031T125314Z/TEST829_base_offline_key.json  11215 B  6c31c279a3ffaad8a998af4cd79b987373fe0cd94457389ed287c2469bc418dd
+  /content/TEST836_20261031T125314Z/TEST836.log  9813 B  655b002eed16d02bbf49e63aed2d33d283156e9afc1c634edd46cfb691edeea8
+  /content/TEST836_20261031T125314Z/TEST836_case_table.csv  10170 B  913ff6cbe337254864e7494d65b38fb60a15ec863039cad42ef0ce4f1b8e98e5
+  /content/TEST836_20261031T125314Z/TEST836_full_console_20261031T125314Z.txt  29539 B  d40601f616c32dcb737c4cf5cf7bd7d189fd0e52eda9b8feb49ccef84e40948d
+  /content/TEST836_20261031T125314Z/TEST836_offline_key.json  88206 B  b7314e1b88cc7fad6616054572812e771b29f91e8276821740b37de6e2b5d4f6
+  /content/TEST836_20261031T125314Z/TEST836_results.json  407158 B  093d531a5017c061e744931b44e3269c5ef50316f52afb19082e231717c3d1a5
+  /content/TEST836_20261031T125314Z/TEST836_vector_manifest.jsonl  71102 B  bc480a21ec3d02c86b47a4af3be46bb10b8548e667d80d7ad08ec6293f70f5d3
+  /content/TEST836_20261031T125314Z/TEST836_vectors/  456 vektör dosyası, 555.1 MB (her dosyanın SHA-256 değeri TEST836_vector_manifest.jsonl içinde)
+
+==============================================================================
