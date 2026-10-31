@@ -1,0 +1,94 @@
+==============================================================================
+AKBASCORE TEST837 — ilişkisel arama / bağlam kaybı / aktarım ayrıştırması; Qwen2.5-72B-Instruct (NF4, donmuş), tek A100-80GB
+Kaynak kilitleri: 829.py a5a25460a3a6bbdf62a0571a9b5ff19e64159cf7 | 834.py ab7b2046d7b7e7be18aed8c6ce5a1397e0c991d7 | 835.py 9327cebc651f173fd547362825679a1a790fcd6b | 836.py ee0038bb76cc937e7a0ce41edb8535178f6ba08f | 836.log cd2761aa3768c2ab065a0631a06e8f4cdc175d5e
+Kilitli yardımcılar (AST, 12 fonksiyon) SHA-256 5371d31a37f9c46733154de0a31c47b8d5a6184fc6d3b72618caf871799278b6
+BODY837 SHA-256 1d4de6ce641fd9d274db9915ffa2d11048c448fcb136be2b4ec0d4c39f0b4468 | yamalı kaynak AST geçti (108558 bayt, SHA-256 e0916333368bbd2de61fa3c6703e35eca9add45462df2a2d2b160c24491f2494)
+Kapsam: 6 dünya, 18 kartlık 2 banka | P1 ilk karta koşullu arama (ORACLE/MODEL/WRONG), P2 REMOVE/SUBSTITUTE/NO_COMPETITION, P3 KV durumu vs fiziksel çift
+Tam konsol kaydı: /content/TEST837_full_console_20261031T153301Z.txt
+==============================================================================
+Çalışma: TEST837_20261031T153301Z | panel SHA-256: f9d392c48619af6cf9cbec5a2024b1da9276002ab39058befbc0db2cd6a216f1
+GPU: {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+GPU boş VRAM (yükleme öncesi): 78.83 GiB
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Nötr dolgu kartları: 36 adet, token uzunlukları eşit (model yüklenmeden önce)
+Maliyet üst sınırı (model yükleme hariç): 100.6 dk | panel işi 876, mount grubu 719, P3 12 | kartuş 73 (dolgu 36) | vektör ~1388.0 MB | fusion<=7073 probe<=1248
+Model yükleniyor (Qwen2.5-72B-Instruct, NF4, tek yükleme)...
+Model yüklendi (798.852 s). Fiziksel kartuşlar üretiliyor ve SHA doğrulanıyor...
+Fiziksel kartuşlar: 73 (her biri SHA-256 + tensör SHA ile yeniden yüklendi)
+Mimari (NL,H,QH,KVH,HD): (80, 8192, 64, 8, 128) | BF16 hesap, NF4, ağırlıklar donmuş
+Boş VRAM (model sonrası): 40.05 GiB
+Eşdeğerlik kapıları geçti (CUT3/hidden bitwise, HeadProbe farkı 4.710055589648987e-08)
+Konum eşdeğerliği geçti: dolgu ile n, kart aralıkları ve alt katman K/V satırları bitwise aynı
+Devam mekanizması: yeniden kullanılan iş 0, P3 0 | None
+  P1_SINGLES  14/43 (17.1 dk)
+  P1_SINGLES  28/43 (17.5 dk)
+  P1_SINGLES  42/43 (17.9 dk)
+  P1_SINGLES  43/43 (17.9 dk)
+  P1_PAIRS    120/360 (21.7 dk)
+  P1_PAIRS    240/360 (25.5 dk)
+  P1_PAIRS    360/360 (29.2 dk)
+  P2_BANK     105/316 (64.3 dk)
+  P2_BANK     210/316 (100.0 dk)
+  P2_BANK     315/316 (136.2 dk)
+  P2_BANK     316/316 (136.5 dk)
+  P3          4/12 (138.8 dk)
+  P3          8/12 (140.7 dk)
+  P3          12/12 (142.6 dk)
+Ölçüm bitti; çevrimdışı değerlendirme (142.6 dk)
+==============================================================================
+TEST837 SONUÇ ÖZETİ (ayrıştırma; P1 araması C sınıfı harici aramadır)
+==============================================================================
+Durum: COMPLETE_TEST837_EVALUATED | bütçe durdurması: False | devam: iş 0, P3 0
+Bütünlük: 2812 kapı, 0 başarısız | eşdeğerlik: cut3_state_bitwise=True, final_hidden_bitwise=True, headprobe_mass_max_abs_vs_locked_probe=4.71e-08 | determinizm: hidden_bitwise=True, cut3_bitwise=True
+------------------------------------------------------------------------------
+[P1] İLK KARTA KOŞULLU İKİNCİ KART ARAMASI (17 aday, TEST831 rho, 12 hücre = 6 dünya x 2 sıra)
+  ORACLE (gerçek ilk kart): top-1 geçerli 12/12 | top-3 12/12 | iki geçerli top-2 (çelişki) 12/12 | iki sırada 6/6
+    top-1 rolleri: OWN_SECOND=3, OWN_CHANGED=9
+    ort. marjlar: margin_valid_vs_invalid=0.4463, margin_vs_FORK=1.176, margin_vs_MIRROR=0.8125, margin_vs_INBOUND=0.8788, margin_vs_OTHER_WORLD=0.4463
+  MODEL (tek kart etkisiyle seçilen ilk kart): top-1 geçerli 4/12 | gerçek ilk kartla 4/12 | çapa rolleri OWN_FORK=8, OWN_FIRST=4
+  WRONG (fork çapa): en iyi rho ORACLE altında 11/12 | top-1 rolleri OTHER_CHANGED=2, OTHER_FORK=4, OTHER_FIRST=2, OTHER_DECOY=3, OTHER_MIRROR=1
+  Dolgu kontrolü: rho(ilk, dolgu) < rho(ilk, ikinci) 12/12 | dolgu top-1 0
+  Maliyet: çapa başına 34 çift mount; N=18/100/1000 için 18=34, 100=198, 1000=1998 (doğrusal)
+[P2] BAĞLAM KAYBI NEDENİ (bankada rho_TRUE > tüm kontroller; hidden / CUT3 / log-olasılık; iki sıra)
+  REMOVE          hidden 5/12 (ortak kontrollerle 6/12) | CUT3 2/12 | logp 1/12 | iki sırada 1/6
+  SUBSTITUTE      hidden 7/12 (ortak kontrollerle 8/12) | CUT3 2/12 | logp 5/12 | iki sırada 2/6
+  NO_COMPETITION  hidden 4/12 (ortak kontrollerle 5/12) | CUT3 2/12 | logp 3/12 | iki sırada 1/6
+  Neden (önceden sabit kural): OTHER
+[P3] NATIVE KV DURUMU — aynı banka/soru; karar = OFF'a göre ortalama dikkat kazancında ilk-olmayan top-1
+  TRUE_KV        kazanç-top1 geçerli 7/12 | kütle-top1 geçerli 5/12 | kütle kararı OFF'tan değişti 1/12 | ort. marj -2.77e-05 | hidden kayması 78.61
+  FORK_KV        kazanç-top1 geçerli 7/12 | kütle-top1 geçerli 6/12 | kütle kararı OFF'tan değişti 1/12 | ort. marj 2.605e-05 | hidden kayması 78.28
+  IRRELEVANT_KV  kazanç-top1 geçerli 7/12 | kütle-top1 geçerli 5/12 | kütle kararı OFF'tan değişti 1/12 | ort. marj -3.802e-05 | hidden kayması 77.99
+  ROTATED_KV     kazanç-top1 geçerli 1/12 | kütle-top1 geçerli 4/12 | kütle kararı OFF'tan değişti 4/12 | ort. marj -0.0007667 | hidden kayması 104.8
+  TRUE_KV2       kazanç-top1 geçerli 7/12 | kütle-top1 geçerli 5/12 | kütle kararı OFF'tan değişti 0/12 | ort. marj 3.563e-05 | hidden kayması 80.66
+  FORK_KV2       kazanç-top1 geçerli 8/12 | kütle-top1 geçerli 6/12 | kütle kararı OFF'tan değişti 1/12 | ort. marj 7.669e-05 | hidden kayması 81.14
+  IRRELEVANT_KV2 kazanç-top1 geçerli 7/12 | kütle-top1 geçerli 5/12 | kütle kararı OFF'tan değişti 0/12 | ort. marj 0.0001023 | hidden kayması 80.51
+  OFF kütle-top1 geçerli 5/12 | TRUE_KV iki sırada aynı top-1 2/6
+[P3] FİZİKSEL ÇİFT vs KV: fiziksel yol (P1 ORACLE) 12/12 | KV yolu (TRUE_KV) 7/12 | PHYSICAL_SUPERIOR
+  Cevap metni (çevrimdışı) doğru: OFF=1/6, IRRELEVANT_KV=2/6, TRUE_KV=2/6, FORK_KV=2/6, ROTATED_KV=1/6, PHYSICAL_PAIR=6/6, PHYSICAL_WRONG_FIRST=6/6, PHYSICAL_WRONG_SECOND=3/6
+------------------------------------------------------------------------------
+ÖLÇÜTLER
+  A1_ORACLE_CONDITIONAL_SEARCH   PASS
+  A2_END_TO_END                  FAIL
+  A3_WRONG_FIRST                 PASS
+  A4_ORDER                       PASS
+  B_FILLER_NEUTRAL               PASS
+  B_CONTEXT_CAUSE                OTHER
+  C1_KV_TRANSFER                 FAIL
+  C2_PHYSICAL_VS_KV              PHYSICAL_SUPERIOR
+  C3_PERSISTENCE                 FAIL
+[Sınıflar] rho values, attention masses, KV states, hidden states=A (native), argmax, rho ranking, decision top-1=B (fixed numerical gate), trying every pair, choosing anchors, mounting=C (external search / execution)
+==============================================================================
+NİHAİ BİLİMSEL KARAR: YETERSİZ KANIT
+  Gerekçe: ölçütler ne DEVAM ne DUR kuralını sağladı (bkz. A1/A2/A3/C1 satırları)
+Maliyet: sayılan fusion_forwards=6815, probe_forwards=1038, capture_forwards=0, rank_forwards=0, generation_forwards=259, mounts=817 | ölçüm 7194.167 s | toplam gövde 7875.194 s | çalışma zamanı MODEL işi 0 | tepe VRAM 39.74 GiB
+==============================================================================
+SONUÇ DOSYALARI (SHA-256)
+  /content/TEST837_20261031T153301Z/TEST829_base_offline_key.json  16255 B  a1f50a7542c3c76aa7b5b5b17f213ca20127cb895a32b07eb8b522b8d3f0b804
+  /content/TEST837_20261031T153301Z/TEST837.log  12616 B  ce45aca9b4df31156a3721bc91cf614806f43fae510d69b9ba12569edc80bf6c
+  /content/TEST837_20261031T153301Z/TEST837_case_table.csv  37867 B  b1c066de34f55922a1b53d16182dbfd034a9e25e6dce4d6c55a5dc0638a0f8df
+  /content/TEST837_20261031T153301Z/TEST837_full_console_20261031T153301Z.txt  49526 B  2d5888ef786f6db5bda3a53b4a006f17a1cd5ce9b1b0d8d0c40f6993f40631c2
+  /content/TEST837_20261031T153301Z/TEST837_offline_key.json  153697 B  eaf7caef8f4424c1ba0d6495c543ed58d4441622ecf09432f03fe5112bf218a4
+  /content/TEST837_20261031T153301Z/TEST837_results.json  815720 B  3cb6b7b2b63dd33e158a0929895c3ef158f3b0e090ac82afec34559dc1f34e55
+  /content/TEST837_20261031T153301Z/TEST837_vector_manifest.jsonl  152004 B  2422d56dbeff6265219a4a74d0284efea2f7ec76741c32070e2f41d0c200c395
+  /content/TEST837_20261031T153301Z/TEST837_vectors/  972 vektör dosyası, 1166.4 MB (her dosyanın SHA-256 değeri TEST837_vector_manifest.jsonl içinde)
+==============================================================================
