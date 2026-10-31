@@ -1,0 +1,116 @@
+==============================================================================
+AKBASCORE TEST835 — model Qwen2.5-72B-Instruct (NF4, donmuş), tek A100-80GB, tek hücre
+Kaynak kilitleri: 829.py a5a25460a3a6bbdf62a0571a9b5ff19e64159cf7 | 834.py ab7b2046d7b7e7be18aed8c6ce5a1397e0c991d7 | 834.log d468f3d3963f7b7d752c0388fe06999d8b7c2fd2
+TEST834 yardımcıları (AST, 18 fonksiyon) SHA-256 053170bd3dd389c7da4416a28e74e96bd193573579060d86eb357d71252e1934
+BODY835 SHA-256 68f564943b94ca52c2a8ade04ba769df3d658232904e2fc0e475cd3443699a4d | yamalı kaynak AST geçti (115242 bayt, SHA-256 892565e4291459ea88aa51dc9882aa92fc51648fd47433b9da67f70be9c337c9)
+Kapsam: 6 değerlendirme dünyası x 6 koşul = 36 koşu; 12 ayrı kalibrasyon dünyası; durumlar OFF/FEEDBACK/PERTURBED/NEG_CONTROL
+Tam konsol kaydı: /content/TEST835_full_console_20261031T095531Z.txt
+==============================================================================
+Çalışma: TEST835_20261031T095531Z | panel SHA-256: c26978c8cec70ca41b390d3d51ae39b361dc5c978332eee72379ae2a287953f3
+GPU: {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+GPU boş VRAM (yükleme öncesi): 78.83 GiB
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Maliyet üst sınırı (model yükleme hariç): 110.7 dk | kartuş 115 (~212.7 MB) | fusion<=4360 probe<=1727 | VRAM about 39-42 (TEST834: VRAM headroom 40.05 GiB free after load; 16-card memories)
+Model yükleniyor (Qwen2.5-72B-Instruct, NF4, tek yükleme)...
+Model yüklendi (807.317 s). Fiziksel kartuşlar üretiliyor ve SHA doğrulanıyor...
+Fiziksel kartuşlar: 115 (her biri SHA-256 + tensör SHA ile yeniden yüklendi)
+Mimari (NL,H,QH,KVH,HD): (80, 8192, 64, 8, 128) | BF16 hesap, NF4, ağırlıklar donmuş
+Boş VRAM (model sonrası): 40.05 GiB
+Eşdeğerlik kapıları geçti (CUT3/hidden bitwise, HeadProbe farkı 2.909312844280587e-08)
+Kalibrasyon başladı (ayrı dünyalar): 12 iş
+  kalibrasyon 6/12 (18.9 dk)
+  kalibrasyon 12/12 (21.5 dk)
+Kilit (kalibrasyon, örnek içi): ilk baş L55/H57 8/12
+  ikinci baş: OFF L62/H9 7/12 | FEEDBACK L62/H49 9/12 | PERTURBED L68/H24 8/12 | NEG_CONTROL L62/H49 8/12
+  yeterlilik kapısı: sh_last_mass (kal. dengeli doğr. 0.764) | çelişki kapısı: null_hidden_dist (0.771)
+Devam mekanizması: yeniden kullanılan koşu 0 | None
+  koşu 6/36 (27.3 dk)
+  koşu 12/36 (32.6 dk)
+  koşu 18/36 (38.0 dk)
+  koşu 24/36 (42.8 dk)
+  koşu 30/36 (47.7 dk)
+  koşu 36/36 (52.3 dk)
+Sayısal çalışma bitti; çevrimdışı oracle tanısı, metin okuması ve değerlendirme (52.3 dk)
+==============================================================================
+TEST835 SONUÇ ÖZETİ
+==============================================================================
+Durum: COMPLETE_TEST835_EVALUATED | koşu: 36 | devamdan alınan: 0 | bütçe durdurması: False
+Bütünlük: 2249 kapı, 0 başarısız | probe eşdeğerliği: cut3_state_bitwise=True, final_hidden_bitwise=True, headprobe_mass_max_abs_vs_locked_probe=2.909e-08
+Donmuş ağırlık / hook yok / SDPA ve lm_head geri yüklendi: True
+Kilit (örnek içi kalibrasyon): ilk baş L55/H57 8/12; ikinci baş OFF L62/H9 7/12; FEEDBACK L62/H49 9/12; PERTURBED L68/H24 8/12; NEG_CONTROL L62/H49 8/12
+Kapılar: yeterlilik=sh_last_mass (kal. 0.764), çelişki=null_hidden_dist (kal. 0.771)
+------------------------------------------------------------------------------
+[Q1] İLK ADRES
+  native ilk baş: 14/30 | MAM PEAK50: 9/30 | 815 numeric_rank: 12/30
+  seçilen roller: OWN_DECOY=9, OTHER_SECOND=1, OWN_FORK=7, OWN_FIRST=14, OWN_LURE=3, OTHER_FORK=1, OWN_SECOND=1
+  marj (doğru / yanlış seçimde): 0.146 / 0.1155 | ters sırada aynı ilk kart: 10/36
+[Q2] İKİNCİ ADRES (ilk kart doğruyken)
+  OFF         5/11 | roller: OWN_SECOND=3, OWN_MIRROR=4, OWN_FORK=1, OWN_DECOY=1, OWN_CHANGED=2
+  FEEDBACK    7/11 | roller: OWN_CHANGED=5, OWN_FORK=1, OWN_MIRROR=3, OWN_SECOND=2
+  PERTURBED   6/11 | roller: OWN_CHANGED=5, OWN_FORK=2, OWN_SECOND=1, OWN_MIRROR=2, OWN_DECOY=1
+  NEG_CONTROL 7/11 | roller: OWN_CHANGED=5, OWN_FORK=1, OWN_MIRROR=3, OWN_SECOND=2
+  oracle tavanı (c1 yanlış koşularda gerçek ilk kartla; yetenek sayılmaz): OFF=3/16, FEEDBACK=9/16, PERTURBED=4/16, NEG_CONTROL=0/16
+[Q3] GERİ BESLEME NEDENSELLİĞİ
+  ikinci adres isabeti: OFF=5, FEEDBACK=7, PERTURBED=6, NEG_CONTROL=7
+  terminal doğru: OFF=10, FEEDBACK=9, PERTURBED=8, NEG_CONTROL=9
+  FEEDBACK-OFF uyumsuz çiftler (FB doğru&OFF yanlış / tersi): 3/1 | durumun hidden'ı değiştirdiği koşu: 36
+[Q4] EKSİK BİLGİ / UNKNOWN
+  OFF         eksikte INSUFFICIENT 7/12 | eksikte metin UNKNOWN 9/12 | tam kanıtta INSUFFICIENT 5
+  FEEDBACK    eksikte INSUFFICIENT 2/12 | eksikte metin UNKNOWN 4/12 | tam kanıtta INSUFFICIENT 5
+  PERTURBED   eksikte INSUFFICIENT 4/12 | eksikte metin UNKNOWN 6/12 | tam kanıtta INSUFFICIENT 4
+  NEG_CONTROL eksikte INSUFFICIENT 2/12 | eksikte metin UNKNOWN 4/12 | tam kanıtta INSUFFICIENT 5
+[Q5] ÇELİŞKİ
+  OFF: çelişkide CONFLICT 4/6, yanlış CONFLICT 10 | FEEDBACK: çelişkide CONFLICT 5/6, yanlış CONFLICT 7 | PERTURBED: çelişkide CONFLICT 4/6, yanlış CONFLICT 9 | NEG_CONTROL: çelişkide CONFLICT 5/6, yanlış CONFLICT 7
+[Q6] YANLIŞ İLK ADRESİ DÜZELTME: OFF=0/13, FEEDBACK=1/13, PERTURBED=0/13, NEG_CONTROL=1/13
+[Q7] YENİDEN ARAMA (ilk ikinci aday yanlışken): OFF=0/4, FEEDBACK=0/4, PERTURBED=0/4, NEG_CONTROL=0/4
+[Q8] DURMA
+  OFF         doğru 10/36 | erken SUFFICIENT 10 | yanlış CONFLICT 10 | tam kanıtta bütçe-UNKNOWN 5 | STOP_SCHEDULE_EXHAUSTED_INSUFFICIENT=12, STOP_CONFLICT_GATE=14, STOP_SUFFICIENT_GATE=10
+  FEEDBACK    doğru 9/36 | erken SUFFICIENT 15 | yanlış CONFLICT 7 | tam kanıtta bütçe-UNKNOWN 5 | STOP_SUFFICIENT_GATE=17, STOP_CONFLICT_GATE=12, STOP_SCHEDULE_EXHAUSTED_INSUFFICIENT=7
+  PERTURBED   doğru 8/36 | erken SUFFICIENT 14 | yanlış CONFLICT 9 | tam kanıtta bütçe-UNKNOWN 4 | STOP_SUFFICIENT_GATE=15, STOP_CONFLICT_GATE=13, STOP_SCHEDULE_EXHAUSTED_INSUFFICIENT=8
+  NEG_CONTROL doğru 9/36 | erken SUFFICIENT 15 | yanlış CONFLICT 7 | tam kanıtta bütçe-UNKNOWN 5 | STOP_SUFFICIENT_GATE=17, STOP_CONFLICT_GATE=12, STOP_SCHEDULE_EXHAUSTED_INSUFFICIENT=7
+[KOŞUL BAZINDA terminal doğruluk]
+  OFF         FULL=0/6, MISSING_FIRST=4/6, MISSING_SECOND=3/6, REPLACE_SECOND_BY_ALT=0/6, CONFLICT_ALT_ADDED=3/6, MISLEAD_FIRST=0/6
+  FEEDBACK    FULL=1/6, MISSING_FIRST=1/6, MISSING_SECOND=1/6, REPLACE_SECOND_BY_ALT=1/6, CONFLICT_ALT_ADDED=5/6, MISLEAD_FIRST=0/6
+  PERTURBED   FULL=0/6, MISSING_FIRST=3/6, MISSING_SECOND=1/6, REPLACE_SECOND_BY_ALT=1/6, CONFLICT_ALT_ADDED=3/6, MISLEAD_FIRST=0/6
+  NEG_CONTROL FULL=1/6, MISSING_FIRST=1/6, MISSING_SECOND=1/6, REPLACE_SECOND_BY_ALT=1/6, CONFLICT_ALT_ADDED=5/6, MISLEAD_FIRST=0/6
+[METİN CEVAPLARI, çevrimdışı] FULL_BANK=3, NULL=18, OFF=13, FEEDBACK=9, PERTURBED=10, NEG_CONTROL=9
+[KARAR SINIFLARI] A=model sinyali, B=sabit kapı, C=Python planı
+  first_address: A attention probabilities -> B argmax (calibrated head) -> mount = execution
+  second_address: A attention under A KV state -> B argmax (calibrated head) -> mount = execution
+  sufficiency: A native feature -> B calibrated stump
+  conflict: A native feature -> B calibrated stump
+  continue / revise / re-search / stop / UNKNOWN: C fixed schedule
+  answer text: offline readout only
+------------------------------------------------------------------------------
+K1–K9
+  K1_FIRST_ADDRESS       FAIL         14/30
+  K2_SECOND_ADDRESS      FAIL         7/11
+  K3_FEEDBACK_CAUSAL     FAIL         OFF=5, FEEDBACK=7, PERTURBED=6, NEG_CONTROL=7
+  K4_MISSING             FAIL         eksikte INSUFFICIENT 2/12, tam kanıtta doğru terminal 7/24
+  K5_CONTRADICTION       FAIL         5/6, yanlış 7
+  K6_CORRECTION          FAIL         1/13
+  K7_RESEARCH            FAIL         0/4
+  K8_STOPPING            FAIL         9/36
+  K9_NEGATIVE_CONTROLS   FAIL         OFF=10, FEEDBACK=9, PERTURBED=8, NEG_CONTROL=9
+Negatif kontroller karşısında: second_address_feedback_beats_all_controls=False, terminal_feedback_beats_all_controls=False
+Otonom native motor: NOT_ESTABLISHED: continuation, revision, re-search and stopping are class C; at best MODEL_SIGNAL_DRIVEN_EXTERNAL_SCHEDULE
+==============================================================================
+NİHAİ BİLİMSEL KARAR: DUR  (TEST835 verdict = FAIL)
+  Başarısız ölçütler: K1_FIRST_ADDRESS, K2_SECOND_ADDRESS, K3_FEEDBACK_CAUSAL, K4_MISSING, K5_CONTRADICTION, K6_CORRECTION, K7_RESEARCH, K8_STOPPING, K9_NEGATIVE_CONTROLS
+  Belirsiz ölçütler: yok
+  Gerekçe: K2 FAIL: ilk kart doğruyken FEEDBACK ikinci adresi 7/11 (eşik %75)
+  Gerekçe: K3 FAIL: FEEDBACK ikinci adres isabeti kontrolleri +3 farkla geçemedi (OFF=5, FEEDBACK=7, PERTURBED=6, NEG_CONTROL=7)
+  Gerekçe: K8+K9 FAIL: terminal doğru 9/36 ve negatif kontrollerden ayrışmadı (OFF=10, FEEDBACK=9, PERTURBED=8, NEG_CONTROL=9)
+Maliyet: sayılan fusion_forwards=2875, probe_forwards=732, capture_forwards=6, rank_forwards=6, generation_forwards=466, mounts=607 | değerlendirme 1848.112 s | toplam gövde 3222.595 s | tepe VRAM 39.86 GiB
+==============================================================================
+SONUÇ DOSYALARI (SHA-256)
+  /content/TEST835_20261031T095531Z/TEST829_base_offline_key.json  28920 B  73c05d7daecd839635f0838d915cf0665c0c5d44a5567e9019337e2580c8479d
+  /content/TEST835_20261031T095531Z/TEST835.log  23248 B  aa2c9fab2653d738e0a6be0bd5d05750c98cda682fa4ed4391e49ef8ff896a2e
+  /content/TEST835_20261031T095531Z/TEST835_checkpoint.jsonl  286177 B  b41fe3224dead40f25a9c1b527e88a18491a93a9cc02360026a0a834eb4c92af
+  /content/TEST835_20261031T095531Z/TEST835_full_console_20261031T095531Z.txt  83472 B  64b20f21dd9bb3d52393f0c8373366c1c32e5c0f94b5f94079bce406c47a3fe2
+  /content/TEST835_20261031T095531Z/TEST835_heartbeat.txt  2917 B  d9ba00c2f12a66f79dd310a0440ab5b3bcf4853f53bf9097dac381540c96af99
+  /content/TEST835_20261031T095531Z/TEST835_offline_key.json  40329 B  f9f4a3a6293d8bcad7baa216723b8a56ad5a4e5969d2d307946e9e0941ee2cdc
+  /content/TEST835_20261031T095531Z/TEST835_results.json  894500 B  61a8ccc0bdeb3180404f5a63e0f05b7129653f4d89c9c387b8f0262b9c1281d0
+  /content/TEST835_20261031T095531Z/TEST835_run_table.csv  6974 B  8a0e47401ef7c71c6e0dca4bd8feac0f0e0b04cdbd37dd2d5babf4b6de7b7eee
+  (tam konsol kaydı yukarıdaki listede: TEST835_full_console_20261031T095531Z.txt)
+==============================================================================
