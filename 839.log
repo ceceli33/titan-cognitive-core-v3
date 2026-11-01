@@ -1,0 +1,91 @@
+==============================================================================
+AKBASCORE TEST839 — modelin ürettiği fiziksel adres tokenlerinin mekanik uygulanması; Qwen2.5-72B-Instruct (NF4, donmuş), tek A100-80GB
+Kaynak kilitleri: 829.py a5a25460a3a6bbdf62a0571a9b5ff19e64159cf7 | 834.py ab7b2046d7b7e7be18aed8c6ce5a1397e0c991d7 | 779.py fa7017a87f25ecef6ed2b2954a850599cb25fcd9 | 838.py 99e4e28e06149d22bb33a40e3037f9b93270c1bb | 838.log 469618a7c6e8d09356d6c467de255ce67e5894ba
+Kilitli yardımcılar (AST, 2 fonksiyon) SHA-256 fcf858ab0a79f46acd2d39f02cb9b90d5e4f2ef711d1ca1a37b80d25f6195f68
+BODY839 SHA-256 b6f81e31a0504419d3200d24ab790644fa5dc5a46f2ff1a7f1a18a34d3feaa67 | yamalı kaynak AST geçti (99643 bayt, SHA-256 3e26e68ac7c169ca8e95d08bf0c87cb7b0744da40bc5f458d3d0e89c355f9e6d)
+Kapsam: 12 görülmemiş dünya, 18 kartuşluk 4 banka, 120 bölüm (FULL x 2 ID sürümü x 2 sıra + 3 çıkarma koşulu x 2 sıra) | düzey C (banka takılmadan adresleme) TEST EDİLMİYOR
+Tam konsol kaydı: /content/TEST839_full_console_20261101T044742Z.txt
+==============================================================================
+Çalışma: TEST839_20261101T044742Z | panel SHA-256: 994777c16986b5ba4941ac4eb39f1264320f037e0ac947371ee0ebc7dab5a865
+GPU: {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+GPU boş VRAM (yükleme öncesi): 78.83 GiB
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Sızıntı kapısı: çevrimdışı işaretinden önce hiçbir etiket nesnesi kullanılmıyor (AST)
+Kaynak doğrulama: free_generate bytecode = kilitli 779 derlemesi (aynı boru hattı); greedy argmax, örnekleme yok
+Kaynak doğrulama: AttentionIntervention bytecode = kilitli 779 (bias=0: maske değişmez)
+Bilgi: Cut3Diagnostic kilitli 779 bytecode eşitliği {"__init__": true, "__enter__": true, "__exit__": true} (seed=None: enjeksiyon dalı çalışmaz)
+Kaynak doğrulama: tüm üretim çağrıları seed=None, gain=0, spans=None; cevap çerçevesine adres metni girmiyor
+Kaynak doğrulama: yürütücü yalnızca birebir Record-ID eşlemesi (benzerlik/sıralama/düzeltme yok)
+Kaynak doğrulama tamam (model yüklenmeden önce)
+Maliyet üst sınırı (model yükleme hariç, %25 pay dahil): 182.0 dk | bölüm 120, banka mount 88 | kartuş 145 | fusion<=5654 üretim<=8441
+Model yükleniyor (Qwen2.5-72B-Instruct, NF4, tek yükleme)...
+Model yüklendi (801.351 s). Fiziksel kartuşlar üretiliyor ve SHA doğrulanıyor...
+Fiziksel kartuşlar: 145 (her biri SHA-256 + tensör SHA ile yeniden yüklendi)
+Mimari (NL,H,QH,KVH,HD): (80, 8192, 64, 8, 128) | BF16 hesap, NF4, ağırlıklar donmuş
+Boş VRAM (model sonrası): 40.05 GiB
+Devam mekanizması: yeniden kullanılan bölüm 0 | None
+  BANKS       22/88 (30.8 dk)
+  BANKS       44/88 (44.3 dk)
+  BANKS       66/88 (55.5 dk)
+  BANKS       88/88 (66.8 dk)
+Determinizm (adres metni yeniden üretimi): True
+Ölçüm bitti; çevrimdışı değerlendirme (67.3 dk)
+==============================================================================
+TEST839 SONUÇ ÖZETİ (adres = modelin greedy çıktısı; yürütücü = birebir Record-ID eşlemesi)
+==============================================================================
+Durum: COMPLETE_TEST839_EVALUATED | bütçe durdurması: False | devam: yeniden kullanılan bölüm 0 | determinizm: address_text_identical=True, original=R66056 R19316, replay=R66056 R19316
+Bütünlük: 1757 kapı, 0 başarısız | kaynak doğrulama: free_generate/AttentionIntervention bytecode = kilitli 779, greedy argmax, seed=None/gain=0/bias=0, yürütücü AST beyaz liste, çevrimdışı öncesi etiket yok
+------------------------------------------------------------------------------
+[A] BANKA BAĞLAMDAYKEN MODEL-NATIVE ID SEÇİMİ (18 kartuş takılı; tam banka modele görünür)
+  FULL: kendi zinciri (ilk + geçerli devam, fazlası yok) 11/48 | geçersiz adres içeren bölüm 1/48
+  FULL                  adres sınıfları: CHAIN=11, CHAIN_WITH_EXTRA=7, DISTRACTED=30
+  REMOVE_SECOND         adres sınıfları: CHAIN=8, DISTRACTED=16
+  REMOVE_CONTINUATIONS  adres sınıfları: DISTRACTED=24
+  REMOVE_FIRST          adres sınıfları: DISTRACTED=24
+  FULL                  seçilen roller : OTHER_MIRROR=1, OTHER_SECOND=1, OWN_CHANGED=10, OWN_DECOY=25, OWN_FIRST=38, OWN_FORK=21, OWN_MIRROR=1, OWN_SECOND=8
+  REMOVE_SECOND         seçilen roller : OTHER_FIRST=1, OWN_CHANGED=8, OWN_DECOY=8, OWN_FIRST=18, OWN_FORK=13
+  REMOVE_FIRST          seçilen roller : OTHER_MIRROR=1, OWN_DECOY=21, OWN_FORK=24, OWN_MIRROR=3, OWN_SECOND=1
+  REMOVE_CONTINUATIONS  seçilen roller : OWN_DECOY=8, OWN_FIRST=19, OWN_FORK=19, OWN_MIRROR=2
+  ID değişimi (v0 -> v1, aynı içerik): aynı içerik 11/24 | aynı içerik ve zincir 3/24 | v0 ID dizgileri v1'de aynen tekrar 0/24
+  Sıra değişimi (FORWARD/REVERSE): aynı içerik ya da ikisi de temiz zincir 3/24 | birebir aynı içerik 3/24
+  Çıkarma kontrolleri: REMOVE_SECOND=8/24, REMOVE_CONTINUATIONS=0/24, REMOVE_FIRST=0/24
+  Adres üretilemeyen bölüm 0/120 (NONE yazan 2/120) | geçersiz adres içeren 1/120 (toplam 1 dizgi) | adres metninde varlık adı 0/120 | token bütçesi doldu 0/120 | ort. geçerli ID 2.092 | biçimi bozuk ID benzeri dizgi 1 (uygulanmadı)
+  Koşullara göre boş adres: FULL=0/48, REMOVE_SECOND=0/24, REMOVE_CONTINUATIONS=0/24, REMOVE_FIRST=0/24
+[B] UYGULANAN ADRES SONRAKİ HESAPLAMAYI BELİRLİYOR MU (cevap yalnız modelin adreslediği mount üzerinde)
+  Doğru cevap (120): kendi adresi 42/120 | eşit boyutlu rastgele seçim 48/120 | tüm banka 13/120
+  FULL                  kendi 14/48 | rastgele 0/48 | tüm banka 7/48 | kendi cevap kategorileri ALT_END=9, END=5, OTHER:FORK_END=9, OTHER:MIDDLE=13, UNKNOWN=12
+  REMOVE_SECOND         kendi 8/24 | rastgele 0/24 | tüm banka 6/24 | kendi cevap kategorileri ALT_END=8, OTHER:FORK_END=6, OTHER:MIDDLE=3, UNKNOWN=7
+  REMOVE_CONTINUATIONS  kendi 16/24 | rastgele 24/24 | tüm banka 0/24 | kendi cevap kategorileri OTHER:FORK_END=5, OTHER:MIDDLE=3, UNKNOWN=16
+  REMOVE_FIRST          kendi 4/24 | rastgele 24/24 | tüm banka 0/24 | kendi cevap kategorileri OTHER:FORK_END=20, UNKNOWN=4
+  Adres sınıfına göre kendi cevabı doğru: DISTRACTED=20/94, CHAIN=19/19, CHAIN_WITH_EXTRA=3/7
+[C] BANKA TAKILMADAN ADRES BULMA: TEST EDİLMEDİ — çözülmedi; milyon kartuşluk adresleme iddiası yok
+------------------------------------------------------------------------------
+ÖLÇÜTLER
+  A1_FULL_ADDRESS          FAIL
+  A2_CONTENT_FOLLOWING     FAIL
+  A3_ORDER_INVARIANCE      FAIL
+  A4_REMOVAL               FAIL
+  B1_SELF_ANSWER           FAIL
+  B2_CAUSAL                FAIL
+  C_WITHOUT_BANK           NOT_TESTED
+DÜZEYLER:
+  A_in_context_native_id_selection               FAIL
+  B_applied_address_drives_next_computation      FAIL
+  C_addressing_without_mounting_the_bank         NOT_TESTED (not solved; no large-scale claim)
+  external_cognitive_control_detected            False
+  MODEL_NATIVE_AUTONOMY                          NOT_DEMONSTRATED (single fixed address phase, no loop / stop, level C not tested)
+==============================================================================
+NİHAİ BİLİMSEL KARAR: DUR
+  Gerekçe: A1 FAIL — banka bağlamdayken bile model önceden sabit ölçütte doğru adresi üretemedi.
+Maliyet: sayılan fusion_forwards=2009, probe_forwards=3, capture_forwards=0, rank_forwards=0, generation_forwards=3279, mounts=330 | çalışma 3005.632 s | toplam gövde 3034.483 s | tepe VRAM 39.41 GiB
+==============================================================================
+SONUÇ DOSYALARI (SHA-256)
+  /content/TEST839_20261101T044742Z/TEST829_base_offline_key.json  42481 B  7c3b8b0c717b40006d2a0fadb82fdfcaca2135eee71ea6d991fe9f82a6eb1ac9
+  /content/TEST839_20261101T044742Z/TEST839.log  16171 B  cb94d852004cad4f06e0b62ba4103e26b8a7ef2e7f062488d0bacfef4b0ecfd7
+  /content/TEST839_20261101T044742Z/TEST839_case_table.csv  18335 B  56df6c507b9347bae066b70991c2dbd4a132257b8fdc7f07c5e78873d0e4a37e
+  /content/TEST839_20261101T044742Z/TEST839_episode_manifest.jsonl  17186 B  463b818399e3ab46a749a58ff484f96b6bf87a8f7b4db6c895b7427b77139577
+  /content/TEST839_20261101T044742Z/TEST839_full_console_20261101T044742Z.txt  88144 B  88081be1caec01a044b3a3778a363573f60b22a72ffe8145fde65a9291d165fc
+  /content/TEST839_20261101T044742Z/TEST839_offline_key.json  67972 B  e3118461677a49b40483a8499a9e675de4a75c62db465f798b513d6ba14eb533
+  /content/TEST839_20261101T044742Z/TEST839_results.json  536037 B  8e0826eebeea809eaffcd716c7610c60862d5c3ef336e84779b7fb50539c072e
+  /content/TEST839_20261101T044742Z/TEST839_episodes/  120 bölüm kaydı, 0.1 MB (her dosyanın SHA-256 değeri TEST839_episode_manifest.jsonl içinde)
+==============================================================================
