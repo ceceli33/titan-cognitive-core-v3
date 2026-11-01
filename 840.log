@@ -1,0 +1,80 @@
+==============================================================================
+AKBASCORE TEST840 — native H3 latent router: seçici Transformer bypass + GPU sayısal adres + fiziksel CUT3; Qwen2.5-72B (NF4, donmuş)
+Kaynak kilitleri: 829 a5a25460a3a6 | 834 ab7b2046d7b7 | 779 fa7017a87f25 | 730 b1bad9eb3b11 | 757 3d88bf863839 | 839 b76cf9f108f8 | v2 610(sha256) a62611a4ffd9 | v2 626 86ccdbcc3c48 | v2 627 483477eb375a
+Kilitli yardımcılar (AST, 2 fonksiyon) SHA-256 fcf858ab0a79f46acd2d39f02cb9b90d5e4f2ef711d1ca1a37b80d25f6195f68
+BODY840 SHA-256 64a4a65d92ff1d3bbc75645ca484c70ee37b33c703d699e2f3140bfbd0cff713 | yamalı kaynak AST geçti (110932 bayt, SHA-256 9b1c359db956d28130ccb037dfd39f4c8873ac8ea5ca99b460e25a8178b7303a)
+Kapsam: 12 görülmemiş dünya, 21 kartuşluk 4 banka (+ yeni fiziksel kimlikli kopyalar), 156 iş | yönlendirici = mühendislik, bilişsel kontrol test edilmiyor
+Tam konsol kaydı: /content/TEST840_full_console_20261101T083317Z.txt
+==============================================================================
+Çalışma: TEST840_20261101T083317Z | panel SHA-256: 73efec262ca1e4d1d9b593f419a8b57a910d3531f6a824604bb5460c131d42b2
+GPU: {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+GPU boş VRAM (yükleme öncesi): 78.83 GiB
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Sızıntı kapısı: çevrimdışı işaretinden önce hiçbir etiket nesnesi kullanılmıyor (AST)
+Kaynak doğrulama: katman listesi yalnızca bypass fonksiyonunda kısaltılıyor ve finally ile geri yükleniyor
+Kaynak doğrulama: free_generate bytecode = kilitli 779 derlemesi (aynı boru hattı); greedy argmax, örnekleme yok
+Kaynak doğrulama: AttentionIntervention bytecode = kilitli 779 (bias=0: maske değişmez)
+Bilgi: Cut3Diagnostic kilitli 779 bytecode eşitliği {"__init__": true, "__enter__": true, "__exit__": true} (seed=None: enjeksiyon dalı çalışmaz)
+Kaynak doğrulama: cevap üretimi seed=None, gain=0, spans=None; adresleme dil üretimi kullanmıyor
+Kaynak doğrulama: yönlendirici yalnızca H3 satırları, aday listesi ve takılı kartları görüyor (etiket yok)
+Kaynak doğrulama: DirectCut3 bytecode = kilitli 730 derlemesi
+Kaynak doğrulama: v2 610/626/627 adresleme formülleri kaynakta doğrulandı (L3, rank-0, beta 8, PEAK50)
+Kaynak doğrulama tamam (model yüklenmeden önce)
+Maliyet üst sınırı (model yükleme hariç, %25 pay dahil): 23.1 dk | iş 156 | kartuş 181 (banka 168) | fusion<=276 bypass<=124 üretim<=881
+Model yükleniyor (Qwen2.5-72B-Instruct, NF4, tek yükleme)...
+Model yüklendi (800.812 s). Fiziksel kartuşlar üretiliyor ve SHA doğrulanıyor...
+Fiziksel kartuşlar: 181 (her biri SHA-256 + tensör SHA ile yeniden yüklendi)
+Mimari (NL,H,QH,KVH,HD): (80, 8192, 64, 8, 128) | BF16 hesap, NF4, ağırlıklar donmuş
+Boş VRAM (model sonrası): 40.05 GiB
+==============================================================================
+TEST840 SONUÇ ÖZETİ (H3 bypass + GPU PEAK50 yönlendirici = MÜHENDİSLİK; bilişsel kontrol yok)
+==============================================================================
+Durum: COMPLETE_TEST840_EVALUATED | bütçe durdurması: False | devam: yeniden kullanılan iş 0
+Bütünlük: 1311 kapı, 0 başarısız | dış bilişsel kontrol tespit edildi: False
+------------------------------------------------------------------------------
+[BYPASS] adresleme geçişi: gömme + rotary + maske + katman 0-3 (modelin kendi modülleri), 4-79 ve lm_head yok
+  H3 [32, 8192] torch.bfloat16 | NULL bellek: bitwise True, maks fark 0 | tek kartlık bellek: bitwise True, maks fark 0
+  Çağrı sayıları — bypass: alt [1, 1, 1, 1], üst maks 0, lm_head 0 | tam forward: üst min 1, lm_head 1
+  Süre: bypass 58.372 ms / tam forward 194.679 ms (NULL bellek) | medyan: bypass 15.17 ms, yönlendirici 8.561 ms, mount 269.3 ms, cevap 1140 ms
+  CUT3 mount + cevap sırasında üst katmanlar çalıştı: üst min 4, lm_head 4 | anahtar bankası yükleme 3.624 s
+[A] İlk adres (NULL durum): kendi ilk kart 8/12 | roller OWN_FIRST=8, OWN_FORK=4 | ilk kart sırası medyanı 1
+[B] İkinci adres — tasarlanmış ilk kart takılıyken top-1 geçerli devam 0/12 | roller OWN_DECOY=6, OWN_FORK=6
+    canlı zincir (yönlendiricinin kendi c1 -> c2) 0/12 | ikinci geçiş rolleri OWN_DECOY=8, OWN_FORK=2, OWN_FIRST=2 | canlı cevap doğru 0/12
+[C] Bellek bağımlılığı: geçerli devam sırası ilk kart takılıyken NULL'dan iyi 1/12 | (NULL, İLK) sıraları [(3, 3), (3, 3), (5, 5), (3, 3), (4, 4), (4, 4), (4, 3), (4, 4), (4, 4), (4, 5), (3, 3), (3, 3)]
+[D] Köprü değişimi (S->M' takılı): iki yönlü kayma 0/12 | köprü-sonrası top-1 rolleri OWN_DECOY=6, OWN_FORK=6
+[E] Fork/decoy: ilk kart takılıyken top-1 fork/decoy değil 0/12 | fork takılıyken OWN_FIRST=9, OWN_DECOY=3 | decoy takılıyken OWN_FIRST=8, OWN_FORK=4
+[F] Değişmezlik (mühendislik): anahtar sırası maks fark 9.017e-09 | yeni kimlikli anahtarlar bitwise aynı 84/84 | aynı içerik (ilk kart sonrası) 12/12, (ilk geçiş) 12/12
+[G] Devam kartı yokken: ikinci geçiş rolleri OWN_DECOY=8, OWN_FORK=2, OWN_FIRST=2 | cevaplar MIDDLE=6, UNKNOWN=4, FORK_END=2 (çekimserlik iddiası yok)
+[H] Ablasyon cevapları: ilk+ikinci uç 12/12 | NULL UNKNOWN 12/12 | köprüsü bozuk+ikinci UNKNOWN 8/12 | köprü+köprü-devam 12/12 | ilk+ilgisiz UNKNOWN 12/12
+    canlı zincir cevap kategorileri MIDDLE=6, UNKNOWN=4, FORK_END=2
+[İkincil, çevrimdışı] fark sorgusu (kart - NULL): ilk kart sonrası geçerli sıra [8, 10, 1, 1, 5, 17, 7, 2, 1, 2, 6, 8] | köprü sonrası köprü-devam sırası [1, 4, 11, 6, 16, 13, 6, 14, 4, 7, 5, 12]
+------------------------------------------------------------------------------
+ÖLÇÜTLER
+  A1_FIRST_ADDRESS         FAIL
+  B1_SECOND_AFTER_FIRST    FAIL
+  B2_LIVE_CHAIN            FAIL
+  C1_MEMORY_DEPENDENCE     FAIL
+  D1_BRIDGE_SENSITIVITY    FAIL
+  E1_FORK_DECOY            FAIL
+  F_INVARIANCE             FAIL
+  G_MISSING                REPORTED_ONLY
+  H_ABLATION               FAIL
+ÜÇ AYRI HÜKÜM:
+  NATIVE_TENSOR_ROUTING           uygulama: IMPLEMENTED_ENGINEERING_ROUTER | ilişkisel ikinci geçiş: FAIL
+  MODEL_NATIVE_COGNITIVE_CONTROL  NOT_DEMONSTRATED (fixed router and fixed pass count)
+  AUTONOMOUS_RECURSIVE_REASONING  NOT_DEMONSTRATED
+==============================================================================
+NİHAİ BİLİMSEL KARAR: DUR
+  Gerekçe: C1 FAIL ve D1 FAIL — katman 0-3 durumu takılı belleğe ilişkisel olarak bağlanmadı.
+Maliyet: sayılan fusion_forwards=243, probe_forwards=5, capture_forwards=0, rank_forwards=0, generation_forwards=368, mounts=171, bypass_forwards=122 | çalışma 278.572 s | toplam gövde 285.911 s | tepe VRAM 39.28 GiB
+==============================================================================
+SONUÇ DOSYALARI (SHA-256)
+  /content/TEST840_20261101T083317Z/TEST829_base_offline_key.json  50833 B  deeba51f5552ee2b57973a5f8c93e1c2dabf42cfeb90fe60a8e6b2f2c2b2e0d5
+  /content/TEST840_20261101T083317Z/TEST840.log  15072 B  bd74db3234a13fd0c5ecb90d05b6683f4a1779610121e6aa7c7aa58f00463ad8
+  /content/TEST840_20261101T083317Z/TEST840_case_table.csv  5371 B  9004f8569ef82d6cb3590cc6cbda24a3320012e10430d4a79f9a29ac6b187789
+  /content/TEST840_20261101T083317Z/TEST840_full_console_20261101T083317Z.txt  125679 B  0a7005b2a9c3dc7a0b89adf237599ced053db306110e9d152ef2d1466743ea10
+  /content/TEST840_20261101T083317Z/TEST840_job_manifest.jsonl  40826 B  2097928b96e1cbb73663eeabd667e22ee43c9c02829cef654e67a662ef5d8db0
+  /content/TEST840_20261101T083317Z/TEST840_offline_key.json  76188 B  343ac58c73694b172eb3e784326cf327327aa1a93cbeb787cf8cda925684b244
+  /content/TEST840_20261101T083317Z/TEST840_results.json  312799 B  07ed1f54dd502c44d5a579e2a01e34c395b764b6fe42abd1aaf7dc141a6d44e5
+  /content/TEST840_20261101T083317Z/TEST840_jobs/  312 iş kaydı, 107.6 MB (her dosyanın SHA-256 değeri TEST840_job_manifest.jsonl içinde)
+==============================================================================
