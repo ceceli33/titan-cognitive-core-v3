@@ -1,0 +1,114 @@
+==============================================================================
+AKBASCORE TEST841 — latent yeniden giriş (D1 / M2-yumuşak / M2-sert) + TEST840 bypass + GPU PEAK50 + fiziksel CUT3 + model-seçimli eylem döngüsü; Qwen2.5-72B (NF4, donmuş)
+Kaynak kilitleri: 829 a5a25460a3a6 | 834 ab7b2046d7b7 | 779 fa7017a87f25 | 730 b1bad9eb3b11 | 757 3d88bf863839 | 839 b76cf9f108f8 | 840 06bc63ddcda9 | v2 610(sha256) a62611a4ffd9 | v2 626 86ccdbcc3c48 | v2 627 483477eb375a
+Kilitli yardımcılar (AST, 2 fonksiyon) SHA-256 fcf858ab0a79f46acd2d39f02cb9b90d5e4f2ef711d1ca1a37b80d25f6195f68
+BODY841 SHA-256 182399edc577ec4342f8f6493d6c72167e0d3a8a845b5d0635d0091cd1ff1aa3 | yamalı kaynak AST geçti (142221 bayt, SHA-256 4d94551753b98545d4d549a1549f6577b99ce6004e1ebe11f826e5e48faecfe4)
+Kapsam: 12 görülmemiş dünya, 21 kartuşluk 4 banka (+ yeni kimlikli kopyalar), 360 iş (120 durum, 72 cevap, 60 eylem, 108 döngü) | K=8 yankı vektörü, döngü bütçesi 5 adım
+Tam konsol kaydı: /content/TEST841_full_console_20261101T114849Z.txt
+==============================================================================
+Çalışma: TEST841_20261101T114849Z | panel SHA-256: 72f34fe1ace469bae5231b9a0fd9675f8b016a77e94783bbcba0647246aafb64
+GPU: {'name': 'NVIDIA A100-SXM4-80GB', 'vram_gib': 79.25, 'gpu_count': 1}
+GPU boş VRAM (yükleme öncesi): 78.83 GiB
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Sızıntı kapısı: çevrimdışı işaretinden önce hiçbir etiket nesnesi kullanılmıyor (AST)
+Kaynak doğrulama: katman listesi yalnızca bypass fonksiyonunda kısaltılıyor ve finally ile geri yükleniyor
+Kaynak doğrulama: ağırlık / embedding / norm / lm_head yazımı yok (AST)
+Kaynak doğrulama: free_generate bytecode = kilitli 779 derlemesi (aynı boru hattı); greedy argmax, örnekleme yok
+Kaynak doğrulama: AttentionIntervention bytecode = kilitli 779 (bias=0: maske değişmez)
+Bilgi: Cut3Diagnostic kilitli 779 bytecode eşitliği {"__init__": true, "__enter__": true, "__exit__": true} (seed=None: enjeksiyon dalı çalışmaz)
+Kaynak doğrulama: iki üretim çağrısı (cevap çerçevesi, eylem çerçevesi): seed=None, gain=0, spans=None, greedy
+Kaynak doğrulama: yönlendirici yalnızca H3 satırları, aday listesi ve takılı kartları görüyor (etiket yok)
+Kaynak doğrulama: yankı yalnızca takılı belleği, sabit çerçeveyi ve modelin kendi tensörlerini görüyor
+Kaynak doğrulama: DirectCut3 bytecode = kilitli 730 derlemesi
+Kaynak doğrulama: v2 610/626/627 adresleme formülleri kaynakta doğrulandı (L3, rank-0, beta 8, PEAK50)
+Kaynak doğrulama tamam (model yüklenmeden önce)
+Maliyet üst sınırı (model yükleme hariç, %25 pay dahil): 117.9 dk | iş 360 | kartuş 181 (banka 168) | fusion<=3636 bypass<=1028 üretim<=11765
+Model yükleniyor (Qwen2.5-72B-Instruct, NF4, tek yükleme)...
+Model yüklendi (800.219 s). Fiziksel kartuşlar üretiliyor ve SHA doğrulanıyor...
+Fiziksel kartuşlar: 181 (her biri SHA-256 + tensör SHA ile yeniden yüklendi)
+Mimari (NL,H,QH,KVH,HD): (80, 8192, 64, 8, 128) | BF16 hesap, NF4, ağırlıklar donmuş
+Boş VRAM (model sonrası): 40.05 GiB
+Giriş/çıkış matrisleri: embed [152064, 8192] torch.bfloat16 | lm_head torch.bfloat16 | bağlı (tied) False | ortalama embedding satır RMS 0.008891
+Orta katman anahtar bankası (tanı): 168 kart, katman-3 kartuşla bitwise 168/168, maks göreli fark 0, bağlam eşleşmesi True, 42.491 s
+Bypass doğrulama: H3 bitwise (NULL True, kart True, embeds yolu True) | bypass çağrıları alt [1, 1, 1, 1] üst 0 lm_head 0 | 15.652 ms vs tam 239.141 ms
+Yankı doğrulama: her adımda 80 katman + lm_head {'lower_calls': [8, 8, 8, 8], 'upper_min': 8, 'upper_max': 8, 'lm_head': 8} | sert yankı deterministik True | 1421.119 ms
+Devam mekanizması: yeniden kullanılan iş 0 | None
+Üst katman yeniden hesaplama doğrulandı (CUT3 mount + cevap): {'lower_calls': [8, 8, 8, 8], 'upper_min': 8, 'upper_max': 8, 'lm_head': 8}
+  JOBS        45/360 (23.6 dk)
+  JOBS        90/360 (27.7 dk)
+  JOBS        135/360 (31.6 dk)
+  JOBS        180/360 (36.1 dk)
+  JOBS        225/360 (40.2 dk)
+  JOBS        270/360 (44.4 dk)
+  JOBS        315/360 (49.4 dk)
+  JOBS        360/360 (54.9 dk)
+Ölçüm bitti; çevrimdışı değerlendirme (54.9 dk)
+==============================================================================
+TEST841 SONUÇ ÖZETİ (latent yeniden giriş; yönlendirici = MÜHENDİSLİK; eylem kelimesi = modelin çıktısı)
+==============================================================================
+Durum: COMPLETE_TEST841_EVALUATED | bütçe durdurması: False | devam: yeniden kullanılan iş 0
+Bütünlük: 2775 kapı, 0 başarısız | dış bilişsel kontrol tespit edildi: False
+------------------------------------------------------------------------------
+[BYPASS] H3 [33, 8192] torch.bfloat16 | NULL bitwise True, kart bitwise True, embeds yolu bitwise True | yankı her adımda tam model {'lower_calls': [8, 8, 8, 8], 'upper_min': 8, 'upper_max': 8, 'lm_head': 8}
+  embed [152064, 8192] torch.bfloat16, lm_head torch.bfloat16, bağlı False | orta katman anahtarları bağlam eşleşmesi True (maks göreli fark 0)
+  Süre medyan: yankı M2S 1298 / M2H 1286 / D1 1285 ms | indeks bypass 11.83 ms | yönlendirici 7.238 ms | mount 274.8 ms | cevap 1446 ms
+------------------------------------------------------------------------------
+ARA ÖLÇÜMLER (çevrimdışı; modelin kendi son normu + lm_head ile logit lens)
+  [IV.3] ilk kart takılıyken sonraki token argmax = köprü varlığının ilk tokeni 12/12 (PASS) | S->M' takılıyken yeni köprü 12/12
+  [IV.2] köprü tokeni sırası ilk kartla NULL ve ilgisiz karttan iyi 12/12 (PASS) | sert yankı köprü adını içeriyor 12/12
+  [lens] köprü tokeni medyan sıra, katman [8, 16, 24, 32, 40, 48, 56, 64, 72, 79]:
+     S_NULL    [1.31e+05, 1.364e+05, 9.364e+04, 9.798e+04, 7.114e+04, 1.74e+04, 2.471e+04, 1.71e+04, 1.819e+04, 128]
+     S_FIRST   [1.287e+05, 1.374e+05, 9.626e+04, 1.017e+05, 7.113e+04, 1.992e+04, 1.997e+04, 5887, 1, 1]
+     S_IRREL   [1.28e+05, 1.373e+05, 9.545e+04, 1.043e+05, 7.565e+04, 2.633e+04, 2.151e+04, 1.01e+04, 1.588e+04, 134]
+     S_BRIDGED (yeni köprü) [1.196e+05, 1.354e+05, 1.233e+05, 1.162e+05, 7.622e+04, 5.352e+04, 3.284e+04, 4574, 9, 1]
+  [IV.1] son katman durum değişimi ilk/ilgisiz oranı [1.38, 1.46, 1.48, 1.56, 1.65, 1.6, 2.05, 1.59, 1.6, 1.64, 1.81, 1.64]
+  [IV.8] yumuşak-sert kosinüs [0.98, 1, 1, 0.991, 1, 0.758, 1, 1, 0.987, 0.626, 0.755, 0.996] | yumuşak entropi [0.142, 0.081, 0.056, 0.149, 0.11, 0.337, 0.113, 0.114, 0.197, 0.139, 0.105, 0.132] | 1. vektörün köprü embedding kosinüsü M2S=1, M2H=1, D1=0.002705 | başlangıç M2S=0.05551, M2H=0.05551, D1=-0.006634
+------------------------------------------------------------------------------
+ADRESLEME KOLLARI (R1 köprü kartı | R1V geçerli yön | SHIFT köprü değişimi | NULL/ilgisiz | fork/decoy | ID | çerçeve B)
+  CTRL840  R1 0/12 FAIL | R1V 0/12 | SHIFT 0/12 FAIL | 12/12/12/12 PASS | 12/12/12/12 PASS | ID 12/12 | B 0/12/0/12 | DÖNÜŞÜM FAIL
+  M2S      R1 12/12 PASS | R1V 12/12 | SHIFT 12/12 PASS | 10/12/10/12 PASS | 11/12/10/12 PASS | ID 12/12 | B 12/12/12/12 | DÖNÜŞÜM PASS
+  M2H      R1 12/12 PASS | R1V 12/12 | SHIFT 12/12 PASS | 9/12/9/12 FAIL | 11/12/10/12 PASS | ID 12/12 | B 12/12/12/12 | DÖNÜŞÜM FAIL
+  D1       R1 2/12 FAIL | R1V 1/12 | SHIFT 1/12 FAIL | 9/12/9/12 FAIL | 11/12/11/12 PASS | ID 12/12 | B 2/12/1/12 | DÖNÜŞÜM FAIL
+  D1_1     R1 1/12 FAIL | R1V 0/12 | SHIFT 0/12 FAIL | 9/12/9/12 FAIL | 11/12/11/12 PASS | ID 12/12 | B 1/12/0/12 | DÖNÜŞÜM FAIL
+  M1_L16   R1 1/12 FAIL | R1V 1/12 | SHIFT 0/12 FAIL | 11/12/11/12 PASS | 11/12/10/12 PASS | ID 12/12 | B 1/12/0/12 | DÖNÜŞÜM FAIL
+  M1_L32   R1 2/12 FAIL | R1V 2/12 | SHIFT 0/12 FAIL | 9/12/9/12 FAIL | 10/12/10/12 PASS | ID 12/12 | B 2/12/0/12 | DÖNÜŞÜM FAIL
+  M1_L48   R1 0/12 FAIL | R1V 0/12 | SHIFT 0/12 FAIL | 11/12/11/12 PASS | 11/12/12/12 PASS | ID 12/12 | B 0/12/0/12 | DÖNÜŞÜM FAIL
+  M1_L64   R1 3/12 FAIL | R1V 3/12 | SHIFT 1/12 FAIL | 12/12/12/12 PASS | 12/12/12/12 PASS | ID 12/12 | B 4/12/1/12 | DÖNÜŞÜM FAIL
+  M1_L79   R1 2/12 FAIL | R1V 2/12 | SHIFT 0/12 FAIL | 12/12/12/12 PASS | 10/12/9/12 FAIL | ID 12/12 | B 2/12/0/12 | DÖNÜŞÜM FAIL
+    M2S ilk kart sonrası top-1 rolleri: OWN_SECOND=4, OWN_CHANGED=8
+    M2H ilk kart sonrası top-1 rolleri: OWN_SECOND=5, OWN_CHANGED=7
+    D1 ilk kart sonrası top-1 rolleri: OTHER_MIRROR=2, OWN_MIRROR=1, OWN_DECOY=1, OTHER_DECOY=2, OTHER_BRIDGECONT=3, OWN_CHANGED=1, OTHER_CHANGED=1, OWN_BRIDGECONT=1
+------------------------------------------------------------------------------
+KAPALI DÖNGÜ (modelin kendi eylem kelimesi harfiyen uygulandı; bütçe durdurması modelin kararı değildir)
+  Tasarlanmış durumlar: NULL->SEARCH 12/12 | ilk->SEARCH 12/12 | ilk+ikinci->ANSWER 10/12 | bozuk köprü->ANSWER değil 12/12 | PASS
+    dağılımlar: ACT_NULL=SEARCH=12, ACT_FIRST=SEARCH=12, ACT_COMPLETE=ANSWER=10, INVALID=2, ACT_BROKEN=SEARCH=12, ACT_FORK=SEARCH=12
+  M2S  L1 canlı 1/12 FAIL | L2 eksik 9/12 PASS | L3 fork 0/12 FAIL | bütçe durdurması 2/1/2
+       canlı bitişler MODEL_STOP=6, MODEL_ANSWER=4, BUDGET_STOP=2 | eksik bitişler MODEL_STOP=6, MODEL_ANSWER=5, BUDGET_STOP=1 | fork bitişler MODEL_ANSWER=9, INVALID_ACTION=1, BUDGET_STOP=2
+  M2H  L1 canlı 1/12 FAIL | L2 eksik 9/12 PASS | L3 fork 0/12 FAIL | bütçe durdurması 1/1/2
+       canlı bitişler MODEL_STOP=7, MODEL_ANSWER=4, BUDGET_STOP=1 | eksik bitişler MODEL_STOP=7, MODEL_ANSWER=4, BUDGET_STOP=1 | fork bitişler MODEL_ANSWER=9, INVALID_ACTION=1, BUDGET_STOP=2
+  D1   L1 canlı 0/12 FAIL | L2 eksik 4/12 FAIL | L3 fork 1/12 FAIL | bütçe durdurması 7/7/4
+       canlı bitişler MODEL_STOP=4, BUDGET_STOP=7, INVALID_ACTION=1 | eksik bitişler MODEL_STOP=4, BUDGET_STOP=7, MODEL_ANSWER=1 | fork bitişler MODEL_ANSWER=8, BUDGET_STOP=4
+[H] Cevaplar: ilk+ikinci uç 12/12 | ikinci+ilk uç 12/12 | NULL UNKNOWN 12/12 | bozuk köprü UNKNOWN 12/12 | köprü+köprü-devam 12/12 | ilgisiz UNKNOWN 12/12 | PASS
+[F] Anahtar sırası maks fark 3.191e-08, aynı argmax True | yeni kimlikli anahtarlar bitwise aynı 84/84 | PASS
+------------------------------------------------------------------------------
+HÜKÜMLER:
+  LATENT_ADDRESS_CONVERSION          CTRL840=FAIL, M2S=PASS, M2H=FAIL, D1=FAIL, D1_1=FAIL, M1_L16=FAIL, M1_L32=FAIL, M1_L48=FAIL, M1_L64=FAIL, M1_L79=FAIL
+  MODEL_CHOSEN_ACTIONS_IN_FIXED_LOOP ACT=PASS, M2S=L1_LIVE=FAIL, L2_MISSING=PASS, L3_FORK=FAIL, M2H=L1_LIVE=FAIL, L2_MISSING=PASS, L3_FORK=FAIL, D1=L1_LIVE=FAIL, L2_MISSING=FAIL, L3_FORK=FAIL
+  MODEL_NATIVE_COGNITIVE_CONTROL     NOT_DEMONSTRATED
+  AUTONOMOUS_RECURSIVE_REASONING     NOT_DEMONSTRATED (two-hop synthetic chains, fixed vocabulary, fixed loop)
+  Ölçülmedi / ertelendi: KORU vs DUZELT when two mounted records conflict (both continuations present); chains longer than two links; variable chain length; non-synthetic memories; model-generated action vocabulary (the four words are fixed by the experimenter); model-native stopping without a fixed vocabulary
+==============================================================================
+NİHAİ BİLİMSEL KARAR: DEVAM
+  Gerekçe: M2S kolunda R1, SHIFT, NULL/ilgisiz ve fork/decoy kontrolleri PASS — derin hesaplama sabit yönlendiriciyle bir sonraki fiziksel adrese dönüştü. Yönlendirici mühendisliktir.
+Maliyet: sayılan fusion_forwards=1090, probe_forwards=879, capture_forwards=0, rank_forwards=0, generation_forwards=6453, mounts=560, bypass_forwards=827 | çalışma 2210.148 s | toplam gövde 2264.022 s | tepe VRAM 40.16 GiB
+==============================================================================
+SONUÇ DOSYALARI (SHA-256)
+  /content/TEST841_20261101T114849Z/TEST829_base_offline_key.json  50833 B  a859197718d1aa444f7fb0be6a19ffe1f0e2fbf1874505864e665ca16f04028f
+  /content/TEST841_20261101T114849Z/TEST841.log  47471 B  8d02301b23632ceb01f6a69ebe1a1835ed646a2e4176fdddba218aeaac5c12af
+  /content/TEST841_20261101T114849Z/TEST841_case_table.csv  45309 B  2bc1c7c117ddb2da656381b0216dfa7780320967a3d27f9fdb0230257f9c5a02
+  /content/TEST841_20261101T114849Z/TEST841_full_console_20261101T114849Z.txt  155014 B  5d277fac5d0e5b9238256b5492e1d4e2c4b01da46443084411ec6768405f2e29
+  /content/TEST841_20261101T114849Z/TEST841_job_manifest.jsonl  93866 B  4b7383cac5d11fb2e42f5ea627cbfd3afa1076850b21a93b6087e1ebaf4f1232
+  /content/TEST841_20261101T114849Z/TEST841_offline_key.json  93574 B  da98b8ab6f726040adc39ad1f648a9c926c979b541fc788ab09517ab8ae36b2b
+  /content/TEST841_20261101T114849Z/TEST841_results.json  869614 B  82f8a4ba4d22b9f353d5a961ff578099ed827b7ed66b6f502502f08afc95b354
+  /content/TEST841_20261101T114849Z/TEST841_jobs/  720 iş kaydı, 200.9 MB (her dosyanın SHA-256 değeri TEST841_job_manifest.jsonl içinde)
+==============================================================================
