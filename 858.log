@@ -1,0 +1,102 @@
+TEST858: locked 857 spine; state transfer and matched feedback only.
+GPU EXECUTION: NOT VERIFIED BY AUTHOR; restart Colab before this cell.
+GATE0 SOURCE 849.py 01a6ac43cbc954cc2f6ceaf8cf0238333ec762b1 PASS
+GATE0 SOURCE 850.py 79cc5ab211c01b37324e2d6897a298e84db42101 PASS
+GATE0 SOURCE 851.py 0f01e73b9ad160c988cfe059e8b5ae5e1f35f65b PASS
+GATE0 SOURCE 852.py 4174e9241f773d6a031c51296b6beb11d4637aa5 PASS
+GATE0 SOURCE 853.py a7033caa10fdb86f8f0ee0b8ed1a0ac7514e26be PASS
+GATE0 SOURCE 854.py a158d92a61c15a5e71468146d6c1ceeaedce436c PASS
+GATE0 SOURCE 850.log c070ef432e95f80cd9a1c28318fd2e4a10377296 PASS
+GATE0 SOURCE 851.log b38419ef3a069ea4e20d43d15e6d939318083a9a PASS
+GATE0 SOURCE 852.log b434a1e36b22fd99f9590c8b98b8094e927db458 PASS
+GATE0 SOURCE 853.log 0bfa9104337c44adaf4a07ec0ce6b5e41f457494 PASS
+GATE0 SOURCE 854.log 2aa1f85e14d52acbd1ecbad5b5c7df10df0bbcd4 PASS
+GATE0 SOURCE 855.py 8ab79676aded54cb30316c47feeeae8b89fb4625 PASS
+GATE0 SOURCE 856.py 93d7e9bd7ebc6c692cef0e1e62d05ad96e4086d1 PASS
+GATE0 SOURCE 857.py 0891ffe2d638e7a17ff9e851d160c2afeb609a1a PASS
+GATE0 SOURCE 855.log afb58577e700031a4f788940ab4b8e7a69b59999 PASS
+GATE0 SOURCE 856.log 875a1d5fb3ad5c45700c4ebab17402a3c9b27bb3 PASS
+GATE0 SOURCE 857.log ef3ae882ecf03dd9b9668939bd55ce65eeae8455 PASS
+
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+GPU: NVIDIA A100-SXM4-80GB | frozen NF4 | BF16 | layers=80 H=8192 | free GiB= 39.07
+OBSERVER: logits-only AST inverse PASS; no hidden states; no hooks; two-job limit armed.
+JOB DOMAIN_GGLYXVHDV_P0|INTACT|NATURAL|BASELINE853|END=MODEL_ACCEPT|ANSWER=' GRRNKDUGN.'|SECONDS=10.35|PEAK_GIB=39.382
+===== OUTER WRAPPER TRACEBACK — NOT THE ROOT-CAUSE TRACEBACK =====
+Traceback (most recent call last):
+  File "/tmp/ipykernel_809/4179006500.py", line 643, in reproduce_pre858858
+    exec(REAL_COMPILE858(RAW_SOURCES858['854.py'].decode(),
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'LOCKED_TEST854', 'exec'), env)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "LOCKED_TEST854", line 606, in <module>
+  File "TEST854_LOCKED_BUILDER", line 72, in <module>
+  File "TEST852_LOCKED_BUILDER", line 100, in <module>
+  File "TEST854_LOCKED_BUILDER", line 69, in <module>
+  File "TEST849_R2_LOCKED_BUILDER", line 455, in <module>
+  File "TEST849_CELL", line 654, in <module>
+SystemExit: TEST849_FAILED: Gate1SmokeComplete858
+
+===== INHERITED ORIGINAL TRACEBACK — _tbtext841 =====
+Traceback (most recent call last):
+  File "TEST849_CELL", line 620, in <module>
+  File "TEST849_LOCKED_ENGINE", line 2622, in <module>
+    save_job841(j851['job'], rec851, tensors851)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_809/4179006500.py", line 489, in save_and_stop
+    raise Gate1SmokeComplete858('GATE1_TWO_JOB_OBSERVATION_COMPLETE')
+Gate1SmokeComplete858: GATE1_TWO_JOB_OBSERVATION_COMPLETE
+
+SYSTEM: hook-free PASS; frozen NF4/BF16; physical CUT3/H3/KV path unchanged.
+ORIGINAL JOB J846P_84E46EF5C2DA INTACT END MODEL_ACCEPT ACTIONS ['CONTINUE'] REVISIONS [None]
+ORIGINAL JOB J846P_76D14BFF721F REMOVED END MECHANICAL_REVIEW_LIMIT ACTIONS ['REVISE', 'REVISE'] REVISIONS [' UNKNOWN', ' UNKNOWN']
+STATE MAP cycle 0 roles ['C', 'E', 'U', 'R', 'K0', 'J', 'review'] final_input_sha f6041729cfc719e86f167c845e55da521f207d96604b5af1dfdc544ad07562fc
+STATE 0 C shape [1, 8192] norm 0.7557833790779114 mean 1.283483379665995e-05 std 0.008350304327905178 finite True
+STATE 0 E shape [1, 8192] norm 0.6811380386352539 mean -5.944009899394587e-06 std 0.007525586988776922 finite True
+STATE 0 U shape [4, 8192] norm 1.4336999654769897 mean -3.562038909876719e-05 std 0.007920073345303535 finite True
+STATE 0 R shape [2, 8192] norm 1.4388595819473267 mean 1.2834831068175845e-05 std 0.01124108862131834 finite True
+STATE 0 K0 shape [2, 8192] norm 1.2977643013000488 mean 3.502167601254769e-05 std 0.010138737969100475 finite True
+STATE 0 J shape [2, 8192] norm 1.296129584312439 mean 8.533492655260488e-05 std 0.010125656612217426 finite True
+STATE 0 review shape [2, 8192] norm 1.160239577293396 mean 3.2720268791308627e-05 std 0.0090643260627985 finite True
+STATE MAP cycle 1 roles ['C', 'E', 'U', 'R', 'Kprev', 'K0', 'J', 'review'] final_input_sha 8c9da4ce67917074eb086864b8d2d57ebc0ffe3fd60e603f08351f7e89f02505
+STATE 1 C shape [1, 8192] norm 0.755786120891571 mean 1.2830485502490774e-05 std 0.00835033506155014 finite True
+STATE 1 E shape [1, 8192] norm 0.6811380386352539 mean -5.944009899394587e-06 std 0.007525586988776922 finite True
+STATE 1 U shape [4, 8192] norm 1.4336999654769897 mean -3.562038909876719e-05 std 0.007920073345303535 finite True
+STATE 1 R shape [2, 8192] norm 1.4388625621795654 mean 1.2830485502490774e-05 std 0.011241110973060131 finite True
+STATE 1 Kprev shape [2, 8192] norm 1.160239577293396 mean 3.2720268791308627e-05 std 0.0090643260627985 finite True
+STATE 1 K0 shape [2, 8192] norm 1.3042255640029907 mean 3.52817696693819e-05 std 0.010189216583967209 finite True
+STATE 1 J shape [2, 8192] norm 1.302470088005066 mean 8.730062108952552e-05 std 0.010175177827477455 finite True
+STATE 1 review shape [2, 8192] norm 1.157391905784607 mean 3.2624866435071453e-05 std 0.009042077697813511 finite True
+TRANSITION C {'reference_shape': [1, 8192], 'value_shape': [1, 8192], 'exact': False, 'status': 'COMPARABLE', 'l2_delta': 0.00022769409406464547, 'relative_l2': 0.0003012689994648099, 'cosine': 1.0000020265579224, 'reference_zero_norm': False, 'value_zero_norm': False}
+TRANSITION E {'reference_shape': [1, 8192], 'value_shape': [1, 8192], 'exact': True, 'status': 'COMPARABLE', 'l2_delta': 0.0, 'relative_l2': 0.0, 'cosine': 1.0000015497207642, 'reference_zero_norm': False, 'value_zero_norm': False}
+TRANSITION U {'reference_shape': [4, 8192], 'value_shape': [4, 8192], 'exact': True, 'status': 'COMPARABLE', 'l2_delta': 0.0, 'relative_l2': 0.0, 'cosine': 1.000001311302185, 'reference_zero_norm': False, 'value_zero_norm': False}
+TRANSITION R {'reference_shape': [2, 8192], 'value_shape': [2, 8192], 'exact': False, 'status': 'COMPARABLE', 'l2_delta': 0.0003220080689061433, 'relative_l2': 0.0002237939479527995, 'cosine': 1.0000009536743164, 'reference_zero_norm': False, 'value_zero_norm': False}
+TRANSITION K0 {'reference_shape': [2, 8192], 'value_shape': [2, 8192], 'exact': False, 'status': 'COMPARABLE', 'l2_delta': 0.015611810609698296, 'relative_l2': 0.01202977355569601, 'cosine': 0.9999433159828186, 'reference_zero_norm': False, 'value_zero_norm': False}
+TRANSITION J {'reference_shape': [2, 8192], 'value_shape': [2, 8192], 'exact': False, 'status': 'COMPARABLE', 'l2_delta': 0.016012081876397133, 'relative_l2': 0.012353765778243542, 'cosine': 0.9999368190765381, 'reference_zero_norm': False, 'value_zero_norm': False}
+TRANSITION review {'reference_shape': [2, 8192], 'value_shape': [2, 8192], 'exact': False, 'status': 'COMPARABLE', 'l2_delta': 0.007227153051644564, 'relative_l2': 0.006229017861187458, 'cosine': 0.9999863505363464, 'reference_zero_norm': False, 'value_zero_norm': False}
+TRANSFER {'path': 'review_0.rows -> previous_control851 -> cycle1.Kprev', 'source_sha256': 'dea9fdef7ed95dd9f7ebaba053cb8a6030c0fe7d6dbcdc2568d3bf94ed1ad16c', 'destination_sha256': 'dea9fdef7ed95dd9f7ebaba053cb8a6030c0fe7d6dbcdc2568d3bf94ed1ad16c', 'exact_content_preserved': True, 'bf16_injection': {'status': 'CHECKED', 'exact_after_bf16': True, 'runtime_dtype': 'torch.bfloat16', 'runtime_device': 'cuda:0', 'max_cast_error': 0.0, 'cosine_after_cast': 1.0000028610229492}, 'used_in': 'cycle1 precontrol gen851; then K0/J; then review_1'}
+TRANSFER {'path': 'revision_0.rows -> current851 -> cycle1.C', 'source_sha256': '976ab7d8f9988ec7268b8b71193265b4da4aa47f1ab81db9fa6dce3ee908d921', 'destination_sha256': '976ab7d8f9988ec7268b8b71193265b4da4aa47f1ab81db9fa6dce3ee908d921', 'exact_content_preserved': True, 'bf16_injection': {'status': 'CHECKED', 'exact_after_bf16': True, 'runtime_dtype': 'torch.bfloat16', 'runtime_device': 'cuda:0', 'max_cast_error': 0.0, 'cosine_after_cast': 1.0000020265579224}, 'used_in': 'cycle1 precontrol and relation/gate recomputation'}
+TRANSFER {'path': 'shared evidence -> cycle0.E and cycle1.E', 'exact_content_reused': True}
+TRANSFER {'path': 'shared coverage -> cycle0.U and cycle1.U', 'exact_content_reused': True}
+TRANSFER {'path': 'cycle1.C + cycle1.E -> relation852 -> cycle1.R', 'derived_not_direct_carry': True}
+CAUSAL ORIGINAL original REVISE diagnostic REVISE STOP-REVISE -7.468701630830765 precontrol_exact True review_exact True
+CAUSAL KPREV_ZERO original REVISE diagnostic REVISE STOP-REVISE -7.40620744228363 precontrol_exact False review_exact False
+CAUSAL KPREV_SWAP original REVISE diagnostic REVISE STOP-REVISE -7.562463730573654 precontrol_exact False review_exact False
+CAUSAL CANDIDATE_CARRY_SWAP_TO_C0 original REVISE diagnostic REVISE STOP-REVISE -7.593699216842651 precontrol_exact False review_exact False
+CAUSAL KPREV_ORIGINAL_RESTORE original REVISE diagnostic REVISE STOP-REVISE -7.468701630830765 precontrol_exact True review_exact True
+MECHANISM SUMMARY {'exact_repetition': False, 'numerical_change_with_same_original_greedy_action': True, 'kprev_transport_confirmed': True, 'candidate_transport_confirmed': True, 'kprev_causal_numerical_effect': True, 'kprev_effect_stages_in_order': ['precontrol', 'J', 'review_output', 'action_scores'], 'kprev_greedy_decision_effect': False, 'kprev_score_effect_without_greedy_flip': True, 'same_action_does_not_imply_same_computation': True, 'feedback_path_function': 'numerical recurrence/state coupling; useful correction or STOP is not established', 'classification_rule': 'Exact transport proves use; matched replay differences prove causal numerical effect; only native greedy text defines diagnostic action.', 'original_model_stop': False, 'original_end': 'MECHANICAL_REVIEW_LIMIT', 'status': 'PASS_DIAGNOSTIC_NOT_LOOP_REPAIR', 'original_records_unchanged': True, 'completed_probes': 5, 'not_applicable_probes': 0}
+TEST858 RESULT STATE_TRANSFER_AND_FEEDBACK_DIAGNOSTIC_COMPLETE
+GATE0_SOURCE_INTEGRITY PASS
+GATE1_HOOKFREE_ORIGINAL_TWO_JOBS PASS
+GATE2_OBSERVER_EQUIVALENCE PASS
+GATE3_STATE_MAP_AND_REAL_TRANSPORT PASS
+GATE4_MATCHED_FEEDBACK_AND_RESTORE PASS
+GATE5_ORIGINAL_MODEL_STOP_BEHAVIOR NOT_OBSERVED_MECHANICAL_REVIEW_LIMIT
+GATE6_INDEPENDENT_GENERALIZATION BLOCKED_TWO_JOB_DIAGNOSTIC_ONLY
+GATE7_ARTIFACT_INTEGRITY PASS
+ORIGINAL MODEL STOP False
+ORIGINAL ERROR NONE
+ANALYSIS ERROR NONE
+
+ARTIFACTS /content/TEST858_STATE_FEEDBACK_20261104T161436Z
