@@ -146,8 +146,16 @@ def sha256_bytes860(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def sha256_bytes859(data):
+    return sha256_bytes860(data)
+
+
 def git_blob860(data):
     return hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+
+
+def git_blob859(data):
+    return git_blob860(data)
 
 
 def load_sources860():
