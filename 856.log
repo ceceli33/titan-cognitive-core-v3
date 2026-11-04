@@ -1,0 +1,70 @@
+TEST855 MODE: GATE1 hook-free repair + two-job GATE2 verification only.
+GPU EXECUTION: NOT VERIFIED BY AUTHOR; restart the Colab runtime before this cell.
+HIDDEN-STATE X-RAY: DISABLED; output_hidden_states is never requested.
+GATE0 SOURCE 849.py 01a6ac43cbc954cc2f6ceaf8cf0238333ec762b1 PASS
+GATE0 SOURCE 850.py 79cc5ab211c01b37324e2d6897a298e84db42101 PASS
+GATE0 SOURCE 851.py 0f01e73b9ad160c988cfe059e8b5ae5e1f35f65b PASS
+GATE0 SOURCE 852.py 4174e9241f773d6a031c51296b6beb11d4637aa5 PASS
+GATE0 SOURCE 853.py a7033caa10fdb86f8f0ee0b8ed1a0ac7514e26be PASS
+GATE0 SOURCE 854.py a158d92a61c15a5e71468146d6c1ceeaedce436c PASS
+GATE0 SOURCE 850.log c070ef432e95f80cd9a1c28318fd2e4a10377296 PASS
+GATE0 SOURCE 851.log b38419ef3a069ea4e20d43d15e6d939318083a9a PASS
+GATE0 SOURCE 852.log b434a1e36b22fd99f9590c8b98b8094e927db458 PASS
+GATE0 SOURCE 853.log 0bfa9104337c44adaf4a07ec0ce6b5e41f457494 PASS
+GATE0 SOURCE 854.log 2aa1f85e14d52acbd1ecbad5b5c7df10df0bbcd4 PASS
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+GPU: NVIDIA A100-SXM4-80GB | frozen NF4 | BF16 | layers=80 H=8192 | free GiB= 39.07
+OBSERVER: logits-only AST inverse PASS; no hidden states; no hooks; two-job limit armed.
+JOB DOMAIN_GGLYXVHDV_P0|INTACT|NATURAL|BASELINE853|END=MODEL_ACCEPT|ANSWER=' GRRNKDUGN.'|SECONDS=11.60|PEAK_GIB=39.382
+===== OUTER WRAPPER TRACEBACK — NOT THE ROOT-CAUSE TRACEBACK =====
+Traceback (most recent call last):
+  File "/tmp/ipykernel_847/3837779558.py", line 645, in reproduce_pre855855
+    exec(REAL_COMPILE855(RAW_SOURCES855['854.py'].decode(),
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'LOCKED_TEST854', 'exec'), env)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "LOCKED_TEST854", line 606, in <module>
+  File "TEST854_LOCKED_BUILDER", line 72, in <module>
+  File "TEST852_LOCKED_BUILDER", line 100, in <module>
+  File "TEST854_LOCKED_BUILDER", line 69, in <module>
+  File "TEST849_R2_LOCKED_BUILDER", line 455, in <module>
+  File "TEST849_CELL", line 654, in <module>
+SystemExit: TEST849_FAILED: Gate1SmokeComplete855
+
+===== INHERITED ORIGINAL TRACEBACK — _tbtext841 =====
+Traceback (most recent call last):
+  File "TEST849_CELL", line 620, in <module>
+  File "TEST849_LOCKED_ENGINE", line 2622, in <module>
+    save_job841(j851['job'], rec851, tensors851)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_847/3837779558.py", line 493, in save_and_stop
+    raise Gate1SmokeComplete855('GATE1_TWO_JOB_OBSERVATION_COMPLETE')
+Gate1SmokeComplete855: GATE1_TWO_JOB_OBSERVATION_COMPLETE
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_847/3837779558.py", line 847, in <cell line: 0>
+    TWO_JOB_VERIFICATION855 = verify_two_job855(env855, trace855)
+  File "/tmp/ipykernel_847/3837779558.py", line 679, in verify_two_job855
+    assert record['end'] in ('MODEL_ACCEPT', 'MODEL_STOP'), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('NON_COMPLETING_JOB', 'J846P_76D14BFF721F', 'MECHANICAL_REVIEW_LIMIT')
+
+TEST855 RECOVERY RESULT: GATE1_TWO_JOB_VERIFICATION_FAILED
+GATE0_SOURCE_INTEGRITY: PASS
+GATE1_RUNTIME_ROOT_CAUSE_AND_VERIFIED_REPAIR: BLOCKED
+GATE2_ENGINE_EQUIVALENCE: BLOCKED
+GATE3_NUMERICAL_XRAY: BLOCKED
+GATE4_COMPUTATIONAL_ROOT_CAUSE: BLOCKED
+GATE5_CAUSAL_CORRECTION: BLOCKED
+GATE6_INDEPENDENT_VALIDATION: BLOCKED
+GATE7_ARTIFACT_INTEGRITY: PASS
+ERROR: TWO_JOB_VERIFICATION_FAILED: AssertionError: ('NON_COMPLETING_JOB', 'J846P_76D14BFF721F', 'MECHANICAL_REVIEW_LIMIT')
+OUTER WRAPPER ERROR: SystemExit: TEST849_FAILED: Gate1SmokeComplete855
+ORIGINAL RUNTIME TRACEBACK RECOVERED: True
+DIAGNOSTIC STOP: GATE1_TWO_JOB_OBSERVATION_COMPLETE
+TWO-JOB VERIFICATION: NOT_PASSED
+ARTIFACTS: /content/TEST855_GATE1_RECOVERY_20261104T134343Z
+855_report.json 6a964f81a07ff91c9450629311a05e3be328e53b7dd08867bc4399ebedc4922d
+855_runtime_traceback.txt 2d65d4e3cf2db91c4947a8af6132b8af2bdfd268a6bb5df38f90d4483f4d91b6
+855_runtime_equivalence.json 0be510ab842f284550d50f4da2949d4dd8870081e069771c593752dd94c9e625
+TEST855 motor status: NOT_PRODUCED; two-job smoke only; GATE 3-6 were not executed.
