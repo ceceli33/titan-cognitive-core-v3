@@ -1,9 +1,82 @@
 # AKBASCORE SILICON HIPPOCAMPUS — TEST866 MODEL-NATIVE RECURSIVE PHYSICAL-EVIDENCE CONTROLLER (FINAL)
-# Locked TEST865 physical engine (865.py verbatim below) + one model-native recursive controller (loop866).
+# Locked TEST865 physical engine (865.py verbatim below the console-capture block) + one model-native recursive controller (loop866).
 # Model: every transition word, every ACQUIRE/REJECT address (own node-name soft rows), every ACCEPT/STOP.
 # Python: strict word parse, pointer stack, PEAK50 route, SHA SSD I/O, CUT3 mount; horizon/budget ends (labelled).
 # Offline labels: condition construction before execution and scoring after execution only (AST firewall audited).
 # GPU EXECUTION NOT VERIFIED BY THE AUTHOR. Static/CPU checks only; results exist only after the team runs it on an A100.
+# ===================== CELL CONSOLE CAPTURE — START (I/O only; no effect on the experiment) =====================
+# Every character this cell prints (stdout and stderr, including the engine and tracebacks) is ALSO written,
+# line-buffered, to /content/TEST866_HUCRE_CIKTISI_<stamp>.txt while it is printed. If Google Drive can be mounted,
+# that file and 866.log are copied to MyDrive/TEST866_<stamp>/ every 5 minutes, so a sleeping phone or a lost
+# browser connection cannot erase the cell output. The end block (bottom of this cell) downloads everything.
+import sys as _cc_sys, os as _cc_os, time as _cc_time, shutil as _cc_shutil, threading as _cc_threading, glob as _cc_glob
+CC_DRIVE_BACKUP = True                    # False -> no Google Drive copy (the local file and downloads still work)
+CC_STAMP = _cc_time.strftime('%Y%m%dT%H%M%SZ', _cc_time.gmtime())
+CC_PATH = '/content/TEST866_HUCRE_CIKTISI_%s.txt' % CC_STAMP
+_cc_os.makedirs('/content', exist_ok=True)
+CC_FILE = open(CC_PATH, 'w', encoding='utf-8', errors='replace', buffering=1)
+
+
+class CellConsoleTee:
+    def __init__(self, stream):
+        self._stream = stream
+
+    def write(self, text):
+        result = self._stream.write(text)
+        try:
+            CC_FILE.write(text if isinstance(text, str) else bytes(text).decode('utf-8', 'replace'))
+        except Exception:
+            pass
+        return result
+
+    def flush(self):
+        self._stream.flush()
+        try:
+            CC_FILE.flush()
+        except Exception:
+            pass
+
+    def __getattr__(self, name):
+        return getattr(self._stream, name)
+
+
+CC_ORIGINAL = (_cc_sys.stdout, _cc_sys.stderr)
+_cc_sys.stdout, _cc_sys.stderr = CellConsoleTee(_cc_sys.stdout), CellConsoleTee(_cc_sys.stderr)
+CC_DRIVE_DIR = None
+if CC_DRIVE_BACKUP:
+    try:
+        from google.colab import drive as _cc_drive
+        _cc_drive.mount('/content/drive')
+        CC_DRIVE_DIR = '/content/drive/MyDrive/TEST866_%s' % CC_STAMP
+        _cc_os.makedirs(CC_DRIVE_DIR, exist_ok=True)
+    except Exception as _cc_exc:
+        print('CELL CONSOLE CAPTURE: Google Drive backup not available (%s: %s); local capture continues.'
+              % (type(_cc_exc).__name__, _cc_exc))
+        CC_DRIVE_DIR = None
+CC_STOP = _cc_threading.Event()
+
+
+def cc_backup_now():
+    if CC_DRIVE_DIR is None:
+        return
+    try:
+        CC_FILE.flush()
+        _cc_shutil.copy2(CC_PATH, CC_DRIVE_DIR)
+        for folder in sorted(_cc_glob.glob('/content/TEST866_MODEL_NATIVE_CONTROL_*'))[-1:]:
+            if _cc_os.path.isfile(folder + '/866.log'):
+                _cc_shutil.copy2(folder + '/866.log', CC_DRIVE_DIR + '/866.log')
+    except Exception:
+        pass
+
+
+def cc_backup_loop():
+    while not CC_STOP.wait(300):
+        cc_backup_now()
+
+
+_cc_threading.Thread(target=cc_backup_loop, daemon=True).start()
+print('CELL CONSOLE CAPTURE START', CC_STAMP, '->', CC_PATH, '| Drive backup:', CC_DRIVE_DIR)
+# ===================== CELL CONSOLE CAPTURE — the TEST866 experiment follows unchanged =====================
 import ast
 import builtins
 import contextlib
@@ -3545,3 +3618,46 @@ finally:
     if not EVENTS_FILE866.closed:
         EVENTS_FILE866.close()
     LOG_FILE864.close()
+
+# ===================== CELL CONSOLE CAPTURE — END: package and download (I/O only; TEST866 is finished) =====================
+import hashlib as _cc_hashlib, pathlib as _cc_pathlib, zipfile as _cc_zipfile
+try:
+    print('CELL CONSOLE CAPTURE END', _cc_time.strftime('%Y-%m-%dT%H:%M:%SZ', _cc_time.gmtime()))
+    _cc_sys.stdout.flush()
+    _cc_sys.stderr.flush()
+finally:
+    CC_STOP.set()
+    _cc_sys.stdout, _cc_sys.stderr = CC_ORIGINAL
+    CC_FILE.close()
+CC_ROOT = _cc_pathlib.Path(str(ROOT864))
+CC_ZIP = _cc_pathlib.Path('/content/TEST866_SONUC_%s.zip' % CC_STAMP)
+with _cc_zipfile.ZipFile(CC_ZIP, 'w', compression=_cc_zipfile.ZIP_DEFLATED, compresslevel=9) as _cc_z:
+    _cc_sums = []
+    for _cc_p in sorted(CC_ROOT.rglob('*')):
+        if _cc_p.is_file():
+            _cc_z.write(_cc_p, arcname=CC_ROOT.name + '/' + str(_cc_p.relative_to(CC_ROOT)))
+            _cc_sums.append('%s  %s' % (_cc_hashlib.sha256(_cc_p.read_bytes()).hexdigest(), _cc_p.relative_to(CC_ROOT)))
+    _cc_z.write(CC_PATH, arcname=CC_ROOT.name + '/' + _cc_os.path.basename(CC_PATH))
+    _cc_sums.append('%s  %s' % (_cc_hashlib.sha256(open(CC_PATH, 'rb').read()).hexdigest(), _cc_os.path.basename(CC_PATH)))
+    _cc_z.writestr(CC_ROOT.name + '/SHA256SUMS.txt', '\n'.join(_cc_sums) + '\n')
+assert _cc_zipfile.ZipFile(CC_ZIP).testzip() is None, 'ZIP_CORRUPT'
+CC_SIZE = _cc_os.path.getsize(CC_PATH)
+print('CELL OUTPUT FILE :', CC_PATH, '%.2f MB' % (CC_SIZE / 1e6), 'sha256',
+      _cc_hashlib.sha256(open(CC_PATH, 'rb').read()).hexdigest())
+print('RESULT ZIP       :', CC_ZIP, '%.2f MB' % (CC_ZIP.stat().st_size / 1e6), 'sha256',
+      _cc_hashlib.sha256(CC_ZIP.read_bytes()).hexdigest())
+if CC_DRIVE_DIR is not None:
+    try:
+        _cc_shutil.copy2(CC_PATH, CC_DRIVE_DIR)
+        _cc_shutil.copy2(CC_ZIP, CC_DRIVE_DIR)
+        print('DRIVE COPY       :', CC_DRIVE_DIR)
+    except Exception as _cc_exc:
+        print('DRIVE COPY FAILED:', type(_cc_exc).__name__, _cc_exc)
+try:
+    from google.colab import files as _cc_files
+    _cc_files.download(CC_PATH)
+    _cc_files.download(str(CC_ZIP))
+    print('Downloads started. If the phone did not receive them, run in a new cell:')
+    print("from google.colab import files; files.download(%r); files.download(%r)" % (CC_PATH, str(CC_ZIP)))
+except Exception as _cc_exc:
+    print('Automatic download not available (%s); the files are in /content.' % type(_cc_exc).__name__)
