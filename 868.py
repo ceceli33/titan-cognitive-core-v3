@@ -4850,11 +4850,16 @@ PREREG868 = {
              'F2': 'V own, K = MUE845 rows of the same row count (K ablation)',
              'F3': 'V = MUE845 rows of the same row count, K own (V ablation)',
              'F4': 'both MUE845 (negative control = 867 NO_FEEDBACK construction; not "no input")',
-             'F5': 'V own, K = partner context own K (a different executed action), shape-matched (shape_match867) and '
-                   'row-norm-matched to own K (action-mismatch control)',
+             'F5': 'V own, K = the K rows (legacy control rows) of the partner context\'s previous step, shape-matched '
+                   '(shape_match867) and row-norm-matched to own K (action-mismatch control). The donor ACTION is the '
+                   'partner\'s EXECUTED CAR action of that step (record[\'action\']), never the legacy text; it must be '
+                   'one of the six actions and differ from the own previously executed action; otherwise F5 is '
+                   'NOT_RUN with the reason; no other donor is searched',
              'F6': 'V = same-world donor evaluation rows naming a node not named by the own previous evaluation, '
                    'shape- and row-norm-matched to own V; K own (blind-copy control). Donor search order: partner steps '
-                   '1..t, then own earlier steps; names = 5-letter prefixes of [A-Z]{5,} tokens except UNKNOWN',
+                   '1..t, then own earlier steps; names = 5-letter prefixes of [A-Z]{5,} tokens except UNKNOWN. F6 runs '
+                   'only if the in-cell donor (source, step) equals the sealed f6_donor_expected; otherwise '
+                   'NOT_RUN_PREREG_DONOR_MISMATCH. An F6 that is not run never affects F1-F4 or the context validity',
              'F1R': 'F1 repeated after all other arms (order/leak control: six sequence log-probs within %.0e nats)' % REPEAT_TOL868,
              'order': 'F1, then F2-F4 rotated by context index, then F5, F6, then F1R; no arm executes its action'},
     'endpoints': {'E1_primary_action': 'CAR normalized probability of the action EXECUTED at the previous step (from the '
@@ -4869,11 +4874,20 @@ PREREG868 = {
                                    MIN_N868, SAME_SIGN_FRACTION868, MEDIAN_MIN868, ALPHA868),
                  'ties': '|d| <= %.0e excluded from the sign test and never counted as support' % TIE_EPS868,
                  'K_V_direction': 'positive (own channel raises the endpoint); interaction two-sided',
-                 'classes': 'INCONCLUSIVE_TECHNICAL (GATE2 fail / integrity) > INCONCLUSIVE_STATISTICAL (n < %d) > '
-                            'V_K_INTERACTION > BOTH_V_AND_K (declared extra class: both main effects, no interaction) > '
-                            'K_DOMINANT > V_DOMINANT > NEITHER_SUPPORTED; one class per endpoint' % MIN_N868,
-                 'multiplicity': '6 primary tests (2 endpoints x K, V, VxK) at the stated thresholds, Holm-adjusted p '
-                                 'reported with ROBUST_TO_HOLM; all secondary tests labelled EXPLORATORY',
+                 'classes': 'INCONCLUSIVE_TECHNICAL (GATE2 fail / integrity / cleanup) > INCONCLUSIVE_STATISTICAL '
+                            '(n < %d) > V_K_INTERACTION > BOTH_V_AND_K (declared extra class: both main effects, no '
+                            'interaction) > K_DOMINANT > V_DOMINANT > NEITHER_SUPPORTED; one FINAL class per endpoint from '
+                            'the confirmatory level, plus a nominal class labelled not confirmatory' % MIN_N868,
+                 'levels': {'effect_size': 'median and order-statistic CI of the paired context-level differences',
+                            'nominal': 'the per-effect rule with the raw exact sign p; reported, NEVER a confirmation',
+                            'confirmatory': 'the same rule with the Holm-adjusted p over the 6 primary tests (2 endpoints x '
+                                            'K, V, VxK); the FINAL class of each endpoint uses this level only',
+                            'cluster_sensitivity': 'the same rule on the 6 world means (2 contexts per world are not '
+                                                   'independent); best attainable p = 0.031 (6/6) cannot pass Holm over 6 '
+                                                   'tests, so it is a sensitivity analysis with limited power, reported as '
+                                                   'CONSISTENT / NOT_CONSISTENT for each confirmed effect'},
+                 'multiplicity': 'Holm over the 6 primary tests is the confirmatory level; all secondary, F5 and F6 tests '
+                                 'are nominal and labelled EXPLORATORY',
                  'secondary': 'E1 first-token normalization (length-bias sensitivity: ACCEPT and STOP are one token, the '
                               'other four are two), exact evaluation copy, node-name copy, UNKNOWN / NOT_SUPPORTED '
                               'mentions, truncation at K845 = 8, P(STOP), P(ACCEPT); F5 and F6 donor contrasts'},
@@ -4896,12 +4910,24 @@ PREREG868 = {
     'caps': {'contexts': MAX_CONTEXTS868, 'arms': list(ARMS868), 'experiment_minutes': TEST868_MINUTES,
              'experiment_calls': CALL_ALLOWANCE865, 'vram_gib': VRAM_CAP_GIB868,
              'censoring': 'budget or VRAM exhaustion -> remaining contexts BUDGET_CENSORED (mechanical, never MODEL_STOP)'},
+    'amendment_v2': {'when': 'before any GPU execution of TEST868 (v1 = 868.py git blob bf931dff..., prereg sha256 '
+                             'a659b824...)', 'why': 'independent audit CONDITIONAL_AFTER_FIXES',
+                     'changed': ['decision levels: Holm-adjusted confirmatory level is the final class; raw p is nominal '
+                                 'only; world-level cluster sensitivity added', 'F5 donor action = partner executed CAR '
+                                 'action (not legacy text)', 'F6 runs only when the in-cell donor equals the sealed '
+                                 'expectation', 'resource safety: contexts are owned before mounting and always released'],
+                     'unchanged': ['SELECTION868 (12 contexts, 6 worlds, donors expected)', 'arms F1-F6 and F1R contents '
+                                   'except the F5/F6 run conditions above', 'endpoints E1 and E2', 'per-effect thresholds '
+                                   '(same-sign fraction 10/12, median 0.20, alpha 0.05, n >= 6, ties)', 'replay tolerances',
+                                   'caps', 'gates', 'no live pilot']},
     'limitations': ['contexts are equivalent on every logged field, not proven tensor-identical (no 867 tensors exist)',
                     'MUE845 rows differ in norm from own rows (867 NO_FEEDBACK definition kept for continuity); donors '
                     'are row-norm matched', 'F6 has few eligible contexts (same-world, different node): descriptive',
                     'K is the legacy rollout, not the executed CAR decision (logged separately)',
                     'E2 is a teacher-forced hard-token measure; the evaluation itself is generated with soft rows',
-                    'selection is on the phenomenon (echo-first)']}
+                    'selection is on the phenomenon (echo-first)',
+                    '12 contexts come from 6 worlds (2 each): context-level tests overstate independence; the world-level '
+                    'sensitivity analysis has 6 clusters and limited confirmatory power']}
 PREREG_SHA868 = sha256_bytes864(json.dumps(PREREG868, sort_keys=True).encode('utf-8'))
 STATE868 = {'source': {}, 'gates': {}, 'contexts': [], 'analysis': {}, 'costs': {}, 'runtime': {}, 'selftest': {},
             'status': 'NOT_STARTED', 'stop_reason': None}
@@ -5080,6 +5106,25 @@ def test_effect868(diffs, two_sided=False):
             'positive', 'direction_observed': direction, 'supported': bool(supported), 'diffs': list(diffs)}
 
 
+def confirm868(t, p_value, two_sided=False):
+    # The pre-registered per-effect rule evaluated with a given p-value (raw -> nominal, Holm-adjusted -> confirmatory).
+    med = t['median']
+    if med is None or t['n'] < MIN_N868:
+        return False
+    if two_sided:
+        count = t['positive'] if med > 0 else t['negative']
+        return count >= t['required_same_sign'] and abs(med) >= MEDIAN_MIN868 and p_value <= ALPHA868
+    return t['positive'] >= t['required_same_sign'] and med >= MEDIAN_MIN868 and p_value <= ALPHA868
+
+
+def cluster_values868(per_context, key):
+    # World-level clustering: the mean of the context-level effects of the (two) contexts of each world.
+    worlds = {}
+    for row in per_context:
+        worlds.setdefault(row['world'], []).append(row[key])
+    return {w: sum(v) / len(v) for w, v in sorted(worlds.items())}
+
+
 def holm868(pvalues):
     keys = sorted(pvalues, key=lambda k: pvalues[k])
     m = len(keys)
@@ -5137,6 +5182,19 @@ def selftest868():
     assert classify868(no, no, no, 12, True) == 'NEITHER_SUPPORTED'
     assert classify868(yes, no, no, 5, True) == 'INCONCLUSIVE_STATISTICAL'
     assert classify868(yes, no, no, 12, False) == 'INCONCLUSIVE_TECHNICAL'
+    t12 = test_effect868([0.5] * 10 + [-0.1, -0.2])
+    assert t12['supported'] and confirm868(t12, t12['sign_p_two_sided']) and not confirm868(t12, 6 * t12['sign_p_two_sided'])
+    rows = [{'world': w, 'K': v} for w, v in ((1, 0.4), (1, 0.6), (2, 0.2), (2, 0.4), (5, -0.1), (5, 0.3))]
+    cv = cluster_values868(rows, 'K')
+    assert sorted(cv) == [1, 2, 5] and all(abs(cv[w] - x) < 1e-12 for w, x in ((1, 0.5), (2, 0.3), (5, 0.1))), cv
+    holm_rank1 = ALPHA868 / 6.0
+    assert sign_p868(11, 1) <= holm_rank1 < sign_p868(10, 2), 'n=12: Holm rank-1 needs >= 11 of 12'
+    assert sign_p868(6, 0) > holm_rank1, '6 clusters can never pass Holm over 6 tests'
+    checks['power'] = {'context_level_n12_min_same_sign_nominal': 10, 'context_level_n12_min_same_sign_holm_rank1': 11,
+                       'holm_rank1_threshold': holm_rank1, 'cluster_level_n6_best_p': sign_p868(6, 0),
+                       'cluster_level_can_pass_holm': False,
+                       'statement': 'with 6 independent world clusters the exact sign test cannot reach a Holm-adjusted '
+                                    '0.05 over the 6 primary tests; world-level results are a sensitivity analysis'}
     h = holm868({'a': 0.01, 'b': 0.04, 'c': 0.03})
     assert abs(h['a'] - 0.03) < 1e-12 and abs(h['c'] - 0.06) < 1e-12 and abs(h['b'] - 0.06) < 1e-12, h
     sample = 'S867 STEP I867_01_FORK NATIVE_FEEDBACK t=2 k=1 hop=\' UNKNOWN\' legacy=\' ACQUIRE\' CAR=ACQUIRE:0.62|ADVANCE:0.29|' \
@@ -5370,7 +5428,9 @@ def compare_effect868(row, ref):
     return {'ok': all(checks.values()), 'checks': checks, 'route_margin_rel_drift': drift}
 
 
-def replay868(env, spec, cdef, log):
+def replay868(env, spec, cdef, log, owner):
+    # The context is registered in the caller's ownership list BEFORE anything is mounted, so that release868 runs in the
+    # caller's finally block even if an exception (BudgetR41 or any other) is raised inside the mount or the replay.
     item = spec['item']
     ref_steps, ref_effects, ref_raw = log['steps'][item], log['effects'][item], log['raw'][item]
     ctx = {'spec': spec, 'arm': 'NATIVE_FEEDBACK', 'M': list(spec['initial']), 'memx': None, 'path': [], 'prev_state': None,
@@ -5378,6 +5438,7 @@ def replay868(env, spec, cdef, log):
            'steps': 0, 'hops': 0, 'donor_item': spec.get('donor_item')}
     cx = {'def': cdef, 'ctx': ctx, 'status': 'REPLAYING', 'steps': [], 'records': [], 'h': None, 'pointer': None,
           'initial_seal': None, 'seal': None}
+    owner.append(cx)
     t0, calls0 = time.perf_counter(), int(env['CALLS849'])
     ctx['memx'], mount = mount865(env, ctx['M'], '868_L0_%s' % item)
     ctx['mount_records'].append(mount)
@@ -5448,18 +5509,43 @@ def replay868(env, spec, cdef, log):
 
 
 def release868(env, cx):
+    # Always: free the context memory, then remount the initial cards and compare (a) with the seal of the initial mount
+    # of this replay and (b) with the first mount of the same card list in this session (mount865's own record).
+    # Never raises: a failure is returned as cleanup_error / restore_error and stops the experiment in the caller.
     ctx = cx['ctx']
-    out = {'exact_restore': None}
+    out = {'had_memory': ctx.get('memx') is not None, 'freed': None, 'cleanup_error': None, 'restore_error': None,
+           'exact_restore': None, 'restore_vs_initial_seal': None, 'restore_vs_first_mount': None}
     try:
-        free865(env, ctx['memx'])
+        free865(env, ctx.get('memx'))
         ctx['memx'] = None
+        out['freed'] = True
+    except Exception as exc:
+        out['freed'] = False
+        out['cleanup_error'] = 'FREE: %s: %s' % (type(exc).__name__, str(exc)[:300])
+    memx = None
+    try:
+        memx, record = mount865(env, ctx['spec']['initial'], '868_LR_%s' % ctx['spec']['item'])
+        out['restore_vs_first_mount'] = record.get('exact_restore_vs_first_mount')
         if cx.get('initial_seal') is not None:
-            memx, _ = mount865(env, ctx['spec']['initial'], '868_LR_%s' % ctx['spec']['item'])
-            out['exact_restore'] = prefix_seals865(env, memx) == cx['initial_seal']
-            free865(env, memx)
+            out['restore_vs_initial_seal'] = prefix_seals865(env, memx) == cx['initial_seal']
+        checks = [v for v in (out['restore_vs_initial_seal'], out['restore_vs_first_mount']) if v is not None]
+        out['exact_restore'] = bool(checks) and all(checks) and bool(record.get('n_exact')) and \
+            bool(record.get('all_80_layers')) and bool(record.get('finite'))
     except Exception as exc:
         out['exact_restore'] = False
-        out['restore_error'] = type(exc).__name__ + ': ' + str(exc)
+        out['restore_error'] = '%s: %s' % (type(exc).__name__, str(exc)[:300])
+    finally:
+        if memx is not None:
+            try:
+                free865(env, memx)
+            except Exception as exc:
+                out['cleanup_error'] = (out['cleanup_error'] or '') + ' RESTORE_FREE: %s: %s' % (type(exc).__name__,
+                                                                                                    str(exc)[:300])
+    line868('RELEASE', cx['def']['context_id'], 'had_memory=%s freed=%s exact_restore=%s' % (
+        out['had_memory'], out['freed'], out['exact_restore']), 'vs_initial=%s vs_first_mount=%s' % (
+        out['restore_vs_initial_seal'], out['restore_vs_first_mount']),
+        '' if not (out['cleanup_error'] or out['restore_error']) else 'ERRORS=%s | %s' % (
+            out['cleanup_error'], out['restore_error']))
     return out
 
 
@@ -5563,28 +5649,51 @@ def arms868(env, cx, partner, index):
                        'path': [p['text'] for p in cx['ctx']['path']], 'pointer': rows_info868(env, cx['pointer']),
                        'memx_seal': cx['seal'], 'target_hop': cx['h']['text']}
     mv, mk = int(own_v.shape[0]), int(own_k.shape[0])
+    # F6: the in-cell donor (full evaluation texts) must equal the sealed expectation; otherwise F6 is not run.
     f6 = f6_donor868(cx, partner)
     res['f6_donor'] = None if f6 is None else {k: v for k, v in f6.items() if k != 'V'}
     res['f6_donor_matches_prereg'] = (None if f6 is None else {'source': f6['source'], 'step': f6['step']}) == cdef['f6_donor_expected']
-    k_donor, k_donor_word = None, None
-    if partner is not None and partner['status'] == 'REPLAYED':
-        k_donor_word = parse866(partner['records'][-1]['legacy_raw'])
-        if k_donor_word in ACTIONS866 and k_donor_word != prev['action'] and mk > 0:
+    f6_reason = None
+    if not res['f6_donor_matches_prereg']:
+        f6_reason = 'NOT_RUN_PREREG_DONOR_MISMATCH'
+    elif f6 is None:
+        f6_reason = 'NO_VALID_DONOR'
+    elif mv == 0:
+        f6_reason = 'OWN_V_EMPTY'
+    # F5: the donor action is the partner's EXECUTED CAR action of its previous step (record['action']); its K rows are
+    # that step's legacy control rows (the K channel). It must be a real action and differ from our executed action.
+    k_donor, k_donor_action, k_donor_legacy, f5_reason = None, None, None, None
+    if partner is None or partner['status'] != 'REPLAYED':
+        f5_reason = 'NO_VALID_DONOR_PARTNER_NOT_REPLAYED'
+    else:
+        k_donor_action = partner['records'][-1]['action']
+        k_donor_legacy = partner['records'][-1]['legacy_action']
+        if k_donor_action not in ACTIONS866:
+            f5_reason = 'NO_VALID_DONOR_ACTION_NOT_EXECUTABLE'
+        elif k_donor_action == prev['action']:
+            f5_reason = 'NO_VALID_DONOR_SAME_ACTION'
+        elif mk == 0 or not int(partner['ctx']['prev_state']['K'].shape[0]):
+            f5_reason = 'NO_VALID_DONOR_EMPTY_K'
+        else:
             k_donor = donor_rows868(env, partner['ctx']['prev_state']['K'], own_k)
-    res['f5_donor'] = {'partner': cdef['partner'], 'legacy_word': k_donor_word, 'valid': k_donor is not None}
+    res['f5_donor'] = {'partner': cdef['partner'], 'executed_action': k_donor_action,
+                       'legacy_action_of_donor_rows': k_donor_legacy,
+                       'legacy_equals_executed': None if k_donor_action is None else k_donor_legacy == k_donor_action,
+                       'own_previous_executed_action': prev['action'], 'valid': k_donor is not None, 'reason': f5_reason}
     feeds = {'F1': (own_v, own_k), 'F2': (own_v, mue_rows868(env, mk)), 'F3': (mue_rows868(env, mv), own_k),
              'F4': (mue_rows868(env, mv), mue_rows868(env, mk)), 'F1R': (own_v, own_k)}
     if k_donor is not None:
         feeds['F5'] = (own_v, k_donor)
-    if f6 is not None and mv > 0:
+    if f6_reason is None:
         feeds['F6'] = (donor_rows868(env, f6['V'], own_v), own_k)
+    reasons = {'F5': f5_reason, 'F6': f6_reason}
     rot = index % 3
     middle = ['F2', 'F3', 'F4'][rot:] + ['F2', 'F3', 'F4'][:rot]
     order = ['F1'] + middle + ['F5', 'F6', 'F1R']
     res['order'] = order
     for arm in order:
         if arm not in feeds:
-            res['not_run'][arm] = 'NO_VALID_DONOR' if arm in EXTRA_ARMS868 else 'NOT_APPLICABLE'
+            res['not_run'][arm] = reasons.get(arm) or 'NOT_APPLICABLE'
             continue
         if arm in EXTRA_ARMS868 and not (budget_left865(env, EXTRA_ARM_MIN_CALLS868) and
                                          (time.perf_counter() - T0_865) / 60.0 < TEST865_MINUTES - 5.0):
@@ -5592,7 +5701,7 @@ def arms868(env, cx, partner, index):
             continue
         fb = feeds[arm]
         info = {'V': rows_info868(env, fb[0]), 'K': rows_info868(env, fb[1]), 'sources': list(ARMS868[arm])}
-        donor_ids = f6['ids'] if (f6 is not None and arm in ('F6', 'F3')) else None
+        donor_ids = f6['ids'] if ('F6' in feeds and arm in ('F6', 'F3')) else None
         out = arm868(env, cx, arm, fb, info, prev_ids, donor_ids)
         out['slot_provenance_ok'] = (out.get('state_sha256', {}).get('FV') == info['V']['sha256'] and
                                      out.get('state_sha256', {}).get('FK') == info['K']['sha256'])
@@ -5690,26 +5799,47 @@ def run_experiment868(env, by_item, log):
             STATE868['status'] = 'PARTIAL_BUDGET_CENSORED'
             break
         t0, c0 = time.perf_counter(), int(env['CALLS849'])
-        cxs, results = [], []
+        cxs, results, error, trace = [], [], None, None
         try:
             for d in defs:
-                cxs.append(replay868(env, by_item[d['item']], d, log))
+                replay868(env, by_item[d['item']], d, log, cxs)        # registers itself in cxs before mounting
             for i, cx in enumerate(cxs):
                 partner = cxs[1 - i] if len(cxs) == 2 else None
                 results.append(arms868(env, cx, partner, 2 * p + i))
-        except Exception as exc:              # only the locked budget849 limit is a censoring end; anything else re-raises
-            if type(exc).__name__ != 'BudgetR41':
-                raise
-            STATE868['stop_reason'] = 'BUDGET849 ' + str(exc)
-            STATE868['status'] = 'PARTIAL_BUDGET_CENSORED'
+        except Exception as exc:              # recorded below; only the locked budget849 limit is a censoring end
+            error, trace = exc, traceback.format_exc()
         finally:
             restores = [release868(env, cx) for cx in cxs]
+        budget_end = error is not None and type(error).__name__ == 'BudgetR41'
         for i, d in enumerate(defs):
-            r = results[i] if i < len(results) else {'context_id': d['context_id'], 'def': d, 'status': 'BUDGET_CENSORED'}
-            r['restore'] = restores[i] if i < len(restores) else None
-            if r['restore'] and r['restore'].get('exact_restore') is False:
+            if i < len(results):
+                r = results[i]
+            else:
+                r = {'context_id': d['context_id'], 'def': d,
+                     'status': 'BUDGET_CENSORED' if budget_end else ('EXECUTION_ERROR' if error is not None else 'NOT_RUN')}
+                if i < len(cxs):
+                    r['replay'] = {'steps': cxs[i]['steps'], 'status': cxs[i]['status']}
+            r['restore'] = restores[i] if i < len(restores) else {'had_memory': False, 'note': 'NEVER_MOUNTED'}
+            if r['restore'].get('cleanup_error') or r['restore'].get('restore_error'):
+                r['status'] = 'CLEANUP_FAILURE'
+            elif r['restore'].get('exact_restore') is False:
                 r['status'] = 'INTEGRITY_FAILURE'
             STATE868['contexts'].append(r)
+        if error is not None and not budget_end:
+            STATE868['status'] = 'ERROR'
+            STATE868['stop_reason'] = 'EXCEPTION_IN_PAIR_%d %s: %s' % (p, type(error).__name__, str(error)[:300])
+            short864('TEST868 PAIR EXCEPTION (memory released, restore checked)', trace)
+            raise error
+        if budget_end:
+            STATE868['stop_reason'] = 'BUDGET849 ' + str(error)
+            STATE868['status'] = 'PARTIAL_BUDGET_CENSORED'
+        if any(r['status'] == 'CLEANUP_FAILURE' for r in STATE868['contexts']):
+            STATE868['status'] = 'STOPPED_CLEANUP_FAILURE'
+            STATE868['stop_reason'] = 'CLEANUP_OR_RESTORE_ERROR (see restore fields)'
+            for c in SELECTION868:
+                if c['pair'] > p:
+                    STATE868['contexts'].append({'context_id': c['context_id'], 'def': c, 'status': 'NOT_RUN_AFTER_STOP'})
+            return
         pair_costs.append({'calls': int(env['CALLS849']) - c0, 'minutes': (time.perf_counter() - t0) / 60.0})
         peak = torch.cuda.max_memory_allocated() / 2**30 if torch.cuda.is_available() else 0.0
         line868('PAIR', p, 'statuses=%s' % [r['status'] for r in STATE868['contexts'][-len(defs):]],
@@ -5737,6 +5867,9 @@ def run_experiment868(env, by_item, log):
         if any(r['status'] == 'INTEGRITY_FAILURE' for r in STATE868['contexts']):
             STATE868['status'] = 'STOPPED_INTEGRITY'
             STATE868['stop_reason'] = 'INTEGRITY_FAILURE'
+            for c in SELECTION868:
+                if c['pair'] > p:
+                    STATE868['contexts'].append({'context_id': c['context_id'], 'def': c, 'status': 'NOT_RUN_AFTER_STOP'})
             return
         if peak > VRAM_CAP_GIB868:
             STATE868['status'] = 'PARTIAL_BUDGET_CENSORED'
@@ -5789,12 +5922,21 @@ def factorial868(valid, endpoint):
         if any(v.get(a) is None for a in MAIN_ARMS868):
             continue
         e = effects868(v['F1'], v['F2'], v['F3'], v['F4'])
-        per.append({'context_id': r['context_id'], 'kind': r['def']['kind'], 'values': {a: v[a] for a in MAIN_ARMS868}, **e})
+        per.append({'context_id': r['context_id'], 'kind': r['def']['kind'], 'world': r['def']['world'],
+                    'values': {a: v[a] for a in MAIN_ARMS868}, **e})
         for k in diffs:
             diffs[k].append(e[k])
     tests = {'K': test_effect868(diffs['K']), 'V': test_effect868(diffs['V']),
              'VxK': test_effect868(diffs['VxK'], two_sided=True)}
-    return {'endpoint': endpoint, 'n': len(per), 'per_context': per, 'tests': tests}
+    cluster = {}
+    for k in ('K', 'V', 'VxK'):
+        values = cluster_values868(per, k)
+        cluster[k] = test_effect868(list(values.values()), two_sided=(k == 'VxK'))
+        cluster[k]['world_means'] = {str(w): v for w, v in values.items()}
+    for t in list(tests.values()) + list(cluster.values()):
+        t['supported_nominal'] = t.pop('supported')        # raw p: nominal only, never reported as confirmation
+    return {'endpoint': endpoint, 'n': len(per), 'n_worlds': len({p['world'] for p in per}), 'per_context': per,
+            'tests': tests, 'cluster_tests': cluster}
 
 
 def analyse868():
@@ -5805,25 +5947,46 @@ def analyse868():
     primary = {e: factorial868(valid, e) for e in ('E1', 'E2')}
     pvals = {'%s_%s' % (e, k): primary[e]['tests'][k]['sign_p_two_sided'] for e in primary for k in ('K', 'V', 'VxK')}
     holm = holm868(pvals)
+    cluster_p = {'%s_%s' % (e, k): primary[e]['cluster_tests'][k]['sign_p_two_sided'] for e in primary
+                 for k in ('K', 'V', 'VxK')}
+    cluster_holm = holm868(cluster_p)
     for e in primary:
         for k in ('K', 'V', 'VxK'):
             t = primary[e]['tests'][k]
             t['holm_p'] = holm['%s_%s' % (e, k)]
-            t['robust_to_holm'] = bool(t['supported'] and t['holm_p'] <= ALPHA868)
+            t['supported_holm'] = confirm868(t, t['holm_p'], two_sided=(k == 'VxK'))
+            c = primary[e]['cluster_tests'][k]
+            c['holm_p'] = cluster_holm['%s_%s' % (e, k)]
+            c['supported_holm'] = confirm868(c, c['holm_p'], two_sided=(k == 'VxK'))
         t = primary[e]['tests']
-        primary[e]['class'] = classify868(t['K'], t['V'], t['VxK'], primary[e]['n'], technical_ok)
+        primary[e]['class_final'] = classify868({'supported': t['K']['supported_holm']}, {'supported': t['V']['supported_holm']},
+                                                {'supported': t['VxK']['supported_holm']}, primary[e]['n'], technical_ok)
+        primary[e]['class_nominal_not_confirmatory'] = classify868(
+            {'supported': t['K']['supported_nominal']}, {'supported': t['V']['supported_nominal']},
+            {'supported': t['VxK']['supported_nominal']}, primary[e]['n'], technical_ok)
+        primary[e]['class'] = primary[e]['class_final']
+        confirmed = [k for k in ('K', 'V', 'VxK') if t[k]['supported_holm']]
+        if not confirmed:
+            primary[e]['cluster_sensitivity'] = 'NOT_APPLICABLE_NO_CONFIRMED_EFFECT'
+        else:
+            consistent = all(primary[e]['cluster_tests'][k]['supported_nominal'] for k in confirmed)
+            primary[e]['cluster_sensitivity'] = 'CONSISTENT_AT_WORLD_LEVEL_NOMINAL' if consistent else \
+                'NOT_CONSISTENT_AT_WORLD_LEVEL'
     secondary = {e: factorial868(valid, e) for e in ('E1_first_token', 'eval_exact_copy', 'eval_node_copy',
                                                      'mentions_not_supported', 'mentions_unknown', 'p_stop', 'p_accept')}
     for e in secondary:
         t = secondary[e]['tests']
-        secondary[e]['class_exploratory'] = classify868(t['K'], t['V'], t['VxK'], secondary[e]['n'], technical_ok)
-        secondary[e]['label'] = 'EXPLORATORY' if e != 'E1_first_token' else 'SENSITIVITY_LENGTH_BIAS'
+        secondary[e]['class_exploratory_nominal'] = classify868(
+            {'supported': t['K']['supported_nominal']}, {'supported': t['V']['supported_nominal']},
+            {'supported': t['VxK']['supported_nominal']}, secondary[e]['n'], technical_ok)
+        secondary[e]['label'] = 'EXPLORATORY_NOMINAL_ONLY' if e != 'E1_first_token' else \
+            'SENSITIVITY_LENGTH_BIAS_NOMINAL_ONLY'
     f5 = {'donor_word_gain': [], 'own_action_loss': [], 'contexts': []}
     f6 = {'donor_copy_gain': [], 'donor_node_named_F6': 0, 'donor_node_named_F3': 0, 'contexts': []}
     for r in valid:
         a = r['arms']
         if 'F5' in a and a['F5']['status'] == 'MEASURED':
-            w = r['f5_donor']['legacy_word']
+            w = r['f5_donor']['executed_action']
             f5['donor_word_gain'].append(a['F5']['normalized'][w] - a['F2']['normalized'][w])
             f5['own_action_loss'].append(a['F1']['normalized'][r['previous']['executed_action']] -
                                          a['F5']['normalized'][r['previous']['executed_action']])
@@ -5837,6 +6000,8 @@ def analyse868():
     f5['tests'] = {'donor_word_gain': test_effect868(f5['donor_word_gain']),
                    'own_action_loss': test_effect868(f5['own_action_loss'])}
     f6['tests'] = {'donor_copy_gain': test_effect868(f6['donor_copy_gain'])}
+    for t in list(f5['tests'].values()) + list(f6['tests'].values()):
+        t['supported_nominal'] = t.pop('supported')
     f5['label'] = f6['label'] = 'EXPLORATORY_MECHANISTIC_CONTROL'
     strata = {}
     for r in valid:
@@ -5869,11 +6034,26 @@ def analyse868():
                             'claims': {'a_causal_effect_on_model_output': None,
                                        'b_evaluation_or_action_copying': None,
                                        'c_evidence_sufficiency_and_task_success': 'NOT_ESTABLISHED (not tested by TEST868)'}}
-    any_effect = any(primary[e]['tests'][k]['supported'] for e in primary for k in ('K', 'V', 'VxK'))
+    holm_any = any(primary[e]['tests'][k]['supported_holm'] for e in primary for k in ('K', 'V', 'VxK'))
+    nominal_any = any(primary[e]['tests'][k]['supported_nominal'] for e in primary for k in ('K', 'V', 'VxK'))
     STATE868['analysis']['claims']['a_causal_effect_on_model_output'] = (
-        'SUPPORTED' if technical_ok and any_effect else ('NOT_SUPPORTED' if technical_ok else 'INCONCLUSIVE_TECHNICAL'))
+        'INCONCLUSIVE_TECHNICAL' if not technical_ok else 'CONFIRMED_HOLM_CONTEXT_LEVEL' if holm_any else
+        'NOMINAL_ONLY_NOT_CONFIRMED' if nominal_any else 'NOT_SUPPORTED')
     STATE868['analysis']['claims']['b_evaluation_or_action_copying'] = {
-        'E1_action_repetition': primary['E1']['class'], 'E2_evaluation_copy': primary['E2']['class']}
+        'E1_action_repetition_final': primary['E1']['class_final'],
+        'E1_cluster_sensitivity': primary['E1']['cluster_sensitivity'],
+        'E2_evaluation_copy_final': primary['E2']['class_final'],
+        'E2_cluster_sensitivity': primary['E2']['cluster_sensitivity'],
+        'nominal_classes_not_confirmatory': {e: primary[e]['class_nominal_not_confirmatory'] for e in primary}}
+    STATE868['analysis']['statistical_scope'] = {
+        'unit': '12 contexts = 6 worlds x 2 (one A and one B context per world); contexts of one world share cards and '
+                'names and are NOT independent replicates',
+        'levels': {'effect_size': 'median and order-statistic CI of the paired context-level differences',
+                   'nominal': 'pre-registered rule with the raw exact sign p (not a confirmation)',
+                   'confirmatory': 'the same rule with the Holm-adjusted p over the 6 primary tests (final class)',
+                   'cluster_sensitivity': 'the same rule on the 6 world means; best attainable p = 0.031 (6/6), which can '
+                                          'never pass Holm over 6 tests: a sensitivity analysis with limited power'},
+        'power': STATE868['selftest'].get('power')}
     STATE868['analysis']['next_intervention_supported_by_evidence'] = next_step868(primary)
 
 
@@ -5889,7 +6069,9 @@ def next_step868(primary):
                                  'accumulation before changing a slot',
             'INCONCLUSIVE_STATISTICAL': 'too few valid contexts: no architectural conclusion',
             'INCONCLUSIVE_TECHNICAL': 'technical gate failed: no scientific conclusion'}
-    return {e: text[primary[e]['class']] for e in primary}
+    return {e: text[primary[e]['class_final']] + ('' if primary[e]['class_final'] not in (
+        'K_DOMINANT', 'V_DOMINANT', 'V_K_INTERACTION', 'BOTH_V_AND_K') else
+        ' [world-level sensitivity: %s]' % primary[e]['cluster_sensitivity']) for e in primary}
 
 
 # ============================ OUTPUT ============================
@@ -5935,15 +6117,23 @@ def summary_text868():
                                      for k, v in STATE868['gates'].items()}, sort_keys=True),
            'contexts: %s  valid: %s  statuses: %s' % (a.get('n_contexts'), a.get('n_valid'), a.get('statuses'))]
     for e, block in a.get('primary', {}).items():
-        out.append('%s (primary)  n=%d  class=%s' % (e, block['n'], block['class']))
+        out.append('%s (primary)  n_contexts=%d  n_worlds=%d  FINAL(Holm)=%s  nominal(raw, not confirmatory)=%s  '
+                   'world-level sensitivity=%s' % (e, block['n'], block['n_worlds'], block['class_final'],
+                                                   block['class_nominal_not_confirmatory'], block['cluster_sensitivity']))
         for k, t in block['tests'].items():
-            out.append('   %-3s median=%s ci=%s +%d/-%d/0:%d need=%d p=%.4g holm=%.4g supported=%s robust_holm=%s' % (
-                k, None if t['median'] is None else round(t['median'], 4),
-                [None if x is None else round(x, 4) for x in t['median_ci']], t['positive'], t['negative'],
-                t['ties'], t['required_same_sign'], t['sign_p_two_sided'], t['holm_p'], t['supported'],
-                t['robust_to_holm']))
+            c = block['cluster_tests'][k]
+            out.append('   %-3s effect median=%s ci=%s | +%d/-%d/0:%d need=%d raw p=%.4g nominal=%s | Holm p=%.4g '
+                       'confirmed=%s | worlds: median=%s +%d/-%d p=%.4g nominal=%s Holm p=%.4g' % (
+                           k, None if t['median'] is None else round(t['median'], 4),
+                           [None if x is None else round(x, 4) for x in t['median_ci']], t['positive'], t['negative'],
+                           t['ties'], t['required_same_sign'], t['sign_p_two_sided'], t['supported_nominal'], t['holm_p'],
+                           t['supported_holm'], None if c['median'] is None else round(c['median'], 4), c['positive'],
+                           c['negative'], c['sign_p_two_sided'], c['supported_nominal'], c['holm_p']))
     for e, block in a.get('secondary', {}).items():
-        out.append('%s (%s)  n=%d  class=%s' % (e, block['label'], block['n'], block['class_exploratory']))
+        out.append('%s (%s)  n=%d  class=%s' % (e, block['label'], block['n'], block['class_exploratory_nominal']))
+    if a.get('statistical_scope'):
+        out.append('scope: %s' % a['statistical_scope']['unit'])
+        out.append('power: %s' % a['statistical_scope']['power'].get('statement') if a['statistical_scope'].get('power') else 'power: n/a')
     if a:
         out.append('F5: n=%d donor_word_gain median=%s; own_action_loss median=%s (exploratory)' % (
             len(a['F5']['contexts']), a['F5']['tests']['donor_word_gain']['median'],
