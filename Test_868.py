@@ -4933,6 +4933,11 @@ STATE868 = {'source': {}, 'gates': {}, 'contexts': [], 'analysis': {}, 'costs': 
             'status': 'NOT_STARTED', 'stop_reason': None}
 ERROR868 = None
 TRACEBACK868 = ''
+# Technical failures that close the confirmatory claim (fail-closed). PARTIAL_BUDGET_CENSORED / BUDGET_CENSORED are NOT
+# here: pre-registered censoring and the minimum-n rule handle them.
+TECHNICAL_FAILURE_CONTEXT868 = ('INTEGRITY_FAILURE', 'CLEANUP_FAILURE', 'EXECUTION_ERROR')
+TECHNICAL_FAILURE_STATUS868 = ('ERROR', 'STOPPED_CLEANUP_FAILURE', 'STOPPED_INTEGRITY', 'STOPPED_AT_GATE2',
+                               'STOPPED_NO_CONTEXTS', 'GATE0_FAIL', 'GATE1_FAIL')
 
 
 def line868(*parts):
@@ -5511,10 +5516,12 @@ def replay868(env, spec, cdef, log, owner):
 def release868(env, cx):
     # Always: free the context memory, then remount the initial cards and compare (a) with the seal of the initial mount
     # of this replay and (b) with the first mount of the same card list in this session (mount865's own record).
-    # Never raises: a failure is returned as cleanup_error / restore_error and stops the experiment in the caller.
+    # Ordinary exceptions (Exception) are caught and returned as cleanup_error / restore_error / log_error; the caller then
+    # stops safely. A BaseException that is not an Exception (KeyboardInterrupt, SystemExit, ...) is NOT swallowed here:
+    # it propagates to release_all868, which still releases every other owned context and re-raises it afterwards.
     ctx = cx['ctx']
     out = {'had_memory': ctx.get('memx') is not None, 'freed': None, 'cleanup_error': None, 'restore_error': None,
-           'exact_restore': None, 'restore_vs_initial_seal': None, 'restore_vs_first_mount': None}
+           'exact_restore': None, 'restore_vs_initial_seal': None, 'restore_vs_first_mount': None, 'log_error': None}
     try:
         free865(env, ctx.get('memx'))
         ctx['memx'] = None
@@ -5541,12 +5548,31 @@ def release868(env, cx):
             except Exception as exc:
                 out['cleanup_error'] = (out['cleanup_error'] or '') + ' RESTORE_FREE: %s: %s' % (type(exc).__name__,
                                                                                                     str(exc)[:300])
-    line868('RELEASE', cx['def']['context_id'], 'had_memory=%s freed=%s exact_restore=%s' % (
-        out['had_memory'], out['freed'], out['exact_restore']), 'vs_initial=%s vs_first_mount=%s' % (
-        out['restore_vs_initial_seal'], out['restore_vs_first_mount']),
-        '' if not (out['cleanup_error'] or out['restore_error']) else 'ERRORS=%s | %s' % (
-            out['cleanup_error'], out['restore_error']))
+    try:                                  # a log-I/O failure must not hide the release result
+        line868('RELEASE', cx['def']['context_id'], 'had_memory=%s freed=%s exact_restore=%s' % (
+            out['had_memory'], out['freed'], out['exact_restore']), 'vs_initial=%s vs_first_mount=%s' % (
+            out['restore_vs_initial_seal'], out['restore_vs_first_mount']),
+            '' if not (out['cleanup_error'] or out['restore_error']) else 'ERRORS=%s | %s' % (
+                out['cleanup_error'], out['restore_error']))
+    except Exception as exc:
+        out['log_error'] = '%s: %s' % (type(exc).__name__, str(exc)[:300])
     return out
+
+
+def release_all868(env, cxs):
+    # Releases EVERY owned context even if one release raises. BaseException is caught here only to finish the cleanup
+    # of the other contexts; the first one is returned and the caller re-raises it after recording (never swallowed).
+    restores, first = [], None
+    for cx in cxs:
+        try:
+            restores.append(release868(env, cx))
+        except BaseException as exc:
+            if first is None:
+                first = exc
+            restores.append({'had_memory': None, 'freed': None, 'exact_restore': False, 'restore_vs_initial_seal': None,
+                             'restore_vs_first_mount': None, 'log_error': None, 'restore_error': None,
+                             'cleanup_error': 'RELEASE_RAISED %s: %s' % (type(exc).__name__, str(exc)[:300])})
+    return restores, first
 
 
 # ============================ ARMS (read-only; locked control_step867) ============================
@@ -5806,10 +5832,9 @@ def run_experiment868(env, by_item, log):
             for i, cx in enumerate(cxs):
                 partner = cxs[1 - i] if len(cxs) == 2 else None
                 results.append(arms868(env, cx, partner, 2 * p + i))
-        except Exception as exc:              # recorded below; only the locked budget849 limit is a censoring end
+        except BaseException as exc:          # caught only to release and record; re-raised below unless BudgetR41
             error, trace = exc, traceback.format_exc()
-        finally:
-            restores = [release868(env, cx) for cx in cxs]
+        restores, cleanup_exc = release_all868(env, cxs)
         budget_end = error is not None and type(error).__name__ == 'BudgetR41'
         for i, d in enumerate(defs):
             if i < len(results):
@@ -5825,11 +5850,20 @@ def run_experiment868(env, by_item, log):
             elif r['restore'].get('exact_restore') is False:
                 r['status'] = 'INTEGRITY_FAILURE'
             STATE868['contexts'].append(r)
+        if cleanup_exc is not None:
+            STATE868['cleanup_exception'] = '%s: %s' % (type(cleanup_exc).__name__, str(cleanup_exc)[:300])
         if error is not None and not budget_end:
             STATE868['status'] = 'ERROR'
             STATE868['stop_reason'] = 'EXCEPTION_IN_PAIR_%d %s: %s' % (p, type(error).__name__, str(error)[:300])
-            short864('TEST868 PAIR EXCEPTION (memory released, restore checked)', trace)
-            raise error
+            try:
+                short864('TEST868 PAIR EXCEPTION (all owned contexts released, restore checked)', trace)
+            except Exception:
+                pass
+            raise error                       # the original error is preserved (a cleanup error is only recorded)
+        if cleanup_exc is not None and not isinstance(cleanup_exc, Exception):
+            STATE868['status'] = 'ERROR'
+            STATE868['stop_reason'] = 'INTERRUPTED_DURING_CLEANUP_PAIR_%d %s' % (p, type(cleanup_exc).__name__)
+            raise cleanup_exc                 # KeyboardInterrupt / SystemExit are never swallowed
         if budget_end:
             STATE868['stop_reason'] = 'BUDGET849 ' + str(error)
             STATE868['status'] = 'PARTIAL_BUDGET_CENSORED'
@@ -5933,6 +5967,8 @@ def factorial868(valid, endpoint):
         values = cluster_values868(per, k)
         cluster[k] = test_effect868(list(values.values()), two_sided=(k == 'VxK'))
         cluster[k]['world_means'] = {str(w): v for w, v in values.items()}
+        cluster[k]['contexts_per_world'] = {str(w): sum(1 for row in per if row['world'] == w) for w in values}
+        cluster[k]['worlds_with_both_contexts'] = sum(1 for w in values if sum(1 for row in per if row['world'] == w) == 2)
     for t in list(tests.values()) + list(cluster.values()):
         t['supported_nominal'] = t.pop('supported')        # raw p: nominal only, never reported as confirmation
     return {'endpoint': endpoint, 'n': len(per), 'n_worlds': len({p['world'] for p in per}), 'per_context': per,
@@ -5942,8 +5978,22 @@ def factorial868(valid, endpoint):
 def analyse868():
     contexts = STATE868['contexts']
     valid = [r for r in contexts if r.get('status') == 'VALID']
-    technical_ok = STATE868['gates'].get('GATE2', {}).get('status') == 'PASS' and not any(
-        r.get('status') == 'INTEGRITY_FAILURE' for r in contexts)
+    blockers = []                         # every technical failure that closes the confirmatory claim
+    if STATE868['gates'].get('GATE2', {}).get('status') != 'PASS':
+        blockers.append('GATE2_NOT_PASS:%s' % STATE868['gates'].get('GATE2', {}).get('status'))
+    for r in contexts:
+        if r.get('status') in TECHNICAL_FAILURE_CONTEXT868:
+            blockers.append('CONTEXT_%s:%s' % (r.get('status'), r.get('context_id')))
+    if STATE868['status'] in TECHNICAL_FAILURE_STATUS868:
+        blockers.append('RUN_STATUS:%s' % STATE868['status'])
+    negative = STATE868.get('negative')
+    if negative is not None and not all(negative.values()):
+        blockers.append('POST_EXPERIMENT_INVARIANT:%s' % sorted(k for k, v in negative.items() if not v))
+    if ERROR868 is not None:
+        blockers.append('CELL_ERROR:%s' % str(ERROR868)[:200])
+    if STATE868.get('cleanup_exception'):
+        blockers.append('CLEANUP_EXCEPTION:%s' % STATE868['cleanup_exception'])
+    technical_ok = not blockers
     primary = {e: factorial868(valid, e) for e in ('E1', 'E2')}
     pvals = {'%s_%s' % (e, k): primary[e]['tests'][k]['sign_p_two_sided'] for e in primary for k in ('K', 'V', 'VxK')}
     holm = holm868(pvals)
@@ -6027,7 +6077,8 @@ def analyse868():
     length_bias = {'tokens_per_word': lengths,
                    'second_token_logp_median': {w: median868(v) for w, v in second.items()},
                    'second_token_logp_min': {w: min(v) for w, v in second.items()}}
-    STATE868['analysis'] = {'technical_ok': technical_ok, 'n_contexts': len(contexts), 'n_valid': len(valid),
+    STATE868['analysis'] = {'technical_ok': technical_ok, 'technical_blockers': blockers,
+                            'n_contexts': len(contexts), 'n_valid': len(valid),
                             'statuses': dict(collections.Counter(r.get('status') for r in contexts)),
                             'primary': primary, 'holm': holm, 'secondary': secondary, 'F5': f5, 'F6': f6,
                             'strata': strata, 'descriptive': descriptive, 'length_bias': length_bias,
@@ -6115,7 +6166,8 @@ def summary_text868():
            'status: %s  stop_reason: %s' % (STATE868['status'], STATE868['stop_reason']),
            'gates: %s' % json.dumps({k: (v.get('status') if isinstance(v, dict) else v)
                                      for k, v in STATE868['gates'].items()}, sort_keys=True),
-           'contexts: %s  valid: %s  statuses: %s' % (a.get('n_contexts'), a.get('n_valid'), a.get('statuses'))]
+           'contexts: %s  valid: %s  statuses: %s' % (a.get('n_contexts'), a.get('n_valid'), a.get('statuses')),
+           'technical_ok: %s  blockers: %s' % (a.get('technical_ok'), a.get('technical_blockers'))]
     for e, block in a.get('primary', {}).items():
         out.append('%s (primary)  n_contexts=%d  n_worlds=%d  FINAL(Holm)=%s  nominal(raw, not confirmatory)=%s  '
                    'world-level sensitivity=%s' % (e, block['n'], block['n_worlds'], block['class_final'],
