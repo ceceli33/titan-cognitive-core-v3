@@ -1,5 +1,10 @@
 # AKBASCORE SILICON HIPPOCAMPUS — TEST875 — NATIVE SELECTIVE-WRITE / FULL-READ RECONCILIATION
 # One A100-SXM4-80GB Colab cell. The locked engine is loaded once; only C's L4-L79 write is counterfactual.
+# QUESTION: closing C's (physical outcome cartridge) upper-layer write attention to X2_state + A — does the next
+# native CAR decision become an evidence-consistent correction? W = that write mask; WP = the same number of
+# positions directly before X2_state (task-prompt tail); H = native append; O0 = C not readable by X3 and CAR.
+# Write mask = HF's own 4-D boolean causal mask (True = attend) with the block set False, passed to the same chunked
+# DirectCut3 append as the locked native_append_direct. Independent review by Claude (Anthropic): see the report notes.
 import ast as _a874, hashlib as _h874, json as _j874, urllib.request as _u874
 ENGINE_URL875 = ('https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/'
                  'e322ed8ed903f1a438738a3caada6744750cea42/test870.py')
@@ -38,7 +43,8 @@ print('TEST875 ENGINE', _j874.dumps(ENGINE_INFO875, sort_keys=True))
 LOCKS864.update({'test870.py': ENGINE_BLOB875, 'Test870.log': 'e954d658752a59f66ceaeb1b8c7f52fd86a005dc',
                  '873.py': '2e44affa5e0dd462155fb265c331270fb8e7b7e1',
                  '873.log': '1c9eb9fca173003eaf45bc7726af13c2817324b7',
-                 '874.py': '12172001ba3696ad91087a8b34d7995728259e47'})
+                 '874.py': '12172001ba3696ad91087a8b34d7995728259e47',
+                 '874.log': '1229e3b70440e3887ccf1bd7e3bad51f900f5313'})
 TEST870_MINUTES = TEST865_MINUTES = 55.0
 WORLDS875 = ('00', '01'); SIDES875 = SIDES874 = tuple('I867_%s_%s' % (w, c) for w in WORLDS875 for c in ('MISSING', 'LIVE'))
 ARM875, PRE_STEP875, POST_STEP875 = 'V_X', 2, 3
@@ -46,16 +52,18 @@ FUNCS873 = ('kv873', 'length873', 'forward873', 'car873', 'resolve_append873', '
             'probs873', 'same873', 'tv873')
 CORRECTIVE875 = ('STOP', 'REJECT', 'BACKTRACK'); ARMS875 = ('H', 'W', 'WP', 'H-O0', 'W-O0')
 ROPE_TOL875, REPRO_TOL875, ROUND_TOL875 = 1e-2, 6e-4, 2e-2
-ROUND_TOL874 = ROUND_TOL875; ONE_SHOT_TOL875 = 2e-2
 SHIFT_MIN875, LIVE_TOL875, CONTROL_GAP875, EFFECT_TV875 = .20, .10, .10, .10
 PREREG875 = {'timeline': '[M_t2][X2_task_prompt][X2_state][A][C][X3]', 'sides': SIDES875, 'arms': ARMS875,
     'W_write_mask': 'X2_state+A, C upper L4-L79 only', 'WP_write_mask': 'equal-length immediately preceding task-prompt tail',
     'read': 'H/W/WP full causal; O0 masks C for X3 and every cropped CAR continuation',
-    'gates': {'identity_cache_rel_max': ROUND_TOL875, 'identity_and_O0_CAR_dp': REPRO_TOL875,
-              'one_shot_dp': ONE_SHOT_TOL875, 'lower_K_rephase': ROPE_TOL875},
+    'gates': {'identity_C_L0_L4_bitwise': True, 'identity_C_L5_L79_rel_max': ROUND_TOL875,
+              'identity_and_O0_CAR_dp': REPRO_TOL875, 'lower_K_rephase': ROPE_TOL875,
+              'one_shot': 'not re-gated: TEST874 (874.log, locked) classified it NUMERICAL_ORDER_DETERMINISTIC'},
+    'write_mask_format': 'HF sdpa 4-D boolean (True = attend), identical to the mask HF builds for the native append',
     'correction': {'corrective': CORRECTIVE875, 'shift_min': SHIFT_MIN875, 'live_tolerance': LIVE_TOL875,
                    'matched_control_gap': CONTROL_GAP875, 'effect_TV_or_argmax': EFFECT_TV875},
-    'continuation': 'only model-native W=REJECT/BACKTRACK; new MOUNTED outcome uses X3_state+A selective write; X4 full read',
+    'continuation': 'only model-native W=REJECT/BACKTRACK, executed once on a copy of the loop state; X4 full read except '
+                    'the rows of a card the engine physically UNMOUNTED; reported, not classified',
     'classes': ['SELECTIVE_WRITE_CORRECTION', 'WRITE_EFFECT_WITHOUT_CORRECTION', 'NO_SELECTIVE_WRITE_EFFECT',
                 'NONSPECIFIC_MASK_EFFECT', 'TECHNICAL_BLOCK']}
 PREREG_SHA875 = sha256_bytes864(_j874.dumps(PREREG875, sort_keys=True).encode())
@@ -89,30 +97,42 @@ def capture_source875():
                           'lines': source.count('\n') + 1, 'firewall': 'PASS'}
 
 def load875():
-    names = ('load873_874', 'ref873_874', 'keep874', 'forward874', 'car874', 'rows874', 'decide874', 'rel874', 'oneshot874')
+    names = ('load873_874', 'ref873_874', 'keep874', 'forward874', 'car874', 'rows874', 'decide874', 'rel874', 'card_range874')
     tree = _a874.parse(RAW_SOURCES864['874.py'].decode(), filename='874.py')
     nodes = [n for n in tree.body if isinstance(n, _a874.FunctionDef) and n.name in names]
     assert {n.name for n in nodes} == set(names)
     exec(compile(_a874.fix_missing_locations(_a874.Module(body=nodes, type_ignores=[])), '874.py:selected', 'exec'), globals())
     load873_874()
 
+NAMES757 = ('P', 'CUT', 'NL', 'H', 'DEV', 'DTYPE', 'CHUNK', 'model', 'DirectCut3', 'ensure_room', 'pairs', 'rephase',
+            'kv_digest', 'full_kv_seal', 'cache_build')
+
+def g757(env):
+    # the namespace the locked native_append_direct really resolves (unwrap its torch.no_grad decorator)
+    fn = env['native_append_direct']
+    g = getattr(fn, '__wrapped__', fn).__globals__
+    missing = [k for k in NAMES757 if k not in g]
+    assert not missing and int(g['CUT']) == 3, ('NAMESPACE_757', missing)
+    return g
+
 def mask875(env, q, k, q0, block):
+    # HF sdpa format: 4-D bool, True = attend (what create_causal_mask builds for the native append), block -> False
     qp = q0 + torch.arange(q, device=env['DEV']); kp = torch.arange(k, device=env['DEV'])
     allowed = qp[:, None] >= kp[None, :]
     if block is not None: allowed[:, block[0]:block[1]] = False
     assert bool(allowed.any(dim=-1).all()), 'FULLY_MASKED_QUERY'
-    ans = torch.zeros((1, 1, q, k), dtype=env['DTYPE'], device=env['DEV'])
-    return ans.masked_fill_(~allowed, torch.finfo(env['DTYPE']).min)
+    return allowed[None, None]
 
+@torch.no_grad()
 def append875(env, kv, cid, block):
-    # Locked native_append_direct body; the sole computational change is its explicit 4-D causal additive SDPA mask.
+    # Locked native_append_direct body (757.py); the sole change is the explicit 4-D boolean causal mask.
     assert getattr(env['model'].config, '_attn_implementation', None) == 'sdpa', 'SDPA_REQUIRED'
-    cp, _ = APPEND873['load'](cid); g = env['native_append_direct'].__globals__
-    n = lambda name: g[name] if name in g else env[name]
+    cp, _ = APPEND873['load'](cid); g = g757(env)
+    n = lambda name: g[name]
     memory = list(kv); oldn = length873(env, memory); P, CUT, NL = int(n('P')), int(n('CUT')), int(n('NL'))
     q = int(cp['n'] - P); assert q > 0 and (block is None or 0 <= block[0] < block[1] <= oldn)
     body, seals, old_lower = cp['h'][:, P:, :], n('full_kv_seal')(memory), tuple(memory[:CUT + 1])
-    upper = env['cache_build'](memory)
+    upper = n('cache_build')(memory)
     for i in range(NL): memory[i] = None
     gc.collect()
     with n('DirectCut3')(n('model').model.layers[CUT], 'inject', source=body) as bridge:
@@ -120,7 +140,7 @@ def append875(env, kv, cid, block):
             m = min(int(n('CHUNK')), q - st); n('ensure_room')(m + 512); bridge.offset = st
             pos = torch.arange(oldn + st, oldn + st + m, device=env['DEV'])
             am = mask875(env, m, oldn + st + m, oldn + st, block)
-            out = n('model')(inputs_embeds=torch.zeros((1, m, env['H']), device=env['DEV'], dtype=env['DTYPE']),
+            out = n('model')(inputs_embeds=torch.zeros((1, m, int(n('H'))), device=n('DEV'), dtype=n('DTYPE')),
                 past_key_values=upper, attention_mask=am, position_ids=pos.unsqueeze(0), cache_position=pos,
                 use_cache=True, return_dict=True)
             upper = out.past_key_values; del out, am
@@ -151,21 +171,19 @@ def stash_control875(env, ctx, candidate, pointer, feedback):
         STASH875[ctx['spec']['item']] = {'candidate': candidate, 'control': out[0], 'state': out[2]}
     return out
 
-def step2_875(env, ctx, side, state, action, cache3, keep3, seg, pre, post):
-    st = STASH875.pop(side, None); assert st is not None and st['state'] is state
+def step2_875(env, ctx, side, state, action, cache3, keep3, seg, m2_cards, card, pre, post):
+    # the model's own W word executed once by the engine on a copy of the loop state; next CAR read on the W timeline
+    st = STASH875.pop(side, None); assert st is not None and st['state'] is state, 'STASH_NOT_T3_STATE'
     ids = dict(ACTION_IDS867)
     ctx2 = dict(ctx, M=list(ctx['M']), path=list(ctx['path']), events=list(ctx['events']),
                 mount_records=list(ctx['mount_records']), own_states=list(ctx['own_states']), prev_state=state['own_state'],
                 memx=[tuple(t.clone() for t in kv) for kv in ctx['memx']])
     effect = execute866(env, ctx2, action, st['candidate'], st['control'], state); row = ctx2['events'][-1]
-    res = {'run': True, 'action': action, 'effect': effect, 'chosen': row.get('chosen'), 'new_outcome': None}
+    res = {'run': True, 'action': action, 'effect': effect, 'chosen': row.get('chosen'), 'mounted_after': list(ctx2['M'])}
     n3 = int(cache3.get_seq_length()); forward874(env, cache3, env['embed841'](ids[action]), n3, keep3, 1)
-    kv4 = [cache_kv870(cache3, l) for l in range(int(env['NL']))]; del cache3
-    n_action = n3 + len(ids[action])
-    if effect == 'MOUNTED':
-        block = (seg['X3_state'][0], n_action); cid = row.get('chosen'); assert cid
-        kv4, n4 = append875(env, kv4, cid, block); assert n4 == n_action
-        res['new_outcome'] = {'card': cid, 'write_mask_X3_state_A': block, 'read': 'FULL_CAUSAL'}
+    kv4 = [cache_kv870(cache3, l) for l in range(int(env['NL']))]
+    drop = [card_range874(env, res['chosen'], m2_cards, card, seg)] if effect == 'UNMOUNTED' else []
+    res['read_mask'] = drop                        # a physically unmounted card is no longer readable
     k = len(ctx2['path']); pointer = None if k == 0 else ctx2['path'][-1]['rows']
     h4, kind = hop865(env, ctx2['memx'], ctx2['spec']['qid'], k, pointer); res['hop4'] = h4['text']
     if kind == 'EMPTY_OUTPUT': res['end'] = 'NATIVE_EMPTY_OUTPUT'
@@ -175,8 +193,8 @@ def step2_875(env, ctx, side, state, action, cache3, keep3, seg, pre, post):
         else:
             names = slot_names869(env, list(state4['segments']))
             X4, _ = env['make_x851'](pre, [s for s, n in zip(state4['segments'], names) if n not in ('FV', 'FK')], post)
-            r4, _ = decide874(env, kv4, X4, [])
-            res['X4_W_policy'] = {'action': r4['action'], 'p': probs873(r4), 'read_mask': []}
+            r4, _, _, _ = decide874(env, kv4, X4, drop)
+            res['X4_W_policy'] = arm875(r4); res['X4_engine_R'] = arm875(record4['reading'])
     del kv4, ctx2['memx']
     return res
 
@@ -191,16 +209,17 @@ def probe875(env, ctx, record, state, label):
             out['t2_action'] = record['action']; assert record['action'] == 'ACQUIRE'
             segs2 = list(state['segments']); X2, _ = env['make_x851'](pre, segs2, post); L2, lp = int(X2.shape[0]), len(pre)
             assert lp + sum(len(x) + (0 if r is None else int(r.shape[0])) for x, r in segs2) + len(post) == L2, 'X2_LAYOUT'
+            w_len = L2 - lp + len(ids['ACQUIRE'])          # W block = X2_state + A
+            assert lp >= w_len, ('WP_NOT_APPLICABLE: task prompt %d < W block %d' % (lp, w_len))
             m2 = [tuple(t.clone() for t in kv) for kv in ctx['memx']]; n2 = length873(env, m2)
             cache = env['cache_build'](list(m2)); c['t2_CAR_equals_record'] = same873(car873(env, cache, X2), record['reading'])
             c['t2_crops'] = int(cache.get_seq_length()) == n2 + L2
             own = env['cache_build'](list(kv873(env, cache))); del cache
             forward873(env, own, env['embed841'](ids['ACQUIRE']), n2 + L2); keep_own = kv873(env, own); del own
             c['commit_length'] = length873(env, keep_own) == n2 + L2 + len(ids['ACQUIRE'])
-            out['one_shot_diagnostic'], one = oneshot874(env, m2, X2, ids['ACQUIRE'], keep_own)
-            c['one_shot_not_semantic'] = out['one_shot_diagnostic']['class'] != 'SEMANTIC'
-            T2_KEEP875[side] = {'own': keep_own, 'one': one, 'n2': n2, 'L2': L2, 'lp': lp}
-            out['lengths'].update({'M_t2': n2, 'X2': L2, 'X2_task_prompt': lp, 'X2_state': L2 - lp, 'A': len(ids['ACQUIRE'])})
+            T2_KEEP875[side] = {'own': keep_own, 'n2': n2, 'L2': L2, 'lp': lp, 'm2_cards': list(ctx['M'])}
+            out['lengths'].update({'M_t2': n2, 'X2': L2, 'X2_task_prompt': lp, 'X2_state': L2 - lp,
+                                   'A': len(ids['ACQUIRE']), 'W_block': w_len})
             assert c['t2_CAR_equals_record'] and c['t2_crops'] and c['commit_length']; del m2
             return
         vram0 = vram_begin870(); z = T2_KEEP875.pop(side); n2, L2, lp = z['n2'], z['L2'], z['lp']
@@ -212,58 +231,65 @@ def probe875(env, ctx, record, state, label):
         X3, _ = env['make_x851'](pre, segs3, post)
         L3 = int(X3.shape[0]); assert lp + sum(len(x) + (0 if r is None else int(r.shape[0])) for x, r in segs3) + len(post) == L3, 'X3_LAYOUT'
         seal0 = prefix_seals865(env, memx); hook0 = assert_hook_free859(env, 'T875_before_' + side)
-        gH, n_before = append_card873(env, z['own'], card); rH, totalH = decide873(env, gH, X3); arms['H'] = arm875(rH)
+        NL, ALL = int(env['NL']), range(int(env['NL']))
+        gH, n_before = append_card873(env, z['own'], card)          # H: locked native_append_direct
+        rH, rowsH, _, _ = decide874(env, gH, X3, [], rows=True); arms['H'] = arm875(rH)   # car874 [] == car873 (TEST874 GPU)
         x3s = n_before + body; seg = {'X2_state': [n2 + lp, n2 + L2], 'A': [n2 + L2, n_before],
                                       'C': [n_before, x3s], 'X3_state': [x3s + lp, x3s + L3]}; out['segments'] = seg
-        c['segments'] = n_before == n2 + L2 + len(ids['ACQUIRE']) and length873(env, gH) == x3s and totalH == x3s + L3
+        c['segments'] = n_before == n2 + L2 + len(ids['ACQUIRE']) and length873(env, gH) == x3s
         cut, rephase = APPEND873['CUT'], APPEND873['rephase']
         c['lower_V_bitwise'] = all(torch.equal(gH[i][1][:, :, n_before:], memx[i][1][:, :, n3 - body:]) for i in range(cut + 1))
         rope = max(float(torch.linalg.vector_norm(rephase(gH[i][0][:, :, n_before:], torch.arange(n_before, x3s, device=env['DEV']),
             torch.arange(n3 - body, n3, device=env['DEV'])).float() - memx[i][0][:, :, n3 - body:].float())) /
             max(float(torch.linalg.vector_norm(memx[i][0][:, :, n3 - body:].float())), 1e-30) for i in range(cut + 1))
         c['lower_K_rephase'] = rope <= ROPE_TOL875
-        gB, _ = append_card873(env, [tuple(t.clone() for t in kv) for kv in z['own']], card)
-        c['H_rebuild'] = same873(rH, decide873(env, gB, X3)[0]); del gB
         ref = STATE875['ref873'][side]['T1']; c['H_reproduces_873'] = rH['action'] == ref['action'] and all(
             abs(arms['H']['p'][w] - ref['p'][w]) <= REPRO_TOL875 for w in ref['p'])
-        gO, _ = append_card873(env, z['one'], card); rO, _ = decide873(env, gO, X3); one_dp = dp875(rH, rO)
-        c['one_shot_dp'] = one_dp <= ONE_SHOT_TOL875 and c['one_shot_not_semantic']; del gO, rO
-        assert c['card_mounted'] and c['H_rebuild'] and c['one_shot_dp'] and c['H_reproduces_873'] and c['lower_V_bitwise'] and c['lower_K_rephase'] and c['segments']
-        # Identity calibration must pass on this timeline before any selective write.
-        gI, _ = append875(env, z['own'], card, None); rI, _ = decide873(env, gI, X3)
-        irel = rel874(seg875(gH, n_before, x3s, range(int(env['NL']))), seg875(gI, n_before, x3s, range(int(env['NL']))))
-        idp = dp875(rH, rI); c['identity_cache'] = max(irel) <= ROUND_TOL875
-        c['identity_CAR'] = rI['action'] == rH['action'] and idp <= REPRO_TOL875
-        out['calibration'] = {'I_action': rI['action'], 'I_p': probs873(rI), 'cache_max_rel': max(irel), 'CAR_max_dp': idp,
-                              'one_shot_max_dp': one_dp, 'locked_873_one_shot_max_dp': STATE875['ref873'][side]['one_shot_max_dp']}
-        del gI, rI; assert c['identity_cache'] and c['identity_CAR'], 'TECHNICAL_BLOCK_IDENTITY'
-        w0, w1 = n2 + lp, n_before; wp0 = w0 - (w1 - w0); assert wp0 >= n2
+        assert c['card_mounted'] and c['H_reproduces_873'] and c['lower_V_bitwise'] and c['lower_K_rephase'] and c['segments'], c
+        # 4-D mask identity: same visibility as the native append. C rows L0-L3 are copied and L4 reads only the
+        # injected H3, so L0-L4 must be bitwise; L5+ and CAR must agree (expected exact: same bool mask content).
+        gI, _ = append875(env, z['own'], card, None); rI, _, _, _ = decide874(env, gI, X3, [])
+        low_eq = all(torch.equal(x, y) for i in range(cut + 2) for x, y in zip(gH[i], gI[i]))
+        irel = max(rel874(seg875(gH, n_before, x3s, range(cut + 2, NL)), seg875(gI, n_before, x3s, range(cut + 2, NL))))
+        idp = dp875(rH, rI); c['identity_C_L0_L4_bitwise'] = low_eq
+        c['identity_cache'] = irel <= ROUND_TOL875; c['identity_CAR'] = rI['action'] == rH['action'] and idp <= REPRO_TOL875
+        out['calibration'] = {'I_action': rI['action'], 'C_L5plus_max_rel': irel, 'CAR_max_dp': idp,
+                              'exact': bool(low_eq and irel == 0.0 and same873(rH, rI)),
+                              'locked_873_one_shot_max_dp': STATE875['ref873'][side]['one_shot_max_dp']}
+        del rI; assert low_eq and c['identity_cache'] and c['identity_CAR'], 'TECHNICAL_BLOCK_IDENTITY'
+        w0, w1 = n2 + lp, n_before; wp0 = w0 - (w1 - w0); assert wp0 >= n2, 'WP_NOT_APPLICABLE'
         gW, _ = append875(env, z['own'], card, (w0, w1)); gWP, _ = append875(env, z['own'], card, (wp0, w0))
-        out['write_masks'] = {'W': [w0, w1], 'WP': [wp0, w0]}; assert w1 - w0 == w0 - wp0
-        c['write_lower_bitwise'] = all(torch.equal(x, y) for g in (gW, gWP) for i in range(4)
-            for x, y in zip(seg875(gH, n_before, x3s, [i])[0], seg875(g, n_before, x3s, [i])[0]))
-        c['L4_C_invariant'] = all(torch.equal(x, y) for x, y in zip(seg875(gH, n_before, x3s, [4])[0],
-                                                                     seg875(gW, n_before, x3s, [4])[0]))
-        out['W_L5plus_C_max_rel'] = max(rel874(seg875(gH, n_before, x3s, range(5, 80)), seg875(gW, n_before, x3s, range(5, 80))))
-        rHx, rowsH, _, _ = decide874(env, gH, X3, [], rows=True); c['empty_read_equals_native'] = same873(rH, rHx)
+        out['write_masks'] = {'W': [w0, w1], 'WP': [wp0, w0]}
+        # same code path as I: C rows L0-L4 cannot depend on the write mask (structural invariant, bitwise)
+        c['write_L0_L4_bitwise'] = all(torch.equal(x, y) for g in (gW, gWP) for i in range(cut + 2)
+                                       for x, y in zip(seg875(gI, n_before, x3s, [i])[0], seg875(g, n_before, x3s, [i])[0]))
+        out['C_L5plus_max_rel_vs_I'] = {'W': max(rel874(seg875(gI, n_before, x3s, range(cut + 2, NL)), seg875(gW, n_before, x3s, range(cut + 2, NL)))),
+                                         'WP': max(rel874(seg875(gI, n_before, x3s, range(cut + 2, NL)), seg875(gWP, n_before, x3s, range(cut + 2, NL))))}
+        del gI
         rW, rowsW, cache3, keep3 = decide874(env, gW, X3, [], rows=True, hold=True); arms['W'] = arm875(rW)
         rWP, rowsWP, _, _ = decide874(env, gWP, X3, [], rows=True); arms['WP'] = arm875(rWP)
-        rHO, rowsHO, _, _ = decide874(env, gH, X3, [seg['C']], rows=True); arms['H-O0'] = arm875(rHO)
-        rWO, rowsWO, _, _ = decide874(env, gW, X3, [seg['C']], rows=True); arms['W-O0'] = arm875(rWO)
-        c['X3_lower_H_W_WP'] = all(torch.equal(x, y) for rows in (rowsW, rowsWP) for i in range(4) for x, y in zip(rowsH[i], rows[i]))
+        rHO, rowsHO, _, kHO = decide874(env, gH, X3, [seg['C']], rows=True); arms['H-O0'] = arm875(rHO)
+        rWO, rowsWO, _, kWO = decide874(env, gW, X3, [seg['C']], rows=True); arms['W-O0'] = arm875(rWO)
+        zero = torch.nonzero(kHO == 0).flatten().tolist()
+        c['O0_mask_exactly_C'] = zero == list(range(n_before, x3s)) and torch.equal(kHO, kWO)   # X3 + every CAR continuation
+        c['X3_lower_H_W_WP'] = all(torch.equal(x, y) for rows in (rowsW, rowsWP) for i in range(cut + 1) for x, y in zip(rowsH[i], rows[i]))
         o0dp, o0rel = dp875(rHO, rWO), max(rel874(rowsHO, rowsWO))
         c['O0_null'] = rHO['action'] == rWO['action'] and o0dp <= REPRO_TOL875 and o0rel <= ROUND_TOL875
-        out['O0'] = {'CAR_max_dp': o0dp, 'X3_cache_max_rel': o0rel}; assert c['O0_null'], 'TECHNICAL_BLOCK_O0_DIVERGENCE'
+        out['O0'] = {'CAR_max_dp': o0dp, 'X3_cache_max_rel': o0rel, 'exact': bool(o0rel == 0.0 and same873(rHO, rWO))}
         g_seal = prefix_seals865(env, gH, n_before)
         c['timeline_unchanged'] = g_seal == prefix_seals865(env, gW, n_before) == prefix_seals865(env, gWP, n_before)
         c['memory_seal'] = prefix_seals865(env, memx) == seal0
-        assert all(c[k] for k in ('write_lower_bitwise', 'L4_C_invariant', 'empty_read_equals_native',
-                                  'X3_lower_H_W_WP', 'timeline_unchanged', 'memory_seal')), 'TECHNICAL_BLOCK_BEFORE_CONTINUATION'
+        del rowsH, rowsW, rowsWP, rowsHO, rowsWO, gH, gWP
+        assert all(c[k] for k in ('write_L0_L4_bitwise', 'O0_mask_exactly_C', 'X3_lower_H_W_WP', 'O0_null',
+                                  'timeline_unchanged', 'memory_seal')), 'TECHNICAL_BLOCK_BEFORE_CONTINUATION'
         out['step2'] = {'run': False, 'reason': 'W=%s; no physical corrective continuation' % rW['action']}
         if rW['action'] in ('REJECT', 'BACKTRACK'):
-            out['step2'] = step2_875(env, ctx, side, state, rW['action'], cache3, keep3, seg, pre, post)
-        else: del cache3
-        del rowsH, rowsW, rowsWP, rowsHO, rowsWO, gH, gW, gWP, z
+            try:   # continuation is reported only; its failure never changes the t3 classification
+                out['step2'] = step2_875(env, ctx, side, state, rW['action'], cache3, keep3, seg, z['m2_cards'], card, pre, post)
+            except Exception as exc:
+                out['step2'] = {'run': True, 'error': '%s: %s' % (type(exc).__name__, str(exc)[:300])}
+                (ROOT864 / ('875_%s_step2_traceback.txt' % side)).write_text(traceback.format_exc(), encoding='utf-8')
+        del cache3, gW, z
         STASH875.pop(side, None); hook1 = assert_hook_free859(env, 'T875_after_' + side)
         c['hook_free'] = not any(x['hook_count'] or x['transformers_output_capturing_installed'] for x in (hook0, hook1))
         out['vram'] = vram_end870(vram0)
@@ -281,10 +307,10 @@ control_step869 = stash_control875
 
 def outcome875():
     reps = {r.get('item'): r for r in STATE870['replays']}; blocks = list(STATE875['blocks'])
-    need = ('t2_CAR_equals_record', 't2_crops', 'commit_length', 'one_shot_not_semantic', 'card_mounted', 'segments',
-            'lower_V_bitwise', 'lower_K_rephase', 'H_rebuild', 'H_reproduces_873', 'one_shot_dp', 'identity_cache', 'identity_CAR',
-            'write_lower_bitwise', 'L4_C_invariant', 'empty_read_equals_native', 'X3_lower_H_W_WP', 'O0_null',
-            'timeline_unchanged', 'memory_seal', 'hook_free')
+    need = ('t2_CAR_equals_record', 't2_crops', 'commit_length', 'card_mounted', 'segments', 'lower_V_bitwise',
+            'lower_K_rephase', 'H_reproduces_873', 'identity_C_L0_L4_bitwise', 'identity_cache', 'identity_CAR',
+            'write_L0_L4_bitwise', 'O0_mask_exactly_C', 'X3_lower_H_W_WP', 'O0_null', 'timeline_unchanged', 'memory_seal',
+            'hook_free')
     for side in SIDES875:
         s = STATE875['sides'].get(side)
         if reps.get(side, {}).get('ok') is not True: blocks.append('REPLAY_NOT_EXACT:' + side)
@@ -302,7 +328,12 @@ def outcome875():
         wp_similar = tv875(m['W'], m['WP']) < EFFECT_TV875 and m['W']['action'] == m['WP']['action'] and tv875(m['WP'], m['H']) >= EFFECT_TV875
         live_similar = tv875(l['W'], l['WP']) < EFFECT_TV875 and l['W']['action'] == l['WP']['action'] and (tv875(l['WP'], l['H']) >= EFFECT_TV875 or l['WP']['action'] != l['H']['action'])
         row = {'W_corrective': wc, 'WP_corrective': pc, 'LIVE_W_ACCEPT_kept': live, 'specificity_gap': gap,
-               'W_effect': we, 'WP_similar_effect': wp_similar, 'LIVE_WP_similar_effect': live_similar}; res['worlds'][w] = row
+               'W_effect': we, 'WP_similar_effect': wp_similar, 'LIVE_WP_similar_effect': live_similar,
+               'O0_removes_W_effect': m['H-O0']['action'] == m['W-O0']['action'] and tv875(m['H-O0'], m['W-O0']) < EFFECT_TV875,
+               'distribution_only': we and m['W']['action'] == m['H']['action'],
+               'MISSING_W': m['W']['action'], 'LIVE_W': l['W']['action'],
+               'MISSING_corr_W_minus_H': round(corr875(m['W']['p']) - corr875(m['H']['p']), 4),
+               'MISSING_corr_W_minus_WP': round(corr875(m['W']['p']) - corr875(m['WP']['p']), 4)}; res['worlds'][w] = row
         effects |= we or tv875(l['W'], l['H']) >= EFFECT_TV875 or l['W']['action'] != l['H']['action']
         nonspecific |= pc or wp_similar or live_similar; correction &= wc and live and not pc and gap and not wp_similar and not live_similar
     res['outcome'] = ('SELECTIVE_WRITE_CORRECTION' if correction else 'NONSPECIFIC_MASK_EFFECT' if nonspecific else
@@ -320,6 +351,8 @@ def report875():
             if name in s['arms']:
                 a = s['arms'][name]; print('  %-5s %-9s' % (name, a['action']), ' '.join('%s=%.3f' % (w, a['p'][w]) for w in words), 'corr=%.3f' % corr875(a['p']))
         print('  calibration', _j874.dumps(s.get('calibration'), sort_keys=True), 'O0', _j874.dumps(s.get('O0'), sort_keys=True))
+        print('  write', _j874.dumps({'masks': s.get('write_masks'), 'C_L5plus_rel_vs_I': s.get('C_L5plus_max_rel_vs_I')}),
+              'segments', _j874.dumps(s.get('segments')), 's_t3', s.get('seconds_t3'), 'vram', (s.get('vram') or {}).get('peak_allocated_gib'))
         print('  continuation', _j874.dumps(s.get('step2'), default=str), 'ERROR', s.get('error'))
     o = STATE875['outcome'] or {}; print('WORLDS', _j874.dumps(o.get('worlds'), sort_keys=True), 'BLOCKS', o.get('blocks'))
     directions = {'TECHNICAL_BLOCK': 'Önce cache/mask/one-shot bütünlüğü; mekanizma iddiası yok.',
@@ -331,7 +364,7 @@ def report875():
     print('TEST875 OUTCOME', o.get('outcome'), '| status', STATE875['status'], '| wall %.0fs' % (time.perf_counter() - T_START875),
           '| peak GPU %.2f GiB' % (max(STATE870['costs'].get('session_peak_allocated_bytes', 0),
           torch.cuda.max_memory_allocated() if torch.cuda.is_available() else 0) / 2**30))
-    print('GPU EXECUTION BY CODE AUTHOR: NOT_EXECUTED; behavioral failure is not a technical PASS.')
+    print('GPU EXECUTION BY CODE AUTHORS (K3.1 Pro, Claude review): NOT_EXECUTED; behavioral failure is not a technical PASS.')
 
 T_START875 = time.perf_counter()
 try:
@@ -339,7 +372,8 @@ try:
     json_write864('875_prereg.json', {'prereg': PREREG875, 'sha256': PREREG_SHA875, 'before_model_load': True})
     load_sources865(); load875(); STATE875['ref873'] = ref873_874(RAW_SOURCES864['873.log'].decode())
     for name, needles in (('Test870.log', ('XR870 CALIBRATION CALIBRATION_PASS', 'NVIDIA A100')),
-                          ('873.log', ('TEST873 OUTCOME', 'status COMPLETE', 'NVIDIA A100'))):
+                          ('873.log', ('TEST873 OUTCOME', 'status COMPLETE', 'NVIDIA A100')),
+                          ('874.log', ('TEST874 OUTCOME', 'status COMPLETE', 'NVIDIA A100', 'NUMERICAL_ORDER_DETERMINISTIC'))):
         assert all(x in RAW_SOURCES864[name].decode() for x in needles), ('LOCKED_LOG_NOT_COMPLETE', name)
     feasibility_audit864(); audit_contracts865(); load_spine864(); REFS875 = load_records870()
     for w in WORLDS875:
@@ -358,7 +392,7 @@ try:
     digest875 = records_digest861(env875); null_seal875 = physical_seal863(env875, env875['MEMNULL841'])
     runtime_contracts865(env875); runtime_preflight865(env875, reproduction875); rearm_budget865(env875); make_slots866(env875)
     SLOTS867['PREV_EVALUATION'] = list(env875['tok'](PREV_EVAL_SLOT_TEXT867, add_special_tokens=False).input_ids)
-    action_ids867(env875); resolve_append873(env875)
+    action_ids867(env875); resolve_append873(env875); g757(env875); line875('GATE1 NAMESPACE757 OK', sorted(NAMES757))
     assert getattr(env875['model'].config, '_attn_implementation', None) == 'sdpa'
     assert not any(p.requires_grad for p in env875['model'].parameters())
     assert_hook_free859(env875, 'T875_before_points'); STATE875['status'] = 'RUNNING'; T0_865 = time.perf_counter()
@@ -383,7 +417,8 @@ finally:
         result = dict(STATE875, replays=STATE870['replays'])
         json_write864('875_result.json', json.loads(json.dumps(result, default=str, allow_nan=False)))
     except Exception as exc: print('RESULT_WRITE_FAILED', type(exc).__name__, exc, file=ERROR_CONSOLE864, flush=True)
-    report875()
+    try: report875()
+    except Exception as exc: print('REPORT_FAILED', type(exc).__name__, exc, file=ERROR_CONSOLE864, flush=True)
     if 'EVENTS_FILE866' in globals() and not EVENTS_FILE866.closed: EVENTS_FILE866.close()
     if 'LOG_FILE864' in globals() and not LOG_FILE864.closed: LOG_FILE864.close()
 exec(compile(ENGINE875['suffix'], 'test870.py:suffix', 'exec'), globals())
