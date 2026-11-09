@@ -76,7 +76,7 @@ FUNCS873 = ('kv873', 'length873', 'forward873', 'car873', 'resolve_append873', '
 FUNCS874 = ('load873_874', 'ref873_874', 'keep874', 'forward874', 'car874', 'rows874', 'decide874', 'rel874')
 BLOCKS877 = ((0, 20), (20, 40), (40, 60), (60, 80))
 ROPE_TOL877, REPRO_TOL877, NUM_FLOOR877, DETECT_X877, RHO_MIN877 = 1e-2, 6e-4, 1e-5, 5.0, 0.5
-HARD_MIN877, VRAM_ABORT_GIB877 = 100.0, 60.0
+HARD_MIN877, CONFIRM_RESERVE_MIN877, FREE_MIN_GIB877 = 100.0, 30.0, 8.0
 PREREG877 = {
     'question': 'native pathway carrying the REAL C-content difference to the CAR decision, target X3 fixed',
     'sides': SIDES877, 'discovery_world': DISCOVERY877, 'confirmation_world': CONFIRM877, 'arm': ARM877,
@@ -92,8 +92,8 @@ PREREG877 = {
     'metrics': 'first-token and full-sequence logp of the 6 CAR words, 15 pairwise margins each; reading867 unchanged',
     'effects': 'tau = m(SWAP)-m(BASE); nu = m(BASE)-m(MASK); P = m(PATCH)-m(BASE); A = m(ABLATE_SHAM)-m(BASE)',
     'rho_r': 'rho = <P,tau>/|tau|^2; r = |tau-P|/|tau|; r_sham = |tau-A|/|tau| (sequence margins primary)',
-    'num_floor': 'tau_num = max(%g, max no-op |dm|); detectable: |tau| > %g * tau_num' % (NUM_FLOOR877, DETECT_X877),
-    'pass_rule': 'both directions: rho_seq >= %g and r_seq < r_sham_seq' % RHO_MIN877,
+    'num_floor': 'no-op arms are exact gates, so tau_num = %g; detectable: |tau| > %g * tau_num' % (NUM_FLOOR877, DETECT_X877),
+    'pass_rule': 'both directions: rho_seq >= %g and r_seq < 1 and r_seq < r_sham_seq; |P|/|tau| reported' % RHO_MIN877,
     'levels': ['8 blocks: {attn, mlp} x %s' % (BLOCKS877,), 'if exactly one: its 20 single layers (same pathway)',
                'if exactly one attn layer: 8 KV groups (pre-W_O slice 1024g:1024(g+1) = query heads 8g..8g+7)',
                'if exactly one group: its 8 query heads (128q:128(q+1))',
@@ -101,9 +101,13 @@ PREREG877 = {
     'distributed_vs_none': 'no block passes: full-depth attn or mlp passes -> DISTRIBUTED_PATH else NO_LOCALIZED_PATH; '
                            '>1 block passes -> DISTRIBUTED_PATH',
     'confirmation': 'World 00 replayed only with a frozen manifest; same gates; frozen pathway must pass the same rule',
-    'stops': ['G3 mismatch -> NO_DATA', 'tau not detectable: nu detectable -> NONSPECIFIC_CONTEXT_EFFECT else NO_EFFECT',
-              'first-token tau not detectable but sequence tau detectable -> CAR_CONTINUATION_ONLY',
-              'hard stop %g min or %g GiB -> PARTIAL_INCONCLUSIVE' % (HARD_MIN877, VRAM_ABORT_GIB877)],
+    'stops': ['G3 mismatch -> NO_DATA', 'sequence tau in neither direction: nu detectable -> NONSPECIFIC_CONTEXT_EFFECT '
+              'else NO_EFFECT', 'sequence tau in one direction only -> INCONCLUSIVE_ASYMMETRIC_TOTAL_EFFECT',
+              'sequence tau both, first-token tau neither -> CAR_CONTINUATION_ONLY',
+              'sequence tau both, first-token tau one direction -> scan continues, flag MIXED_FIRST_TOKEN_EFFECT',
+              'guard before every target direction and pathway: elapsed > %g min (discovery: %g min, keeps %g min for '
+              'confirmation) or available VRAM < %g GiB -> PARTIAL_INCONCLUSIVE' % (
+                  HARD_MIN877, HARD_MIN877 - CONFIRM_RESERVE_MIN877, CONFIRM_RESERVE_MIN877, FREE_MIN_GIB877)],
     'limits': ['VALUE_NOT_IDENTIFIED', 'WRITABLE_LEARNING_NOT_TESTED', 'two event pairs: pilot, no population claim']}
 PREREG_SHA877 = sha256_bytes864(_j877.dumps(PREREG877, sort_keys=True).encode())
 STATE877 = {'status': 'NOT_STARTED', 'engine': ENGINE_INFO877, 'prereg_sha256': PREREG_SHA877, 'source': {}, 'api': {},
@@ -232,11 +236,11 @@ def xattn877(sa, x, pe, mask, cache, pid, cpos, pre_patch, rec, mass):
     for s, e, val in pre_patch or ():
         o[:, -1, s:e] = val                       # pre-W_O query-head slice of the decision row only
     if rec is not None: rec.append(o[0, -1].clone())
-    if mass is not None:                          # descriptive: D-row attention mass on C per query head (GQA: q//8)
-        qd, kk = q[0, :, -1, :].float(), k[0].float()
+    if mass is not None:                          # descriptive, BASE pass only: D-row attention mass on C per query head
+        qd, kk = q[0, :, -1, :].float(), k[0].float()  # (GQA: query head q reads KV head q // group size)
         grp = torch.arange(qd.shape[0], device=qd.device) // (qd.shape[0] // kk.shape[0])
         w = torch.softmax(torch.einsum('hd,hnd->hn', qd, kk[grp]) * sa.scaling, dim=-1)
-        mass['C'] = [round(float(x), 6) for x in w[:, mass['c0']:mass['c1']].sum(-1)]
+        mass['C'].append([round(float(x), 5) for x in w[:, mass['c0']:mass['c1']].sum(-1)])
         del qd, kk, w
     return sa.o_proj(o)
 
@@ -256,7 +260,7 @@ def xforward877(env, cache, Y, keep, last, patch=None, rec=None, mass=None):
             if rec is not None: rec['resid'].append(h[0, -1].clone())
             res = h; x = layer.input_layernorm(h)
             a = xattn877(layer.self_attn, x, pe, mask, cache, pid, cpos, P.get('pre', {}).get(i),
-                         None if rec is None else rec['pre'], mass if (mass is not None and mass['layer'] == i) else None)
+                         None if rec is None else rec['pre'], mass)
             if i in P.get('attn', {}): a[:, -1, :] = P['attn'][i]
             if rec is not None: rec['attn'].append(a[0, -1].clone())
             h = res + a
@@ -317,16 +321,18 @@ def effect877(tau, P, A):
         tt, nt = sum(x * x for x in tau[k]), nrm877(tau[k])
         out[k] = {'rho': sum(x * y for x, y in zip(P[k], tau[k])) / (tt + 1e-12),
                   'r': nrm877(sub877(tau[k], P[k])) / (nt + 1e-12), 'r_sham': nrm877(sub877(tau[k], A[k])) / (nt + 1e-12),
-                  'norm_P': nrm877(P[k]), 'norm_A': nrm877(A[k])}
-    out['pass'] = out['seq']['rho'] >= RHO_MIN877 and out['seq']['r'] < out['seq']['r_sham']
+                  'norm_P': nrm877(P[k]), 'norm_A': nrm877(A[k]), 'P_over_tau': nrm877(P[k]) / (nt + 1e-12)}
+    q = out['seq']; out['pass'] = q['rho'] >= RHO_MIN877 and q['r'] < 1.0 and q['r'] < q['r_sham']
     return out
 
 def arm877(r): return {'action': r['action'], 'p': probs873(r)}
 
-def guard877(stage):
-    el = (time.perf_counter() - T_START877) / 60.0; peak = torch.cuda.max_memory_allocated() / 2**30
-    if el > HARD_MIN877 or peak > VRAM_ABORT_GIB877:
-        raise Partial877('%s: elapsed %.1f min, peak %.2f GiB' % (stage, el, peak))
+def guard877(stage, world):
+    el = (time.perf_counter() - T_START877) / 60.0
+    lim = HARD_MIN877 - (CONFIRM_RESERVE_MIN877 if world == DISCOVERY877 else 0.0)
+    free = (torch.cuda.mem_get_info()[0] + torch.cuda.memory_reserved() - torch.cuda.memory_allocated()) / 2**30
+    if el > lim or free < FREE_MIN_GIB877:
+        raise Partial877('%s: elapsed %.1f min (limit %.0f), available VRAM %.2f GiB (min %.0f)' % (stage, el, lim, free, FREE_MIN_GIB877))
 
 # ============================ world panel (gates + total effect) ============================
 def total877(env, w, M, L):
@@ -344,12 +350,11 @@ def total877(env, w, M, L):
     out['X3_len'] = {'MISSING': int(M['X3'].shape[0]), 'LIVE': int(L['X3'].shape[0])}
     if not all(v for k, v in g.items() if k.startswith('G3')):
         out['status'] = 'NO_DATA'; return out
-    noop = []
     for t, d in ((M, L), (L, M)):
-        guard877('total_%s_%s' % (w, t['cond']))
-        T = {}
+        guard877('total_%s_%s' % (w, t['cond']), w)
+        T = {}; massB = {'c0': nb, 'c1': c1, 'C': []}
         nat, rows_n, _, _ = decide874(env, t['gH'], t['X3'], [], rows=True)
-        T['recB'] = rec877(); base, rows_x = xcar877(env, t['gH'], t['X3'], (), rec=T['recB'], rows=True)
+        T['recB'] = rec877(); base, rows_x = xcar877(env, t['gH'], t['X3'], (), rec=T['recB'], mass=massB, rows=True)
         T['recS'] = rec877(); swap, _ = xcar877(env, d['gH'], t['X3'], (), rec=T['recS'])
         T['recM'] = rec877(); mask, _ = xcar877(env, t['gH'], t['X3'], [(nb, c1)], rec=T['recM'])
         mdon, _ = xcar877(env, d['gH'], t['X3'], [(nb, c1)])
@@ -357,16 +362,16 @@ def total877(env, w, M, L):
         sp = {'attn': {i: T['recB']['attn'][i] for i in range(NL)}}
         sm = {'mlp': {i: T['recB']['mlp'][i] for i in range(NL)}}
         sh = {'pre': {i: [(0, width, T['recB']['pre'][i])] for i in range(NL)}}
-        selfs = [xcar877(env, t['gH'], t['X3'], (), patch=p)[0] for p in (sp, sm, sh)]
+        same_rows = lambda a, b: all(torch.equal(x, y) for p, q in zip(a, b) for x, y in zip(p, q))
+        self_ok = []
+        for p in (sp, sm, sh):                     # self-patch: CAR reading AND X3 K/V rows must equal BASE
+            r_s, rows_s = xcar877(env, t['gH'], t['X3'], (), patch=p, rows=True)
+            self_ok.append(same873(base, r_s) and same_rows(rows_s, rows_x)); del r_s, rows_s
         out['reads'] += 8
         mB, mS, mM, mMD = (marg877(x) for x in (base, swap, mask, mdon))
-        mN = marg877(nat)
-        T['gates'] = {'G2_explicit_equals_native': same873(nat, base) and all(
-                          torch.equal(x, y) for p, q in zip(rows_n, rows_x) for x, y in zip(p, q)),
-                      'G6_self_patch_noop': all(same873(base, s) for s in selfs),
-                      'G6_masked_donor_equals_mask': same873(mask, mdon)}
-        noop += [maxabs877(dif877(mN, mB)), maxabs877(dif877(mMD, mM))] + [maxabs877(dif877(marg877(s), mB)) for s in selfs]
-        T['m'] = {'BASE': mB, 'SWAP': mS, 'MASK': mM}
+        T['gates'] = {'G2_explicit_equals_native': same873(nat, base) and same_rows(rows_n, rows_x),
+                      'G6_self_patch_noop': all(self_ok), 'G6_masked_donor_equals_mask': same873(mask, mdon)}
+        T['m'] = {'BASE': mB, 'SWAP': mS, 'MASK': mM}; T['C_mass'] = massB['C']
         T['arms'] = {'NATIVE': arm877(nat), 'BASE': arm877(base), 'SWAP': arm877(swap), 'MASK': arm877(mask),
                      'MASKED_DONOR': arm877(mdon)}
         T['tau'], T['nu'] = dif877(mS, mB), dif877(mB, mM)
@@ -375,7 +380,7 @@ def total877(env, w, M, L):
                         for i in range(MOD877['NL'])] for k in ('resid', 'attn', 'mlp')}
         del rows_n, rows_x
         out['targets'][t['cond']] = T
-    out['tau_num'] = max([NUM_FLOOR877] + noop)
+    out['tau_num'] = NUM_FLOOR877                 # every no-op arm above is an exact gate
     for cond, T in out['targets'].items():
         for k in ('G2_explicit_equals_native', 'G6_self_patch_noop', 'G6_masked_donor_equals_mask'):
             g['%s_%s' % (k, cond)] = T['gates'][k]
@@ -385,13 +390,13 @@ def total877(env, w, M, L):
                       'nu_seq': nrm877(T['nu']['seq']), 'did_minus_tau': maxabs877(dif877(T['did'], T['tau']))}
     if not all(g[k] for k in g if k.startswith(('G2', 'G6_self'))): out['status'] = 'CACHE_PARITY_FAIL'; return out
     if not all(g[k] for k in g if k.startswith('G6_masked')): out['status'] = 'MASK_PARITY_FAIL'; return out
-    Ts = list(out['targets'].values())
-    if not all(T['detect']['seq'] for T in Ts):
-        out['status'] = 'NONSPECIFIC_CONTEXT_EFFECT' if any(T['detect']['nu'] for T in Ts) else 'NO_EFFECT'
-    elif not any(T['detect']['first'] for T in Ts):
-        out['status'] = 'CAR_CONTINUATION_ONLY'
+    seq, first = [[T['detect'][k] for T in out['targets'].values()] for k in ('seq', 'first')]
+    if not any(seq):
+        out['status'] = 'NONSPECIFIC_CONTEXT_EFFECT' if any(T['detect']['nu'] for T in out['targets'].values()) else 'NO_EFFECT'
+    elif not all(seq): out['status'] = 'INCONCLUSIVE_ASYMMETRIC_TOTAL_EFFECT'
+    elif not any(first): out['status'] = 'CAR_CONTINUATION_ONLY'
     else:
-        out['status'] = 'TOTAL_EFFECT'
+        out['status'] = 'TOTAL_EFFECT'; out['first_token'] = 'BOTH' if all(first) else 'MIXED_FIRST_TOKEN_EFFECT'
     return out
 
 def build877(path, rec):
@@ -404,6 +409,7 @@ def test877(env, tot, M, L, path):
     # one pathway, both directions: PATCH (SWAP-run D outputs) and ABLATE_SHAM (MASK-run D outputs) into BASE
     res = {'path': path, 'dirs': {}}
     for t in (M, L):
+        guard877('%s_%s' % (path['label'], t['cond']), tot['world'])
         T = tot['targets'][t['cond']]
         rp, _ = xcar877(env, t['gH'], t['X3'], (), patch=build877(path, T['recS']))
         ra, _ = xcar877(env, t['gH'], t['X3'], (), patch=build877(path, T['recM']))
@@ -418,7 +424,6 @@ def scan877(env, tot, M, L):
     # discovery only: pre-registered hierarchy; freeze the finest level with exactly one passing candidate
     sc = {'levels': [], 'frozen': None}
     def level(name, paths):
-        guard877('scan_' + name)
         rows = [test877(env, tot, M, L, p) for p in paths]
         sc['levels'].append({'level': name, 'rows': rows, 'passing': [r['path'] for r in rows if r['pass']]})
         return [r['path'] for r in rows if r['pass']]
@@ -456,15 +461,14 @@ def frozen_extras877(env, tot, M, L, path):
     out = {}
     nb, c1 = tot['C']
     for t in (M, L):
+        guard877('extras_%s_%s' % (path['label'], t['cond']), tot['world'])
         T = tot['targets'][t['cond']]
-        rr, _ = xcar877(env, t['gH'], t['X3'], [(nb, c1)], patch=build877(path, T['recS']))
+        rr, _ = xcar877(env, t['gH'], t['X3'], [(nb, c1)], patch=build877(path, T['recS'])); tot['reads'] += 1
         ref = dif877(T['m']['SWAP'], T['m']['MASK']); R = dif877(marg877(rr), T['m']['MASK'])
         ent = {'RESCUE': arm877(rr), 'rho_rescue_seq': sum(x * y for x, y in zip(R['seq'], ref['seq'])) / (sum(x * x for x in ref['seq']) + 1e-12)}
-        if path['kind'] in ('attn', 'pre') and len(path['layers']) == 1:
-            mass = {'layer': path['layers'][0], 'c0': nb, 'c1': c1}
-            xcar877(env, t['gH'], t['X3'], (), mass=mass); ent['C_attention_mass_by_query_head'] = mass['C']
+        if path['kind'] in ('attn', 'pre') and len(path['layers']) == 1:   # from the BASE record pass
+            ent['C_attention_mass_by_query_head'] = T['C_mass'][path['layers'][0]]
         out[t['cond']] = ent
-    tot['reads'] += 4
     return out
 
 # ============================ replay tap ============================
@@ -580,7 +584,9 @@ def verdict877():
     elif D['status'] != 'LOCALIZED_CIRCUIT_CANDIDATE': v = D['status']
     elif C.get('status') == 'CONFIRMED': v = 'CONFIRMED_OUTCOME_TO_CAR_CIRCUIT_PILOT'
     else: v = 'LOCALIZED_CIRCUIT_CANDIDATE'
-    STATE877['verdict'] = {'verdict': v, 'blocks': blocks, 'discovery': D.get('status'), 'confirmation': C.get('status', 'NOT_RUN'),
+    flags = ['%s:%s' % (W.get('total', {}).get('first_token'), w) for w, W in STATE877['worlds'].items()
+             if W.get('total', {}).get('first_token') == 'MIXED_FIRST_TOKEN_EFFECT']
+    STATE877['verdict'] = {'verdict': v, 'blocks': blocks, 'discovery': D.get('status'), 'confirmation': C.get('status', 'NOT_RUN'), 'flags': flags,
                            'limits': ['VALUE_NOT_IDENTIFIED', 'WRITABLE_LEARNING_NOT_TESTED', 'two real event pairs: pilot']}
     return STATE877['verdict']
 
@@ -596,8 +602,8 @@ def report877():
         W = STATE877['worlds'].get(w)
         if not W: print('WORLD %s NOT_RUN' % w); continue
         tot = W.get('total', {})
-        print('WORLD %s (%s) status %s | C %s cards %s X3 %s tau_num %s reads %s' % (w, W.get('role'), W.get('status'), tot.get('C'),
-              tot.get('cards'), tot.get('X3_len'), tot.get('tau_num'), tot.get('reads')))
+        print('WORLD %s (%s) status %s | first_token %s | C %s cards %s X3 %s tau_num %s reads %s' % (w, W.get('role'), W.get('status'),
+              tot.get('first_token'), tot.get('C'), tot.get('cards'), tot.get('X3_len'), tot.get('tau_num'), tot.get('reads')))
         print('  gates %s | prefix_max_rel %s | elapsed_s %s peak_gib %s' % (_j877.dumps(tot.get('gates'), sort_keys=True),
               tot.get('prefix_max_rel', 0.0), W.get('elapsed_s'), W.get('peak_gib')))
         print('  cache digest %s' % _j877.dumps(W.get('cache_digest'), sort_keys=True, default=str)[:400])
@@ -613,15 +619,18 @@ def report877():
         for lv in (W.get('scan') or {}).get('levels', []):
             for r in lv['rows']:
                 print('  SCAN %-9s %-28s pass=%-5s %s' % (lv['level'], r['path']['label'], r['pass'], ' | '.join(
-                    '%s rho=%.3f r=%.3f r_sham=%.3f rho_first=%.3f' % (k, e['seq']['rho'], e['seq']['r'], e['seq']['r_sham'], e['first']['rho'])
+                    '%s rho=%.3f r=%.3f r_sham=%.3f P/tau=%.3f rho_first=%.3f' % (k, e['seq']['rho'], e['seq']['r'], e['seq']['r_sham'],
+                                                                              e['seq']['P_over_tau'], e['first']['rho'])
                     for k, e in r['dirs'].items())))
         if W.get('confirmation'):
             r = W['confirmation']; print('  CONFIRM %-28s pass=%s %s' % (r['path']['label'], r['pass'], ' | '.join(
-                '%s rho=%.3f r=%.3f r_sham=%.3f' % (k, e['seq']['rho'], e['seq']['r'], e['seq']['r_sham']) for k, e in r['dirs'].items())))
+                '%s rho=%.3f r=%.3f r_sham=%.3f P/tau=%.3f' % (k, e['seq']['rho'], e['seq']['r'], e['seq']['r_sham'], e['seq']['P_over_tau'])
+                for k, e in r['dirs'].items())))
         if W.get('frozen_extras'): print('  frozen extras %s' % _j877.dumps(W['frozen_extras'], sort_keys=True))
     if STATE877['frozen']: print('FROZEN MANIFEST', _j877.dumps(STATE877['frozen'], sort_keys=True, default=str))
     v = STATE877['verdict'] or {}
-    print('TEST877 VERDICT %s | discovery %s | confirmation %s | blocks %s' % (v.get('verdict'), v.get('discovery'), v.get('confirmation'), v.get('blocks')))
+    print('TEST877 VERDICT %s | discovery %s | confirmation %s | flags %s | blocks %s' % (v.get('verdict'), v.get('discovery'),
+          v.get('confirmation'), v.get('flags'), v.get('blocks')))
     print('LIMITS: VALUE_NOT_IDENTIFIED; WRITABLE_LEARNING_NOT_TESTED; two real event pairs (pilot); patches are diagnostic, nothing written.')
     print('status %s | wall %.0f s | peak GPU %.2f GiB | GPU_EXECUTION_NOT_VERIFIED_BY_AUTHOR' % (STATE877['status'],
           time.perf_counter() - T_START877, torch.cuda.max_memory_allocated() / 2**30 if torch.cuda.is_available() else 0.0))
