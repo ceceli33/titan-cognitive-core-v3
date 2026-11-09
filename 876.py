@@ -7,9 +7,17 @@ import ast as _a876, hashlib as _h876, json as _j876, urllib.request as _u876
 ENGINE_URL876 = ('https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/'
                  'e322ed8ed903f1a438738a3caada6744750cea42/test870.py')
 ENGINE_BLOB876 = 'de3c8153266a95fbf9b86ce2e3149f48e16a7bbc'
-TEST875_URL876 = 'https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/875.py'
-TEST875_LOG_URL876 = 'https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/main/875.log'
-TEST875_BLOB876 = '3966df9f865911aa575ee1232055d09f64932bc5'
+# 875.py file at commit a07dc3e (pushed 17:32:11Z; the TEST875 A100 run started 17:36:05Z); 875.log at commit 6fc150a.
+# 3966df9f... in 875.log is the blob of the Colab cell text captured from IPython history, not of the file: in
+# TEST873/874/875 the captured cell blob differs from the file blob every time while the line count is equal.
+TEST875_URL876 = ('https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/'
+                  'a07dc3ef83db46c5ebefe016a793dc39401904cb/875.py')
+TEST875_LOG_URL876 = ('https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/'
+                      '6fc150a2621d5def8bee25643848a254a17dbba5/875.log')
+TEST875_BLOB876 = '23fd2ba8b967f447c748ce0e269ba8fc43660761'          # git blob of the committed 875.py file
+TEST875_LOG_BLOB876 = '43488a95a5f68c6de2c06350148854995f121825'      # git blob of the committed 875.log
+TEST875_CELL_BLOB876 = '3966df9f865911aa575ee1232055d09f64932bc5'     # executed cell blob, as recorded in 875.log
+TEST875_PREREG876 = '308a97d93ce8adfb'                                 # PREREG875 sha256 prefix (file and run)
 MARKER876 = 'AKBASCORE SILICON HIPPOCAMPUS — TEST876'
 
 def blob876(raw):
@@ -41,7 +49,16 @@ def engine_parts876():
         parts[where] = parts[where].replace(old, new)
     return parts, {'url': ENGINE_URL876, 'git_blob': blob876(raw), 'sha256': _h876.sha256(raw).hexdigest()}
 
-ENGINE876, ENGINE_INFO876 = engine_parts876()
+try:
+    ENGINE876, ENGINE_INFO876 = engine_parts876()
+except BaseException as _exc876:      # console capture starts inside the engine prefix: keep a local record of this failure
+    import time as _t876, traceback as _tb876
+    _p876 = '/content/TEST876_PRE_ENGINE_ERROR_%s.txt' % _t876.strftime('%Y%m%dT%H%M%SZ', _t876.gmtime())
+    try:
+        with open(_p876, 'w', encoding='utf-8') as _f876: _f876.write(_tb876.format_exc())
+    except OSError: _p876 = 'NOT_WRITTEN'
+    print('TEST876 PRE-ENGINE ERROR (before console capture):', type(_exc876).__name__, _exc876, '| traceback:', _p876)
+    raise
 exec(compile(ENGINE876['prefix'], 'test870.py:prefix', 'exec'), globals())
 exec(compile(ENGINE876['body'], 'test870.py:engine', 'exec'), globals())
 print('TEST876 ENGINE', _j876.dumps(ENGINE_INFO876, sort_keys=True))
@@ -49,7 +66,8 @@ LOCKS864.update({'test870.py': ENGINE_BLOB876, 'Test870.log': 'e954d658752a59f66
                  '873.py': '2e44affa5e0dd462155fb265c331270fb8e7b7e1',
                  '873.log': '1c9eb9fca173003eaf45bc7726af13c2817324b7',
                  '874.py': '12172001ba3696ad91087a8b34d7995728259e47',
-                 '874.log': '1229e3b70440e3887ccf1bd7e3bad51f900f5313'})
+                 '874.log': '1229e3b70440e3887ccf1bd7e3bad51f900f5313',
+                 '875.py': TEST875_BLOB876, '875.log': TEST875_LOG_BLOB876})
 TEST870_MINUTES = TEST865_MINUTES = 110.0
 WORLDS876 = ('01', '00')
 SIDES876 = tuple('I867_%s_%s' % (w, c) for w in WORLDS876 for c in ('MISSING', 'LIVE'))
@@ -69,7 +87,8 @@ PREREG876 = {
     'flow': 'PREDICT -> OBSERVE -> ABDUCE -> RECONSTRUCT -> INTERVENE -> RE-PREDICT -> POLICY UPDATE',
     'prediction': 'sealed at t2 replay tap, before execute866; deterministic native greedy working rollout',
     'working_tokens': WORK_TOKENS876, 'evaluation_tokens': EVAL_TOKENS876,
-    'physical_parity_max_rel': REPRO_TOL876,
+    'physical_parity': 'working C rows are the canonical native-H C rows, bitwise, all 80 layers (no re-append)',
+    'working_graph': '[ROOT_PRE][A][C canonical][PRED sealed at t2, t2 RoPE] then Z/R/CF/EVAL rollouts; logical = storage',
     'correction': {'argmax_required': True, 'corrective': CORRECTIVE876, 'mass_shift_reported': SHIFT_MIN876},
     'live': {'argmax': 'ACCEPT', 'max_probability_drop': LIVE_TOL876},
     'controls': {'OUTCOME_ONLY_Z': 'equal padded-prompt and rollout budget; semantic purity NOT guaranteed',
@@ -83,7 +102,7 @@ PREREG_SHA876 = sha256_bytes864(_j876.dumps(PREREG876, sort_keys=True).encode())
 STATE876 = {'status': 'NOT_STARTED', 'engine': ENGINE_INFO876, 'prereg_sha256': PREREG_SHA876,
             'source': {}, 'source_audit': {}, 'ref873': {}, 'sides': {}, 'blocks': [], 'early_stop': None,
             'outcome': None, 'error': None}
-T2_KEEP876, STASH876, PRED_SEALS876 = {}, {}, {}
+T2_KEEP876, STASH876, PRED_SEALS876, REF_T2_ACTION876 = {}, {}, {}, {}
 NAMES757 = ('P', 'CUT', 'NL', 'H', 'DEV', 'DTYPE', 'CHUNK', 'model', 'DirectCut3', 'ensure_room', 'pairs', 'rephase',
             'kv_digest', 'full_kv_seal', 'cache_build')
 
@@ -107,8 +126,8 @@ def digest876(env, kv, a=0, b=None):
     b = length873(env, kv) if b is None else int(b)
     h = _h876.sha256(); h.update(('ROWS:%d:%d' % (a, b)).encode())
     for i, (k, v) in enumerate(kv):
-        h.update(str(i).encode()); h.update(env['kv_digest'](k[:, :, a:b]).encode())
-        h.update(env['kv_digest'](v[:, :, a:b]).encode())
+        kd = g757_876(env)['kv_digest']
+        h.update(str(i).encode()); h.update(kd(k[:, :, a:b]).encode()); h.update(kd(v[:, :, a:b]).encode())
     return h.hexdigest()
 def state_digest876(env, kv): return digest876(env, kv, 0, length873(env, kv))
 def bool876(env, n, value=False): return torch.full((int(n),), bool(value), dtype=torch.bool, device=env['DEV'])
@@ -142,6 +161,9 @@ def capture_source876():
     assert not (used & banned), ('FIREWALL876', sorted(used & banned))
     calls = [n for n in _a876.walk(tree) if isinstance(n, _a876.Call) and getattr(n.func, 'id', None) == 'reproduce_pre859859']
     assert len(calls) == 1, 'MODEL_LOADER_CALL_COUNT_NOT_ONE'
+    for name, value in (('xray_point870', 'probe876'), ('control_step869', 'stash_control876')):
+        rs = [n for n in tree.body if isinstance(n, _a876.Assign) and any(getattr(t, 'id', '') == name for t in n.targets)]
+        assert len(rs) == 1 and getattr(rs[0].value, 'id', None) == value, ('FIREWALL876_REBIND', name)
     (ROOT864 / 'TEST876.py').write_text(source, encoding='utf-8')
     STATE876['source'] = {'how': how, 'sha256': sha256_bytes864(source.encode()), 'git_blob': git_blob864(source.encode()),
                           'lines': source.count('\n') + 1, 'firewall': 'PASS'}
@@ -149,7 +171,19 @@ def capture_source876():
 def source_audit876():
     raw, log = fetch876(TEST875_URL876), fetch876(TEST875_LOG_URL876)
     assert blob876(raw) == TEST875_BLOB876, ('TEST875_BLOB_MISMATCH', blob876(raw))
+    assert blob876(log) == TEST875_LOG_BLOB876, ('TEST875_LOG_BLOB_MISMATCH', blob876(log))
     text = raw.decode(); tree = _a876.parse(text)
+    # the committed file must carry the same pre-registration that the A100 run printed (fail closed otherwise)
+    want = {'WORLDS875', 'SIDES875', 'ARM875', 'CORRECTIVE875', 'ARMS875', 'ROPE_TOL875', 'SHIFT_MIN875', 'PREREG875'}
+    nodes = [n for n in tree.body if isinstance(n, _a876.Assign) and any(
+        ({t.id} if isinstance(t, _a876.Name) else {e.id for e in getattr(t, 'elts', []) if isinstance(e, _a876.Name)}) & want
+        for t in n.targets)]
+    ns875 = {}; exec(compile(_a876.fix_missing_locations(_a876.Module(nodes, [])), '875.py:prereg', 'exec'), ns875)
+    prereg875 = _h876.sha256(_j876.dumps(ns875['PREREG875'], sort_keys=True).encode()).hexdigest()
+    assert prereg875.startswith(TEST875_PREREG876), ('TEST875_PREREG_MISMATCH', prereg875[:16])
+    run_line = [x for x in log.decode().splitlines() if x.startswith('TEST875 | GPU NVIDIA A100-SXM4-80GB | source ')]
+    assert len(run_line) == 1 and (' source %s ' % TEST875_CELL_BLOB876) in run_line[0] and \
+        ('| prereg %s' % TEST875_PREREG876) in run_line[0], ('TEST875_RUN_LINE', run_line)
     funcs = {n.name: n for n in tree.body if isinstance(n, _a876.FunctionDef)}
     assert 'append875' in funcs and 'mask875' in funcs and 'probe875' in funcs and 'step2_875' in funcs
     calls = {getattr(c.func, 'id', getattr(c.func, 'attr', None)) for n in funcs.values() for c in _a876.walk(n)
@@ -159,13 +193,16 @@ def source_audit876():
     assert all(x in logtext for x in ('NVIDIA A100-SXM4-80GB', 'TEST875 OUTCOME WRITE_EFFECT_WITHOUT_CORRECTION',
                                       'status COMPLETE', 'BLOCKS []'))
     info = {'875.py': {'url': TEST875_URL876, 'git_blob': blob876(raw), 'sha256': _h876.sha256(raw).hexdigest(),
-                       'functions': sorted(funcs)},
+                       'functions': sorted(funcs), 'executed_cell_blob_in_log': TEST875_CELL_BLOB876,
+                       'prereg_sha256_prefix_in_log': TEST875_PREREG876,
+                       'file_vs_cell': 'cell bytes not published; equality of executed cell and file is not proven, '
+                                       'only commit order, prereg hash and output format are consistent'},
             '875.log': {'url': TEST875_LOG_URL876, 'git_blob': blob876(log), 'sha256': _h876.sha256(log).hexdigest(),
                         'gpu_evidence': 'COMPLETE_WRITE_EFFECT_WITHOUT_CORRECTION'},
             'test870.py': ENGINE_INFO876,
             'preserved_symbols': ['reproduce_pre859859', 'native_append_direct', 'append_card873', 'execute866',
                                   'control_step869', 'car867/car873/car874', 'reading867', 'make_x851', 'mount865'],
-            'new_symbols': ['forward_graph876', 'append_graph876', 'rollout_graph876', 'car_graph876',
+            'new_symbols': ['forward_graph876', 'rollout_graph876', 'car_graph876',
                             'build_working876', 'policy_reading876', 'continue876']}
     STATE876['source_audit'] = info
     (ROOT864 / 'TEST876_source_manifest.json').write_text(_j876.dumps(info, indent=2, sort_keys=True), encoding='utf-8')
@@ -222,37 +259,6 @@ def rollout_graph876(env, cache, prompt_ids, vis, max_tokens, action_ids=None):
             'text': env['tok'].decode(toks, skip_special_tokens=False), 'vis': vis}
 
 @torch.no_grad()
-def append_graph876(env, kv, cid, vis, logical0):
-    # Native H append with separate storage and physical RoPE positions. vis hides working-only rows from C.
-    assert getattr(env['model'].config, '_attn_implementation', None) == 'sdpa', 'SDPA_REQUIRED'
-    cp, _ = APPEND873['load'](cid); g = g757_876(env); n = lambda name: g[name]
-    memory = list(kv); oldn = length873(env, memory); P, CUT, NL = int(n('P')), int(n('CUT')), int(n('NL'))
-    q = int(cp['n'] - P); assert q > 0 and int(vis.shape[0]) == oldn
-    body, seals, old_lower = cp['h'][:, P:, :], n('full_kv_seal')(memory), tuple(memory[:CUT + 1])
-    upper = n('cache_build')(memory)
-    for i in range(NL): memory[i] = None
-    gc.collect()
-    with n('DirectCut3')(n('model').model.layers[CUT], 'inject', source=body) as bridge:
-        for st in range(0, q, int(n('CHUNK'))):
-            m = min(int(n('CHUNK')), q - st); n('ensure_room')(m + 512); bridge.offset = st
-            vchunk = torch.cat([vis, ones876(env, st)])
-            Y = torch.zeros((m, int(n('H'))), device=n('DEV'), dtype=n('DTYPE'))
-            forward_graph876(env, upper, Y, vchunk, pos0=int(logical0) + st, last=1)
-    grown = list(n('pairs')(upper))
-    for i in range(CUT + 1):
-        ok, ov = old_lower[i]; k, v = cp['lower'][i]; shifted = []
-        for st in range(0, q, int(n('CHUNK'))):
-            end = min(q, st + int(n('CHUNK')))
-            shifted.append(n('rephase')(k[:, :, P + st:P + end], torch.arange(P + st, P + end, device=env['DEV']),
-                                        torch.arange(int(logical0) + st, int(logical0) + end, device=env['DEV'])))
-        grown[i] = (torch.cat([ok] + shifted, dim=-2), torch.cat((ov, v[:, :, P:, :]), dim=-2))
-    for i, ((nk, nv), (kh, vh)) in enumerate(zip(grown, seals)):
-        assert n('kv_digest')(nk[:, :, :oldn]) == kh and n('kv_digest')(nv[:, :, :oldn]) == vh, ('PREFIX_CHANGED', i)
-    assert len(grown) == NL and length873(env, grown) == oldn + q
-    del upper, old_lower, cp
-    return grown, oldn
-
-@torch.no_grad()
 def car_graph876(env, cache, X, vis):
     # Same ACTION_IDS867, first-token and cropped teacher-forced sequence-logp procedure; only visibility is graphed.
     env['budget849'](); L, n0 = int(X.shape[0]), int(cache.get_seq_length())
@@ -281,21 +287,22 @@ def pad_prompts876(env, texts):
     return [[int(pad)] * (width - len(row)) + row for row in rows]
 
 def build_working876(env, z, card, z_prompt, rc_prompts, gH):
-    # Clone the sealed pre-outcome prediction. Actual C is appended with prediction invisible and canonical RoPE positions.
-    work = clone876(z['prediction_kv']); n_before, n_prea = int(z['n_before']), int(z['n_prea'])
-    pred_end = length873(env, work); spans = {'ROOT_PRE': (0, n_prea), 'A': (n_prea, n_before),
-                                              'PRED': (n_before, pred_end)}
-    vis_root = torch.cat([ones876(env, n_before), bool876(env, pred_end - n_before)])
-    grown, c0 = append_graph876(env, work, card, vis_root, n_before)
-    body = int(env['entries'][card]['body_tokens']); c1 = c0 + body; spans['C'] = (c0, c1)
-    canonical_c = seg876(gH, n_before, n_before + body)
-    working_c = seg876(grown, c0, c1)
-    parity = max(rel874(canonical_c, working_c))
-    lower_exact = all(torch.equal(x, y) for i in range(int(env['CUT']) + 1)
-                      for x, y in zip(canonical_c[i], working_c[i]))
-    assert lower_exact and parity <= REPRO_TOL876, ('WORKING_PHYSICAL_PARITY', lower_exact, parity)
-    work = grown; del grown
-    vis_actual = torch.cat([vis_root, ones876(env, body)])
+    # Working graph = canonical physical state gH [ROOT_PRE][A][C] (locked native H append: C never sees the
+    # prediction) + the sealed pre-outcome prediction rows, moved behind C with their t2 RoPE positions kept.
+    # Attention reads keys by baked RoPE and visibility, so the actual C is exactly the canonical one (bitwise).
+    n_before, n_prea, pkv = int(z['n_before']), int(z['n_prea']), z['prediction_kv']
+    pred_end, body = length873(env, pkv), int(env['entries'][card]['body_tokens']); c1 = n_before + body
+    NL = len(gH); assert length873(env, gH) == c1 and len(pkv) == NL, 'WORKING_LAYOUT'
+    assert all(torch.equal(pkv[i][j][:, :, :n_before], gH[i][j][:, :, :n_before]) for i in range(NL) for j in (0, 1)), \
+        'PREDICTION_ROOT_NOT_CANONICAL_ROOT'
+    work = [tuple(torch.cat([gH[i][j], pkv[i][j][:, :, n_before:]], dim=-2) for j in (0, 1)) for i in range(NL)]
+    p1 = c1 + pred_end - n_before
+    spans = {'ROOT_PRE': (0, n_prea), 'A': (n_prea, n_before), 'C': (n_before, c1), 'PRED': (c1, p1)}
+    c_exact = all(torch.equal(work[i][j][:, :, n_before:c1], gH[i][j][:, :, n_before:c1]) for i in range(NL) for j in (0, 1))
+    pred_exact = all(torch.equal(work[i][j][:, :, c1:p1], pkv[i][j][:, :, n_before:pred_end]) for i in range(NL) for j in (0, 1))
+    parity = 0.0 if c_exact else max(rel874(seg876(gH, n_before, c1), seg876(work, n_before, c1)))
+    assert c_exact and pred_exact, ('WORKING_PHYSICAL_PARITY', c_exact, pred_exact, parity)
+    vis_actual = spans_visible876(env, p1, spans, ('ROOT_PRE', 'A', 'C'))       # Z: actual transition, no prediction
     cache = env['cache_build'](work); del work
     zr = rollout_graph876(env, cache, z_prompt, vis_actual, WORK_TOKENS876)
     spans['Z'] = zr['span']; vis_z = zr['vis']
@@ -307,6 +314,7 @@ def build_working876(env, z, card, z_prompt, rc_prompts, gH):
     cf = rollout_graph876(env, cache, rc_prompts[1], base_cf, WORK_TOKENS876, action_ids=z['a_alt_ids'])
     spans['CF'] = cf['span']
     assert not bool(base_r[spans['A'][0]:spans['C'][1]].any()), 'RECONSTRUCTION_ACTUAL_LEAK'
+    assert not bool(base_r[spans['PRED'][0]:spans['PRED'][1]].any()), 'RECONSTRUCTION_PREDICTION_LEAK'
     assert not bool(base_cf[spans['A'][0]:spans['C'][1]].any()), 'CF_ACTUAL_LEAK'
     assert not bool(base_cf[spans['PRED'][0]:spans['PRED'][1]].any()), 'CF_PREDICTION_LEAK'
     assert not bool(base_cf[spans['R'][0]:spans['R'][1]].any()), 'CF_RECONSTRUCTION_LEAK'
@@ -314,7 +322,9 @@ def build_working876(env, z, card, z_prompt, rc_prompts, gH):
                'R_base': visibility_report876(base_r, spans), 'CF_base': visibility_report876(base_cf, spans)}
     basekv = kv873(env, cache)
     out = {'kv': basekv, 'spans': spans, 'reports': reports, 'physical_parity_max_rel': parity,
-           'physical_lower_exact': lower_exact, 'storage_C': [c0, c1], 'logical_C': [n_before, n_before + body],
+           'physical_lower_exact': c_exact, 'prediction_rows_exact': pred_exact,
+           'storage_C': [n_before, c1], 'logical_C': [n_before, c1],
+           'storage_PRED': [c1, p1], 'logical_PRED': [n_before, pred_end],
            'Z': {'text': zr['text'], 'tokens': zr['tokens'], 'digest': digest876(env, basekv, *spans['Z']),
                  'prompt_len': zr['prompt_len'], 'generated': len(zr['tokens'])},
            'R': {'text': rr['text'], 'tokens': rr['tokens'], 'digest': digest876(env, basekv, *spans['R'])},
@@ -367,13 +377,16 @@ def continue876(env, ctx, side, state, action, gH, X3, seg, m2_cards, card, pre,
             r4, _, _, _ = decide874(env, kv4, X4, drop)
             res['second_CAR_graph_timeline'] = arm876(r4); res['second_CAR_engine'] = arm876(record4['reading'])
             res['end'] = 'SECOND_NATIVE_CAR_COMPLETE'
+            res['second_CAR_scope'] = ('canonical physical timeline [H][X3][A3](+new C)[X4]; working Z/R/CF branches are '
+                                       'not carried: recursion depth 1 physical step, not a recursive NKPG policy update')
     del kv4, ctx2['memx']
     return res
 
 def t2_probe876(env, ctx, record, state, out):
     side = ctx['spec']['item']; q = env['QTEXT841'][ctx['spec']['qid']]
     pre = list(env['prompt_ids'](CONTROL_PROMPT866.format(q=q))); post = env['REVIEW_SUFFIX851']
-    ids = dict(ACTION_IDS867); a_star = record['action']; assert a_star == 'ACQUIRE'
+    ids = dict(ACTION_IDS867); a_star = record['action']
+    assert a_star == REF_T2_ACTION876[side], ('T2_ACTION_NOT_THE_LOCKED_RECORD', a_star)   # replay invariant only
     ranked = sorted(record['reading']['scores'], key=lambda s: -float(s['sequence_logp']))
     assert ranked[0]['word'] == a_star and len(ranked) > 1
     a_alt = ranked[1]['word']; assert a_alt != a_star
@@ -474,10 +487,10 @@ def probe876(env, ctx, record, state, label):
         out['policy_evaluation'] = {name: value['evaluation'] for name, value in policies.items()}
         out['policy_visibility'] = {name: value['visibility'] for name, value in policies.items()}
         out['control_note'] = 'OUTCOME_ONLY_Z has equal padded prompt/rollout budget; outcome-only semantic purity is not guaranteed.'
-        c['branch_masks'] = all(not bool(v['R_base'].get('C', {'visible': 0})['visible']) and
-                                not bool(v['CF_base'].get('C', {'visible': 0})['visible']) for v in out['branches'].values())
-        c['physical_parity'] = all(v['physical_lower_exact'] and v['physical_parity_max_rel'] <= REPRO_TOL876
-                                   for v in out['branches'].values())
+        c['branch_masks'] = all(v['reports'][b][span]['visible'] == 0 for v in out['branches'].values()
+                                for b in ('R_base', 'CF_base') for span in ('A', 'C', 'PRED'))     # stored under 'reports'
+        c['physical_parity'] = all(v['physical_lower_exact'] and v['prediction_rows_exact'] and
+                                   v['physical_parity_max_rel'] == 0.0 for v in out['branches'].values())
         c['memory_seal'] = prefix_seals865(env, memx) == seal0
         real = out['arms']['REAL_Z']; miss = side.endswith('MISSING')
         out['corrective_mass'] = {name: corr876(a['p']) for name, a in out['arms'].items()}
@@ -491,10 +504,11 @@ def probe876(env, ctx, record, state, label):
             'OUTCOME_TV': tv876(out['arms']['OUTCOME_ONLY_Z'], real),
             'Z_NULL_TV': tv876(out['arms']['Z_NULL'], real),
             'CF_MASK_TV': tv876(out['arms']['CF_MASK'], real)}
+        assert c['branch_masks'] and c['physical_parity'] and c['memory_seal'], ('TECHNICAL_BEFORE_CONTINUATION', c)
         out['step2'] = {'run': False, 'reason': 'No physical continuation for terminal/unchanged policy action'}
         if real['action'] in ('ACCEPT', 'STOP', 'INVALID'):
             out['step2'] = {'run': False, 'reason': 'NATIVE_TERMINAL_' + real['action'], 'terminal': True}
-        elif not miss or real['action'] in CORRECTIVE876:
+        else:   # PREREG876: ADVANCE/BACKTRACK/ACQUIRE/REJECT -> execute866 once (the model's own word, never forced)
             try:
                 out['step2'] = continue876(env, ctx, side, state, real['action'], gH, X3, seg,
                                            z['m2_cards'], card, pre, post)
@@ -502,11 +516,9 @@ def probe876(env, ctx, record, state, label):
                 out['step2'] = {'run': True, 'error': '%s: %s' % (type(exc).__name__, str(exc)[:400]),
                                 'traceback': traceback.format_exc()}
                 (ROOT864 / ('876_%s_continuation_traceback.txt' % side)).write_text(traceback.format_exc(), encoding='utf-8')
-        else:
-            out['step2'] = {'run': False, 'reason': 'MISSING without model-native correction; forced continuation forbidden'}
         STASH876.pop(side, None); hook1 = assert_hook_free859(env, 'T876_after_' + side)
         c['hook_free'] = not any(x['hook_count'] or x['transformers_output_capturing_installed'] for x in (hook0, hook1))
-        assert c['branch_masks'] and c['physical_parity'] and c['memory_seal'] and c['hook_free'], c
+        assert c['hook_free'], c
         out['vram'] = vram_end870(vram0)
         del bases, policies, gH, z
     except Exception as exc:
@@ -614,7 +626,7 @@ def report876():
               'peak_GiB', (s.get('vram') or {}).get('peak_allocated_gib'), 'ERROR', s.get('error'))
     o = STATE876['outcome'] or {}; print('\nTEST876 OUTCOME', _j876.dumps(o, sort_keys=True, default=str))
     print('CONTROL LIMIT: OUTCOME_ONLY_Z semantic purity is not guaranteed; corrective mass and native text alone are not causal evidence.')
-    print('GPU EXECUTION BY CODE AUTHORS: NOT_EXECUTED. Static source/CPU checks are not A100 validation.')
+    print('GPU_EXECUTION_NOT_VERIFIED_BY_AUTHOR (K3.1 Pro; Claude review). Static source/CPU checks are not A100 validation.')
     print('status', STATE876['status'], '| wall %.0fs' % (time.perf_counter() - T_START876),
           '| peak GPU %.2f GiB' % (max(STATE870['costs'].get('session_peak_allocated_bytes', 0),
           torch.cuda.max_memory_allocated() if torch.cuda.is_available() else 0) / 2**30))
@@ -634,6 +646,7 @@ try:
         for cnd in ('MISSING', 'LIVE'):
             ctl = [e['record'] for e in REFS876[('I867_%s_%s' % (w, cnd), ARM876)]['events'] if e['type'] == 'CONTROL']
             assert [x['action'] for x in ctl[:2]] == ['ADVANCE', 'ACQUIRE']; sha[cnd] = ctl[PRE_STEP876 - 1]['state_sha256']
+            REF_T2_ACTION876['I867_%s_%s' % (w, cnd)] = ctl[PRE_STEP876 - 1]['action']
         if sha['MISSING'] != sha['LIVE']: line876('PAIRED_INPUT_DIFFERENCE', w, sha)
     STATE876['status'] = 'GATE1'; assert CC_GPU_OK, ('GPU_PRECHECK', CC_GPU)
     env876, original_error876, original_trace876, reproduction876 = reproduce_pre859859()
