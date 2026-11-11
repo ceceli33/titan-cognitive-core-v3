@@ -114,12 +114,19 @@ PREREG878 = {
     'source_signature': 'c = P_A(m(H_M + X3_M) - m(H_L + X3_L)); |c_seq| <= %g -> SOURCE_ACTION_SIGNATURE_ABSENT' % SIG_MIN878,
     'floor': 'per source world: max(%g, max over M/L of |m(reconstruction) - m(source)|) for first and sequence margins' % SIG_MIN878,
     'panel_rule': 'T = m(FULL_M) - m(FULL_L). |T_seq| <= floor -> NO_TRANSFER; else A arms invalid -> TRANSFER_A_BLIND_INVALID; '
-                  '|T_Aref - T_Ablind|_seq <= floor -> OUTCOME_TRANSFER_ONLY; else ACTION_INFORMATION_DEPENDENT_TRANSFER',
+                  'A_REF interpretable only if |T_Aref|_seq > floor, <T_full,T_Aref>_seq > 0 and K = |T_full - T_Aref|_seq < '
+                  '|T_full|_seq (all finite), else TRANSFER_A_BLIND_INVALID; |T_Aref - T_Ablind|_seq <= max(floor, K) -> '
+                  'OUTCOME_TRANSFER_ONLY; else ACTION_INFORMATION_DEPENDENT_TRANSFER; non-finite margins -> TECHNICAL_BLOCK; '
+                  'the masked A reference runs only after the unmasked explicit append is bitwise equal to the locked append '
+                  '(else UNMASKED_APPEND_PARITY_FAIL)',
     'reported_not_gated': 'direction (cos, rho vs c), norms, action selectivity |T_A|^2/|T|^2, r_A, FULL vs A_BLIND, action and '
                           'probabilities per arm; source X3 and target X are different decision contexts: no vector reproduction '
                           'requirement',
     'verdict': 'same-goal panels of both worlds: equal -> that class, different -> ASYMMETRIC_TRANSFER, any missing -> '
-               'NO_INDEPENDENT_TARGET; scope CROSS_WORLD_TRANSFER if both cross-world panels transfer else GOAL_BOUND_TRANSFER',
+               'NO_INDEPENDENT_TARGET, TRANSFER_A_BLIND_INVALID -> PARTIAL_INCONCLUSIVE. Cross-world class: both panels '
+               'transfer (outcome detected) -> CROSS_WORLD_TRANSFER; both NO_TRANSFER -> GOAL_BOUND_TRANSFER; one each -> '
+               'ASYMMETRIC_CROSS_WORLD; any missing / no independent target / technical -> CROSS_WORLD_UNRESOLVED. Scope = that '
+               'class when the same-goal transfer holds in both worlds; GOAL_BOUND_TRANSFER is never a scope otherwise',
     'guards': 'before every load/append/read group: elapsed > %g min or available VRAM < %g GiB -> PARTIAL_INCONCLUSIVE' % (
         HARD_MIN878, FREE_MIN_GIB878),
     'limits': ['A-blind dependence is not credit assignment', 'no learning, no closed loop, no retrieval: forced mount',
@@ -374,6 +381,10 @@ def xcar878(env, kv, X, blind, sham):
 
 # ============================ measures ============================
 def arm878(r): return {'action': r['action'], 'p': probs873(r)}
+
+def jsafe878(x):
+    # JSON view: a non-finite number is written as the string 'NaN'/'inf' (visible, never silently dropped)
+    return json.loads(json.dumps(x, default=str), parse_constant=str)
 def dif878(ma, mb): return {k: sub877(ma[k], mb[k]) for k in ('first', 'seq')}
 
 def pa878(action):
@@ -402,15 +413,18 @@ def persist878(env, S):
                   for i in range(cut + 1))
     r, _, _, _ = decide874(env, g, S['X3'].to(env['DEV']), [])
     pr, ps = probs873(r), S['H']['p']; dp = max(abs(pr[w] - ps[w]) for w in ps); mr = marg877(r)
+    guard878('persist_unmasked_' + S['side'])
     gx = xappend878(env, S['m2'], cp, ())
     same = all(torch.equal(a[j], b[j]) for a, b in zip(g, gx) for j in (0, 1)); del gx
-    a0 = n2 + S['L2']; sham = {'valid': False, 'why': None}
-    try:                                               # recorded, not hidden: an unusable mask format invalidates the A arms only
-        gs = xappend878(env, S['m2'], cp, [(a0, a0 + S['la'])], True)
-        sham = {'valid': True, 'upper_K_rel_vs_native_append': max(rel874([tuple(t[:, :, n2:] for t in kv) for kv in g[cut + 1:]],
-                                                                         [tuple(t[:, :, n2:] for t in kv) for kv in gs[cut + 1:]]))}
-        del gs
-    except AssertionError as exc: sham['why'] = str(exc)
+    a0 = n2 + S['L2']; sham = {'valid': False, 'why': 'UNMASKED_APPEND_PARITY_FAIL'}
+    if same:                                           # the masked reference runs only on a bitwise-verified explicit path
+        guard878('persist_masked_' + S['side']); sham['why'] = None
+        try:                                           # recorded, not hidden: an unusable mask format invalidates the A arms only
+            gs = xappend878(env, S['m2'], cp, [(a0, a0 + S['la'])], True)
+            sham = {'valid': True, 'why': None, 'upper_K_rel_vs_native_append': max(rel874(
+                [tuple(t[:, :, n2:] for t in kv) for kv in g[cut + 1:]], [tuple(t[:, :, n2:] for t in kv) for kv in gs[cut + 1:]]))}
+            del gs
+        except AssertionError as exc: sham['why'] = str(exc)
     del g, cp
     S['recon'] = {'reloaded_sha_ok': True, 'lower_rows_bitwise': seal_ok, 'roundtrip_K_rel': S['entry']['roundtrip_K_rel'],
                   'action_same': r['action'] == S['H']['action'], 'max_dp': dp, 'within_6e-4': dp <= REPRO_TOL878,
@@ -442,7 +456,8 @@ def panel878(env, M, L, T, idx, c, floor, a_valid):
         del cp
     out['reads'] = len(rd); out['arms'] = {k: arm878(r) for k, r in rd.items()}; m = {k: marg877(r) for k, r in rd.items()}
     out['gates'] = {'pre_C_rows_bitwise_M_eq_L': pre['M'] == pre['L'], 'C_BLIND_M_equals_L': same873(rd['C_BLIND_M'], rd['C_BLIND_L']),
-                    'target_memory_unchanged': prefix_seals865(env, T['m']) == seal0}
+                    'target_memory_unchanged': prefix_seals865(env, T['m']) == seal0,
+                    'finite_margins': all(math.isfinite(x) for v_ in m.values() for k in ('first', 'seq') for x in v_[k])}
     out['A_BLIND'] = 'VALID' if a_valid else 'INVALID_EXPLICIT_PATH_NOT_BITWISE_OR_MASK_FORMAT'
     Tf = dif878(m['FULL_M'], m['FULL_L']); out['contrast'] = {'FULL': Tf, 'C_BLIND': dif878(m['C_BLIND_M'], m['C_BLIND_L'])}
     out['signature'] = {'FULL': sig878(Tf, c, idx)}
@@ -451,6 +466,13 @@ def panel878(env, M, L, T, idx, c, floor, a_valid):
     out['detect'] = {'outcome_seq': nrm877(Tf['seq']) > floor['seq'], 'outcome_first': nrm877(Tf['first']) > floor['first']}
     if a_valid:
         Ta, Tr = dif878(m['A_BLIND_M'], m['A_BLIND_L']), dif878(m['A_REF_M'], m['A_REF_L']); D, Dt = dif878(Tr, Ta), dif878(Tf, Ta)
+        nf, nr, K = nrm877(Tf['seq']), nrm877(Tr['seq']), nrm877(sub877(Tf['seq'], Tr['seq']))
+        dot = sum(x * y for x, y in zip(Tf['seq'], Tr['seq'])); nd = nrm877(D['seq']); thr = max(floor['seq'], K)
+        fin = all(math.isfinite(x) for x in (nf, nr, K, dot, nd, thr))
+        out['A_ref'] = {'norm_T_full_seq': nf, 'norm_T_ref_seq': nr, 'K_full_minus_ref_seq': K, 'dot_full_ref_seq': dot,
+                        'norm_ref_minus_blind_seq': nd, 'threshold_max_floor_K': thr, 'finite': fin,
+                        'ref_detectable': fin and nr > floor['seq'], 'ref_same_direction': fin and dot > 0.0, 'ref_close': fin and K < nf}
+        out['A_ref']['interpretable'] = out['A_ref']['ref_detectable'] and out['A_ref']['ref_same_direction'] and out['A_ref']['ref_close']
         out['contrast'].update({'A_BLIND': Ta, 'A_REF': Tr})
         out['signature'].update({'A_BLIND': sig878(Ta, c, idx), 'A_REF': sig878(Tr, c, idx)})
         out['A_dependence'] = {'path_matched_A_REF_minus_A_BLIND': {'norm_seq': nrm877(D['seq']), 'norm_first': nrm877(D['first']),
@@ -460,10 +482,11 @@ def panel878(env, M, L, T, idx, c, floor, a_valid):
                                'FULL_minus_A_BLIND_not_path_matched': {'norm_seq': nrm877(Dt['seq']), 'norm_first': nrm877(Dt['first'])},
                                'mask_kernel_noise_FULL_vs_A_REF': {k: max(nrm877(sub877(m['FULL_' + x][k], m['A_REF_' + x][k])) for x in 'ML')
                                                                    for k in ('first', 'seq')}}
-        out['detect']['A_dependence_seq'] = nrm877(D['seq']) > floor['seq']
+        out['detect']['A_dependence_seq'] = fin and nd > thr
     if not all(out['gates'].values()): out['status'] = 'TECHNICAL_BLOCK'
     elif not out['detect']['outcome_seq']: out['status'] = 'NO_TRANSFER'
-    elif not a_valid: out['status'] = 'TRANSFER_A_BLIND_INVALID'
+    elif not a_valid: out['status'] = 'TRANSFER_A_BLIND_INVALID'; out['A_invalid_why'] = 'EXPLICIT_PATH_OR_MASK'
+    elif not out['A_ref']['interpretable']: out['status'] = 'TRANSFER_A_BLIND_INVALID'; out['A_invalid_why'] = 'A_REF_NOT_INTERPRETABLE'
     elif not out['detect']['A_dependence_seq']: out['status'] = 'OUTCOME_TRANSFER_ONLY'
     else: out['status'] = 'ACTION_INFORMATION_DEPENDENT_TRANSFER'
     return out
@@ -503,7 +526,7 @@ def world878(env, w):
         W['status'] = 'PARTIAL_INCONCLUSIVE'; W['why'] = str(exc); line878('PARTIAL', w, str(exc))
     finally:
         W['elapsed_s'] = round(time.perf_counter() - t0, 1); W['peak_gib'] = round(torch.cuda.max_memory_allocated() / 2**30, 2)
-        json_write864('878_checkpoint_%s.json' % w, json.loads(json.dumps(W, default=str)))
+        json_write864('878_checkpoint_%s.json' % w, jsafe878(W))
         line878('WORLD', w, W['status'], {k: p.get('status') for k, p in W['panels'].items()}, 'reads=%d' % W['reads'],
                 'elapsed_s=%s' % W['elapsed_s'], 'peak_gib=%s' % W['peak_gib'])
 
@@ -620,10 +643,13 @@ def verdict878():
     elif 'TRANSFER_A_BLIND_INVALID' in sg: v = 'PARTIAL_INCONCLUSIVE'
     elif sg[0] != sg[1]: v = 'ASYMMETRIC_TRANSFER'
     else: v = sg[0]
-    if v in moved or v == 'ASYMMETRIC_TRANSFER':
-        scope = 'CROSS_WORLD_TRANSFER' if all(x in moved for x in cw) else 'GOAL_BOUND_TRANSFER'
+    if all(x in moved for x in cw): cwc = 'CROSS_WORLD_TRANSFER'
+    elif all(x in moved + ('NO_TRANSFER',) for x in cw):
+        cwc = 'GOAL_BOUND_TRANSFER' if all(x == 'NO_TRANSFER' for x in cw) else 'ASYMMETRIC_CROSS_WORLD'
+    else: cwc = 'CROSS_WORLD_UNRESOLVED'          # missing, not run, no independent target, technical or partial
+    if v in moved: scope = cwc                     # a scope only when the same-goal transfer holds in both worlds; cwc is always reported
     STATE878['verdict'] = {'verdict': v, 'scope': scope, 'blocks': blocks, 'worlds': dict(zip(WORLDS878, st)),
-                           'same_goal': dict(zip(WORLDS878, sg)), 'cross_world': dict(zip(WORLDS878, cw)),
+                           'same_goal': dict(zip(WORLDS878, sg)), 'cross_world': dict(zip(WORLDS878, cw)), 'cross_world_class': cwc,
                            'credit': 'ACTION_CREDIT_NOT_ESTABLISHED: A-blind dependence is not credit assignment',
                            'limits': ['no learning / closed loop / retrieval tested: forced mount', 'two real event pairs: pilot']}
     return STATE878['verdict']
@@ -672,9 +698,11 @@ def report878():
                                     e['action_selectivity'], e['cos_A'], e['rho_A'], e['r_A'], e['cos_all15']))
             print('    detect %s | max dp FULL M vs L %.4f | A dependence %s' % (_j878.dumps(p['detect'], sort_keys=True),
                   p['max_dp_FULL_M_vs_L'], _j878.dumps(p.get('A_dependence'), sort_keys=True)))
+            print('    A_REF gate %s | invalid_why %s' % (_j878.dumps(p.get('A_ref'), sort_keys=True), p.get('A_invalid_why')))
     v = STATE878['verdict'] or {}
-    print('TEST878 VERDICT %s | scope %s | same-goal %s | cross-world %s | worlds %s | blocks %s' % (v.get('verdict'), v.get('scope'),
-          v.get('same_goal'), v.get('cross_world'), v.get('worlds'), v.get('blocks')))
+    print('TEST878 VERDICT %s | scope %s | same-goal %s | cross-world %s (%s) | worlds %s | blocks %s | %s' % (v.get('verdict'),
+          v.get('scope'), v.get('same_goal'), v.get('cross_world'), v.get('cross_world_class'), v.get('worlds'), v.get('blocks'),
+          v.get('credit')))
     print('LIMITS: A-blind dependence is not credit assignment; forced mount, no retrieval, no closed loop, no learning claim; '
           'two real event pairs (pilot); labels are detectability classes above the reconstruction floor - read the sizes.')
     print('status %s | wall %.0f s | peak GPU %.2f GiB | GPU_EXECUTION_NOT_VERIFIED_BY_AUTHOR' % (STATE878['status'],
@@ -719,7 +747,7 @@ try:
         rep = run_replay870(env878, {'id': side, 'item': side, 'arm': ARM878, 'targets': tg}, by_key878, REFS878)
         T2_KEEP878.pop(side, None)
         if not rep['ok']: STATE878['blocks'].append('REPLAY_NOT_EXACT:' + side)
-    json_write864('878_experience_manifest.json', json.loads(json.dumps(STATE878['experience'], default=str)))
+    json_write864('878_experience_manifest.json', jsafe878(STATE878['experience']))
     STATE878['status'] = 'TRANSFER'
     for w in WORLDS878: world878(env878, w)
     hook = hook_audit859(env878, 'T878_final')
@@ -738,7 +766,7 @@ except BaseException as exc:
     print('TEST878 ERROR', STATE878['error'][:300], '| full traceback:', ROOT864 / '878_traceback.txt', file=ERROR_CONSOLE864, flush=True)
 finally:
     try:
-        json_write864('878_result.json', json.loads(json.dumps(dict(STATE878, replays=STATE870['replays']), default=str, allow_nan=False)))
+        json_write864('878_result.json', jsafe878(dict(STATE878, replays=STATE870['replays'])))
     except Exception as exc: print('RESULT_WRITE_FAILED', type(exc).__name__, exc, file=ERROR_CONSOLE864, flush=True)
     try: report878()
     except Exception as exc: print('REPORT_FAILED', type(exc).__name__, exc, file=ERROR_CONSOLE864, flush=True)
