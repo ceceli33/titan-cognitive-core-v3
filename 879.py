@@ -102,11 +102,15 @@ PREREG879 = {
                 'RECEIVER_MAIN_EFFECT': 'one receiver shows transfer from both sources, the other from neither',
                 'SOURCE_BY_RECEIVER_ASYMMETRY': 'any other non-empty pattern',
                 'NO_OUTCOME_TRANSFER': 'no cell transfers (+ GENERIC_CONTEXT_INFLUENCE if any |C_BLIND - BASE|_seq > floor)'},
-    'reading': {'MATCHED_FORK_OUTCOME_TRANSFER': 'the TEST878 cross-world failure belonged to the T2 receiver, not to the '
-                                                 'cartridge or the world pair: receiver state matters, experiences are portable',
-                'SAME_GOAL_RESTRICTED_PATTERN': 'outcome transfer is bound to the goal/world shared by episode and receiver',
-                'SOURCE_MAIN_EFFECT': 'portability is a property of the source episode',
-                'RECEIVER_MAIN_EFFECT': 'the bottleneck is the receiver read interface',
+    'reading': {'MATCHED_FORK_OUTCOME_TRANSFER': 'all four matched-FORK cells show outcome-dependent transfer: the TEST878 '
+                                                 'cross-world failure is not universal across receiver states; why the T2 '
+                                                 'receiver failed remains unidentified',
+                'SAME_GOAL_RESTRICTED_PATTERN': 'in these four cells transfer is associated with the goal/world shared by '
+                                                'episode and receiver; not proof of a general goal binding',
+                'SOURCE_MAIN_EFFECT': 'source-associated pattern in these two worlds; descriptive, not an identified mechanism '
+                                      'or a general property of the episode',
+                'RECEIVER_MAIN_EFFECT': 'receiver-associated pattern in these two worlds; descriptive, not an identified '
+                                        'read-interface mechanism',
                 'SOURCE_BY_RECEIVER_ASYMMETRY': 'episode-receiver compatibility; with two worlds a single failing cross cell '
                                                 'cannot be assigned to the source or to the receiver',
                 'NO_OUTCOME_TRANSFER': 'TEST878 same-goal transfer not reproduced'},
@@ -210,7 +214,8 @@ def targets879(refs):
         if t2['MISSING']['record']['state_sha256'] != t2['LIVE']['record']['state_sha256']: raise Gate879('T2_STATE_NOT_SHARED ' + w)
         if cards[0] == cards[1]: raise Gate879('OUTCOME_CARDS_EQUAL ' + w)
         src[w] = {'cards': cards, 'shas': shas, 'world_index': refs[('I867_%s_MISSING' % w, ARM878)]['world_index']}
-    all_shas = {s for w in WORLDS878 for s in src[w]['shas']}
+    canon = lambda d: _j879.dumps(d, sort_keys=True)          # state_sha256 is a nested dict {C, E, V, FV, FK}
+    all_shas = {canon(s) for w in WORLDS878 for s in src[w]['shas']}
     for r in WORLDS878:
         item = 'I867_%s_FORK' % r; cs = ctl(item)
         if len(cs) < FORK_STEP878: raise Gate879('FORK_STEP_MISSING ' + item)
@@ -220,7 +225,7 @@ def targets879(refs):
     for s, r in CELLS879:
         why = []
         if set(rec[r]['mounted']) & set(src[s]['cards']): why.append('SOURCE_OUTCOME_CARD_MOUNTED')
-        if rec[r]['state_sha256'] in all_shas: why.append('RECEIVER_IS_A_SOURCE_STATE')
+        if canon(rec[r]['state_sha256']) in all_shas: why.append('RECEIVER_IS_A_SOURCE_STATE')
         if (rec[r]['world_index'] == src[s]['world_index']) != (s == r): why.append('GOAL_RELATION')
         cells['%s>%s' % (s, r)] = {'relation': 'SAME_GOAL' if s == r else 'CROSS', 'independent': not why, 'why': why}
     bad = {k: v['why'] for k, v in cells.items() if not v['independent']}
