@@ -1,0 +1,200 @@
+  TEST878 | X870 STEP I867_01_FORK V_X t=1 k=0 hop=' GCZZNUPLA' legacy=' ADVANCE' CAR=ADVANCE:0.80|ACQUIRE:0.16|BACKTRACK:0.03 mass=0.99 margin=1.63 exec=ADVANCE fb=NONE_FIRST_STEP eval=' The latest candidate,GCZZNUPL' kv=evalfb=False K=None/None dC=None dE=None FV=- FK=-
+  TEST878 | X870 REPLAY_STEP I867_01_FORK t=1 action=ADVANCE equal_to_869_record=True events_compared=2(HOP,CONTROL)
+  TEST878 | T878 TARGET I867_01_FORK {"mounted": ["E841_CQSBZGCXG", "E841_JWCUAGNZV"], "memory_tokens": 87} record_reproduced=True
+04:49:10 [TEST878] ENGINE_TARGET_01_FORK T878 TARGET I867_01_FORK {"mounted": ["E841_CQSBZGCXG", "E841_JWCUAGNZV"], "memory_tokens": 87} record_reproduced=True
+  TEST878 | X870 END I867_01_FORK V_X end=XRAY_REPLAY_END accepted=None steps=1 actions=ADVANCE mounted=E841_CQSBZGCXG|E841_JWCUAGNZV restore=True s=11.1 calls=6
+  TEST878 | X870 REPLAY I867_01_FORK I867_01_FORK V_X end=XRAY_REPLAY_END ok=True restore=True effects_equal=True events_compared=2/2 s=11.1 calls=6
+  TEST878 | PASS FILE_SHA_E841_YSPWNJNPQ
+  TEST878 | PASS CARTRIDGE_ID_E841_YSPWNJNPQ
+  TEST878 | PASS CARTRIDGE_TENSOR_SHA_E841_YSPWNJNPQ
+  TEST878 | X870 BEGIN I867_00_FORK V_X mount=E841_FDWYXLPLW|E841_YSPWNJNPQ pool=22
+  TEST878 | X870 STEP I867_00_FORK V_X t=1 k=0 hop=' TEPUWAPVB' legacy=' ACQUIRE' CAR=ACQUIRE:0.68|ADVANCE:0.28|BACKTRACK:0.04 mass=0.99 margin=0.87 exec=ACQUIRE fb=NONE_FIRST_STEP eval=' The latest candidate, TEPUWAP' kv=evalfb=False K=None/None dC=None dE=None FV=- FK=-
+  TEST878 | X870 REPLAY_STEP I867_00_FORK t=1 action=ACQUIRE equal_to_869_record=True events_compared=2(HOP,CONTROL)
+  TEST878 | T878 TARGET I867_00_FORK {"mounted": ["E841_FDWYXLPLW", "E841_YSPWNJNPQ"], "memory_tokens": 88} record_reproduced=True
+04:49:21 [TEST878] ENGINE_TARGET_00_FORK T878 TARGET I867_00_FORK {"mounted": ["E841_FDWYXLPLW", "E841_YSPWNJNPQ"], "memory_tokens": 88} record_reproduced=True
+  TEST878 | X870 END I867_00_FORK V_X end=XRAY_REPLAY_END accepted=None steps=1 actions=ACQUIRE mounted=E841_FDWYXLPLW|E841_YSPWNJNPQ restore=True s=10.3 calls=6
+  TEST878 | X870 REPLAY I867_00_FORK I867_00_FORK V_X end=XRAY_REPLAY_END ok=True restore=True effects_equal=True events_compared=2/2 s=10.3 calls=6
+  TEST878 | T878 WORLD 01 PANELS_DONE {'SAME_GOAL': 'ACTION_INFORMATION_DEPENDENT_TRANSFER', 'CROSS_WORLD': 'NO_TRANSFER'} reads=22 elapsed_s=44.2 peak_gib=39.87
+04:50:09 [TEST878] ENGINE_WORLD_01  T878 WORLD 01 PANELS_DONE {'SAME_GOAL': 'ACTION_INFORMATION_DEPENDENT_TRANSFER', 'CROSS_WORLD': 'NO_TRANSFER'} reads=22 elapsed_s=44.2 peak_gib=39.87
+  TEST878 | T878 WORLD 00 PANELS_DONE {'SAME_GOAL': 'ACTION_INFORMATION_DEPENDENT_TRANSFER', 'CROSS_WORLD': 'ACTION_INFORMATION_DEPENDENT_TRANSFER'} reads=22 elapsed_s=44.2 peak_gib=39.87
+04:50:53 [TEST878] ENGINE_WORLD_00  T878 WORLD 00 PANELS_DONE {'SAME_GOAL': 'ACTION_INFORMATION_DEPENDENT_TRANSFER', 'CROSS_WORLD': 'ACTION_INFORMATION_DEPENDENT_TRANSFER'} reads=22 elapsed_s=44.2 peak_gib=39.87
+  TEST878 | ==============================================================================================================
+  TEST878 | TEST878 PERSISTENT NATIVE EXPERIENCE TRANSFER | GPU NVIDIA A100-SXM4-80GB | cell 7842e8675544a0328e3552f059c81b7750068a82 | prereg 0555ab01d436c0df | api "5.22.1"
+  TEST878 | experience namespace: /content/TEST878_EXPERIENCE_CUT3_20261112T042738Z
+  TEST878 |   I867_01_MISSING {"role": "SOURCE", "card": "E841_JCYVLPHET", "E": [58, 407], "C": [380, 407], "X3_len": 300, "H": {"action": "ACQUIRE", "p": {"ADVANCE": 2e-05, "ACQUIRE": 0.625744, "REJECT": 0.035299, "BACKTRACK": 0.108734, "ACCEPT": 4e-06, "STOP": 0.230199}}, "experience": "X878_01_MISSING", "rou
+  TEST878 |   I867_01_LIVE {"role": "SOURCE", "card": "E841_QEGSGDDTK", "E": [58, 407], "C": [380, 407], "X3_len": 305, "H": {"action": "ACCEPT", "p": {"ADVANCE": 0.033037, "ACQUIRE": 0.001277, "REJECT": 3.4e-05, "BACKTRACK": 9e-06, "ACCEPT": 0.965508, "STOP": 0.000135}}, "experience": "X878_01_LIVE", "roundtri
+  TEST878 |   I867_00_MISSING {"role": "SOURCE", "card": "E841_FUHPWHAAT", "E": [59, 411], "C": [381, 411], "X3_len": 300, "H": {"action": "ACQUIRE", "p": {"ADVANCE": 0.000122, "ACQUIRE": 0.990926, "REJECT": 8.4e-05, "BACKTRACK": 0.000293, "ACCEPT": 1e-06, "STOP": 0.008573}}, "experience": "X878_00_MISSING", "r
+  TEST878 |   I867_00_LIVE {"role": "SOURCE", "card": "E841_VKAUNLEKU", "E": [59, 411], "C": [381, 411], "X3_len": 306, "H": {"action": "ACCEPT", "p": {"ADVANCE": 0.022942, "ACQUIRE": 0.001108, "REJECT": 2.7e-05, "BACKTRACK": 8e-06, "ACCEPT": 0.975809, "STOP": 0.000106}}, "experience": "X878_00_LIVE", "roundtri
+  TEST878 |   I867_01_FORK {"role": "SAME_GOAL_TARGET", "card": null, "E": null, "C": null, "X3_len": null, "H": null, "experience": null, "roundtrip_K_rel": null, "mounted": ["E841_CQSBZGCXG", "E841_JWCUAGNZV"], "checks": {"t1_CAR_equals_record": true}, "error": null}
+  TEST878 |   I867_00_FORK {"role": "SAME_GOAL_TARGET", "card": null, "E": null, "C": null, "X3_len": null, "H": null, "experience": null, "roundtrip_K_rel": null, "mounted": ["E841_FDWYXLPLW", "E841_YSPWNJNPQ"], "checks": {"t1_CAR_equals_record": true}, "error": null}
+  TEST878 | WORLD 01 status PANELS_DONE  | reads 22 elapsed_s 44.2 peak_gib 39.87 | static targets {"CROSS_WORLD": {"independent": true, "item": "I867_00_MISSING", "mounted": ["E841_FDWYXLPLW"], "step": 2, "why": []}, "SAME_GOAL": {"independent": true, "item": "I867_01_FORK", "mounted": ["E841_CQSBZGCXG", "E841
+  TEST878 |   source pair gates {"pre_C_cartridge_rows_bitwise": true, "real_cards_differ": true, "same_C_length": true, "same_action_tokens": true, "same_goal": true, "same_t2_spans": true}
+  TEST878 |   SOURCE contrast M-L seq(15) -13.628 -14.375 -16.875 5.063 -14.875 -0.747 -3.247 18.690 -1.247 -2.500 19.438 -0.500 21.938 2.000 -19.937
+  TEST878 |   SOURCE |c| all15 first=50.5265 seq=50.5284 | action5 first=23.3998 seq=23.4031 | action selectivity seq=0.215 | pairs [0, 5, 6, 7, 8]
+  TEST878 |   PERSIST MISSING pass=True sha=True lower_rows_bitwise=True K_roundtrip_rel=0.00362 action_same=True max_dp=0.03608 within_6e-4=False noise first=0.7629 seq=0.7629 explicit_append_bitwise=True A_reference_mask={"valid": true, "why": null, "upper_K_rel_vs_native_append": 0.0}
+  TEST878 |   PERSIST LIVE    pass=True sha=True lower_rows_bitwise=True K_roundtrip_rel=0.00362 action_same=True max_dp=0.00444 within_6e-4=False noise first=0.8570 seq=0.8571 explicit_append_bitwise=True A_reference_mask={"valid": true, "why": null, "upper_K_rel_vs_native_append": 0.0}
+  TEST878 |   floor first=0.85696 seq=0.85714
+  TEST878 |   PANEL SAME_GOAL   status ACTION_INFORMATION_DEPENDENT_TRANSFER
+  TEST878 |     target {"item": "I867_01_FORK", "step": 1, "qid": "DOMAIN_DRMZETJKS_P0", "mounted": ["E841_CQSBZGCXG", "E841_JWCUAGNZV"], "X_len": 293} spans {"E": [87, 436], "A": [407, 409], "C": [409, 436]} gates {"C_BLIND_M_equals_L": true, "finite_margins": true, "pre_C_rows_bitwise_M_eq_L": true, "target_m
+  TEST878 |     BASE       ADVANCE   ACQUIRE=0.1578 BACKTRACK=0.0311 REJECT=0.0061 STOP=0.0037 ACCEPT=0.0001 ADVANCE=0.8013
+  TEST878 |     BASE_EXPLICIT ADVANCE   ACQUIRE=0.1578 BACKTRACK=0.0311 REJECT=0.0061 STOP=0.0037 ACCEPT=0.0001 ADVANCE=0.8013 | |m-BASE| seq=0.000
+  TEST878 |     FULL_M     ACQUIRE   ACQUIRE=0.9122 BACKTRACK=0.0275 REJECT=0.0054 STOP=0.0147 ACCEPT=0.0000 ADVANCE=0.0401 | |m-BASE| seq=9.173
+  TEST878 |     C_BLIND_M  ACQUIRE   ACQUIRE=0.9282 BACKTRACK=0.0033 REJECT=0.0007 STOP=0.0005 ACCEPT=0.0000 ADVANCE=0.0672 | |m-BASE| seq=9.156
+  TEST878 |     A_BLIND_M  INVALID   ACQUIRE=0.1515 BACKTRACK=0.0672 REJECT=0.0096 STOP=0.5991 ACCEPT=0.0010 ADVANCE=0.1716 | |m-BASE| seq=12.946
+  TEST878 |     A_REF_M    ACQUIRE   ACQUIRE=0.9122 BACKTRACK=0.0275 REJECT=0.0054 STOP=0.0147 ACCEPT=0.0000 ADVANCE=0.0401 | |m-BASE| seq=9.173
+  TEST878 |     FULL_L     ACQUIRE   ACQUIRE=0.7684 BACKTRACK=0.0066 REJECT=0.0017 STOP=0.0028 ACCEPT=0.0003 ADVANCE=0.2202 | |m-BASE| seq=8.129
+  TEST878 |     C_BLIND_L  ACQUIRE   ACQUIRE=0.9282 BACKTRACK=0.0033 REJECT=0.0007 STOP=0.0005 ACCEPT=0.0000 ADVANCE=0.0672 | |m-BASE| seq=9.156
+  TEST878 |     A_BLIND_L  INVALID   ACQUIRE=0.0543 BACKTRACK=0.0840 REJECT=0.0057 STOP=0.0578 ACCEPT=0.0008 ADVANCE=0.7974 | |m-BASE| seq=8.647
+  TEST878 |     A_REF_L    ACQUIRE   ACQUIRE=0.7684 BACKTRACK=0.0066 REJECT=0.0017 STOP=0.0028 ACCEPT=0.0003 ADVANCE=0.2202 | |m-BASE| seq=8.129
+  TEST878 |     contrast FULL     M-L seq(15) -1.875 -2.875 -3.125 0.250 -3.375 -1.000 -1.250 2.125 -1.500 -0.250 3.125 -0.500 3.375 -0.250 -3.625
+  TEST878 |     contrast C_BLIND  M-L seq(15) 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+  TEST878 |     contrast A_BLIND  M-L seq(15) -2.563 -2.067 -1.312 -1.750 -3.875 0.495 1.250 0.813 -1.312 0.755 0.317 -1.808 -0.438 -2.563 -2.125
+  TEST878 |     contrast A_REF    M-L seq(15) -1.875 -2.875 -3.125 0.250 -3.375 -1.000 -1.250 2.125 -1.500 -0.250 3.125 -0.500 3.375 -0.250 -3.625
+  TEST878 |     signature FULL     first |T|15=8.7750 |T|A5=3.5838 |T|other10=8.0098 selectivity=0.167 cos_A=0.858 rho_A=0.131 r_A=0.872 cos_all=0.958
+  TEST878 |     signature FULL     seq   |T|15=8.7750 |T|A5=3.5838 |T|other10=8.0097 selectivity=0.167 cos_A=0.858 rho_A=0.131 r_A=0.872 cos_all=0.958
+  TEST878 |     signature A_BLIND  first |T|15=7.0736 |T|A5=3.2805 |T|other10=6.2669 selectivity=0.215 cos_A=0.616 rho_A=0.086 r_A=0.920 cos_all=0.505
+  TEST878 |     signature A_BLIND  seq   |T|15=7.0741 |T|A5=3.2798 |T|other10=6.2678 selectivity=0.215 cos_A=0.616 rho_A=0.086 r_A=0.920 cos_all=0.506
+  TEST878 |     signature A_REF    first |T|15=8.7750 |T|A5=3.5838 |T|other10=8.0098 selectivity=0.167 cos_A=0.858 rho_A=0.131 r_A=0.872 cos_all=0.958
+  TEST878 |     signature A_REF    seq   |T|15=8.7749 |T|A5=3.5838 |T|other10=8.0097 selectivity=0.167 cos_A=0.858 rho_A=0.131 r_A=0.872 cos_all=0.958
+  TEST878 |     detect {"A_dependence_seq": true, "outcome_first": true, "outcome_seq": true} | max dp FULL M vs L 0.1801 | A dependence {"FULL_minus_A_BLIND_not_path_matched": {"norm_first": 7.189671540304525, "norm_seq": 7.186218505818547}, "mask_kernel_noise_FULL_vs_A_REF": {"first": 0.0, "seq": 5.2943144007
+  TEST878 |     A_REF gate {"K_full_minus_ref_seq": 5.125404575482907e-05, "dot_full_ref_seq": 76.99964612722691, "finite": true, "interpretable": true, "norm_T_full_seq": 8.774952295797087, "norm_T_ref_seq": 8.77493615153787, "norm_ref_minus_blind_seq": 7.186201676982581, "ref_close": true, "ref_detectable": t
+  TEST878 |   PANEL CROSS_WORLD status NO_TRANSFER
+  TEST878 |     target {"item": "I867_00_MISSING", "step": 2, "qid": "DOMAIN_GGLYXVHDV_P0", "mounted": ["E841_FDWYXLPLW"], "X_len": 320} spans {"E": [59, 408], "A": [379, 381], "C": [381, 408]} gates {"C_BLIND_M_equals_L": true, "finite_margins": true, "pre_C_rows_bitwise_M_eq_L": true, "target_memory_unchanged
+  TEST878 |     BASE       ACQUIRE   ACQUIRE=0.9224 BACKTRACK=0.0090 REJECT=0.0010 STOP=0.0085 ACCEPT=0.0000 ADVANCE=0.0590
+  TEST878 |     BASE_EXPLICIT ACQUIRE   ACQUIRE=0.9224 BACKTRACK=0.0090 REJECT=0.0010 STOP=0.0085 ACCEPT=0.0000 ADVANCE=0.0590 | |m-BASE| seq=0.000
+  TEST878 |     FULL_M     ACQUIRE   ACQUIRE=0.7971 BACKTRACK=0.0146 REJECT=0.0015 STOP=0.0577 ACCEPT=0.0840 ADVANCE=0.0450 | |m-BASE| seq=16.896
+  TEST878 |     C_BLIND_M  ACQUIRE   ACQUIRE=0.9704 BACKTRACK=0.0011 REJECT=0.0001 STOP=0.0021 ACCEPT=0.0004 ADVANCE=0.0259 | |m-BASE| seq=9.654
+  TEST878 |     A_BLIND_M  INVALID   ACQUIRE=0.1050 BACKTRACK=0.0086 REJECT=0.0006 STOP=0.8795 ACCEPT=0.0008 ADVANCE=0.0056 | |m-BASE| seq=15.607
+  TEST878 |     A_REF_M    ACQUIRE   ACQUIRE=0.7971 BACKTRACK=0.0146 REJECT=0.0015 STOP=0.0577 ACCEPT=0.0840 ADVANCE=0.0450 | |m-BASE| seq=16.896
+  TEST878 |     FULL_L     ACQUIRE   ACQUIRE=0.7661 BACKTRACK=0.0140 REJECT=0.0017 STOP=0.0713 ACCEPT=0.1037 ADVANCE=0.0432 | |m-BASE| seq=17.406
+  TEST878 |     C_BLIND_L  ACQUIRE   ACQUIRE=0.9704 BACKTRACK=0.0011 REJECT=0.0001 STOP=0.0021 ACCEPT=0.0004 ADVANCE=0.0259 | |m-BASE| seq=9.654
+  TEST878 |     A_BLIND_L  INVALID   ACQUIRE=0.0930 BACKTRACK=0.0172 REJECT=0.0006 STOP=0.8825 ACCEPT=0.0003 ADVANCE=0.0063 | |m-BASE| seq=14.666
+  TEST878 |     A_REF_L    ACQUIRE   ACQUIRE=0.7661 BACKTRACK=0.0140 REJECT=0.0017 STOP=0.0713 ACCEPT=0.1037 ADVANCE=0.0432 | |m-BASE| seq=17.406
+  TEST878 |     contrast FULL     M-L seq(15) 0.000 0.125 -0.000 0.250 0.250 0.125 -0.000 0.250 0.250 -0.125 0.125 0.125 0.250 0.250 0.000
+  TEST878 |     contrast C_BLIND  M-L seq(15) 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+  TEST878 |     contrast A_BLIND  M-L seq(15) -0.250 -0.000 0.563 -1.125 -0.125 0.250 0.812 -0.875 0.125 0.563 -1.125 -0.125 -1.688 -0.688 1.000
+  TEST878 |     contrast A_REF    M-L seq(15) 0.000 0.125 0.000 0.250 0.250 0.125 -0.000 0.250 0.250 -0.125 0.125 0.125 0.250 0.250 0.000
+  TEST878 |     signature FULL     first |T|15=0.6731 |T|A5=0.3750 |T|other10=0.5590 selectivity=0.310 cos_A=0.486 rho_A=0.008 r_A=0.992 cos_all=0.255
+  TEST878 |     signature FULL     seq   |T|15=0.6732 |T|A5=0.3750 |T|other10=0.5590 selectivity=0.310 cos_A=0.486 rho_A=0.008 r_A=0.992 cos_all=0.255
+  TEST878 |     signature A_BLIND  first |T|15=3.0136 |T|A5=1.2516 |T|other10=2.7415 selectivity=0.172 cos_A=-0.544 rho_A=-0.029 r_A=1.030 cos_all=-0.728
+  TEST878 |     signature A_BLIND  seq   |T|15=3.0136 |T|A5=1.2516 |T|other10=2.7415 selectivity=0.172 cos_A=-0.544 rho_A=-0.029 r_A=1.030 cos_all=-0.728
+  TEST878 |     signature A_REF    first |T|15=0.6731 |T|A5=0.3750 |T|other10=0.5590 selectivity=0.310 cos_A=0.486 rho_A=0.008 r_A=0.992 cos_all=0.255
+  TEST878 |     signature A_REF    seq   |T|15=0.6731 |T|A5=0.3750 |T|other10=0.5590 selectivity=0.310 cos_A=0.486 rho_A=0.008 r_A=0.992 cos_all=0.255
+  TEST878 |     detect {"A_dependence_seq": true, "outcome_first": false, "outcome_seq": false} | max dp FULL M vs L 0.0310 | A dependence {"FULL_minus_A_BLIND_not_path_matched": {"norm_first": 3.480413618946347, "norm_seq": 3.4804086009611677}, "mask_kernel_noise_FULL_vs_A_REF": {"first": 0.0, "seq": 8.9619605
+  TEST878 |     A_REF gate {"K_full_minus_ref_seq": 1.011856999052423e-05, "dot_full_ref_seq": 0.4531284201620683, "finite": true, "interpretable": false, "norm_T_full_seq": 0.6731504104153786, "norm_T_ref_seq": 0.6731458722922762, "norm_ref_minus_blind_seq": 3.4804029515079073, "ref_close": true, "ref_detectab
+  TEST878 | WORLD 00 status PANELS_DONE  | reads 22 elapsed_s 44.2 peak_gib 39.87 | static targets {"CROSS_WORLD": {"independent": true, "item": "I867_01_MISSING", "mounted": ["E841_CQSBZGCXG"], "step": 2, "why": []}, "SAME_GOAL": {"independent": true, "item": "I867_00_FORK", "mounted": ["E841_FDWYXLPLW", "E841
+  TEST878 |   source pair gates {"pre_C_cartridge_rows_bitwise": true, "real_cards_differ": true, "same_C_length": true, "same_action_tokens": true, "same_goal": true, "same_t2_spans": true}
+  TEST878 |   SOURCE contrast M-L seq(15) -12.030 -6.376 -8.875 9.000 -9.625 5.654 3.155 21.031 2.406 -2.499 15.377 -3.248 17.875 -0.750 -18.625
+  TEST878 |   SOURCE |c| all15 first=42.9566 seq=42.9885 | action5 first=25.1405 seq=25.1938 | action selectivity seq=0.343 | pairs [0, 5, 6, 7, 8]
+  TEST878 |   PERSIST MISSING pass=True sha=True lower_rows_bitwise=True K_roundtrip_rel=0.00364 action_same=True max_dp=0.00113 within_6e-4=False noise first=0.7629 seq=0.7629 explicit_append_bitwise=True A_reference_mask={"valid": true, "why": null, "upper_K_rel_vs_native_append": 0.0}
+  TEST878 |   PERSIST LIVE    pass=True sha=True lower_rows_bitwise=True K_roundtrip_rel=0.00364 action_same=True max_dp=0.00511 within_6e-4=False noise first=0.5192 seq=0.5217 explicit_append_bitwise=True A_reference_mask={"valid": true, "why": null, "upper_K_rel_vs_native_append": 0.0}
+  TEST878 |   floor first=0.76291 seq=0.76291
+  TEST878 |   PANEL SAME_GOAL   status ACTION_INFORMATION_DEPENDENT_TRANSFER
+  TEST878 |     target {"item": "I867_00_FORK", "step": 1, "qid": "DOMAIN_GGLYXVHDV_P0", "mounted": ["E841_FDWYXLPLW", "E841_YSPWNJNPQ"], "X_len": 289} spans {"E": [88, 440], "A": [408, 410], "C": [410, 440]} gates {"C_BLIND_M_equals_L": true, "finite_margins": true, "pre_C_rows_bitwise_M_eq_L": true, "target_m
+  TEST878 |     BASE       ACQUIRE   ACQUIRE=0.6753 BACKTRACK=0.0381 REJECT=0.0031 STOP=0.0019 ACCEPT=0.0000 ADVANCE=0.2815
+  TEST878 |     BASE_EXPLICIT ACQUIRE   ACQUIRE=0.6753 BACKTRACK=0.0381 REJECT=0.0031 STOP=0.0019 ACCEPT=0.0000 ADVANCE=0.2815 | |m-BASE| seq=0.000
+  TEST878 |     FULL_M     ACQUIRE   ACQUIRE=0.9181 BACKTRACK=0.0277 REJECT=0.0048 STOP=0.0131 ACCEPT=0.0007 ADVANCE=0.0356 | |m-BASE| seq=12.308
+  TEST878 |     C_BLIND_M  ACQUIRE   ACQUIRE=0.9759 BACKTRACK=0.0027 REJECT=0.0005 STOP=0.0005 ACCEPT=0.0001 ADVANCE=0.0203 | |m-BASE| seq=10.744
+  TEST878 |     A_BLIND_M  INVALID   ACQUIRE=0.4312 BACKTRACK=0.1090 REJECT=0.0039 STOP=0.2964 ACCEPT=0.0008 ADVANCE=0.1586 | |m-BASE| seq=14.117
+  TEST878 |     A_REF_M    ACQUIRE   ACQUIRE=0.9181 BACKTRACK=0.0277 REJECT=0.0048 STOP=0.0131 ACCEPT=0.0007 ADVANCE=0.0356 | |m-BASE| seq=12.308
+  TEST878 |     FULL_L     ADVANCE   ACQUIRE=0.1980 BACKTRACK=0.0032 REJECT=0.0013 STOP=0.0015 ACCEPT=0.0127 ADVANCE=0.7833 | |m-BASE| seq=19.549
+  TEST878 |     C_BLIND_L  ACQUIRE   ACQUIRE=0.9759 BACKTRACK=0.0027 REJECT=0.0005 STOP=0.0005 ACCEPT=0.0001 ADVANCE=0.0203 | |m-BASE| seq=10.744
+  TEST878 |     A_BLIND_L  INVALID   ACQUIRE=0.0698 BACKTRACK=0.0616 REJECT=0.0027 STOP=0.0094 ACCEPT=0.0065 ADVANCE=0.8501 | |m-BASE| seq=16.706
+  TEST878 |     A_REF_L    ADVANCE   ACQUIRE=0.1980 BACKTRACK=0.0032 REJECT=0.0013 STOP=0.0015 ACCEPT=0.0127 ADVANCE=0.7833 | |m-BASE| seq=19.549
+  TEST878 |     contrast FULL     M-L seq(15) -4.625 -4.375 -5.250 -0.125 -5.250 0.250 -0.625 4.500 -0.625 -0.875 4.250 -0.875 5.125 0.000 -5.125
+  TEST878 |     contrast C_BLIND  M-L seq(15) 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+  TEST878 |     contrast A_BLIND  M-L seq(15) -3.500 -2.063 -2.250 0.375 -5.125 1.438 1.250 3.875 -1.625 -0.187 2.438 -3.062 2.625 -2.875 -5.500
+  TEST878 |     contrast A_REF    M-L seq(15) -4.625 -4.375 -5.250 -0.125 -5.250 0.250 -0.625 4.500 -0.625 -0.875 4.250 -0.875 5.125 0.000 -5.125
+  TEST878 |     signature FULL     first |T|15=13.7437 |T|A5=6.5180 |T|other10=12.0998 selectivity=0.225 cos_A=0.903 rho_A=0.234 r_A=0.774 cos_all=0.897
+  TEST878 |     signature FULL     seq   |T|15=13.7438 |T|A5=6.5180 |T|other10=12.0999 selectivity=0.225 cos_A=0.903 rho_A=0.234 r_A=0.775 cos_all=0.896
+  TEST878 |     signature A_BLIND  first |T|15=11.4045 |T|A5=5.8068 |T|other10=9.8155 selectivity=0.259 cos_A=0.903 rho_A=0.209 r_A=0.798 cos_all=0.849
+  TEST878 |     signature A_BLIND  seq   |T|15=11.4028 |T|A5=5.7914 |T|other10=9.8227 selectivity=0.258 cos_A=0.903 rho_A=0.208 r_A=0.799 cos_all=0.851
+  TEST878 |     signature A_REF    first |T|15=13.7437 |T|A5=6.5180 |T|other10=12.0998 selectivity=0.225 cos_A=0.903 rho_A=0.234 r_A=0.774 cos_all=0.897
+  TEST878 |     signature A_REF    seq   |T|15=13.7438 |T|A5=6.5180 |T|other10=12.0999 selectivity=0.225 cos_A=0.903 rho_A=0.234 r_A=0.775 cos_all=0.896
+  TEST878 |     detect {"A_dependence_seq": true, "outcome_first": true, "outcome_seq": true} | max dp FULL M vs L 0.7477 | A dependence {"FULL_minus_A_BLIND_not_path_matched": {"norm_first": 6.801884072741581, "norm_seq": 6.737642692797069}, "mask_kernel_noise_FULL_vs_A_REF": {"first": 0.0, "seq": 0.0001233341
+  TEST878 |     A_REF gate {"K_full_minus_ref_seq": 0.00013993375343267168, "dot_full_ref_seq": 188.8923761427791, "finite": true, "interpretable": true, "norm_T_full_seq": 13.74379940251878, "norm_T_ref_seq": 13.743825169452066, "norm_ref_minus_blind_seq": 6.737694448543921, "ref_close": true, "ref_detectable"
+  TEST878 |   PANEL CROSS_WORLD status ACTION_INFORMATION_DEPENDENT_TRANSFER
+  TEST878 |     target {"item": "I867_01_MISSING", "step": 2, "qid": "DOMAIN_DRMZETJKS_P0", "mounted": ["E841_CQSBZGCXG"], "X_len": 320} spans {"E": [58, 410], "A": [378, 380], "C": [380, 410]} gates {"C_BLIND_M_equals_L": true, "finite_margins": true, "pre_C_rows_bitwise_M_eq_L": true, "target_memory_unchanged
+  TEST878 |     BASE       ACQUIRE   ACQUIRE=0.9151 BACKTRACK=0.0066 REJECT=0.0008 STOP=0.0190 ACCEPT=0.0000 ADVANCE=0.0585
+  TEST878 |     BASE_EXPLICIT ACQUIRE   ACQUIRE=0.9151 BACKTRACK=0.0066 REJECT=0.0008 STOP=0.0190 ACCEPT=0.0000 ADVANCE=0.0585 | |m-BASE| seq=0.000
+  TEST878 |     FULL_M     ACCEPT    ACQUIRE=0.3777 BACKTRACK=0.0451 REJECT=0.0146 STOP=0.1575 ACCEPT=0.3777 ADVANCE=0.0274 | |m-BASE| seq=21.613
+  TEST878 |     C_BLIND_M  ACQUIRE   ACQUIRE=0.5902 BACKTRACK=0.0428 REJECT=0.0045 STOP=0.0259 ACCEPT=0.0905 ADVANCE=0.2460 | |m-BASE| seq=17.519
+  TEST878 |     A_BLIND_M  INVALID   ACQUIRE=0.2124 BACKTRACK=0.0120 REJECT=0.0004 STOP=0.7415 ACCEPT=0.0012 ADVANCE=0.0326 | |m-BASE| seq=13.230
+  TEST878 |     A_REF_M    ACCEPT    ACQUIRE=0.3777 BACKTRACK=0.0451 REJECT=0.0146 STOP=0.1575 ACCEPT=0.3777 ADVANCE=0.0274 | |m-BASE| seq=21.613
+  TEST878 |     FULL_L     ACCEPT    ACQUIRE=0.2852 BACKTRACK=0.0161 REJECT=0.0076 STOP=0.0437 ACCEPT=0.6037 ADVANCE=0.0437 | |m-BASE| seq=23.013
+  TEST878 |     C_BLIND_L  ACQUIRE   ACQUIRE=0.5902 BACKTRACK=0.0428 REJECT=0.0045 STOP=0.0259 ACCEPT=0.0905 ADVANCE=0.2460 | |m-BASE| seq=17.519
+  TEST878 |     A_BLIND_L  INVALID   ACQUIRE=0.2273 BACKTRACK=0.0272 REJECT=0.0020 STOP=0.6180 ACCEPT=0.0308 ADVANCE=0.0948 | |m-BASE| seq=16.796
+  TEST878 |     A_REF_L    ACCEPT    ACQUIRE=0.2852 BACKTRACK=0.0161 REJECT=0.0076 STOP=0.0437 ACCEPT=0.6037 ADVANCE=0.0437 | |m-BASE| seq=23.013
+  TEST878 |     contrast FULL     M-L seq(15) -0.750 -1.125 -1.500 -0.000 -1.750 -0.375 -0.750 0.750 -1.000 -0.375 1.125 -0.625 1.500 -0.250 -1.750
+  TEST878 |     contrast C_BLIND  M-L seq(15) 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+  TEST878 |     contrast A_BLIND  M-L seq(15) -1.000 0.625 -0.250 2.187 -1.250 1.625 0.750 3.188 -0.250 -0.875 1.563 -1.875 2.437 -1.000 -3.437
+  TEST878 |     contrast A_REF    M-L seq(15) -0.750 -1.125 -1.500 -0.000 -1.750 -0.375 -0.750 0.750 -1.000 -0.375 1.125 -0.625 1.500 -0.250 -1.750
+  TEST878 |     signature FULL     first |T|15=4.0716 |T|A5=1.6817 |T|other10=3.7081 selectivity=0.171 cos_A=0.424 rho_A=0.028 r_A=0.974 cos_all=0.772
+  TEST878 |     signature FULL     seq   |T|15=4.0716 |T|A5=1.6817 |T|other10=3.7081 selectivity=0.171 cos_A=0.423 rho_A=0.028 r_A=0.974 cos_all=0.772
+  TEST878 |     signature A_BLIND  first |T|15=6.8343 |T|A5=3.7981 |T|other10=5.6817 selectivity=0.309 cos_A=0.941 rho_A=0.142 r_A=0.859 cos_all=0.887
+  TEST878 |     signature A_BLIND  seq   |T|15=6.8342 |T|A5=3.7981 |T|other10=5.6816 selectivity=0.309 cos_A=0.941 rho_A=0.142 r_A=0.860 cos_all=0.887
+  TEST878 |     signature A_REF    first |T|15=4.0716 |T|A5=1.6817 |T|other10=3.7081 selectivity=0.171 cos_A=0.424 rho_A=0.028 r_A=0.974 cos_all=0.772
+  TEST878 |     signature A_REF    seq   |T|15=4.0716 |T|A5=1.6817 |T|other10=3.7081 selectivity=0.171 cos_A=0.423 rho_A=0.028 r_A=0.974 cos_all=0.772
+  TEST878 |     detect {"A_dependence_seq": true, "outcome_first": true, "outcome_seq": true} | max dp FULL M vs L 0.2260 | A dependence {"FULL_minus_A_BLIND_not_path_matched": {"norm_first": 5.363721967650961, "norm_seq": 5.3636538920091645}, "mask_kernel_noise_FULL_vs_A_REF": {"first": 0.0, "seq": 9.091776185
+  TEST878 |     A_REF gate {"K_full_minus_ref_seq": 8.767109596207714e-06, "dot_full_ref_seq": 16.578066500035398, "finite": true, "interpretable": true, "norm_T_full_seq": 4.071618705444661, "norm_T_ref_seq": 4.0716156642812935, "norm_ref_minus_blind_seq": 5.363655037896931, "ref_close": true, "ref_detectable"
+  TEST878 | TEST878 VERDICT ACTION_INFORMATION_DEPENDENT_TRANSFER | scope ASYMMETRIC_CROSS_WORLD | same-goal {'01': 'ACTION_INFORMATION_DEPENDENT_TRANSFER', '00': 'ACTION_INFORMATION_DEPENDENT_TRANSFER'} | cross-world {'01': 'NO_TRANSFER', '00': 'ACTION_INFORMATION_DEPENDENT_TRANSFER'} (ASYMMETRIC_CROSS_WORLD) 
+04:50:53 [TEST878] ENGINE_VERDICT   TEST878 VERDICT ACTION_INFORMATION_DEPENDENT_TRANSFER | scope ASYMMETRIC_CROSS_WORLD | same-goal {'01': 'ACTION_INFORMATION_DEPENDENT_TRANSFER', '00': 'ACTION_INFORMATION_DEPENDENT_TRANSFER'} | cross-world {'01': 'NO_TRANSFER', '00': 'ACTION_INFORMATION_DEPENDENT_TRANSFER'} (ASYMMETRIC_CROSS_WORLD) | worlds {'01': 'PANELS_DONE', '00': 'PANELS_DONE'} | blocks [] 
+  TEST878 | LIMITS: A-blind dependence is not credit assignment; forced mount, no retrieval, no closed loop, no learning claim; two real event pairs (pilot); labels are detectability classes above the reconstruction floor - read the sizes.
+  TEST878 | status COMPLETE | wall 1395 s | peak GPU 39.87 GiB | GPU_EXECUTION_NOT_VERIFIED_BY_AUTHOR
+04:50:53 [TEST878] ENGINE_STATUS    status COMPLETE | wall 1395 s | peak GPU 39.87 GiB | GPU_EXECUTION_NOT_VERIFIED_BY_AUTHOR
+  TEST878 | ==============================================================================================================
+  TEST878 | CELL CONSOLE CAPTURE END 2026-11-12T04:50:53Z
+04:50:53 [TEST878] ENGINE_CONSOLE_END CELL CONSOLE CAPTURE END 2026-11-12T04:50:53Z
+  TEST878 | CELL OUTPUT FILE : /content/TEST878_HUCRE_CIKTISI_20261112T042731Z.txt 0.08 MB sha256 3e3399f5aba309ccbdecdb00b963d6a086e5dd2cb1ca353e45dc785d23401f9b
+  TEST878 | RESULT ZIP       : /content/TEST878_SONUC_20261112T042731Z.zip 0.13 MB sha256 b25421ce3db2bedda34534aef88ca40cccb82f4a5f1cf92912663b1009ca4772
+  TEST878 | Automatic download not available (AttributeError); the files are in /content.
+04:50:58 [TEST878] SESSION_EXIT     TEST878 exit code 0 · 1408 s · status COMPLETE · verdict ACTION_INFORMATION_DEPENDENT_TRANSFER · GPU released True {"engine_root": "/content/TEST878_RUN_20261112T042738Z", "experience_dir": "/content/TEST878_EXPERIENCE_CUT3_20261112T042738Z"}
+04:50:58 [TEST878] STAGE_DONE       TEST878 {"note": "pid 740 · exit 0 · 23.5 min · status COMPLETE · verdict ACTION_INFORMATION_DEPENDENT_TRANSFER · scope ASYMMETRIC_CROSS_WORLD · blocks [] · GPU after exit 0 MiB · records /content/TEST878_RUN_20261112T042738Z"}
+── [3/5] Independent re-verification (read-only, host, CPU) — every cartridge file: SHA-256, per-tensor SHA-256, X2/A rows of M = L, gates of the result file
+04:51:02 [VERIFY] VERIFIED_CARTRIDGE X878_01_MISSING {"bytes": 12423022, "sha256_now": "5900414379bc14636616137f6b66c8c563e9582ca569581cd734fa417f4a8b9d", "file_sha_ok": true, "only_state_keys": true, "tensor_sha_ok": true}
+04:51:03 [VERIFY] VERIFIED_CARTRIDGE X878_01_LIVE {"bytes": 12422977, "sha256_now": "2eacb07ed074e7387a21e3ab8c9bfae0d83d139fb64acb796cc8c6f3af71cc64", "file_sha_ok": true, "only_state_keys": true, "tensor_sha_ok": true}
+04:51:03 [VERIFY] VERIFIED_CARTRIDGE X878_00_MISSING {"bytes": 12521326, "sha256_now": "dbea36bea71abc3cba4640a85b36b46118e9087c9fb3ff58b421e0bda11c8961", "file_sha_ok": true, "only_state_keys": true, "tensor_sha_ok": true}
+04:51:03 [VERIFY] VERIFIED_CARTRIDGE X878_00_LIVE {"bytes": 12521281, "sha256_now": "74f6ef45527b55d89e3ec95b49d4523ea128510a9f53650a080ffe306b6c0baf", "file_sha_ok": true, "only_state_keys": true, "tensor_sha_ok": true}
+04:51:03 [VERIFY] PAIR_VERIFIED    World 01: X2/A rows of the MISSING and LIVE cartridges bit-identical True · C rows differ True
+04:51:03 [VERIFY] PAIR_VERIFIED    World 00: X2/A rows of the MISSING and LIVE cartridges bit-identical True · C rows differ True
+04:51:03 [VERIFY] STAGE_DONE       VERIFY {"note": "4/4 cartridge files: file SHA-256 + every tensor SHA-256 re-computed equal to the engine's records · X2/A rows of M = L bit for bit: 01 ✓, 00 ✓ · executed source = locked 878.py ✓ · engine verdict ACTION_INFORMATION_DEPENDENT_TRANSFER · blocks []"}
+── [4/5] Nine scientific figures (JPEG 300 dpi, layout QC) — cartridge heat maps, arms, decisions, contrasts, decision rule
+04:51:05 [FIGURES] FIGURE_WRITTEN   Figure 1 TEST878_FIG01_MECHANISM_PIPELINE.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "0b096fe2351ae5f32c88bfa848e2a3407e481a46592c32472b3453570f3afbc0", "badge": "SCHEMATIC"}
+  figure 1 · SCHEMATIC · 3999×2250 · layout QC pass · 1.5 s
+04:51:06 [FIGURES] FIGURE_WRITTEN   Figure 2 TEST878_FIG02_CARTRIDGE_ANATOMY.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "3bc80792519cf1db2881282173ad694c2bc919a7cd91ceaf3ee1a698868c7b27", "badge": "LIVE MEASUREMENT"}
+  figure 2 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.8 s
+04:51:08 [FIGURES] FIGURE_WRITTEN   Figure 3 TEST878_FIG03_PERSISTENCE_PARITY_GATES.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "c6bfc572b3eeec127c7d8868b74d11bd9fe6f067449bb2e0343c20f650edf190", "badge": "VERIFICATION RECORD"}
+  figure 3 · VERIFICATION RECORD · 3999×2250 · layout QC pass · 1.6 s
+04:51:09 [FIGURES] FIGURE_WRITTEN   Figure 4 TEST878_FIG04_CAUSAL_ARMS_VISIBILITY.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "d16489a67b05c700126b8bf54ce46226af26bc53ec333ff7284b8229d088ec12", "badge": "SCHEMATIC"}
+  figure 4 · SCHEMATIC · 3999×2250 · layout QC pass · 1.2 s
+04:51:11 [FIGURES] FIGURE_WRITTEN   Figure 5 TEST878_FIG05_NATIVE_CAR_DECISIONS.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "7cde19c229fb238b0b12a29682b9738a5018538ea965b2083cdb12c3fc8a6241", "badge": "LIVE MEASUREMENT"}
+  figure 5 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.7 s
+04:51:13 [FIGURES] FIGURE_WRITTEN   Figure 6 TEST878_FIG06_OUTCOME_CONTRAST_SIGNATURES.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 7, "sha256_jpg": "edba7463531225e30e30d944b185f38a8c121c62ff5b6be8f3ead14eca5bceb1", "badge": "LIVE MEASUREMENT"}
+  figure 6 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 2.2 s
+04:51:14 [FIGURES] FIGURE_WRITTEN   Figure 7 TEST878_FIG07_DECISION_RULE.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "0737ab66c48b36d4df231aedcd78269cf36b9841e87a768fbbd56b2997d04701", "badge": "VERIFICATION RECORD"}
+  figure 7 · VERIFICATION RECORD · 3999×2250 · layout QC pass · 1.5 s
+04:51:16 [FIGURES] FIGURE_WRITTEN   Figure 8 TEST878_FIG08_TIMELINE_GPU.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "853d635c307939ad20821362f5769cd6deb8a5c9fb2b561c6dded8184ae84354", "badge": "LIVE MEASUREMENT"}
+  figure 8 · LIVE MEASUREMENT · 3999×2250 · layout QC pass · 1.3 s
+04:51:17 [FIGURES] FIGURE_WRITTEN   Figure 9 TEST878_FIG09_CLAIMS_LEDGER.jpg {"pixels": [3999, 2250], "dpi": 300, "layout_qc": true, "font_reductions": 0, "sha256_jpg": "82c8f8777734b157f4bfa8e9f1908714b28612b46e1bc4286ac322cd0f3a795f", "badge": "VERIFICATION RECORD"}
+  figure 9 · VERIFICATION RECORD · 3999×2250 · layout QC pass · 1.2 s
+04:51:17 [FIGURES] STAGE_DONE       FIGURES {"note": "9/9 JPEG figures written (300 dpi) · layout QC and JPEG QC passed for every figure"}
+── [5/5] Records — real-time engine output, engine result files, verification, manifests (direct downloads, no ZIP)
+04:51:17 [RECORDS] STAGE_DONE       RECORDS {"note": "9 JPEG figures + 24 records, each downloadable directly · SHA-256 manifest of 38 files (no ZIP)"}
+════════════════════════════════════════════════════════════════════════════════════════════════════
+RUN VERDICT: COMPLETE — every stage ran and passed
+TEST878 VERDICT: ACTION_INFORMATION_DEPENDENT_TRANSFER
+RUN SH878-20261112-042642 finished 2026-11-12T04:51:17+00:00 · PRECHECK:done · TEST878:done · VERIFY:done · FIGURES:done · RECORDS:done
+════════════════════════════════════════════════════════════════════════════════════════════════════
+####################################################################################################
+FIGURES OF THIS RUN (SH878-20261112-042642) — 9 JPEG file(s) — shown below in the cell, each also downloaded by the browser
+  folder: /content/AKBASCORE_TEST878_DEMO/sessions/SH878-20261112-042642/figures
+####################################################################################################
+04:51:20 [-] CELL_DOWNLOAD    TEST878_FIG01_MECHANISM_PIPELINE.jpg
+04:51:21 [-] CELL_DOWNLOAD    TEST878_FIG02_CARTRIDGE_ANATOMY.jpg
+04:51:22 [-] CELL_DOWNLOAD    TEST878_FIG03_PERSISTENCE_PARITY_GATES.jpg
+04:51:23 [-] CELL_DOWNLOAD    TEST878_FIG04_CAUSAL_ARMS_VISIBILITY.jpg
+04:51:24 [-] CELL_DOWNLOAD    TEST878_FIG05_NATIVE_CAR_DECISIONS.jpg
+04:51:25 [-] CELL_DOWNLOAD    TEST878_FIG06_OUTCOME_CONTRAST_SIGNATURES.jpg
+04:51:26 [-] CELL_DOWNLOAD    TEST878_FIG07_DECISION_RULE.jpg
+04:51:27 [-] CELL_DOWNLOAD    TEST878_FIG08_TIMELINE_GPU.jpg
+04:51:28 [-] CELL_DOWNLOAD    TEST878_FIG09_CLAIMS_LEDGER.jpg
