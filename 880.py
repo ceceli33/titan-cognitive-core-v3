@@ -1,4 +1,7 @@
 # AKBASCORE SILICON HIPPOCAMPUS — TEST880 — NCRA: NATIVE CONSEQUENCE RETRIEVAL AND APPRAISAL (closed-loop engine)
+# REVISION r2 (2026-11-12) of 880.py git blob 22d22530: A1 879.log marker, A2 NOT_APPLICABLE rows, A3 empty pre ids in the
+# C path; offline verdict/correction tightened (B1/B2); placeholder, round-trip and open-frame provenance (C1-C5).
+# Runtime decision flow, CAR, routing, physical capture/write and every gate are unchanged from r1.
 # One A100-SXM4-80GB Colab cell. Frozen Qwen2.5-72B-Instruct NF4, BF16. Locked engine test870.py (e322ed8) + locked 878.py.
 # ENGINE (one loop, every decision is the model's):
 #   OBSERVE (hop865 + evidence) -> close the open episode: comparison U and native STORE/DISCARD -> deficit D -> evaluation
@@ -133,23 +136,48 @@ PREREG880 = {
               'WRONG_MEMORY': 'snapshot before L3 minus the experiences stored in world-A loops (NOT_APPLICABLE if none remain)',
               'KEY_SHUFFLE': 'snapshot before L3 with experience keys rotated by one (NOT_APPLICABLE below two)'},
     'counterfactual_loops_store': False,
-    'horizon': '%d executed actions; time/VRAM/INVALID/HORIZON are mechanical ends, never a model STOP' % HORIZON880,
+    'horizon': '%d executed actions; time/VRAM/INVALID/HORIZON are mechanical ends, never a model STOP; the frame of the '
+               'last action before HORIZON has no observed consequence: OPEN_AT_HORIZON, never written, never counted' % HORIZON880,
+    'hook_scope': 'new code (query880, capture880, close_frame880) is hook-free: explicit layer statements, no forward hooks, '
+                  'no output_hidden_states; locked reused paths (mount865/native_append_direct, physical_commit forging, '
+                  'the pointer_query865 parity reference) keep their locked DirectCut3 method swap; not rewritten here',
+    'placeholders': 'empty goal rows or empty P_a are replaced by MUE845 and flagged (goal_placeholder, P_placeholder); a '
+                    'placeholder is never reported as a prediction or as an observed consequence',
     'fallback': 'top-3 sequential applicability fallback NOT enabled in this run (only after an observed rank-1 failure)',
     'verdict': {'TECHNICAL_BLOCK': 'preflight, parity, integrity or engine error',
-                'CLOSED_LOOP_NO_STORE': 'loops ran; the model never chose STORE',
-                'CLOSED_LOOP_NO_SELF_REUSE': 'experiences stored; never self-addressed in a later loop',
-                'CLOSED_LOOP_REUSE_NO_BEHAVIOUR_CHANGE': 'self-addressed reuse; executed actions identical without that memory',
-                'CLOSED_LOOP_MEMORY_DEPENDENT_BEHAVIOUR': 'self-addressed reuse and the executed behaviour differs when the '
-                                                          'memory is removed / absent',
-                'PARTIAL': 'a loop needed by the verdict was not run (budget)'},
-    'acceptance_reported': ['non-oracle routing records', 'CONTROL = reading = EFFECT', 'adverse observation then '
-                            'REJECT/BACKTRACK/ACQUIRE and supported end', 'no-memory / removal / wrong-memory / key-shuffle '
-                            'executed-behaviour differences', 'STORE -> SSD reload -> self-addressed reuse', 'MISSING: model STOP'],
+                'PARTIAL': 'L3 (the full-catalog FORK loop) did not run',
+                'CLOSED_LOOP_NO_STORE': 'loops ran; the model never chose STORE (or no write passed its gates)',
+                'CLOSED_LOOP_NO_SELF_REUSE': 'experiences stored; L3 never physically mounted one stored by another loop',
+                'CLOSED_LOOP_REUSE_INCONCLUSIVE_UNMATCHED_PREFIX': 'L3 reused; no executed control (L4/L5) reproduces the L3 decision '
+                                                                  'inputs bitwise up to and including the reuse step',
+                'CLOSED_LOOP_REUSE_NO_BEHAVIOUR_CHANGE': 'L3 reused; a matched control executes the same actions and terminal '
+                                                         'decision after the reuse step',
+                'CLOSED_LOOP_REUSE_BEHAVIOUR_CHANGE_UNSUPPORTED': 'matched control diverges after the reuse step, but the L3 '
+                                                                  'end is not an offline-supported success',
+                'CLOSED_LOOP_MEMORY_DEPENDENT_BEHAVIOUR': 'L3 physically mounted a self-addressed experience; a matched control '
+                                                          '(L4 no memory or L5 that experience removed) has bitwise-equal X up '
+                                                          'to and including the reuse step, then a different executed model action '
+                                                          'or model terminal decision; and L3 ends in an offline-supported success'},
+    'verdict_rules': ['the primary reuse reference is the first L3 MOUNTED_EXPERIENCE of an experience stored by another loop',
+                      'L6 reuse is reported separately (REUSE_OBSERVED_NO_MATCHED_CONTROL); never combined with L3 differences',
+                      'mount/effect label differences alone are never behavioural success',
+                      'mechanical success (STORE written, SSD reload, self-addressed mount) is reported apart from behaviour',
+                      'evaluator labels are read only after every loop has ended'],
+    'correction_rule': 'offline only: after an adverse hop (fork_end / decoy_end / UNKNOWN / OTHER), a correction needs a real '
+                       'state transition: BACKTRACK removing that node from the path, REJECT unmounting the card that produces '
+                       'that node, or ACQUIRE mounting followed by a hop of a different class; NO_EFFECT never counts; '
+                       'consequence_linked_correction additionally needs the supported end; otherwise post_adverse_action '
+                       'only or INCONCLUSIVE',
+    'acceptance_reported': ['non-oracle routing records', 'CONTROL = reading = EFFECT', 'adverse observation then a real '
+                            'correcting transition and supported end', 'matched-prefix counterfactuals (no-memory / removal / '
+                            'wrong-memory / key-shuffle) with first divergence step', 'STORE -> SSD reload -> self-addressed '
+                            'reuse (mechanical)', 'MISSING: model STOP'],
     'limits': ['one-step credit only', 'single run, few loops: a first working instance, not a statistic',
                'success is judged offline after all loops']}
 
-STATE880 = {'status': 'NOT_STARTED', 'engine': ENGINE_INFO880, 'prereg_sha256': None, 'source': {}, 'api': {}, 'ref873': {},
-            'preflight': {}, 'worlds': {}, 'catalog': {'order': [], 'entries': {}, 'origin': {}}, 'loops': [], 'offline': {},
+PREREG_FIXED880 = '5d24abe0d44967f5c771141ab722b66d338553f3f06b0e9dff9a84cc54bbed39'   # sha256 of PREREG880 r2
+STATE880 = {'status': 'NOT_STARTED', 'engine': ENGINE_INFO880, 'prereg_sha256': None, 'revision': 'r2', 'source': {}, 'api': {}, 'ref873': {},
+            'preflight': {}, 'worlds': {}, 'catalog': {'order': [], 'entries': {}, 'origin': {}, 'rejected': {}}, 'loops': [], 'offline': {},
             'blocks': [], 'verdict': None, 'error': None}
 STATE878 = STATE877 = STATE880
 EXP878, OFFLINE880, CATKEYS880 = {}, {}, {}
@@ -170,7 +198,7 @@ def scan880(node, allow=()):
 def oracle_scan880(node):
     names = {n.id for n in _a880.walk(node) if isinstance(n, _a880.Name)}
     keys = {n.value for n in _a880.walk(node) if isinstance(n, _a880.Constant) and isinstance(n.value, str)}
-    bad = (names & ORACLE880) | (keys & ORACLE_KEYS880)
+    bad = (names & ORACLE880) | (keys & (ORACLE_KEYS880 | ORACLE880))
     assert not bad, ('ORACLE_FIREWALL880', node.name, sorted(bad))
 
 def capture_source880():
@@ -208,8 +236,8 @@ def select878_880():
                    'TEST878 | status COMPLETE'):
         assert needle in log, ('TEST878_LOG_NOT_THE_EXPECTED_GPU_RUN', needle)
     log9 = RAW_SOURCES864['879.log'].decode()
-    for needle in ('NVIDIA A100-SXM4-80GB', 'cell %s' % LOCKS864['879.py'], 'TEST879 VERDICT MATCHED_FORK_OUTCOME_TRANSFER',
-                   'status COMPLETE'):
+    for needle in ('NVIDIA A100-SXM4-80GB', 'prereg 6b7d8639d93b2110', 'TEST879 VERDICT MATCHED_FORK_OUTCOME_TRANSFER',
+                   'status COMPLETE'):        # 879.log records the executed-cell blob 06db4aa0, not the committed 92f9eb66
         assert needle in log9, ('TEST879_LOG_NOT_THE_EXPECTED_GPU_RUN', needle)
     STATE880['source']['reused'] = {'878.py': LOCKS864['878.py'], 'functions': sorted(FUNCS878), 'constants': len(consts),
                                     'test879_run': 'MATCHED_FORK_OUTCOME_TRANSFER (879.log, locked)'}
@@ -426,7 +454,8 @@ def capture880(env, ctx, X2, reading, action):
 
 def close_frame880(env, ctx, view, frame, c_new, e_new, U, u_text):
     # one-step credit: the executed action and the observation that really followed it; native STORE / DISCARD
-    rec = {'step': frame['step'], 'action': frame['action'], 'effect': frame['effect'], 'capture_gates': frame['cap']['gates']}
+    rec = {'step': frame['step'], 'action': frame['action'], 'effect': frame['effect'], 'capture_gates': frame['cap']['gates'],
+           'P_placeholder': frame['P_placeholder']}
     segs = [(SLOT880['EXPECT'], frame['P']), (SLOT880['ACTED'], frame['act_rows']), (env['C_SLOT851'], c_new),
             (env['E_SLOT851'], e_new), (SLOT880['SURPRISE'], U), (SLOT880['GOAL'], ctx['G'])]
     X, _ = env['make_x851'](list(env['prompt_ids'](PROMPT880['STORE'].format(q=ctx['q']))),
@@ -442,7 +471,7 @@ def close_frame880(env, ctx, view, frame, c_new, e_new, U, u_text):
             cpc, _ = APPEND873['load'](card); h3c = cpc['h'][:, P:, :].to(dev); del cpc
             g = {'timeline': n_before == n1, 'card_rows': int(h3c.shape[1]) == body}; kind = 'MOUNTED_CARD'
         else:                                                             # the next real observation, native rows
-            Y, _ = env['make_x851']([], [(env['C_SLOT851'], c_new), (env['E_SLOT851'], e_new)], []); body = int(Y.shape[0])
+            Y, _ = env['make_x851'](env['C_SLOT851'], [([], c_new), (env['E_SLOT851'], e_new)], []); body = int(Y.shape[0])
             own = env['cache_build'](list(cap['keep'])); forward873(env, own, Y, n1); gH = kv873(env, own); del own
             h3c = xspan878(env, cap['cl'], Y.reshape(1, body, Hd), torch.ones((1, n1 + body), device=dev, dtype=torch.long), 0, cut + 1)
             g = {'explicit_lower_KV_bitwise_C': all(torch.equal(x, y[:, :, n1:n1 + body]) for i in range(cut + 1)
@@ -456,6 +485,7 @@ def close_frame880(env, ctx, view, frame, c_new, e_new, U, u_text):
                     'step': frame['step'], 'action': frame['action'], 'action_token_ids': cap['A'], 'effect': frame['effect'],
                     'C_kind': kind, 'chosen': frame.get('chosen'), 'spans_body': {'X2': [0, L2], 'A': [L2, L2 + la], 'C': [L2 + la, L2 + la + body]},
                     'pre_state_sha256': frame['pre_sha'], 'prediction_sha256': sha_rows880(env, frame['P']),
+                    'prediction_is_placeholder': frame['P_placeholder'],
                     'observation_sha256': {'C': sha_rows880(env, c_new), 'E': sha_rows880(env, e_new)},
                     'parent_experience': frame['parent'], 'parent_experience_sha256': (CATALOG880['entries'].get(frame['parent']) or {}).get('sha256'),
                     'store_reading': {'decision': rd['decision'], 'mass': rd['mass']}, 'weights_digest': WEIGHTS0_880,
@@ -471,9 +501,14 @@ def close_frame880(env, ctx, view, frame, c_new, e_new, U, u_text):
                 STATE880['catalog']['order'].append(eid); STATE880['catalog']['origin'][eid] = ctx['name']
                 STATE880['catalog']['entries'][eid] = {k: entry[k] for k in ('file', 'sha256', 'bytes', 'body_tokens', 'roundtrip_K_rel')}
                 ctx['stored'].append(eid)
+            else:                                                        # file stays on disk (append-only); not addressable
+                STATE880['catalog']['rejected'][eid] = {'file': entry['file'], 'sha256': entry['sha256'], 'bytes': entry['bytes'],
+                                                        'tensor_sha': entry['tensor_sha'], 'roundtrip_K_rel': entry['roundtrip_K_rel'],
+                                                        'reason': 'ROUNDTRIP_FAILED rel > ROPE_TOL878', 'loop': ctx['name']}
+                rec['why_not_written'] = 'ROUNDTRIP_FAILED_FILE_KEPT_NOT_ADDRESSABLE'
             rec.update({'stored': eid if ok_rt else None, 'roundtrip_K_rel': entry['roundtrip_K_rel'], 'bytes': entry['bytes']})
         else:
-            rec['stored'] = None
+            rec['stored'] = None; rec['why_not_written'] = 'C_GATE_FAILED'
         del gH, h3c
     else:
         rec['stored'] = None; rec['why_not_written'] = ('MODEL_' + rd['decision'] if rd['decision'] != 'STORE' else
@@ -573,6 +608,7 @@ def loop880(env, name, spec, view):
             effect = execute880(env, ctx, view, action, h, out['legacy'], out['state'])
             last = ctx['events'][-1] if ctx['events'] and ctx['events'][-1].get('type') == 'EFFECT' else {}
             ctx['frame'] = {'step': ctx['steps'], 'action': action, 'effect': effect, 'chosen': last.get('chosen'), 'cap': cap,
+                            'P_placeholder': not rows_ok880(Pexec),
                             'P': Pexec if rows_ok880(Pexec) else env['MUE845'].detach().float().cpu().reshape(1, -1),
                             'act_rows': env['embed841'](cap['A']).detach().float().cpu(), 'parent': parent, 'pre_sha': pre_sha}
             del out
@@ -582,12 +618,14 @@ def loop880(env, name, spec, view):
         (ROOT864 / ('880_%s_traceback.txt' % name)).write_text(trace, encoding='utf-8')
     if ctx['frame'] is not None:                                        # the last executed action has no observed consequence
         ctx['frames'].append({'step': ctx['frame']['step'], 'action': ctx['frame']['action'], 'effect': ctx['frame']['effect'],
-                              'stored': None, 'why_not_written': 'INCOMPLETE_NO_OBSERVATION'})
+                              'P_placeholder': ctx['frame']['P_placeholder'], 'stored': None, 'complete': False,
+                              'why_not_written': 'OPEN_AT_HORIZON' if end == 'OBSERVATION_HORIZON' else 'OPEN_NO_OBSERVATION_' + str(end)})
         ctx['frame'] = None
     controls = [e for e in ctx['events'] if e['type'] == 'CONTROL']; effects = [e for e in ctx['events'] if e['type'] == 'EFFECT']
     executed = [c for c in controls if c['action'] not in ('ACCEPT', 'STOP', 'INVALID')]
     result = {'name': name, 'item': spec['item'], 'view': view['name'], 'end': end, 'accepted_candidate': accepted,
-              'goal_text': locals().get('g_text'), 'path': [p['text'] for p in ctx['path']], 'final_mounted': list(ctx['M']),
+              'goal_text': locals().get('g_text'), 'goal_rows': locals().get('g_rows'),
+              'goal_placeholder': locals().get('g_rows') == 0, 'path': [p['text'] for p in ctx['path']], 'final_mounted': list(ctx['M']),
               'final_experience': ctx['exp'], 'steps': ctx['steps'], 'actions': [c['action'] for c in controls],
               'effects': [e['effect'] for e in effects], 'used_experiences': list(ctx['used_experiences']),
               'stored': list(ctx['stored']), 'frames': ctx['frames'], 'events': ctx['events'],
@@ -627,56 +665,129 @@ def view880(kind, snapshot, l3_used, a_world_stored):
     return {'name': kind, 'experiences': exps, 'keys': keys, 'store': kind == 'FULL', 'note': note}
 
 def evaluate880(env):
-    # OFFLINE ONLY (after every loop): labels of the forged worlds
+    # OFFLINE ONLY (after every loop): labels of the forged worlds. Loops that did not execute are skipped with their reason.
     worlds = OFFLINE880['worlds']; out = {}
+    adverse_cls = ('fork_end', 'decoy_end', 'UNKNOWN', 'OTHER')            # changed_end is supported when 'changed' is mounted
+    card_of = {'fork_end': 'fork', 'decoy_end': 'decoy'}
     for r in STATE880['loops']:
-        if r.get('end') == 'NOT_RUN': continue
+        if r.get('end') in ('NOT_RUN', 'NOT_APPLICABLE') or 'events' not in r or 'literal_execution' not in r:
+            out[r['name']] = {'executed': False, 'end': r.get('end'), 'note': r.get('note')}; continue
         w = worlds[r['world']]; cond = r['condition']
-        correct = r['end'] == 'MODEL_ACCEPT' and bool(r['accepted_candidate']) and bool(
+        correct = r['end'] == 'MODEL_ACCEPT' and bool(r.get('accepted_candidate')) and bool(
             env['supported851'](r['accepted_candidate'], w, set(r['final_mounted'])))
         success = r['end'] == 'MODEL_STOP' if cond == 'MISSING' else correct
-        hops = [env['node851'](e['raw'], w) for e in r['events'] if e['type'] == 'HOP']
-        adverse = [i for i, x in enumerate(hops[1:], 1) if x in ('UNKNOWN', 'OTHER', 'fork_end', 'decoy_end', 'changed_end')]
-        acts = r['actions']; corrected = bool(adverse) and any(a in ('REJECT', 'BACKTRACK', 'ACQUIRE') for a in acts[min(adverse):]) and success
-        out[r['name']] = {'success': success, 'correct_accept': correct, 'end': r['end'], 'hop_classes': hops,
-                          'adverse_observations_at_hop': adverse, 'corrected_after_adverse': corrected}
+        ev = r['events']; hops = []; adverse = []
+        for i, e in enumerate(ev):
+            if e['type'] != 'HOP': continue
+            cls = env['node851'](e['raw'], w); hops.append(cls)
+            if cls in adverse_cls: adverse.append({'event': i, 'hop': len(hops) - 1, 'class': cls, 'text': str(e['raw']).strip()})
+        for a in adverse:
+            after = [(j, e) for j, e in enumerate(ev) if j > a['event']]
+            a['post_adverse_actions'] = [e['action'] for _, e in after if e['type'] == 'CONTROL']
+            a['post_adverse_effects'] = [e['effect'] for _, e in after if e['type'] == 'EFFECT']
+            link = None
+            for j, e in after:
+                if e['type'] != 'EFFECT' or str(e.get('effect') or '').startswith('NO_EFFECT'): continue
+                if e['action'] == 'BACKTRACK' and e['effect'] == 'POINTER_RETRACTED' and \
+                        str(e.get('removed_node') or '').strip().upper() == a['text'].upper():
+                    link = {'type': 'BACKTRACK_REMOVED_ADVERSE_NODE', 'event': j}
+                elif e['action'] == 'REJECT' and e['effect'] in ('UNMOUNTED', 'UNMOUNTED_EXPERIENCE') and \
+                        e.get('chosen') not in (e.get('mounted_after') or []) and e.get('chosen') != e.get('experience_after'):
+                    src = w['ids'].get(card_of.get(a['class'], ''), None)
+                    link = ({'type': 'REJECT_UNMOUNTED_SOURCE_CARD', 'event': j} if src is not None and e.get('chosen') == src else
+                            {'type': 'REJECT_UNMOUNTED_UNLINKED', 'event': j, 'inconclusive': True})
+                elif e['action'] == 'ACQUIRE' and e['effect'] in ('MOUNTED', 'MOUNTED_EXPERIENCE'):
+                    nxt = [env['node851'](x['raw'], w) for x in ev[j + 1:] if x['type'] == 'HOP'][:1]
+                    link = ({'type': 'ACQUIRE_MOUNT_THEN_HOP_CLASS_CHANGED', 'event': j, 'next_hop': nxt[0]}
+                            if nxt and nxt[0] != a['class'] else
+                            {'type': 'ACQUIRE_MOUNT_NO_CHANGE_OBSERVED', 'event': j, 'next_hop': nxt[0] if nxt else None,
+                             'inconclusive': True})
+                if link is not None and not link.get('inconclusive'): break
+            a['transition'] = link
+            a['status'] = ('CONSEQUENCE_LINKED_CORRECTION' if link and not link.get('inconclusive') and success else
+                           'TRANSITION_WITHOUT_SUPPORTED_END' if link and not link.get('inconclusive') else
+                           'INCONCLUSIVE' if link else 'POST_ADVERSE_ACTION_ONLY' if a['post_adverse_actions'] else 'NO_ACTION_AFTER')
+        out[r['name']] = {'executed': True, 'success': success, 'correct_accept': correct, 'end': r['end'], 'hop_classes': hops,
+                          'adverse': adverse,
+                          'consequence_linked_correction': any(a['status'] == 'CONSEQUENCE_LINKED_CORRECTION' for a in adverse)}
+    return out
+
+def reuse_ref880(r):
+    # first physical mount of an experience stored by ANOTHER loop: (step, experience id, mount record) or None
+    step = None
+    for e in r.get('events', []):
+        if e['type'] == 'CONTROL': step = e['step']
+        if e['type'] == 'EFFECT' and e.get('effect') == 'MOUNTED_EXPERIENCE' and \
+                STATE880['catalog']['origin'].get(e.get('chosen')) not in (None, r['name']):
+            return {'step': step, 'experience': e['chosen'], 'origin': STATE880['catalog']['origin'][e['chosen']],
+                    'mount': {k: (e.get('mount') or {}).get(k) for k in ('n', 'n_exact', 'experience', 'experience_prefix_seal')},
+                    'route': {k: (e.get('route') or {}).get(k) for k in ('top3', 'null_score', 'margin_vs_null')}}
+    return None
+
+def compare880(full, cf, ref):
+    # matched prefix = the control's decision input X is bitwise equal at every step up to and including the reuse step
+    xs = lambda r: [e['record']['state_sha256']['X'] for e in r['events'] if e['type'] == 'CONTROL']
+    a, b = xs(full), xs(cf); s0 = ref['step']
+    out = {'reuse_step': s0, 'full_actions': full['actions'], 'cf_actions': cf['actions'], 'full_end': full['end'], 'cf_end': cf['end']}
+    out['first_X_mismatch_step'] = next((i + 1 for i, (x, y) in enumerate(zip(a, b)) if x != y), None)
+    out['matched_prefix'] = len(a) >= s0 and len(b) >= s0 and a[:s0] == b[:s0] and full['actions'][:s0] == cf['actions'][:s0]
+    div = next((i + 1 for i, (x, y) in enumerate(zip(full['actions'], cf['actions'])) if i >= s0 and x != y), None)
+    model_end = lambda e: str(e).startswith('MODEL_')
+    term = full['end'] != cf['end'] and (model_end(full['end']) or model_end(cf['end']))
+    out['first_executed_divergence_step'] = div
+    out['terminal_model_decision_differs'] = bool(term and div is None)
+    out['effects_differ_only'] = full['effects'] != cf['effects'] and div is None and not term
+    out['post_reuse_behaviour_differs'] = bool(out['matched_prefix'] and (div is not None or term))
     return out
 
 def verdict880():
     L = {r['name']: r for r in STATE880['loops']}; off = STATE880['offline']; blocks = list(STATE880['blocks'])
-    ran = [r for r in L.values() if r.get('end') != 'NOT_RUN']
+    ran = [r for r in L.values() if r.get('end') not in ('NOT_RUN', 'NOT_APPLICABLE') and 'literal_execution' in r]
+    not_ran = {n: {'end': r.get('end'), 'note': r.get('note')} for n, r in L.items() if r not in ran}
     for r in ran:
         if r['end'] == 'EXECUTION_ERROR': blocks.append('EXECUTION_ERROR:' + r['name'])
         if not r['literal_execution']: blocks.append('LITERAL_EXECUTION:' + r['name'])
         if not r['mount_integrity'] or r.get('exact_restore') is not True: blocks.append('MOUNT_INTEGRITY:' + r['name'])
-        for f in r['frames']:
+        for f in r.get('frames', []):
             if f.get('capture_gates') and not all(f['capture_gates'].values()): blocks.append('CAPTURE_GATE:%s:t%s' % (r['name'], f['step']))
             if f.get('C_gates') and not all(f['C_gates'].values()): blocks.append('C_GATE:%s:t%s' % (r['name'], f['step']))
     stored = list(STATE880['catalog']['order'])
-    reused = sorted({x for n in ('L3_A_FORK', 'L6_A_MISSING') for x in (L.get(n) or {}).get('used_experiences', [])
-                     if STATE880['catalog']['origin'].get(x) not in (n,)})
-    full = L.get('L3_A_FORK'); diff = {}
-    for n in ('L4_A_FORK_NO_MEMORY', 'L5_A_FORK_REMOVAL', 'L7_A_FORK_WRONG_MEMORY', 'L8_A_FORK_KEY_SHUFFLE'):
-        r = L.get(n)
-        if full and r and r.get('end') not in ('NOT_RUN', 'NOT_APPLICABLE'):
-            diff[n] = {'actions_differ': r['actions'] != full['actions'], 'effects_differ': r['effects'] != full['effects'],
-                       'success_full': off.get('L3_A_FORK', {}).get('success'), 'success_cf': off.get(n, {}).get('success')}
+    full = L.get('L3_A_FORK'); full = full if full in ran else None
+    ref = reuse_ref880(full) if full else None
+    l6 = L.get('L6_A_MISSING'); l6_ref = reuse_ref880(l6) if l6 in ran else None
+    cmp = {}
+    if ref:
+        for n in ('L4_A_FORK_NO_MEMORY', 'L5_A_FORK_REMOVAL', 'L7_A_FORK_WRONG_MEMORY', 'L8_A_FORK_KEY_SHUFFLE'):
+            r = L.get(n)
+            cmp[n] = compare880(full, r, ref) if r in ran else {'executed': False, 'end': (r or {}).get('end'), 'note': (r or {}).get('note')}
+            if n == 'L5_A_FORK_REMOVAL' and r in ran:
+                cmp[n]['reference_experience_removed'] = ref['experience'] not in r.get('experiences_visible', [])
+    primary = [n for n in ('L4_A_FORK_NO_MEMORY', 'L5_A_FORK_REMOVAL') if cmp.get(n, {}).get('matched_prefix') and
+               (n != 'L5_A_FORK_REMOVAL' or cmp[n].get('reference_experience_removed'))]
+    full_success = bool((off.get('L3_A_FORK') or {}).get('success'))
     if blocks: v = 'TECHNICAL_BLOCK'
-    elif not full or full.get('end') == 'NOT_RUN': v = 'PARTIAL'
+    elif full is None: v = 'PARTIAL'
     elif not stored: v = 'CLOSED_LOOP_NO_STORE'
-    elif not reused: v = 'CLOSED_LOOP_NO_SELF_REUSE'
-    elif not any(diff.get(n, {}).get('actions_differ') or diff.get(n, {}).get('effects_differ')
-                 for n in ('L4_A_FORK_NO_MEMORY', 'L5_A_FORK_REMOVAL')):
-        v = 'CLOSED_LOOP_REUSE_NO_BEHAVIOUR_CHANGE' if 'L4_A_FORK_NO_MEMORY' in diff else 'PARTIAL'
+    elif ref is None: v = 'CLOSED_LOOP_NO_SELF_REUSE'
+    elif not primary: v = 'CLOSED_LOOP_REUSE_INCONCLUSIVE_UNMATCHED_PREFIX'
+    elif not any(cmp[n]['post_reuse_behaviour_differs'] for n in primary): v = 'CLOSED_LOOP_REUSE_NO_BEHAVIOUR_CHANGE'
+    elif not full_success: v = 'CLOSED_LOOP_REUSE_BEHAVIOUR_CHANGE_UNSUPPORTED'
     else: v = 'CLOSED_LOOP_MEMORY_DEPENDENT_BEHAVIOUR'
+    mech = {'stored_experiences': len(stored), 'rejected_roundtrip': sorted(STATE880['catalog'].get('rejected', {})),
+            'ssd_reload_sha_verified_for_catalog': len(stored),
+            'self_addressed_reuse_L3': ref, 'L6_reuse': ({'status': 'REUSE_OBSERVED_NO_MATCHED_CONTROL', **l6_ref} if l6_ref else None),
+            'complete_frames': sum(1 for r in ran for f in r.get('frames', []) if 'store_reading' in f),
+            'open_frames': sum(1 for r in ran for f in r.get('frames', []) if f.get('complete') is False),
+            'model_store_readings': sum(1 for r in ran for f in r.get('frames', []) if (f.get('store_reading') or {}).get('decision') == 'STORE')}
     acc = {'non_oracle_routing_logged': all('route' in e for r in ran for e in r['events'] if e['type'] == 'EFFECT'
                                             and e['action'] in ('ACQUIRE', 'REJECT') and e['effect'] not in
                                             ('NO_EFFECT_BANK_EXHAUSTED', 'NO_EFFECT_EMPTY_MEMORY', 'NO_EFFECT_EMPTY_DIRECTION')),
            'literal_execution_all_loops': all(r['literal_execution'] for r in ran),
-           'adverse_then_corrected': sorted(n for n, x in off.items() if x['corrected_after_adverse']),
-           'stored_experiences': len(stored), 'self_addressed_reuse': reused, 'counterfactuals': diff,
+           'consequence_linked_correction': sorted(n for n, x in off.items() if x.get('consequence_linked_correction')),
+           'mechanical': mech, 'counterfactuals_vs_L3': cmp, 'matched_primary_controls': primary,
+           'L3_offline_supported_success': full_success, 'not_executed_loops': not_ran,
            'missing_model_stop': (off.get('L6_A_MISSING') or {}).get('end') == 'MODEL_STOP',
-           'solvable_success': {n: off[n]['success'] for n in ('L1_A_LIVE', 'L2_B_LIVE', 'L3_A_FORK') if n in off}}
+           'solvable_success': {n: off[n].get('success') for n in ('L1_A_LIVE', 'L2_B_LIVE', 'L3_A_FORK') if n in off}}
     STATE880['verdict'] = {'verdict': v, 'blocks': blocks, 'acceptance': acc, 'definition': PREREG880['verdict'].get(v)}
     return STATE880['verdict']
 
@@ -687,10 +798,11 @@ def report880():
     print('PREFLIGHT %s' % _j880.dumps({k: v for k, v in STATE880['preflight'].items() if k != 'tokens'}, sort_keys=True, default=str)[:900])
     for r in STATE880['loops']:
         o = STATE880['offline'].get(r['name'], {})
-        print('LOOP %-24s end=%-20s actions=%s effects=%s used=%s stored=%s success=%s adverse=%s corrected=%s note=%s' % (
+        print('LOOP %-24s end=%-20s actions=%s effects=%s used=%s stored=%s success=%s adverse=%s linked_correction=%s note=%s' % (
               r['name'], r.get('end'), '>'.join(r.get('actions', [])), '>'.join(str(x) for x in r.get('effects', [])),
-              r.get('used_experiences'), r.get('stored'), o.get('success'), o.get('adverse_observations_at_hop'),
-              o.get('corrected_after_adverse'), r.get('note')))
+              r.get('used_experiences'), r.get('stored'), o.get('success'),
+              [(a['hop'], a['class'], a['status']) for a in o.get('adverse', [])], o.get('consequence_linked_correction'),
+              r.get('note')))
         for e in r.get('events', []):
             if e['type'] == 'EFFECT' and e.get('route'):
                 print('    route t%s %s -> %s | top3 %s | null %.4f | candidates %d' % (e.get('k'), e['action'], e.get('chosen'),
@@ -699,7 +811,8 @@ def report880():
             sr = f.get('store_reading') or {}
             print('    frame t%s %s %s store=%s mass=%s written=%s %s' % (f.get('step'), f.get('action'), f.get('effect'),
                   sr.get('decision'), None if sr.get('mass') is None else round(sr['mass'], 3), f.get('stored'), f.get('why_not_written') or ''))
-    print('CATALOG (append-only) %s' % _j880.dumps(STATE880['catalog']['origin'], sort_keys=True))
+    print('CATALOG (append-only) %s | roundtrip-rejected (files kept) %s' % (_j880.dumps(STATE880['catalog']['origin'], sort_keys=True),
+          sorted(STATE880['catalog'].get('rejected', {}))))
     v = STATE880['verdict'] or {}
     print('ACCEPTANCE %s' % _j880.dumps(v.get('acceptance'), sort_keys=True, default=str))
     print('TEST880 VERDICT %s | blocks %s' % (v.get('verdict'), v.get('blocks')))
@@ -714,6 +827,7 @@ CATALOG880 = {'entries': {}}
 try:
     STATE880['status'] = 'G0_SOURCE'; capture_source880()
     PREREG_SHA880 = sha256_bytes864(_j880.dumps(PREREG880, sort_keys=True).encode()); STATE880['prereg_sha256'] = PREREG_SHA880
+    assert PREREG_SHA880 == PREREG_FIXED880, ('PREREG_R2_CHANGED', PREREG_SHA880)   # contract fixed before any run
     json_write864('880_prereg.json', {'prereg': PREREG880, 'sha256': PREREG_SHA880, 'before_model_load': True})
     line880('G0 PREREG', PREREG_SHA880)
     load_sources865(); select878_880(); source_audit878(); load878()
