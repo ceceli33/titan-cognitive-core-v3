@@ -1,5 +1,5 @@
-# TEST890 BODY-SHA256 0367cabad1f25ac7a33b617013084373bc380e7a7825a4cda22949633de128a4
-# AKBASCORE SILICON HIPPOCAMPUS — TEST890 — PAYLOAD_BLIND AUDIT on TEST889 (one Colab cell, one Run, A100-SXM4-80GB)
+# TEST890 BODY-SHA256 0bd35b6c22706330f18211771c08337c763e8e2ab230f24555b3116654908ae3
+# AKBASCORE SILICON HIPPOCAMPUS - TEST890 - PAYLOAD_BLIND AUDIT on TEST889 (one Colab cell, one Run, A100-SXM4-80GB)
 # Contract: K3.1 "TEST889 Sonrasi Kok Neden, Nedensel Ayristirma ve Minimal TEST890 Karari" + "CLAUDE TEST890 KESIN KOD URETIM
 # TALIMATI" (16 Nov 2026). The only new measurement: an audit-only counterfactual CAR read PAYLOAD_BLIND on the same SSD cartridge
 # load/append, the same B_t, X_t, cache length n0+q and position ids, the locked xcar878 (sham=False), with the whole appended body
@@ -82,18 +82,57 @@ PATCHES890 = (                                                                 #
      "            p_['a_true_payload_blind'], p_['a_wrong_payload_blind'], payload_class890(p_), p_['tv_blind_payload'], p_['tv_none_payload'],\n"
      "            p_['tv_full_payload'], p_['payload_true_equals_wrong_bitwise'], p_['n0'], p_['q'], p_['payload_span']))\n"
      "        for nm_ in ('none', 'true_full', 'wrong_full', 'true_blind', 'true_payload_blind'):", 1),
+    ('report_jsafe', "json_write864('TEST890_final_report.json', jsafe878(report889))",
+     "json_write864('TEST890_final_report.json', jsafe878(report889) if 'jsafe878' in globals() else\n"
+     "                     _j889.loads(_j889.dumps(report889, default=str)))         # TEST890: G0 failures happen before load878", 1),
+    ('lock_diag', "        except OSError: pass\n        raise Gate_m867('SOURCE_SELF_LOCK",
+     "        except OSError: pass\n        lock['diag890'] = lockdiag890(src)\n        raise Gate_m867('SOURCE_SELF_LOCK", 1),
     ('receipt', "'drive_dir': CC_DRIVE_DIR, 'drive_zip_sha256_equal': None}",
      "'drive_dir': CC_DRIVE_DIR, 'drive_zip_sha256_equal': None,\n"
      "           'payload_audit': (STATE889.get('payload_audit') or {}).get('PAYLOAD_AUDIT')}", 1))
 CHANGED_FUNCS890 = ('capture889', 'episode889', 'read889')        # every other 889 function must stay AST-identical
-OWN_FUNCS890 = ('canon890', 'apply890', 'base889_890', 'payload_class890', 'payload_audit890', 'source890', 'st890')
+OWN_FUNCS890 = ('lockdiag890', 'canon890', 'apply890', 'base889_890', 'payload_class890', 'payload_audit890', 'source890', 'st890')
 
 
 def canon890(t):
     # the paste-stable canonical form of body_lock889 / canon_lines_m867
-    t = t.replace('\r\n', '\n').replace('\r', '\n').replace(' ', ' ')
-    for z in ('﻿', '​', '‌', '‍', '⁠'): t = t.replace(z, '')
+    t = t.replace('\r\n', '\n').replace('\r', '\n').replace('\u00a0', ' ')
+    for z in ('\ufeff', '\u200b', '\u200c', '\u200d', '\u2060'): t = t.replace(z, '')
     return [l.rstrip() for l in t.split('\n') if l.strip()]
+
+
+# LINEDIG890: sha256[:4] of every canonical body line except its own data lines (paste diagnostics only, not a lock)
+LINEDIG890 = (
+    '2a910f3551dcce94010a136191d661c8b75447928e645af8d166de80d777df4a23f27fa69188bb436d468cb888242b20'  #LD890
+    'b47be4de5cf270e52cbd54ea5d9ad9b712b15ba22379a171d5587c6aee1ff46355f627ad377237fb536eac5d47e70aa1'  #LD890
+    '670ad437c218c47727863470ff68bb7e14d90a7b479a0bea7ecbd31920847b95290b818ae1062d3ccaabb9ea866b9b50'  #LD890
+    '03f62ecd613475c94c06df282c7f91d312358f1661f8e33864b1bd592cbc608c1d936bf8549f6487b7f3d16579e191e6'  #LD890
+    'c50d9963cb4a2ca49d02af0fc94f7f5d8e3074f365b6352a0de94902a56512c4fc3025c1e28461532714cbc8d787d1d5'  #LD890
+    'a6c1c6a836b52ed382f854074512a5b2588dd3156a932a2867f72ad989e83c1d26a887619b3332c52eee34dcfa27d4d8'  #LD890
+    'c94f1fcffa4466f3f33025abb1741f56717277f8cbeab5c440c5de9fb646dec6388b21d77f49a35744903de3c4c21aca'  #LD890
+    'fbc471e6ad24b44120788b6d9a61b1e87be33c729abdec61cac0f13a6715297d7c907ce109c38dc8eba265c3f18a792f'  #LD890
+    'f21bcf9a41ab0e3a81b58327f0d0a5c67d02d9fefe4094fa40cf54233198a83770c6123b89e6f11d6921d98306809c44'  #LD890
+    'bb55d9108a39443f3547430b46f9edaba719515a76c58a761a28e72b752c0f717c6d2468b957fef6c3213973f44042a8'  #LD890
+    '937c7bb70f17c4b558ff11fca3de3032c7afff318338009841c08eb5c2f454e0abd5cf0463bc5a2709ef5021bd58deae'  #LD890
+    '7222775d360c64c8178072d052eb8d9d79dae137c4a7d5bd99c8d5a73a1747886e11b81e439208afae43f4c4ec2f'  #LD890
+    )  #LD890
+
+
+def lockdiag890(src):
+    # after a SOURCE_SELF_LOCK refusal: which canonical line of the pasted cell differs, and which non-ASCII characters it holds
+    try:
+        rows = [(n + 1, canon890(l)) for n, l in enumerate(src.replace('\r\n', '\n').replace('\r', '\n').split('\n'))]
+        got = [(n, c[0]) for n, c in rows if c][1:]                       # canonical lines with their pasted line numbers
+        got = [(n, c) for n, c in got if not c.endswith('#LD890')]
+        exp = [LINEDIG890[i:i + 4] for i in range(0, len(LINEDIG890), 4)]
+        d = [_h890.sha256(c.encode('utf-8')).hexdigest()[:4] for _, c in got]
+        i = next((k for k in range(max(len(d), len(exp))) if k >= len(d) or k >= len(exp) or d[k] != exp[k]), None)
+        return {'first_differing_line_in_pasted_cell': None if i is None or i >= len(got) else got[i][0],
+                'pasted_line': None if i is None or i >= len(got) else got[i][1][:240],
+                'lines_pasted': len(got), 'lines_expected': len(exp),
+                'non_ascii_in_paste': sorted({'U+%04X' % ord(c) for c in src if ord(c) > 127})[:20]}
+    except BaseException as exc:
+        return {'diag_error': '%s: %s' % (type(exc).__name__, exc)}
 
 
 def apply890(text, table):
