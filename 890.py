@@ -1,4 +1,4 @@
-# TEST890 BODY-SHA256 0bd35b6c22706330f18211771c08337c763e8e2ab230f24555b3116654908ae3
+# TEST890 BODY-SHA256 0f1b4194c1507c15a08f1d44076627350d583b8308e3d0f0966dad2d8506064f
 # AKBASCORE SILICON HIPPOCAMPUS - TEST890 - PAYLOAD_BLIND AUDIT on TEST889 (one Colab cell, one Run, A100-SXM4-80GB)
 # Contract: K3.1 "TEST889 Sonrasi Kok Neden, Nedensel Ayristirma ve Minimal TEST890 Karari" + "CLAUDE TEST890 KESIN KOD URETIM
 # TALIMATI" (16 Nov 2026). The only new measurement: an audit-only counterfactual CAR read PAYLOAD_BLIND on the same SSD cartridge
@@ -110,11 +110,12 @@ LINEDIG890 = (
     'c50d9963cb4a2ca49d02af0fc94f7f5d8e3074f365b6352a0de94902a56512c4fc3025c1e28461532714cbc8d787d1d5'  #LD890
     'a6c1c6a836b52ed382f854074512a5b2588dd3156a932a2867f72ad989e83c1d26a887619b3332c52eee34dcfa27d4d8'  #LD890
     'c94f1fcffa4466f3f33025abb1741f56717277f8cbeab5c440c5de9fb646dec6388b21d77f49a35744903de3c4c21aca'  #LD890
-    'fbc471e6ad24b44120788b6d9a61b1e87be33c729abdec61cac0f13a6715297d7c907ce109c38dc8eba265c3f18a792f'  #LD890
-    'f21bcf9a41ab0e3a81b58327f0d0a5c67d02d9fefe4094fa40cf54233198a83770c6123b89e6f11d6921d98306809c44'  #LD890
-    'bb55d9108a39443f3547430b46f9edaba719515a76c58a761a28e72b752c0f717c6d2468b957fef6c3213973f44042a8'  #LD890
-    '937c7bb70f17c4b558ff11fca3de3032c7afff318338009841c08eb5c2f454e0abd5cf0463bc5a2709ef5021bd58deae'  #LD890
-    '7222775d360c64c8178072d052eb8d9d79dae137c4a7d5bd99c8d5a73a1747886e11b81e439208afae43f4c4ec2f'  #LD890
+    'fbc471e6ad24ebe57bdd9a76b134d3bae3e7076d5d4dffd283297be33c729abdec61cac0f13a6715297d7c907ce109c3'  #LD890
+    '8dc8eba265c3f18a792ff21bcf9a41ab0e3a81b51933f4154287d1760e29363c08186c161dd9feac9d8350757e7a8e8e'  #LD890
+    '1a8cbbc616d00b97123be15989e6f11d6921d98306809c44bb55d9108a39443f3547430b46f9edaba719515a76c58a76'  #LD890
+    '1a28e72b752c0f717c6d2468b957fef6c3213973f44042a8937c7bb70f17c4b558ff11fca3de3032c7afff3183380098'  #LD890
+    '41c08eb5c2f454e0abd518a4d21cdebc99b3bff065e37ca3bc915af392a4d3cc7eeafad569a12e08e76d591e82b30784'  #LD890
+    '8c98c9dbc5776fbe0fc0fd1f77e6184e6dc07d1598ffc4a7d5bd99c8d5a73a1747886e11b81e439208afae43f4c4ec2f'  #LD890
     )  #LD890
 
 
@@ -196,11 +197,16 @@ PREREG890 = {
                     'visible [X2, A] content is not necessary for that flip', 'HISTORY_CONTENT_NECESSARY': 'flip and PAYLOAD_BLIND '
                     '== NONE argmax: the visible [X2, A] content is necessary for that flip', 'INCONCLUSIVE_THIRD_ARGMAX': 'flip and '
                     'PAYLOAD_BLIND is neither'},
-    'audit_verdict': 'PAYLOAD_AUDIT over the primary-strata unique points with a flip: all CARRIER_SUFFICIENT -> CARRIER_SUFFICIENT; '
-                     'all HISTORY_CONTENT_NECESSARY -> HISTORY_CONTENT_NECESSARY; mixed or any third argmax -> INCONCLUSIVE; no such '
-                     'point -> NOT_MEASURED; PHYSICAL_READ != PASS or any TRUE/WRONG payload read not bitwise -> INCONCLUSIVE. '
-                     'PAYLOAD_AUDIT_PRIORITY: the same rule on the priority strata. TV and the full distributions are kept for '
-                     'every point, also when the argmax is equal',
+    'audit_verdict': 'coverage first, over the pre-fixed strata identities (never over a count of unique points; repeated raw points are '
+                     'deduplicated; every unique record of a stratum is kept and must agree). PAYLOAD_AUDIT is conclusive only if all '
+                     'four primary strata occurred, PHYSICAL_READ == PASS and every TRUE/WRONG payload read is bitwise equal, every '
+                     'unique record of every primary stratum shows the expected BLIND != NONE flip, and all of them have one class: '
+                     'CARRIER_SUFFICIENT or HISTORY_CONTENT_NECESSARY. Otherwise: no point at all -> NOT_MEASURED / NO_POINTS; physical '
+                     'or parity failure -> INCONCLUSIVE / PHYSICAL_READ_NOT_PASS_OR_PAYLOAD_NOT_BITWISE (checked before coverage); a '
+                     'stratum that did not occur -> INCONCLUSIVE / INCOMPLETE_EXPECTED_POINTS; occurred without the flip -> '
+                     'INCONCLUSIVE / EXPECTED_BLIND_FLIP_ABSENT; any third argmax -> INCONCLUSIVE / THIRD_ARGMAX; two classes -> '
+                     'INCONCLUSIVE / MIXED. PAYLOAD_AUDIT_PRIORITY: the same rule on the two priority strata only. No stratum is '
+                     'replaced by another point. Point classes, TV and the full distributions are kept for every unique point',
     'payload_scope': 'audit only: never turns CONTENT_EFFECT, OUTCOME_BENEFIT or NATIVE_RECOVERY into PASS, never changes or erases '
                      'TECHNICAL_STATUS / OVERALL (a TECHNICAL_BLOCK stays a TECHNICAL_BLOCK)',
     'payload_not_claimed': ['CARRIER_SUFFICIENT is not a proof of pure geometry: the masked kernel, the positions and the physical '
@@ -226,20 +232,27 @@ def payload_audit890(verdict, points):
                      'tv_none_payload': p['tv_none_payload'], 'payload_true_equals_wrong_bitwise': p['payload_true_equals_wrong_bitwise'],
                      'class': payload_class890(p)})
     clean = verdict.get('PHYSICAL_READ') == 'PASS' and all(r['payload_true_equals_wrong_bitwise'] is True for r in rows)
+    name = lambda s: '%s_%s_t%d' % s
+    by = {name(s): [r for r in rows if r['stratum'] == name(s)] for s in PRIMARY890}
+    strata = {k: {'unique_points': len(v), 'classes': [r['class'] for r in v], 'priority': k in [name(s) for s in PRIORITY890],
+                  'status': 'NOT_OCCURRED' if not v else 'EXPECTED_BLIND_FLIP_ABSENT' if any(r['class'] == 'NO_BLIND_FLIP' for r in v) else 'MEASURED'}
+              for k, v in by.items()}
 
-    def agg(sel):
-        cls = sorted({r['class'] for r in sel if r['class'] != 'NO_BLIND_FLIP'})
-        if not cls: return 'NOT_MEASURED', 'NO_BLIND_FLIP_POINT_IN_THESE_STRATA'
-        if not clean: return 'INCONCLUSIVE', 'PHYSICAL_READ_NOT_PASS_OR_PAYLOAD_NOT_BITWISE'
-        if cls in (['CARRIER_SUFFICIENT'], ['HISTORY_CONTENT_NECESSARY']): return cls[0], 'ALL_%d_FLIP_POINTS' % sum(1 for r in sel if r['class'] == cls[0])
-        return 'INCONCLUSIVE', 'THIRD_ARGMAX' if 'INCONCLUSIVE_THIRD_ARGMAX' in cls else 'MIXED'
-    a, why = agg([r for r in rows if r['primary']]); ap, pwhy = agg([r for r in rows if r['priority']])
-    strata = {}
-    for s in PRIMARY890:
-        sel = [r for r in rows if r['stratum'] == '%s_%s_t%d' % s]
-        strata['%s_%s_t%d' % s] = {'unique_points': len(sel), 'classes': [r['class'] for r in sel],
-                                   'status': 'NOT_OCCURRED' if not sel else 'NO_FLIP_IN_890' if all(r['class'] == 'NO_BLIND_FLIP' for r in sel) else 'MEASURED'}
+    def agg(expected):
+        # coverage gate before any conclusive class: every expected stratum occurred and every unique record of it flipped
+        keys = [name(s) for s in expected]; cls = sorted({c for k in keys for c in strata[k]['classes']})
+        cov = {'expected': keys, 'not_occurred': [k for k in keys if strata[k]['status'] == 'NOT_OCCURRED'],
+               'flip_absent': [k for k in keys if strata[k]['status'] == 'EXPECTED_BLIND_FLIP_ABSENT']}
+        cov['complete'] = not cov['not_occurred'] and not cov['flip_absent']
+        if not rows: return 'NOT_MEASURED', 'NO_POINTS', cov
+        if not clean: return 'INCONCLUSIVE', 'PHYSICAL_READ_NOT_PASS_OR_PAYLOAD_NOT_BITWISE', cov
+        if cov['not_occurred']: return 'INCONCLUSIVE', 'INCOMPLETE_EXPECTED_POINTS', cov
+        if cov['flip_absent']: return 'INCONCLUSIVE', 'EXPECTED_BLIND_FLIP_ABSENT', cov
+        if cls in (['CARRIER_SUFFICIENT'], ['HISTORY_CONTENT_NECESSARY']): return cls[0], 'ALL_%d_EXPECTED_STRATA_COVERED_ONE_CLASS' % len(keys), cov
+        return 'INCONCLUSIVE', 'THIRD_ARGMAX' if 'INCONCLUSIVE_THIRD_ARGMAX' in cls else 'MIXED', cov
+    a, why, cov = agg(PRIMARY890); ap, pwhy, pcov = agg(PRIORITY890)
     return {'PAYLOAD_AUDIT': a, 'reason': why, 'PAYLOAD_AUDIT_PRIORITY': ap, 'priority_reason': pwhy, 'strata': strata,
+            'coverage': cov, 'priority_coverage': pcov,
             'secondary_flips_descriptive_only': [r for r in rows if not r['primary'] and r['class'] != 'NO_BLIND_FLIP'],
             'points': rows, 'raw_points': len(points), 'unique_points': len(U),
             'verdict889_unchanged': {k: verdict.get(k) for k in ('TECHNICAL_STATUS', 'PHYSICAL_READ', 'CONTENT_EFFECT', 'OUTCOME_BENEFIT',
@@ -291,23 +304,36 @@ def st890():
     r['class_no_flip'] = payload_class890(P('10', 'FORK', 3, 'ACQUIRE', 'ACQUIRE', 'STOP')) == 'NO_BLIND_FLIP'
     V = {'TECHNICAL_STATUS': 'TECHNICAL_BLOCK', 'PHYSICAL_READ': 'PASS', 'CONTENT_EFFECT': 'INCONCLUSIVE', 'OUTCOME_BENEFIT': 'NOT_MEASURED',
          'NATIVE_RECOVERY': 'INCONCLUSIVE', 'OVERALL': 'TECHNICAL_BLOCK'}
-    car = [P('09', 'FORK', 3, 'ADVANCE', 'ACCEPT', 'ACCEPT'), P('10', 'FORK', 5, 'ADVANCE', 'ACQUIRE', 'ACQUIRE')]
-    his = [P('09', 'FORK', 3, 'ADVANCE', 'ACCEPT', 'ADVANCE'), P('10', 'FORK', 5, 'ADVANCE', 'ACQUIRE', 'ADVANCE')]
-    keep = _c890.deepcopy(V); a = payload_audit890(V, car + [dict(car[0])])
-    r['audit_carrier'] = a['PAYLOAD_AUDIT'] == 'CARRIER_SUFFICIENT' == a['PAYLOAD_AUDIT_PRIORITY'] and a['raw_points'] == 3 and a['unique_points'] == 2
-    r['audit_never_touches_verdict889'] = V == keep and a['verdict889_unchanged']['OVERALL'] == 'TECHNICAL_BLOCK'
-    r['audit_history'] = payload_audit890(V, his)['PAYLOAD_AUDIT'] == 'HISTORY_CONTENT_NECESSARY'
-    m = payload_audit890(V, [car[0], his[1]]); r['audit_mixed_inconclusive'] = m['PAYLOAD_AUDIT'] == 'INCONCLUSIVE' and m['reason'] == 'MIXED'
-    t3 = payload_audit890(V, [car[0], P('10', 'FORK', 5, 'ADVANCE', 'ACQUIRE', 'STOP')])
-    r['audit_third_inconclusive'] = t3['PAYLOAD_AUDIT'] == 'INCONCLUSIVE' and t3['reason'] == 'THIRD_ARGMAX'
-    sec = payload_audit890(V, [P('10', 'FORK', 4, 'ADVANCE', 'ACQUIRE', 'ACQUIRE'), P('09', 'FORK', 3, 'ADVANCE', 'ADVANCE', 'ADVANCE')])
-    r['audit_no_substitution'] = sec['PAYLOAD_AUDIT'] == 'NOT_MEASURED' and len(sec['secondary_flips_descriptive_only']) == 1 and \
-        sec['strata']['09_FORK_t3']['status'] == 'NO_FLIP_IN_890' and sec['strata']['10_FORK_t5']['status'] == 'NOT_OCCURRED'
-    r['audit_physical_fail_inconclusive'] = payload_audit890(dict(V, PHYSICAL_READ='FAIL'), car)['PAYLOAD_AUDIT'] == 'INCONCLUSIVE'
-    r['audit_payload_not_bitwise_inconclusive'] = payload_audit890(V, [car[0], dict(car[1], payload_true_equals_wrong_bitwise=False)])['PAYLOAD_AUDIT'] == 'INCONCLUSIVE'
-    r['audit_empty_not_measured'] = payload_audit890(V, [])['PAYLOAD_AUDIT'] == 'NOT_MEASURED'
-    pr = payload_audit890(V, [P('09', 'MISSING', 3, 'STOP', 'ACQUIRE', 'STOP'), car[0]])
-    r['audit_priority_separate'] = pr['PAYLOAD_AUDIT'] == 'INCONCLUSIVE' and pr['PAYLOAD_AUDIT_PRIORITY'] == 'CARRIER_SUFFICIENT'
+    A = payload_audit890; C = lambda w, c, t: P(w, c, t, 'ADVANCE', 'ACQUIRE', 'ACQUIRE'); H = lambda w, c, t: P(w, c, t, 'ADVANCE', 'ACQUIRE', 'ADVANCE')
+    T3 = lambda w, c, t: P(w, c, t, 'ADVANCE', 'ACQUIRE', 'STOP'); N = lambda w, c, t: P(w, c, t, 'ADVANCE', 'ADVANCE', 'ADVANCE')
+    pri, oth = [('09', 'FORK', 3), ('10', 'FORK', 5)], [('10', 'FORK', 6), ('09', 'MISSING', 3)]
+    car, his = [C(*s) for s in pri + oth], [H(*s) for s in pri + oth]
+    ok = lambda a, v, w, pv, pw: (a['PAYLOAD_AUDIT'], a['reason'], a['PAYLOAD_AUDIT_PRIORITY'], a['priority_reason']) == (v, w, pv, pw)
+    I, IEP, FA, PHY = 'INCONCLUSIVE', 'INCOMPLETE_EXPECTED_POINTS', 'EXPECTED_BLIND_FLIP_ABSENT', 'PHYSICAL_READ_NOT_PASS_OR_PAYLOAD_NOT_BITWISE'
+    A4, A2 = 'ALL_4_EXPECTED_STRATA_COVERED_ONE_CLASS', 'ALL_2_EXPECTED_STRATA_COVERED_ONE_CLASS'
+    keep = _c890.deepcopy(V); a = A(V, [car[0]])                                                     # A: only 09_FORK t3, 10_FORK t5 missing
+    r['A_single_priority_point_never_conclusive'] = ok(a, I, IEP, I, IEP) and a['points'][0]['class'] == 'CARRIER_SUFFICIENT' and \
+        a['strata']['10_FORK_t5']['status'] == 'NOT_OCCURRED' and a['priority_coverage']['not_occurred'] == ['10_FORK_t5'] and not a['coverage']['complete']
+    r['B_priority_complete_primary_incomplete'] = ok(A(V, car[:2]), I, IEP, 'CARRIER_SUFFICIENT', A2)
+    a = A(V, car + [dict(car[0])])                                                                    # C + duplicate raw point
+    r['C_all_four_carrier'] = ok(a, 'CARRIER_SUFFICIENT', A4, 'CARRIER_SUFFICIENT', A2) and a['raw_points'] == 5 and a['unique_points'] == 4 and a['coverage']['complete']
+    r['C_all_four_history'] = ok(A(V, his), 'HISTORY_CONTENT_NECESSARY', A4, 'HISTORY_CONTENT_NECESSARY', A2)
+    r['D_primary_stratum_without_flip'] = ok(A(V, car[:2] + [N(*oth[0]), C(*oth[1])]), I, FA, 'CARRIER_SUFFICIENT', A2)
+    r['E_priority_stratum_without_flip'] = ok(A(V, [N(*pri[0])] + car[1:]), I, FA, I, FA)
+    r['E_second_unique_record_without_flip'] = ok(A(V, car + [N(*pri[1])]), I, FA, I, FA)             # every unique record of a stratum counts
+    r['F_mixed'] = ok(A(V, car[:2] + his[2:]), I, 'MIXED', 'CARRIER_SUFFICIENT', A2) and ok(A(V, [car[0], his[1]] + car[2:]), I, 'MIXED', I, 'MIXED')
+    r['F_third_argmax'] = ok(A(V, car[:3] + [T3(*oth[1])]), I, 'THIRD_ARGMAX', 'CARRIER_SUFFICIENT', A2) and \
+        ok(A(V, [T3(*pri[0])] + car[1:]), I, 'THIRD_ARGMAX', I, 'THIRD_ARGMAX')
+    r['G_empty_not_measured'] = ok(A(V, []), 'NOT_MEASURED', 'NO_POINTS', 'NOT_MEASURED', 'NO_POINTS') and ok(A(dict(V, PHYSICAL_READ='FAIL'), []), 'NOT_MEASURED', 'NO_POINTS', 'NOT_MEASURED', 'NO_POINTS')
+    r['G_physical_fail_not_hidden_by_coverage'] = ok(A(dict(V, PHYSICAL_READ='FAIL'), car), I, PHY, I, PHY) and ok(A(dict(V, PHYSICAL_READ='FAIL'), [car[0]]), I, PHY, I, PHY)
+    r['G_payload_parity_false'] = ok(A(V, car[:3] + [dict(car[3], payload_true_equals_wrong_bitwise=False)]), I, PHY, I, PHY)
+    sec = A(V, [C('10', 'FORK', 4), N(*pri[0])])                                                      # secondary-only flip: never substituted
+    r['G_secondary_only_no_substitution'] = ok(sec, I, IEP, I, IEP) and len(sec['secondary_flips_descriptive_only']) == 1 and \
+        sec['strata']['09_FORK_t3']['status'] == FA and sec['strata']['10_FORK_t5']['status'] == 'NOT_OCCURRED'
+    blk = A(V, [C(*pri[0]), C(*pri[1]), C(*oth[0])])                                                  # 09_MISSING blocked before its point
+    r['G_blocked_episode_stratum_missing'] = ok(blk, I, IEP, 'CARRIER_SUFFICIENT', A2) and blk['coverage']['not_occurred'] == ['09_MISSING_t3']
+    r['G_verdict889_immutable'] = V == keep and a['verdict889_unchanged']['OVERALL'] == 'TECHNICAL_BLOCK' and \
+        'CONTENT_EFFECT' not in a and 'OVERALL' not in a
     tb = ('x', 'a', 'Y', 1)
     try: apply890('aXa', [tb]); r['patch_double_anchor_refused'] = False
     except AssertionError: r['patch_double_anchor_refused'] = True
