@@ -1,4 +1,4 @@
-# TEST891 BODY-SHA256 e4ef58c8ed4e4e22764add9c38d5228cde90ca1f9256649bce1a82b392b5362f
+# TEST891 BODY-SHA256 61e8f47aa02a5046fbba3781f2ccf33a7710f9f037e6c1fd35b7e390ec1fabca
 # AKBASCORE SILICON HIPPOCAMPUS - TEST891 - X2/A COMPONENT-VISIBILITY 2x2 AUDIT on TEST890 (one Colab cell, one Run, A100-SXM4-80GB)
 # Contract: K3.1 "TEST890 kaynak/log dogrulamasi ve TEST891 DESIGN_LOCKED" + "CLAUDE ICIN TEST891 KESIN KOD URETIM VE TAM DENETIM
 # TALIMATI" (16 Nov 2026). The only new measurement: two audit-only counterfactual CAR reads on the same SSD cartridge load/append
@@ -72,16 +72,19 @@ PATCHES891 = (                                                                  
     ('g0_selftest', "'890': st890()}", "'890': st890(), '891': st891()}", 1),
     ('audit', "    U_ = unique_m888(pts_)\n",
      "    try:\n        STATE889['component_audit'] = component_audit891(STATE889['verdict'], pts_)\n"
-     "    except BaseException as exc:\n        STATE889['component_audit'] = {'COMPONENT_AUDIT': 'NOT_MEASURED', 'reason': 'AUDIT_ERROR %s: %s' % (type(exc).__name__, exc)}\n"
-     "    U_ = unique_m888(pts_)\n", 1),
+     "    except BaseException as exc:\n        STATE889['component_audit'] = audit_error891(exc)   # TECHNICAL_BLOCK, never NOT_MEASURED\n"
+     "    U_ = unique_safe891(pts_)\n", 1),
     ('report', "'payload_audit': STATE889['payload_audit'],\n",
      "'payload_audit': STATE889['payload_audit'],\n        'component_audit': STATE889['component_audit'], 'base890': B890_INFO891, "
      "'executed_890_gpu_cell': EXEC890_GPU891,\n", 1),
+    ('report_view', "'points_unique': [{k_: p_[k_] for k_ in (", "'points_unique': [point_view891(p_, (", 1),
     ('report_points', "'X_sha256', 'B_tokens', 'cache_tokens')} for p_ in U_],",
      "'X_sha256', 'B_tokens', 'cache_tokens', 'a_true_x2_visible', 'a_wrong_x2_visible',\n"
      "                                                 'a_true_a_visible', 'a_wrong_a_visible', 'true_x2_visible', 'true_a_visible', 'tv_blind_x2v',\n"
      "                                                 'tv_payload_x2v', 'tv_blind_av', 'tv_payload_av', 'interaction', 'x2v_true_equals_wrong_bitwise',\n"
-     "                                                 'av_true_equals_wrong_bitwise', 'component_spans', 'calls_by_mode_true', 'calls_by_mode_wrong')} for p_ in U_],", 1),
+     "                                                 'av_true_equals_wrong_bitwise', 'component_spans', 'calls_by_mode_true', 'calls_by_mode_wrong',\n"
+     "                                                 'component_geometry_ok', 'component_spans_true_equals_wrong', 'cartridge_sha_true',\n"
+     "                                                 'cartridge_sha_wrong')) for p_ in U_],", 1),
     ('console_verdict', "          pa_.get('priority_reason'), {k_: s_.get('classes') for k_, s_ in (pa_.get('strata') or {}).items()}))\n",
      "          pa_.get('priority_reason'), {k_: s_.get('classes') for k_, s_ in (pa_.get('strata') or {}).items()}))\n"
      "    ca_ = STATE889.get('component_audit') or {}\n"
@@ -100,7 +103,7 @@ PATCHES891 = (                                                                  
 CHANGED_FUNCS891 = ('capture889', 'episode889', 'read889')        # against the TEST890 text; every other function AST-identical
 LOCKED891 = ('xcar878', 'xspan878', 'control_step867', 'execute866', 'write_exp878', 'append_exp878', 'write_appraisal889',
              'write_pair889', 'donor_v889', 'verdict889', 'same_reading881', 'same873')
-OWN_FUNCS891 = ('canon891', 'base890_891', 'lockdiag891', 'comp_masks891', 'interaction891', 'component_fields891', 'calls_gate891',
+OWN_FUNCS891 = ('canon891', 'wrap_console891', 'audit_error891', 'unique_safe891', 'point_view891', 'base890_891', 'lockdiag891', 'comp_masks891', 'interaction891', 'component_fields891', 'calls_gate891',
                 'record_problems891',
                 'visibility_class891', 'component_audit891', 'source891', 'st891')
 # LINEDIG891: sha256[:4] of every canonical body line except its own data lines (paste diagnostics only, not a lock)
@@ -108,24 +111,28 @@ LINEDIG891 = (
     'd424e0e85a15df5d36edae214b2f663857152f814d0e822547928e64ca08b239e8ccf8e9a0750657cce948ef9c594851'  #LD890
     '248f908525a260f1615f7a2ec507b588732fe7e37180a90e71a1805d3f7ba04a91632f775f79aa9121fa5ba6005cca84'  #LD890
     'e5368001462b9dbab92968fd4f89ac3e857211e49b86bc1860230f1b00c313aaea67460bc8bbd3b47c6f82a1696dd319'  #LD890
-    '0b2ffedd290b16d773fc8e3f9e5c6bfe4ee60286e048b47e8d9084f9efb96b6c9d588f16c0c996882228335b5154d437'  #LD890
-    '155fe2b009afdf9a947da721d63eee86c6e05b54a1a1b0f591e6c50d99637ba67b9490a85407a94fba878abdba06d93b'  #LD890
-    '5d6aeb03bb3941b68761dac33b7e29fc5ba195b9990dc94f1f8d5d7244c1f3300e804a28ed96590b69dac3f616ecf4f2'  #LD890
-    'edd21f71b1742bb178410d88d83c9bf3c8637b00e605c2dc0ecc14a7309c8908c112b02b6b9baf0826d574c2ce47e1c9'  #LD890
-    '0e19fea1ad9213cf1f6d8449ea38e434b08b58d97bdf4392be898428cd891eb72f6fad820aea7a52a66f6b951668bb0a'  #LD890
-    'aadb9880e2243f99a087fb3ebf94f203ecc6aacfa36b0a6fe50ecd79f6f1ae1153589645cd4f46706815c52f5788be83'  #LD890
-    '4618001127fe71fc2924a1653aff204e000afcd9ad9ee7b76514a62d0d30ce17c05f5e41d8095329f93be3e2cda3494b'  #LD890
-    '8efb13ad7da8ce57f198bbe6bd3c39cb1a9596936e55f90c2f3a4c18649565ba2ce5e2416715deaf57b563b5475ab45e'  #LD890
-    'c7ccec98421aa93d4c77ef586e1965c381b2792f2149308c9f12aaeea090f2e88a40e75a0731193340cf07f7a7efa5a9'  #LD890
-    'd0982a0fac746479a452e62e2deaa13c3b590c132c1a8bcb91db2739f8e1e08e3e8c8b0bc84a36957e4a23b20a066921'  #LD890
-    'd9832265d3a2b9b4bb966db43a06e397af07157f430b2517d7222b98902e522d7440a4de69770df8c060614ca683aef6'  #LD890
-    '9e913bb8663c91f28c16ea2ad2e424b55b9c5fd363d7d42c051dc22b3f2ec3152900c321e2e242708255b84eccae99be'  #LD890
-    'ceafc4b505a67489c27a41ca21548d66aca6b4527b1c1c94c094e911b31d747c47235c9262f4b69de457c74cd7a450e5'  #LD890
-    'e6d37bced4688820179990488869da02cbad6f439691f79b9fc012945bf04348e2d2f496df5c185cbb3956967b83903c'  #LD890
-    '9ef8f2079e1454e0abd58043d3fe7f5419c40a9ce7a013d81b3a96562153542b6b418b4d2770586d23d5c8488d873e8b'  #LD890
-    'b2be4c4adfb08703505233ff573e33c2ace777f0d841ac54a2e0a1afcab5ce217acb3e26748df0e5f98847267af16ff9'  #LD890
-    'b76dbbff7b67eaaec179f5ff358e7b10a1ad4c286d169deb3e322aa45e976e6efeaee632896d01e022d434e32d5a4814'  #LD890
-    'c3d21e2cce015265f6530f530e03cec0690289a0c4a758d614cf9c18842fe9d526e60b04a92f1fca0424f4c44065'  #LD890
+    '0b2fb33276b216d773fc8e3f4ae09e5c6bfe4ee6028693c5d96a28dab47e8d9084f9efb96b6c9d588f16c0c996882228'  #LD890
+    '335b5154d437155fe2b009afdf9a947db9aed63eee86c6e05b54a1a1b0f591e6c50d9963f135b4642052724672bba4b9'  #LD890
+    '6ae390d458c47ba67b9490a85407a94fba878abdba06d93b5d6aeb03bb3941b68761dac33b7e29fc5ba195b9990dc94f'  #LD890
+    '1f8d5d7244c1f3300e804a28ed96590b2e95c3f616ecf4f2edd21f71b1742bb178410d88d83c9bf3c8637b00e605c2dc'  #LD890
+    '0ecc14a7309c8908c112b02b6b9baf0826d574c2ce47e1c90e19fea1ad9213cf1f6d8449ea38e434b08b01a24d148c25'  #LD890
+    'e22e43504392be898428cd891eb72f6fad820aea7a52a66f6b951668bb0aaadb9880e2243f99a087fb3ebf94f203ecc6'  #LD890
+    'aacfa36b0a6fe50ecd79f6f1ae1153589645cd4f46706815c52f5788be834618001127fe71fc2924a1653aff204e000a'  #LD890
+    'fcd9ad9ee7b76514a62d0d30ce17c05f5e41d8095329f93be3e2cda3494b8efb17f2ea9fcb7ebd93380ed32bfe35e9ac'  #LD890
+    '1d94d1f667a9278e601b0a11abc445393b941d947e7b83b2c6e0112e13ad7da8ce57f198bbe6bd3c39cb1a9596936e55'  #LD890
+    'f90c2f3a4c18649512e2d17e84a483d3e0f6edbb9268bff6487465ba2ce5e2416715deaf57b563b5475ab45ec7ccec98'  #LD890
+    '421aa93d4c77ef58890a99fe6f4d8dfd6e1965c381b2792f2149308c9f12aaeea090f2e88a40e75a0731193340cf07f7'  #LD890
+    'a7efa5a9d0982a0fac746479a452e62e2dea9765aaa60c132c1a8bcb91db2739f8e1e08e3e8c8b0bc84a36957e4a23b2'  #LD890
+    '0a066921d9832265d3a2b9b4bb966db43a06e397af07157f430b2517d7222b98902e522d7440a4de69770df8c060d056'  #LD890
+    'a683aef69e913bb8663c91f28c16ea2ad2e424b55b9c5fd363d7d42c051dc22b3f2ec3152900c321e2e24270ddcd25d5'  #LD890
+    '0bad52f301c68255b84eccae99beceafc4b505a67489c27a41ca21548d66aca6b4527b1c1c94c094e911b31d747c4723'  #LD890
+    '5c9262f4b69de457c74cd7a450e5e6d37bced4688820179990488869da02cbad6f439691f79b9fc012945bf04348e2d2'  #LD890
+    'f024a230df5c185cbb3956967b83903c9ef8f2079e1454e0abd58043d3fe7f5419c40a9ce7a013d81b3a96562153542b'  #LD890
+    '6b418b4d2770586d23d5c8488d873e8bb2be4c4adfb08703505233ff573e33c2ace777f0d841ac54a2e0a1afcab5ce21'  #LD890
+    '7acb3e26748df0e5f98847267af16ff9b76dbbff7b67eaaec179f5ff358e7b10a1ad4c286d169deb3e322aa45e976e6e'  #LD890
+    'feaee632896d01e022d434e32d5a4814c3d21e2cce015265f6530f533ca01c96ba4dbe94fd91a8306d0159ff7b7a61ad'  #LD890
+    'ca19bf52d33bc40a65b9e1c6469582b68c146e1730e64ca50d5330f6514873586b2c9d58484dcf96d5f21103aae67d5e'  #LD890
+    '0e03cec0690289a0c4a758d614cf9c18842fe9d526e64fe0bc73a92f1fca0424f4c44065'  #LD890
     )  #LD890
 
 
@@ -134,6 +141,17 @@ def canon891(t):
     t = t.replace('\r\n', '\n').replace('\r', '\n').replace('\u00a0', ' ')
     for z in ('\ufeff', '\u200b', '\u200c', '\u200d', '\u2060'): t = t.replace(z, '')
     return [l.rstrip() for l in t.split('\n') if l.strip()]
+
+
+def wrap_console891(text):
+    # the per-point console block of the report (889 + 890 + 891 lines) runs under try: a malformed record is reported, not a crash
+    a0, a1 = "    for p_ in U_:\n        print('POINT ", "    for k_, c_ in report889['cells'].items():\n"
+    if text.count(a0) != 1 or text.count(a1) != 1 or text.index(a0) > text.index(a1): raise AssertionError('BASE_890_CONSOLE_ANCHOR')
+    i, j = text.index(a0) + len('    for p_ in U_:\n'), text.index(a1)
+    return (text[:i] + '        try:\n' + ''.join('    ' + l + '\n' for l in text[i:j].split('\n')[:-1]) +
+            "        except Exception as exc:                          # TEST891: malformed record -> explicit line, never hidden\n"
+            "            print('POINT RECORD NOT PRINTABLE episode=%s %s: %s | record_problems=%s' % (\n"
+            "                p_.get('episode_id') if isinstance(p_, dict) else None, type(exc).__name__, exc, record_problems891(p_)))\n" + text[j:])
 
 
 def base890_891(raw):
@@ -167,7 +185,7 @@ exec(compile(W890_891, '890.py:wrapper_for_TEST891', 'exec'), globals())   # 890
 assert _h891.sha256(SRC889_890.encode()).hexdigest() == SRC889_890_SHA891, 'BASE_890_CHAIN_NOT_REPRODUCED'
 RENAMED890_891 = apply890(SRC889_890, [('rename',) + r for r in RENAMES891])
 assert 'TEST890' not in RENAMED890_891, 'BASE_890_RENAME_LEFT'
-SRC889_891 = apply890(RENAMED890_891, PATCHES891)
+SRC889_891 = wrap_console891(apply890(RENAMED890_891, PATCHES891))
 _a891.parse(SRC889_891)
 B890_INFO891.update(chain_889_890_sha256=SRC889_890_SHA891, renames891=[list(r) for r in RENAMES891],
                     patches891=[[p[0], p[3]] for p in PATCHES891], executed_sha256=_h891.sha256(SRC889_891.encode()).hexdigest())
@@ -205,8 +223,11 @@ PREREG891 = {
                     'A_VISIBLE, NONE argmax (TRUE arm; TRUE == WRONG is gated)'},
     'audit_verdict': 'COMPONENT_AUDIT, in this order: no point -> NOT_MEASURED / NO_POINTS; PHYSICAL_READ != PASS or any BLIND / '
                      'PAYLOAD / X2_VISIBLE / A_VISIBLE TRUE != WRONG or any mask geometry flag false -> TECHNICAL_BLOCK / '
-                     'PHYSICAL_OR_PARITY_OR_GEOMETRY (a missing parity field is not a False); any malformed record (preflight '
-                     'record_problems891: missing / mistyped / non-finite field, summary without all six actions) -> INCONCLUSIVE '
+                     'PHYSICAL_OR_PARITY_OR_GEOMETRY (strict bool False on any raw point, scanned before the malformed filter; a '
+                     'missing parity field is not a False); an unexpected exception of the audit -> TECHNICAL_BLOCK / AUDIT_ERROR '
+                     '(handler; NOT_MEASURED only for zero points without exception); any malformed record (preflight '
+                     'record_problems891: missing / mistyped / non-finite field, summary without all six actions, component_spans '
+                     'absent or not the writer geometry) -> INCONCLUSIVE '
                      '/ INCOMPLETE_RECORDS; any of the seven expected strata absent -> INCONCLUSIVE / '
                      'INCOMPLETE_EXPECTED_POINTS; any unique record of a primary stratum with B == N -> INCONCLUSIVE / '
                      'EXPECTED_BLIND_FLIP_ABSENT; with P != N -> INCONCLUSIVE / PAYLOAD_890_NOT_REPRODUCED; primary classes contain THIRD_ARGMAX -> INCONCLUSIVE / '
@@ -281,6 +302,34 @@ def calls_gate891(rec, modes):
         raise Gate883('PHYSICAL_CALL_CARDINALITY %s modes=%s calls=%s' % (rec.get('cartridge'), list(modes), got))
 
 
+def audit_error891(exc, save=True):
+    # an unexpected exception inside component_audit891 is a technical failure of the audit, never "not measured"
+    import traceback as tb
+    out = {'COMPONENT_AUDIT': 'TECHNICAL_BLOCK', 'reason': 'AUDIT_ERROR %s: %s' % (type(exc).__name__, exc),
+           'traceback': ''.join(tb.format_exception(type(exc), exc, exc.__traceback__))}
+    if not save: return out                                                     # selftest: no error artifact in a clean run
+    try: (ROOT864 / 'TEST891_component_audit_error.txt').write_text(out['traceback'], encoding='utf-8'); out['traceback_file'] = 'TEST891_component_audit_error.txt'
+    except Exception as exc2: out['traceback_file'] = 'NOT_WRITTEN %s: %s' % (type(exc2).__name__, exc2)
+    return out
+
+
+def unique_safe891(points):
+    # unique_m888 for the report, but a record without a usable unique_key is kept as its own entry (never dropped, never a crash)
+    seen, out = set(), []
+    for p in points:
+        k = p.get('unique_key') if isinstance(p, dict) else None
+        if isinstance(k, str) and k in seen: continue
+        if isinstance(k, str): seen.add(k)
+        out.append(p)
+    return out
+
+
+def point_view891(p, keys):
+    # report projection of one point: present fields as recorded; absent fields and preflight problems listed explicitly
+    if not isinstance(p, dict): return {'malformed_record': repr(p)[:300], 'record_problems': record_problems891(p)}
+    return dict({k: p[k] for k in keys if k in p}, missing_fields=[k for k in keys if k not in p], record_problems=record_problems891(p))
+
+
 def record_problems891(p):
     # preflight of every field component_audit891 reads; [] = well formed (missing parity is a record problem, never a False)
     fin = lambda x: type(x) in (int, float) and _m891.isfinite(x)
@@ -295,6 +344,15 @@ def record_problems891(p):
     bad += [k for k in ('tv_blind_x2v', 'tv_payload_x2v', 'tv_blind_av', 'tv_payload_av', 'tv_blind_payload', 'tv_none_payload') if not fin(p.get(k))]
     bad += ['%s.%s' % (k, f) for k in ('interaction', 'none', 'true_blind', 'true_payload_blind', 'true_x2_visible', 'true_a_visible')
             for f in ('p', 'seq_logp') if not (isinstance(p.get(k), dict) and six(p[k].get(f)))]
+    sp2 = lambda x: isinstance(x, (list, tuple)) and len(x) == 2 and all(type(e) is int for e in x)
+    cs = p.get('component_spans')
+    if not (isinstance(cs, dict) and all(sp2(cs.get(k)) for k in ('x2_span', 'a_span', 'v_span')) and
+            all(isinstance(cs.get(k), (list, tuple)) and len(cs[k]) == 2 and all(sp2(x) for x in cs[k]) for k in ('mask_X2_VISIBLE', 'mask_A_VISIBLE'))):
+        bad += ['component_spans']
+    else:
+        x2, a, v = [list(cs[k]) for k in ('x2_span', 'a_span', 'v_span')]            # the comp_masks891 writer geometry, nothing new
+        if not (0 < x2[0] < x2[1] == a[0] < a[1] == v[0] < v[1] and [list(x) for x in cs['mask_X2_VISIBLE']] == [a, v] and
+                [list(x) for x in cs['mask_A_VISIBLE']] == [x2, v]): bad += ['component_spans.inconsistent']
     return bad
 
 
@@ -314,6 +372,10 @@ def component_audit891(verdict, points):
     chk = [(p, record_problems891(p)) for p in points]
     malformed = [{'index': i, 'episode_id': p.get('episode_id') if isinstance(p, dict) else None, 'problems': b}
                  for i, (p, b) in enumerate(chk) if b]
+    flags = ('blind_true_equals_wrong_bitwise', 'payload_true_equals_wrong_bitwise', 'x2v_true_equals_wrong_bitwise',
+             'av_true_equals_wrong_bitwise', 'component_geometry_ok', 'component_spans_true_equals_wrong')
+    false_flags = [{'index': i, 'flags': [k for k in flags if p.get(k) is False]} for i, p in enumerate(points)
+                   if isinstance(p, dict) and any(p.get(k) is False for k in flags)]   # raw points, before the malformed filter
     U = unique_m888([p for p, b in chk if not b]); rows = []
     for p in U:
         s = (p['world'], p['condition'], p['step']); c = visibility_class891(p)
@@ -339,8 +401,8 @@ def component_audit891(verdict, points):
     cov = {'expected': [name(s) for s in EXPECTED891], 'not_occurred': [k for k, v in strata.items() if v['status'] == 'NOT_OCCURRED'],
            'primary_flip_absent': [k for k, v in strata.items() if v['status'] == 'EXPECTED_BLIND_FLIP_ABSENT'],
            'primary_payload_not_reproduced': [k for k, v in strata.items() if v['status'] == 'PAYLOAD_890_NOT_REPRODUCED'],
-           'incomplete_records': malformed}
-    tech = verdict.get('PHYSICAL_READ') != 'PASS' or any(not r['geometry_ok'] or not all(x is True for x in r['parity'].values()) for r in rows)
+           'incomplete_records': malformed, 'false_integrity_flags': false_flags}
+    tech = verdict.get('PHYSICAL_READ') != 'PASS' or bool(false_flags)
     if not points: a, why = 'NOT_MEASURED', 'NO_POINTS'
     elif tech: a, why = 'TECHNICAL_BLOCK', 'PHYSICAL_OR_PARITY_OR_GEOMETRY'
     elif malformed: a, why = 'INCONCLUSIVE', 'INCOMPLETE_RECORDS'
@@ -379,7 +441,7 @@ def source891():
                       and any(isinstance(x, _a891.Name) and x.id == 'reading' for x in n.targets)})
     src_ep = _a891.unparse(ep)
     own = [fc[k] for k in ('comp_masks891', 'interaction891', 'component_fields891', 'visibility_class891', 'component_audit891',
-                           'calls_gate891', 'record_problems891')]
+                           'calls_gate891', 'record_problems891', 'unique_safe891', 'point_view891', 'audit_error891')]
     banned = {'write_exp878', 'append_exp878', 'xappend878', 'execute866', 'control_step867', 'donor_v889', 'write_pair889',
               'write_appraisal889', 'load_exp878', 'xcar878', 'car873', 'open', 'exec', 'eval', 'setattr', 'globals'}
     facts = {'chain_889_890_reproduced': _h891.sha256(SRC889_890.encode()).hexdigest() == SRC889_890_SHA891,
@@ -402,6 +464,11 @@ def source891():
              'executed_reading_unchanged': reading == ["rT['FULL'] if arm == 'D_TRUE' else rW['FULL']", 'r_none', "record['reading']"],
              'component_gate_after_point_record': 0 < src_ep.find("out['points'].append(pt)") < src_ep.find("raise Gate883('PHYSICAL_COMPONENT_VISIBLE_LEAK"),
              'no_write_donor_execute_in_new_functions': not any(isinstance(x, _a891.Name) and x.id in banned for n in own for x in _a891.walk(n)),
+             'audit_exception_is_technical_block': SRC889_891.count("STATE889['component_audit'] = audit_error891(exc)") == 1 and
+                                                   "'COMPONENT_AUDIT': 'NOT_MEASURED'" not in SRC889_891,
+             'report_and_console_tolerate_malformed_records': SRC889_891.count("'points_unique': [point_view891(p_, (") == 1 and
+                                                              SRC889_891.count('POINT RECORD NOT PRINTABLE') == 1 and
+                                                              SRC889_891.count('U_ = unique_safe891(pts_)') == 1,
              'verdict889_has_no_component': 'VISIBLE' not in _a891.unparse(f['verdict889'])}
     if not all(facts.values()): raise Gate_m867('SOURCE891_FACTS %s' % sorted(k for k, v in facts.items() if not v))
     (ROOT864 / 'TEST891_executed_889_890_891.py').write_text(SRC889_891, encoding='utf-8')
@@ -451,7 +518,8 @@ def st891():
              'tv_blind_payload': 0.5, 'tv_none_payload': 0.05, 'interaction': I, 'blind_true_equals_wrong_bitwise': True,
              'payload_true_equals_wrong_bitwise': True, 'x2v_true_equals_wrong_bitwise': True, 'av_true_equals_wrong_bitwise': True,
              'component_geometry_ok': True, 'component_spans_true_equals_wrong': True,
-             'unique_key': '%s%s%d%s%s%s%s%s' % (w, c, t, n, b, y, x, a)}
+             'unique_key': '%s%s%d%s%s%s%s%s' % (w, c, t, n, b, y, x, a),
+             'component_spans': {k: cm['record'][k] for k in ('x2_span', 'a_span', 'v_span', 'mask_X2_VISIBLE', 'mask_A_VISIBLE')}}
         for k in ('none', 'true_blind', 'true_payload_blind', 'true_x2_visible', 'true_a_visible'): p[k] = {'p': dict(base), 'seq_logp': dict(base)}
         p.update(kw); return p
     C = visibility_class891
@@ -536,6 +604,40 @@ def st891():
         bad_ = _c891.deepcopy(J[3]); fn(bad_)
         r['m1_%s' % nm] = ok(A_(V, sec + J[:3] + [bad_]), I_, 'INCOMPLETE_RECORDS') and \
             ok(A_(dict(V, PHYSICAL_READ='FAIL'), sec + J[:3] + [bad_]), 'TECHNICAL_BLOCK', 'PHYSICAL_OR_PARITY_OR_GEOMETRY')
+    # M1a: component_spans is part of the preflight (absent / None / empty / wrong type / not the writer geometry)
+    CS = J[3]['component_spans']
+    for nm, fn in {'spans_absent': lambda q_: q_.pop('component_spans'), 'spans_none': lambda q_: q_.update(component_spans=None),
+                   'spans_empty': lambda q_: q_.update(component_spans={}), 'spans_list': lambda q_: q_.update(component_spans=[1, 2]),
+                   'spans_no_subkey': lambda q_: q_.update(component_spans={k: v for k, v in CS.items() if k != 'mask_A_VISIBLE'}),
+                   'spans_float_end': lambda q_: q_.update(component_spans=dict(CS, a_span=[110.0, 112])),
+                   'spans_bool_end': lambda q_: q_.update(component_spans=dict(CS, x2_span=[True, 110])),
+                   'spans_mask_one_span': lambda q_: q_.update(component_spans=dict(CS, mask_X2_VISIBLE=[[110, 120]])),
+                   'spans_mask_malformed_inner': lambda q_: q_.update(component_spans=dict(CS, mask_A_VISIBLE=[[100, 110], [112]])),
+                   'spans_mask_not_writer_geometry': lambda q_: q_.update(component_spans=dict(CS, mask_X2_VISIBLE=[[110, 112], [113, 120]]))}.items():
+        bad_ = _c891.deepcopy(J[3]); fn(bad_); au = A_(V, sec + J[:3] + [bad_])
+        r['m1a_%s' % nm] = ok(au, I_, 'INCOMPLETE_RECORDS') and len(au['coverage']['incomplete_records']) == 1 and au['raw_points'] == 7 and \
+            isinstance(point_view891(bad_, ('episode_id', 'component_spans', 'interaction'))['record_problems'], list)
+    r['m1a_tuple_spans_valid'] = record_problems891(dict(J[3], component_spans={k: tuple(tuple(x) if isinstance(x, list) else x for x in v) for k, v in CS.items()})) == []
+    pv = point_view891({'episode_id': 'E'}, ('episode_id', 'component_spans'))
+    r['m1a_view_explicit_not_silent'] = pv['missing_fields'] == ['component_spans'] and 'component_spans' not in pv and bool(pv['record_problems']) and \
+        'malformed_record' in point_view891(None, ('episode_id',))
+    r['m1a_unique_safe_keeps_unkeyed'] = len(unique_safe891([J[0], dict(J[0]), {'x': 1}, None, {'x': 1}])) == 4
+    # M1b: a strict bool False on a raw point wins over a malformed field of the same or another record
+    def both(**kw):
+        b_ = _c891.deepcopy(J[3]); b_.pop('interaction'); b_.update(kw); return A_(V, sec + J[:3] + [b_])
+    TB = ('TECHNICAL_BLOCK', 'PHYSICAL_OR_PARITY_OR_GEOMETRY')
+    r['m1b_false_parity_with_missing_interaction'] = ok(both(av_true_equals_wrong_bitwise=False), *TB) and ok(both(x2v_true_equals_wrong_bitwise=False), *TB) and \
+        ok(both(blind_true_equals_wrong_bitwise=False), *TB) and ok(both(payload_true_equals_wrong_bitwise=False), *TB)
+    r['m1b_false_geometry_with_malformed_step'] = ok(both(component_geometry_ok=False, step='3'), *TB) and ok(both(component_spans_true_equals_wrong=False, step=None), *TB)
+    r['m1b_missing_or_nonbool_parity_is_not_false'] = ok(both(av_true_equals_wrong_bitwise=None), I_, 'INCOMPLETE_RECORDS') and \
+        ok(both(av_true_equals_wrong_bitwise=0), I_, 'INCOMPLETE_RECORDS') and ok(both(true_blind=None), I_, 'INCOMPLETE_RECORDS')
+    r['m1b_false_flag_reported'] = both(av_true_equals_wrong_bitwise=False)['coverage']['false_integrity_flags'] == [{'index': 6, 'flags': ['av_true_equals_wrong_bitwise']}]
+    r['m1b_physical_fail_first'] = ok(A_(dict(V, PHYSICAL_READ='FAIL'), ['junk']), *TB) and ok(A_(dict(V, PHYSICAL_READ=None), sec + J), *TB)
+    # M1c: the handler result for an unexpected exception (the handler itself is exercised by the CPU harness on the generated code)
+    try: raise RuntimeError('forced')
+    except RuntimeError as exc_: ae = audit_error891(exc_, save=False)
+    r['m1c_error_is_technical_block'] = ae['COMPONENT_AUDIT'] == 'TECHNICAL_BLOCK' and ae['reason'] == 'AUDIT_ERROR RuntimeError: forced' and \
+        'RuntimeError: forced' in ae['traceback'] and 'traceback_file' not in ae
     only_bad = A_(V, ['not a dict', {'episode_id': 'E'}])
     r['m1_only_malformed_points_not_not_measured'] = ok(only_bad, I_, 'INCOMPLETE_RECORDS') and len(only_bad['coverage']['incomplete_records']) == 2
     r['m1_real_false_parity_still_block'] = ok(A_(V, sec + J[:3] + [dict(J[3], av_true_equals_wrong_bitwise=False)]), 'TECHNICAL_BLOCK', 'PHYSICAL_OR_PARITY_OR_GEOMETRY')
@@ -547,7 +649,8 @@ def st891():
     for nm, raw in (('one_byte', B890_RAW891[:700] + b'#' + B890_RAW891[701:]), ('appended', B890_RAW891 + b'\nprint(1)\n'), ('truncated', B890_RAW891[:-9])):
         try: base890_891(raw); r['base890_%s_refused' % nm] = False
         except AssertionError: r['base890_%s_refused' % nm] = True
-    r['base890_reproducible'] = base890_891(B890_RAW891)[0] == W890_891 and apply890(apply890(SRC889_890, [('rename',) + x for x in RENAMES891]), PATCHES891) == SRC889_891
+    r['base890_reproducible'] = base890_891(B890_RAW891)[0] == W890_891 and \
+        wrap_console891(apply890(apply890(SRC889_890, [('rename',) + x for x in RENAMES891]), PATCHES891)) == SRC889_891
     r['chain_889_890_sha'] = _h891.sha256(SRC889_890.encode()).hexdigest() == SRC889_890_SHA891
     body = 'x = 1\n'; lk = '# TEST891 BODY-SHA256 ' + _h891.sha256(body.encode()).hexdigest()
     r['lock_891_ok_890_header_refused'] = body_lock889(lk + '\n' + body)['ok'] and not body_lock889(lk.replace('TEST891', 'TEST890') + '\n' + body)['ok']
