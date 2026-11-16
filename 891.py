@@ -1,4 +1,4 @@
-# TEST891 BODY-SHA256 478364540a1b39c2dd11c73b1f5d7501751a8b0832d9635cdd465e9414eb48e7
+# TEST891 BODY-SHA256 e4ef58c8ed4e4e22764add9c38d5228cde90ca1f9256649bce1a82b392b5362f
 # AKBASCORE SILICON HIPPOCAMPUS - TEST891 - X2/A COMPONENT-VISIBILITY 2x2 AUDIT on TEST890 (one Colab cell, one Run, A100-SXM4-80GB)
 # Contract: K3.1 "TEST890 kaynak/log dogrulamasi ve TEST891 DESIGN_LOCKED" + "CLAUDE ICIN TEST891 KESIN KOD URETIM VE TAM DENETIM
 # TALIMATI" (16 Nov 2026). The only new measurement: two audit-only counterfactual CAR reads on the same SSD cartridge load/append
@@ -15,7 +15,7 @@
 # No training, LoRA, backward, RAG, text replay, hooks, router, oracle, answer fixing, UNKNOWN rule, override. GPU_NOT_RUN_BY_AUTHOR.
 import time as _t891
 T_CELL891 = _t891.perf_counter()                       # the single 75-minute clock starts here (before any download)
-import ast as _a891, copy as _c891, hashlib as _h891, json as _j891, re as _r891, urllib.request as _u891
+import ast as _a891, copy as _c891, hashlib as _h891, json as _j891, math as _m891, re as _r891, urllib.request as _u891
 B890_URL891 = ('https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/'
                '92d0433fc688b4054fd0baace985978ddbdd373c/890.py')
 B890_BLOB891 = '9daee7314cc5e3870f7aafb2871bbf7571c84c00'
@@ -42,7 +42,7 @@ PATCHES891 = (                                                                  
     ('prereg', 'PREREG889.update(PREREG890)\n', 'PREREG889.update(PREREG890)\nPREREG889.update(PREREG891)\n', 1),
     ('runtime_scan', "'payload_class890', 'payload_audit890')",
      "'payload_class890', 'payload_audit890', 'comp_masks891', 'interaction891', 'component_fields891',\n"
-     "                  'visibility_class891', 'component_audit891')", 1),
+     "                  'visibility_class891', 'component_audit891', 'calls_gate891', 'record_problems891')", 1),
     ('read_masks', "    P = [n0 + int(entry['provenance']['spans_body']['X2'][0]), n0 + q]                       # TEST891: [X2, A, V_AFTER]\n",
      "    P = [n0 + int(entry['provenance']['spans_body']['X2'][0]), n0 + q]                       # TEST891: [X2, A, V_AFTER]\n"
      "    CM = comp_masks891(entry['provenance']['spans_body'], n0, q)               # TEST891: X2_VISIBLE / A_VISIBLE key masks\n", 1),
@@ -51,6 +51,9 @@ PATCHES891 = (                                                                  
      "           'component_v_is_blind_span': CM['record']['v_span'] == V, 'n0': n0, 'q': q,", 1),
     ('read_dispatch', "() if m == 'FULL' else [P] if m == 'PAYLOAD_BLIND' else [V], m == 'SHAM')",
      "() if m == 'FULL' else [P] if m == 'PAYLOAD_BLIND' else CM['masks'][m] if m in CM['masks'] else [V], m == 'SHAM')", 1),
+    ('read_calls', "    del g, cp\n    bad = sorted(k for k, x in rec.items() if isinstance(x, bool) and not x)\n",
+     "    del g, cp\n    calls_gate891(rec, modes)                                                  # TEST891: exactly 1 call per mode\n"
+     "    bad = sorted(k for k, x in rec.items() if isinstance(x, bool) and not x)\n", 1),
     ('modes_true', "first, ('FULL', 'SHAM', 'BLIND', 'PAYLOAD_BLIND'))", 'first, %s)' % MODES_T891, 1),
     ('modes_wrong', "first, ('FULL', 'BLIND', 'PAYLOAD_BLIND'))", 'first, %s)' % MODES_W891, 1),
     ('call_parity', "                                cT['calls_PAYLOAD_BLIND'] != cW['calls_PAYLOAD_BLIND']:",
@@ -97,28 +100,32 @@ PATCHES891 = (                                                                  
 CHANGED_FUNCS891 = ('capture889', 'episode889', 'read889')        # against the TEST890 text; every other function AST-identical
 LOCKED891 = ('xcar878', 'xspan878', 'control_step867', 'execute866', 'write_exp878', 'append_exp878', 'write_appraisal889',
              'write_pair889', 'donor_v889', 'verdict889', 'same_reading881', 'same873')
-OWN_FUNCS891 = ('canon891', 'base890_891', 'lockdiag891', 'comp_masks891', 'interaction891', 'component_fields891',
+OWN_FUNCS891 = ('canon891', 'base890_891', 'lockdiag891', 'comp_masks891', 'interaction891', 'component_fields891', 'calls_gate891',
+                'record_problems891',
                 'visibility_class891', 'component_audit891', 'source891', 'st891')
 # LINEDIG891: sha256[:4] of every canonical body line except its own data lines (paste diagnostics only, not a lock)
 LINEDIG891 = (
-    'd424e0e85a15df5d36edae214b2f663857152f814d0e822547928e64ca08b239af18f8e9a0750657cce948ef9c594851'  #LD890
-    '248f908525a260f1615f7a2ec507b588732fe7e37180a90e71a1805d3f7ba04a91632f775f79bee521fa5ba6005cca84'  #LD890
-    'e5368001462b9dbaac3e857211e49b86bc1860230f1b00c313aaea67460bc8bbd3b47c6f82a1696dd3190b2ffedd290b'  #LD890
-    '16d773fc8e3f9e5c6bfe4ee60286e048b47e8d9084f9efb96b6c9d588f16c0c996882228335b5154d437155fe2b009af'  #LD890
-    'df9a947d213cee86c6e05b54a1a1b0f591e6c50d99637ba67b9490a85407a94fba878abdba06d93b5d6aeb03bb3941b6'  #LD890
-    '8761dac33b7e29fc5ba195b9990dc94f1f8d5d7244c1f3300e804a28ed96590b69dac3f616ecf4f2edd21f71b1742bb1'  #LD890
-    '78410d88d83c9bf3c8637b00e605c2dc0ecc14a7309c8908b02b6b9bacfd74c2ce47e1c90e19fea1ad9213cf1f6d8449'  #LD890
-    'ea38e434b08b0907be8965f5136ccd891eb72f6fad820aea7a52a66f6b951668bb0aaadb9880e2243f99a087c94fff17'  #LD890
-    '3396ead9aacfa36b0a6fe50ecd79f6f1ae1153589645cd4f46706815c52f5788be834618001127fe71fc2924a1653aff'  #LD890
-    '204e000afcd9ad9ee7b76514a62d0d30ce17c05f5e41d80953292ce5e2416715deaf57b563b5475ab45ec7ccec98421a'  #LD890
-    'eba265c360402506792f2149308c9f12aaeea090f2e88a40e75a0dba3faca2b281e9193340cf07f7a7efa5a9d0982a0f'  #LD890
-    'ac746479a452e62e2dea6dd63b592d5d2c1a91db2739f8e13cbae08e3e8c8b0bc84a36957e4a23b20a066921d9832265'  #LD890
-    'd3a2b9b4bb966db43a06e397af07157f430b251789b4902e522d7440a4de69770df8502da683aef69e913bb8663c91f2'  #LD890
-    '8c16ea2ad2e424b5d42c051dc22b3f2ec3152900c321e2e242708255b84eccae99beceafc4b505a67489c27a41ca2154'  #LD890
-    '8d66aca6b4527b1c1c94c094e911b31d747c47235c9262f4b69de457c74cd7a450e5e6d37bced4688820179990488869'  #LD890
-    'da02cbad6f439691f79b9fc012945bf04348e2d2f496df5c185cbb3956967b83903c9ef8f2079e1454e0abd58043d3fe'  #LD890
-    '7f5419c40a9ce7a013d81b3a96562153542b6b418b4d2770586d23d5c8488d873e8bb2be4c4adfb08703505233ff573e'  #LD890
-    '33c2ace777f0d841ac54a2e0a1afc4a758d614cf9c18842fe9d526e60b04a92f1fca0424f4c44065'  #LD890
+    'd424e0e85a15df5d36edae214b2f663857152f814d0e822547928e64ca08b239e8ccf8e9a0750657cce948ef9c594851'  #LD890
+    '248f908525a260f1615f7a2ec507b588732fe7e37180a90e71a1805d3f7ba04a91632f775f79aa9121fa5ba6005cca84'  #LD890
+    'e5368001462b9dbab92968fd4f89ac3e857211e49b86bc1860230f1b00c313aaea67460bc8bbd3b47c6f82a1696dd319'  #LD890
+    '0b2ffedd290b16d773fc8e3f9e5c6bfe4ee60286e048b47e8d9084f9efb96b6c9d588f16c0c996882228335b5154d437'  #LD890
+    '155fe2b009afdf9a947da721d63eee86c6e05b54a1a1b0f591e6c50d99637ba67b9490a85407a94fba878abdba06d93b'  #LD890
+    '5d6aeb03bb3941b68761dac33b7e29fc5ba195b9990dc94f1f8d5d7244c1f3300e804a28ed96590b69dac3f616ecf4f2'  #LD890
+    'edd21f71b1742bb178410d88d83c9bf3c8637b00e605c2dc0ecc14a7309c8908c112b02b6b9baf0826d574c2ce47e1c9'  #LD890
+    '0e19fea1ad9213cf1f6d8449ea38e434b08b58d97bdf4392be898428cd891eb72f6fad820aea7a52a66f6b951668bb0a'  #LD890
+    'aadb9880e2243f99a087fb3ebf94f203ecc6aacfa36b0a6fe50ecd79f6f1ae1153589645cd4f46706815c52f5788be83'  #LD890
+    '4618001127fe71fc2924a1653aff204e000afcd9ad9ee7b76514a62d0d30ce17c05f5e41d8095329f93be3e2cda3494b'  #LD890
+    '8efb13ad7da8ce57f198bbe6bd3c39cb1a9596936e55f90c2f3a4c18649565ba2ce5e2416715deaf57b563b5475ab45e'  #LD890
+    'c7ccec98421aa93d4c77ef586e1965c381b2792f2149308c9f12aaeea090f2e88a40e75a0731193340cf07f7a7efa5a9'  #LD890
+    'd0982a0fac746479a452e62e2deaa13c3b590c132c1a8bcb91db2739f8e1e08e3e8c8b0bc84a36957e4a23b20a066921'  #LD890
+    'd9832265d3a2b9b4bb966db43a06e397af07157f430b2517d7222b98902e522d7440a4de69770df8c060614ca683aef6'  #LD890
+    '9e913bb8663c91f28c16ea2ad2e424b55b9c5fd363d7d42c051dc22b3f2ec3152900c321e2e242708255b84eccae99be'  #LD890
+    'ceafc4b505a67489c27a41ca21548d66aca6b4527b1c1c94c094e911b31d747c47235c9262f4b69de457c74cd7a450e5'  #LD890
+    'e6d37bced4688820179990488869da02cbad6f439691f79b9fc012945bf04348e2d2f496df5c185cbb3956967b83903c'  #LD890
+    '9ef8f2079e1454e0abd58043d3fe7f5419c40a9ce7a013d81b3a96562153542b6b418b4d2770586d23d5c8488d873e8b'  #LD890
+    'b2be4c4adfb08703505233ff573e33c2ace777f0d841ac54a2e0a1afcab5ce217acb3e26748df0e5f98847267af16ff9'  #LD890
+    'b76dbbff7b67eaaec179f5ff358e7b10a1ad4c286d169deb3e322aa45e976e6efeaee632896d01e022d434e32d5a4814'  #LD890
+    'c3d21e2cce015265f6530f530e03cec0690289a0c4a758d614cf9c18842fe9d526e60b04a92f1fca0424f4c44065'  #LD890
     )  #LD890
 
 
@@ -181,9 +188,11 @@ PREREG891 = {
                        'V_AFTER=[L2+la,q] (EVALUATION slot + V_after rows, the exact BLIND span); absolute = n0 + span; '
                        'X2_VISIBLE masks A and V_AFTER, A_VISIBLE masks X2 and V_AFTER: xcar878(env, g, X, spans, sham=False); '
                        'union of the two masks = the PAYLOAD_BLIND key set, intersection = the V_AFTER key set, no B column; '
+                       'endpoints, n0 and q must be type int (no bool / float / str), spans exactly two elements; '
                        'empty / overlapping / non-contiguous / out-of-range span -> PHYSICAL_COMPONENT_MASK_GEOMETRY; TRUE == WRONG '
                        'exactly (same_reading881: every token logp, action, argmax, abstain, mass) else PHYSICAL_COMPONENT_VISIBLE_LEAK; '
-                       'one budget call and 5 forwards per read; +4 reads per raw point (TRUE 6, WRONG 5); never executed',
+                       'exactly one budget call (5 forwards) per mode read, gated (calls_gate891 -> PHYSICAL_CALL_CARDINALITY) '
+                       'inside read889 before it returns; +4 reads per raw point (TRUE 6, WRONG 5); never executed',
     'cells': {'(1,1)': 'BLIND', '(1,0)': 'X2_VISIBLE', '(0,1)': 'A_VISIBLE', '(0,0)': 'PAYLOAD_BLIND', 'V_AFTER': 'masked in all four'},
     'interaction': 'I_w = (p11,w - p10,w) - (p01,w - p00,w) on the unrounded normalized six-action probabilities and the same '
                    'contrast on the teacher-forced sequence logp; descriptive (nonzero I_w is not a binding proof)',
@@ -196,10 +205,11 @@ PREREG891 = {
                     'A_VISIBLE, NONE argmax (TRUE arm; TRUE == WRONG is gated)'},
     'audit_verdict': 'COMPONENT_AUDIT, in this order: no point -> NOT_MEASURED / NO_POINTS; PHYSICAL_READ != PASS or any BLIND / '
                      'PAYLOAD / X2_VISIBLE / A_VISIBLE TRUE != WRONG or any mask geometry flag false -> TECHNICAL_BLOCK / '
-                     'PHYSICAL_OR_PARITY_OR_GEOMETRY; any of the seven expected strata absent -> INCONCLUSIVE / '
+                     'PHYSICAL_OR_PARITY_OR_GEOMETRY (a missing parity field is not a False); any malformed record (preflight '
+                     'record_problems891: missing / mistyped / non-finite field, summary without all six actions) -> INCONCLUSIVE '
+                     '/ INCOMPLETE_RECORDS; any of the seven expected strata absent -> INCONCLUSIVE / '
                      'INCOMPLETE_EXPECTED_POINTS; any unique record of a primary stratum with B == N -> INCONCLUSIVE / '
-                     'EXPECTED_BLIND_FLIP_ABSENT; with P != N -> INCONCLUSIVE / PAYLOAD_890_NOT_REPRODUCED; any required field '
-                     'missing -> INCONCLUSIVE / INCOMPLETE_RECORDS; primary classes contain THIRD_ARGMAX -> INCONCLUSIVE / '
+                     'EXPECTED_BLIND_FLIP_ABSENT; with P != N -> INCONCLUSIVE / PAYLOAD_890_NOT_REPRODUCED; primary classes contain THIRD_ARGMAX -> INCONCLUSIVE / '
                      'THIRD_ARGMAX; more than one class -> INCONCLUSIVE / MIXED; else the one class over every unique record of '
                      'the four primary strata. No majority vote, no substitution, raw duplicates never add coverage; priority and '
                      'secondary strata are descriptive only',
@@ -219,10 +229,10 @@ def lockdiag891(src):
 
 def comp_masks891(sp, n0, q):
     # absolute key masks of the two new cells from the writer spans; fail-closed on any geometry other than [X2][A][V_AFTER] = [0, q)
-    try:
-        x2, a, v = [[int(sp[k][0]), int(sp[k][1])] for k in ('X2', 'A', 'V_AFTER')]; n0, q = int(n0), int(q)
-    except (KeyError, TypeError, ValueError, IndexError) as exc:
-        raise Gate883('PHYSICAL_COMPONENT_MASK_GEOMETRY spans %r: %s' % (sp, exc))
+    two = lambda x: isinstance(x, (list, tuple)) and len(x) == 2 and all(type(e) is int for e in x)   # strict: no bool / float / str
+    if not (isinstance(sp, dict) and all(two(sp.get(k)) for k in ('X2', 'A', 'V_AFTER')) and type(n0) is int and type(q) is int):
+        raise Gate883('PHYSICAL_COMPONENT_MASK_GEOMETRY malformed provenance %r n0=%r q=%r' % (sp, n0, q))
+    x2, a, v = [[sp[k][0], sp[k][1]] for k in ('X2', 'A', 'V_AFTER')]
     if not (n0 > 0 and 0 == x2[0] < x2[1] == a[0] < a[1] == v[0] < v[1] == q):
         raise Gate883('PHYSICAL_COMPONENT_MASK_GEOMETRY %r n0=%r q=%r' % (sp, n0, q))
     X, A, V = [[n0 + s[0], n0 + s[1]] for s in (x2, a, v)]
@@ -264,6 +274,30 @@ def component_fields891(rT, rW, cT, cW):
             'cartridge_sha_true': cT.get('cartridge_tensor_sha'), 'cartridge_sha_wrong': cW.get('cartridge_tensor_sha')}
 
 
+def calls_gate891(rec, modes):
+    # exactly one locked xcar878 (one budget849 call = 1 initial X forward + 4 two-token continuations) per mode actually read
+    got = {k[6:]: v for k, v in rec.items() if k.startswith('calls_')}
+    if sorted(got) != sorted(modes) or len(set(modes)) != len(modes) or any(not (type(v) is int and v == 1) for v in got.values()):
+        raise Gate883('PHYSICAL_CALL_CARDINALITY %s modes=%s calls=%s' % (rec.get('cartridge'), list(modes), got))
+
+
+def record_problems891(p):
+    # preflight of every field component_audit891 reads; [] = well formed (missing parity is a record problem, never a False)
+    fin = lambda x: type(x) in (int, float) and _m891.isfinite(x)
+    six = lambda d: isinstance(d, dict) and set(d) == set(ACTIONS_M867) and all(fin(x) for x in d.values())
+    if not isinstance(p, dict): return ['NOT_A_DICT']
+    bad = [k for k in ('episode_id', 'unique_key', 'world', 'condition') if not isinstance(p.get(k), str)]
+    bad += ['step'] if type(p.get('step')) is not int else []
+    bad += [k for k in ('a_none', 'a_true_blind', 'a_true_payload_blind', 'a_true_x2_visible', 'a_true_a_visible')
+            if p.get(k) not in set(ACTIONS_M867) | {'INVALID'}]
+    bad += [k for k in ('blind_true_equals_wrong_bitwise', 'payload_true_equals_wrong_bitwise', 'x2v_true_equals_wrong_bitwise',
+                        'av_true_equals_wrong_bitwise', 'component_geometry_ok', 'component_spans_true_equals_wrong') if type(p.get(k)) is not bool]
+    bad += [k for k in ('tv_blind_x2v', 'tv_payload_x2v', 'tv_blind_av', 'tv_payload_av', 'tv_blind_payload', 'tv_none_payload') if not fin(p.get(k))]
+    bad += ['%s.%s' % (k, f) for k in ('interaction', 'none', 'true_blind', 'true_payload_blind', 'true_x2_visible', 'true_a_visible')
+            for f in ('p', 'seq_logp') if not (isinstance(p.get(k), dict) and six(p[k].get(f)))]
+    return bad
+
+
 def visibility_class891(p):
     n, b, y, x, a = p['a_none'], p['a_true_blind'], p['a_true_payload_blind'], p['a_true_x2_visible'], p['a_true_a_visible']
     if b == n: return 'NO_BLIND_FLIP'
@@ -277,10 +311,12 @@ def visibility_class891(p):
 
 def component_audit891(verdict, points):
     # read-only on verdict889 and the points; coverage over the seven fixed strata identities; every unique record is kept
-    U = unique_m888(points); rows = []
+    chk = [(p, record_problems891(p)) for p in points]
+    malformed = [{'index': i, 'episode_id': p.get('episode_id') if isinstance(p, dict) else None, 'problems': b}
+                 for i, (p, b) in enumerate(chk) if b]
+    U = unique_m888([p for p, b in chk if not b]); rows = []
     for p in U:
-        s = (p['world'], p['condition'], int(p['step'])); c = visibility_class891(p)
-        need = ('none', 'true_blind', 'true_payload_blind', 'true_x2_visible', 'true_a_visible')
+        s = (p['world'], p['condition'], p['step']); c = visibility_class891(p)
         rows.append({'episode_id': p['episode_id'], 'stratum': '%s_%s_t%d' % s, 'primary': s in PRIMARY890, 'priority': s in PRIORITY890,
                      'a_none': p['a_none'], 'a_blind': p['a_true_blind'], 'a_payload': p['a_true_payload_blind'],
                      'a_x2_visible': p['a_true_x2_visible'], 'a_a_visible': p['a_true_a_visible'], 'class': c,
@@ -290,10 +326,7 @@ def component_audit891(verdict, points):
                      'interaction': p['interaction'],
                      'parity': {k: p[k] for k in ('blind_true_equals_wrong_bitwise', 'payload_true_equals_wrong_bitwise',
                                                   'x2v_true_equals_wrong_bitwise', 'av_true_equals_wrong_bitwise')},
-                     'geometry_ok': p['component_geometry_ok'] is True and p['component_spans_true_equals_wrong'] is True,
-                     'complete': all(set((p.get(k) or {}).get('p') or {}) == set(ACTIONS_M867) and
-                                     set((p.get(k) or {}).get('seq_logp') or {}) == set(ACTIONS_M867) for k in need) and
-                                 set(p['interaction']['p']) == set(p['interaction']['seq_logp']) == set(ACTIONS_M867)})
+                     'geometry_ok': p['component_geometry_ok'] is True and p['component_spans_true_equals_wrong'] is True})
     name = lambda s: '%s_%s_t%d' % s
     strata = {}
     for s in EXPECTED891:
@@ -306,14 +339,14 @@ def component_audit891(verdict, points):
     cov = {'expected': [name(s) for s in EXPECTED891], 'not_occurred': [k for k, v in strata.items() if v['status'] == 'NOT_OCCURRED'],
            'primary_flip_absent': [k for k, v in strata.items() if v['status'] == 'EXPECTED_BLIND_FLIP_ABSENT'],
            'primary_payload_not_reproduced': [k for k, v in strata.items() if v['status'] == 'PAYLOAD_890_NOT_REPRODUCED'],
-           'incomplete_records': [r['stratum'] for r in rows if not r['complete']]}
+           'incomplete_records': malformed}
     tech = verdict.get('PHYSICAL_READ') != 'PASS' or any(not r['geometry_ok'] or not all(x is True for x in r['parity'].values()) for r in rows)
-    if not rows: a, why = 'NOT_MEASURED', 'NO_POINTS'
+    if not points: a, why = 'NOT_MEASURED', 'NO_POINTS'
     elif tech: a, why = 'TECHNICAL_BLOCK', 'PHYSICAL_OR_PARITY_OR_GEOMETRY'
+    elif malformed: a, why = 'INCONCLUSIVE', 'INCOMPLETE_RECORDS'
     elif cov['not_occurred']: a, why = 'INCONCLUSIVE', 'INCOMPLETE_EXPECTED_POINTS'
     elif cov['primary_flip_absent']: a, why = 'INCONCLUSIVE', 'EXPECTED_BLIND_FLIP_ABSENT'
     elif cov['primary_payload_not_reproduced']: a, why = 'INCONCLUSIVE', 'PAYLOAD_890_NOT_REPRODUCED'
-    elif cov['incomplete_records']: a, why = 'INCONCLUSIVE', 'INCOMPLETE_RECORDS'
     elif 'THIRD_ARGMAX' in cls: a, why = 'INCONCLUSIVE', 'THIRD_ARGMAX'
     elif len(cls) != 1: a, why = 'INCONCLUSIVE', 'MIXED'
     else: a, why = cls[0], 'ALL_%d_PRIMARY_RECORDS_ONE_CLASS_7_STRATA_COVERED' % len(prim)
@@ -337,14 +370,16 @@ def source891():
     changed = sorted(k for k in set(f) | set(f0) if k not in f or k not in f0 or _a891.dump(f[k]) != _a891.dump(f0[k]))
     rd, ep = f['read889'], f['episode889']
     calls = lambda node, nm: [n for n in _a891.walk(node) if isinstance(n, _a891.Call) and getattr(n.func, 'id', None) == nm]
-    xc, cm, cf = calls(rd, 'xcar878'), calls(rd, 'comp_masks891'), calls(ep, 'component_fields891')
+    xc, cm, cf, cg = calls(rd, 'xcar878'), calls(rd, 'comp_masks891'), calls(ep, 'component_fields891'), calls(rd, 'calls_gate891')
+    src_rd = _a891.unparse(rd)
     modes = sorted(_a891.unparse(n.args[10]) for n in calls(ep, 'read889'))
     has = lambda n, vals: any(isinstance(x, _a891.Constant) and x.value in vals for x in _a891.walk(n))
     reach = sorted({_a891.unparse(t) for n in _a891.walk(ep) if isinstance(n, _a891.Assign) and has(n, ('X2_VISIBLE', 'A_VISIBLE')) for t in n.targets})
     reading = sorted({_a891.unparse(n.value) for n in _a891.walk(ep) if isinstance(n, _a891.Assign)
                       and any(isinstance(x, _a891.Name) and x.id == 'reading' for x in n.targets)})
     src_ep = _a891.unparse(ep)
-    own = [fc[k] for k in ('comp_masks891', 'interaction891', 'component_fields891', 'visibility_class891', 'component_audit891')]
+    own = [fc[k] for k in ('comp_masks891', 'interaction891', 'component_fields891', 'visibility_class891', 'component_audit891',
+                           'calls_gate891', 'record_problems891')]
     banned = {'write_exp878', 'append_exp878', 'xappend878', 'execute866', 'control_step867', 'donor_v889', 'write_pair889',
               'write_appraisal889', 'load_exp878', 'xcar878', 'car873', 'open', 'exec', 'eval', 'setattr', 'globals'}
     facts = {'chain_889_890_reproduced': _h891.sha256(SRC889_890.encode()).hexdigest() == SRC889_890_SHA891,
@@ -355,6 +390,9 @@ def source891():
              'single_masked_kernel_call': len(xc) == 1 and _a891.unparse(xc[0].args[3]) ==
              "() if m == 'FULL' else [P] if m == 'PAYLOAD_BLIND' else CM['masks'][m] if m in CM['masks'] else [V]" and
              _a891.unparse(xc[0].args[4]) == "m == 'SHAM'",
+             'call_cardinality_gated_before_return': len(cg) == 1 and _a891.unparse(cg[0]) == 'calls_gate891(rec, modes)' and
+                                                     src_rd.find('for m in modes:') < src_rd.find('calls_gate891(rec, modes)') < src_rd.find('return (out, rec)'),
+             'strict_masks_before_kernel': src_rd.find('comp_masks891(') < src_rd.find('for m in modes:') < src_rd.find('xcar878('),
              'masks_from_writer_spans': len(cm) == 1 and _a891.unparse(cm[0]) == "comp_masks891(entry['provenance']['spans_body'], n0, q)",
              'modes_true_wrong_repeat': modes == ["('FULL', 'BLIND', 'PAYLOAD_BLIND', 'X2_VISIBLE', 'A_VISIBLE')",
                                                   "('FULL', 'SHAM', 'BLIND', 'PAYLOAD_BLIND', 'X2_VISIBLE', 'A_VISIBLE')", "('FULL',)"],
@@ -458,6 +496,50 @@ def st891():
     r['audit_blocked_missing_episode'] = ok(A_(V, [s_ for s_ in sec + J if s_['condition'] != 'MISSING']), I_, 'INCOMPLETE_EXPECTED_POINTS')
     r['audit_verdict889_immutable'] = V == keep and a['verdict889_unchanged']['OVERALL'] == 'TECHNICAL_BLOCK' and \
         not ({'OVERALL', 'TECHNICAL_STATUS', 'PAYLOAD_AUDIT', 'OUTCOME_BENEFIT', 'NATIVE_RECOVERY'} & set(a))
+    # H1: strict integer provenance (refused before any int() coercion; valid ints and tuples unchanged)
+    G = lambda **kw: dict(sp, **kw)
+    for nm, (spx, n0x, qx) in {'float_end': (G(X2=[0, 10.9], A=[10.9, 12]), 100, 20), 'float_int_like': (G(X2=[0, 10.0]), 100, 20),
+                               'str_end': ({'X2': ['0', '10'], 'A': ['10', '12'], 'V_AFTER': ['12', '20']}, 100, 20),
+                               'bool_end': (G(X2=[False, 10]), 100, 20), 'true_end': (G(A=[10, True]), 100, 20), 'none_end': (G(A=[10, None]), 100, 20),
+                               'float_n0': (sp, 100.9, 20), 'float_q': (sp, 100, 20.9), 'bool_n0': (sp, True, 20), 'str_q': (sp, 100, '20'),
+                               'negative_n0': (sp, -5, 20), 'zero_q': ({'X2': [0, 0], 'A': [0, 0], 'V_AFTER': [0, 0]}, 100, 0),
+                               'three_element': (G(A=[10, 11, 12]), 100, 20), 'one_element': (G(X2=[10]), 100, 20),
+                               'container_list': ([[0, 10], [10, 12], [12, 20]], 100, 20), 'span_str': (G(A='10:12'), 100, 20),
+                               'span_dict': (G(A={0: 10, 1: 12}), 100, 20), 'none_sp': (None, 100, 20)}.items():
+        try: comp_masks891(spx, n0x, qx); r['h1_refused_%s' % nm] = False
+        except Gate883 as exc: r['h1_refused_%s' % nm] = 'PHYSICAL_COMPONENT_MASK_GEOMETRY' in str(exc)
+    r['h1_tuple_valid_same_masks'] = comp_masks891({k: tuple(v) for k, v in sp.items()}, 100, 20)['masks'] == cm['masks']
+    # M2: exact call cardinality per mode actually read
+    def cg(rec, modes):
+        try: calls_gate891(rec, modes); return 'PASS'
+        except Gate883 as exc: return 'GATE' if 'PHYSICAL_CALL_CARDINALITY' in str(exc) else 'OTHER'
+    TM = ('FULL', 'SHAM', 'BLIND', 'PAYLOAD_BLIND', 'X2_VISIBLE', 'A_VISIBLE'); WM = ('FULL', 'BLIND', 'PAYLOAD_BLIND', 'X2_VISIBLE', 'A_VISIBLE')
+    one = lambda modes, **kw: dict({'cartridge': 'c', **{'calls_' + m: 1 for m in modes}}, **kw)
+    r['m2_true6_wrong5_one_each_pass'] = cg(one(TM), TM) == cg(one(WM), WM) == cg(one(('FULL',)), ('FULL',)) == 'PASS'
+    r['m2_refused'] = [cg(one(TM, calls_X2_VISIBLE=2), TM), cg(one(WM, calls_X2_VISIBLE=2), WM), cg(one(TM, calls_SHAM=0), TM),
+                       cg(one(TM, calls_SHAM=2), TM), cg(one(TM, calls_FULL=0), TM), cg(one(TM, calls_FULL=2), TM),
+                       cg(one(TM, calls_BLIND=True), TM), cg(one(TM, calls_A_VISIBLE=1.0), TM), cg(one(TM, calls_PAYLOAD_BLIND='1'), TM),
+                       cg(one(WM, calls_SHAM=1), WM), cg(one(WM), TM), cg(one(TM), TM + ('FULL',)), cg(one(TM, calls_EXTRA=1), TM)] == ['GATE'] * 13
+    # M1: malformed records -> INCOMPLETE_RECORDS (points present), physical failure first, zero points NOT_MEASURED
+    m1 = {'no_interaction': lambda q_: q_.pop('interaction'), 'no_interaction_p': lambda q_: q_.update(interaction={'seq_logp': I['seq_logp']}),
+          'no_interaction_seq': lambda q_: q_.update(interaction={'p': I['p']}), 'no_parity': lambda q_: q_.pop('x2v_true_equals_wrong_bitwise'),
+          'parity_not_bool': lambda q_: q_.update(av_true_equals_wrong_bitwise=1), 'no_geometry': lambda q_: q_.pop('component_geometry_ok'),
+          'no_span_parity': lambda q_: q_.pop('component_spans_true_equals_wrong'), 'no_tv': lambda q_: q_.pop('tv_blind_av'),
+          'tv_nan': lambda q_: q_.update(tv_payload_x2v=float('nan')), 'tv_inf': lambda q_: q_.update(tv_blind_x2v=float('inf')),
+          'tv_str': lambda q_: q_.update(tv_none_payload='0.1'), 'no_summary': lambda q_: q_.pop('true_x2_visible'),
+          'summary_5_of_6': lambda q_: q_.update(none={'p': {w: 0.1 for w in W6[:5]}, 'seq_logp': dict(base)}),
+          'summary_seq_nan': lambda q_: q_.update(true_blind={'p': dict(base), 'seq_logp': dict(base, **{W6[0]: float('nan')})}),
+          'no_action': lambda q_: q_.pop('a_true_a_visible'), 'action_unknown_word': lambda q_: q_.update(a_true_x2_visible='LEFT'),
+          'step_float': lambda q_: q_.update(step=3.0), 'no_unique_key': lambda q_: q_.pop('unique_key'),
+          'interaction_wrong_type': lambda q_: q_.update(interaction=[1, 2])}
+    for nm, fn in m1.items():
+        bad_ = _c891.deepcopy(J[3]); fn(bad_)
+        r['m1_%s' % nm] = ok(A_(V, sec + J[:3] + [bad_]), I_, 'INCOMPLETE_RECORDS') and \
+            ok(A_(dict(V, PHYSICAL_READ='FAIL'), sec + J[:3] + [bad_]), 'TECHNICAL_BLOCK', 'PHYSICAL_OR_PARITY_OR_GEOMETRY')
+    only_bad = A_(V, ['not a dict', {'episode_id': 'E'}])
+    r['m1_only_malformed_points_not_not_measured'] = ok(only_bad, I_, 'INCOMPLETE_RECORDS') and len(only_bad['coverage']['incomplete_records']) == 2
+    r['m1_real_false_parity_still_block'] = ok(A_(V, sec + J[:3] + [dict(J[3], av_true_equals_wrong_bitwise=False)]), 'TECHNICAL_BLOCK', 'PHYSICAL_OR_PARITY_OR_GEOMETRY')
+    r['m1_valid_records_have_no_problems'] = all(record_problems891(x) == [] for x in sec + J + XO + AO + E2)
     tb = ('x', 'a', 'Y', 1)
     for nm, txt, row in (('double', 'aXa', tb), ('missing', 'bcd', tb)):
         try: apply890(txt, [row]); r['patch_anchor_%s_refused' % nm] = False
