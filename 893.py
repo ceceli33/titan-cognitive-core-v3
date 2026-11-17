@@ -1,4 +1,4 @@
-# TEST893 BODY-SHA256 c6443ae1a137de67fe63236cba198bd3c95e2287b3d8144822ed6110b6e06b93
+# TEST893 BODY-SHA256 cd91c021f1830b58e6d882ce554629600b9b0fb316796b1ffb2c2d2c356019fc
 # AKBASCORE SILICON HIPPOCAMPUS - TEST893 (redefined) - PRE-POST-DELTA appraisal-transition cartridge on TEST892 (one Colab cell, one Run)
 # Contract: K3.1 "TEST893 Bagimsiz Mekanizma Denetimi ve Karar Raporu" (17 Nov 2026, decision DENEYI YENIDEN TANIMLA) + "CLAUDE ICIN
 # TEST893 YENIDEN TANIMLAMA VE ASGARI KOD GOREVI" (17 Nov 2026). Frozen Qwen2.5-72B-Instruct NF4 / BF16, one A100-SXM4-80GB.
@@ -136,15 +136,17 @@ LINEDIG893 = (
     'b9051efa0793015ff6cc1a78aef373dc26dc0325c375d91e6499b0f08d40d50c4ad64a7430f7660996201970e4d471c5'  #LD890
     '0376bc29d54b925b709cae2b1a2b24b55227c852c8ac9880e2245488c92a44c38055b4dd29aed21b94d29757bff4f88b'  #LD890
     '12ecff46bc78188855b9ffee3fe08b84a49c58e4d5e4c51d63d463bbba9162181435ad48f1d9eb2ac51c9099b9353c11'  #LD890
-    'a46b902dc68bb5d89282221423a58fc2b1e390cb268aa926a590edbe880bbecf17d35648e1b4c8b04b5580bcca79b8ca'  #LD890
-    '4248b7a2b3f8ce2513bab5bf84dc966097a033d189d908b4606c1c6b533b1307995c9b0ee0478060ae446cf574dbf8a3'  #LD890
-    'c16b79590c333b2fa5776a3b3c3bc80a1b194bad4e54c5a41ca5743e1029f969d92d68470535ff8482d2965fab15fdfd'  #LD890
-    'f4d30be210883650e64f6d588faa968aad13e17620e136219230cb52835b0545f31333b8a66b1d94386b9e59da1e40b9'  #LD890
-    'd21615995eb5e781102c1d947f89c94f2f372dac2ac62a3acca48d2944528bf87e5da50d7fbe10ec9ca01e8946e08ecd'  #LD890
-    '9b0370486d0b567f809c3334b5431b4b830ba68310223d32a2daf98449e6717150a8fcfa0b7bc321da05ec31734aca1a'  #LD890
-    'aa8b09c32925a179ea2ed2766ccac4b552df1cbba3de0abacb00b6ca794dac40db0bd4065a794a801cb648220b71741d'  #LD890
-    '14f0b0740b9d5857da9e2a332cb559a59ed1c5716da3118707d5b23146fefb457fd6254926be659234684f693f712cb9'  #LD890
-    'e37d013688e243757a31d5ebaad128bcd3abcc3e7598f4c44aab'  #LD890
+    'a46b902dc68bb5d89282221423a58fc2b1e390cb268aa926a5909937becf17d35648e1b4c8b04b5580bcca79b8ca4248'  #LD890
+    'b7a2b3f8ce2513bab5bf84dc04cb30d9284f3c1ca74bee7297a033d189d908b4606c1c6b533b1307995c9b0ee0478060'  #LD890
+    'ae446cf574dbf8a3c16b79590c333b2fa5776a3b3c3bc80a1b194bad4e54c5a41ca5743e1029f969d92d68470535ff84'  #LD890
+    '82d2965fd08af6f1d36cfdfd8c943afff4d3d3d3dabd6dbca453886b3a258d1b65c3f6515b7bb8cd10883650e64f6d58'  #LD890
+    '8faa968aad13e17620e136219230cb52835b0545f31333b8a66b1d94386b9e59da1e40b9d21615995eb5e781102c1d94'  #LD890
+    '7f89c94f2f372dac2ac62a3acca48d2944528bf87e5da50d7fbe10ec9ca01e8946e08ecd9b0370486d0b567f809c3334'  #LD890
+    'b5431b4b830ba68310223d32a2daf98449e6717150a8fcfa0b7bc321da05ec31734aca1aaa8b09c32925a179ea2ed276'  #LD890
+    '6ccac4b552df1cbba3de0abacb00b6ca794dac40db0bd4065a794a801cb648220b71980254869ca7677e73ee191414f0'  #LD890
+    'b0740b9d5857da9ecfcddf4e2cb559a59ed1c5716da311870e6407d5b231815c46fefb457fd6254926be65923468a649'  #LD890
+    '2d4d5adfedbec45270ddb0b53be618e6cfdb4ebc371c0052252e3f71e37d013688e243757a31d5ebaad128bcd3abcc3e'  #LD890
+    '7598f4c44aab'  #LD890
     )  #LD890
 
 
@@ -318,8 +320,7 @@ def fo_checks893(pend, pre, post, commit_seq, vt, dn, w):
     sv = pv['spans_body']['V_AFTER']
     return order and ft['role'] == 'NEW' and fw['role'] == 'PLACEBO' and ft['spans_in_V_AFTER'] == fw['spans_in_V_AFTER'] and \
         ft['spans_in_V_AFTER']['DELTA'][1] == sv[1] - sv[0] and pv['spans_body'] == wv['spans_body'] and \
-        ft['p_pre'] == fw['p_pre'] and ft['p_post'] == fw['p_post'] and all(x == 0.0 for x in fw['delta'].values()) and \
-        fw['delta_rows_abs_sum'] == 0.0 and vt['payload_sha'] != dn['payload_sha'] and ft['delta_rows_sha256'] != fw['delta_rows_sha256']
+        ft['p_pre'] == fw['p_pre'] and ft['p_post'] == fw['p_post'] and ft['payload_rows'] == fw['payload_rows']   # delta values: scientific
 
 
 def fo_record893(w, vt, dn, ep_id):
@@ -340,7 +341,12 @@ def fo_record893(w, vt, dn, ep_id):
 def fo_point893(d, B, ctx):
     # TEST893 point fields: the full start state at the read (B KV seal, mounted set, path) and the two separate hash schemas
     t, w = d['true'][1], d['wrong'][1]
-    return {'format893': FORMAT893, 'fo893': d.get('fo893'), 'B_seal893': full_seal881(B)['all'], 'mounted893': list(ctx['M']),
+    pt_, pw_ = d['true'][0]['provenance'], d['wrong'][0]['provenance']; fo_ = d.get('fo893') or {}
+    e2 = {r: {'X_sha256': pv['X_sha256'], 'action_token_ids': [int(x) for x in pv['action_token_ids']], 'pre_C_seal': rc['pre_C_seal'],
+              'O_sha': (fo_.get(rl) or {}).get('O_sha'), 'step_written': pv['step_written'], 'spans_body': pv['spans_body'],
+              'body_tokens': rc['body_tokens'], 'payload_rows': ((fo_.get(rl) or {}).get('fo') or {}).get('payload_rows')}
+          for r, rl, pv, rc in (('true', 'true', pt_, t), ('wrong', 'wrong', pw_, w))}
+    return {'format893': FORMAT893, 'fo893': d.get('fo893'), 'e2_identity893': e2, 'B_seal893': full_seal881(B)['all'], 'mounted893': list(ctx['M']),
             'path893': [p['text'] for p in ctx['path']], 'cartridge_sha_true': t['sha256'], 'cartridge_sha_wrong': w['sha256'],
             'cartridge_tensor_seal_true': t.get('tensor_sha'), 'cartridge_tensor_seal_wrong': w.get('tensor_sha'),
             'cartridge_schema893': {'file_sha_true': hex64_893(t['sha256']), 'file_sha_wrong': hex64_893(w['sha256']),
@@ -381,10 +387,24 @@ def verdict893(state, phys):
     out['SCIENTIFIC_VALIDITY'] = out['OUTCOME'] = 'NOT_MEASURED'
     if out['PHYSICAL_VALIDITY'] != 'PASS':
         out['VERDICT'] = 'TECHNICAL_BLOCK'; out['why'] = sorted(k for k, v in ck.items() if v is not True); return out
-    fn, fp = ((P1['NEW_10_FORK'].get('fo893') or {}).get('true') or {}).get('fo') or {}, ((P1['PLACEBO_10_FORK'].get('fo893') or {}).get('true') or {}).get('fo') or {}
+    fo = lambda k, r: (((P1[k].get('fo893') or {}).get(r) or {}).get('fo') or {})
+    fn, fp = fo('NEW_10_FORK', 'true'), fo('PLACEBO_10_FORK', 'true')
+    pl = [fo(k, 'wrong') for k in ('NEW_10_FORK', 'PLACEBO_10_FORK')]
     out['delta'] = fn.get('delta'); out['p_pre'] = fn.get('p_pre'); out['p_post'] = fn.get('p_post')
+    e2 = {k: P1[k].get('e2_identity893') or {} for k in D}
+    key = lambda x: _j893.dumps([x.get(f_) for f_ in ('X_sha256', 'action_token_ids', 'pre_C_seal', 'O_sha', 'step_written')], sort_keys=True)
     sc = {'slot_contract_equal': fn.get('slot_contract_equal') is True and fp.get('slot_contract_equal') is True,
-          'delta_nonzero_and_reproduced': isinstance(fn.get('delta'), dict) and any(x != 0.0 for x in fn['delta'].values()) and fn.get('delta') == fp.get('delta'),
+          'e2_identity_three_arms': all(set(e2[k]) == {'true', 'wrong'} and e2[k]['true'].get('O_sha') is not None for k in D) and
+                                    len({key(e2[k][r]) for k in D for r in ('true', 'wrong')}) == 1,
+          'pre_post_identical_NEW_PLACEBO': isinstance(fn.get('p_pre'), dict) and fn.get('p_pre') == fp.get('p_pre') and fn.get('p_post') == fp.get('p_post')
+                                            and all(f.get('p_pre') == fn['p_pre'] and f.get('p_post') == fn.get('p_post') for f in pl),
+          'new_placebo_same_geometry': all(_j893.dumps([e2[k][r].get(f_) for f_ in ('spans_body', 'body_tokens', 'payload_rows')]) ==
+                                           _j893.dumps([e2['NEW_10_FORK']['true'].get(f_) for f_ in ('spans_body', 'body_tokens', 'payload_rows')])
+                                           for k in ('NEW_10_FORK', 'PLACEBO_10_FORK') for r in ('true', 'wrong')),
+          'new_delta_rows_nonzero_and_reproduced': (fn.get('delta_rows_abs_sum') or 0.0) > 0.0 and (fp.get('delta_rows_abs_sum') or 0.0) > 0.0 and
+                                                   fn.get('delta_rows_sha256') == fp.get('delta_rows_sha256') is not None,
+          'placebo_delta_rows_zero': all(f.get('delta_rows_abs_sum') == 0.0 and f.get('role') == 'PLACEBO' and f.get('delta') and
+                                         all(x == 0.0 for x in f['delta'].values()) for f in pl),
           'headroom_old_Y0': Y['OLD_10_FORK'] == 0,
           'cross_episode_determinism': P1['NEW_10_FORK']['a_wrong'] == t4['PLACEBO_10_FORK'] and P1['PLACEBO_10_FORK']['a_true'] == t4['NEW_10_FORK']}
     out['scientific_checks'] = sc
@@ -486,21 +506,29 @@ def st893():
             eps.append({'episode_id': k, 'actions': acts, 'end': 'HORIZON_6'})
             if k == 'NONE_10_FORK': continue
             nw = k != 'OLD_10_FORK'
-            fo = {'delta': {'x': delta}, 'slot_contract_equal': slots_eq, 'p_pre': {'x': 0.5}, 'p_post': {'x': 0.5 + delta}} if nw else None
+            fo = {'role': 'NEW', 'delta': {'x': delta}, 'slot_contract_equal': slots_eq, 'p_pre': {'x': 0.5}, 'p_post': {'x': 0.5 + delta},
+                  'delta_rows_abs_sum': abs(delta), 'delta_rows_sha256': 'D%s' % delta} if nw else None
+            fz = {'role': 'PLACEBO', 'delta': {'x': 0.0}, 'slot_contract_equal': slots_eq, 'p_pre': {'x': 0.5}, 'p_post': {'x': 0.5 + delta},
+                  'delta_rows_abs_sum': 0.0, 'delta_rows_sha256': 'Z'} if nw else None
+            e2r = {'X_sha256': 'X2', 'action_token_ids': [1, 2], 'pre_C_seal': 'PC', 'O_sha': 'O', 'step_written': 2,
+                   'spans_body': {'V_AFTER': [9, 30 if nw else 22]}, 'body_tokens': 30 if nw else 22, 'payload_rows': 16 if nw else None}
             rd = {'explicit_equals_native_append_bitwise': True, 'B_full_seal_unchanged': True}
             pa = t4['NEW_10_FORK'] if nw else t4[k]; pw = (t4['PLACEBO_10_FORK'] if det or k != 'NEW_10_FORK' else 'STOP') if nw else t4[k]   # det=False: only the PLACEBO read inside NEW differs
             pts.append({'episode_id': k, 'step': 4, 'step_written': 2, 'donor_fit': {'donor_rows': 8, 'true_rows': 8, 'padded_mue': 0},
                         'repeat_reload_bitwise': True, 'read_true': dict(rd), 'read_wrong': dict(rd), 'cartridge_schema893': {'f': True},
                         'format893': 'NEW' if nw else 'OLD', 'X_sha256': 'X', 'B_tokens': 9, 'B_seal893': 'S', 'mounted893': ['a'], 'path893': ['p'],
-                        'a_none': 'ADVANCE', 'a_true': pa, 'a_wrong': pw, 'fo893': {'true': {'fo': fo}} if nw else {}})
+                        'a_none': 'ADVANCE', 'a_true': pa, 'a_wrong': pw, 'fo893': {'true': {'fo': fo}, 'wrong': {'fo': fz}} if nw else {},
+                        'e2_identity893': {'true': dict(e2r), 'wrong': dict(e2r)}})
             cls.append({'episode_id': k, 'ok': True, 'post_appraisal_step': 3})
         st = {'episodes': eps, 'points': pts, 'closures': cls, 'technical_status': 'COMPLETE', 'blocked_episodes': [], 'error': None,
               'scores': {k: {'Y': v} for k, v in Y.items()}}
         if bad: bad(st)
         return verdict893(st, {k: True for k in ('no_physical_failure', 'post_run_integrity', 'cleanup_clean', 'negatives_refused')})
     T4 = lambda o, n, p: {'OLD_10_FORK': o, 'NEW_10_FORK': n, 'PLACEBO_10_FORK': p}
+    G = T4('ADVANCE', 'BACKTRACK', 'ADVANCE')
     YY = lambda o, n, p, z=0: {'NONE_10_FORK': z, 'OLD_10_FORK': o, 'NEW_10_FORK': n, 'PLACEBO_10_FORK': p}
     q = lambda v: (v['VERDICT'], v['OUTCOME'])
+    YG = YY(0, 1, 0)
     r['pass_reachable'] = q(mk(T4('ADVANCE', 'BACKTRACK', 'ADVANCE'), YY(0, 1, 0))) == ('PASS', 'PASS_DELTA_SPECIFIC_GAIN')
     r['fail_no_gain'] = q(mk(T4('ADVANCE', 'BACKTRACK', 'ADVANCE'), YY(0, 0, 0))) == ('FAIL', 'FAIL_NO_GAIN')
     r['fail_placebo_also_gains'] = q(mk(T4('ADVANCE', 'BACKTRACK', 'BACKTRACK'), YY(0, 1, 1))) == ('FAIL', 'FAIL_NOT_DELTA_SPECIFIC')
@@ -508,9 +536,21 @@ def st893():
     r['same_decision_inconclusive'] = q(mk(T4('ADVANCE', 'BACKTRACK', 'BACKTRACK'), YY(0, 1, 0))) == ('INCONCLUSIVE', 'INCONCLUSIVE_SAME_DECISION')
     r['no_headroom_inconclusive'] = mk(T4('ADVANCE', 'BACKTRACK', 'ADVANCE'), YY(1, 1, 0))['VERDICT'] == 'INCONCLUSIVE'
     r['slot_contract_inconclusive'] = mk(T4('ADVANCE', 'BACKTRACK', 'ADVANCE'), YY(0, 1, 0), slots_eq=False)['VERDICT'] == 'INCONCLUSIVE'
-    r['zero_delta_inconclusive'] = mk(T4('ADVANCE', 'BACKTRACK', 'ADVANCE'), YY(0, 1, 0), delta=0.0)['VERDICT'] == 'INCONCLUSIVE'
+    v0 = mk(T4('ADVANCE', 'BACKTRACK', 'ADVANCE'), YY(0, 1, 0), delta=0.0)
+    r['zero_delta_inconclusive_not_block'] = v0['VERDICT'] == 'INCONCLUSIVE' and v0['PHYSICAL_VALIDITY'] == 'PASS' and \
+        v0['why'] == ['new_delta_rows_nonzero_and_reproduced']
+    for nm_, fn_ in (('e2_pre_C_seal', lambda s: s['points'][2]['e2_identity893']['true'].update(pre_C_seal='PX')),
+                     ('e2_X_sha', lambda s: s['points'][0]['e2_identity893']['wrong'].update(X_sha256='XX')),
+                     ('e2_action_ids', lambda s: s['points'][1]['e2_identity893']['true'].update(action_token_ids=[1, 3])),
+                     ('e2_O_sha', lambda s: s['points'][0]['e2_identity893']['true'].update(O_sha='O2')),
+                     ('p_pre', lambda s: s['points'][2]['fo893']['true']['fo'].update(p_pre={'x': 0.4})),
+                     ('p_post_placebo_role', lambda s: s['points'][1]['fo893']['wrong']['fo'].update(p_post={'x': 0.7})),
+                     ('placebo_nonzero', lambda s: s['points'][1]['fo893']['wrong']['fo'].update(delta_rows_abs_sum=0.5)),
+                     ('delta_not_reproduced', lambda s: s['points'][2]['fo893']['true']['fo'].update(delta_rows_sha256='D9')),
+                     ('geometry_new_placebo', lambda s: s['points'][2]['e2_identity893']['wrong'].update(body_tokens=31))):
+        v_ = mk(G, YG, bad=fn_)
+        r['scientific_%s_inconclusive' % nm_] = (v_['VERDICT'], v_['PHYSICAL_VALIDITY']) == ('INCONCLUSIVE', 'PASS')
     r['nondeterminism_inconclusive'] = mk(T4('ADVANCE', 'BACKTRACK', 'ADVANCE'), YY(0, 1, 0), det=False)['VERDICT'] == 'INCONCLUSIVE'
-    G = T4('ADVANCE', 'BACKTRACK', 'ADVANCE'); YG = YY(0, 1, 0)
     r['block_missing_episode'] = mk(G, YG, bad=lambda s: s['episodes'].pop())['VERDICT'] == 'TECHNICAL_BLOCK'
     r['block_padding'] = mk(G, YG, bad=lambda s: s['points'][1]['donor_fit'].update(padded_mue=1))['VERDICT'] == 'TECHNICAL_BLOCK'
     r['block_wrong_parity'] = mk(G, YG, bad=lambda s: s['points'][2]['read_wrong'].update(explicit_equals_native_append_bitwise=False))['VERDICT'] == 'TECHNICAL_BLOCK'
