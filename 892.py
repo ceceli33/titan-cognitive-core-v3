@@ -1,4 +1,4 @@
-# TEST892 BODY-SHA256 9480420cb3ebbab57c9e372448284038395504fab53c89b6489d74fe4a13e769
+# TEST892 BODY-SHA256 ef6872ffdf0dcb8e62bf88d49fd1994b71398dc6158988c9e7bc19aa34021a1e
 # AKBASCORE SILICON HIPPOCAMPUS - TEST892 - V_ONLY_OUTCOME_CAUSAL_READ on TEST891 (one Colab cell, one Run, A100-SXM4-80GB)
 # Contract: K3.1 "TEST891 Gercek GPU Sonrasi Bagimsiz Kok-Neden Analizi ve TEST892 Tasarimi" (7.1-7.7) + "CLAUDE'UN TEST892 GOREV
 # TALIMATI" (16 Nov 2026). The only new measurement: one audit-only counterfactual CAR read V_ONLY per cartridge (TRUE and WRONG
@@ -85,7 +85,22 @@ PATCHES892 = (                                                                  
     ('final_on_receipt_failure', "    print('TEST892 ARTIFACT_INCOMPLETE: receipt failed', type(_exc).__name__, _exc)\n",
      "    print('TEST892 ARTIFACT_INCOMPLETE: receipt failed', type(_exc).__name__, _exc)\n"
      "    print('V_ONLY_FINAL NATIVE_OUTCOME_ACTION_SEPARATION=TECHNICAL_BLOCK | V_ONLY_ARTIFACT_STATUS=TECHNICAL_BLOCK (receipt failed) | preliminary=%s' % (\n"
-     "        (STATE889.get('v_only_audit') or {}).get('NATIVE_OUTCOME_ACTION_SEPARATION'),))\n", 1),
+     "        (STATE889.get('v_only_audit') or {}).get('NATIVE_OUTCOME_ACTION_SEPARATION'),))\n"
+     "    _rpx = str(CC_ZIP).replace('.zip', '_RECEIPT.json')                     # TEST892: no local receipt may keep a final PASS\n"
+     "    try:\n"
+     "        _rcx = dict(_rc) if isinstance(globals().get('_rc'), dict) else {'zip': str(CC_ZIP)}\n"
+     "        _rcx['receipt_error'] = '%s: %s' % (type(_exc).__name__, _exc)\n"
+     "        _rcx['v_only_final'] = dict(_rcx.get('v_only_final') or {}, NATIVE_OUTCOME_ACTION_SEPARATION='TECHNICAL_BLOCK', V_ONLY_ARTIFACT_STATUS='TECHNICAL_BLOCK',\n"
+     "                                    OUTCOME_BENEFIT='NOT_MEASURED', preliminary=(STATE889.get('v_only_audit') or {}).get('NATIVE_OUTCOME_ACTION_SEPARATION'))\n"
+     "        with open(_rpx + '.tmp', 'w', encoding='utf-8') as _f: _f.write(_j889.dumps(_rcx, sort_keys=True, default=str, indent=1))\n"
+     "        _o889.replace(_rpx + '.tmp', _rpx)\n"
+     "        print('TEST892 RECEIPT rewritten as TECHNICAL_BLOCK:', _rpx)\n"
+     "    except BaseException as _exc2:\n"
+     "        for _q in (_rpx, _rpx + '.tmp'):\n"
+     "            try:\n"
+     "                if _o889.path.exists(_q): _o889.remove(_q)\n"
+     "            except BaseException: pass\n"
+     "        print('TEST892 RECEIPT could not be rewritten (%s: %s); local receipt removed' % (type(_exc2).__name__, _exc2))\n", 1),
     ('report_points', "'cartridge_sha_wrong')) for p_ in U_],",
      "'cartridge_sha_wrong', 'a_true_v_only', 'a_wrong_v_only', 'true_v_only',\n"
      "                                                 'wrong_v_only', 'v_only_token_logps', 'v_only_reading_fields', 'payload_token_logps', 'payload_reading_fields', 'top_two_true_v_only',\n"
@@ -119,37 +134,37 @@ LINEDIG892 = (
     'fc6e54738f00c0fa208a84bef2bc06863b0218bce9a4b0ca255d49c48716b22f1523a8905777155dae902934670eb237'  #LD890
     '5f0254219df93ab804245b2824bbd3c8b784681b4862a88152e20b2a9b8291cf3f3b9420a4b421049bb171fa9d492763'  #LD890
     '51650b2f2e27546315e3499205dbbeb09c7e7a377654b4dea9a800ed8fb2e2685efe76b20c33819405ca7a7348675db4'  #LD890
-    'fb9f71c59611d3af1aacd471fb7e68d36c3c2885171e5c353dca566c27cd66bc209a563ee5b5a207e29124e603d735e3'  #LD890
-    '0099618b574bd4929b752ad5ec524f843dd06c97fff6b3a1028315c1b0da0e43756909ca9e2a6f079e61e214fb0891e6'  #LD890
-    'c50d996307c6f3ccb97954071d867d1d5b5bf05e50285d6ab2a9070068f88761fd4bcd7ff6855e0f069225adc94f6d39'  #LD890
-    'd77f00edf330887b394b454fbb99fecc916c204cf9fa168694551f71b1744fd17d5c268515abd1300c0e06754f265b71'  #LD890
-    'e6edd3e381308dc41f3f912406eae6d9d3d2816651feeab80e1973dc0fdfcceb02fb18b7605b27ade9756d6162284776'  #LD890
-    '96ccccaad37380bbb6e81d60d45570beb01f701af17c9e5e6bf07dab37b613b48569e272cec9b1d361ec09c9e236bd42'  #LD890
-    '35da9be3dc905fa0a746b1ac33afd39db05e179e153e56a39880e224402849d1e8f4f758cd79febe672d588fd9de1d94'  #LD890
-    '8bc644f832ccf0d341974b984373213fbe83979074675444656910530c820cdacfb85adf9ebcc1de6a42ea3537920e7a'  #LD890
-    '5e80520526272efe77ef0f8bf5a4c715bbe6f4ca8be4f19839212368bc76852b7e33978933737724f9bdd3e6881540a5'  #LD890
-    '72081b08e4533672c237e9a44797b76f83654b960b3bf67fd360a0caca9ceea60907a0a16426067d80486d6dba39f177'  #LD890
-    'ce63f8ba6eb156fa517913289ea34840a6304525b3d6b9932f8a7962108f090061dc8e1a3adf4bb10912f4e6a51eace2'  #LD890
-    '3a977cee9010b3be4ccc8217683965ba79d5ddd163a4a23d63176832bd90ff0bd5516da8013f3991a2861933f32225a4'  #LD890
-    'b8164d39564865c387c84c9d07db755cb1d76e4f66d971899af5270fd6424ab98471c559167c31e02730163449401f78'  #LD890
-    'fa2abec3e6884d0970f38bcb311385d8edbb4cbcf13ee92e5a36354ae6fac43fac774599d5b46beed3a1be750bb3a784'  #LD890
-    '086e7ce0cbcb82cc36e77e215e6d18c89e2edea86921d983761b5ec7b63938238796b8967e6781c5133610e4a8c53292'  #LD890
-    '012b78e18225c829e1bbc43ddc14ea5da306a34fedc9ff27670f7a87dfcafc51a70d70fcdb8c53f91f2ebfbe07d32dd0'  #LD890
-    'd928695c608ebb83c94ff02ff886e1172e714e45172b7ff2ae16b6543a78b4879e22491b64d8917fb8b1c27c10ec85dc'  #LD890
-    'b628755e98cf7c57da1e30adb2e90683959bd9ab27c7b0f2be0dcaacd95794c2a0d7c5e47f30e9ac1d94444c3e492dd3'  #LD890
-    'f3a508782169d8c864bb430b44296e958989d615f2abd6a1abb49cffb8e61c8ba683cb27b38971ab2f0c77846e2a7e80'  #LD890
-    'd2e4aedd3ca8b1b0f4b3087ca40746ad5402725dbea9c321bafd20d6f896000c3073935009db74b9743faaf5ee600c57'  #LD890
-    'c5784c1ec509c4b5617e283cc27a1b6df752591c4502a0da752172c0b40fed9ccf29890aa500f07a7607ec8dafefffae'  #LD890
-    '3b88a532cd202b4e464b56b222c303b3b29bb07e2ebda677640611af93fcc99e7fd4ddee4c03d5276ccec179f5ff358e'  #LD890
-    'a1ad88439a8832f99fe727db35fb33ad8362d7b413b7e0f753c4214a08dc810df8e018b102e7743c3e713257c263a523'  #LD890
-    '45a2021460f354e0a30cd587f6ae25a8b21947f797850e44d3e9dc9b4660208c9eadce1b7b82f27952a635ed7d96a7ef'  #LD890
-    '7f0df83a00b80da8ffe3295d333df3b6761de1c63427931c95ee09b9186f204c084578780d727caffe3ac64ce560b3f0'  #LD890
-    'a3c2531444683bb25ffef85f9d42937dd482edcb479c3da3002db83ce25d796fb6478749b0fe6942dfdf0f77364ae747'  #LD890
-    '041708c601384bde5494248cc8f0ccd2823f2047f43b735c1aefef1855544ad3f24ec894ce8793253137e420307828fe'  #LD890
-    'ffc3b4aee4820a2e885c8877697b604e891be82f79da275ae1f5dfd4a2aa685f4027a47f01ebcb176d7957bae89a6ff1'  #LD890
-    '2fe9e24cae4be314fb55469289ad2b97901c67943bbc4afab4325da0cf58a11edb426d9fa3e933ef1901be81d4480444'  #LD890
-    '74abff340262c78e0f5184c10d9a6ce7971e5daffebb0bfc237bd5f8d5f2d6ea227fc4a76e3d8fa49c18b1f9e843463a'  #LD890
-    '17c805fb0aa5d9dcf4c4616b'  #LD890
+    'fb9f71c59611d3af1aacd471fb7e68d36c3c2885171e5c353dca566c7e20f5d84ab695db05a01599236f03e66ad9be27'  #LD890
+    '2f5acf48cbb175162710733966bc209a563ee5b5a207e29124e603d735e30099618b574bd4929b752ad5ec524f843dd0'  #LD890
+    '6c97fff6b3a1028315c1b0da0e43756909ca9e2a6f079e61e214fb0891e6c50d996307c6f3ccb97954071d867d1d5b5b'  #LD890
+    'f05e50285d6ab2a9070068f88761fd4bcd7ff6855e0f069225adc94f6d39d77f00edf330887b394b454fbb99fecc916c'  #LD890
+    '204cf9fa168694551f71b1744fd17d5c268515abd1300c0e06754f265b71e6edd3e381308dc41f3f912406eae6d9d3d2'  #LD890
+    '816651feeab80e1973dc0fdfcceb02fb18b7605b27ade9756d616228477696ccccaad37380bbb6e81d60d45570beb01f'  #LD890
+    '701af17c9e5e6bf07dab37b613b48569e272cec9b1d361ec09c9e236bd4235da9be3dc905fa0a746b1ac33afd39db05e'  #LD890
+    '179e153e56a39880e224402849d1e8f4f758cd79febe672d588fd9de1d948bc644f832ccf0d341974b984373213fbe83'  #LD890
+    '979074675444656910530c820cdacfb85adf9ebcc1de6a42ea3537920e7a5e80520526272efe77ef0f8bf5a4c715bbe6'  #LD890
+    'f4ca8be4f19839212368bc76852b7e33978933737724f9bdd3e6881540a572081b08e4533672c237e9a44797b76f8365'  #LD890
+    '4b960b3bf67fd360a0caca9ceea60907a0a16426067d80486d6dba39f177ce63f8ba6eb156fa517913289ea34840a630'  #LD890
+    '4525b3d6b9932f8a7962108f090061dc8e1a3adf4bb10912f4e6a51eace23a977cee9010b3be4ccc8217683965ba79d5'  #LD890
+    'ddd163a4a23d63176832bd90ff0bd5516da8013f3991a2861933f32225a4b8164d39564865c387c84c9d07db755cb1d7'  #LD890
+    '6e4f66d971899af5270fd6424ab98471c559167c31e02730163449401f78fa2abec3e6884d0970f38bcb311385d8edbb'  #LD890
+    '4cbcf13ee92e5a36354ae6fac43fac774599d5b46beed3a1be750bb3a784086e7ce0cbcb82cc36e77e215e6d18c89e2e'  #LD890
+    'dea86921d983761b5ec7b63938238796b8967e6781c5133610e4a8c5b4e9012b78e18225c829e1bbc43ddc14ea5da306'  #LD890
+    'a34fedc9ff27670f7a87dfcafc51a70d70fcdb8c53f91f2ebfbe07d32dd0d928695c608ebb83c94ff02ff886e1172e71'  #LD890
+    '4e45172b7ff2ae16b6543a78b4879e22491b64d8917fb8b1c27c10ec85dcb628755e98cf7c57da1e30adb2e90683959b'  #LD890
+    'd9ab27c7b0f2be0dcaacd95794c2a0d7c5e47f30e9ac1d94444c3e492dd3f3a508782169d8c864bb430b44296e958989'  #LD890
+    'd615f2abd6a1abb49cffb8e61c8ba683cb27b38971ab2f0c77846e2a7e80d2e4aedd3ca8b1b0f4b3087ca40746ad5402'  #LD890
+    '725dbea9c321bafd20d6f896000c3073935009db74b9743faaf5ee600c57c5784c1ec509c4b5617e283cc27a1b6df752'  #LD890
+    '591c4502a0da752172c0b40fed9ccf29890aa500f07a7607ec8dafefffae3b88a532cd202b4e464b56b222c303b3b29b'  #LD890
+    'b07e2ebda677640611af93fcc99e7fd4ddee4c03d5276ccec179f5ff358ea1ad88439a8832f99fe727db35fb33ad8362'  #LD890
+    'd7b413b7e0f753c4214a08dc810df8e018b102e7743c3e713257c263a52345a2021460f354e0a30cd587f6ae25a8b219'  #LD890
+    '47f797850e44d3e9dc9b4660208c9eadce1b7b82f27952a635ed7d96a7ef7f0df83a00b80da8ffe3295d333df3b6761d'  #LD890
+    'e1c63427931c95ee09b9186f204c084578780d727caffe3ac64ce560b3f0a3c2531444683bb25ffef85f9d42937dd482'  #LD890
+    'edcb479c3da3002db83ce25d796fb6478749b0fe6942dfdf0f77364ae747041708c601384bde5494248cc8f0ccd2823f'  #LD890
+    '2047f43b735c1aefef1855544ad3f24ec894ce8793253137e420307828feffc3b4aee4820a2e885c8877697b604e891b'  #LD890
+    'e82f79da275ae1f5dfd4a2aa685f4027a47f01ebcb176d7957bae89a6ff12fe9e24cae4be314fb55469289ad2b97901c'  #LD890
+    '67943bbc4afab4325da0cf58a11edb426d9fa3e933ef1901be81d448044474abff340262c78e0f5184c10d9a6ce7971e'  #LD890
+    '5daffebb0bfc237bd5f8d5f2d6ea227fc4a76e3d8fa49c18b1f9e843463a17c805fb0aa5d9dcf4c4616b'  #LD890
     )  #LD890
 
 
@@ -488,7 +503,7 @@ def trajectories892(episodes):
         d = {a: [e for e in episodes if isinstance(e, dict) and e.get('episode_id') == '%s_%s_%s' % (a, w, c)] for a in ('D_TRUE', 'D_WRONG')}
         if any(len(v) != 1 for v in d.values()): cells['%s_%s' % (w, c)] = {'status': 'NOT_COMPARED_MISSING_OR_BLOCKED'}; continue
         t, x = d['D_TRUE'][0], d['D_WRONG'][0]
-        if not all(isinstance(e.get('actions'), list) and all(isinstance(a, str) for a in e['actions']) and isinstance(e.get('end'), str) and e['end']
+        if not all(isinstance(e.get('actions'), list) and len(e['actions']) > 0 and all(isinstance(a, str) for a in e['actions']) and isinstance(e.get('end'), str) and e['end']
                    for e in (t, x)):                                             # actions AND the terminal end must exist on both sides
             cells['%s_%s' % (w, c)] = {'status': 'NOT_COMPARED_MALFORMED'}; continue
         cells['%s_%s' % (w, c)] = {'status': 'COMPARED', 'equal': dg(t) == dg(x), 'digest_true': dg(t), 'digest_wrong': dg(x)}
