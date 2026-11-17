@@ -1,4 +1,4 @@
-# TEST892 BODY-SHA256 352a80521b79a38b6eed2b97eff673168b0e44f5c6c455d4a0d170560d861c13
+# TEST892 BODY-SHA256 9480420cb3ebbab57c9e372448284038395504fab53c89b6489d74fe4a13e769
 # AKBASCORE SILICON HIPPOCAMPUS - TEST892 - V_ONLY_OUTCOME_CAUSAL_READ on TEST891 (one Colab cell, one Run, A100-SXM4-80GB)
 # Contract: K3.1 "TEST891 Gercek GPU Sonrasi Bagimsiz Kok-Neden Analizi ve TEST892 Tasarimi" (7.1-7.7) + "CLAUDE'UN TEST892 GOREV
 # TALIMATI" (16 Nov 2026). The only new measurement: one audit-only counterfactual CAR read V_ONLY per cartridge (TRUE and WRONG
@@ -72,6 +72,9 @@ PATCHES892 = (                                                                  
     ('readback', "        if _j889.loads(p_.read_text(encoding='utf-8'))['verdict']['TECHNICAL_STATUS'] != STATE889['verdict']['TECHNICAL_STATUS']:\n"
      "            raise OSError('READ_BACK_MISMATCH')\n",
      "        readback892(p_, report889, U_)                                       # TEST892: full canonical read-back\n", 1),
+    ('artifact_error_keeps_base_verdict',
+     "        STATE889['verdict'] = dict(STATE889['verdict'], TECHNICAL_STATUS='ARTIFACT_FAILURE', OVERALL='ARTIFACT_FAILURE')\n",
+     "        print('V_ONLY_ARTIFACT_STATUS=TECHNICAL_BLOCK | report write / read-back failed: %s | base verdict889 fields unchanged' % STATE889['artifact_errors'][-1])\n", 1),
     ('console_problems', "type(exc).__name__, exc, record_problems891(p_)))", "type(exc).__name__, exc, record_problems891(p_) + record_problems892(p_)))", 1),
     ('final_verdict', "    _rp = str(CC_ZIP).replace('.zip', '_RECEIPT.json')\n",
      "    _rc['v_only_final'] = v_only_final892(STATE889.get('v_only_audit'), artifact_gates892(CC_ZIP, _zip_ok, _rc['drive_zip_sha256_equal'], CC_DRIVE_DIR, STATE889))\n"
@@ -85,7 +88,7 @@ PATCHES892 = (                                                                  
      "        (STATE889.get('v_only_audit') or {}).get('NATIVE_OUTCOME_ACTION_SEPARATION'),))\n", 1),
     ('report_points', "'cartridge_sha_wrong')) for p_ in U_],",
      "'cartridge_sha_wrong', 'a_true_v_only', 'a_wrong_v_only', 'true_v_only',\n"
-     "                                                 'wrong_v_only', 'v_only_token_logps', 'v_only_reading_fields', 'top_two_true_v_only',\n"
+     "                                                 'wrong_v_only', 'v_only_token_logps', 'v_only_reading_fields', 'payload_token_logps', 'payload_reading_fields', 'top_two_true_v_only',\n"
      "                                                 'top_two_wrong_v_only', 'top_two_full', 'v_only_tw_exact', 'v_only_eq_payload_true',\n"
      "                                                 'v_only_eq_payload_wrong', 'tv_v_only_tw', 'tv_v_only_true_payload', 'tv_v_only_wrong_payload',\n"
      "                                                 'tv_full_tw', 'tv_full_blind_true', 'J', 'v_minus_payload_seq_logp', 'v_only_spans',\n"
@@ -116,34 +119,37 @@ LINEDIG892 = (
     'fc6e54738f00c0fa208a84bef2bc06863b0218bce9a4b0ca255d49c48716b22f1523a8905777155dae902934670eb237'  #LD890
     '5f0254219df93ab804245b2824bbd3c8b784681b4862a88152e20b2a9b8291cf3f3b9420a4b421049bb171fa9d492763'  #LD890
     '51650b2f2e27546315e3499205dbbeb09c7e7a377654b4dea9a800ed8fb2e2685efe76b20c33819405ca7a7348675db4'  #LD890
-    'fb9f1aacd471fb7e68d36c3c2885171e5c353dca566c27cd66bc209a325ee5b5a207e29124e603d735e30099618b574b'  #LD890
-    'd4929b752ad5ec524f843dd06c97fff6b3a1028315c1b0da0e43756909ca9e2a6f079e61e214fb0891e6c50d996307c6'  #LD890
-    'f3ccb97954071d867d1d5b5bf05e50285d6ab2a9070068f88761fd4bcd7ff6855e0f069225adc94f6d39d77f00edf330'  #LD890
-    '887b394b454fbb99fecc916c204cf9fa168694551f71b1744fd17d5c268515abd1300c0e06754f265b71e6edd3e38130'  #LD890
-    '8dc41f3f912406eae6d9d3d2816651feeab80e1973dc0fdfcceb02fb18b7b9266228477696ccccaad37380bbb6e81d60'  #LD890
-    '2b52701af17c7bcdcec9b1d361ec09c9e236bd4235da9be32141a746b1ac33afd39db05e179e153e56a39880e2244028'  #LD890
-    '49d1e8f4f758cd79febe672d588fd9de1d948bc644f832ccf0d341974b984373213fbe83979074675444656910530c82'  #LD890
-    '5adf9ebcc1de6a42ea3537920e7a5e80520526272efe77ef0f8bf5a4c715bbe6f4ca8be4f19839212368bc76852b7e33'  #LD890
-    '978933737724f9bdb28445063f524048b379b76f83654b96a5680ed3d3604d4e874f96076426067d80486d6dba39f177'  #LD890
-    'ce63f8ba6eb156fa517913289ea348406f644d1eb9932f8a7962108f090061dc8e1a3adf4bb10912f4e6a51eace23c60'  #LD890
-    'a30ab3be4ccc8217683965ba79d5ddd163a4a23d63176832bd90ff0bd5516da8013f3991a2861933f322b8164d395648'  #LD890
-    '65c387c84c9d07db755cb1d7bc0ae4e312d9270fd6424ab98471c559167c31e02730163449401f78fa2abec3e6884d09'  #LD890
-    '70f38bcb311385d8edbb4cbcf13ee92e5a36354ae6fac43fac774599d5b46beed3a1be750bb3a784086e7ce0cbcb82cc'  #LD890
-    '36e77e215e6d18c89e2edea86921d983761b5ec7b63938238796b8967e6781c5133610e4a8c5828178e18225c829dfed'  #LD890
-    'ea5da306a34fedc9ff27670f7a87dfcafc51a70d70fcdb8c53f91f2ebfbe07d32dd0d928695c608ebb83c94ff02ff886'  #LD890
-    'e117ad120ac05228917fc27c10ec85dcb628755e98cf7c57da1e30adb2e90683959bd9ab27c7b0f2be0dcaacd95794c2'  #LD890
-    'a0d7c5e47f30e9ac1d94444c3e492dd3f3a508782169d8c864bb430b44296e958989d615f2abd6a1abb49cffb8e61c8b'  #LD890
-    'a683cb27b38971ab2f0c77846e2a7e80d2e4aedd3ca8b1b0f4b3087ca40746ad5402725dbea9c321bafd20d6f896000c'  #LD890
-    '3073935009db74b9ee600c57c5784c1ec509c4b5617e283cc27a1b6df752591c4502a0da752172c0b40fed9ccf29890a'  #LD890
-    'a500f07a7607ec8dafefffae3b88a532cd202b4e464b56b222c303b3b29bb07e2ebda677640611af93fcc99e7fd4ddee'  #LD890
-    '4c03d5276ccec179f5ff358ea1ad88439a8832f99fe727db35fb33ad8362d7b413b7e0f753c4214a08dc810df8e018b1'  #LD890
-    '02e7743c3e713257c263a52345a2021460f354e0a30cd587f6ae25a8b21947f797850e44d3e9dc9b4660208c9eadce1b'  #LD890
-    '7b82f27952a635ed7d96a7ef7f0df83a00b80da8ffe3295d333df3b6761de1c63427931c95ee09b9186f204c08457878'  #LD890
-    '0d727caffe3ae560b3f0a3c2531444683bb25ffef85f9d42937dd482edcb8fff0f77364ae747041708c601384bde5494'  #LD890
-    '248cc8f0ccd2823f2047f43b735c1aefef1855544ad3f24ec894ce8793253137e4203078a2aa685f4027a47f01ebcb17'  #LD890
-    '6d7957bae89a6ff12fe9e24cae4be314fb55469289ad2b97901c67943bbc4afab4325da0cf58a11edb426d9fa3e933ef'  #LD890
-    '1901be81d448044474ab0262c78e0f5184c10d9a6ce7971ed5f8d5f2d6ea227fc4a76e3d8fa49c18b1f9e843463a17c8'  #LD890
-    '05fb0aa5d9dcf4c4616b'  #LD890
+    'fb9f71c59611d3af1aacd471fb7e68d36c3c2885171e5c353dca566c27cd66bc209a563ee5b5a207e29124e603d735e3'  #LD890
+    '0099618b574bd4929b752ad5ec524f843dd06c97fff6b3a1028315c1b0da0e43756909ca9e2a6f079e61e214fb0891e6'  #LD890
+    'c50d996307c6f3ccb97954071d867d1d5b5bf05e50285d6ab2a9070068f88761fd4bcd7ff6855e0f069225adc94f6d39'  #LD890
+    'd77f00edf330887b394b454fbb99fecc916c204cf9fa168694551f71b1744fd17d5c268515abd1300c0e06754f265b71'  #LD890
+    'e6edd3e381308dc41f3f912406eae6d9d3d2816651feeab80e1973dc0fdfcceb02fb18b7605b27ade9756d6162284776'  #LD890
+    '96ccccaad37380bbb6e81d60d45570beb01f701af17c9e5e6bf07dab37b613b48569e272cec9b1d361ec09c9e236bd42'  #LD890
+    '35da9be3dc905fa0a746b1ac33afd39db05e179e153e56a39880e224402849d1e8f4f758cd79febe672d588fd9de1d94'  #LD890
+    '8bc644f832ccf0d341974b984373213fbe83979074675444656910530c820cdacfb85adf9ebcc1de6a42ea3537920e7a'  #LD890
+    '5e80520526272efe77ef0f8bf5a4c715bbe6f4ca8be4f19839212368bc76852b7e33978933737724f9bdd3e6881540a5'  #LD890
+    '72081b08e4533672c237e9a44797b76f83654b960b3bf67fd360a0caca9ceea60907a0a16426067d80486d6dba39f177'  #LD890
+    'ce63f8ba6eb156fa517913289ea34840a6304525b3d6b9932f8a7962108f090061dc8e1a3adf4bb10912f4e6a51eace2'  #LD890
+    '3a977cee9010b3be4ccc8217683965ba79d5ddd163a4a23d63176832bd90ff0bd5516da8013f3991a2861933f32225a4'  #LD890
+    'b8164d39564865c387c84c9d07db755cb1d76e4f66d971899af5270fd6424ab98471c559167c31e02730163449401f78'  #LD890
+    'fa2abec3e6884d0970f38bcb311385d8edbb4cbcf13ee92e5a36354ae6fac43fac774599d5b46beed3a1be750bb3a784'  #LD890
+    '086e7ce0cbcb82cc36e77e215e6d18c89e2edea86921d983761b5ec7b63938238796b8967e6781c5133610e4a8c53292'  #LD890
+    '012b78e18225c829e1bbc43ddc14ea5da306a34fedc9ff27670f7a87dfcafc51a70d70fcdb8c53f91f2ebfbe07d32dd0'  #LD890
+    'd928695c608ebb83c94ff02ff886e1172e714e45172b7ff2ae16b6543a78b4879e22491b64d8917fb8b1c27c10ec85dc'  #LD890
+    'b628755e98cf7c57da1e30adb2e90683959bd9ab27c7b0f2be0dcaacd95794c2a0d7c5e47f30e9ac1d94444c3e492dd3'  #LD890
+    'f3a508782169d8c864bb430b44296e958989d615f2abd6a1abb49cffb8e61c8ba683cb27b38971ab2f0c77846e2a7e80'  #LD890
+    'd2e4aedd3ca8b1b0f4b3087ca40746ad5402725dbea9c321bafd20d6f896000c3073935009db74b9743faaf5ee600c57'  #LD890
+    'c5784c1ec509c4b5617e283cc27a1b6df752591c4502a0da752172c0b40fed9ccf29890aa500f07a7607ec8dafefffae'  #LD890
+    '3b88a532cd202b4e464b56b222c303b3b29bb07e2ebda677640611af93fcc99e7fd4ddee4c03d5276ccec179f5ff358e'  #LD890
+    'a1ad88439a8832f99fe727db35fb33ad8362d7b413b7e0f753c4214a08dc810df8e018b102e7743c3e713257c263a523'  #LD890
+    '45a2021460f354e0a30cd587f6ae25a8b21947f797850e44d3e9dc9b4660208c9eadce1b7b82f27952a635ed7d96a7ef'  #LD890
+    '7f0df83a00b80da8ffe3295d333df3b6761de1c63427931c95ee09b9186f204c084578780d727caffe3ac64ce560b3f0'  #LD890
+    'a3c2531444683bb25ffef85f9d42937dd482edcb479c3da3002db83ce25d796fb6478749b0fe6942dfdf0f77364ae747'  #LD890
+    '041708c601384bde5494248cc8f0ccd2823f2047f43b735c1aefef1855544ad3f24ec894ce8793253137e420307828fe'  #LD890
+    'ffc3b4aee4820a2e885c8877697b604e891be82f79da275ae1f5dfd4a2aa685f4027a47f01ebcb176d7957bae89a6ff1'  #LD890
+    '2fe9e24cae4be314fb55469289ad2b97901c67943bbc4afab4325da0cf58a11edb426d9fa3e933ef1901be81d4480444'  #LD890
+    '74abff340262c78e0f5184c10d9a6ce7971e5daffebb0bfc237bd5f8d5f2d6ea227fc4a76e3d8fa49c18b1f9e843463a'  #LD890
+    '17c805fb0aa5d9dcf4c4616b'  #LD890
     )  #LD890
 
 
@@ -221,7 +227,10 @@ PREREG892 = {
                         'action and top-two; a well-formed record re-derives from its native scores (tolerance %g): p >= 0 summing to 1, p = '
                         'exp(seq)/mass, seq = sum(token logps), mass, abstain = mass < ABSTAIN_MASS867, action, argmax_word, margin, top-two, the '
                         'five TV and J; V_ONLY spans = [X2 start, A end] of the component spans with n0 / q / cache tokens; cartridge SHAs and '
-                        'the exact-step donor fit (donor step = post-appraisal step) present' % (MIN_RAW892, 1e-9),
+                        'the exact-step donor fit present (donor SHA 64 lowercase hex, donor episode = NONE_<DONOR_M867[world]>_<condition>, '
+                        'donor step = post-appraisal step); the mass is finite and > 0 before any division; the three exact flags are '
+                        're-derived with the locked same_reading881 from the recorded token logps / action / argmax / abstain / mass of the '
+                        'V_ONLY and PAYLOAD_BLIND readings (a stored boolean is never trusted; missing evidence = malformed)' % (MIN_RAW892, 1e-9),
     'verdict': 'NATIVE_OUTCOME_ACTION_SEPARATION, in this order: PHYSICAL_READ != PASS or any strict bool False integrity flag on a raw '
                'point -> TECHNICAL_BLOCK / PHYSICAL_OR_PARITY_OR_GEOMETRY (also with zero points); no point -> NOT_MEASURED / NO_POINTS; unexpected audit '
                'exception -> TECHNICAL_BLOCK / AUDIT_ERROR; malformed record -> INCONCLUSIVE / INCOMPLETE_RECORDS; raw != %d in the expected '
@@ -230,10 +239,18 @@ PREREG892 = {
                'primary of world 10 AND >= 1 primary of world 09; NEGATIVE if no argmax and no top-two change on any of the unique points '
                '(sub-label DISTRIBUTION_ONLY if any TRUE/WRONG V_ONLY reading differs, else NO_TRUE_WRONG_DIFFERENCE); otherwise '
                'INCONCLUSIVE / FLIP_WITH_TV_BELOW_TAU, ONE_WORLD_ONLY, SECONDARY_ONLY or TOP_TWO_ONLY (first that applies); no specific '
-               'action is ever the right one. This is the PRELIMINARY verdict; the FINAL verdict (receipt v_only_final, console V_ONLY_FINAL) is '
+               'action is ever the right one. Every TV used by the verdict and by the distribution axis is recomputed from the validated six p '
+               'values (the stored TV is only checked for record integrity, tolerance 1e-9; tau is never applied to a stored value). '
+               'This is the PRELIMINARY verdict; the FINAL verdict (receipt v_only_final, console V_ONLY_FINAL) is '
                'TECHNICAL_BLOCK unless every artifact gate is True: report written + full canonical read-back, ZIP testzip, SHA256SUMS of every '
                'ZIP member incl. report / points / prereg, report in the ZIP = read-back report, Drive copy SHA equal (Drive not attempted = '
-               'NOT_RUN = not True)' % (MIN_RAW892, TAU892),
+               'NOT_RUN = not True). SHA256SUMS is validated row by row (two-space format, 64 lowercase hex, no duplicate / traversal / '
+               'malformed row, listed set = ZIP member set). A report write / read-back failure never rewrites the base verdict889 fields; '
+               'it is recorded in artifact_errors and blocks the FINAL V_ONLY verdict' % (MIN_RAW892, TAU892),
+    'artifact_scope_limits': 'the canonical report read-back and the SHA-256 checks prove byte integrity of what was written; they are NOT a '
+                             'semantic validation of TEST892_points.jsonl / controls / episodes / prereg against the live state, and none is '
+                             'claimed. The machine-readable FINAL verdict lives in the receipt (v_only_final), not in TEST892_final_report.json, '
+                             'whose v_only_audit is PRELIMINARY; without a receipt there is no final PASS',
     'distribution_axis': 'V_CONTENT_DISTRIBUTION_EFFECT (only with the minimum evidence): PRESENT if each world has >= 1 primary with '
                          'TV(Tv,Wv) >= %.2f; ABSENT if every primary TRUE/WRONG V_ONLY pair is same_reading881 exact; else MIXED' % TAU892,
     'point_class': 'NO_V_ONLY_EFFECT (V_ONLY == PAYLOAD exact, both arms), V_VISIBILITY_WITHOUT_CONTENT_SEPARATION (V_ONLY != PAYLOAD, '
@@ -242,7 +259,8 @@ PREREG892 = {
     'readout_abandon_criterion': 'minimum evidence AND V_ONLY != PAYLOAD on a primary AND distribution PRESENT AND no TRUE/WRONG V_ONLY '
                                  'argmax or top-two change on any unique point AND no TRUE/WRONG FULL argmax or top-two change AND equal '
                                  'D_TRUE / D_WRONG executed FULL trajectories (actions + end digest, post-run episode records; both FORK cells '
-                                 'required, blocked cells not compared; no evidence -> None -> not met) AND no '
+                                 'required, blocked cells not compared; a missing / non-string action list or terminal end = NOT_COMPARED_MALFORMED; '
+                                 'no evidence -> None -> not met) AND no '
                                  'FORK cell with Y(D_TRUE) > Y(D_WRONG): the SSD V_AFTER -> CAR readout does not turn outcome content '
                                  'into a decision; then stop mask variants and redesign outcome encoding / transition target / action '
                                  'interface (not a proof that a frozen model cannot learn)',
@@ -286,6 +304,8 @@ def v_only_fields892(rT, rW, cT, cW):
     return {'a_true_v_only': TV['action'], 'a_wrong_v_only': WV['action'], 'true_v_only': summary_m888(TV), 'wrong_v_only': summary_m888(WV),
             'v_only_token_logps': {a: {s['word']: [float(x) for x in s['token_logps']] for s in r['scores']} for a, r in (('true', TV), ('wrong', WV))},
             'v_only_reading_fields': {'true': rf(TV), 'wrong': rf(WV)},
+            'payload_token_logps': {a: {s['word']: [float(x) for x in s['token_logps']] for s in r['scores']} for a, r in (('true', TP), ('wrong', WP))},
+            'payload_reading_fields': {'true': rf(TP), 'wrong': rf(WP)},
             'top_two_true_v_only': top_two892(TV), 'top_two_wrong_v_only': top_two892(WV),
             'top_two_full': {'true': top_two892(rT['FULL']), 'wrong': top_two892(rW['FULL'])},
             'v_only_tw_exact': same_reading881(TV, WV), 'v_only_eq_payload_true': same_reading881(TV, TP), 'v_only_eq_payload_wrong': same_reading881(WV, WP),
@@ -316,20 +336,27 @@ def record_problems892(p):
         if not (all(x >= 0 for x in S['p'].values()) and near(sum(S['p'].values()), 1.0)): bad += [k + '.p_not_a_distribution']; continue
         sums[k] = S
     abst = ABSTAIN_MASS867                                                       # native reader constant (867, pre-registered)
-    for arm in ('true', 'wrong'):
-        S, RF = sums.get(arm + '_v_only'), (p.get('v_only_reading_fields') or {}).get(arm) if isinstance(p.get('v_only_reading_fields'), dict) else None
-        TL = (p.get('v_only_token_logps') or {}).get(arm) if isinstance(p.get('v_only_token_logps'), dict) else None
-        if S is None or not isinstance(RF, dict) or not isinstance(TL, dict): bad += ['v_only_%s_reading' % arm]; continue
-        sq = S['seq_logp']; mass = sum(_m892.exp(sq[w]) for w in W)
+    ex = lambda v: _m892.exp(v) if v < 700.0 else float('inf')                   # never raises; a non-finite mass is a record problem
+    rds = {}
+    for key, grp, arm in (('true_v_only', 'v_only', 'true'), ('wrong_v_only', 'v_only', 'wrong'),
+                          ('true_payload_blind', 'payload', 'true'), ('wrong_payload_blind', 'payload', 'wrong')):
+        S, RFs, TLs = sums.get(key), p.get(grp + '_reading_fields'), p.get(grp + '_token_logps')
+        RF, TL = RFs.get(arm) if isinstance(RFs, dict) else None, TLs.get(arm) if isinstance(TLs, dict) else None
+        if S is None or not isinstance(RF, dict) or not isinstance(TL, dict): bad += ['%s_%s_reading' % (grp, arm)]; continue
+        sq = S['seq_logp']; mass = sum(ex(sq[w]) for w in W)
+        if not (fin(mass) and mass > 0 and fin(RF.get('mass')) and RF['mass'] > 0 and fin(S.get('mass')) and S['mass'] > 0):
+            bad += ['%s_%s_mass_not_finite_positive' % (grp, arm)]; continue      # before any division
         order = sorted(W, key=lambda w: (-sq[w], W.index(w)))                       # = reading867 (logp, -index) on the fixed order
         ok = (set(TL) == set(W) and all(isinstance(TL[w], list) and TL[w] and all(fin(x) for x in TL[w]) and TL[w][0] == S['first_logp'][w]
                                         and near(float(sum(TL[w])), sq[w]) for w in W)
-              and type(RF.get('abstain')) is bool and fin(RF.get('mass')) and fin(S.get('mass')) and RF['mass'] == S['mass'] and near(RF['mass'], mass)
-              and all(near(S['p'][w], _m892.exp(sq[w]) / mass) for w in W) and fin(abst) and RF['abstain'] == (RF['mass'] < abst)
+              and type(RF.get('abstain')) is bool and RF['mass'] == S['mass'] and near(RF['mass'], mass)
+              and all(near(S['p'][w], ex(sq[w]) / mass) for w in W) and fin(abst) and RF['abstain'] == (RF['mass'] < abst)
               and RF.get('argmax_word') == order[0] and near(RF.get('margin_logp'), sq[order[0]] - sq[order[1]]) and RF['margin_logp'] == S.get('margin_logp')
-              and RF.get('action') == ('INVALID' if RF['abstain'] else order[0]) == S.get('action') == p.get('a_%s_v_only' % arm)
-              and p.get('top_two_%s_v_only' % arm) == order[:2])
-        if not ok: bad += ['v_only_%s_reading_inconsistent' % arm]
+              and RF.get('action') == ('INVALID' if RF['abstain'] else order[0]) == S.get('action')
+              and (grp != 'v_only' or (S.get('action') == p.get('a_%s_v_only' % arm) and p.get('top_two_%s_v_only' % arm) == order[:2])))
+        if not ok: bad += ['%s_%s_reading_inconsistent' % (grp, arm)]; continue
+        rds[key] = {'action': RF['action'], 'argmax_word': RF['argmax_word'], 'abstain': RF['abstain'], 'mass': RF['mass'],
+                    'scores': [{'word': w, 'token_logps': TL[w]} for w in W]}        # the fields the locked same_reading881 compares
     tf = p.get('top_two_full')
     two = lambda k: [w for w in sorted(W, key=lambda w: (-sums[k]['seq_logp'][w], W.index(w)))[:2]] if k in sums else None
     if not (isinstance(tf, dict) and tf.get('true') == two('true_full') is not None and tf.get('wrong') == two('wrong_full') is not None): bad += ['top_two_full']
@@ -344,8 +371,9 @@ def record_problems892(p):
                     for f in ('p', 'seq_logp') for w in W)): bad += ['J']
     bad += [k for k in ('v_only_tw_exact', 'v_only_eq_payload_true', 'v_only_eq_payload_wrong', 'v_only_spans_true_equals_wrong',
                         'v_only_geometry_ok') if type(p.get(k)) is not bool]
-    if p.get('v_only_tw_exact') is True and 'true_v_only' in sums and 'wrong_v_only' in sums and \
-            any(sums['true_v_only'][f] != sums['wrong_v_only'][f] for f in ('p', 'seq_logp', 'first_logp')): bad += ['v_only_tw_exact_inconsistent']
+    for k, a, b in (('v_only_tw_exact', 'true_v_only', 'wrong_v_only'), ('v_only_eq_payload_true', 'true_v_only', 'true_payload_blind'),
+                    ('v_only_eq_payload_wrong', 'wrong_v_only', 'wrong_payload_blind')):    # stored booleans are not trusted: locked same_reading881
+        if type(p.get(k)) is bool and not (a in rds and b in rds and p[k] == same_reading881(rds[a], rds[b])): bad += [k + '_not_rederived']
     sp2 = lambda x: isinstance(x, (list, tuple)) and len(x) == 2 and all(type(e) is int and e >= 0 for e in x) and x[0] < x[1]
     vs, cs, n0, q = p.get('v_only_spans'), p.get('component_spans'), p.get('n0'), p.get('q')
     if not (isinstance(vs, dict) and isinstance(vs.get('mask_V_ONLY'), (list, tuple)) and len(vs['mask_V_ONLY']) == 1 and sp2(vs['mask_V_ONLY'][0])
@@ -359,8 +387,9 @@ def record_problems892(p):
     hexs = lambda x: isinstance(x, str) and len(x) == 64 and all(c in '0123456789abcdef' for c in x)
     bad += [k for k in ('cartridge_sha_true', 'cartridge_sha_wrong') if not hexs(p.get(k))]
     df = p.get('donor_fit')
-    if not (isinstance(df, dict) and isinstance(df.get('donor_sha'), str) and df['donor_sha'] and isinstance(df.get('donor_episode'), str)
-            and df['donor_episode'].startswith('NONE_') and type(df.get('donor_step')) is int and df['donor_step'] == p.get('post_appraisal_step')
+    if not (isinstance(df, dict) and hexs(df.get('donor_sha')) and isinstance(p.get('world'), str) and p['world'] in DONOR_M867
+            and isinstance(p.get('condition'), str) and df.get('donor_episode') == 'NONE_%s_%s' % (DONOR_M867[p['world']], p['condition'])
+            and type(df.get('donor_step')) is int and type(p.get('post_appraisal_step')) is int and df['donor_step'] == p['post_appraisal_step']
             and all(type(df.get(k)) is int and df[k] >= 0 for k in ('donor_rows', 'true_rows', 'retained', 'padded_mue'))
             and df['retained'] == min(df['donor_rows'], df['true_rows']) and df['padded_mue'] == max(0, df['true_rows'] - df['donor_rows'])):
         bad += ['donor_fit']
@@ -385,6 +414,7 @@ def v_only_audit892(verdict, points, episodes=None):
     good = [p for p, b in chk if not b]; U = unique_m888(good)
     name = lambda s: '%s_%s_t%d' % s
     am = lambda p, a: p['v_only_reading_fields'][a]['argmax_word']
+    tvr = lambda p, a, b: 0.5 * sum(abs(p[a]['p'][w] - p[b]['p'][w]) for w in ACTIONS_M867)   # = tv_m867 on the validated p (never the stored TV)
     sig = lambda p: (am(p, 'true'), am(p, 'wrong'), p['a_true_v_only'], p['a_wrong_v_only'], tuple(p['top_two_true_v_only']), tuple(p['top_two_wrong_v_only']))
     dup = sorted({p['unique_key'] for p in good if len({sig(x) for x in good if x['unique_key'] == p['unique_key']}) > 1})
     rows = []
@@ -394,9 +424,10 @@ def v_only_audit892(verdict, points, episodes=None):
              'expected': s in EXPECTED891, 'a_true_v_only': p['a_true_v_only'], 'a_wrong_v_only': p['a_wrong_v_only'],
              'argmax_true_v_only': am(p, 'true'), 'argmax_wrong_v_only': am(p, 'wrong'),
              'top_two_true_v_only': p['top_two_true_v_only'], 'top_two_wrong_v_only': p['top_two_wrong_v_only'],
-             'tv_v_only_tw': p['tv_v_only_tw'], 'v_only_tw_exact': p['v_only_tw_exact'], 'v_only_eq_payload_true': p['v_only_eq_payload_true'],
-             'v_only_eq_payload_wrong': p['v_only_eq_payload_wrong'], 'tv_v_only_true_payload': p['tv_v_only_true_payload'],
-             'tv_v_only_wrong_payload': p['tv_v_only_wrong_payload'], 'J': p['J'], 'a_true_full': p['a_true'], 'a_wrong_full': p['a_wrong'],
+             'tv_v_only_tw': tvr(p, 'true_v_only', 'wrong_v_only'), 'tv_v_only_tw_stored': p['tv_v_only_tw'],
+             'v_only_tw_exact': p['v_only_tw_exact'], 'v_only_eq_payload_true': p['v_only_eq_payload_true'],
+             'v_only_eq_payload_wrong': p['v_only_eq_payload_wrong'], 'tv_v_only_true_payload': tvr(p, 'true_v_only', 'true_payload_blind'),
+             'tv_v_only_wrong_payload': tvr(p, 'wrong_v_only', 'wrong_payload_blind'), 'J': p['J'], 'a_true_full': p['a_true'], 'a_wrong_full': p['a_wrong'],
              'top_two_full': p['top_two_full'], 'class': v_only_class892(p)}
         r['flip'] = r['argmax_true_v_only'] != r['argmax_wrong_v_only']; r['top_two_change'] = r['top_two_true_v_only'] != r['top_two_wrong_v_only']
         r['sep'] = r['flip'] and r['tv_v_only_tw'] >= TAU892 and r['top_two_change']
@@ -457,11 +488,14 @@ def trajectories892(episodes):
         d = {a: [e for e in episodes if isinstance(e, dict) and e.get('episode_id') == '%s_%s_%s' % (a, w, c)] for a in ('D_TRUE', 'D_WRONG')}
         if any(len(v) != 1 for v in d.values()): cells['%s_%s' % (w, c)] = {'status': 'NOT_COMPARED_MISSING_OR_BLOCKED'}; continue
         t, x = d['D_TRUE'][0], d['D_WRONG'][0]
-        if not (isinstance(t.get('actions'), list) and isinstance(x.get('actions'), list)):
+        if not all(isinstance(e.get('actions'), list) and all(isinstance(a, str) for a in e['actions']) and isinstance(e.get('end'), str) and e['end']
+                   for e in (t, x)):                                             # actions AND the terminal end must exist on both sides
             cells['%s_%s' % (w, c)] = {'status': 'NOT_COMPARED_MALFORMED'}; continue
         cells['%s_%s' % (w, c)] = {'status': 'COMPARED', 'equal': dg(t) == dg(x), 'digest_true': dg(t), 'digest_wrong': dg(x)}
     fork = [v for k, v in cells.items() if k.endswith('_FORK')]
-    if len(fork) != 2 or any(v['status'] != 'COMPARED' for v in fork): return {'cells': cells, 'no_full_trajectory_change': None, 'why': 'FORK_CELLS_NOT_COMPARABLE'}
+    if len(fork) != 2 or any(v['status'] != 'COMPARED' for v in fork): 
+        return {'cells': cells, 'no_full_trajectory_change': None,
+                'why': 'NOT_COMPARED_MALFORMED' if any(v['status'] == 'NOT_COMPARED_MALFORMED' for v in fork) else 'FORK_CELLS_NOT_COMPARABLE'}
     return {'cells': cells, 'no_full_trajectory_change': all(v['equal'] for v in cells.values() if v['status'] == 'COMPARED'), 'why': 'COMPARED'}
 
 
@@ -493,10 +527,19 @@ def artifact_gates892(zip_path, zip_ok, drive_equal, drive_dir, state):
         with zf.ZipFile(zip_path) as z:
             names = z.namelist(); sums = [n for n in names if n.endswith('/SHA256SUMS.txt')]
             root = sums[0].rsplit('/', 1)[0] if len(sums) == 1 else None
-            listed = dict(reversed(l.split('  ', 1)) for l in z.read(sums[0]).decode('utf-8').strip().split('\n')) if root else {}
-            g['sha256sums'] = bool(listed) and all(root + '/' + rel in names and _h892.sha256(z.read(root + '/' + rel)).hexdigest() == h
-                                                   for rel, h in listed.items()) and \
+            lines = z.read(sums[0]).decode('utf-8').split('\n') if root else []
+            rows = [l.split('  ', 1) for l in (lines[:-1] if lines and lines[-1] == '' else lines)]      # engine format: '<sha256>  <rel>' + newline
+            hexs = lambda x: len(x) == 64 and all(c in '0123456789abcdef' for c in x)
+            okm = bool(rows) and all(len(r) == 2 and hexs(r[0]) and r[1] == r[1].strip() and '\\' not in r[1] and
+                                     all(seg not in ('', '.', '..') for seg in r[1].split('/')) for r in rows) and \
+                len({r[1] for r in rows}) == len(rows)                           # malformed row / bad sha / traversal / duplicate path: refused
+            listed = {r[1]: r[0] for r in rows} if okm else {}
+            members = [n[len(root) + 1:] for n in names if not n.endswith('/')] if root and all(n.startswith(root + '/') for n in names) else None
+            g['sha256sums'] = okm and members is not None and len(members) == len(set(members)) and \
+                set(members) - {'SHA256SUMS.txt'} == set(listed) and \
+                all(_h892.sha256(z.read(root + '/' + rel)).hexdigest() == h for rel, h in listed.items()) and \
                 all(k in listed for k in ('TEST892_final_report.json', 'TEST892_points.jsonl', 'TEST892_prereg.json'))
+            g['sha256sums_rows'] = len(rows)
             g['report_in_zip_is_read_back_report'] = listed.get('TEST892_final_report.json') == state.get('report_sha256')
     except Exception as exc:
         g.update(sha256sums=False, report_in_zip_is_read_back_report=False, zip_error='%s: %s' % (type(exc).__name__, exc))
@@ -574,6 +617,8 @@ def source892():
              'artifact_final_verdict_wired': SRC889_892.count("readback892(p_, report889, U_)") == 1 and SRC889_892.count("_rc['v_only_final'] = v_only_final892(") == 1 and
                                              SRC889_892.count("V_ONLY_FINAL NATIVE_OUTCOME_ACTION_SEPARATION=TECHNICAL_BLOCK") == 1 and
                                              SRC889_892.count("'points_unique': [point_view892(p_, (") == 1,
+             'artifact_error_keeps_base_verdict': SRC889_892.count("ARTIFACT_FAILURE") == 0 and
+                                                  SRC889_892.count("V_ONLY_ARTIFACT_STATUS=TECHNICAL_BLOCK | report write / read-back failed") == 1,
              'verdict889_has_no_v_only': 'V_ONLY' not in _a892.unparse(f['verdict889'])}
     if not all(facts.values()): raise Gate_m867('SOURCE892_FACTS %s' % sorted(k for k, v in facts.items() if not v))
     (ROOT864 / 'TEST892_executed_889_890_891_892.py').write_text(SRC889_892, encoding='utf-8')
@@ -695,6 +740,7 @@ def st892():
           'mass_mismatch': lambda x: x['v_only_reading_fields']['true'].update(mass=x['v_only_reading_fields']['true']['mass'] + 0.01),
           'tv_inconsistent': lambda x: x.update(tv_v_only_tw=x['tv_v_only_tw'] + 0.01), 'tv_payload_inconsistent': lambda x: x.update(tv_v_only_wrong_payload=0.5),
           'action_vs_seq': lambda x: x.update(a_true_v_only=W1), 'argmax_vs_seq': lambda x: x['v_only_reading_fields']['true'].update(argmax_word=W1),
+          'argmax_all_readings_vs_seq': lambda x: [x[g]['%s' % a].update(argmax_word=W1) for g in ('v_only_reading_fields', 'payload_reading_fields') for a in ('true', 'wrong')],
           'top_two_vs_seq': lambda x: x.update(top_two_true_v_only=[x['top_two_true_v_only'][1], x['top_two_true_v_only'][0]]),
           'margin_vs_seq': lambda x: x['v_only_reading_fields']['wrong'].update(margin_logp=9.0),
           'token_sum_vs_seq': lambda x: x['v_only_token_logps']['true'][W0].append(-0.1), 'first_vs_token': lambda x: x['true_v_only']['first_logp'].update({W0: 0.0}),
@@ -707,7 +753,17 @@ def st892():
           'no_cartridge_sha': lambda x: x.pop('cartridge_sha_true'), 'bad_cartridge_sha': lambda x: x.update(cartridge_sha_wrong='abc'),
           'no_donor_fit': lambda x: x.pop('donor_fit'), 'donor_step_not_exact': lambda x: x['donor_fit'].update(donor_step=x['donor_fit']['donor_step'] + 1),
           'donor_not_NONE_ledger': lambda x: x['donor_fit'].update(donor_episode='D_TRUE_09_FORK'), 'donor_fit_padding_wrong': lambda x: x['donor_fit'].update(padded_mue=1),
-          'no_donor_sha': lambda x: x['donor_fit'].pop('donor_sha'), 'bool_p': lambda x: x['wrong_v_only']['p'].update({W0: True}),
+          'no_donor_sha': lambda x: x['donor_fit'].pop('donor_sha'), 'donor_sha_not_hex': lambda x: x['donor_fit'].update(donor_sha='not-a-sha'),
+          'donor_same_world': lambda x: x['donor_fit'].update(donor_episode='NONE_%s_%s' % (x['world'], x['condition'])),
+          'donor_other_condition': lambda x: x['donor_fit'].update(donor_episode='NONE_%s_%s' % (DONOR_M867[x['world']], 'MISSING' if x['condition'] == 'FORK' else 'FORK')),
+          'tw_exact_true_but_token_logps_differ': lambda x: x['v_only_token_logps']['wrong'].update({W0: [x['v_only_token_logps']['wrong'][W0][0], -0.25, x['v_only_token_logps']['wrong'][W0][1] + 0.25]}),
+          'eq_payload_true_flipped': lambda x: x.update(v_only_eq_payload_true=not x['v_only_eq_payload_true']),
+          'eq_payload_wrong_flipped': lambda x: x.update(v_only_eq_payload_wrong=not x['v_only_eq_payload_wrong']),
+          'tw_exact_flipped': lambda x: x.update(v_only_tw_exact=not x['v_only_tw_exact']),
+          'no_payload_token_logps': lambda x: x.pop('payload_token_logps'), 'no_payload_reading_fields': lambda x: x.pop('payload_reading_fields'),
+          'zero_mass_underflow': lambda x: (x['true_v_only']['seq_logp'].update({w: -800.0 for w in W6}), x['true_v_only'].update(mass=0.0),
+                                            x['v_only_reading_fields']['true'].update(mass=0.0)),
+          'huge_seq_logp': lambda x: x['true_v_only']['seq_logp'].update({W0: 800.0}), 'bool_p': lambda x: x['wrong_v_only']['p'].update({W0: True}),
           'no_reading_fields': lambda x: x.pop('v_only_reading_fields'), 'no_token_logps': lambda x: x.pop('v_only_token_logps'),
           'no_wrong_payload_summary': lambda x: x.pop('wrong_payload_blind'), 'calls_v_only_two': lambda x: x.update(calls_v_only=[1, 2]),
           'calls_v_only_bool': lambda x: x.update(calls_v_only=[True, 1])}
@@ -734,6 +790,21 @@ def st892():
         c_half['met'] is False and c_half['no_full_trajectory_change'] is None and \
         A_(dict(V, reasons={'Y': {'D_TRUE_10_FORK': 0, 'D_WRONG_10_FORK': 0, 'D_TRUE_09_FORK': 1, 'D_WRONG_09_FORK': 0}}), D, eq_eps)['readout_abandon_criterion']['met'] is False and \
         A_(dict(V, reasons={}), D, eq_eps)['readout_abandon_criterion']['met'] is False and A_(V, ALL0, eq_eps)['readout_abandon_criterion']['met'] is False
+    noend = lambda eps, n: [({k: v for k, v in e.items() if k != 'end'} if i < n else e) for i, e in enumerate(eps)]
+    r['trajectories_need_terminal_end'] = all(trajectories892(noend(eq_eps, n))['no_full_trajectory_change'] is None and
+                                               trajectories892(noend(eq_eps, n))['why'] == 'NOT_COMPARED_MALFORMED' and
+                                               A_(V, D, noend(eq_eps, n))['readout_abandon_criterion']['met'] is False for n in (1, 2, 4)) and \
+        trajectories892([dict(e, end=None) for e in eq_eps])['no_full_trajectory_change'] is None and \
+        trajectories892([dict(e, actions=['ADVANCE', 3]) for e in eq_eps])['no_full_trajectory_change'] is None
+    # stored TV exactly tau while the six p give tau -/+ 5e-10 (inside the record tolerance): the verdict uses the recomputed TV only
+    def near_tau(t):
+        pT = {w: 0.1125 for w in W6}; pT.update({W6[4]: 0.30, W6[1]: 0.25}); pW = dict(pT); pW.update({W6[4]: 0.30 - t, W6[1]: 0.25 + t})
+        lg = lambda d: {w: _m892.log(v) for w, v in d.items()}
+        return lambda s: [dict(Q(s, lg(pT), lg(pW), dup=d), tv_v_only_tw=TAU892) for d in (0, 1)]
+    lo, hi_ = A_(V, mix({P10, P09}, near_tau(TAU892 - 5e-10))), A_(V, mix({P10, P09}, near_tau(TAU892 + 5e-10)))
+    r['verdict_uses_recomputed_tv'] = record_problems892(near_tau(TAU892 - 5e-10)(P10)[0]) == [] and ok(lo, 'INCONCLUSIVE', 'FLIP_WITH_TV_BELOW_TAU') and \
+        ok(hi_, 'PASS', 'BOTH_WORLDS_PRIMARY_SEPARATION') and all(x['tv_v_only_tw'] < TAU892 == x['tv_v_only_tw_stored'] for x in lo['points'] if x['flip']) and \
+        lo['V_CONTENT_DISTRIBUTION_EFFECT'] != 'PRESENT' and all(x['tv_v_only_tw'] == x['tv_v_only_tw_stored'] for x in aP['points'])
     r['trajectories_blocked_cells_not_compared'] = trajectories892(eq_eps)['cells']['10_MISSING']['status'] == 'NOT_COMPARED_MISSING_OR_BLOCKED' and \
         trajectories892(eq_eps + [{'episode_id': 'D_TRUE_10_FORK', 'actions': []}])['no_full_trajectory_change'] is None
     r['class_matrix'] = [v_only_class892(x) for x in (Q(P10, hi(4), hi(1)), Q(P10, hi(4), hi(4, -0.6)),
@@ -769,6 +840,7 @@ def st892():
     FL = {'TEST892_final_report.json': b'{"a": 1}', 'TEST892_points.jsonl': b'{}', 'TEST892_prereg.json': b'{}'}
     ST = {'artifact_errors': [], 'report_sha256': _h892.sha256(FL['TEST892_final_report.json']).hexdigest()}
     g_ok = artifact_gates892(zipb(FL), True, True, '/d', ST)
+    GOODM, HP = '\n'.join('%s  %s' % (_h892.sha256(d).hexdigest(), n) for n, d in FL.items()) + '\n', _h892.sha256(FL['TEST892_points.jsonl']).hexdigest()
     r['artifact_gates'] = all(g_ok[k] is True for k in ARTIFACT_GATES892) and \
         artifact_gates892(zipb(FL, 'deadbeef  TEST892_points.jsonl\n'), True, True, '/d', ST)['sha256sums'] is False and \
         artifact_gates892(zipb({k: v for k, v in FL.items() if k != 'TEST892_points.jsonl'}), True, True, '/d', ST)['sha256sums'] is False and \
@@ -776,6 +848,10 @@ def st892():
         artifact_gates892(zipb(FL), True, True, '/d', dict(ST, artifact_errors=['x']))['report_written_read_back'] is False and \
         artifact_gates892(zipb(FL), True, False, '/d', ST)['drive'] is False and artifact_gates892(zipb(FL), True, None, None, ST)['drive'] == 'NOT_RUN' and \
         artifact_gates892(_io.BytesIO(b'not a zip'), False, True, '/d', ST)['sha256sums'] is False and \
+        all(artifact_gates892(zipb(FL, m), True, True, '/d', ST)['sha256sums'] is False for m in (
+            '0' * 64 + '  TEST892_points.jsonl\n' + GOODM, GOODM + '%s  TEST892_points.jsonl\n' % HP, GOODM + 'garbage line\n', GOODM.replace('  TEST892_prereg', ' TEST892_prereg'),
+            GOODM + '%s  ../TEST892_points.jsonl\n' % HP, GOODM.upper().replace('TEST892_', 'TEST892_'), GOODM + '\n', GOODM.split('\n', 1)[1])) and \
+        artifact_gates892(zipb(dict(FL, **{'extra.bin': b'x'}), GOODM), True, True, '/d', ST)['sha256sums'] is False and \
         artifact_gates892(zipb(FL), False, True, '/d', ST)['zip_testzip'] is False
     try: raise RuntimeError('forced')
     except RuntimeError as exc_: ae = v_audit_error892(exc_, save=False)
