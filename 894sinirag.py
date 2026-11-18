@@ -128,6 +128,8 @@ TOL = {
     'dir_targets_nats': (0.02, 0.10),  # predicted first-order loss decrease for the two directional probes
     'dir_ratio_band': (0.25, 4.0),     # actual/predicted for the smaller probe
     'dir_fail_increase_nats': 0.005,   # FAIL only if BOTH probes increase the loss by more than this
+    'dir_max_frac_of_loss': 0.5,       # well-posed only if each target decrease <= this fraction of the probe loss L0
+    'dir_max_step_frac_of_lora_norm': 0.05,  # well-posed only if each step norm <= this fraction of the LoRA norm
     'surrogate_rel_err': 1e-6,         # float64 local surrogate: autograd vs central finite difference
     'vram_reserved_frac_max': 0.95,    # peak reserved / total device memory
     'p6_clean_slack_mib': 256,         # allocated memory after a P6 row cleanup may exceed the pre-P6 baseline by at most this
@@ -753,20 +755,27 @@ try:
         fm = float((u * LoRAProj894.lora_delta(x, Aq - eps * dA, Bq - eps * dB, w79.scale)).sum())
     fd = (fp - fm) / (2 * eps); sur_err = abs(an - fd) / max(abs(an), 1e-30)
     snap = [p.detach().clone() for p in LORA_PARAMS]; probes = []; probe_err = None; gn2 = float('nan'); L0 = float('nan')
+    # Probe loss = counterfactual readout T2 under mount A. Run 20261118T021423Z probed the trained target T1, whose loss
+    # was ~2e-5 nats (saturated): a 0.02 / 0.1 nat first-order decrease was impossible (loss >= 0) and eta = delta/|g|^2
+    # gave steps 5.7x / 28x the whole LoRA norm. T2 under A is not saturated; the function under test (LoRA backward of
+    # the live readout loss on the real NF4 engine) is the same. Parameters are restored bitwise afterwards.
+    PT = t2_ids; lora_norm = math.sqrt(float(sum((p.detach().double() ** 2).sum() for p in LORA_PARAMS)))
     try:
-        gp = live(MEM['A'], sfx_ids, t1_ids, grad=True, train=True, adapter=True); l_ = -gp['lp'].mean()
+        gp = live(MEM['A'], sfx_ids, PT, grad=True, train=True, adapter=True); l_ = -gp['lp'].mean()
         grads = torch.autograd.grad(l_, LORA_PARAMS, allow_unused=True); del gp, l_
         grads = [torch.zeros_like(p) if g_ is None else g_ for g_, p in zip(grads, LORA_PARAMS)]
         gn2 = float(sum((g_.double() ** 2).sum() for g_ in grads))
-        L0 = -lp_sum(MEM['A'], sfx_ids, t1_ids, True) / len(t1_ids)
+        L0 = -lp_sum(MEM['A'], sfx_ids, PT, True) / len(PT)
         for dlt in TOL['dir_targets_nats']:
             eta = dlt / max(gn2, 1e-30)
             with torch.no_grad():
                 for p, g_ in zip(LORA_PARAMS, grads): p.sub_(eta * g_)
-            L1 = -lp_sum(MEM['A'], sfx_ids, t1_ids, True) / len(t1_ids)
+            L1 = -lp_sum(MEM['A'], sfx_ids, PT, True) / len(PT)
             with torch.no_grad():
                 for p, s_ in zip(LORA_PARAMS, snap): p.copy_(s_)
-            probes.append({'predicted_delta': -dlt, 'actual_delta': L1 - L0, 'ratio': (L1 - L0) / -dlt, 'eta': eta})
+            probes.append({'predicted_delta': -dlt, 'actual_delta': L1 - L0, 'ratio': (L1 - L0) / -dlt, 'eta': eta,
+                           'step_norm': eta * math.sqrt(gn2), 'well_posed': dlt <= TOL['dir_max_frac_of_loss'] * L0 and
+                           eta * math.sqrt(gn2) <= TOL['dir_max_step_frac_of_lora_norm'] * lora_norm})
     except Exception as e:
         probe_err = '%s: %s' % (type(e).__name__, str(e)[:300])
     finally:
@@ -777,13 +786,15 @@ try:
     lo, hi = TOL['dir_ratio_band']
     if sur_err > TOL['surrogate_rel_err'] or not restored: st4 = 'FAIL'
     elif probe_err is not None or len(probes) != len(TOL['dir_targets_nats']): st4 = 'INCONCLUSIVE'
+    elif not all(pp['well_posed'] for pp in probes): st4 = 'INCONCLUSIVE'      # outside the first-order regime: no verdict
     elif all(pp['actual_delta'] > TOL['dir_fail_increase_nats'] for pp in probes): st4 = 'FAIL'
     elif all(pp['actual_delta'] < 0 for pp in probes) and lo <= probes[0]['ratio'] <= hi: st4 = 'PASS'
     else: st4 = 'INCONCLUSIVE'
     gate('P4_NUMERICAL', st4, 'float64 local surrogate (LoRA math, CPU) + real-NF4-engine directional loss probe',
          surrogate_rel_err=sur_err, surrogate_where='CPU float64, LoRAProj894.lora_delta only (no 72B)',
          directional_where='real NF4 72B, base-OFF mount A, eval no_grad loss before/after a -eta*g LoRA step, restored',
-         grad_norm=math.sqrt(gn2) if gn2 == gn2 else None, loss_L0=L0, probes=probes, params_restored=restored, probe_error=probe_err)
+         grad_norm=math.sqrt(gn2) if gn2 == gn2 else None, loss_L0=L0, probes=probes, params_restored=restored, probe_error=probe_err,
+         probe_target='T2 under mount A (counterfactual, not saturated)', lora_param_norm=lora_norm)
     if not restored: raise StopT894('P4: LoRA parameters not restored bitwise after the directional probe')
     # ------------------------------------------------------------------------------------------- P6 resources
     def filler(n):
