@@ -330,7 +330,9 @@ class _PinnedRevision:
     def __init__(self, cls): self.cls = cls
     def from_pretrained(self, mid, *a, **kw):
         if mid != MODEL_ID or kw.get('revision', MODEL_REVISION) != MODEL_REVISION: raise RuntimeError('MODEL_REVISION_CONTRACT')
-        kw['revision'] = MODEL_REVISION; return self.cls.from_pretrained(mid, *a, **kw)
+        kw['revision'] = MODEL_REVISION; PINNED_CALLS.append([self.cls.__name__, mid, kw['revision']])
+        return self.cls.from_pretrained(mid, *a, **kw)
+PINNED_CALLS = []
 def seals_equal(a, b): return len(a) == len(b) and all(x == y for x, y in zip(a, b))
 def kv_compare(a, b):
     # per-layer: bitwise (byte SHA), value-equal, max abs / rel difference
@@ -388,8 +390,9 @@ try:
     # executed-cell identity, single cell. Trust root = the git objects of the repository, not this cell: the commit that
     # main points to and the blob id its tree records for 894sinirag.py (both hashed by git over the committed bytes; git
     # verifies the objects it fetches). The file is also fetched as raw bytes at that commit (second channel) and must be
-    # byte-identical. The executed cell (IPython history) must equal the committed bytes exactly, or with exactly one
-    # final newline appended (a pasted cell may be stored without it). The cell never derives an expected hash from its
+    # byte-identical. The executed cell (IPython history) must equal the committed bytes after ONE canonicalization only:
+    # leading and trailing '\n' characters are removed from both sides (run 20261118T014044Z: the pasted cell = one extra
+    # leading newline + no final newline, otherwise byte-identical). Nothing inside the text is changed. The cell never derives an expected hash from its
     # own text; commit + blob + SHA-256 are recorded for comparison with the externally announced audited identity.
     SRC_REPO = 'ceceli33/titan-cognitive-core-v3'; SRC_FILE = '894sinirag.py'
     ec = {'status': 'NOT_CAPTURED', 'identity_match': False}
@@ -414,8 +417,16 @@ try:
         ec['published'] = {'repo': SRC_REPO, 'commit': _c, 'tree_blob': _b, 'blob_of_bytes': gitblob(_pb), 'sha256': sha_bytes(_pb),
                            'bytes': len(_pb), 'raw_channel_equal': _rb == _pb}
         _pub_ok = gitblob(_pb) == _b and _rb == _pb
-        ec['canonicalization'] = 'exact bytes, or exactly one final newline appended to the captured cell'
-        if ec['status'] == 'CAPTURED': ec['identity_match'] = _pub_ok and (_cb == _pb or _cb + b'\n' == _pb)
+        ec['canonicalization'] = "strip leading/trailing b'\\n' on both sides only; interior bytes compared exactly"
+        if ec['status'] == 'CAPTURED':
+            _cc, _pc = _cb.strip(b'\n'), _pb.strip(b'\n')
+            ec['identity_match'] = _pub_ok and _cc == _pc
+            ec['boundary_newlines'] = {'cell_leading': len(_cb) - len(_cb.lstrip(b'\n')), 'cell_trailing': len(_cb) - len(_cb.rstrip(b'\n')),
+                                       'published_leading': len(_pb) - len(_pb.lstrip(b'\n')), 'published_trailing': len(_pb) - len(_pb.rstrip(b'\n'))}
+            if _cc != _pc:
+                _i = next((k for k in range(min(len(_cc), len(_pc))) if _cc[k] != _pc[k]), min(len(_cc), len(_pc)))
+                ec['first_difference'] = {'offset_after_canonicalization': _i, 'line': _cc[:_i].count(b'\n') + 1,
+                                          'cell_bytes': _cc[_i:_i + 40].decode('utf-8', 'replace'), 'published_bytes': _pc[_i:_i + 40].decode('utf-8', 'replace')}
         shutil.rmtree(_gd, ignore_errors=True)
     except Exception as e:
         ec['published_error'] = '%s: %s' % (type(e).__name__, str(e)[:300])
@@ -477,17 +488,31 @@ try:
     for fn in ('config.json', 'tokenizer.json', 'tokenizer_config.json', 'model.safetensors.index.json'):
         pth = hf_hub_download(MODEL_ID, fn, revision=MODEL_REVISION)
         rev_files[fn] = {'sha256': sha_path(pth), 'in_pinned_snapshot': ('/snapshots/%s/' % MODEL_REVISION) in pth.replace('\\', '/')}
-    rev_ok = getattr(model.config, '_commit_hash', None) == MODEL_REVISION and all(v['in_pinned_snapshot'] for v in rev_files.values())
+    # transformers 5.22.1 leaves config._commit_hash empty (TEST894 run 20261118T014044Z: null). Revision evidence is therefore:
+    # both from_pretrained calls went through the pin with MODEL_REVISION, and every weight shard named by the pinned index
+    # plus config / tokenizer files resolves inside snapshots/<MODEL_REVISION>. A non-empty _commit_hash must still match.
+    from huggingface_hub import try_to_load_from_cache
+    _snap = '/snapshots/%s/' % MODEL_REVISION
+    _shards = sorted(set(json.loads(Path(hf_hub_download(MODEL_ID, 'model.safetensors.index.json', revision=MODEL_REVISION)).read_text())['weight_map'].values()))
+    _sp = {f_: try_to_load_from_cache(MODEL_ID, f_, revision=MODEL_REVISION) for f_ in _shards}
+    shards_ok = len(_shards) > 0 and all(isinstance(v, str) and _snap in v.replace('\\', '/') and os.path.exists(v) for v in _sp.values())
+    calls_ok = sorted(c[0] for c in PINNED_CALLS) == ['AutoModelForCausalLM', 'AutoTokenizer'] and all(c[2] == MODEL_REVISION for c in PINNED_CALLS)
+    _ch = getattr(model.config, '_commit_hash', None)
+    rev_ok = calls_ok and shards_ok and all(v['in_pinned_snapshot'] for v in rev_files.values()) and _ch in (None, MODEL_REVISION)
     hooks_load = hook_inventory(); hst = hook_selftest()
     base_params = [(n, p) for n, p in model.named_parameters()]
     Q4MODS = [(n, m) for n, m in model.named_modules() if isinstance(m, bitsandbytes.nn.Linear4bit)]
     BUFS = [(n, b) for n, b in model.named_buffers()]
     ist = integrity_selftest(Q4MODS[0][1])
-    model_ok = (P == TOL['P_expected'] and all(not p.requires_grad for _, p in base_params) and not model.training
-                and hooks_clean(hooks_load) and hst['pass'] and ist['pass'] and rev_ok and len(Q4MODS) > 0
-                and model.config._attn_implementation == 'sdpa' and float(getattr(model.config, 'attention_dropout', 0.0)) == 0.0)
-    gate('MODEL', 'PASS' if model_ok else 'FAIL',
-         None if model_ok else 'P / frozen / eval / hooks(torch+_hf_hook+instance forward) / selftests / revision / sdpa / dropout',
+    mc = {'P_is_30': P == TOL['P_expected'], 'base_frozen': all(not p.requires_grad for _, p in base_params), 'eval_mode': not model.training,
+          'hooks_clean': hooks_clean(hooks_load), 'hook_selftest': hst['pass'], 'integrity_selftest': ist['pass'],
+          'model_revision': rev_ok, 'nf4_modules_present': len(Q4MODS) > 0,
+          'sdpa': getattr(model.config, '_attn_implementation', None) == 'sdpa',
+          'attention_dropout_zero': float(getattr(model.config, 'attention_dropout', 0.0)) == 0.0}
+    model_ok = all(mc.values())
+    gate('MODEL', 'PASS' if model_ok else 'FAIL', None if model_ok else 'failed conditions: ' + ', '.join(k for k, v in mc.items() if not v),
+         conditions=mc, revision_evidence={'pinned_calls': PINNED_CALLS, 'shards': len(_shards), 'shards_in_pinned_snapshot': shards_ok,
+                                           'config_commit_hash': _ch},
          load_s=load_s, P=P, prefix_sha256=sha_bytes(PREFIX.encode()), base_param_tensors=len(base_params), nf4_modules=len(Q4MODS),
          buffers=len(BUFS), hooks=hooks_load, hook_selftest=hst, integrity_selftest=ist, gpu=gpu_mem(),
          model_revision_expected=MODEL_REVISION, model_revision_loaded=getattr(model.config, '_commit_hash', None),
