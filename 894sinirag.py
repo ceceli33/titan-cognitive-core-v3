@@ -385,23 +385,41 @@ try:
     log('=' * 112); log(MARKER, RUN_ID, '| engine commit', COMMIT, '| continuation of TEST893 (FAIL_NO_GAIN, unchanged)')
     log('SCOPE: feasibility only. PASS != learning / semantic reading / native behaviour / autonomy.'); log('=' * 112)
     log('TOLERANCES', json.dumps(TOL, sort_keys=True), 'sha256', R['tolerances_sha256'])
-    # executed-cell identity (TEST864/870 method: IPython input history). The expected SHA-256 of the PUBLISHED file is fixed
-    # OUTSIDE this cell (env var or a separate earlier cell: TEST894_EXPECTED_SHA256 = '<sha256 of 894sinirag.py>'), so the
-    # cell never asserts its own hash. The published file ends with one newline; a pasted cell may be stored without it, so
-    # exactly these two byte forms are compared. Missing / uncaptured / mismatch => ARTIFACT_STATUS cannot be PASS.
-    _exp = (os.environ.get('TEST894_EXPECTED_SHA256') or globals().get('TEST894_EXPECTED_SHA256') or '').strip().lower() or None
+    # executed-cell identity, single cell. Trust root = the git objects of the repository, not this cell: the commit that
+    # main points to and the blob id its tree records for 894sinirag.py (both hashed by git over the committed bytes; git
+    # verifies the objects it fetches). The file is also fetched as raw bytes at that commit (second channel) and must be
+    # byte-identical. The executed cell (IPython history) must equal the committed bytes exactly, or with exactly one
+    # final newline appended (a pasted cell may be stored without it). The cell never derives an expected hash from its
+    # own text; commit + blob + SHA-256 are recorded for comparison with the externally announced audited identity.
+    SRC_REPO = 'ceceli33/titan-cognitive-core-v3'; SRC_FILE = '894sinirag.py'
+    ec = {'status': 'NOT_CAPTURED', 'identity_match': False}
     try:
         _hist = list(globals()['get_ipython']().history_manager.input_hist_raw)
         _cell = [x for x in _hist if MARKER in x and 'def integrity_selftest' in x][-1]
         (ROOT / 'TEST894_cell_source.py').write_text(_cell, encoding='utf-8'); _cb = _cell.encode('utf-8')
-        _cand = {sha_bytes(_cb), sha_bytes(_cb + b'\n')}
-        R['executed_cell'] = {'status': 'CAPTURED', 'sha256': sha_bytes(_cb), 'sha256_with_final_newline': sha_bytes(_cb + b'\n'),
-                              'git_blob': gitblob(_cb), 'git_blob_with_final_newline': gitblob(_cb + b'\n'),
-                              'lines': _cell.count('\n') + 1, 'file': str(ROOT / 'TEST894_cell_source.py'),
-                              'expected_sha256': _exp, 'identity_match': _exp is not None and _exp in _cand}
+        ec.update(status='CAPTURED', sha256=sha_bytes(_cb), git_blob=gitblob(_cb), git_blob_with_final_newline=gitblob(_cb + b'\n'),
+                  lines=_cell.count('\n') + 1, file=str(ROOT / 'TEST894_cell_source.py'))
     except Exception as e:
-        R['executed_cell'] = {'status': 'NOT_CAPTURED', 'error': '%s: %s' % (type(e).__name__, e), 'expected_sha256': _exp,
-                              'identity_match': False}
+        ec['capture_error'] = '%s: %s' % (type(e).__name__, e)
+    try:
+        _gd = ROOT.parent / ('TEST894_srcid_' + RUN_ID); _genv = dict(os.environ, GIT_TERMINAL_PROMPT='0')
+        _git = lambda *a: subprocess.run(['git'] + list(a), check=True, capture_output=True, timeout=180, env=_genv).stdout
+        _git('clone', '-q', '--depth', '1', '--filter=blob:none', '--no-checkout', 'https://github.com/' + SRC_REPO, str(_gd))
+        _c = _git('-C', str(_gd), 'rev-parse', 'HEAD').decode().strip()
+        _b = _git('-C', str(_gd), 'rev-parse', 'HEAD:' + SRC_FILE).decode().strip()
+        _pb = _git('-C', str(_gd), 'cat-file', 'blob', _b)
+        with urllib.request.urlopen(urllib.request.Request('https://raw.githubusercontent.com/%s/%s/%s' % (SRC_REPO, _c, SRC_FILE),
+                                                           headers={'User-Agent': 'AKBASCORE-TEST894'}), timeout=120) as f_:
+            _rb = f_.read()
+        ec['published'] = {'repo': SRC_REPO, 'commit': _c, 'tree_blob': _b, 'blob_of_bytes': gitblob(_pb), 'sha256': sha_bytes(_pb),
+                           'bytes': len(_pb), 'raw_channel_equal': _rb == _pb}
+        _pub_ok = gitblob(_pb) == _b and _rb == _pb
+        ec['canonicalization'] = 'exact bytes, or exactly one final newline appended to the captured cell'
+        if ec['status'] == 'CAPTURED': ec['identity_match'] = _pub_ok and (_cb == _pb or _cb + b'\n' == _pb)
+        shutil.rmtree(_gd, ignore_errors=True)
+    except Exception as e:
+        ec['published_error'] = '%s: %s' % (type(e).__name__, str(e)[:300])
+    R['executed_cell'] = ec
     log('EXECUTED_CELL', json.dumps(R['executed_cell']))
     # ---------------------------------------------------------------------------------------------------- ENV
     env = {'python': platform.python_version(), 'torch': torch.__version__, 'cuda': torch.version.cuda,
@@ -947,8 +965,7 @@ finally:
         from google.colab import files as _cfiles
         for f_ in (ZIP_PATH,) + ((RECEIPT_PATH,) if receipt_ok else ()):
             if f_.exists(): _cfiles.download(str(f_))
-        print('Downloads started. If they did not arrive, run in a new cell: from google.colab import files; '
-              'files.download(%r); files.download(%r)' % (str(ZIP_PATH), str(RECEIPT_PATH)))
+        print('Automatic downloads started; the same files are kept under', ROOT.parent, 'and (if mounted) in', DRIVE_DIR)
     except Exception as e:
         print('Automatic download not available (%s); the files are under %s' % (type(e).__name__, ROOT.parent))
     print('=' * 112)
