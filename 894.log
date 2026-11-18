@@ -1,34 +1,34 @@
  ================================================================================================================
-AKBASCORE SILICON HIPPOCAMPUS — TEST894 — LoRA–CUT3 BACKWARD PREFLIGHT 20261118T021423Z | engine commit f1007d912773f3460536784ff80a215741bc97e9 | continuation of TEST893 (FAIL_NO_GAIN, unchanged)
+AKBASCORE SILICON HIPPOCAMPUS — TEST894 — LoRA–CUT3 BACKWARD PREFLIGHT 20261118T031507Z | engine commit f1007d912773f3460536784ff80a215741bc97e9 | continuation of TEST893 (FAIL_NO_GAIN, unchanged)
 SCOPE: feasibility only. PASS != learning / semantic reading / native behaviour / autonomy.
 ================================================================================================================
-TOLERANCES {"P_expected": 30, "chunk_expected": 128, "dir_fail_increase_nats": 0.005, "dir_ratio_band": [0.25, 4.0], "dir_targets_nats": [0.02, 0.1], "label_alignment_nats": 0.05, "p6_clean_slack_mib": 256, "parity_close_rel": 0.01, "surrogate_rel_err": 1e-06, "train_infer_inconclusive_nats": 0.5, "train_infer_pass_nats": 0.1, "vram_reserved_frac_max": 0.95} sha256 7f8bbd6be0bb3dd876b85fd56fe2f59ef9d635a7d5669d10114530a76da50635
-EXECUTED_CELL {"status": "CAPTURED", "identity_match": true, "sha256": "f4955bf8031efaa326f0f5a83e8d513f238864ba1b1542bd9fb25a2136637043", "git_blob": "90bfa3cc8e961885ff4045e32f3aad3c3f7540bd", "git_blob_with_final_newline": "277beb2d8267a721d3d7196a8c1e5231b6229b1c", "lines": 997, "file": "/content/TEST894_20261118T021423Z/TEST894_cell_source.py", "published": {"repo": "ceceli33/titan-cognitive-core-v3", "commit": "e70d7b3187f40a0c534b08003972e11e2ae3fcf9", "tree_blob": "f6bcf4e3a712c52f322e4fbb4ad3df61b95da6c0", "blob_of_bytes": "f6bcf4e3a712c52f322e4fbb4ad3df61b95da6c0", "sha256": "4603a256bad7ea8d9a0c89ff77000889ba18dcd25de15b5244acda9cb586740a", "bytes": 81757, "raw_channel_equal": true}, "canonicalization": "strip leading/trailing b'\\n' on both sides only; interior bytes compared exactly", "boundary_newlines": {"cell_leading": 1, "cell_trailing": 0, "published_leading": 0, "published_trailing": 1}}
+TOLERANCES {"P_expected": 30, "chunk_expected": 128, "dir_fail_increase_nats": 0.005, "dir_max_frac_of_loss": 0.5, "dir_max_step_frac_of_lora_norm": 0.05, "dir_ratio_band": [0.25, 4.0], "dir_targets_nats": [0.02, 0.1], "label_alignment_nats": 0.05, "p6_clean_slack_mib": 256, "parity_close_rel": 0.01, "surrogate_rel_err": 1e-06, "train_infer_inconclusive_nats": 0.5, "train_infer_pass_nats": 0.1, "vram_reserved_frac_max": 0.95} sha256 fc16521041f856e3d463449e5adfc0034dd4b424dc8d5b8ae59760ff88103cd5
+EXECUTED_CELL {"status": "CAPTURED", "identity_match": true, "sha256": "607d9667600d9fb0883a2b1246dd4f9668df2068879cb39f656e8ebcfb5c37b3", "git_blob": "50d1e5358e0443a481bf41c4d4796da3d8279d08", "git_blob_with_final_newline": "0735a334c68b149ec3ba6bf35a205f410ab2c3e1", "lines": 1008, "file": "/content/TEST894_20261118T031507Z/TEST894_cell_source.py", "published": {"repo": "ceceli33/titan-cognitive-core-v3", "commit": "011073e83cf81524f6992718831373897add5979", "tree_blob": "10dca846a5115619c21c71d8679f8c5e35e8b6b4", "blob_of_bytes": "10dca846a5115619c21c71d8679f8c5e35e8b6b4", "sha256": "5b87e4d15dd4d1f48988859523b75aa21ca3ce7904a89a45e06a429e0b1779a4", "bytes": 82996, "raw_channel_equal": true}, "canonicalization": "strip leading/trailing b'\\n' on both sides only; interior bytes compared exactly", "boundary_newlines": {"cell_leading": 1, "cell_trailing": 0, "published_leading": 0, "published_trailing": 1}}
 ENV {"python": "3.13.16", "torch": "2.14.1+cu130", "cuda": "13.0", "transformers": "5.22.1", "accelerate": "1.16.0", "bitsandbytes": "0.50.2", "cuda_available": true, "device_count": 1, "gpu": "NVIDIA A100-SXM4-80GB", "gpu_bytes": 85094825984, "compute_capability": [8, 0]}
 GATE ENV PASS 
 Mounted at /content/drive
-DRIVE_BACKUP_DIR /content/drive/MyDrive/TEST894_20261118T021423Z
+DRIVE_BACKUP_DIR /content/drive/MyDrive/TEST894_20261118T031507Z
 GATE SOURCE PASS 
 GATE EXTRACT PASS 
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-config.json: 100% 663/663 [00:00<00:00, 77.8kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 719kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 85.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.9MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 129MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.16MB/s]Download complete:   125GB, 1.46GB/s  Reconstruction complete: 100%  145GB /  145GB,  579MB/s  Fetching 37 files: 100% 37/37 [06:49<00:00, 10.47s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.33it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.2kB/s]PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+config.json: 100% 663/663 [00:00<00:00, 79.3kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 816kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 85.4MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 66.5MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 135MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 10.1MB/s]Download complete:   125GB, 1.32GB/s  Reconstruction complete: 100%  145GB /  145GB,  629MB/s  Fetching 37 files: 100% 37/37 [06:49<00:00, 10.40s/it]Loading weights: 100% 963/963 [06:30<00:00,  3.26it/s]generation_config.json: 100% 242/242 [00:00<00:00, 28.2kB/s]PASS MODEL_ARCH [80, 8192, 64, 8, 128]
 PASS FROZEN 
 PASS NF4 
 GATE MODEL PASS 
 API877 OK {"transformers": "5.22.1", "torch": "2.14.1+cu130", "source_sha256": {"attn": "3d7ae1485294d0c8", "layer": "75d1d62e173e8c57", "model": "523115d50c78f82f", "lm": "2e49fae88f3208b4"}, "shape": [80, 8192, 64, 8, 128], "attn": "sdpa"}
-BASE_INTEGRITY {"sentinel": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "weights877": "f7ae2ce27d9eda5391c236dbdc5c6c8c6b3a63e7eb6ebdefde8943ff5b988e8c", "integrity": {"sha256": "036bcdeddf9714b8f91a7eb5a967ba584338b1f96505b4e4de031bbbd49a4bd9", "param_tensors": 963, "nf4_quant_states": 560, "buffers": 2, "param_bytes": 40093433856, "seconds": 167.6}}
+BASE_INTEGRITY {"sentinel": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "weights877": "f7ae2ce27d9eda5391c236dbdc5c6c8c6b3a63e7eb6ebdefde8943ff5b988e8c", "integrity": {"sha256": "036bcdeddf9714b8f91a7eb5a967ba584338b1f96505b4e4de031bbbd49a4bd9", "param_tensors": 963, "nf4_quant_states": 560, "buffers": 2, "param_bytes": 40093433856, "seconds": 167.9}}
 RECORDS {"name_attempts": 11, "domain": "DOMAIN_GPRKBPRNY", "start": "VQXWAWLHX", "T1": "PCSVPTNPK", "T2": "BEESBUKKF", "placebo_domain": "DOMAIN_WAWDKWMRD", "tokens": {"body": 29, "target": 5, "suffix": 45, "long_body": 2026}, "leak_free": true, "note": "preflight-only names; exclude from any later H1 split"}
 PASS NATIVE_FORGE_SHAPE 
-FORGED A n 59 sha256 998617574d9678ed forge_s 2.592
+FORGED A n 59 sha256 4331f518c3553d57 forge_s 2.536
 PASS NATIVE_FORGE_SHAPE 
-FORGED B n 59 sha256 b0149e6086fa26f2 forge_s 0.639
+FORGED B n 59 sha256 5f5ea3475b45de08 forge_s 0.612
 PASS NATIVE_FORGE_SHAPE 
-FORGED W n 59 sha256 e82c684776690daa forge_s 0.604
+FORGED W n 59 sha256 7bdaee4d881dc36f forge_s 0.608
 PASS NATIVE_FORGE_SHAPE 
-FORGED NONE n 30 sha256 8da08b039c030bb6 forge_s 0.593
+FORGED NONE n 30 sha256 cc668aa08103ea54 forge_s 0.607
 PASS NATIVE_FORGE_SHAPE 
-FORGED LONG n 2056 sha256 a43915831ed2c0eb forge_s 5.86
+FORGED LONG n 2056 sha256 3418696829185879 forge_s 5.879
 PASS NATIVE_INIT_80_LAYERS 
 PASS NATIVE_INIT_80_LAYERS 
 PASS NATIVE_INIT_80_LAYERS 
@@ -44,22 +44,22 @@ GATE P0_C_WRAPPER_OFF_IDENTITY PASS | installed-but-disabled LoRA vs no-LoRA: re
 GATE P0_D_ZERO_LORA_IDENTITY PASS | B=0 LoRA ON vs base on the same mounted cartridge; every wrapper on the native path
 GATE P8_READABILITY DIAGNOSTIC | base-OFF native cartridge readout ceiling / text upper bound (descriptive)
 GATE P2_LIVE_AUTOGRAD PASS 
-P3_STEP 1 A loss 0.00003 grad 1.3261e-04 A_nz 0 B_nz 320 f/b/o s 0.323 0.566 0.232
-/tmp/ipykernel_647/3468607418.py:703: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+P3_STEP 1 A loss 0.00003 grad 1.3261e-04 A_nz 0 B_nz 320 f/b/o s 0.333 0.572 0.249
+/tmp/ipykernel_472/3459852313.py:705: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
   steps.append({'step': s, 'mount': m, 'loss': float(loss), 'base_grad_none': base_grad_none, 'finite': finite,
-P3_STEP 2 B loss 0.00000 grad 9.7652e-07 A_nz 320 B_nz 320 f/b/o s 0.327 0.361 0.011
-P3_STEP 3 A loss 0.00002 grad 1.2058e-04 A_nz 320 B_nz 320 f/b/o s 0.337 0.365 0.011
+P3_STEP 2 B loss 0.00000 grad 9.7652e-07 A_nz 320 B_nz 320 f/b/o s 0.338 0.369 0.011
+P3_STEP 3 A loss 0.00002 grad 1.2058e-04 A_nz 320 B_nz 320 f/b/o s 0.325 0.368 0.011
 GATE P3_GRADIENT PASS 
 GATE S8_CONTENT_DEPENDENCE DIAGNOSTIC | computational dependence on cartridge content (not semantic interpretation evidence)
 GATE P5_TRAIN_INFER PASS | same base-OFF prefix, cartridge and LoRA state: train-mode autograd vs eval no_grad live forward
-GATE P4_NUMERICAL FAIL | float64 local surrogate (LoRA math, CPU) + real-NF4-engine directional loss probe
-P6 {"prefix": "A", "prefix_tokens": 59, "live_tokens": 64, "cache_build_s": 0.0042, "forward_s": 0.389, "backward_s": 0.371, "prefix_kv_copy_gib_est": 0.018, "peak": {"free_gib": 35.046, "allocated_gib": 40.837, "reserved_gib": 43.688, "peak_allocated_gib": 43.482, "peak_reserved_gib": 43.688, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.133, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
-P6 {"prefix": "A", "prefix_tokens": 59, "live_tokens": 256, "cache_build_s": 0.0041, "forward_s": 0.582, "backward_s": 0.4, "prefix_kv_copy_gib_est": 0.018, "peak": {"free_gib": 28.286, "allocated_gib": 40.837, "reserved_gib": 50.447, "peak_allocated_gib": 49.864, "peak_reserved_gib": 50.447, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.39, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
-P6 {"prefix": "LONG_A", "prefix_tokens": 2085, "live_tokens": 64, "cache_build_s": 0.0087, "forward_s": 0.39, "backward_s": 0.399, "prefix_kv_copy_gib_est": 0.6363, "peak": {"free_gib": 29.458, "allocated_gib": 40.837, "reserved_gib": 49.275, "peak_allocated_gib": 49.066, "peak_reserved_gib": 49.275, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.179, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
-P6 {"prefix": "LONG_A", "prefix_tokens": 2085, "live_tokens": 256, "cache_build_s": 0.0087, "forward_s": 0.599, "backward_s": 0.531, "prefix_kv_copy_gib_est": 0.6363, "peak": {"free_gib": 22.352, "allocated_gib": 40.837, "reserved_gib": 56.381, "peak_allocated_gib": 55.507, "peak_reserved_gib": 56.381, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.558, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
-P6 {"prefix": "XL", "prefix_tokens": 4111, "live_tokens": 64, "cache_build_s": 0.0141, "forward_s": 0.409, "backward_s": 0.587, "prefix_kv_copy_gib_est": 1.2546, "peak": {"free_gib": 23.843, "allocated_gib": 40.837, "reserved_gib": 54.891, "peak_allocated_gib": 54.65, "peak_reserved_gib": 54.891, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.404, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
-P6 {"prefix": "XL", "prefix_tokens": 4111, "live_tokens": 256, "cache_build_s": 0.0136, "forward_s": 0.638, "backward_s": 0.761, "prefix_kv_copy_gib_est": 1.2546, "peak": {"free_gib": 16.708, "allocated_gib": 40.837, "reserved_gib": 62.025, "peak_allocated_gib": 61.149, "peak_reserved_gib": 62.025, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.848, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
+GATE P4_NUMERICAL INCONCLUSIVE | float64 local surrogate (LoRA math, CPU) + real-NF4-engine directional loss probe
+P6 {"prefix": "A", "prefix_tokens": 59, "live_tokens": 64, "cache_build_s": 0.0064, "forward_s": 0.393, "backward_s": 0.369, "prefix_kv_copy_gib_est": 0.018, "peak": {"free_gib": 35.046, "allocated_gib": 40.837, "reserved_gib": 43.688, "peak_allocated_gib": 43.482, "peak_reserved_gib": 43.688, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.136, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
+P6 {"prefix": "A", "prefix_tokens": 59, "live_tokens": 256, "cache_build_s": 0.0042, "forward_s": 0.575, "backward_s": 0.4, "prefix_kv_copy_gib_est": 0.018, "peak": {"free_gib": 28.286, "allocated_gib": 40.837, "reserved_gib": 50.447, "peak_allocated_gib": 49.864, "peak_reserved_gib": 50.447, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.373, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
+P6 {"prefix": "LONG_A", "prefix_tokens": 2085, "live_tokens": 64, "cache_build_s": 0.0088, "forward_s": 0.382, "backward_s": 0.394, "prefix_kv_copy_gib_est": 0.6363, "peak": {"free_gib": 29.458, "allocated_gib": 40.837, "reserved_gib": 49.275, "peak_allocated_gib": 49.066, "peak_reserved_gib": 49.275, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.167, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
+P6 {"prefix": "LONG_A", "prefix_tokens": 2085, "live_tokens": 256, "cache_build_s": 0.009, "forward_s": 0.601, "backward_s": 0.531, "prefix_kv_copy_gib_est": 0.6363, "peak": {"free_gib": 22.352, "allocated_gib": 40.837, "reserved_gib": 56.381, "peak_allocated_gib": 55.507, "peak_reserved_gib": 56.381, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.576, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
+P6 {"prefix": "XL", "prefix_tokens": 4111, "live_tokens": 64, "cache_build_s": 0.0146, "forward_s": 0.419, "backward_s": 0.587, "prefix_kv_copy_gib_est": 1.2546, "peak": {"free_gib": 23.843, "allocated_gib": 40.837, "reserved_gib": 54.891, "peak_allocated_gib": 54.65, "peak_reserved_gib": 54.891, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.428, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
+P6 {"prefix": "XL", "prefix_tokens": 4111, "live_tokens": 256, "cache_build_s": 0.0145, "forward_s": 0.639, "backward_s": 0.761, "prefix_kv_copy_gib_est": 1.2546, "peak": {"free_gib": 16.708, "allocated_gib": 40.837, "reserved_gib": 62.025, "peak_allocated_gib": 61.149, "peak_reserved_gib": 62.025, "total_gib": 79.251}, "oom": false, "status": "OK", "row_wall_s": 1.839, "allocated_after_cleanup_gib": 40.715, "clean_after": true}
 GATE P6_RESOURCE PASS 
 GATE P1_PHYSICAL PASS 
 GATE P7_INTEGRITY PASS 
@@ -75,18 +75,18 @@ P0_D_ZERO_LORA_IDENTITY        PASS          B=0 LoRA ON vs base on the same mou
 P1_PHYSICAL                    PASS          
 P2_LIVE_AUTOGRAD               PASS          
 P3_GRADIENT                    PASS          
-P4_NUMERICAL                   FAIL          float64 local surrogate (LoRA math, CPU) + real-NF4-engine directional loss probe
+P4_NUMERICAL                   INCONCLUSIVE  float64 local surrogate (LoRA math, CPU) + real-NF4-engine directional loss probe
 P5_TRAIN_INFER                 PASS          same base-OFF prefix, cartridge and LoRA state: train-mode autograd vs eval no_grad live forward
 P6_RESOURCE                    PASS          
 P7_INTEGRITY                   PASS          
 S8_CONTENT_DEPENDENCE          DIAGNOSTIC    computational dependence on cartridge content (not semantic interpretation evidence)
 P8_READABILITY                 DIAGNOSTIC    base-OFF native cartridge readout ceiling / text upper bound (descriptive)
-TEST894_SUMMARY {"commit": "f1007d912773f3460536784ff80a215741bc97e9", "elapsed_s": 1243.2, "gates": {"ENV": "PASS", "EXTRACT": "PASS", "MODEL": "PASS", "P0_A_FORGE_REBUILD_PARITY": "PASS", "P0_B_EXPLICIT_APPEND_PARITY": "PASS", "P0_C_WRAPPER_OFF_IDENTITY": "PASS", "P0_D_ZERO_LORA_IDENTITY": "PASS", "P1_PHYSICAL": "PASS", "P2_LIVE_AUTOGRAD": "PASS", "P3_GRADIENT": "PASS", "P4_NUMERICAL": "FAIL", "P5_TRAIN_INFER": "PASS", "P6_RESOURCE": "PASS", "P7_INTEGRITY": "PASS", "P8_READABILITY": "DIAGNOSTIC", "S8_CONTENT_DEPENDENCE": "DIAGNOSTIC", "SOURCE": "PASS"}, "model_revision": "495f39366efef23836d0cfae4fbe635880d2be31", "run_id": "20261118T021423Z", "scope": "feasibility only; not learning / semantic / native-behaviour / autonomy evidence", "status": "COMPLETE", "verdict": "NOT_FEASIBLE_THIS_CONFIGURATION"}
-LOCAL FILES  : /content/TEST894_20261118T021423Z | /content/TEST894_SONUC_20261118T021423Z.zip | /content/TEST894_SONUC_20261118T021423Z_RECEIPT.json
-DRIVE        : /content/drive/MyDrive/TEST894_20261118T021423Z
-TEST894_LOG_END TECHNICAL_VERDICT=NOT_FEASIBLE_THIS_CONFIGURATION | STATUS=COMPLETE | ZIP_CORE=True | CELL_IDENTITY_MATCH=True | final ARTIFACT_STATUS: receipt + console
-TEST894_FINAL TECHNICAL_VERDICT=NOT_FEASIBLE_THIS_CONFIGURATION | STATUS=COMPLETE | ARTIFACT_STATUS=PASS
-RECEIPT      : /content/TEST894_SONUC_20261118T021423Z_RECEIPT.json sha256=c570d0572e225412f6745fead83e167af9c69d88b6c7c8a40e5086f3391e667a local_verified=True drive_verified=True receipt_state=VERIFIED
-FINAL LOG    : /content/TEST894_20261118T021423Z/TEST894.log sha256=63fa0d0cd8d13184920350161cf98b3320a24ea0e7a5f5f8839dca0dc20dd3f6 | ARTIFACT FAILURES: none
-Automatic downloads started; the same files are kept under /content and (if mounted) in /content/drive/MyDrive/TEST894_20261118T021423Z
+TEST894_SUMMARY {"commit": "f1007d912773f3460536784ff80a215741bc97e9", "elapsed_s": 1252.4, "gates": {"ENV": "PASS", "EXTRACT": "PASS", "MODEL": "PASS", "P0_A_FORGE_REBUILD_PARITY": "PASS", "P0_B_EXPLICIT_APPEND_PARITY": "PASS", "P0_C_WRAPPER_OFF_IDENTITY": "PASS", "P0_D_ZERO_LORA_IDENTITY": "PASS", "P1_PHYSICAL": "PASS", "P2_LIVE_AUTOGRAD": "PASS", "P3_GRADIENT": "PASS", "P4_NUMERICAL": "INCONCLUSIVE", "P5_TRAIN_INFER": "PASS", "P6_RESOURCE": "PASS", "P7_INTEGRITY": "PASS", "P8_READABILITY": "DIAGNOSTIC", "S8_CONTENT_DEPENDENCE": "DIAGNOSTIC", "SOURCE": "PASS"}, "model_revision": "495f39366efef23836d0cfae4fbe635880d2be31", "run_id": "20261118T031507Z", "scope": "feasibility only; not learning / semantic / native-behaviour / autonomy evidence", "status": "COMPLETE", "verdict": "UNDECIDABLE"}
+LOCAL FILES  : /content/TEST894_20261118T031507Z | /content/TEST894_SONUC_20261118T031507Z.zip | /content/TEST894_SONUC_20261118T031507Z_RECEIPT.json
+DRIVE        : /content/drive/MyDrive/TEST894_20261118T031507Z
+TEST894_LOG_END TECHNICAL_VERDICT=UNDECIDABLE | STATUS=COMPLETE | ZIP_CORE=True | CELL_IDENTITY_MATCH=True | final ARTIFACT_STATUS: receipt + console
+TEST894_FINAL TECHNICAL_VERDICT=UNDECIDABLE | STATUS=COMPLETE | ARTIFACT_STATUS=PASS
+RECEIPT      : /content/TEST894_SONUC_20261118T031507Z_RECEIPT.json sha256=404f62401a5f059332cbce5c364ee9ee26b01ca23711b30bdc542c46abe9afe5 local_verified=True drive_verified=True receipt_state=VERIFIED
+FINAL LOG    : /content/TEST894_20261118T031507Z/TEST894.log sha256=1433e4a66b2cf01cd083ecb91eee09d2262141b768374dc28cd3e35a98ca0d83 | ARTIFACT FAILURES: none
+Automatic downloads started; the same files are kept under /content and (if mounted) in /content/drive/MyDrive/TEST894_20261118T031507Z
 ================================================================================================================
