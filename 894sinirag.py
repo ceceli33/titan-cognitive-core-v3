@@ -34,37 +34,58 @@ from datetime import datetime, timezone
 os.environ.setdefault('PYTORCH_CUDA_ALLOC_CONF', 'expandable_segments:True')
 
 # ---------------------------------------------------------------------------------------------------------- versions
+# Bootstrap record (stdlib only) is created BEFORE the torch check / pip / imports, so a bootstrap failure is recorded.
+RUN_ID = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+ROOT = Path(('/content/' if Path('/content').exists() else '/tmp/') + 'TEST894_' + RUN_ID)
+ROOT.mkdir(parents=True, exist_ok=True)
+LOG = ROOT / 'TEST894.log'; OUT = ROOT / 'TEST894_results.json'; LOG.write_text('')
+ZIP_PATH = ROOT.parent / ('TEST894_SONUC_' + RUN_ID + '.zip'); RECEIPT_PATH = ROOT.parent / ('TEST894_SONUC_' + RUN_ID + '_RECEIPT.json')
 def _ver(name):
     try: return importlib.metadata.version(name)
     except importlib.metadata.PackageNotFoundError: return None
-# Exact runtime contract. torch 2.14.1+cu130 / CUDA 13.0 / transformers 5.22.1 = the combination recorded in 893.log
-# (TABLE GATE0 RUNTIME) under which this engine, incl. api877, ran on the A100. accelerate 1.16.0 / bitsandbytes 0.50.2 =
-# the versions whose sources K3.1 audited (not recorded in 893.log). torch is never installed or changed by this cell.
-TORCH_REQ = '2.14.1+cu130'; CUDA_REQ = '13.0'
-PINS = {'transformers': '5.22.1', 'accelerate': '1.16.0', 'bitsandbytes': '0.50.2'}
-if _ver('torch') != TORCH_REQ:
-    raise SystemExit('TEST894_ENV: torch %s found, %s required (893.log runtime); no torch change is made' % (_ver('torch'), TORCH_REQ))
-_need = [p for p, v in PINS.items() if _ver(p) != v]
-if _need:
-    _loaded = [p for p in _need if p in sys.modules]
-    if _loaded: raise SystemExit('TEST894_ENV: %s already imported with other versions; restart the runtime and rerun' % _loaded)
-    _con = Path('/tmp/TEST894_torch_constraint.txt'); _con.write_text('torch==%s\n' % TORCH_REQ)
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', '-c', str(_con)] + ['%s==%s' % (p, PINS[p]) for p in _need])
-_got = {p: _ver(p) for p in list(PINS) + ['torch']}
-if any(_got[p] != v for p, v in PINS.items()) or _got['torch'] != TORCH_REQ:
-    raise SystemExit('TEST894_ENV: version contract not met after install: %s' % _got)
-import torch, transformers, accelerate, bitsandbytes
-if torch.__version__ != TORCH_REQ or torch.version.cuda != CUDA_REQ or transformers.__version__ != PINS['transformers'] or \
-        accelerate.__version__ != PINS['accelerate'] or bitsandbytes.__version__ != PINS['bitsandbytes']:
-    raise SystemExit('TEST894_ENV: imported versions differ from the contract: torch %s cuda %s transformers %s accelerate %s '
-                     'bitsandbytes %s' % (torch.__version__, torch.version.cuda, transformers.__version__, accelerate.__version__,
-                                          bitsandbytes.__version__))
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
-from transformers.cache_utils import DynamicCache
+def _boot_fail(e):
+    tb = traceback.format_exc()
+    rec = {'test': 'TEST894', 'run_id': RUN_ID, 'status': 'BOOTSTRAP_ERROR', 'error': '%s: %s' % (type(e).__name__, e),
+           'traceback': tb, 'installed_versions': {p_: _ver(p_) for p_ in ('torch', 'transformers', 'accelerate', 'bitsandbytes')},
+           'technical_verdict': 'NOT_RUN', 'ARTIFACT_STATUS': 'FAIL', 'gpu_model_loaded': False,
+           'note': 'stopped before any model / GPU work; Drive not attempted'}
+    for path_, txt_ in ((OUT, json.dumps(rec, indent=2)), (RECEIPT_PATH, json.dumps(rec, indent=2))):
+        try: tmp_ = Path(str(path_) + '.tmp'); tmp_.write_text(txt_); tmp_.replace(path_)
+        except Exception as e2: print('BOOTSTRAP_RECORD_WRITE_FAILED', path_, e2)
+    with LOG.open('a') as f_: f_.write('BOOTSTRAP_ERROR %s\n%s\nARTIFACT_STATUS=FAIL\n' % (rec['error'], tb))
+    print(tb); print('TEST894 BOOTSTRAP_ERROR recorded in', OUT, LOG, RECEIPT_PATH)
+    raise SystemExit('TEST894 BOOTSTRAP_ERROR: ' + rec['error'])
+try:
+    # Exact runtime contract. torch 2.14.1+cu130 / CUDA 13.0 / transformers 5.22.1 = the combination recorded in 893.log
+    # (TABLE GATE0 RUNTIME) under which this engine, incl. api877, ran on the A100. accelerate 1.16.0 / bitsandbytes 0.50.2 =
+    # the versions whose sources K3.1 audited (not recorded in 893.log). torch is never installed or changed by this cell.
+    TORCH_REQ = '2.14.1+cu130'; CUDA_REQ = '13.0'
+    PINS = {'transformers': '5.22.1', 'accelerate': '1.16.0', 'bitsandbytes': '0.50.2'}
+    if _ver('torch') != TORCH_REQ:
+        raise SystemExit('TEST894_ENV: torch %s found, %s required (893.log runtime); no torch change is made' % (_ver('torch'), TORCH_REQ))
+    _need = [p for p, v in PINS.items() if _ver(p) != v]
+    if _need:
+        _loaded = [p for p in _need if p in sys.modules]
+        if _loaded: raise SystemExit('TEST894_ENV: %s already imported with other versions; restart the runtime and rerun' % _loaded)
+        _con = Path('/tmp/TEST894_torch_constraint.txt'); _con.write_text('torch==%s\n' % TORCH_REQ)
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', '-c', str(_con)] + ['%s==%s' % (p, PINS[p]) for p in _need])
+    _got = {p: _ver(p) for p in list(PINS) + ['torch']}
+    if any(_got[p] != v for p, v in PINS.items()) or _got['torch'] != TORCH_REQ:
+        raise SystemExit('TEST894_ENV: version contract not met after install: %s' % _got)
+    import torch, transformers, accelerate, bitsandbytes
+    if torch.__version__ != TORCH_REQ or torch.version.cuda != CUDA_REQ or transformers.__version__ != PINS['transformers'] or \
+            accelerate.__version__ != PINS['accelerate'] or bitsandbytes.__version__ != PINS['bitsandbytes']:
+        raise SystemExit('TEST894_ENV: imported versions differ from the contract: torch %s cuda %s transformers %s accelerate %s '
+                         'bitsandbytes %s' % (torch.__version__, torch.version.cuda, transformers.__version__, accelerate.__version__,
+                                              bitsandbytes.__version__))
+    from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+    from transformers.cache_utils import DynamicCache
+except BaseException as _e:
+    if isinstance(_e, KeyboardInterrupt): raise
+    _boot_fail(_e)
 
 # --------------------------------------------------------------------------------------------------------- constants
 TAG = 'TEST894'; MARKER = 'AKBASCORE SILICON HIPPOCAMPUS — TEST894 — LoRA–CUT3 BACKWARD PREFLIGHT'
-RUN_ID = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 COMMIT = 'f1007d912773f3460536784ff80a215741bc97e9'
 RAW_BASE = 'https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/' + COMMIT + '/'
 MODEL_ID = 'Qwen/Qwen2.5-72B-Instruct'; CUT = 3; DTYPE = torch.bfloat16; DEV = torch.device('cuda:0')
@@ -74,10 +95,7 @@ MODEL_REVISION = '495f39366efef23836d0cfae4fbe635880d2be31'
 GPU_NAME_REQ = 'NVIDIA A100-SXM4-80GB'; GPU_CC_REQ = (8, 0)
 EXPECTED = (80, 8192, 64, 8, 128); CHUNK = 128; GPU_RESERVE_GIB = 9.0
 SEED = 20261117
-ROOT = Path(('/content/' if Path('/content').exists() else '/tmp/') + 'TEST894_' + RUN_ID)
-CART_DIR = ROOT / 'cartridges'; ROOT.mkdir(parents=True, exist_ok=True); CART_DIR.mkdir(exist_ok=True)
-LOG = ROOT / 'TEST894.log'; OUT = ROOT / 'TEST894_results.json'; LOG.write_text('')
-ZIP_PATH = ROOT.parent / ('TEST894_SONUC_' + RUN_ID + '.zip'); RECEIPT_PATH = ROOT.parent / ('TEST894_SONUC_' + RUN_ID + '_RECEIPT.json')
+CART_DIR = ROOT / 'cartridges'; CART_DIR.mkdir(exist_ok=True)
 DRIVE_DIR = None; DRIVE_ERR = {'mount': None, 'backup_failures': 0, 'last': None}
 # Git blob SHA-1 of every engine file this cell reads (pinned commit). K3.1's six reported IDs are cross-checked below.
 LOCKS = {'709.py': '6c9f8cbb1eeed848d45133d73f0d7676b68e9125', '730.py': 'b1bad9eb3b111b44413f8ef05a3a140ab66a77dd',
@@ -367,15 +385,23 @@ try:
     log('=' * 112); log(MARKER, RUN_ID, '| engine commit', COMMIT, '| continuation of TEST893 (FAIL_NO_GAIN, unchanged)')
     log('SCOPE: feasibility only. PASS != learning / semantic reading / native behaviour / autonomy.'); log('=' * 112)
     log('TOLERANCES', json.dumps(TOL, sort_keys=True), 'sha256', R['tolerances_sha256'])
-    # executed-cell identity (TEST864/870 method: IPython input history); recorded, not self-asserted
+    # executed-cell identity (TEST864/870 method: IPython input history). The expected SHA-256 of the PUBLISHED file is fixed
+    # OUTSIDE this cell (env var or a separate earlier cell: TEST894_EXPECTED_SHA256 = '<sha256 of 894sinirag.py>'), so the
+    # cell never asserts its own hash. The published file ends with one newline; a pasted cell may be stored without it, so
+    # exactly these two byte forms are compared. Missing / uncaptured / mismatch => ARTIFACT_STATUS cannot be PASS.
+    _exp = (os.environ.get('TEST894_EXPECTED_SHA256') or globals().get('TEST894_EXPECTED_SHA256') or '').strip().lower() or None
     try:
         _hist = list(globals()['get_ipython']().history_manager.input_hist_raw)
         _cell = [x for x in _hist if MARKER in x and 'def integrity_selftest' in x][-1]
         (ROOT / 'TEST894_cell_source.py').write_text(_cell, encoding='utf-8'); _cb = _cell.encode('utf-8')
-        R['executed_cell'] = {'sha256': sha_bytes(_cb), 'git_blob': gitblob(_cb), 'git_blob_with_final_newline': gitblob(_cb + b'\n'),
-                              'lines': _cell.count('\n') + 1, 'file': str(ROOT / 'TEST894_cell_source.py')}
+        _cand = {sha_bytes(_cb), sha_bytes(_cb + b'\n')}
+        R['executed_cell'] = {'status': 'CAPTURED', 'sha256': sha_bytes(_cb), 'sha256_with_final_newline': sha_bytes(_cb + b'\n'),
+                              'git_blob': gitblob(_cb), 'git_blob_with_final_newline': gitblob(_cb + b'\n'),
+                              'lines': _cell.count('\n') + 1, 'file': str(ROOT / 'TEST894_cell_source.py'),
+                              'expected_sha256': _exp, 'identity_match': _exp is not None and _exp in _cand}
     except Exception as e:
-        R['executed_cell'] = {'status': 'NOT_CAPTURED', 'error': '%s: %s' % (type(e).__name__, e)}
+        R['executed_cell'] = {'status': 'NOT_CAPTURED', 'error': '%s: %s' % (type(e).__name__, e), 'expected_sha256': _exp,
+                              'identity_match': False}
     log('EXECUTED_CELL', json.dumps(R['executed_cell']))
     # ---------------------------------------------------------------------------------------------------- ENV
     env = {'python': platform.python_version(), 'torch': torch.__version__, 'cuda': torch.version.cuda,
@@ -855,32 +881,58 @@ finally:
     except Exception as e:
         AG['artifact_error'] = '%s: %s' % (type(e).__name__, e)
     core = all(AG[k] is True for k in ('report_written_read_back', 'zip_testzip', 'sha256sums', 'report_in_zip_is_read_back_report'))
-    ART_STATUS = ('PASS' if core and AG['drive'] is True else
-                  'INCOMPLETE_DRIVE_NOT_MOUNTED' if core and AG['drive'] == 'NOT_RUN' else 'FAIL')
+    AG['cell_identity_match'] = bool((R.get('executed_cell') or {}).get('identity_match'))
+    # Fixed, terminating order: (1) final log lines, LOG frozen (console print only afterwards); (2) Drive copies of the
+    # final log and report byte-verified; (3) ARTIFACT_STATUS; (4) receipt written, read back byte-for-byte, Drive copy
+    # SHA-verified. On a receipt failure the receipt is rewritten ONCE with ARTIFACT_STATUS=FAIL and an unverified Drive
+    # receipt copy is removed, so no file claims PASS without verification. The receipt does not contain its own hash.
+    log('LOCAL FILES  :', ROOT, '|', ZIP_PATH if ZIP_PATH.exists() else 'ZIP NOT CREATED', '|', RECEIPT_PATH)
+    log('DRIVE        :', DRIVE_DIR if DRIVE_DIR is not None else 'DRIVE_NOT_MOUNTED (%s)' % DRIVE_ERR['mount'])
+    log('TEST894_LOG_END TECHNICAL_VERDICT=%s | STATUS=%s | ZIP_CORE=%s | CELL_IDENTITY_MATCH=%s | final ARTIFACT_STATUS: '
+        'receipt + console' % (verdict, R['status'], core, AG['cell_identity_match']))
+    AG['final_log_sha256'] = sha_path(LOG); AG['drive_final_log'] = AG['drive_final_report'] = 'NOT_RUN'
+    if DRIVE_DIR is not None:
+        for key_, src_ in (('drive_final_log', LOG), ('drive_final_report', OUT)):
+            try:
+                dst_ = Path(DRIVE_DIR) / src_.name; shutil.copy2(src_, dst_); AG[key_] = dst_.read_bytes() == src_.read_bytes()
+            except Exception as e:
+                AG[key_] = False; AG[key_ + '_error'] = '%s: %s' % (type(e).__name__, e)
+    fails = [k for k in ('report_written_read_back', 'zip_testzip', 'sha256sums', 'report_in_zip_is_read_back_report',
+                         'cell_identity_match') if AG[k] is not True]
+    if DRIVE_DIR is not None: fails += [k for k in ('drive', 'drive_final_log', 'drive_final_report') if AG[k] is not True]
+    ART_STATUS = 'FAIL' if fails else ('PASS' if DRIVE_DIR is not None else 'INCOMPLETE_DRIVE_NOT_MOUNTED')
     receipt = {'test': 'TEST894', 'run_id': RUN_ID, 'technical_verdict': verdict, 'status': R['status'],
-               'ARTIFACT_STATUS': ART_STATUS, 'artifact_gates': AG, 'gates': summary['gates'], 'report': str(OUT),
-               'report_sha256': rep_sha, 'zip': str(ZIP_PATH), 'zip_sha256': zip_sha, 'drive_dir': DRIVE_DIR,
+               'artifact_gates': AG, 'gates': summary['gates'], 'report': str(OUT),
+               'report_sha256': rep_sha, 'zip': str(ZIP_PATH), 'zip_sha256': zip_sha, 'final_log': str(LOG), 'drive_dir': DRIVE_DIR,
                'drive_mount_error': DRIVE_ERR['mount'], 'drive_backup_failures': DRIVE_ERR['backup_failures'],
                'engine_commit': COMMIT, 'model_revision': MODEL_REVISION, 'runtime_pins': R['runtime_pins'],
                'executed_cell': R.get('executed_cell'), 'previous': 'TEST893 FAIL_NO_GAIN (unchanged)',
                'note': 'ARTIFACT_STATUS is separate from the technical verdict; a missing Drive copy is not a LoRA backward failure'}
-    receipt_ok = False
-    try:
-        tmp_ = RECEIPT_PATH.with_suffix('.json.tmp'); tmp_.write_text(json.dumps(receipt, indent=2, default=str)); tmp_.replace(RECEIPT_PATH)
-        receipt_ok = json.loads(RECEIPT_PATH.read_text())['ARTIFACT_STATUS'] == ART_STATUS
-        if DRIVE_DIR is not None:
-            dr = Path(DRIVE_DIR) / RECEIPT_PATH.name; shutil.copy2(RECEIPT_PATH, dr)
-            log('RECEIPT_DRIVE_COPY', dr, 'sha_equal', sha_path(dr) == sha_path(RECEIPT_PATH))
-    except Exception as e:
-        log('RECEIPT_WRITE_FAILED', type(e).__name__, e)
-    log('TEST894_RECEIPT', json.dumps(receipt, sort_keys=True, default=str))
-    log('LOCAL FILES  :', ROOT, '|', ZIP_PATH if ZIP_PATH.exists() else 'ZIP NOT CREATED', '|',
-        RECEIPT_PATH if receipt_ok else 'RECEIPT NOT VERIFIED')
-    log('DRIVE        :', DRIVE_DIR if DRIVE_DIR is not None else 'DRIVE_NOT_MOUNTED (%s)' % DRIVE_ERR['mount'])
-    log('TEST894_FINAL TECHNICAL_VERDICT=%s | STATUS=%s | ARTIFACT_STATUS=%s' % (verdict, R['status'], ART_STATUS))
-    if DRIVE_DIR is not None:
-        try: shutil.copy2(LOG, Path(DRIVE_DIR) / LOG.name)    # final log lines (the zipped log stops at packaging time)
-        except Exception as e: log('DRIVE_FINAL_LOG_COPY_FAILED', type(e).__name__, e)
+    def _write_receipt(status_):
+        b_ = json.dumps(dict(receipt, ARTIFACT_STATUS=status_, artifact_failures=list(fails)), indent=2, default=str, sort_keys=True).encode()
+        tmp_ = RECEIPT_PATH.with_suffix('.json.tmp'); tmp_.write_bytes(b_); tmp_.replace(RECEIPT_PATH)
+        rb_ = RECEIPT_PATH.read_bytes()
+        return rb_ == b_ and json.loads(rb_.decode('utf-8'))['ARTIFACT_STATUS'] == status_, sha_bytes(b_)
+    def _drive_receipt(sha_):
+        dr_ = Path(DRIVE_DIR) / RECEIPT_PATH.name; shutil.copy2(RECEIPT_PATH, dr_); return sha_path(dr_) == sha_
+    receipt_ok = drive_rc = False; rc_sha = None
+    for attempt_ in (1, 2):                                   # at most two writes; the second one can only say FAIL
+        try:
+            receipt_ok, rc_sha = _write_receipt(ART_STATUS)
+            drive_rc = receipt_ok and (DRIVE_DIR is None or _drive_receipt(rc_sha))
+        except Exception as e:
+            receipt_ok = drive_rc = False; fails.append('receipt_attempt%d: %s: %s' % (attempt_, type(e).__name__, e))
+        if receipt_ok and drive_rc: break
+        if attempt_ == 1:
+            fails.append('receipt_local_read_back' if not receipt_ok else 'receipt_drive_sha256'); ART_STATUS = 'FAIL'
+    if DRIVE_DIR is not None and not drive_rc:
+        try: os.remove(Path(DRIVE_DIR) / RECEIPT_PATH.name)
+        except Exception: pass
+    if not receipt_ok: ART_STATUS = 'FAIL'
+    print('TEST894_FINAL TECHNICAL_VERDICT=%s | STATUS=%s | ARTIFACT_STATUS=%s' % (verdict, R['status'], ART_STATUS))
+    print('RECEIPT      :', RECEIPT_PATH, 'sha256=%s' % rc_sha, 'local_verified=%s' % receipt_ok,
+          'drive_verified=%s' % (drive_rc if DRIVE_DIR is not None else 'DRIVE_NOT_MOUNTED'))
+    print('FINAL LOG    :', LOG, 'sha256=%s' % AG['final_log_sha256'], '| ARTIFACT FAILURES:', fails or 'none')
     try:
         from google.colab import files as _cfiles
         for f_ in (ZIP_PATH, RECEIPT_PATH):
@@ -889,4 +941,4 @@ finally:
               'files.download(%r); files.download(%r)' % (str(ZIP_PATH), str(RECEIPT_PATH)))
     except Exception as e:
         print('Automatic download not available (%s); the files are under %s' % (type(e).__name__, ROOT.parent))
-    log('=' * 112)
+    print('=' * 112)
