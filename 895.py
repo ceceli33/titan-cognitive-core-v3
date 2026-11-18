@@ -131,7 +131,11 @@ TOL = {
     # min(d1_delta_max_frac_L0 * L0, d1_delta_cap); eta_k = delta_k / |g|^2. A step is applied ONLY if pre-guard holds.
     'd1_delta_max_frac_L0': 0.25, 'd1_delta_cap': 0.10, 'd1_ladder': 6,
     'd1_step_frac_lora': 0.05,         # pre-guard: |eta_k g| <= this * |theta_LoRA| (checked BEFORE the step is applied)
-    'd1_snr_min': 10.0,                # resolvable: delta_k >= this * orthogonal-direction central noise at the same norm
+    'd1_snr_min': 10.0,                # resolvable: delta_k AND |measured central| >= this * noise floor (see p4_point)
+    'd1_l0_repeats': 3,                # unperturbed L0 evaluated this many times before the ladder (+1 re-check after every point)
+    'd1_point_repeats': 2,             # every perturbed point L(theta -/+ eta g) is evaluated this many times
+    'd1_ortho_dirs': 2,                # independent orthogonal directions r_j (|r_j| = |g|) for the antisymmetric noise floor
+    'd1_fp32_ulp_mult': 4.0,           # loss-scalar floor: this many float32 ulps of L0
     'd1_stability_band': (0.8, 1.25),  # decision pair = smallest-step ADJACENT resolvable pair with ratio(k)/ratio(k-1) in band
     'd1_pass_band': (0.8, 1.25),       # PASS: both ratios of the decision pair in band and L(theta - eta g) < L0
     'd1_fail_band': (0.5, 2.0),        # FAIL: both ratios of the decision pair < 0 (reverse) or outside this band (mismatch)
@@ -345,17 +349,33 @@ class _PinnedRevision:
         kw['revision'] = MODEL_REVISION; PINNED_CALLS.append([self.cls.__name__, mid, kw['revision']])
         return self.cls.from_pretrained(mid, *a, **kw)
 PINNED_CALLS = []
-def p4_point(d, L0, Lm, Lp, Rm, Rp):
-    # one ladder point. Lm/Lp = L(theta -/+ eta g); Rm/Rp = L(theta -/+ eta r), r orthogonal to g with |r| = |g|.
-    # central = (Lm - Lp)/2 -> -delta to first order (second-order curvature cancels); noise = |Rm - Rp|/2 is the
-    # first-order-free central change along r, i.e. the rounding / higher-order floor at the same step norm.
-    vals = (L0, Lm, Lp, Rm, Rp); fin = all(math.isfinite(v) for v in vals)
-    central = (Lm - Lp) / 2.0 if fin else float('nan'); noise = abs(Rm - Rp) / 2.0 if fin else float('nan')
-    return {'L_minus': Lm, 'L_plus': Lp, 'R_minus': Rm, 'R_plus': Rp, 'finite': fin, 'actual_delta_minus': Lm - L0,
-            'actual_delta_plus': Lp - L0, 'central_delta': central, 'central_ratio': central / -d if fin else float('nan'),
-            'one_sided_ratio': (Lm - L0) / -d if fin else float('nan'), 'curvature_term': (Lm + Lp - 2.0 * L0) / 2.0 if fin else float('nan'),
-            'noise_ortho': noise, 'snr': d / max(noise, 1e-30) if fin else 0.0,
-            'resolvable': bool(fin and Lm != Lp and d >= TOL['d1_snr_min'] * noise)}   # Lm == Lp: loss did not move = below resolution
+def p4_point(d, L0, Lm, Lp, Rm, Rp, l0_spread):
+    # one ladder point. Lm/Lp = repeated evaluations of L(theta -/+ eta g); Rm/Rp = L(theta -/+ eta r_j) for independent
+    # r_j orthogonal to g with |r_j| = |g|; l0_spread = max - min over every unperturbed L0 evaluation so far.
+    # central = (Lm - Lp)/2 -> -delta to first order (second-order curvature cancels). The orthogonal antisymmetric change
+    # alone does NOT prove the BF16/NF4 floor (one direction may round symmetrically), so the noise floor is the MAX of:
+    # all orthogonal directions, repeat spread at the same perturbed point, L0 spread, and a float32 ulp floor of L0.
+    Lm, Lp, Rm, Rp = list(Lm), list(Lp), list(Rm), list(Rp)
+    vals = [L0, l0_spread] + Lm + Lp + Rm + Rp; fin = all(math.isfinite(v) for v in vals)
+    out = {'L_minus_repeats': Lm, 'L_plus_repeats': Lp, 'R_minus': Rm, 'R_plus': Rp, 'L0_spread': l0_spread, 'finite': fin}
+    if not fin:
+        out.update(resolvable=False, unresolved_reasons=['NONFINITE']); return out
+    m, p = Lm[0], Lp[0]
+    rep_spread = max(max(Lm) - min(Lm), max(Lp) - min(Lp), l0_spread)
+    noise_ortho = [abs(a_ - b_) / 2.0 for a_, b_ in zip(Rm, Rp)]
+    ulp = TOL['d1_fp32_ulp_mult'] * (2.0 ** (math.frexp(abs(L0))[1] - 24) if L0 != 0 else 2.0 ** -149)
+    noise = max(max(noise_ortho) if noise_ortho else float('inf'), rep_spread, ulp)
+    central = (m - p) / 2.0; why = []
+    if not (m != L0 and p != L0 and m != p): why.append('ZERO_MOVE')           # a step did not change the loss value
+    if d < TOL['d1_snr_min'] * noise: why.append('PREDICTED_BELOW_FLOOR')
+    if abs(central) < TOL['d1_snr_min'] * noise: why.append('MEASURED_BELOW_FLOOR')
+    out.update(actual_delta_minus=m - L0, actual_delta_plus=p - L0, central_delta=central, central_ratio=central / -d,
+               one_sided_ratio=(m - L0) / -d, curvature_term=(m + p - 2.0 * L0) / 2.0, noise_ortho=noise_ortho,
+               repeat_spread=rep_spread, fp32_ulp_floor=ulp, noise_floor=noise,
+               noise_floor_source=['ortho', 'repeat', 'fp32_ulp'][[max(noise_ortho) if noise_ortho else -1, rep_spread, ulp].index(noise)],
+               snr_predicted=d / max(noise, 1e-300), snr_measured=abs(central) / max(noise, 1e-300),
+               resolvable=not why, unresolved_reasons=why)
+    return out
 def p4_classify(ladder, grad_finite):
     # branch for one probe target; returns (status, subcode, decision_pair_k or None)
     if not grad_finite: return 'FAIL', 'NONFINITE_GRADIENT', None
@@ -817,54 +837,82 @@ try:
     def _set(direction, c):
         with torch.no_grad():
             for p, s_, d_ in zip(LORA_PARAMS, snap, direction): p.copy_(s_); p.add_(d_, alpha=c)
+    def _bits_equal():                                   # bitwise (byte-level) equality with the snapshot, not value equality
+        return all(torch.equal(p.detach().contiguous().view(torch.uint8), s_.contiguous().view(torch.uint8)) for p, s_ in zip(LORA_PARAMS, snap))
     def _restore():
         with torch.no_grad():
             for p, s_ in zip(LORA_PARAMS, snap): p.copy_(s_)
-        return all(torch.equal(p.detach(), s_) for p, s_ in zip(LORA_PARAMS, snap))
+        return _bits_equal()
+    RESTORE_LOG = []
+    def _probe(direction, c, mount, tg, tag):           # one intervention: set, evaluate, restore, verify bitwise
+        _set(direction, c)
+        try: v_ = _L(mount, tg)
+        finally: ok_ = _restore(); RESTORE_LOG.append((tag, ok_))
+        if not ok_: raise StopT895('P4: LoRA parameters not bitwise restored after %s' % tag)
+        return v_
     def _L(mount, tg): return -lp_sum(MEM[mount], sfx_ids, tg, True) / len(tg)
     gen4 = torch.Generator(device=DEV).manual_seed(SEED + 4); P4T = {}; restored = True
+    P4_DIAG_PATH = ROOT / 'TEST895_P4_diagnostic.json'
+    def _diag(*xs): log('P4_DIAGNOSTIC', *xs)
+    def _diag_save():
+        tmp_ = P4_DIAG_PATH.with_suffix('.json.tmp'); tmp_.write_text(json.dumps({'targets': P4T, 'restore_checks': RESTORE_LOG},
+                                                                                  indent=2, default=str)); tmp_.replace(P4_DIAG_PATH)
     for tname, mount, tg in (('T2_under_A', 'A', t2_ids), ('T1_under_B', 'B', t1_ids)):
         rec = {'mount': mount, 'target_tokens': len(tg), 'ladder': [], 'status': 'INCONCLUSIVE', 'subcode': 'PROBE_ERROR'}
-        t_ = time.perf_counter(); grads = rnd = None
+        P4T[tname] = rec; t_ = time.perf_counter(); grads = rnd = None
         try:
             torch.cuda.reset_peak_memory_stats()
             r_ = live(MEM[mount], sfx_ids, tg, grad=True, train=False, adapter=True); l_ = -r_['lp'].mean()
             Lg = float(l_.detach()); gr = torch.autograd.grad(l_, LORA_PARAMS, allow_unused=True); del r_, l_
             grads = [torch.zeros_like(p) if g_ is None else g_.detach() for g_, p in zip(gr, LORA_PARAMS)]; del gr
+            rec['restored_after_grad'] = _bits_equal()
+            if not rec['restored_after_grad']: raise StopT895('P4: LoRA parameters changed by the gradient pass')
             gn2 = float(sum((g_.double() ** 2).sum() for g_ in grads)); gn = math.sqrt(gn2)
             gfin = all(bool(torch.isfinite(g_).all()) for g_ in grads); gnz = sum(int(bool((g_ != 0).any())) for g_ in grads)
-            L0 = _L(mount, tg)
-            rnd = [torch.randn(p.shape, generator=gen4, device=p.device, dtype=p.dtype) for p in LORA_PARAMS]
-            rg = float(sum((a_.double() * b_.double()).sum() for a_, b_ in zip(rnd, grads)))
-            rnd = [a_ - (rg / max(gn2, 1e-300)) * b_ for a_, b_ in zip(rnd, grads)]
-            rn = math.sqrt(float(sum((a_.double() ** 2).sum() for a_ in rnd))); rnd = [a_ * (gn / max(rn, 1e-300)) for a_ in rnd]
-            ortho = float(sum((a_.double() * b_.double()).sum() for a_, b_ in zip(rnd, grads))) / max(gn2, 1e-300)
+            L0s = [_L(mount, tg) for _ in range(TOL['d1_l0_repeats'])]; L0 = L0s[0]
+            rnd = []
+            for j_ in range(TOL['d1_ortho_dirs']):
+                r1 = [torch.randn(p.shape, generator=gen4, device=p.device, dtype=p.dtype) for p in LORA_PARAMS]
+                rg = float(sum((a_.double() * b_.double()).sum() for a_, b_ in zip(r1, grads)))
+                r1 = [a_ - (rg / max(gn2, 1e-300)) * b_ for a_, b_ in zip(r1, grads)]
+                rn = math.sqrt(float(sum((a_.double() ** 2).sum() for a_ in r1))); rnd.append([a_ * (gn / max(rn, 1e-300)) for a_ in r1])
+            ortho = [float(sum((a_.double() * b_.double()).sum() for a_, b_ in zip(r1, grads))) / max(gn2, 1e-300) for r1 in rnd]
             dmax = min(TOL['d1_delta_max_frac_L0'] * L0, TOL['d1_delta_cap']) if math.isfinite(L0) else 0.0
-            rec.update(L0_eval_no_grad=L0, L0_eval_grad_path=Lg, L0_path_gap=abs(L0 - Lg), grad_norm=gn, gn2=gn2, grad_finite=gfin,
-                       grad_nonzero_tensors=gnz, grad_tensors=len(grads), lora_param_norm=lora_norm, delta_max=dmax,
-                       ortho_direction_cosine=ortho, dtype={'lora': 'float32', 'activations': 'bfloat16', 'base': 'nf4'})
+            rec.update(L0_eval_no_grad=L0, L0_repeats=L0s, L0_eval_grad_path=Lg, L0_path_gap=abs(L0 - Lg), grad_norm=gn, gn2=gn2,
+                       grad_finite=gfin, grad_nonzero_tensors=gnz, grad_tensors=len(grads), lora_param_norm=lora_norm, delta_max=dmax,
+                       ortho_direction_cosines=ortho, dtype={'lora': 'float32', 'activations': 'bfloat16', 'base': 'nf4', 'loss': 'float32'})
+            _diag(tname, 'TARGET', json.dumps({k_: v_ for k_, v_ in rec.items() if k_ != 'ladder'}, default=str))
             for k in range(TOL['d1_ladder']):
                 d = dmax * 2.0 ** -k; eta = d / max(gn2, 1e-300); step = eta * gn
                 pt = {'k': k, 'predicted_delta': -d, 'eta': eta, 'step_norm': step, 'step_frac_lora': step / max(lora_norm, 1e-300)}
                 pt['pre_guard'] = bool(gfin and d > 0 and step <= TOL['d1_step_frac_lora'] * lora_norm)
+                rec['ladder'].append(pt)                    # recorded before any evaluation, so partial points survive errors
                 if pt['pre_guard']:                         # guard decided BEFORE any parameter is touched
-                    _set(grads, -eta); Lm = _L(mount, tg); _set(grads, +eta); Lp = _L(mount, tg)
-                    _set(rnd, -eta); Rm = _L(mount, tg); _set(rnd, +eta); Rp = _L(mount, tg)
-                    ok_ = _restore(); restored = restored and ok_
-                    pt.update(p4_point(d, L0, Lm, Lp, Rm, Rp)); pt['restored'] = ok_
-                    if not ok_: break
-                rec['ladder'].append(pt)
+                    Lm = [_probe(grads, -eta, mount, tg, '%s k%d -g #%d' % (tname, k, i_)) for i_ in range(TOL['d1_point_repeats'])]
+                    Lp = [_probe(grads, +eta, mount, tg, '%s k%d +g #%d' % (tname, k, i_)) for i_ in range(TOL['d1_point_repeats'])]
+                    Rm = [_probe(r1, -eta, mount, tg, '%s k%d -r%d' % (tname, k, j_)) for j_, r1 in enumerate(rnd)]
+                    Rp = [_probe(r1, +eta, mount, tg, '%s k%d +r%d' % (tname, k, j_)) for j_, r1 in enumerate(rnd)]
+                    L0c = _L(mount, tg); L0s.append(L0c); pt['L0_recheck'] = L0c; pt['L0_recheck_equal'] = L0c == L0
+                    pt.update(p4_point(d, L0, Lm, Lp, Rm, Rp, max(L0s) - min(L0s))); pt['restored_bitwise'] = _bits_equal()
+                    restored = restored and pt['restored_bitwise']
+                _diag(tname, 'POINT', json.dumps(pt, default=str))
+                if pt.get('restored_bitwise') is False: break
             rec['status'], rec['subcode'], rec['decision_pair_k'] = p4_classify(rec['ladder'], gfin)
         except Exception as e:
             rec['probe_error'] = '%s: %s' % (type(e).__name__, str(e)[:300]); rec['probe_traceback'] = traceback.format_exc()[-4000:]
+            _diag(tname, 'ERROR', rec['probe_error'], json.dumps(rec['probe_traceback']))
         finally:
-            ok_ = _restore(); restored = restored and ok_; grads = rnd = None; release()
-            rec['restored_final'] = ok_; rec['peak'] = gpu_mem(); rec['elapsed_s'] = round(time.perf_counter() - t_, 2)
-        P4T[tname] = rec
+            ok_ = _restore(); restored = restored and ok_ and all(o_ for _, o_ in RESTORE_LOG); grads = rnd = None; release()
+            rec['restored_final'] = ok_; rec['restore_checks'] = sum(1 for t_n, _ in RESTORE_LOG if t_n.startswith(tname))
+            rec['restore_failures'] = [t_n for t_n, o_ in RESTORE_LOG if t_n.startswith(tname) and not o_]
+            rec['peak'] = gpu_mem(); rec['elapsed_s'] = round(time.perf_counter() - t_, 2)
+        _diag(tname, 'DECISION', rec['status'], rec['subcode'], 'pair_k', rec.get('decision_pair_k'),
+              'restore_checks', rec['restore_checks'], 'restore_failures', len(rec['restore_failures']))
+        _diag_save()
         log('P4_TARGET', tname, rec['status'], rec['subcode'], 'pair_k', rec.get('decision_pair_k'), 'L0 %.6g' % rec.get('L0_eval_no_grad', float('nan')),
             '|g| %.4g' % rec.get('grad_norm', float('nan')), 'ladder', json.dumps([{x_: (round(v_, 6) if isinstance(v_, float) else v_)
-            for x_, v_ in pt.items() if x_ in ('k', 'predicted_delta', 'step_frac_lora', 'pre_guard', 'central_ratio', 'snr',
-                                              'resolvable', 'actual_delta_minus')} for pt in rec['ladder']]))
+            for x_, v_ in pt.items() if x_ in ('k', 'predicted_delta', 'step_frac_lora', 'pre_guard', 'central_ratio', 'snr_measured',
+                                              'resolvable', 'unresolved_reasons', 'actual_delta_minus')} for pt in rec['ladder']]))
     max_param_diff = max(float((p.detach() - s_).abs().max()) for p, s_ in zip(LORA_PARAMS, snap)); del snap
     sts = [v['status'] for v in P4T.values()]
     if sur_err > TOL['surrogate_rel_err'] or not restored: st4, why4 = 'FAIL', 'SURROGATE' if sur_err > TOL['surrogate_rel_err'] else 'RESTORE'
@@ -874,7 +922,8 @@ try:
     gate('P4_NUMERICAL', st4, 'central-difference ladder v2 | ' + why4,
          surrogate_rel_err=sur_err, surrogate_where='CPU float64, LoRAProj895.lora_delta only (no 72B)',
          real_engine_where='real NF4 72B, base-OFF mounts, eval mode, adapter ON, raw -/+eta*g and -/+eta*r steps, restored bitwise',
-         targets=P4T, params_restored=restored, max_param_diff_after_restore=max_param_diff,
+         targets=P4T, params_restored=restored, max_param_diff_after_restore=max_param_diff, restore_checks_total=len(RESTORE_LOG),
+         restore_failures_total=sum(1 for _, o_ in RESTORE_LOG if not o_), diagnostic_file=str(P4_DIAG_PATH),
          note='counterfactual targets: decreasing them is a technical derivative check, not learning or semantic success')
     if not restored or max_param_diff != 0.0: raise StopT895('P4: LoRA parameters not restored bitwise after the directional probe')
     # ------------------------------------------------------------------------------------------- P6 resources
