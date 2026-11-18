@@ -1,0 +1,321 @@
+ ================================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — NPDM SMOKE — NATIVE PROSPECTIVE DISCREPANCY MEMORY 20261118T223234Z | engine commit f1007d912773f3460536784ff80a215741bc97e9 | continuation of TEST893 (FAIL_NO_GAIN, unchanged)
+SCOPE: feasibility only. PASS != learning / semantic reading / native behaviour / autonomy.
+================================================================================================================
+TOLERANCES {"P_expected": 30, "chunk_expected": 128, "parity_close_rel": 0.01} sha256 1934ce6b39a0a85f5a1125642a43e660e18042fecd8d317e76db4a5d7c63827b
+EXECUTED_CELL {"status": "CAPTURED", "identity_match": true, "src_file": "897npdm_smoke.py", "checks": {"cell_captured": true, "commit_object_exists": true, "tree_single_entry_exact_path": true, "tree_entry_regular_file": true, "default_branch_publishes_same_blob": true, "recomputed_blob_equals_tree_blob": true, "raw_channel_equal": true, "executed_cell_equals_published_bytes": true}, "mode": "AUTOMATIC_FROM_PUBLISHED_DEFAULT_BRANCH", "sha256": "f745c463d488b9c7871e1953584f99a92570ac63ebdc10a392455cb58a1f955e", "git_blob": "90019a41db86a7cedc8d945e8c22b40decde3787", "git_blob_with_final_newline": "f926c8911394f99a5587140a10204c9565c8f759", "lines": 1550, "file": "/content/NPDM_SMOKE_20261118T223234Z/NPDM_SMOKE_cell_source.py", "tree_entries": ["100644 blob fbde1d130712014070fa6db45ff36f05f9f9d06c\t897npdm_smoke.py"], "published": {"repo": "ceceli33/titan-cognitive-core-v3", "default_branch_commit": "813cdca7c53a12ef3791a01cce293e106fb841f3", "commit": "813cdca7c53a12ef3791a01cce293e106fb841f3", "path": "897npdm_smoke.py", "tree_mode": "100644", "tree_blob": "fbde1d130712014070fa6db45ff36f05f9f9d06c", "blob_of_bytes": "fbde1d130712014070fa6db45ff36f05f9f9d06c", "sha256": "f41accd5f71fd1167f6e91d186783517165c4deae270f5193256ef8206b3e0a4", "bytes": 132977}, "canonicalization": "strip leading/trailing b'\\n' on both sides only; interior bytes compared exactly", "boundary_newlines": {"cell_leading": 1, "cell_trailing": 0, "published_leading": 0, "published_trailing": 1}, "failed_checks": []}
+ENV {"python": "3.13.16", "torch": "2.14.1+cu130", "cuda": "13.0", "transformers": "5.22.1", "accelerate": "1.16.0", "bitsandbytes": "0.50.2", "cuda_available": true, "device_count": 1, "gpu": "NVIDIA A100-SXM4-80GB", "gpu_bytes": 85094825984, "compute_capability": [8, 0], "transitive": {"tokenizers": "0.23.3", "huggingface-hub": "1.33.0", "safetensors": "0.8.0", "numpy": "2.4.6", "sentencepiece": "0.2.2", "regex": "2025.11.3"}}
+GATE ENV PASS 
+Mounted at /content/drive
+DRIVE_BACKUP_DIR /content/drive/MyDrive/NPDM_SMOKE_20261118T223234Z
+GATE SOURCE PASS 
+GATE EXTRACT PASS 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 75.2kB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 783kB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 87.7MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 70.4MB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 132MB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.30MB/s]Download complete:   125GB, 1.48GB/s  Reconstruction complete: 100%  145GB /  145GB,  651MB/s  Fetching 37 files: 100% 37/37 [06:51<00:00, 10.44s/it]Loading weights: 100% 963/963 [06:27<00:00,  3.27it/s]generation_config.json: 100% 242/242 [00:00<00:00, 28.5kB/s]PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+GATE MODEL PASS 
+API877 OK {"transformers": "5.22.1", "torch": "2.14.1+cu130", "source_sha256": {"attn": "3d7ae1485294d0c8", "layer": "75d1d62e173e8c57", "model": "523115d50c78f82f", "lm": "2e49fae88f3208b4"}, "shape": [80, 8192, 64, 8, 128], "attn": "sdpa"}
+BASE_INTEGRITY {"sentinel": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "weights877": "f7ae2ce27d9eda5391c236dbdc5c6c8c6b3a63e7eb6ebdefde8943ff5b988e8c", "integrity": {"sha256": "036bcdeddf9714b8f91a7eb5a967ba584338b1f96505b4e4de031bbbd49a4bd9", "param_tensors": 963, "nf4_quant_states": 560, "buffers": 2, "param_bytes": 40093433856, "seconds": 167.0}}
+GATE G0_MANIFEST PASS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+GATE G0_P0_A_PARITY PASS | NPDM record grammar: full-text prefill K/V vs forged lower K/V + native upper rebuild
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+GATE G0_P0_B_PARITY PASS | prediction record: locked native append (757) vs explicit append (878/877)
+GATE G1_PARSER_SEMANTICS PASS | strict parser fixtures; malformed PRED output -> no environment, no reward, OUTCOME_NONE, one decision consumed; ACT/ACQUIRE/STOP semantics
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE L1 live_episode cost 0.1 closed_by MODEL payoff 0.70 [["ACQUIRE JGBPMVDRNGG PREDICTION VVFVKRKCVMK", "VALID", "VVFVKRKCVMK"], ["ACQUIRE QBDGFXVPDHL PREDICTION LLRMKGCXHTJ", "VALID", "WLCQRTSLXJ"], ["ACQUIRE QBDGFXVPDHL PREDICTION WLCQRTSLXJ", "VALID", "WLCQRTSLXJ"], ["ACT QBDGFXVPDHL PREDICTION WLCQRTSLXJ", "VALID", "WLCQRTSLXJ"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE L2 live_episode cost 0.8 closed_by BUDGET_EXHAUSTED payoff -3.20 [["ACQUIRE RZBBGDWWXN PREDICTION CQTZRPXXQSW", "VALID", "CNGMQRXGVT"], ["ACQUIRE RZBBGDWWXN PREDICTION CNGMQRXGVT", "VALID", "CNGMQRXGVT"], ["ACQUIRE RZBBGDWWXN PREDICTION CNGMQRXGVT", "VALID", "CNGMQRXGVT"], ["ACQUIRE RZBBGDWWXN PREDICTION CNGMQRXGVT", "VALID", "CNGMQRXGVT"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE L3 live_episode cost 0.1 closed_by BUDGET_EXHAUSTED payoff -0.40 [["ACQUIRE PKCCWRJZPHGS PREDICTION VKTRVXDRDDSH", "VALID", "CZJPSVHNPF"], ["ACQUIRE PKCCWRJZPHGS PREDICTION CZJPSVHNPF", "VALID", "CZJPSVHNPF"], ["ACQUIRE PKCCWRJZPHGS PREDICTION CZJPSVHNPF", "VALID", "CZJPSVHNPF"], ["ACQUIRE PKCCWRJZPHGS PREDICTION CZJPSVHNPF", "VALID", "CZJPSVHNPF"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE L4 live_episode cost 0.8 closed_by MODEL payoff 0.00 [["ACQUIRE WJWQLSHXRF PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE WJWQLSHXRF PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE WJWQLSHXRF PREDICTION UNKNOWN", "INVALID", null], ["STOP", "STOP", null]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE L5 live_episode cost 0.1 closed_by BUDGET_EXHAUSTED payoff 0.00 [["ACQUIRE NQWWSHCKS PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE NQWWSHCKS PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE NQWWSHCKS PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE NQWWSHCKS PREDICTION UNKNOWN", "INVALID", null]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE L6 live_episode cost 0.1 closed_by MODEL payoff 0.00 [["ACQUIRE RTXVQGZWP PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE MHQVJGJH PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE MHQVJGJH PREDICTION UNKNOWN", "INVALID", null], ["STOP", "STOP", null]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE A1 diagnostic_state_probe cost 0.1 closed_by MODEL payoff 1.00 [["ACT ZKQRSFWBNVX PREDICTION TMFWFFNQCWXW", "VALID", "TMFWFFNQCWXW"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE A2 diagnostic_state_probe cost 0.1 closed_by MODEL payoff 0.70 [["ACQUIRE FWFHJCPZJF PREDICTION RTWHBSTFDPNFCL", "VALID", "RTWHBSTFDPNFCL"], ["ACQUIRE LQCXZMJXMJ PREDICTION PJXCTRWCRLNMQ", "VALID", "PJXCTRWCRLNMQ"], ["ACQUIRE JBTZGNJZPV PREDICTION WVPBHMLKNXH", "VALID", "WVPBHMLKNXH"], ["ACT JBTZGNJZPV PREDICTION WVPBHMLKNXH", "VALID", "WVPBHMLKNXH"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE B1 diagnostic_state_probe cost 0.8 closed_by BUDGET_EXHAUSTED payoff -0.80 [["ACQUIRE FWFHJCPZJF PREDICTION RTWHBSTFDPNFCL", "VALID", "RTWHBSTFDPNFCL"], ["ACQUIRE LQCXZMJXMJ PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE LQCXZMJXMJ PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE LQCXZMJXMJ PREDICTION UNKNOWN", "INVALID", null]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE D1 diagnostic_state_probe cost 0.1 closed_by MODEL payoff 1.00 [["ACT NNBTVXZHLND PREDICTION SWMNHFKLWWWD", "VALID", "SWMNHFKLWWWD"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE D2 diagnostic_state_probe cost 0.1 closed_by MODEL payoff 1.00 [["ACT JWDJSKSKSNMH PREDICTION WNFBCSVDZJ", "VALID", "WNFBCSVDZJ"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE A2L diagnostic_state_probe cost 0.1 closed_by BUDGET_EXHAUSTED payoff -0.30 [["ACQUIRE DPMPGBKKVWBM PREDICTION CFRGBTLZNCCLTP", "VALID", "CFRGBTLZNCCLTP"], ["ACQUIRE CCJXCTMLTWZ PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE DPMPGBKKVWBM PREDICTION CFRGBTLZNCCLTP", "VALID", "CFRGBTLZNCCLTP"], ["ACQUIRE DPMPGBKKVWBM PREDICTION CFRGBTLZNCCLTP", "VALID", "CFRGBTLZNCCLTP"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE B1L diagnostic_state_probe cost 0.8 closed_by BUDGET_EXHAUSTED payoff -2.40 [["ACQUIRE DPMPGBKKVWBM PREDICTION CFRGBTLZNCCLTP", "VALID", "CFRGBTLZNCCLTP"], ["ACQUIRE CCJXCTMLTWZ PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE DPMPGBKKVWBM PREDICTION CFRGBTLZNCCLTP", "VALID", "CFRGBTLZNCCLTP"], ["ACQUIRE DPMPGBKKVWBM PREDICTION CFRGBTLZNCCLTP", "VALID", "CFRGBTLZNCCLTP"]]
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+EPISODE P1 live_episode cost 0.1 closed_by MODEL payoff 0.00 [["ACQUIRE CGXVTRQXQL PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE CGXVTRQXQL PREDICTION UNKNOWN", "INVALID", null], ["ACQUIRE CGXVTRQXQL PREDICTION UNKNOWN", "INVALID", null], ["STOP", "STOP", null]]
+GATE G1_LIVE_EPISODES PASS | every ACT/ACQUIRE: intent seal < prediction seal < env_step_start < outcome seal; terminal ACT/STOP; invalid not corrected
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE G1_REBUILD_FROM_SSD PASS | every episode mount rebuilt from its SSD files == live mount (80-layer K/V seals)
+GATE G1_ISOLATION_PROVENANCE PASS | namespaces, parents, no prediction as observed fact, empty start per episode
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+GATE G1_PENDING PASS | pending status sealed, outcome released only by resolve(), no query while pending (scripted canary always; live P1 if it stepped)
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+GATE G1_PRE_OUTCOME_TWIN PASS | IDENTICAL_PRE_OUTCOME_STATE_DIFFERENT_FUTURES
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE G1_CONTROL_GEOMETRY PASS | PRED_MASK / PLACEBO_PRED (u) / CYCLIC_PRED / PLACEBO_PRED_ALL / FACTUAL_DELETED / CF_OUTCOME / ORDER_PERM: equal per-field token geometry and mount length (equal token counts are not equal semantics or attention exposure)
+GATE G1_DETERMINISM PASS | NPDM rebuilt from SSD reproduces the live raw decision; MATCHED_FORGE_IO == NO_PRED (extra quarantine forge/IO, not a fully matched compute trace)
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE G2_CAUSAL_PREDICTION_USE FAIL | WRONG_DIRECTION_CHANGE
+GATE G3_POLICY_SUPPORT FAIL | supporting only; never replaces Gate-2
+GATE G4_TRANSFER NOT_RUN | cross-world transfer is out of scope for this smoke
+GATE P1_PHYSICAL PASS 
+GATE P7_INTEGRITY PASS 
+ANSWER Q1_physical_memory_worked {"answer": true, "gates": {"G0_P0_A_PARITY": "PASS", "G0_P0_B_PARITY": "PASS", "G1_REBUILD_FROM_SSD": "PASS", "P1_PHYSICAL": "PASS", "P7_INTEGRITY": "PASS"}}
+ANSWER Q2_prediction_sealed_before_outcome {"answer": true, "gates": {"G1_LIVE_EPISODES": "PASS", "G1_PRE_OUTCOME_TWIN": "PASS", "G1_PENDING": "PASS"}}
+ANSWER Q3_prediction_record_changed_next_decision {"states_with_effect": 1, "eligible_states": 3}
+ANSWER Q4_change_in_direction_required_by_observed_outcome {"correct": 0, "wrong": 1, "ceiling": 0, "fd_corrective": 0, "fd_wrong_correction": 0, "c3b_not_testable_states": null}
+ANSWER Q5_raw_decision_specificity_vs_placebo {"claim_scope": "raw-decision specificity; correctness specificity = C1b", "placebo_u_reproduced": 0, "effects": 1, "placebo_u_optimal": 1, "cyclic_diagnostic_strata": {"collision": {"n": 2, "same": 1}, "no_collision": {"n": 1, "same": 1}}, "claims": {"C1_raw_decision_specificity": "NOT_DEMONSTRATED", "C1b_correctness_specificity": "NOT_DEMONSTRATED", "C2_outcome_dependence": "NOT_DEMONSTRATED", "C3a_outcome_deletion_sensitivity": "NOT_DEMONSTRATED", "C3b_corrective_factual_necessity": "NOT_DEMONSTRATED"}}
+ANSWER Q6_policy_support_gate3 "FAIL"
+ANSWER Q7_most_likely_failure_point "the prediction record pulled the decision AWAY from what the observed outcome requires (prediction bias)"
+DECISION {"VERDICT": "NPDM_FAIL", "subcodes": ["WRONG_DIRECTION_CHANGE", "G3=FAIL", "G4=NOT_RUN"], "claims": {"C1_raw_decision_specificity": "NOT_DEMONSTRATED", "C1b_correctness_specificity": "NOT_DEMONSTRATED", "C2_outcome_dependence": "NOT_DEMONSTRATED", "C3a_outcome_deletion_sensitivity": "NOT_DEMONSTRATED", "C3b_corrective_factual_necessity": "NOT_DEMONSTRATED"}, "gate2": {"verdict": "FAIL", "reason": "WRONG_DIRECTION_CHANGE", "n_eligible": 3, "n_effect": 1, "n_correct": 0, "n_wrong": 1, "n_ceiling": 0}}
+================================================================================================================
+ENV                            PASS                 
+SOURCE                         PASS                 
+EXTRACT                        PASS                 
+MODEL                          PASS                 
+G0_MANIFEST                    PASS                 
+G0_P0_A_PARITY                 PASS                 NPDM record grammar: full-text prefill K/V vs forged lower K/V + native upper rebuild
+G0_P0_B_PARITY                 PASS                 prediction record: locked native append (757) vs explicit append (878/877)
+G1_PARSER_SEMANTICS            PASS                 strict parser fixtures; malformed PRED output -> no environment, no reward, OUTCOME_NONE, one decision consumed; ACT/ACQUIRE/STOP semantics
+G1_LIVE_EPISODES               PASS                 every ACT/ACQUIRE: intent seal < prediction seal < env_step_start < outcome seal; terminal ACT/STOP; invalid not corrected
+G1_REBUILD_FROM_SSD            PASS                 every episode mount rebuilt from its SSD files == live mount (80-layer K/V seals)
+G1_PRE_OUTCOME_TWIN            PASS                 IDENTICAL_PRE_OUTCOME_STATE_DIFFERENT_FUTURES
+G1_ISOLATION_PROVENANCE        PASS                 namespaces, parents, no prediction as observed fact, empty start per episode
+G1_PENDING                     PASS                 pending status sealed, outcome released only by resolve(), no query while pending (scripted canary always; live P1 if it stepped)
+G1_CONTROL_GEOMETRY            PASS                 PRED_MASK / PLACEBO_PRED (u) / CYCLIC_PRED / PLACEBO_PRED_ALL / FACTUAL_DELETED / CF_OUTCOME / ORDER_PERM: equal per-field token geometry and mount length (equal token counts are not equal semantics or attention exposure)
+G1_DETERMINISM                 PASS                 NPDM rebuilt from SSD reproduces the live raw decision; MATCHED_FORGE_IO == NO_PRED (extra quarantine forge/IO, not a fully matched compute trace)
+G2_CAUSAL_PREDICTION_USE       FAIL                 WRONG_DIRECTION_CHANGE
+G3_POLICY_SUPPORT              FAIL                 supporting only; never replaces Gate-2
+G4_TRANSFER                    NOT_RUN              cross-world transfer is out of scope for this smoke
+P1_PHYSICAL                    PASS                 
+P7_INTEGRITY                   PASS                 
+NPDM_SMOKE_SUMMARY {"commit": "f1007d912773f3460536784ff80a215741bc97e9", "elapsed_s": 1892.3, "gates": {"ENV": "PASS", "EXTRACT": "PASS", "G0_MANIFEST": "PASS", "G0_P0_A_PARITY": "PASS", "G0_P0_B_PARITY": "PASS", "G1_CONTROL_GEOMETRY": "PASS", "G1_DETERMINISM": "PASS", "G1_ISOLATION_PROVENANCE": "PASS", "G1_LIVE_EPISODES": "PASS", "G1_PARSER_SEMANTICS": "PASS", "G1_PENDING": "PASS", "G1_PRE_OUTCOME_TWIN": "PASS", "G1_REBUILD_FROM_SSD": "PASS", "G2_CAUSAL_PREDICTION_USE": "FAIL", "G3_POLICY_SUPPORT": "FAIL", "G4_TRANSFER": "NOT_RUN", "MODEL": "PASS", "P1_PHYSICAL": "PASS", "P7_INTEGRITY": "PASS", "SOURCE": "PASS"}, "model_revision": "495f39366efef23836d0cfae4fbe635880d2be31", "run_id": "20261118T223234Z", "scope": "NPDM causal smoke; SMOKE_CAUSAL_PASS is never a scientific PASS", "status": "COMPLETE", "subcodes": ["WRONG_DIRECTION_CHANGE", "G3=FAIL", "G4=NOT_RUN"], "technical_status": "PASS", "verdict": "NPDM_FAIL"}
+LOCAL FILES  : /content/NPDM_SMOKE_20261118T223234Z | /content/NPDM_SMOKE_SONUC_20261118T223234Z.zip | /content/NPDM_SMOKE_SONUC_20261118T223234Z_RECEIPT.json
+DRIVE        : /content/drive/MyDrive/NPDM_SMOKE_20261118T223234Z
+NPDM_SMOKE_LOG_END SCIENTIFIC_VERDICT=NPDM_FAIL | STATUS=COMPLETE | ZIP_CORE=True | CELL_IDENTITY_MATCH=True | final ARTIFACT_STATUS: receipt + console
+NPDM_SMOKE_FINAL FINAL_VERDICT=NPDM_FAIL | SCIENTIFIC_VERDICT=NPDM_FAIL | SUBCODES=['WRONG_DIRECTION_CHANGE', 'G3=FAIL', 'G4=NOT_RUN'] | TECHNICAL_STATUS=PASS | STATUS=COMPLETE | ARTIFACT_STATUS=PASS
+RECEIPT      : /content/NPDM_SMOKE_SONUC_20261118T223234Z_RECEIPT.json sha256=95ca5016a69aa0e50ed05f11c76719a4a2ee8364c8efdfe53760f42cf9ae36c1 local_verified=True drive_verified=True receipt_state=VERIFIED
+FINAL LOG    : /content/NPDM_SMOKE_20261118T223234Z/NPDM_SMOKE.log sha256=b0a892d445d546011500a18464c76c5d07dc1efdba4b00595dea62646b73fa42 | ARTIFACT FAILURES: none
+Automatic downloads started; the same files are kept under /content and (if mounted) in /content/drive/MyDrive/NPDM_SMOKE_20261118T223234Z
+================================================================================================================
