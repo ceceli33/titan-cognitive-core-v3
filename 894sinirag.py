@@ -1,6 +1,8 @@
 # =====================================================================================================================
-# AKBASCORE SILICON HIPPOCAMPUS — LoRA–CUT3 BACKWARD PREFLIGHT (LCP)                       single Google Colab cell
-# Frozen Qwen2.5-72B-Instruct NF4 / BF16, one A100-SXM4-80GB.
+# AKBASCORE SILICON HIPPOCAMPUS — TEST894 — LoRA–CUT3 BACKWARD PREFLIGHT                     single Google Colab cell
+# Frozen Qwen2.5-72B-Instruct NF4 / BF16, one A100-SXM4-80GB. Direct continuation of TEST893 (same pinned engine
+# commit, same physical CUT3/H3/K-V backbone). TEST893 stays as recorded: PHYSICAL_VALIDITY=PASS, SCIENTIFIC_VALIDITY=
+# PASS, OUTCOME=FAIL_NO_GAIN; this cell does not reinterpret it.
 #
 # SCOPE: technical feasibility ONLY. At most 3 optimizer steps, used solely to verify gradient flow and one real
 # LoRA update. A PASS here is NOT a learning, semantic-reading, native-behaviour or autonomy result.
@@ -20,6 +22,10 @@
 #   878.py  xspan878 xappend878                         (explicit no-hook append reference)
 #   873.py  kv873 length873       test870.py  cache_kv870
 # LoRA: transparent in-place wrapper around the native q/k/v/o Linear4bit modules (no PEFT): y = W0 x + (a/r) B A x.
+# Runtime contract: torch 2.14.1+cu130 / CUDA 13.0 / transformers 5.22.1 (893.log), accelerate 1.16.0, bitsandbytes 0.50.2;
+# model + tokenizer pinned to HF revision 495f39366efef23836d0cfae4fbe635880d2be31. Base integrity = SHA-256 over raw
+# parameter bytes + NF4 quant state + buffers. Records: TEST894.log + TEST894_results.json (atomic, Drive-backed after
+# every gate), ZIP + SHA256SUMS + read-back gates + TEST894_RECEIPT; ARTIFACT_STATUS is separate from the verdict.
 # =====================================================================================================================
 import os, sys, subprocess, importlib.util, importlib.metadata, urllib.request, hashlib, ast, json, time, gc, math
 import traceback, platform, types, random, shutil
@@ -31,35 +37,48 @@ os.environ.setdefault('PYTORCH_CUDA_ALLOC_CONF', 'expandable_segments:True')
 def _ver(name):
     try: return importlib.metadata.version(name)
     except importlib.metadata.PackageNotFoundError: return None
-def _vt(s):
-    out = []
-    for x in str(s).split('+')[0].split('.')[:3]:
-        d = ''.join(c for c in x if c.isdigit()); out.append(int(d) if d else 0)
-    return tuple(out + [0] * (3 - len(out)))
-REQ_LCP = {'transformers': ('transformers>=5.18,<6', (5, 18, 0), (6, 0, 0)), 'accelerate': ('accelerate>=1.15', (1, 15, 0), None),
-           'bitsandbytes': ('bitsandbytes>=0.50', (0, 50, 0), None)}
-for _pkg, (_spec, _lo, _hi) in REQ_LCP.items():
-    _v = _ver(_pkg)
-    _ok = _v is not None and _vt(_v) >= _lo and (_hi is None or _vt(_v) < _hi)
-    if not _ok:
-        if _pkg in sys.modules:
-            raise SystemExit('LCP_ENV: %s %s already imported in this kernel; restart the runtime and rerun' % (_pkg, _v))
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', _spec])
+# Exact runtime contract. torch 2.14.1+cu130 / CUDA 13.0 / transformers 5.22.1 = the combination recorded in 893.log
+# (TABLE GATE0 RUNTIME) under which this engine, incl. api877, ran on the A100. accelerate 1.16.0 / bitsandbytes 0.50.2 =
+# the versions whose sources K3.1 audited (not recorded in 893.log). torch is never installed or changed by this cell.
+TORCH_REQ = '2.14.1+cu130'; CUDA_REQ = '13.0'
+PINS = {'transformers': '5.22.1', 'accelerate': '1.16.0', 'bitsandbytes': '0.50.2'}
+if _ver('torch') != TORCH_REQ:
+    raise SystemExit('TEST894_ENV: torch %s found, %s required (893.log runtime); no torch change is made' % (_ver('torch'), TORCH_REQ))
+_need = [p for p, v in PINS.items() if _ver(p) != v]
+if _need:
+    _loaded = [p for p in _need if p in sys.modules]
+    if _loaded: raise SystemExit('TEST894_ENV: %s already imported with other versions; restart the runtime and rerun' % _loaded)
+    _con = Path('/tmp/TEST894_torch_constraint.txt'); _con.write_text('torch==%s\n' % TORCH_REQ)
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', '-c', str(_con)] + ['%s==%s' % (p, PINS[p]) for p in _need])
+_got = {p: _ver(p) for p in list(PINS) + ['torch']}
+if any(_got[p] != v for p, v in PINS.items()) or _got['torch'] != TORCH_REQ:
+    raise SystemExit('TEST894_ENV: version contract not met after install: %s' % _got)
 import torch, transformers, accelerate, bitsandbytes
+if torch.__version__ != TORCH_REQ or torch.version.cuda != CUDA_REQ or transformers.__version__ != PINS['transformers'] or \
+        accelerate.__version__ != PINS['accelerate'] or bitsandbytes.__version__ != PINS['bitsandbytes']:
+    raise SystemExit('TEST894_ENV: imported versions differ from the contract: torch %s cuda %s transformers %s accelerate %s '
+                     'bitsandbytes %s' % (torch.__version__, torch.version.cuda, transformers.__version__, accelerate.__version__,
+                                          bitsandbytes.__version__))
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from transformers.cache_utils import DynamicCache
 
 # --------------------------------------------------------------------------------------------------------- constants
-TAG = 'LCP'
+TAG = 'TEST894'; MARKER = 'AKBASCORE SILICON HIPPOCAMPUS — TEST894 — LoRA–CUT3 BACKWARD PREFLIGHT'
 RUN_ID = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 COMMIT = 'f1007d912773f3460536784ff80a215741bc97e9'
 RAW_BASE = 'https://raw.githubusercontent.com/ceceli33/titan-cognitive-core-v3/' + COMMIT + '/'
 MODEL_ID = 'Qwen/Qwen2.5-72B-Instruct'; CUT = 3; DTYPE = torch.bfloat16; DEV = torch.device('cuda:0')
+# Hugging Face main of Qwen/Qwen2.5-72B-Instruct (file tree read 2026-11-17: head 495f393 "Update README.md"; weights,
+# tokenizer.json, vocab, merges at f689aa0, tokenizer_config.json at a13fff9, config.json at c970f6d — all ancestors).
+MODEL_REVISION = '495f39366efef23836d0cfae4fbe635880d2be31'
+GPU_NAME_REQ = 'NVIDIA A100-SXM4-80GB'; GPU_CC_REQ = (8, 0)
 EXPECTED = (80, 8192, 64, 8, 128); CHUNK = 128; GPU_RESERVE_GIB = 9.0
 SEED = 20261117
-ROOT = Path('/content/AKBASCORE_LCP_' + RUN_ID if Path('/content').exists() else '/tmp/AKBASCORE_LCP_' + RUN_ID)
+ROOT = Path(('/content/' if Path('/content').exists() else '/tmp/') + 'TEST894_' + RUN_ID)
 CART_DIR = ROOT / 'cartridges'; ROOT.mkdir(parents=True, exist_ok=True); CART_DIR.mkdir(exist_ok=True)
-LOG = ROOT / 'LCP_PREFLIGHT.log'; OUT = ROOT / 'LCP_PREFLIGHT_results.json'; LOG.write_text('')
+LOG = ROOT / 'TEST894.log'; OUT = ROOT / 'TEST894_results.json'; LOG.write_text('')
+ZIP_PATH = ROOT.parent / ('TEST894_SONUC_' + RUN_ID + '.zip'); RECEIPT_PATH = ROOT.parent / ('TEST894_SONUC_' + RUN_ID + '_RECEIPT.json')
+DRIVE_DIR = None; DRIVE_ERR = {'mount': None, 'backup_failures': 0, 'last': None}
 # Git blob SHA-1 of every engine file this cell reads (pinned commit). K3.1's six reported IDs are cross-checked below.
 LOCKS = {'709.py': '6c9f8cbb1eeed848d45133d73f0d7676b68e9125', '730.py': 'b1bad9eb3b111b44413f8ef05a3a140ab66a77dd',
          '757.py': '3d88bf8638390995858f23391f1e043faa586835', '873.py': '2e44affa5e0dd462155fb265c331270fb8e7b7e1',
@@ -93,6 +112,7 @@ TOL = {
     'dir_fail_increase_nats': 0.005,   # FAIL only if BOTH probes increase the loss by more than this
     'surrogate_rel_err': 1e-6,         # float64 local surrogate: autograd vs central finite difference
     'vram_reserved_frac_max': 0.95,    # peak reserved / total device memory
+    'p6_clean_slack_mib': 256,         # allocated memory after a P6 row cleanup may exceed the pre-P6 baseline by at most this
     'P_expected': 30, 'chunk_expected': 128}
 LIVE_LENGTHS = (64, 256); LONG_TARGET_TOKENS = 2000
 CRITICAL = ('ENV', 'SOURCE', 'EXTRACT', 'MODEL', 'P0_C_WRAPPER_OFF_IDENTITY', 'P0_D_ZERO_LORA_IDENTITY', 'P1_PHYSICAL',
@@ -102,8 +122,11 @@ GATE_ORDER = ('ENV', 'SOURCE', 'EXTRACT', 'MODEL', 'P0_A_FORGE_REBUILD_PARITY', 
               'P0_C_WRAPPER_OFF_IDENTITY', 'P0_D_ZERO_LORA_IDENTITY', 'P1_PHYSICAL', 'P2_LIVE_AUTOGRAD', 'P3_GRADIENT',
               'P4_NUMERICAL', 'P5_TRAIN_INFER', 'P6_RESOURCE', 'P7_INTEGRITY', 'S8_CONTENT_DEPENDENCE', 'P8_READABILITY')
 
-R = {'test': 'AKBASCORE_LCP_PREFLIGHT', 'run_id': RUN_ID, 'commit': COMMIT, 'status': 'STARTED', 'checks': [],
-     'gates': {g: {'status': 'NOT_RUN', 'reason': None, 'data': {}} for g in GATE_ORDER},
+R = {'test': 'TEST894', 'stage': 'LoRA-CUT3 backward preflight', 'run_id': RUN_ID, 'commit': COMMIT, 'status': 'STARTED',
+     'checks': [], 'gates': {g: {'status': 'NOT_RUN', 'reason': None, 'data': {}} for g in GATE_ORDER},
+     'context': {'previous_test': 'TEST893', 'test893_final': 'VERDICT=FAIL PHYSICAL_VALIDITY=PASS SCIENTIFIC_VALIDITY=PASS '
+                 'OUTCOME=FAIL_NO_GAIN (893.log, cross-checked in SOURCE; not reinterpreted)', 'engine_commit': COMMIT},
+     'model_revision': MODEL_REVISION, 'runtime_pins': dict(PINS, torch=TORCH_REQ, cuda=CUDA_REQ),
      'scope': 'technical feasibility only; not a learning / semantic / native-behaviour / autonomy result',
      'executed_by_author': False, 'tolerances': TOL,
      'tolerances_sha256': hashlib.sha256(json.dumps(TOL, sort_keys=True).encode()).hexdigest()}
@@ -114,18 +137,25 @@ def log(*xs):
     s = ' '.join(str(x) for x in xs); print(s, flush=True)
     with LOG.open('a') as f: f.write(s + '\n')
 def save():
+    # atomic local write after every check / gate / exception, then a progressive Drive backup of log + JSON (TEST870 style)
+    R['drive_backup'] = dict(DRIVE_ERR, dir=DRIVE_DIR)
     tmp = OUT.with_suffix('.json.tmp'); tmp.write_text(json.dumps(R, ensure_ascii=False, indent=2, default=str)); tmp.replace(OUT)
+    if DRIVE_DIR is not None:
+        try:
+            for f_ in (LOG, OUT): shutil.copy2(f_, Path(DRIVE_DIR) / f_.name)
+        except Exception as e:
+            DRIVE_ERR['backup_failures'] += 1; DRIVE_ERR['last'] = '%s: %s' % (type(e).__name__, e)
 def check(name, ok, detail=None):
     # same signature/semantics as the 730/757 check() used by the extracted engine definitions
     R['checks'].append({'name': name, 'pass': bool(ok), 'detail': detail}); save()
     log('PASS' if ok else 'FAIL', name, '' if detail is None else json.dumps(detail, default=str)[:600])
     if not ok: raise RuntimeError('CHECK_FAILED:' + name)
-class StopLCP(Exception): pass
+class StopT894(Exception): pass
 def gate(name, status, reason=None, **data):
     assert status in ('PASS', 'FAIL', 'INCONCLUSIVE', 'DIAGNOSTIC'), status
     R['gates'][name] = {'status': status, 'reason': reason, 'data': data}; save()
     log('GATE', name, status, '' if reason is None else '| ' + str(reason))
-    if status == 'FAIL' and name in CRITICAL: raise StopLCP(name + ': ' + str(reason))
+    if status == 'FAIL' and name in CRITICAL: raise StopT894(name + ': ' + str(reason))
 def gpu_mem():
     torch.cuda.synchronize(); f, t = torch.cuda.mem_get_info()
     return {'free_gib': round(f / 2**30, 3), 'allocated_gib': round(torch.cuda.memory_allocated() / 2**30, 3),
@@ -143,7 +173,7 @@ def sha_path(p):
 # ------------------------------------------------------------------------------------------- pinned source handling
 def fetch_pinned(name, limit=2_000_000):
     url = RAW_BASE + name
-    with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'AKBASCORE-LCP'}), timeout=120) as f:
+    with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'AKBASCORE-TEST894'}), timeout=120) as f:
         b = f.read(limit + 1)
     if len(b) > limit: raise RuntimeError('SOURCE_TOO_LARGE ' + name)
     return b
@@ -161,7 +191,7 @@ def extract_selected(fname, raw, names, namespace):
 
 # ------------------------------------------------------------------------------------------------- LoRA (no PEFT)
 LORA_STATE = {'enabled': False, 'mount_active': False, 'calls_on': 0, 'calls_off': 0}
-class LoRAProjLCP(torch.nn.Module):
+class LoRAProj894(torch.nn.Module):
     """y = base(x) + (alpha/r) * (x A^T) B^T. base = the native Linear4bit module, called unchanged.
     Disabled: returns base(x) itself (bitwise base). Never active while a mount is active (runtime guard)."""
     def __init__(self, base, r, alpha, name, gen):
@@ -200,13 +230,14 @@ class Adapter:
     def __exit__(self, *e): LORA_STATE['enabled'] = self.prev; return False
 
 # --------------------------------------------------------------------------------------------- inventory / checksums
-def hook_inventory():
+def hook_inventory(root=None):
+    root = model if root is None else root
     mm = torch.nn.modules.module
     glob = {n: len(getattr(mm, n, None) or {}) for n in ('_global_forward_hooks', '_global_forward_pre_hooks',
             '_global_backward_hooks', '_global_backward_pre_hooks', '_global_forward_hooks_always_called')}
     mods = {'_forward_hooks': 0, '_forward_pre_hooks': 0, '_backward_hooks': 0, '_backward_pre_hooks': 0}; where = []
     inst_forward = []; hf = 0
-    for name, m in model.named_modules():
+    for name, m in root.named_modules():
         for a in mods:
             d = getattr(m, a, None)
             if d: mods[a] += len(d); where.append([name, a, len(d)])
@@ -215,7 +246,7 @@ def hook_inventory():
             inst_forward.append(name)
         if hasattr(m, '_hf_hook'): hf += 1
     tens = 0
-    for p in model.parameters():
+    for p in root.parameters():
         for a in ('_backward_hooks', '_post_accumulate_grad_hooks'):
             d = getattr(p, a, None)
             if d: tens += len(d)
@@ -223,16 +254,65 @@ def hook_inventory():
     return {'torch_hooks_total': torch_hooks, 'global': glob, 'module': mods, 'tensor': tens, 'where': where[:20],
             'instance_forward_overrides': inst_forward[:20], 'instance_forward_override_count': len(inst_forward),
             'accelerate_hf_hook_modules': hf}
-def full_checksum(params):
-    # non-cryptographic full-coverage checksum of the raw storage bytes of every base parameter (GPU, 16M-byte blocks)
-    h = hashlib.sha256(); BL = 1 << 24
-    w = (torch.arange(BL, device=DEV, dtype=torch.int32) % 251) + 1
+def hooks_clean(inv):
+    # fail-closed: no PyTorch hook, no Accelerate _hf_hook, no persistent instance-forward override (benign re-binds excluded)
+    return inv['torch_hooks_total'] == 0 and inv['accelerate_hf_hook_modules'] == 0 and inv['instance_forward_override_count'] == 0
+# --- base integrity: real SHA-256 over raw bytes, streamed in 64 MiB device->host blocks (no full-size copies) ---------
+BLK = 64 << 20
+def _stream(h, t):
+    v = t.detach().contiguous().reshape(-1).view(torch.uint8)
+    for st in range(0, v.numel(), BLK): h.update(v[st:st + BLK].cpu().numpy().tobytes())
+def _qs_items(qs, pre='qs'):
+    # canonical NF4 quantization state of one Linear4bit weight: tensors + metadata, nested (double-quant) state included
+    if qs is None or getattr(qs, 'absmax', None) is None: raise RuntimeError('NF4_QUANT_STATE_MISSING ' + pre)
+    items = [(pre + '.' + a, getattr(qs, a, None)) for a in ('absmax', 'code', 'offset', 'blocksize', 'quant_type', 'dtype', 'shape', 'nested')]
+    if getattr(qs, 'state2', None) is not None: items += _qs_items(qs.state2, pre + '.state2')
+    return items
+def _digest_items(h, items):
+    for k, v in items:
+        if torch.is_tensor(v): h.update(('%s|T|%s|%s;' % (k, v.dtype, tuple(v.shape))).encode()); _stream(h, v)
+        else: h.update(('%s|V|%r;' % (k, v)).encode())
+def integrity_digest(params, q4mods, bufs):
+    h = hashlib.sha256(); t_ = time.perf_counter(); nb = 0
     for name, p in params:
-        v = p.data.detach().contiguous().reshape(-1).view(torch.uint8); n = v.numel(); s1 = 0; s2 = 0
-        for st in range(0, n, BL):
-            b = v[st:st + BL].to(torch.int32); s1 += int(b.sum(dtype=torch.int64)); s2 += int((b * w[:b.numel()]).sum(dtype=torch.int64))
-        h.update(('%s|%s|%d|%d|%d;' % (name, str(p.dtype), n, s1, s2)).encode())
-    return h.hexdigest()
+        h.update(('P|%s|%s|%s;' % (name, p.dtype, tuple(p.shape))).encode()); _stream(h, p.data); nb += p.numel() * p.element_size()
+    for name, m in q4mods: _digest_items(h, [('Q|' + name + '|' + k, v) for k, v in _qs_items(m.weight.quant_state)])
+    for name, b in bufs: h.update(('B|%s|%s|%s;' % (name, b.dtype, tuple(b.shape))).encode()); _stream(h, b)
+    return {'sha256': h.hexdigest(), 'param_tensors': len(params), 'nf4_quant_states': len(q4mods), 'buffers': len(bufs),
+            'param_bytes': nb, 'seconds': round(time.perf_counter() - t_, 1)}
+def integrity_selftest(q4mod):
+    # small CPU-only mutation checks; the model's own tensors are never modified
+    def sha_of(items): h = hashlib.sha256(); _digest_items(h, items); return h.hexdigest()
+    x = (torch.arange(600) % 256).to(torch.uint8); y = x.clone(); y[10], y[261] = int(x[261]), int(x[10])
+    old = lambda z: (int(z.to(torch.int64).sum()), int((z.to(torch.int64) * ((torch.arange(z.numel()) % 251) + 1)).sum()))
+    swap = {'old_block_sum_collides': old(x) == old(y), 'sha256_detects': sha_of([('x', x)]) != sha_of([('x', y)])}
+    real0 = sha_of(_qs_items(q4mod.weight.quant_state))
+    cp_ = [(k, v.detach().cpu().clone() if torch.is_tensor(v) else v) for k, v in _qs_items(q4mod.weight.quant_state)]
+    base = sha_of(cp_); ia = [i for i, (k, _) in enumerate(cp_) if k.endswith('.absmax')][0]
+    ab = [(k, v.clone() if torch.is_tensor(v) else v) for k, v in cp_]; t2 = ab[ia][1].reshape(-1); t2[0] = t2[0] + 1
+    ib = [i for i, (k, _) in enumerate(cp_) if k == 'qs.blocksize'][0]
+    md = list(cp_); md[ib] = (md[ib][0], (md[ib][1] or 0) + 1)
+    res = {'byte_swap_i_i+251': swap, 'absmax_mutation_detected': sha_of(ab) != base, 'metadata_mutation_detected': sha_of(md) != base,
+           'cpu_copy_equals_live': base == real0, 'live_quant_state_untouched': sha_of(_qs_items(q4mod.weight.quant_state)) == real0}
+    res['pass'] = swap['sha256_detects'] and res['absmax_mutation_detected'] and res['metadata_mutation_detected'] and \
+        res['cpu_copy_equals_live'] and res['live_quant_state_untouched']
+    return res
+def hook_selftest():
+    # the inventory must flag an Accelerate hook and must NOT flag a completed 730 DirectCut3 enter/exit (CPU dummy module)
+    from accelerate.hooks import add_hook_to_module, remove_hook_from_module, ModelHook
+    m = torch.nn.Sequential(torch.nn.Linear(2, 2)); clean0 = hooks_clean(hook_inventory(m))
+    with DirectCut3(m[0], 'capture', collector=[]): m(torch.zeros(1, 2))
+    after_dc3 = hooks_clean(hook_inventory(m))
+    add_hook_to_module(m[0], ModelHook()); flagged = not hooks_clean(hook_inventory(m)); remove_hook_from_module(m[0])
+    return {'clean_dummy': clean0, 'directcut3_restored_is_clean': after_dc3, 'accelerate_hook_flagged': flagged,
+            'pass': clean0 and after_dc3 and flagged}
+class _PinnedRevision:
+    """Binds MODEL_REVISION into the unchanged 757 model_setup() calls (it resolves AutoTokenizer / AutoModelForCausalLM
+    through this cell's globals); refuses any other revision."""
+    def __init__(self, cls): self.cls = cls
+    def from_pretrained(self, mid, *a, **kw):
+        if mid != MODEL_ID or kw.get('revision', MODEL_REVISION) != MODEL_REVISION: raise RuntimeError('MODEL_REVISION_CONTRACT')
+        kw['revision'] = MODEL_REVISION; return self.cls.from_pretrained(mid, *a, **kw)
 def seals_equal(a, b): return len(a) == len(b) and all(x == y for x, y in zip(a, b))
 def kv_compare(a, b):
     # per-layer: bitwise (byte SHA), value-equal, max abs / rel difference
@@ -284,19 +364,40 @@ def lp_sum(mem, ctx, tgt, adapter):
 
 # ======================================================================================================== RUN
 try:
-    log('=' * 112); log('AKBASCORE SILICON HIPPOCAMPUS — LoRA–CUT3 BACKWARD PREFLIGHT', RUN_ID, '| commit', COMMIT)
+    log('=' * 112); log(MARKER, RUN_ID, '| engine commit', COMMIT, '| continuation of TEST893 (FAIL_NO_GAIN, unchanged)')
     log('SCOPE: feasibility only. PASS != learning / semantic reading / native behaviour / autonomy.'); log('=' * 112)
     log('TOLERANCES', json.dumps(TOL, sort_keys=True), 'sha256', R['tolerances_sha256'])
+    # executed-cell identity (TEST864/870 method: IPython input history); recorded, not self-asserted
+    try:
+        _hist = list(globals()['get_ipython']().history_manager.input_hist_raw)
+        _cell = [x for x in _hist if MARKER in x and 'def integrity_selftest' in x][-1]
+        (ROOT / 'TEST894_cell_source.py').write_text(_cell, encoding='utf-8'); _cb = _cell.encode('utf-8')
+        R['executed_cell'] = {'sha256': sha_bytes(_cb), 'git_blob': gitblob(_cb), 'git_blob_with_final_newline': gitblob(_cb + b'\n'),
+                              'lines': _cell.count('\n') + 1, 'file': str(ROOT / 'TEST894_cell_source.py')}
+    except Exception as e:
+        R['executed_cell'] = {'status': 'NOT_CAPTURED', 'error': '%s: %s' % (type(e).__name__, e)}
+    log('EXECUTED_CELL', json.dumps(R['executed_cell']))
     # ---------------------------------------------------------------------------------------------------- ENV
     env = {'python': platform.python_version(), 'torch': torch.__version__, 'cuda': torch.version.cuda,
            'transformers': transformers.__version__, 'accelerate': accelerate.__version__, 'bitsandbytes': bitsandbytes.__version__,
            'cuda_available': torch.cuda.is_available(), 'device_count': torch.cuda.device_count()}
     if env['cuda_available']:
-        pr = torch.cuda.get_device_properties(0); env.update(gpu=torch.cuda.get_device_name(0), gpu_bytes=int(pr.total_memory))
+        pr = torch.cuda.get_device_properties(0)
+        env.update(gpu=torch.cuda.get_device_name(0), gpu_bytes=int(pr.total_memory), compute_capability=[pr.major, pr.minor])
     R['env'] = env; log('ENV', json.dumps(env))
-    env_ok = env['cuda_available'] and env['device_count'] == 1 and 'A100' in env.get('gpu', '') and env.get('gpu_bytes', 0) >= 70 * 2**30
-    gate('ENV', 'PASS' if env_ok else 'FAIL', None if env_ok else 'requires exactly one A100 80GB', **env)
+    env_ok = (env['cuda_available'] and env['device_count'] == 1 and env.get('gpu') == GPU_NAME_REQ and
+              tuple(env.get('compute_capability', ())) == GPU_CC_REQ and env.get('gpu_bytes', 0) >= 79 * 2**30)
+    gate('ENV', 'PASS' if env_ok else 'FAIL', None if env_ok else 'requires exactly one %s (cc %s)' % (GPU_NAME_REQ, GPU_CC_REQ), **env)
     random.seed(SEED); torch.manual_seed(SEED); torch.cuda.manual_seed_all(SEED)
+    # Drive early (TEST870 method): mounted before the long model load so log + JSON are backed up after every gate
+    try:
+        from google.colab import drive as _gdrive
+        _gdrive.mount('/content/drive'); DRIVE_DIR = '/content/drive/MyDrive/TEST894_' + RUN_ID; os.makedirs(DRIVE_DIR, exist_ok=True)
+        log('DRIVE_BACKUP_DIR', DRIVE_DIR)
+    except Exception as e:
+        DRIVE_DIR = None; DRIVE_ERR['mount'] = '%s: %s' % (type(e).__name__, e)
+        log('DRIVE_NOT_MOUNTED', DRIVE_ERR['mount'], '| local files are kept in', ROOT, '(download them at the end)')
+    save()
     # ------------------------------------------------------------------------------------------------- SOURCE
     RAW = {}; blobs = {}
     for name in LOCKS:
@@ -305,10 +406,14 @@ try:
     lock = {n: {'lock': v, 'actual': blobs[n], 'match': blobs[n] == v} for n, v in LOCKS.items()}
     g1 = [l for l in RAW['893.log'].decode('utf-8', 'replace').splitlines() if l.startswith('T893 GATE G1 PASS')]
     g1d = json.loads(g1[0].split('T893 GATE G1 PASS', 1)[1].strip()) if len(g1) == 1 else {}
+    fin893 = [l for l in RAW['893.log'].decode('utf-8', 'replace').splitlines() if l.startswith('TEST893_FINAL VERDICT=')]
+    fin_ok = len(fin893) == 1 and all(s in fin893[0] for s in ('VERDICT=FAIL', 'PHYSICAL_VALIDITY=PASS', 'SCIENTIFIC_VALIDITY=PASS',
+                                                              'OUTCOME=FAIL_NO_GAIN'))
     src_ok = all(x['match'] for x in lock.values()) and all(x['match'] for x in k31.values()) and \
-        g1d.get('P') == TOL['P_expected'] and g1d.get('chunk') == TOL['chunk_expected']
-    gate('SOURCE', 'PASS' if src_ok else 'FAIL', None if src_ok else 'blob lock / K3.1 blob / 893.log G1 cross-check failed',
-         locks=lock, k31_blob_check=k31, log893_G1={'P': g1d.get('P'), 'chunk': g1d.get('chunk'), 'gpu_wall_s': g1d.get('wall_s')})
+        g1d.get('P') == TOL['P_expected'] and g1d.get('chunk') == TOL['chunk_expected'] and fin_ok
+    gate('SOURCE', 'PASS' if src_ok else 'FAIL', None if src_ok else 'blob lock / K3.1 blob / 893.log G1 / TEST893_FINAL cross-check failed',
+         locks=lock, k31_blob_check=k31, log893_G1={'P': g1d.get('P'), 'chunk': g1d.get('chunk'), 'gpu_wall_s': g1d.get('wall_s')},
+         test893_final_line=fin893[0][:200] if fin893 else None)
     # ------------------------------------------------------------------------------------------------ EXTRACT
     MOD877 = {}; STATE877 = {'api': {}}; _h877 = hashlib
     sel = {}
@@ -321,23 +426,35 @@ try:
     gate('EXTRACT', 'PASS' if sfx_ok else 'FAIL', None if sfx_ok else '709 answer() suffix literal changed',
          selected_ast_sha16=sel, hook_tokens_refused=list(FORBIDDEN_TOKENS), live_suffix_source='709.py answer()')
     # -------------------------------------------------------------------------------------------------- MODEL
+    AutoTokenizer, AutoModelForCausalLM = _PinnedRevision(transformers.AutoTokenizer), _PinnedRevision(transformers.AutoModelForCausalLM)
     t = time.perf_counter(); model_setup(); load_s = round(time.perf_counter() - t, 1)
-    hooks_load = hook_inventory()
+    from huggingface_hub import hf_hub_download
+    rev_files = {}
+    for fn in ('config.json', 'tokenizer.json', 'tokenizer_config.json', 'model.safetensors.index.json'):
+        pth = hf_hub_download(MODEL_ID, fn, revision=MODEL_REVISION)
+        rev_files[fn] = {'sha256': sha_path(pth), 'in_pinned_snapshot': ('/snapshots/%s/' % MODEL_REVISION) in pth.replace('\\', '/')}
+    rev_ok = getattr(model.config, '_commit_hash', None) == MODEL_REVISION and all(v['in_pinned_snapshot'] for v in rev_files.values())
+    hooks_load = hook_inventory(); hst = hook_selftest()
     base_params = [(n, p) for n, p in model.named_parameters()]
+    Q4MODS = [(n, m) for n, m in model.named_modules() if isinstance(m, bitsandbytes.nn.Linear4bit)]
+    BUFS = [(n, b) for n, b in model.named_buffers()]
+    ist = integrity_selftest(Q4MODS[0][1])
     model_ok = (P == TOL['P_expected'] and all(not p.requires_grad for _, p in base_params) and not model.training
-                and hooks_load['torch_hooks_total'] == 0 and model.config._attn_implementation == 'sdpa'
-                and float(getattr(model.config, 'attention_dropout', 0.0)) == 0.0)
-    gate('MODEL', 'PASS' if model_ok else 'FAIL', None if model_ok else 'P / frozen / eval / hooks / sdpa / dropout',
-         load_s=load_s, P=P, prefix_sha256=sha_bytes(PREFIX.encode()), base_param_tensors=len(base_params),
-         hooks=hooks_load, gpu=gpu_mem(), model_revision=getattr(model.config, '_commit_hash', None))
+                and hooks_clean(hooks_load) and hst['pass'] and ist['pass'] and rev_ok and len(Q4MODS) > 0
+                and model.config._attn_implementation == 'sdpa' and float(getattr(model.config, 'attention_dropout', 0.0)) == 0.0)
+    gate('MODEL', 'PASS' if model_ok else 'FAIL',
+         None if model_ok else 'P / frozen / eval / hooks(torch+_hf_hook+instance forward) / selftests / revision / sdpa / dropout',
+         load_s=load_s, P=P, prefix_sha256=sha_bytes(PREFIX.encode()), base_param_tensors=len(base_params), nf4_modules=len(Q4MODS),
+         buffers=len(BUFS), hooks=hooks_load, hook_selftest=hst, integrity_selftest=ist, gpu=gpu_mem(),
+         model_revision_expected=MODEL_REVISION, model_revision_loaded=getattr(model.config, '_commit_hash', None),
+         revision_files=rev_files, tokenizer_commit_hash=getattr(tok, 'init_kwargs', {}).get('_commit_hash'))
     ENV = {'model': model, 'DEV': DEV, 'P': P, 'NL': NL, 'H': H, 'cache_build': cache_build}
     api_err = None
     try: api877(ENV)
     except Exception as e: api_err = '%s: %s' % (type(e).__name__, e)
     log('API877', 'OK' if api_err is None else api_err, json.dumps(STATE877.get('api', {}), default=str))
-    W0 = {'sentinel': sentinel(), 'weights877': weights_digest877(ENV)}
-    t = time.perf_counter(); W0['full'] = full_checksum(base_params); W0['full_s'] = round(time.perf_counter() - t, 1)
-    log('BASE_CHECKSUMS', json.dumps(W0))
+    W0 = {'sentinel': sentinel(), 'weights877': weights_digest877(ENV), 'integrity': integrity_digest(base_params, Q4MODS, BUFS)}
+    log('BASE_INTEGRITY', json.dumps(W0))
     # ------------------------------------------------------------------------------------- preflight-only records
     # Same record body as 841 body841; fresh opaque names (829 alphabet) private to this preflight (never H1 data).
     rng = random.Random(SEED + 1); ALPH = 'ABCDEFGHJKLMNPQRSTUVWXYZ'
@@ -367,8 +484,8 @@ try:
     CP = {}; ENTRY = {}
     for cid, text in (('A', bA), ('B', bB), ('W', bW), ('NONE', ''), ('LONG', bLONG)):
         ids = tok(text, add_special_tokens=False).input_ids if text else []
-        with MountOff(): cp, secs = forge_native(ids, 'LCP_' + RUN_ID + '_' + cid)
-        path = CART_DIR / ('LCP_' + RUN_ID + '_' + cid + '.pt'); tmp = Path(str(path) + '.tmp')
+        with MountOff(): cp, secs = forge_native(ids, 'T894_' + RUN_ID + '_' + cid)
+        path = CART_DIR / ('T894_' + RUN_ID + '_' + cid + '.pt'); tmp = Path(str(path) + '.tmp')
         assert not path.exists(), 'APPEND_ONLY'
         torch.save(cp, tmp); tmp.replace(path)
         CP[cid] = cp; ENTRY[cid] = {'file': str(path), 'sha256': sha_path(path), 'tensor_seal': seal_cp(cp), 'n': cp['n'],
@@ -399,14 +516,14 @@ try:
     st_a = 'PASS' if tri(lower_cmp) == tri(upper_cmp) == 'PASS' else ('FAIL' if 'FAIL' in (tri(lower_cmp), tri(upper_cmp)) else 'INCONCLUSIVE')
     gate('P0_A_FORGE_REBUILD_PARITY', st_a, 'full-text prefill K/V vs forged lower K/V + H3-injected native upper rebuild',
          lower_L0_3=lower_cmp, upper_L4_79=upper_cmp); del REF_A
-    if st_a == 'FAIL': raise StopLCP('P0_A native parity FAIL')
+    if st_a == 'FAIL': raise StopT894('P0_A native parity FAIL')
     if api_err is None:
         nat = mount_append(MEM['A'], 'B')
         with MountOff(): exp = list(xappend878(ENV, list(MEM['A']), to_gpu(CP['B']), ()))
         cmp_b = kv_compare(nat, exp); st_b = tri(cmp_b)
         gate('P0_B_EXPLICIT_APPEND_PARITY', st_b, 'locked native append (757) vs explicit no-hook append (878/877)', compare=cmp_b)
         del nat, exp
-        if st_b == 'FAIL': raise StopLCP('P0_B native parity FAIL')
+        if st_b == 'FAIL': raise StopT894('P0_B native parity FAIL')
     else:
         gate('P0_B_EXPLICIT_APPEND_PARITY', 'INCONCLUSIVE', 'api877 installed-source audit failed: ' + api_err)
     base_A1 = live(MEM['A'], sfx_ids, t1_ids); base_A2 = live(MEM['A'], sfx_ids, t1_ids); base_B = live(MEM['B'], sfx_ids, t2_ids)
@@ -419,7 +536,7 @@ try:
         for nm in LORA_TARGETS:
             b = getattr(sa, nm)
             if not isinstance(b, bitsandbytes.nn.Linear4bit): raise RuntimeError('NOT_LINEAR4BIT L%d.%s' % (i, nm))
-            base_ids['L%d.%s' % (i, nm)] = id(b); w = LoRAProjLCP(b, LORA_R, LORA_ALPHA, 'L%d.%s' % (i, nm), gen)
+            base_ids['L%d.%s' % (i, nm)] = id(b); w = LoRAProj894(b, LORA_R, LORA_ALPHA, 'L%d.%s' % (i, nm), gen)
             setattr(sa, nm, w); LORA.append(w)
     LORA_PARAMS = [p for w in LORA for p in (w.lora_A, w.lora_B)]; LORA_IDS = {id(p) for p in LORA_PARAMS}
     install_ok = (len(LORA) == NL * len(LORA_TARGETS) and all(id(getattr(model.model.layers[int(w.lcp_name[1:].split('.')[0])].self_attn,
@@ -429,8 +546,8 @@ try:
     adapter_set_ok = len(BASE_ONLY) == len(base_params) and len(trainable) == len(LORA_PARAMS) and \
         all(id(p) in LORA_IDS for _, p in model.named_parameters() if p.requires_grad)
     n_lora = sum(p.numel() for p in LORA_PARAMS); hooks_install = hook_inventory()
-    log('LORA_INSTALLED', len(LORA), 'modules', n_lora, 'params', 'adapter_set_ok', adapter_set_ok, 'hooks', hooks_install['torch_hooks_total'])
-    if not (install_ok and adapter_set_ok and hooks_install['torch_hooks_total'] == 0): raise StopLCP('LORA_INSTALL_CONTRACT')
+    log('LORA_INSTALLED', len(LORA), 'modules', n_lora, 'params', 'adapter_set_ok', adapter_set_ok, 'hooks_clean', hooks_clean(hooks_install))
+    if not (install_ok and adapter_set_ok and hooks_clean(hooks_install)): raise StopT894('LORA_INSTALL_CONTRACT')
     # -------------------------------------------------------------------------------- P0.C wrapper-off identity
     remount = mount_init('A'); seal_re = full_kv_seal(remount); del remount
     off_A = live(MEM['A'], sfx_ids, t1_ids, adapter=False)
@@ -505,7 +622,7 @@ try:
     opt_ids = {id(p) for g_ in opt.param_groups for p in g_['params']}
     steps = []; examples = (('A', t1_ids), ('B', t2_ids), ('A', t1_ids))
     for s, (m, tg) in enumerate(examples[:OPT_STEPS], 1):
-        opt.zero_grad(set_to_none=True); torch.cuda.reset_peak_memory_stats(); tf = time.perf_counter()
+        tw = time.perf_counter(); opt.zero_grad(set_to_none=True); torch.cuda.reset_peak_memory_stats(); tf = time.perf_counter()
         r_ = live(MEM[m], sfx_ids, tg, grad=True, train=True, adapter=True); loss = -r_['lp'].mean()
         torch.cuda.synchronize(); t_f = time.perf_counter() - tf; tb = time.perf_counter(); loss.backward(); torch.cuda.synchronize(); t_b = time.perf_counter() - tb
         base_grad_none = all(p.grad is None for _, p in BASE_ONLY)
@@ -517,7 +634,8 @@ try:
         steps.append({'step': s, 'mount': m, 'loss': float(loss), 'base_grad_none': base_grad_none, 'finite': finite,
                       'total_grad_norm': total, 'A_nonzero_modules': sum(x > 0 for x in gA), 'B_nonzero_modules': sum(x > 0 for x in gB),
                       'per_layer_grad_norm': per_layer, 'forward_s': round(t_f, 3), 'backward_s': round(t_b, 3),
-                      'optimizer_s': round(t_o, 3), 'peak': gpu_mem(), 'calls_on': r_['calls_on']})
+                      'optimizer_s': round(t_o, 3), 'step_wall_s': round(time.perf_counter() - tw, 3), 'peak': gpu_mem(),
+                      'calls_on': r_['calls_on']})
         log('P3_STEP', s, m, 'loss %.5f' % float(loss), 'grad %.4e' % total, 'A_nz', steps[-1]['A_nonzero_modules'],
             'B_nz', steps[-1]['B_nonzero_modules'], 'f/b/o s', steps[-1]['forward_s'], steps[-1]['backward_s'], steps[-1]['optimizer_s'])
         del r_, loss
@@ -558,69 +676,94 @@ try:
     x = torch.randn((4, w79.in_features), generator=gs, dtype=torch.float64); u = torch.randn((4, w79.out_features), generator=gs, dtype=torch.float64)
     Aq = w79.lora_A.detach().cpu().double().clone().requires_grad_(True)
     Bq = (torch.randn((w79.out_features, LORA_R), generator=gs, dtype=torch.float64) * 1e-3).requires_grad_(True)
-    f = (u * LoRAProjLCP.lora_delta(x, Aq, Bq, w79.scale)).sum(); f.backward()
+    f = (u * LoRAProj894.lora_delta(x, Aq, Bq, w79.scale)).sum(); f.backward()
     dA = torch.randn(Aq.shape, generator=gs, dtype=torch.float64); dB = torch.randn(Bq.shape, generator=gs, dtype=torch.float64)
     an = float((Aq.grad * dA).sum() + (Bq.grad * dB).sum()); eps = 1e-6
     with torch.no_grad():
-        fp = float((u * LoRAProjLCP.lora_delta(x, Aq + eps * dA, Bq + eps * dB, w79.scale)).sum())
-        fm = float((u * LoRAProjLCP.lora_delta(x, Aq - eps * dA, Bq - eps * dB, w79.scale)).sum())
+        fp = float((u * LoRAProj894.lora_delta(x, Aq + eps * dA, Bq + eps * dB, w79.scale)).sum())
+        fm = float((u * LoRAProj894.lora_delta(x, Aq - eps * dA, Bq - eps * dB, w79.scale)).sum())
     fd = (fp - fm) / (2 * eps); sur_err = abs(an - fd) / max(abs(an), 1e-30)
-    snap = [p.detach().clone() for p in LORA_PARAMS]
-    gp = live(MEM['A'], sfx_ids, t1_ids, grad=True, train=True, adapter=True); l_ = -gp['lp'].mean()
-    grads = torch.autograd.grad(l_, LORA_PARAMS, allow_unused=True); del gp, l_
-    grads = [torch.zeros_like(p) if g_ is None else g_ for g_, p in zip(grads, LORA_PARAMS)]
-    gn2 = float(sum((g_.double() ** 2).sum() for g_ in grads))
-    L0 = -lp_sum(MEM['A'], sfx_ids, t1_ids, True) / len(t1_ids); probes = []
-    for dlt in TOL['dir_targets_nats']:
-        eta = dlt / max(gn2, 1e-30)
-        with torch.no_grad():
-            for p, g_ in zip(LORA_PARAMS, grads): p.sub_(eta * g_)
-        L1 = -lp_sum(MEM['A'], sfx_ids, t1_ids, True) / len(t1_ids)
+    snap = [p.detach().clone() for p in LORA_PARAMS]; probes = []; probe_err = None; gn2 = float('nan'); L0 = float('nan')
+    try:
+        gp = live(MEM['A'], sfx_ids, t1_ids, grad=True, train=True, adapter=True); l_ = -gp['lp'].mean()
+        grads = torch.autograd.grad(l_, LORA_PARAMS, allow_unused=True); del gp, l_
+        grads = [torch.zeros_like(p) if g_ is None else g_ for g_, p in zip(grads, LORA_PARAMS)]
+        gn2 = float(sum((g_.double() ** 2).sum() for g_ in grads))
+        L0 = -lp_sum(MEM['A'], sfx_ids, t1_ids, True) / len(t1_ids)
+        for dlt in TOL['dir_targets_nats']:
+            eta = dlt / max(gn2, 1e-30)
+            with torch.no_grad():
+                for p, g_ in zip(LORA_PARAMS, grads): p.sub_(eta * g_)
+            L1 = -lp_sum(MEM['A'], sfx_ids, t1_ids, True) / len(t1_ids)
+            with torch.no_grad():
+                for p, s_ in zip(LORA_PARAMS, snap): p.copy_(s_)
+            probes.append({'predicted_delta': -dlt, 'actual_delta': L1 - L0, 'ratio': (L1 - L0) / -dlt, 'eta': eta})
+    except Exception as e:
+        probe_err = '%s: %s' % (type(e).__name__, str(e)[:300])
+    finally:
+        grads = None
         with torch.no_grad():
             for p, s_ in zip(LORA_PARAMS, snap): p.copy_(s_)
-        probes.append({'predicted_delta': -dlt, 'actual_delta': L1 - L0, 'ratio': (L1 - L0) / -dlt, 'eta': eta})
-    restored = all(torch.equal(p.detach(), s_) for p, s_ in zip(LORA_PARAMS, snap)); del snap, grads
+        restored = all(torch.equal(p.detach(), s_) for p, s_ in zip(LORA_PARAMS, snap)); del snap; release()
     lo, hi = TOL['dir_ratio_band']
     if sur_err > TOL['surrogate_rel_err'] or not restored: st4 = 'FAIL'
+    elif probe_err is not None or len(probes) != len(TOL['dir_targets_nats']): st4 = 'INCONCLUSIVE'
     elif all(pp['actual_delta'] > TOL['dir_fail_increase_nats'] for pp in probes): st4 = 'FAIL'
     elif all(pp['actual_delta'] < 0 for pp in probes) and lo <= probes[0]['ratio'] <= hi: st4 = 'PASS'
     else: st4 = 'INCONCLUSIVE'
     gate('P4_NUMERICAL', st4, 'float64 local surrogate (LoRA math, CPU) + real-NF4-engine directional loss probe',
-         surrogate_rel_err=sur_err, surrogate_where='CPU float64, LoRAProjLCP.lora_delta only (no 72B)',
+         surrogate_rel_err=sur_err, surrogate_where='CPU float64, LoRAProj894.lora_delta only (no 72B)',
          directional_where='real NF4 72B, base-OFF mount A, eval no_grad loss before/after a -eta*g LoRA step, restored',
-         grad_norm=math.sqrt(gn2), loss_L0=L0, probes=probes, params_restored=restored)
+         grad_norm=math.sqrt(gn2) if gn2 == gn2 else None, loss_L0=L0, probes=probes, params_restored=restored, probe_error=probe_err)
+    if not restored: raise StopT894('P4: LoRA parameters not restored bitwise after the directional probe')
     # ------------------------------------------------------------------------------------------- P6 resources
     def filler(n):
         s = (' ' + T1 + ' -> ' + T2 + '.') * (n // 3 + 8); ids_ = tok(s, add_special_tokens=False).input_ids[:n]; assert len(ids_) == n; return ids_
-    res = []
+    res = []; p6_stop = None
+    opt.zero_grad(set_to_none=True); release(); torch.cuda.synchronize(); base_alloc = torch.cuda.memory_allocated()
     for pname in ('A', 'LONG_A', 'XL'):
         for Ltot in LIVE_LENGTHS:
             row = {'prefix': pname, 'prefix_tokens': int(MEM[pname][0][0].shape[-2]), 'live_tokens': Ltot}
+            if p6_stop is not None:
+                row.update(status='NOT_RUN', reason=p6_stop); res.append(row); log('P6', json.dumps(row, default=str)); continue
+            r_ = l_ = cb = None; tw = time.perf_counter()
             try:
                 if Ltot <= len(sfx_ids): raise RuntimeError('LIVE_LENGTH_SHORTER_THAN_SUFFIX')
-                tg = filler(Ltot - len(sfx_ids)); opt.zero_grad(set_to_none=True); release()
-                torch.cuda.synchronize(); torch.cuda.reset_peak_memory_stats()
-                tc = time.perf_counter(); cb = cache_build(list(MEM[pname])); torch.cuda.synchronize(); row['cache_build_s'] = round(time.perf_counter() - tc, 4); del cb
+                tg = filler(Ltot - len(sfx_ids)); torch.cuda.synchronize(); torch.cuda.reset_peak_memory_stats()
+                tc = time.perf_counter(); cb = cache_build(list(MEM[pname])); torch.cuda.synchronize(); row['cache_build_s'] = round(time.perf_counter() - tc, 4); cb = None
                 tf = time.perf_counter(); r_ = live(MEM[pname], sfx_ids, tg, grad=True, train=True, adapter=True)
                 l_ = -r_['lp'].mean(); torch.cuda.synchronize(); row['forward_s'] = round(time.perf_counter() - tf, 3)
                 tb = time.perf_counter(); l_.backward(); torch.cuda.synchronize(); row['backward_s'] = round(time.perf_counter() - tb, 3)
                 row['prefix_kv_copy_gib_est'] = round(row['prefix_tokens'] * NL * KVH * HD * 2 * 2 / 2**30, 4)
-                row.update(peak=gpu_mem(), oom=False); del r_, l_
+                row.update(peak=gpu_mem(), oom=False, status='OK')
             except torch.cuda.OutOfMemoryError as e:
-                row.update(oom=True, error=str(e)[:300])
+                row.update(oom=True, status='OOM', error=str(e)[:300])
             except Exception as e:
-                row.update(oom=False, error='%s: %s' % (type(e).__name__, str(e)[:300]))
-            opt.zero_grad(set_to_none=True); release(); res.append(row); log('P6', json.dumps(row, default=str))
+                row.update(oom=False, status='ERROR', error='%s: %s' % (type(e).__name__, str(e)[:300]))
+            finally:
+                r_ = l_ = cb = None; opt.zero_grad(set_to_none=True); release(); torch.cuda.synchronize()
+                row['row_wall_s'] = round(time.perf_counter() - tw, 3)
+                row['allocated_after_cleanup_gib'] = round(torch.cuda.memory_allocated() / 2**30, 3)
+                row['clean_after'] = torch.cuda.memory_allocated() <= base_alloc + TOL['p6_clean_slack_mib'] * 2**20
+                if not row['clean_after']: p6_stop = 'GPU_STATE_NOT_CLEAN_AFTER_%s_%d' % (pname, Ltot)
+            res.append(row); log('P6', json.dumps(row, default=str))
     total = env['gpu_bytes'] / 2**30
-    ok_rows = [r_ for r_ in res if not r_.get('oom') and 'error' not in r_]
-    first_ok = any(r_['prefix'] == 'A' and r_['live_tokens'] == LIVE_LENGTHS[0] for r_ in ok_rows)
-    all_ok = len(ok_rows) == len(res) and all(r_['peak']['peak_reserved_gib'] <= TOL['vram_reserved_frac_max'] * total for r_ in ok_rows)
+    ok_rows = [r_ for r_ in res if r_.get('status') == 'OK']
+    first = res[0]
+    all_ok = len(ok_rows) == len(res) and p6_stop is None and \
+        all(r_['peak']['peak_reserved_gib'] <= TOL['vram_reserved_frac_max'] * total for r_ in ok_rows)
+    first_oom_clean = first.get('status') == 'OOM' and first.get('clean_after') is True
     ref = [r_ for r_ in ok_rows if r_['prefix'] == 'LONG_A' and r_['live_tokens'] == LIVE_LENGTHS[-1]]
-    opt_s = max(x['optimizer_s'] for x in steps)
-    upd_30 = int(1800 / (ref[0]['forward_s'] + ref[0]['backward_s'] + opt_s)) if ref else None
-    gate('P6_RESOURCE', 'PASS' if all_ok else ('INCONCLUSIVE' if first_ok else 'FAIL'),
-         None if all_ok else 'OOM / error / reserved VRAM above limit in at least one configuration',
-         rows=res, optimizer_step_s_max=opt_s, model_load_s=load_s, est_updates_per_30min_LONG_A_256=upd_30,
+    opt_s = max(x['optimizer_s'] for x in steps); step_wall = max(x['step_wall_s'] for x in steps)
+    upd_30 = int(1800 / (ref[0]['row_wall_s'] + opt_s)) if ref else None
+    gate('P6_RESOURCE', 'PASS' if all_ok else ('FAIL' if first_oom_clean else 'INCONCLUSIVE'),
+         None if all_ok else ('smallest configuration OOM on a clean GPU state' if first_oom_clean else
+                              'OOM / error / unclean GPU state / reserved VRAM above limit in at least one configuration'),
+         rows=res, p6_stop=p6_stop, baseline_allocated_gib=round(base_alloc / 2**30, 3), optimizer_step_s_max=opt_s,
+         p3_full_step_wall_s_max=step_wall, model_load_s=load_s,
+         est_updates_per_30min_LONG_A_256_from_full_row_wall=upd_30,
+         budget_note='row wall = cache build + forward + backward + cleanup; plus optimizer step. Evaluation time is NOT '
+                     'included and must be reserved separately before any H1 budget',
          gradient_checkpointing='OFF (not attempted in this preflight)', batch=1)
     # ---------------------------------------------------------------------------------------- P1 / P7 final
     seals_end = {k: full_kv_seal(v) for k, v in MEM.items()}
@@ -634,21 +777,22 @@ try:
     hooks_end = hook_inventory()
     # base_params keeps the ORIGINAL names and the same Parameter objects (wrapping renames q_proj.weight -> q_proj.base.weight)
     same_objects = {id(p) for _, p in base_params} == {id(p) for _, p in BASE_ONLY}
-    W1 = {'sentinel': sentinel(), 'weights877': weights_digest877(ENV), 'full': full_checksum(base_params)}
+    W1 = {'sentinel': sentinel(), 'weights877': weights_digest877(ENV), 'integrity': integrity_digest(base_params, Q4MODS, BUFS)}
     lora_digest = hashlib.sha256(''.join(kv_digest(p.detach()) for p in LORA_PARAMS).encode()).hexdigest()
     f3 = model.model.layers[CUT].forward
     dc3_restored = getattr(f3, '__func__', None) is type(model.model.layers[CUT]).forward
-    p7_ok = (same_objects and W1['sentinel'] == W0['sentinel'] and W1['weights877'] == W0['weights877'] and W1['full'] == W0['full'] and
-             hooks_end['torch_hooks_total'] == 0 and hooks_install['torch_hooks_total'] == 0 and dc3_restored and
-             hooks_end['instance_forward_override_count'] == hooks_load['instance_forward_override_count'] and
+    p7_ok = (same_objects and W1['sentinel'] == W0['sentinel'] and W1['weights877'] == W0['weights877'] and
+             W1['integrity']['sha256'] == W0['integrity']['sha256'] and hooks_clean(hooks_load) and hooks_clean(hooks_install) and
+             hooks_clean(hooks_end) and dc3_restored and hst['pass'] and ist['pass'] and rev_ok and
              all(not p.requires_grad for _, p in BASE_ONLY) and src_ok)
-    gate('P7_INTEGRITY', 'PASS' if p7_ok else 'FAIL', None if p7_ok else 'base checksum / hooks / DirectCut3 restore / freeze',
-         base_param_objects_unchanged=same_objects,
+    gate('P7_INTEGRITY', 'PASS' if p7_ok else 'FAIL',
+         None if p7_ok else 'base SHA-256 (params + NF4 quant state + buffers) / hooks / DirectCut3 restore / selftests / revision / freeze',
+         base_param_objects_unchanged=same_objects, hook_selftest=hst, integrity_selftest=ist, model_revision_ok=rev_ok,
          base_checksums_start=W0, base_checksums_end=W1, lora_state_sha256=lora_digest, hooks_after_load=hooks_load,
          hooks_after_install=hooks_install, hooks_end=hooks_end, directcut3_restored=dc3_restored,
          lora_wrapper_calls={'on': LORA_STATE['calls_on'], 'off': LORA_STATE['calls_off']}, adapter_state_file='NOT_WRITTEN')
     R['status'] = 'COMPLETE'
-except StopLCP as e:
+except StopT894 as e:
     R['status'] = 'STOPPED_CRITICAL'; R['stop_reason'] = str(e); log('STOP', str(e))
 except Exception as e:
     R['status'] = 'ERROR'; R['error'] = '%s: %s' % (type(e).__name__, e); R['traceback'] = traceback.format_exc()[-20000:]
@@ -658,27 +802,91 @@ finally:
     crit_fail = [g for g in CRITICAL if G[g]['status'] == 'FAIL'] + [g for g in REQUIRED if G[g]['status'] == 'FAIL' and g != 'P6_RESOURCE']
     not_done = [g for g in CRITICAL + REQUIRED if G[g]['status'] == 'NOT_RUN']
     soft = [g for g in CRITICAL + REQUIRED if G[g]['status'] == 'INCONCLUSIVE'] + (['P6_RESOURCE'] if G['P6_RESOURCE']['status'] == 'FAIL' else [])
-    if crit_fail: verdict = 'NOT_FEASIBLE'
+    # NOT_FEASIBLE_THIS_CONFIGURATION names THIS implementation / configuration only; it is not an impossibility claim
+    if crit_fail: verdict = 'NOT_FEASIBLE_THIS_CONFIGURATION'
     elif R['status'] != 'COMPLETE' or not_done or soft: verdict = 'UNDECIDABLE'
     else: verdict = 'FEASIBLE'
-    R['verdict'] = verdict; R['elapsed_s'] = round(time.perf_counter() - T0, 1)
+    R['verdict'] = verdict; R['verdict_scope'] = 'this cell, this runtime, this LoRA configuration; not a statement about the architecture'
+    R['elapsed_s'] = round(time.perf_counter() - T0, 1)
     try: R['gpu_final'] = gpu_mem()
     except Exception: pass
-    save()
     log('=' * 112)
     for g in GATE_ORDER: log('%-30s %-13s %s' % (g, G[g]['status'], G[g]['reason'] or ''))
     summary = {'verdict': verdict, 'status': R['status'], 'gates': {g: G[g]['status'] for g in GATE_ORDER},
-               'commit': COMMIT, 'run_id': RUN_ID, 'elapsed_s': R['elapsed_s'],
+               'commit': COMMIT, 'model_revision': MODEL_REVISION, 'run_id': RUN_ID, 'elapsed_s': R['elapsed_s'],
                'scope': 'feasibility only; not learning / semantic / native-behaviour / autonomy evidence'}
-    log('LCP_SUMMARY ' + json.dumps(summary, sort_keys=True))
-    log('RESULT_JSON', OUT, '| LOG', LOG)
-    drive = Path('/content/drive/MyDrive')
-    if drive.exists():
-        try:
-            dst = drive / ('AKBASCORE_LCP_' + RUN_ID); dst.mkdir(parents=True, exist_ok=True)
-            for f_ in (OUT, LOG): shutil.copy2(f_, dst / f_.name)
-            same = all(sha_path(dst / f_.name) == sha_path(f_) for f_ in (OUT, LOG))
-            log('DRIVE_COPY', dst, 'sha_equal', same)
-        except Exception as e: log('DRIVE_COPY_FAILED', type(e).__name__, e)
-    else: log('DRIVE_COPY NOT_RUN (Drive not mounted)')
+    log('TEST894_SUMMARY ' + json.dumps(summary, sort_keys=True))
+    save()                                                     # last write of the report; it is not modified after this line
+    # ------------------------------------------- artifacts (TEST870/889/892 contract: ZIP + SHA256SUMS + receipt + Drive)
+    import zipfile
+    AG = {'report_written_read_back': False, 'zip_testzip': False, 'sha256sums': False, 'report_in_zip_is_read_back_report': False,
+          'drive': 'NOT_RUN'}
+    rep_sha = zip_sha = None
+    try:
+        rb = OUT.read_bytes(); json.loads(rb.decode('utf-8')); rep_sha = sha_bytes(rb); AG['report_written_read_back'] = True
+        files = sorted(f_ for f_ in ROOT.rglob('*') if f_.is_file() and not f_.name.endswith('.tmp'))
+        sums = ['%s  %s' % (sha_path(f_), f_.relative_to(ROOT).as_posix()) for f_ in files]
+        with zipfile.ZipFile(ZIP_PATH, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+            for f_ in files: z.write(f_, arcname=ROOT.name + '/' + f_.relative_to(ROOT).as_posix())
+            z.writestr(ROOT.name + '/SHA256SUMS.txt', '\n'.join(sums) + '\n')
+        with zipfile.ZipFile(ZIP_PATH) as z:
+            AG['zip_testzip'] = z.testzip() is None
+            names = z.namelist(); root_ = ROOT.name
+            lines = z.read(root_ + '/SHA256SUMS.txt').decode('utf-8').split('\n')
+            rows = [l_.split('  ', 1) for l_ in (lines[:-1] if lines and lines[-1] == '' else lines)]
+            hexs = lambda x: len(x) == 64 and all(c in '0123456789abcdef' for c in x)
+            okm = bool(rows) and all(len(r_) == 2 and hexs(r_[0]) and r_[1] == r_[1].strip() and '\\' not in r_[1] and
+                                     all(seg not in ('', '.', '..') for seg in r_[1].split('/')) for r_ in rows) and \
+                len({r_[1] for r_ in rows}) == len(rows)
+            listed = {r_[1]: r_[0] for r_ in rows} if okm else {}
+            members = [n_[len(root_) + 1:] for n_ in names if not n_.endswith('/')] if all(n_.startswith(root_ + '/') for n_ in names) else None
+            AG['sha256sums'] = okm and members is not None and len(members) == len(set(members)) and \
+                set(members) - {'SHA256SUMS.txt'} == set(listed) and \
+                all(sha_bytes(z.read(root_ + '/' + rel)) == h_ for rel, h_ in listed.items()) and \
+                all(k_ in listed for k_ in ('TEST894_results.json', 'TEST894.log'))
+            AG['sha256sums_rows'] = len(rows)
+            AG['report_in_zip_is_read_back_report'] = listed.get('TEST894_results.json') == rep_sha
+        zip_sha = sha_path(ZIP_PATH)
+        if DRIVE_DIR is not None:
+            try:
+                dz = Path(DRIVE_DIR) / ZIP_PATH.name; shutil.copy2(ZIP_PATH, dz); AG['drive'] = sha_path(dz) == zip_sha
+            except Exception as e:
+                AG['drive'] = False; AG['drive_error'] = '%s: %s' % (type(e).__name__, e)
+    except Exception as e:
+        AG['artifact_error'] = '%s: %s' % (type(e).__name__, e)
+    core = all(AG[k] is True for k in ('report_written_read_back', 'zip_testzip', 'sha256sums', 'report_in_zip_is_read_back_report'))
+    ART_STATUS = ('PASS' if core and AG['drive'] is True else
+                  'INCOMPLETE_DRIVE_NOT_MOUNTED' if core and AG['drive'] == 'NOT_RUN' else 'FAIL')
+    receipt = {'test': 'TEST894', 'run_id': RUN_ID, 'technical_verdict': verdict, 'status': R['status'],
+               'ARTIFACT_STATUS': ART_STATUS, 'artifact_gates': AG, 'gates': summary['gates'], 'report': str(OUT),
+               'report_sha256': rep_sha, 'zip': str(ZIP_PATH), 'zip_sha256': zip_sha, 'drive_dir': DRIVE_DIR,
+               'drive_mount_error': DRIVE_ERR['mount'], 'drive_backup_failures': DRIVE_ERR['backup_failures'],
+               'engine_commit': COMMIT, 'model_revision': MODEL_REVISION, 'runtime_pins': R['runtime_pins'],
+               'executed_cell': R.get('executed_cell'), 'previous': 'TEST893 FAIL_NO_GAIN (unchanged)',
+               'note': 'ARTIFACT_STATUS is separate from the technical verdict; a missing Drive copy is not a LoRA backward failure'}
+    receipt_ok = False
+    try:
+        tmp_ = RECEIPT_PATH.with_suffix('.json.tmp'); tmp_.write_text(json.dumps(receipt, indent=2, default=str)); tmp_.replace(RECEIPT_PATH)
+        receipt_ok = json.loads(RECEIPT_PATH.read_text())['ARTIFACT_STATUS'] == ART_STATUS
+        if DRIVE_DIR is not None:
+            dr = Path(DRIVE_DIR) / RECEIPT_PATH.name; shutil.copy2(RECEIPT_PATH, dr)
+            log('RECEIPT_DRIVE_COPY', dr, 'sha_equal', sha_path(dr) == sha_path(RECEIPT_PATH))
+    except Exception as e:
+        log('RECEIPT_WRITE_FAILED', type(e).__name__, e)
+    log('TEST894_RECEIPT', json.dumps(receipt, sort_keys=True, default=str))
+    log('LOCAL FILES  :', ROOT, '|', ZIP_PATH if ZIP_PATH.exists() else 'ZIP NOT CREATED', '|',
+        RECEIPT_PATH if receipt_ok else 'RECEIPT NOT VERIFIED')
+    log('DRIVE        :', DRIVE_DIR if DRIVE_DIR is not None else 'DRIVE_NOT_MOUNTED (%s)' % DRIVE_ERR['mount'])
+    log('TEST894_FINAL TECHNICAL_VERDICT=%s | STATUS=%s | ARTIFACT_STATUS=%s' % (verdict, R['status'], ART_STATUS))
+    if DRIVE_DIR is not None:
+        try: shutil.copy2(LOG, Path(DRIVE_DIR) / LOG.name)    # final log lines (the zipped log stops at packaging time)
+        except Exception as e: log('DRIVE_FINAL_LOG_COPY_FAILED', type(e).__name__, e)
+    try:
+        from google.colab import files as _cfiles
+        for f_ in (ZIP_PATH, RECEIPT_PATH):
+            if f_.exists(): _cfiles.download(str(f_))
+        print('Downloads started. If they did not arrive, run in a new cell: from google.colab import files; '
+              'files.download(%r); files.download(%r)' % (str(ZIP_PATH), str(RECEIPT_PATH)))
+    except Exception as e:
+        print('Automatic download not available (%s); the files are under %s' % (type(e).__name__, ROOT.parent))
     log('=' * 112)
