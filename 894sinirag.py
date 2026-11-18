@@ -927,15 +927,25 @@ finally:
             fails.append('receipt_local_read_back' if not receipt_ok else 'receipt_drive_sha256'); ART_STATUS = 'FAIL'
     if DRIVE_DIR is not None and not drive_rc:
         try: os.remove(Path(DRIVE_DIR) / RECEIPT_PATH.name)
-        except Exception: pass
-    if not receipt_ok: ART_STATUS = 'FAIL'
+        except FileNotFoundError: pass
+        except Exception as e: print('RECEIPT_INVALIDATION_FAILED', Path(DRIVE_DIR) / RECEIPT_PATH.name, '%s: %s' % (type(e).__name__, e),
+                                     '| this Drive file is NOT a verified receipt; ignore it')
+    receipt_state = 'VERIFIED'
+    if not receipt_ok:                     # no unverified receipt (e.g. an earlier PASS one) may remain on local disk
+        ART_STATUS = 'FAIL'; receipt_state = 'REMOVED_UNVERIFIED'
+        for f_ in (RECEIPT_PATH, RECEIPT_PATH.with_suffix('.json.tmp')):
+            try:
+                if f_.exists(): os.remove(f_)
+            except Exception as e:
+                receipt_state = 'UNVERIFIED_FILE_COULD_NOT_BE_REMOVED'
+                print('RECEIPT_INVALIDATION_FAILED', f_, '%s: %s' % (type(e).__name__, e), '| this file is NOT a verified receipt; ignore it')
     print('TEST894_FINAL TECHNICAL_VERDICT=%s | STATUS=%s | ARTIFACT_STATUS=%s' % (verdict, R['status'], ART_STATUS))
     print('RECEIPT      :', RECEIPT_PATH, 'sha256=%s' % rc_sha, 'local_verified=%s' % receipt_ok,
-          'drive_verified=%s' % (drive_rc if DRIVE_DIR is not None else 'DRIVE_NOT_MOUNTED'))
+          'drive_verified=%s' % (drive_rc if DRIVE_DIR is not None else 'DRIVE_NOT_MOUNTED'), 'receipt_state=%s' % receipt_state)
     print('FINAL LOG    :', LOG, 'sha256=%s' % AG['final_log_sha256'], '| ARTIFACT FAILURES:', fails or 'none')
     try:
         from google.colab import files as _cfiles
-        for f_ in (ZIP_PATH, RECEIPT_PATH):
+        for f_ in (ZIP_PATH,) + ((RECEIPT_PATH,) if receipt_ok else ()):
             if f_.exists(): _cfiles.download(str(f_))
         print('Downloads started. If they did not arrive, run in a new cell: from google.colab import files; '
               'files.download(%r); files.download(%r)' % (str(ZIP_PATH), str(RECEIPT_PATH)))
