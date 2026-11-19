@@ -1,0 +1,188 @@
+ 
+================================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST898 NRBC — NATIVE RECURSIVE BELIEF CONSOLIDATION 20261119T090123Z | engine commit f1007d912773f3460536784ff80a215741bc97e9 | input TEST897 run 20261118T223234Z (NPDM_FAIL, unchanged)
+SCOPE: mechanism screen on 3 frozen TEST897 states. SUPPORT != learning / transfer / autonomy.
+================================================================================================================
+TOLERANCES {"P_expected": 30, "chunk_expected": 128, "parity_close_rel": 0.01} sha256 55e326abb919ec7205e9d6526c17e46bef31d55a8c25927a70f100e46900b6b3
+EXECUTED_CELL {"status": "CAPTURED", "identity_match": true, "src_file": "898.py", "checks": {"cell_captured": true, "commit_object_exists": true, "tree_single_entry_exact_path": true, "tree_entry_regular_file": true, "default_branch_publishes_same_blob": true, "recomputed_blob_equals_tree_blob": true, "raw_channel_equal": true, "executed_cell_equals_published_bytes": true}, "mode": "AUTOMATIC_FROM_PUBLISHED_DEFAULT_BRANCH", "sha256": "96ecda4aacc91f236c61e4d48546d098a607767474af936fb02037f064609246", "git_blob": "9ca7408a9a035a445cab334d7bec5cdea7fb8f53", "git_blob_with_final_newline": "5a1db069b183ea3cf134740257f38c655276356c", "lines": 2024, "file": "/content/TEST898_NRBC_20261119T090123Z/TEST898_NRBC_cell_source.py", "tree_entries": ["100644 blob 14be60ac98c1f6425e707f1967a6b688e5247e00\t898.py"], "published": {"repo": "ceceli33/titan-cognitive-core-v3", "default_branch_commit": "24801488eb1b3f7842ea9e758531a4ebb8a6184c", "commit": "24801488eb1b3f7842ea9e758531a4ebb8a6184c", "path": "898.py", "tree_mode": "100644", "tree_blob": "14be60ac98c1f6425e707f1967a6b688e5247e00", "blob_of_bytes": "14be60ac98c1f6425e707f1967a6b688e5247e00", "sha256": "98bfa4757e120d361b811160a50719095c3492bebf3243efd18f8dbd3a35254f", "bytes": 177672}, "canonicalization": "strip leading/trailing b'\\n' on both sides only; interior bytes compared exactly", "boundary_newlines": {"cell_leading": 1, "cell_trailing": 0, "published_leading": 0, "published_trailing": 1}, "failed_checks": []}
+ENV {"python": "3.13.16", "torch": "2.14.1+cu130", "cuda": "13.0", "transformers": "5.22.1", "accelerate": "1.16.0", "bitsandbytes": "0.50.2", "cuda_available": true, "device_count": 1, "gpu": "NVIDIA A100-SXM4-80GB", "gpu_bytes": 85094825984, "compute_capability": [8, 0], "transitive": {"tokenizers": "0.23.3", "huggingface-hub": "1.33.0", "safetensors": "0.8.0", "numpy": "2.4.6", "sentencepiece": "0.2.2", "regex": "2025.11.3"}}
+GATE ENV PASS 
+Mounted at /content/drive
+DRIVE_BACKUP_DIR /content/drive/MyDrive/TEST898_NRBC_20261119T090123Z
+GATE SOURCE PASS 
+GATE EXTRACT PASS 
+RUNTIME_DIFF_VS_TEST897 {"transitive": {}, "manifest": {"added": [], "removed": [], "changed": {}}}
+GATE GATE0_ARCHIVE PASS 
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+config.json: 100%
+
+ 663/663 [00:00<00:00, 78.1kB/s]
+tokenizer_config.json: 100%
+
+ 7.30k/7.30k [00:00<00:00, 896kB/s]
+vocab.json: 100%
+
+ 2.78M/2.78M [00:00<00:00, 58.3MB/s]
+merges.txt: 100%
+
+ 1.67M/1.67M [00:00<00:00, 56.5MB/s]
+tokenizer.json: 100%
+
+ 7.03M/7.03M [00:00<00:00, 106MB/s]
+model.safetensors.index.json: 100%
+
+ 79.0k/79.0k [00:00<00:00, 9.51MB/s]
+Download complete: 
+
+  125GB, 1.21GB/s  
+Reconstruction complete: 100%
+
+  145GB /  145GB,  831MB/s  
+Fetching 37 files: 100%
+
+ 37/37 [06:49<00:00, 10.36s/it]
+Loading weights: 100%
+
+ 963/963 [06:27<00:00,  3.31it/s]
+generation_config.json: 100%
+
+ 242/242 [00:00<00:00, 30.4kB/s]
+PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+GATE MODEL PASS 
+API877 OK {"transformers": "5.22.1", "torch": "2.14.1+cu130", "source_sha256": {"attn": "3d7ae1485294d0c8", "layer": "75d1d62e173e8c57", "model": "523115d50c78f82f", "lm": "2e49fae88f3208b4"}, "shape": [80, 8192, 64, 8, 128], "attn": "sdpa"}
+BASE_INTEGRITY {"sentinel": "8fef3b41bbb3562601c1f43d74569891a5db4451d7dde430baa1b31385e97b41", "weights877": "f7ae2ce27d9eda5391c236dbdc5c6c8c6b3a63e7eb6ebdefde8943ff5b988e8c", "integrity": {"sha256": "036bcdeddf9714b8f91a7eb5a967ba584338b1f96505b4e4de031bbbd49a4bd9", "param_tensors": 963, "nf4_quant_states": 560, "buffers": 2, "param_bytes": 40093433856, "seconds": 167.1}}
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE GATE1_ENGINE PASS 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L1_REAL valid tokens 134 | mount ['T896_L1_00_MODEL_INTENT_t1.pt', 'T896_L1_01_MODEL_PREDICTION_t1.pt', 'T896_L1_02_OBSERVED_OUTCOME_t1.pt', 'T896_L1_03_MODEL_INTENT_t2.pt', 'T896_L1_04_MODEL_PREDICTION_t2.pt', 'T896_L1_05_OBSERVED_OUTCOME_t2.pt']
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L2_REAL valid tokens 101 | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_01_MODEL_PREDICTION_t1.pt', 'T896_L2_02_OBSERVED_OUTCOME_t1.pt']
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L3_REAL valid tokens 100 | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_01_MODEL_PREDICTION_t1.pt', 'T896_L3_02_OBSERVED_OUTCOME_t1.pt']
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L1_FD valid tokens 99 | mount ['T896_L1_00_MODEL_INTENT_t1.pt', 'T896_L1_01_MODEL_PREDICTION_t1.pt', 'T896_L1_02_OBSERVED_OUTCOME_t1.pt', 'T896_L1_03_MODEL_INTENT_t2.pt', 'T896_L1_04_MODEL_PREDICTION_t2.pt', 'T896_L1_CTRL_FACTUAL_DELETED_05.pt']
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L2_PA valid tokens 97 | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_CTRL_PLACEBO_PRED_01.pt', 'T896_L2_02_OBSERVED_OUTCOME_t1.pt']
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L3_PA valid tokens 103 | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_CTRL_PLACEBO_PRED_01.pt', 'T896_L3_02_OBSERVED_OUTCOME_t1.pt']
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L2_GCF valid tokens 119 | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_CTRL_PLACEBO_PRED_01.pt', 'NEW:L2_CF_GOAL_OUTCOME_02']
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_FORGE_SHAPE 
+CONSOLIDATION L3_GCF valid tokens 119 | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_CTRL_PLACEBO_PRED_01.pt', 'NEW:L3_CF_GOAL_OUTCOME_02']
+GATE GATE2_CONSOLIDATION PASS | operational loop completed: planned 8, run 8, valid 8, invalid 0, not_run 0, forged+reloaded 8
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A1 REAL L1 -> ACQUIRE FRJVLDCZZDLJK PREDICTION UNKNOWN | mount ['T896_L1_00_MODEL_INTENT_t1.pt', 'T896_L1_02_OBSERVED_OUTCOME_t1.pt', 'T896_L1_03_MODEL_INTENT_t2.pt', 'T896_L1_05_OBSERVED_OUTCOME_t2.pt', 'BELIEF:L1_BELIEF_L1_REAL'] | tokens 232
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A2 REAL L2 -> ACQUIRE ZSRWWMFBWPJB PREDICTION UNKNOWN | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_02_OBSERVED_OUTCOME_t1.pt', 'BELIEF:L2_BELIEF_L2_REAL'] | tokens 165
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A3 REAL L3 -> ACQUIRE XMGTVVSMZNF PREDICTION UNKNOWN | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_02_OBSERVED_OUTCOME_t1.pt', 'BELIEF:L3_BELIEF_L3_REAL'] | tokens 164
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A4 SHAM L1 -> ACQUIRE QBDGFXVPDHL PREDICTION WLCQRTSLXJ | mount ['T896_L1_00_MODEL_INTENT_t1.pt', 'T896_L1_02_OBSERVED_OUTCOME_t1.pt', 'T896_L1_03_MODEL_INTENT_t2.pt', 'T896_L1_05_OBSERVED_OUTCOME_t2.pt', 'BELIEF:L1_BELIEF_L1_FD'] | tokens 197
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A5 SHAM L2 -> ACQUIRE RZBBGDWWXN PREDICTION CQTZRPXXQSW | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_02_OBSERVED_OUTCOME_t1.pt', 'BELIEF:L2_BELIEF_L2_GCF'] | tokens 183
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A6 SHAM L3 -> ACQUIRE PKCCWRJZPHGS PREDICTION VKTRVXDRDDSH | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_02_OBSERVED_OUTCOME_t1.pt', 'BELIEF:L3_BELIEF_L3_GCF'] | tokens 183
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A7 FILTER_ONLY_MATCHED_IO L1 -> ACT QBDGFXVPDHL PREDICTION WLCQRTSLXJ | mount ['T896_L1_00_MODEL_INTENT_t1.pt', 'T896_L1_02_OBSERVED_OUTCOME_t1.pt', 'T896_L1_03_MODEL_INTENT_t2.pt', 'T896_L1_05_OBSERVED_OUTCOME_t2.pt'] | tokens 98
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A8 FILTER_ONLY_MATCHED_IO L2 -> ACQUIRE ZSRWWMFBWPJB PREDICTION JGHDDXRDWSRG | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_02_OBSERVED_OUTCOME_t1.pt'] | tokens 64
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A9 FILTER_ONLY_MATCHED_IO L3 -> ACQUIRE PKCCWRJZPHGS PREDICTION CZJPSVHNPF | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_02_OBSERVED_OUTCOME_t1.pt'] | tokens 64
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A10 FD L1 -> ACQUIRE QBDGFXVPDHL PREDICTION LLRMKGCXHTJ | mount ['T896_L1_00_MODEL_INTENT_t1.pt', 'T896_L1_02_OBSERVED_OUTCOME_t1.pt', 'T896_L1_03_MODEL_INTENT_t2.pt', 'T896_L1_CTRL_FACTUAL_DELETED_05.pt', 'BELIEF:L1_BELIEF_L1_FD'] | tokens 197
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A11 PA L2 -> ACQUIRE ZSRWWMFBWPJB PREDICTION UNKNOWN | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_02_OBSERVED_OUTCOME_t1.pt', 'BELIEF:L2_BELIEF_L2_PA'] | tokens 161
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A12 PA L3 -> ACQUIRE XMGTVVSMZNF PREDICTION UNKNOWN | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_02_OBSERVED_OUTCOME_t1.pt', 'BELIEF:L3_BELIEF_L3_PA'] | tokens 167
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A13 GCF L2 -> ACT RZBBGDWWXN PREDICTION CQTZRPXXQSW | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'NEW:L2_CF_GOAL_OUTCOME_02', 'BELIEF:L2_BELIEF_L2_GCF'] | tokens 183
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A14 GCF L3 -> ACT PKCCWRJZPHGS PREDICTION VKTRVXDRDDSH | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'NEW:L3_CF_GOAL_OUTCOME_02', 'BELIEF:L3_BELIEF_L3_GCF'] | tokens 183
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A15 FD_FILTER_ONLY L1 -> ACQUIRE FRJVLDCZZDLJK PREDICTION UNKNOWN | mount ['T896_L1_00_MODEL_INTENT_t1.pt', 'T896_L1_02_OBSERVED_OUTCOME_t1.pt', 'T896_L1_03_MODEL_INTENT_t2.pt', 'T896_L1_CTRL_FACTUAL_DELETED_05.pt'] | tokens 98
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A16 PA_FILTER_ONLY L2 -> ACQUIRE ZSRWWMFBWPJB PREDICTION JGHDDXRDWSRG | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'T896_L2_02_OBSERVED_OUTCOME_t1.pt'] | tokens 64
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A17 PA_FILTER_ONLY L3 -> ACQUIRE PKCCWRJZPHGS PREDICTION CZJPSVHNPF | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'T896_L3_02_OBSERVED_OUTCOME_t1.pt'] | tokens 64
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A18 GCF_FILTER_ONLY L2 -> ACT RZBBGDWWXN PREDICTION CQTZRPXXQSW | mount ['T896_L2_00_MODEL_INTENT_t1.pt', 'NEW:L2_CF_GOAL_OUTCOME_02'] | tokens 64
+PASS NATIVE_FORGE_SHAPE 
+PASS NATIVE_INIT_80_LAYERS 
+READOUT A19 GCF_FILTER_ONLY L3 -> ACT PKCCWRJZPHGS PREDICTION VKTRVXDRDDSH | mount ['T896_L3_00_MODEL_INTENT_t1.pt', 'NEW:L3_CF_GOAL_OUTCOME_02'] | tokens 64
+GATE GATE3_READOUT PASS | operational loop completed: planned 19, run 19 (valid 13, invalid decision 6), NOT_RUN (B_t invalid) 0
+GATE GATE4_OFFLINE_EVALUATION NRBC_SCREEN_FAIL | FAILED: c1_L1_real_and_fd_clean, c2_L2_L3_incremental_over_filter, c4a_system_level_outcome_tracking, c4b_tracking_attributable_to_b (c3 UNTESTABLE: SHAM invalid or geometry unequal)
+STATE L1 {"labels": ["REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL", "REAL_WORSE_THAN_FILTER", "B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL", "CONTENT_COMPARISON_INCONCLUSIVE"], "real_ok": false, "filter_ok": true, "incremental": false, "b_real_core_correct": true, "content_testable": false, "sham_ok": false, "sham_reproduces_real": false, "raw_content_sensitivity": false, "correctness_specific": false, "fd_ok": true, "fd_filter_ok": false, "fd_b_changes_decision": true}
+STATE L2 {"labels": ["REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL", "B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL", "CONTENT_COMPARISON_INCONCLUSIVE"], "real_ok": false, "filter_ok": false, "incremental": false, "b_real_core_correct": true, "content_testable": false, "sham_ok": false, "sham_reproduces_real": false, "raw_content_sensitivity": false, "correctness_specific": false, "pa_ok": false, "gcf_ok": true, "pa_filter_ok": false, "gcf_filter_ok": true, "cf_track": false, "cf_track_without_b": false, "cf_track_attributable_to_b": false, "gcf_b_necessary": false, "pa_b_necessary": false}
+STATE L3 {"labels": ["REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL", "B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL", "CONTENT_COMPARISON_INCONCLUSIVE"], "real_ok": false, "filter_ok": false, "incremental": false, "b_real_core_correct": true, "content_testable": false, "sham_ok": false, "sham_reproduces_real": false, "raw_content_sensitivity": false, "correctness_specific": false, "pa_ok": false, "gcf_ok": true, "pa_filter_ok": false, "gcf_filter_ok": true, "cf_track": false, "cf_track_without_b": false, "cf_track_attributable_to_b": false, "gcf_b_necessary": false, "pa_b_necessary": false}
+BELIEF L1_REAL {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": true, "all_fields_correct": true}
+BELIEF L2_REAL {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": false, "decision_relevance_correct": false, "all_fields_correct": false}
+BELIEF L3_REAL {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": false, "decision_relevance_correct": false, "all_fields_correct": false}
+BELIEF L1_FD {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": false, "all_fields_correct": false}
+BELIEF L2_PA {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": false, "all_fields_correct": false}
+BELIEF L3_PA {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": false, "all_fields_correct": false}
+BELIEF L2_GCF {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": true, "all_fields_correct": true}
+BELIEF L3_GCF {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": true, "all_fields_correct": true}
+GATE GATE0_ARCHIVE_END PASS 
+GATE P1_PHYSICAL PASS 
+GATE P7_INTEGRITY PASS 
+ANSWER Q1_archive_and_engine_verified {"GATE0_ARCHIVE": "PASS", "GATE1_ENGINE": "PASS", "GATE0_ARCHIVE_END": "PASS"}
+ANSWER Q2_generation_counts {"GATE2": {"planned": 8, "run": 8, "valid": 8, "invalid": 0, "not_run": 0, "forged_and_reloaded": 8, "invalid_branches": {}, "ok": true}, "GATE3": {"planned": 19, "run": 19, "not_run_b_invalid": 0, "invalid_decision": 6, "b_mounted_planned": 11, "b_less_planned": 8, "valid_decision": 13, "accounted": true, "same_mount_repeat_raw_equal": {"L2": true, "L3": true}, "ok": true}}
+ANSWER Q3_belief_quality_by_dimension {"L1_REAL": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": true, "all_fields_correct": true}, "L2_REAL": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": false, "decision_relevance_correct": false, "all_fields_correct": false}, "L3_REAL": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": false, "decision_relevance_correct": false, "all_fields_correct": false}, "L1_FD": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": false, "all_fields_correct": false}, "L2_PA": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": false, "all_fields_correct": false}, "L3_PA": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": false, "all_fields_correct": false}, "L2_GCF": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": true, "all_fields_correct": true}, "L3_GCF": {"syntax_valid": true, "core_correct": true, "reconciliation_correct": true, "goal_correct": true, "decision_relevance_correct": true, "all_fields_correct": true}}
+ANSWER Q4_real_vs_same_runtime_filter {"L1": {"real_ok": false, "filter_ok": true, "incremental": false}, "L2": {"real_ok": false, "filter_ok": false, "incremental": false}, "L3": {"real_ok": false, "filter_ok": false, "incremental": false}}
+ANSWER Q5_raw_content_sensitivity {"L1": false, "L2": false, "L3": false}
+ANSWER Q6_correctness_specific_useful_correction {"L1": false, "L2": false, "L3": false}
+ANSWER Q7_outcome_tracking_system_vs_B_attributable {"system_level": {"L2": false, "L3": false}, "attributable_to_B": {"L2": false, "L3": false}}
+ANSWER Q8_fd {"fd_clean_with_B": true, "fd_filter_optimal_without_B": false, "B_changes_fd_decision": true}
+ANSWER Q9_TEST897_history "COMPARABLE"
+DECISION {"VERDICT": "NRBC_SCREEN_FAIL", "subcodes": ["FAILED: c1_L1_real_and_fd_clean, c2_L2_L3_incremental_over_filter, c4a_system_level_outcome_tracking, c4b_tracking_attributable_to_b (c3 UNTESTABLE: SHAM invalid or geometry unequal)", "L1:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|REAL_WORSE_THAN_FILTER|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE", "L2:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE", "L3:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE"], "conditions": {"c1_L1_real_and_fd_clean": false, "c2_L2_L3_incremental_over_filter": false, "c3_L2_L3_correctness_specific": null, "c4a_system_level_outcome_tracking": false, "c4b_tracking_attributable_to_b": false, "c5_b_real_core_correct": true}}
+================================================================================================================
+ENV                            PASS                 
+SOURCE                         PASS                 
+EXTRACT                        PASS                 
+GATE0_ARCHIVE                  PASS                 
+MODEL                          PASS                 
+GATE1_ENGINE                   PASS                 
+GATE2_CONSOLIDATION            PASS                 operational loop completed: planned 8, run 8, valid 8, invalid 0, not_run 0, forged+reloaded 8
+GATE3_READOUT                  PASS                 operational loop completed: planned 19, run 19 (valid 13, invalid decision 6), NOT_RUN (B_t invalid) 0
+GATE4_OFFLINE_EVALUATION       NRBC_SCREEN_FAIL     FAILED: c1_L1_real_and_fd_clean, c2_L2_L3_incremental_over_filter, c4a_system_level_outcome_tracking, c4b_tracking_attributable_to_b (c3 UNTESTABLE: SHAM invalid or geometry unequal)
+GATE0_ARCHIVE_END              PASS                 
+P1_PHYSICAL                    PASS                 
+P7_INTEGRITY                   PASS                 
+TEST898_NRBC_SUMMARY {"commit": "f1007d912773f3460536784ff80a215741bc97e9", "elapsed_s": 1480.4, "gates": {"ENV": "PASS", "EXTRACT": "PASS", "GATE0_ARCHIVE": "PASS", "GATE0_ARCHIVE_END": "PASS", "GATE1_ENGINE": "PASS", "GATE2_CONSOLIDATION": "PASS", "GATE3_READOUT": "PASS", "GATE4_OFFLINE_EVALUATION": "NRBC_SCREEN_FAIL", "MODEL": "PASS", "P1_PHYSICAL": "PASS", "P7_INTEGRITY": "PASS", "SOURCE": "PASS"}, "model_revision": "495f39366efef23836d0cfae4fbe635880d2be31", "run_id": "20261119T090123Z", "scope": "TEST898 NRBC frozen-state screen; NRBC_SCREEN_SUPPORT is never a scientific PASS", "status": "COMPLETE", "subcodes": ["FAILED: c1_L1_real_and_fd_clean, c2_L2_L3_incremental_over_filter, c4a_system_level_outcome_tracking, c4b_tracking_attributable_to_b (c3 UNTESTABLE: SHAM invalid or geometry unequal)", "L1:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|REAL_WORSE_THAN_FILTER|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE", "L2:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE", "L3:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE"], "technical_status": "PASS", "verdict": "NRBC_SCREEN_FAIL"}
+LOCAL FILES  : /content/TEST898_NRBC_20261119T090123Z | /content/TEST898_NRBC_SONUC_20261119T090123Z.zip | /content/TEST898_NRBC_SONUC_20261119T090123Z_RECEIPT.json
+DRIVE        : /content/drive/MyDrive/TEST898_NRBC_20261119T090123Z
+TEST898_NRBC_LOG_END SCIENTIFIC_VERDICT=NRBC_SCREEN_FAIL | STATUS=COMPLETE | ZIP_CORE=True | CELL_IDENTITY_MATCH=True | final ARTIFACT_STATUS: receipt + console
+TEST898_NRBC_FINAL FINAL_VERDICT=NRBC_SCREEN_FAIL | SCIENTIFIC_VERDICT=NRBC_SCREEN_FAIL | SUBCODES=['FAILED: c1_L1_real_and_fd_clean, c2_L2_L3_incremental_over_filter, c4a_system_level_outcome_tracking, c4b_tracking_attributable_to_b (c3 UNTESTABLE: SHAM invalid or geometry unequal)', 'L1:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|REAL_WORSE_THAN_FILTER|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE', 'L2:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE', 'L3:REAL_ACTION_INVALID_OR_STOP_POLICY_FAIL|B_CORE_CORRECT_ACTION_WRONG_POLICY_READOUT_FAIL|CONTENT_COMPARISON_INCONCLUSIVE'] | TECHNICAL_STATUS=PASS | STATUS=COMPLETE | ARTIFACT_STATUS=PASS
+RECEIPT      : /content/TEST898_NRBC_SONUC_20261119T090123Z_RECEIPT.json sha256=64e070b60ed89003817ba4deaddaba0a90963340ef1391d86529a6c8610694b6 local_verified=True drive_verified=True receipt_state=VERIFIED
+FINAL LOG    : /content/TEST898_NRBC_20261119T090123Z/TEST898_NRBC.log sha256=65315bf7b8076f2b62f3dc1ba6ff9e731a4137a3dbd7152554d12f37f66c0e17 | ARTIFACT FAILURES: none
+
+Automatic downloads started; the same files are kept under /content and (if mounted) in /content/drive/MyDrive/TEST898_NRBC_20261119T090123Z
+
+
+================================================================================================================
