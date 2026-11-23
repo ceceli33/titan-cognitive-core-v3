@@ -1,0 +1,84 @@
+ ================================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST908 — native information continuity, event-sourced availability, model-selected two-source working set | run 20261123T101210Z | GPU CANDIDATE, NOT GPU-VERIFIED
+GATE GATE_SOURCES_908 PASS 
+GATE GATE_EXECUTED_SOURCE PASS 
+GATE GATE_GPU_PREFLIGHT_906 PASS 
+GATE GATE_GPU_PREFLIGHT_908 PASS 
+GATE GATE_RUNTIME_PINS PASS 
+GATE GATE_ENV PASS 
+GATE GATE_VRAM_FREE PASS 
+Mounted at /content/drive
+GATE GATE_DRIVE_PRESENT PASS 
+GATE GATE_DRIVE PASS 
+GATE GATE_ARCHIVE_906 PASS 
+GATE GATE_REF906_908 PASS 
+GATE GATE_REF907A_908 PASS 
+GATE GATE_SOURCE_EXTRACT PASS 
+GATE GATE_ARCHIVE_TENSORS_906 PASS 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 81.3kB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 124MB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 827kB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.70MB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 75.6MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 70.1MB/s]GATE GATE_TOKENIZER_PRE_MODEL PASS 
+GATE GATE_TOKENIZER_908 PASS 
+GATE GATE_DISK_906 PASS 
+GATE GATE_MANIFEST_908 PASS 
+Download complete:   125GB, 1.25GB/s  Reconstruction complete: 100%  145GB /  145GB,  725MB/s  Fetching 37 files: 100% 37/37 [06:48<00:00, 10.36s/it]Loading weights: 100% 963/963 [06:22<00:00,  3.35it/s]generation_config.json: 100% 242/242 [00:00<00:00, 32.5kB/s]PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+GATE MODEL PASS 
+PASS NATIVE_FORGE_SHAPE 
+GATE GATE_ENGINE_906 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE GATE_WS_ABI_908 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/X/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/X/PREFIX/01           W=()               -> READ_ADD   'READ_ADD(MZ4)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/X/AVAIL/MINUS         W=()               -> READ_ADD   'READ_ADD(MZ4)'
+AVAIL X: A+ READ_ADD | A- READ_ADD | position_controlled True
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/X/PREFIX/02           W=MZ4              -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/X/PREFIX/03           W=MZ4,QK7          -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PREFIX X: 4 decisions | end OUT_OF_SCOPE_SECOND_ACQUIRE | W ['MZ4', 'QK7'] | A- READ_ADD(MZ4)
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/Y/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/Y/PREFIX/01           W=()               -> READ_ADD   'READ_ADD(MZ4)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/Y/AVAIL/MINUS         W=()               -> READ_ADD   'READ_ADD(MZ4)'
+AVAIL Y: A+ READ_ADD | A- READ_ADD | position_controlled True
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/Y/PREFIX/02           W=MZ4              -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T908/Y/PREFIX/03           W=MZ4,QK7          -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PREFIX Y: 4 decisions | end OUT_OF_SCOPE_SECOND_ACQUIRE | W ['MZ4', 'QK7'] | A- READ_ADD(MZ4)
+GATE GATE_PREFIX_908 PASS 
+GATE GATE_AVAIL_908 PASS 
+ARMS NOT RUN (pre-registered precondition): roles {'contra': 'X', 'confirm': 'Y'}, forks {'X': False, 'Y': False}
+GATE GATE_ARMS_908 PASS 
+GATE GATE_FULLREF_908 PASS 
+GATE GATE_END_908 PASS 
+TEST908 VERDICT: FORK_NOT_REACHED[X: OUT_OF_SCOPE_SECOND_ACQUIRE; Y: OUT_OF_SCOPE_SECOND_ACQUIRE] (cue continuity + availability + one-step two-source native readout only; GPU CANDIDATE, NOT GPU-VERIFIED)
+PREFIX X: calls 4 | ACQUIRE True EXPECT=1 | fork False | end OUT_OF_SCOPE_SECOND_ACQUIRE
+PREFIX Y: calls 4 | ACQUIRE True EXPECT=0 | fork False | end OUT_OF_SCOPE_SECOND_ACQUIRE
+CUE X: in prediction input True | after PRED seal False | at F False | live decisions 1
+CUE Y: in prediction input True | after PRED seal False | at F False | live decisions 1
+AVAIL X (diagnostic, not a verdict): NO_ONE_STEP_ACTION_CHANGE_UNDER_CONSUMED_TO_UNSTATED[both READ_ADD]
+AVAIL Y (diagnostic, not a verdict): NO_ONE_STEP_ACTION_CHANGE_UNDER_CONSUMED_TO_UNSTATED[both READ_ADD]
+ROLES (from native EXPECT): {'contra': 'X', 'confirm': 'Y'} | EXCHANGEABLE: None
+counts: {'greedy_sequences': 10, 'generated_ids': 86, 'avail_diagnostics': 2} | technical True | evaluable {'ok': False, 'why': 'fork'}
+TEST908 ARTIFACTS {"artifact_status": "PASS", "drive_receipt": "EQUAL", "zip": "/content/TEST908_SONUC_20261123T101210Z.zip"}
+TEST908 DURUM: TAMAMLANDI | EXIT=0 | TECHNICAL=PASS | VERDICT=FORK_NOT_REACHED[X: OUT_OF_SCOPE_SECOND_ACQUIRE; Y: OUT_OF_SCOPE_SECOND_ACQUIRE] | GREEDY=10 | DRIVE=PASS | FIRST_GATE=None | RESULTS=/content/TEST908_20261123T101210Z/TEST908_results.json
