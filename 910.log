@@ -1,0 +1,97 @@
+ ================================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST910 — native information continuity, event-sourced availability, model-selected two-source working set | run 20261123T200042Z | TEST910 GPU CANDIDATE, NOT GPU-VERIFIED; PBOC/LEGACY DIAGNOSTIC CODE NOT RUN ON A100
+GATE GATE_SOURCES_910 PASS 
+GATE GATE_EXECUTED_SOURCE PASS 
+GATE GATE_GPU_PREFLIGHT_906 PASS 
+GATE GATE_GPU_PREFLIGHT_910 PASS 
+GATE GATE_RUNTIME_PINS PASS 
+GATE GATE_ENV PASS 
+GATE GATE_VRAM_FREE PASS 
+Mounted at /content/drive
+GATE GATE_DRIVE_PRESENT PASS 
+GATE GATE_DRIVE PASS 
+GATE GATE_ARCHIVE_906 PASS 
+GATE GATE_REF906_910 PASS 
+GATE GATE_REF907A_910 PASS 
+GATE GATE_REF908_910 PASS 
+GATE GATE_SOURCE_EXTRACT PASS 
+GATE GATE_ARCHIVE_TENSORS_906 PASS 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 76.4kB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 107MB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 854kB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.93MB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 86.6MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 66.8MB/s]GATE GATE_TOKENIZER_PRE_MODEL PASS 
+GATE GATE_TOKENIZER_910 PASS 
+GATE GATE_DISK_906 PASS 
+GATE GATE_MANIFEST_910 PASS 
+Download complete:   125GB, 1.36GB/s  Reconstruction complete: 100%  145GB /  145GB,  578MB/s  Fetching 37 files: 100% 37/37 [06:49<00:00,  9.13s/it]Loading weights: 100% 963/963 [06:20<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 32.7kB/s]PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+GATE MODEL PASS 
+PASS NATIVE_FORGE_SHAPE 
+GATE GATE_ENGINE_906 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE GATE_WS_ABI_910 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/LEGACY/PRED_X         W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/LEGACY/PRED_Y         W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/LEGACY/PRED_SHAM      W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/LEGACY/PRED_MASK      W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+LEGACY 908 matched q physical: PRED_SWAP_ACTION_EFFECT_NOT_YET_TASK_SUCCESS
+GATE GATE_LEGACY_910 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/X/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/X/PBOC/00             W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=1,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/X/PREFIX/01           W=()               -> READ_ADD   'READ_ADD(MZ4)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/X/PREFIX/02           W=MZ4              -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/X/PREFIX/03           W=MZ4,QK7          -> REVISE     'REVISE(TB2,CITES[QK7,MZ4],"Switch A does not work, as PROBE_A resulted in 0, contradicting'
+PREFIX X: 4 decisions | end OUT_OF_SCOPE_REVISE_BEFORE_FORK | W ['MZ4', 'QK7'] | A- None
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/Y/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/Y/PBOC/00             W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=0,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/Y/PREFIX/01           W=()               -> READ_ADD   'READ_ADD(MZ4)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/Y/PREFIX/02           W=MZ4              -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T910/Y/PREFIX/03           W=MZ4,QK7          -> REVISE     'REVISE(TB2,CITES[QK7,MZ4],"Switch A does not work, as predicted by QK7 and observed in MZ4'
+PREFIX Y: 4 decisions | end OUT_OF_SCOPE_REVISE_BEFORE_FORK | W ['MZ4', 'QK7'] | A- None
+GATE GATE_PREFIX_910 PASS 
+GATE GATE_AVAIL_910 PASS 
+ARMS NOT RUN: roles {'contra': 'X', 'confirm': 'Y'} forks {'X': False, 'Y': False} PBOC geometry {'status': 'MATCH', 'X_n': 32, 'Y_n': 32, 'X_pos0': 30, 'Y_pos0': 30}
+GATE GATE_ARMS_910 PASS 
+GATE GATE_ADDRESS_910 PASS 
+GATE GATE_FULLREF_910 PASS 
+GATE GATE_END_910 PASS 
+TEST910 VERDICT: PBOC_UNREACHABLE[X: OUT_OF_SCOPE_REVISE_BEFORE_FORK; Y: OUT_OF_SCOPE_REVISE_BEFORE_FORK] (cue continuity + availability + one-step two-source native readout only; TEST910 GPU CANDIDATE, NOT GPU-VERIFIED; PBOC/LEGACY DIAGNOSTIC CODE NOT RUN ON A100)
+PREFIX X: calls 4 | ACQUIRE True EXPECT=1 | fork False | end OUT_OF_SCOPE_REVISE_BEFORE_FORK
+PREFIX Y: calls 4 | ACQUIRE True EXPECT=0 | fork False | end OUT_OF_SCOPE_REVISE_BEFORE_FORK
+CUE X: in prediction input True | after PRED seal False | at F False | live decisions 1
+CUE Y: in prediction input True | after PRED seal False | at F False | live decisions 1
+AVAIL X (diagnostic, not a verdict): NOT_REACHED
+AVAIL Y (diagnostic, not a verdict): NOT_REACHED
+ROLES (from native EXPECT): {'contra': 'X', 'confirm': 'Y'} | EXCHANGEABLE: None
+counts: {'greedy_sequences': 14, 'generated_ids': 234, 'pboc_compiles': 2, 'legacy_diagnostic': 4, 'addressability_diagnostic': 0, 'avail_diagnostics': 0} | technical True | evaluable {'ok': False, 'why': 'native observation addressing did not reach fork'}
+TEST910 ARTIFACTS {"artifact_status": "PASS", "drive_receipt": "EQUAL", "zip": "/content/TEST910_SONUC_20261123T200042Z.zip"}
+TEST910 DURUM: TAMAMLANDI | EXIT=0 | TECHNICAL=PASS | VERDICT=PBOC_UNREACHABLE[X: OUT_OF_SCOPE_REVISE_BEFORE_FORK; Y: OUT_OF_SCOPE_REVISE_BEFORE_FORK] | GREEDY=14 | DRIVE=PASS | FIRST_GATE=None | RESULTS=/content/TEST910_20261123T200042Z/TEST910_results.json
