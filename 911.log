@@ -1,0 +1,95 @@
+ ================================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST911 — native information continuity, event-sourced availability, model-selected two-source working set | run 20261123T211403Z | TEST911 GPU CANDIDATE, NOT GPU-VERIFIED; PBOC/LEGACY DIAGNOSTIC CODE NOT RUN ON A100
+GATE GATE_SOURCES_911 PASS 
+GATE GATE_EXECUTED_SOURCE PASS 
+GATE GATE_GPU_PREFLIGHT_906 PASS 
+GATE GATE_GPU_PREFLIGHT_911 PASS 
+GATE GATE_RUNTIME_PINS PASS 
+GATE GATE_ENV PASS 
+GATE GATE_VRAM_FREE PASS 
+Mounted at /content/drive
+GATE GATE_DRIVE_PRESENT PASS 
+GATE GATE_DRIVE PASS 
+GATE GATE_ARCHIVE_906 PASS 
+GATE GATE_REF906_911 PASS 
+GATE GATE_REF907A_911 PASS 
+GATE GATE_REF908_911 PASS 
+GATE GATE_SOURCE_EXTRACT PASS 
+GATE GATE_ARCHIVE_TENSORS_906 PASS 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 79.7kB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 133MB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 928kB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 8.74MB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 90.4MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 68.4MB/s]GATE GATE_TOKENIZER_PRE_MODEL PASS 
+GATE GATE_TOKENIZER_911 PASS 
+GATE GATE_DISK_906 PASS 
+GATE GATE_MANIFEST_911 PASS 
+Download complete:   125GB, 1.56GB/s  Reconstruction complete: 100%  145GB /  145GB,  656MB/s  Fetching 37 files: 100% 37/37 [06:52<00:00,  9.44s/it]Loading weights: 100% 963/963 [06:22<00:00,  3.28it/s]generation_config.json: 100% 242/242 [00:00<00:00, 31.9kB/s]PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+GATE MODEL PASS 
+PASS NATIVE_FORGE_SHAPE 
+GATE GATE_ENGINE_906 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE GATE_WS_ABI_911 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/LEGACY/PRED_X         W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/LEGACY/PRED_Y         W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/LEGACY/PRED_SHAM      W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/LEGACY/PRED_MASK      W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+LEGACY 908 matched q physical: PRED_SWAP_ACTION_EFFECT_NOT_YET_TASK_SUCCESS
+GATE GATE_LEGACY_911 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/X/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/X/PBOC/00             W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=1,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/X/PREFIX/01           W=()               -> READ_ADD   'READ_ADD(TB2)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/X/PREFIX/02           W=TB2              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PREFIX X: 3 decisions | end OUT_OF_SCOPE_SECOND_ACQUIRE | W ['TB2'] | A- None
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/Y/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/Y/PBOC/00             W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=0,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/Y/PREFIX/01           W=()               -> READ_ADD   'READ_ADD(TB2)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T911/Y/PREFIX/02           W=TB2              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PREFIX Y: 3 decisions | end OUT_OF_SCOPE_SECOND_ACQUIRE | W ['TB2'] | A- None
+GATE GATE_PREFIX_911 PASS 
+GATE GATE_AVAIL_911 PASS 
+ARMS NOT RUN: roles {'contra': 'X', 'confirm': 'Y'} forks {'X': False, 'Y': False} PBOC geometry {'status': 'MATCH', 'X_n': 32, 'Y_n': 32, 'X_pos0': 30, 'Y_pos0': 30}
+GATE GATE_ARMS_911 PASS 
+GATE GATE_ADDRESS_911 PASS 
+GATE GATE_FULLREF_911 PASS 
+GATE GATE_END_911 PASS 
+TEST911 VERDICT: PBOC_UNREACHABLE[X: OUT_OF_SCOPE_SECOND_ACQUIRE; Y: OUT_OF_SCOPE_SECOND_ACQUIRE] (cue continuity + availability + one-step two-source native readout only; TEST911 GPU CANDIDATE, NOT GPU-VERIFIED; PBOC/LEGACY DIAGNOSTIC CODE NOT RUN ON A100)
+FIRST POST-ACQUIRE X: op=READ_ADD handle=TB2 role=decoy (910: READ_ADD MZ4 decoy)
+PREFIX X: calls 3 | ACQUIRE True EXPECT=1 | fork False | end OUT_OF_SCOPE_SECOND_ACQUIRE
+FIRST POST-ACQUIRE Y: op=READ_ADD handle=TB2 role=decoy (910: READ_ADD MZ4 decoy)
+PREFIX Y: calls 3 | ACQUIRE True EXPECT=0 | fork False | end OUT_OF_SCOPE_SECOND_ACQUIRE
+CUE X: in prediction input True | after PRED seal False | at F False | live decisions 1
+CUE Y: in prediction input True | after PRED seal False | at F False | live decisions 1
+AVAIL X (diagnostic, not a verdict): NOT_REACHED
+AVAIL Y (diagnostic, not a verdict): NOT_REACHED
+ROLES (from native EXPECT): {'contra': 'X', 'confirm': 'Y'} | EXCHANGEABLE: None
+counts: {'greedy_sequences': 12, 'generated_ids': 168, 'pboc_compiles': 2, 'legacy_diagnostic': 4, 'addressability_diagnostic': 0, 'avail_diagnostics': 0} | technical True | evaluable {'ok': False, 'why': 'native observation addressing did not reach fork'}
+TEST911 ARTIFACTS {"artifact_status": "PASS", "drive_receipt": "EQUAL", "zip": "/content/TEST911_SONUC_20261123T211403Z.zip"}
+TEST911 DURUM: TAMAMLANDI | EXIT=0 | TECHNICAL=PASS | VERDICT=PBOC_UNREACHABLE[X: OUT_OF_SCOPE_SECOND_ACQUIRE; Y: OUT_OF_SCOPE_SECOND_ACQUIRE] | GREEDY=12 | DRIVE=PASS | FIRST_GATE=None | RESULTS=/content/TEST911_20261123T211403Z/TEST911_results.json
