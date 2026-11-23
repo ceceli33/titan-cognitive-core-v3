@@ -1,0 +1,81 @@
+ ================================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST909 — native information continuity, event-sourced availability, model-selected two-source working set | run 20261123T190736Z | TEST909 GPU CANDIDATE, NOT GPU-VERIFIED; PBOC/LEGACY DIAGNOSTIC CODE NOT RUN ON A100
+GATE GATE_SOURCES_909 PASS 
+GATE GATE_EXECUTED_SOURCE PASS 
+GATE GATE_GPU_PREFLIGHT_906 PASS 
+GATE GATE_GPU_PREFLIGHT_909 PASS 
+GATE GATE_RUNTIME_PINS PASS 
+GATE GATE_ENV PASS 
+GATE GATE_VRAM_FREE PASS 
+Mounted at /content/drive
+GATE GATE_DRIVE_PRESENT PASS 
+GATE GATE_DRIVE PASS 
+GATE GATE_ARCHIVE_906 PASS 
+GATE GATE_REF906_909 PASS 
+GATE GATE_REF907A_909 PASS 
+GATE GATE_REF908_909 PASS 
+GATE GATE_SOURCE_EXTRACT PASS 
+GATE GATE_ARCHIVE_TENSORS_906 PASS 
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100% 663/663 [00:00<00:00, 81.1kB/s]tokenizer.json: 100% 7.03M/7.03M [00:00<00:00, 128MB/s]tokenizer_config.json: 100% 7.30k/7.30k [00:00<00:00, 841kB/s]model.safetensors.index.json: 100% 79.0k/79.0k [00:00<00:00, 9.69MB/s]vocab.json: 100% 2.78M/2.78M [00:00<00:00, 89.0MB/s]merges.txt: 100% 1.67M/1.67M [00:00<00:00, 44.3MB/s]GATE GATE_TOKENIZER_PRE_MODEL PASS 
+GATE GATE_TOKENIZER_909 PASS 
+GATE GATE_DISK_906 PASS 
+GATE GATE_MANIFEST_909 PASS 
+Download complete:   125GB, 1.15GB/s  Reconstruction complete: 100%  145GB /  145GB,  622MB/s  Fetching 37 files: 100% 37/37 [06:52<00:00, 10.47s/it]Loading weights: 100% 963/963 [06:23<00:00,  3.30it/s]generation_config.json: 100% 242/242 [00:00<00:00, 30.4kB/s]PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+GATE MODEL PASS 
+PASS NATIVE_FORGE_SHAPE 
+GATE GATE_ENGINE_906 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE GATE_WS_ABI_909 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/LEGACY/PRED_X         W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/LEGACY/PRED_Y         W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/LEGACY/PRED_SHAM      W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/LEGACY/PRED_MASK      W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+LEGACY 908 matched q physical: PRED_SWAP_ACTION_EFFECT_NOT_YET_TASK_SUCCESS
+GATE GATE_LEGACY_909 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/X/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/X/PBOC/00             W=()               -> INVALID    'BELIEF(episode=E1,action=ACQUIRE,expect=1,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PREFIX X: 1 decisions | end PBOC_INVALID | W [] | A- None
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/Y/PREFIX/00           W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T909/Y/PBOC/00             W=()               -> INVALID    'BELIEF(episode=E1,action=ACQUIRE,expect=0,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PREFIX Y: 1 decisions | end PBOC_INVALID | W [] | A- None
+GATE GATE_PREFIX_909 PASS 
+GATE GATE_AVAIL_909 PASS 
+ARMS NOT RUN: roles None forks {'X': False, 'Y': False} PBOC geometry {'status': 'NOT_BOTH_VALID'}
+GATE GATE_ARMS_909 PASS 
+GATE GATE_ADDRESS_909 PASS 
+GATE GATE_FULLREF_909 PASS 
+GATE GATE_END_909 PASS 
+TEST909 VERDICT: PBOC_INVALID (cue continuity + availability + one-step two-source native readout only; TEST909 GPU CANDIDATE, NOT GPU-VERIFIED; PBOC/LEGACY DIAGNOSTIC CODE NOT RUN ON A100)
+PREFIX X: calls 1 | ACQUIRE False EXPECT=None | fork False | end PBOC_INVALID
+PREFIX Y: calls 1 | ACQUIRE False EXPECT=None | fork False | end PBOC_INVALID
+CUE X: in prediction input False | after PRED seal False | at F False | live decisions 1
+CUE Y: in prediction input False | after PRED seal False | at F False | live decisions 1
+AVAIL X (diagnostic, not a verdict): NOT_REACHED
+AVAIL Y (diagnostic, not a verdict): NOT_REACHED
+ROLES (from native EXPECT): None | EXCHANGEABLE: None
+counts: {'greedy_sequences': 8, 'generated_ids': 130, 'pboc_compiles': 2, 'legacy_diagnostic': 4, 'addressability_diagnostic': 0, 'avail_diagnostics': 0} | technical True | evaluable {'ok': False, 'why': 'model-generated contract invalid'}
+TEST909 ARTIFACTS {"artifact_status": "PASS", "drive_receipt": "EQUAL", "zip": "/content/TEST909_SONUC_20261123T190736Z.zip"}
+TEST909 DURUM: TAMAMLANDI | EXIT=0 | TECHNICAL=PASS | VERDICT=PBOC_INVALID | GREEDY=8 | DRIVE=PASS | FIRST_GATE=None | RESULTS=/content/TEST909_20261123T190736Z/TEST909_results.json
