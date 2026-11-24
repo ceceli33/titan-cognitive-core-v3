@@ -1,0 +1,168 @@
+================================================================================================================
+AKBASCORE SILICON HIPPOCAMPUS — TEST912 — native information continuity, event-sourced availability, model-selected two-source working set | run 20261124T034813Z | TEST912 | frozen 2x2 panel
+GATE GATE_SOURCES_912 PASS 
+GATE GATE_EXECUTED_SOURCE PASS 
+GATE GATE_GPU_PREFLIGHT_906 PASS 
+GATE GATE_GPU_PREFLIGHT_912 PASS 
+GATE GATE_RUNTIME_PINS PASS 
+GATE GATE_ENV PASS 
+GATE GATE_VRAM_FREE PASS 
+GATE GATE_DRIVE_PRESENT PASS 
+GATE GATE_DRIVE PASS 
+GATE GATE_ARCHIVE_906 PASS 
+GATE GATE_REF906_912 PASS 
+GATE GATE_REF907A_912 PASS 
+GATE GATE_REF908_912 PASS 
+GATE GATE_SOURCE_EXTRACT PASS 
+GATE GATE_ARCHIVE_TENSORS_906 PASS 
+GATE GATE_TOKENIZER_PRE_MODEL PASS 
+GATE GATE_TOKENIZER_912 PASS 
+GATE GATE_DISK_906 PASS 
+GATE GATE_MANIFEST_912 PASS 
+PASS MODEL_ARCH [80, 8192, 64, 8, 128]
+PASS FROZEN 
+PASS NF4 
+GATE MODEL PASS 
+PASS NATIVE_FORGE_SHAPE 
+GATE GATE_ENGINE_906 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+GATE GATE_WS_ABI_912 PASS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE AX/ACQUIRE                 W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T912/AX/PBOC/00            W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=1,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A1X/FIRST                  W=()               -> READ_ADD   'READ_ADD(MZ4)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A1X/SECOND                 W=MZ4              -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A2X/FIRST                  W=()               -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A2X/SECOND                 W=QK7              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE AY/ACQUIRE                 W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T912/AY/PBOC/00            W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=0,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A1Y/FIRST                  W=()               -> READ_ADD   'READ_ADD(MZ4)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A1Y/SECOND                 W=MZ4              -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A2Y/FIRST                  W=()               -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE A2Y/SECOND                 W=QK7              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE BX/ACQUIRE                 W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T912/BX/PBOC/00            W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=1,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B1X/FIRST                  W=()               -> READ_ADD   'READ_ADD(TB2)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B1X/SECOND                 W=TB2              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B2X/FIRST                  W=()               -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B2X/SECOND                 W=QK7              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE BY/ACQUIRE                 W=()               -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE T912/BY/PBOC/00            W=()               -> INVALID    'BELIEF(episode=E1,action=PROBE_A,expect=0,need=ENV_OBS,on_obs=COMPARE,reacquire=NO)'
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B1Y/FIRST                  W=()               -> READ_ADD   'READ_ADD(TB2)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B1Y/SECOND                 W=TB2              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=1)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B2Y/FIRST                  W=()               -> READ_ADD   'READ_ADD(QK7)'
+PASS NATIVE_INIT_80_LAYERS 
+DECIDE B2Y/SECOND                 W=QK7              -> ACQUIRE    'ACQUIRE(PROBE_A,EXPECT=0)'
+GATE GATE_END_912 PASS 
+{
+ "verdict": "OTHER_PATTERN",
+ "paired_conditions": 4,
+ "rows": {
+  "A1X": {
+   "first": "READ_ADD(MZ4)",
+   "handle": "MZ4",
+   "role": "decoy",
+   "second": "READ_ADD(QK7)",
+   "second_mount": "645a8f156d4ffa30c513b5f924616475e5ee78213c8e7bdb10c74ffa0fa7aa05",
+   "second_query_ids_sha256": "e1beaea9684529aee57324df64e4dd105e38a850173c071ff8da6963437a435b"
+  },
+  "A1Y": {
+   "first": "READ_ADD(MZ4)",
+   "handle": "MZ4",
+   "role": "decoy",
+   "second": "READ_ADD(QK7)",
+   "second_mount": "645a8f156d4ffa30c513b5f924616475e5ee78213c8e7bdb10c74ffa0fa7aa05",
+   "second_query_ids_sha256": "e1beaea9684529aee57324df64e4dd105e38a850173c071ff8da6963437a435b"
+  },
+  "A2X": {
+   "first": "READ_ADD(QK7)",
+   "handle": "QK7",
+   "role": "pred",
+   "second": "ACQUIRE(PROBE_A,EXPECT=1)",
+   "second_mount": "6a8dd9a5008944dcf85671aaedce09c2b3bb2f4700cf58cc54573094a37fe15c",
+   "second_query_ids_sha256": "3aa43d6c3d1a4a49ad1cce7abafc0cec7ee142d76eb70f718ec23be976bb442d"
+  },
+  "A2Y": {
+   "first": "READ_ADD(QK7)",
+   "handle": "QK7",
+   "role": "pred",
+   "second": "ACQUIRE(PROBE_A,EXPECT=0)",
+   "second_mount": "4d305b2675ab6c22b0c19846b02a408ca30c1e87ce1333eac6c290ac941155ae",
+   "second_query_ids_sha256": "3aa43d6c3d1a4a49ad1cce7abafc0cec7ee142d76eb70f718ec23be976bb442d"
+  },
+  "B1X": {
+   "first": "READ_ADD(TB2)",
+   "handle": "TB2",
+   "role": "decoy",
+   "second": "ACQUIRE(PROBE_A,EXPECT=1)",
+   "second_mount": "645a8f156d4ffa30c513b5f924616475e5ee78213c8e7bdb10c74ffa0fa7aa05",
+   "second_query_ids_sha256": "4fcf050c9a5453a73969fb187afd2e20b0c8c417c05c93c65faa51b3a9b4c392"
+  },
+  "B1Y": {
+   "first": "READ_ADD(TB2)",
+   "handle": "TB2",
+   "role": "decoy",
+   "second": "ACQUIRE(PROBE_A,EXPECT=1)",
+   "second_mount": "645a8f156d4ffa30c513b5f924616475e5ee78213c8e7bdb10c74ffa0fa7aa05",
+   "second_query_ids_sha256": "4fcf050c9a5453a73969fb187afd2e20b0c8c417c05c93c65faa51b3a9b4c392"
+  },
+  "B2X": {
+   "first": "READ_ADD(QK7)",
+   "handle": "QK7",
+   "role": "pred",
+   "second": "ACQUIRE(PROBE_A,EXPECT=1)",
+   "second_mount": "6a8dd9a5008944dcf85671aaedce09c2b3bb2f4700cf58cc54573094a37fe15c",
+   "second_query_ids_sha256": "3850d3987cd246954b3bf7bd30e4ade9cd1d88056c0619bc6e24f6eea12ccbc2"
+  },
+  "B2Y": {
+   "first": "READ_ADD(QK7)",
+   "handle": "QK7",
+   "role": "pred",
+   "second": "ACQUIRE(PROBE_A,EXPECT=0)",
+   "second_mount": "4d305b2675ab6c22b0c19846b02a408ca30c1e87ce1333eac6c290ac941155ae",
+   "second_query_ids_sha256": "3850d3987cd246954b3bf7bd30e4ade9cd1d88056c0619bc6e24f6eea12ccbc2"
+  }
+ }
+}
